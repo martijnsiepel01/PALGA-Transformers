@@ -73,7 +73,7 @@ def prepare_datasets_tsv(data_set, update_tokenizer, tokenizer, max_length_sente
     tokenized_datasets.set_format("torch")
     train_dataset = tokenized_datasets['train']
     val_dataset = tokenized_datasets['validation']
-    return train_dataset, val_dataset
+    return train_dataset, val_dataset, tokenized_dataset_for_tokenizer
 
 
 def update_tokenizer_if_needed(tokenizer, train_dataset, val_dataset):
@@ -243,14 +243,17 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
     tokenizer = load_tokenizer(local_tokenizer_path)
 
     # train_dataset, val_dataset = prepare_datasets_tsv(data_set, update_tokenizer, tokenizer, max_length_sentence)
-    train_dataset_histo, val_dataset_histo = prepare_datasets_tsv("histo", update_tokenizer, tokenizer, max_length_sentence)
-    train_dataset_autopsies, val_dataset_autopsies = prepare_datasets_tsv("autopsies", update_tokenizer, tokenizer, max_length_sentence)
+    train_dataset_histo, val_dataset_histo, tokenizer_dataset_histo = prepare_datasets_tsv("histo", update_tokenizer, tokenizer, max_length_sentence)
+    train_dataset_autopsies, val_dataset_autopsies, tokenizer_dataset_autopsies = prepare_datasets_tsv("autopsies", update_tokenizer, tokenizer, max_length_sentence)
     train_dataset = concatenate_datasets([train_dataset_histo, train_dataset_autopsies])
     val_dataset = concatenate_datasets([val_dataset_histo, val_dataset_autopsies])
+    
 
     # Update tokenizer if needed
     if update_tokenizer:
-        update_tokenizer_if_needed(tokenizer, train_dataset, val_dataset)
+        tokenize_dataset_train = concatenate_datasets([tokenizer_dataset_histo['train'], tokenizer_dataset_autopsies['train']])
+        tokenize_dataset_val = concatenate_datasets([tokenizer_dataset_histo['validation'], tokenizer_dataset_autopsies['validation']])
+        update_tokenizer_if_needed(tokenizer, tokenize_dataset_train, tokenize_dataset_val)
 
     # Setup model and tokenizer
     model = setup_model(tokenizer)
@@ -284,4 +287,3 @@ if __name__ == "__main__":
     # Call main function with the parsed arguments
     main(args.num_train_epochs, args.max_generate_length, args.train_batch_size, args.validation_batch_size,
          args.learning_rate, args.max_length_sentence, args.update_tokenizer, args.data_set, args.local_tokenizer_path)
-
