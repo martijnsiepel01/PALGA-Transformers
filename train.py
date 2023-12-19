@@ -226,6 +226,7 @@ def train_model(model, optimizer, accelerator, max_generate_length, train_datalo
 
 def main(num_train_epochs, max_generate_length, train_batch_size, validation_batch_size, learning_rate,
          max_length_sentence, update_tokenizer, data_set, local_tokenizer_path):
+    
     config, run_name = generate_config_and_run_name(
         num_train_epochs,
         max_length_sentence,
@@ -242,11 +243,13 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
 
     tokenizer = load_tokenizer(local_tokenizer_path)
 
-    # train_dataset, val_dataset = prepare_datasets_tsv(data_set, update_tokenizer, tokenizer, max_length_sentence)
-    train_dataset_histo, val_dataset_histo, tokenizer_dataset_histo = prepare_datasets_tsv("histo", update_tokenizer, tokenizer, max_length_sentence)
-    train_dataset_autopsies, val_dataset_autopsies, tokenizer_dataset_autopsies = prepare_datasets_tsv("autopsies", update_tokenizer, tokenizer, max_length_sentence)
-    train_dataset = concatenate_datasets([train_dataset_histo, train_dataset_autopsies])
-    val_dataset = concatenate_datasets([val_dataset_histo, val_dataset_autopsies])
+    if data_set == "autopsies" or data_set == "histo":
+        train_dataset, val_dataset, _ = prepare_datasets_tsv(data_set, update_tokenizer, tokenizer, max_length_sentence)
+    else:
+        train_dataset_histo, val_dataset_histo, tokenizer_dataset_histo = prepare_datasets_tsv("histo", update_tokenizer, tokenizer, max_length_sentence)
+        train_dataset_autopsies, val_dataset_autopsies, tokenizer_dataset_autopsies = prepare_datasets_tsv("autopsies", update_tokenizer, tokenizer, max_length_sentence)
+        train_dataset = concatenate_datasets([train_dataset_histo, train_dataset_autopsies])
+        val_dataset = concatenate_datasets([val_dataset_histo, val_dataset_autopsies])
     
 
     # Update tokenizer if needed
