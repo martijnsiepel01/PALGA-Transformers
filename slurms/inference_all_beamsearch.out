@@ -1,0 +1,718 @@
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Map:   0%|          | 0/69999 [00:00<?, ? examples/s]Map:   4%|▍         | 3000/69999 [00:00<00:03, 19534.89 examples/s]Map:  10%|█         | 7000/69999 [00:00<00:02, 21239.23 examples/s]Map:  14%|█▍        | 10000/69999 [00:00<00:03, 17146.45 examples/s]Map:  20%|██        | 14000/69999 [00:00<00:02, 19218.64 examples/s]Map:  26%|██▌       | 18000/69999 [00:00<00:02, 20431.46 examples/s]Map:  30%|███       | 21000/69999 [00:01<00:02, 18597.62 examples/s]Map:  36%|███▌      | 25000/69999 [00:01<00:02, 19781.50 examples/s]Map:  41%|████▏     | 29000/69999 [00:01<00:01, 20785.48 examples/s]Map:  46%|████▌     | 32000/69999 [00:01<00:02, 18944.96 examples/s]Map:  51%|█████▏    | 36000/69999 [00:01<00:01, 20064.93 examples/s]Map:  57%|█████▋    | 40000/69999 [00:02<00:01, 20841.50 examples/s]Map:  63%|██████▎   | 44000/69999 [00:02<00:01, 19131.78 examples/s]Map:  69%|██████▊   | 48000/69999 [00:02<00:01, 20082.88 examples/s]Map:  74%|███████▍  | 52000/69999 [00:02<00:00, 18128.07 examples/s]Map:  80%|████████  | 56000/69999 [00:02<00:00, 19234.44 examples/s]Map:  86%|████████▌ | 60000/69999 [00:03<00:00, 20158.34 examples/s]Map:  91%|█████████▏| 64000/69999 [00:03<00:00, 18672.19 examples/s]Map:  97%|█████████▋| 68000/69999 [00:03<00:00, 19677.00 examples/s]Map: 100%|██████████| 69999/69999 [00:03<00:00, 19493.00 examples/s]
+Map:   0%|          | 0/15000 [00:00<?, ? examples/s]Map:  20%|██        | 3000/15000 [00:00<00:00, 15353.95 examples/s]Map:  47%|████▋     | 7000/15000 [00:00<00:00, 19422.47 examples/s]Map:  73%|███████▎  | 11000/15000 [00:00<00:00, 20868.22 examples/s]Map: 100%|██████████| 15000/15000 [00:00<00:00, 18605.23 examples/s]Map: 100%|██████████| 15000/15000 [00:00<00:00, 18632.59 examples/s]
+Map:   0%|          | 0/15000 [00:00<?, ? examples/s]Map:  27%|██▋       | 4000/15000 [00:00<00:00, 23023.71 examples/s]Map:  53%|█████▎    | 8000/15000 [00:00<00:00, 18275.69 examples/s]Map:  80%|████████  | 12000/15000 [00:00<00:00, 20096.35 examples/s]Map: 100%|██████████| 15000/15000 [00:00<00:00, 20955.88 examples/s]Map: 100%|██████████| 15000/15000 [00:00<00:00, 20364.00 examples/s]
+Input Sentence: conclusie[CRLF]I. Excisie cervix: endocervicale poliep.[CRLF]II. Excisie cervicale overgang naar fornix posterior op 7 uur: oppervlakkig [CRLF]plaveiselcelepitheel zonder afwijkingen.
+Gold Standard (Codes): cervix excisie poliep
+Translated Sentence (beam): cervix excisie 'geen maligniteit'poliep
+Translated Sentence (greedy): cervix excisie poliep
+Beam Generation Time: 0.37631964683532715 seconds
+Greedy Generation Time: 0.08561587333679199 seconds
+==================================================
+Input Sentence: Revisie (******* *******, *******, T23-02961) biopt binnenzijde labia minora links: gepigmenteerde dermale dendritische melanocytaire proliferatie, waarvan het beeld (goed) kan passen bij een onderdeel van een blauwe naevus. Eventueel kan nog de mogelijkheid van een andere vorm van een dermale melanocytose worden overwogen, maar dit lijkt gelet op het klinische beeld minder waarschijnlijk. Niet het beeld van een melanotische macula. Geen aanwijzingen voor (pre)maligniteit.[CRLF]NB: de casus werd d.d. 22-03-2023 telefonisch besproken met aanvragend arts-assisentent van de dermatologie.
+Gold Standard (Codes): vulva biopt 'blauwe naevus'
+Translated Sentence (beam): huid 'labium majus'links biopt 'blauwe naevus''revisie voor derden concordant '
+Translated Sentence (greedy): huid hoofd links biopt 'blauwe naevus''diagnose onzeker''revisie ten behoeve van derden 
+Beam Generation Time: 0.8091280460357666 seconds
+Greedy Generation Time: 0.3959972858428955 seconds
+==================================================
+Input Sentence: bijschildklier links caudaal: een vergrote bijschildklier (gewicht 0,5 gr., maximale afmeting 1,5 cm) met beeld van bijschildklieradenoom. Conform vriescoupediagnostiek.
+Gold Standard (Codes): bijschildklier links resectie adenoom 'vriescoupe concordant'
+Translated Sentence (beam): bijschildklier links resectie adenoom 'vriescoupe concordant '
+Translated Sentence (greedy): bijschildklier links resectie adenoom 'vriescoupe concordant '
+Beam Generation Time: 0.3423490524291992 seconds
+Greedy Generation Time: 0.17763447761535645 seconds
+==================================================
+Input Sentence: Biopt vulva, labium majus links (revisie conform,*******, ******* T18-17225): atypische plaveiselcellige proliferatie, best passend bij invasief plaveiselcelcarcinoom met verhoorning; tumordikte in het biopt tenminste 2 mm, meest waarschijnlijk ook passend bij invasiediepte, in waarschijnlijk achtergrond van gedifferentieerde VIN.
+Gold Standard (Codes): vulva links biopt plaveiselcelcarcinoom revisie
+Translated Sentence (beam): vulva biopt plaveiselcelcarcinoom'revisie voor derden concordant '
+Translated Sentence (greedy): vulva biopt plaveiselcelcarcinoom'revisie voor derden concordant '
+Beam Generation Time: 0.42171430587768555 seconds
+Greedy Generation Time: 0.20529532432556152 seconds
+==================================================
+Input Sentence: Aanvulling d.d. 21-09-2022:[CRLF]Naaldbiopten supraclaviculair/laag cervicaal links, waarin uitgebreide necrose en een pleiomorfe groeiend carcinoom met neuro-endocriene kenmerken, passend bij een neuro-endocrien carcinoom.[CRLF]Gezien de negativiteit voor TTF1 en Napsine kan ook in deze biopten de primaire long origine niet worden bevestigd.[CRLF]De positieve aankleuring voor CDX2 en CK 7/CK 20 doen denken aan een primaire origine in de tractus digestivus. Klinisch en radiologisch te correleren.[CRLF]Moleculaire diagnostiek, PD-L1 en RB-1 aangevraagd (verstuurd op 20-9-2022 naar het *******).[CRLF](De coupes werden gezamenlijk beoordeeld op 21-09-2022).[CRLF]Aanvulling conclusie d.d. 10-10-22/pn: Moleculaire diagnostiek *******+, conclusie:[CRLF]Brede genpanel TSO500 DNA NGS analyse detecteert:[CRLF]- een pathogene PTEN mutatie in exon 5, nl. c.388C>T p.(Arg130*)[CRLF]- een waarschijnlijk pathogene intronische RB1 mutatie nabij exon 12, nl. c.1128-2A>T p.(?)[CRLF]- een waarschijnlijk pathogene ARAF mutatie in exon 7, nl. c.647C>G p.(Pro216Arg)[CRLF]- een waarschijnlijk pathogene TP53 mutatie in exon 8, nl. c.848G>C p.(Arg283Pro)[CRLF]- een waarschijnlijk pathogene ERBB4 mutatie in exon 26, nl. c.3182G>T p.(Gly1061Val). [CRLF]Verder worden er geen CNVs, een verhoogde TMB (7,1 varianten/Mb), en geen indicatie voor MSI (1,83% MSI) gedetecteerd. Brede genpanel TSO500 RNA NGS analyse detecteert geen fusie-transcripten alsook geen afwijkend RNA splicing patroon. [CRLF]Uitslag IHC pRb (13A10): verlies expressie pRb. [CRLF]Uitslag IHC PD-L1 (22C3): TPS 0%.
+Gold Standard (Codes): lymfklier hals links biopt carcinoom
+Translated Sentence (beam): lymfklier biopt'metastase carcinoom''primaire tumor onbekend''moleculaire diagnostiek '
+Translated Sentence (greedy): lymfklier supraclaviculair links biopt'metastase carcinoom'long'moleculaire diagnostiek '
+Beam Generation Time: 0.7811682224273682 seconds
+Greedy Generation Time: 0.32431626319885254 seconds
+==================================================
+Input Sentence: Resectie coecumbodem en appendix: Dikkedarm met op de overgang coecum naar appendix adenomateuze veranderingen met laaggradige dysplasie; voorts in de appendixwand een tamelijk forse acute niet specifieke ontsteking zonder crypt abcessen. De radicaliteit van het gebied met adenomateuze veranderingen kan niet goed worden aangegeven door de aanwezigheid van talrijke nietjes.
+Gold Standard (Codes): appendix resectie ontsteking 'geringe dysplasie'
+Translated Sentence (beam): colon excisie 'laaggradige dysplasie '
+Translated Sentence (greedy): colon resectie 'laaggradige dysplasie '
+Beam Generation Time: 0.30898356437683105 seconds
+Greedy Generation Time: 0.14685630798339844 seconds
+==================================================
+Input Sentence: Huid Mohs resectie (op de neusvleugel links): Definitieve resectievlakken zonder tumorlocalisatie (basaalcelcarcinoom). Conform.[CRLF]"NB Interpretatie van de macroscopie is op basis van de door de kliniek aangeleverde beschrijving en/of foto's."
+Gold Standard (Codes): huid resectie gelaat basaalcelcarcinoom
+Translated Sentence (beam): huid hoofd'mohs resectie'basaalcelcarcinoom 'vriescoupe concordant '
+Translated Sentence (greedy): huid neus'mohs resectie'basaalcelcarcinoom 'vriescoupe concordant '
+Beam Generation Time: 0.4919312000274658 seconds
+Greedy Generation Time: 0.2530241012573242 seconds
+==================================================
+Input Sentence: I. Aortaklep: fibrose en myxoide degeneratie.[CRLF]II. Excisie (aorta ascendens): geringe intimafibrose. Geen mediadegeneratie.
+Gold Standard (Codes): aortaklep excisie fibrose [C-SEP] aorta excisie intimafibrose
+Translated Sentence (beam): aorta excisie atherosclerose
+Translated Sentence (greedy): aorta resectie atherosclerose
+Beam Generation Time: 0.32108092308044434 seconds
+Greedy Generation Time: 0.08342266082763672 seconds
+==================================================
+Input Sentence: Huidexcisie bovenbuik: nodulair basaalcelcarcinoom. Resectievlakken zijn vrij met marge van 3 mm.
+Gold Standard (Codes): huid buik excisie basaalcelcarcinoom
+Translated Sentence (beam): huid buik excisie basaalcelcarcinoom
+Translated Sentence (greedy): huid buik excisie basaalcelcarcinoom
+Beam Generation Time: 0.3154945373535156 seconds
+Greedy Generation Time: 0.10575199127197266 seconds
+==================================================
+Input Sentence: Huidbiopt rechter flank: grensvlak naevus naevocellularis.
+Gold Standard (Codes): huid wang rechts excisie 'naevus naevocellularis'
+Translated Sentence (beam): huid biopt 'naevus naevocellularis '
+Translated Sentence (greedy): huid biopt 'naevus naevocellularis '
+Beam Generation Time: 0.3164944648742676 seconds
+Greedy Generation Time: 0.13976240158081055 seconds
+==================================================
+Input Sentence: Huidbiopt binnenkant borst linksboven: superficieel groeiend basaalcelcarcinoom.
+Gold Standard (Codes): huid thorax links biopt 'basaalcelcarcinoom superficieel type'
+Translated Sentence (beam): huid biopt basaalcelcarcinoom
+Translated Sentence (greedy): huid borst links biopt basaalcelcarcinoom
+Beam Generation Time: 0.22224950790405273 seconds
+Greedy Generation Time: 0.11638045310974121 seconds
+==================================================
+Input Sentence: Huidexcisie achterzijde rechterbovenarm: samengestelde melanocytaire proliferatie, waarschijnlijk samengestelde naevus naevocellularis met ontsteking. Onvoldoende aanwijzingen voor dysplasie of maligniteit.[CRLF]De resectievlakken zijn vrij.
+Gold Standard (Codes): huid excisie 'naevus naevocellularis' atypie ontsteking
+Translated Sentence (beam): huid arm rec hts excisie'samengestelde naevus '
+Translated Sentence (greedy): huid arm rec hts excisie'samengestelde naevus''snijvlak vrij'
+Beam Generation Time: 0.4393036365509033 seconds
+Greedy Generation Time: 0.28586673736572266 seconds
+==================================================
+Input Sentence: Huidbiopt been rechts: beeld best passend in het kader van eczeem. Geen beeld van amyloidose. Aanvullend bericht volgt na PAS diastase kleuring.
+Gold Standard (Codes): huid been biopt eczeem
+Translated Sentence (beam): huid been rec hts biopt eczeem
+Translated Sentence (greedy): huid been rec hts biopt eczeem
+Beam Generation Time: 0.34150195121765137 seconds
+Greedy Generation Time: 0.17826032638549805 seconds
+==================================================
+Input Sentence: Biopten slokdarmtumor: niet-kleincellig carcinoom, aanvullende typering volgt na verder onderzoek. Hierover ontvangt u separaat bericht.[CRLF]AANVULLEND BERICHT (d.d. 08-12-17):[CRLF]Bij aanvullend immunohistochemisch onderzoek geen zekere differentiatie aan te tonen derhalve wordt dit beschouwd als een slecht gedifferentieerd niet-kleincellig carcinoom. [CRLF](ng/ro)[CRLF]AANVULLEND BERICHT (15-12-2017):[CRLF]Op verzoek van de kliniek (Dr. Dees) is aanvullend nog een Her2neubepaling verricht. Deze is negatief.[CRLF](kh/ab)[CRLF]Revisie (d.d. 16-01-18) [CRLF]De coupes zijn herbeoordeeld in JNI (*******), onder nummer T18-60043; conclusie conform.[CRLF](ng/me)
+Gold Standard (Codes): slokdarm biopt maligne 'revisie extern concordant'
+Translated Sentence (beam): slokdarm biopt carcinoom'revisie extern concordant '
+Translated Sentence (greedy): slokdarm biopt carcinoom 'consult intern''revisie extern concordant '
+Beam Generation Time: 0.7181909084320068 seconds
+Greedy Generation Time: 0.2888665199279785 seconds
+==================================================
+Input Sentence: Urine met geringe ontsteking. Geen aanwijzing voor maligniteit.
+Gold Standard (Codes): urine cytologie ontsteking
+Translated Sentence (beam): urine ontsteking 'geen maligniteit '
+Translated Sentence (greedy): urine ontsteking
+Beam Generation Time: 0.32369446754455566 seconds
+Greedy Generation Time: 0.07024669647216797 seconds
+==================================================
+Input Sentence: Galblaasextirpatie preparaat: chronische ontsteking met fibrose en reactieve verandering passend bij cholecystolithiasis.[CRLF]Stv
+Gold Standard (Codes): galblaas extirpatie cholecystolithiasis 'chronische ontsteking'
+Translated Sentence (beam): galblaas extirpatie ontsteking reactief
+Translated Sentence (greedy): galblaas extirpatie 'chronische ontsteking'reactief
+Beam Generation Time: 0.24784183502197266 seconds
+Greedy Generation Time: 0.16530537605285645 seconds
+==================================================
+Input Sentence: Huidbiopt pre-auriculair links: atypische plaveiselcellige proliferatie, maligniteit niet uitgesloten. Gaarne excisie voor een definitieve classificerende diagnose.
+Gold Standard (Codes): huid biopt 'verdacht maligne'
+Translated Sentence (beam): huid pre-auriculair links biopt atypie
+Translated Sentence (greedy): huid pre-auriculair links biopt atypie
+Beam Generation Time: 0.3186936378479004 seconds
+Greedy Generation Time: 0.16616368293762207 seconds
+==================================================
+Input Sentence: Huidexcisie (hals rechts): basaalcelcarcinoom met een overwegend sprieterige groeiwijze. De tumor reikt uitgebreid in de laterale snijranden en in beide punten van de excisie.
+Gold Standard (Codes): huid hals excisie basaalcelcarcinoom 'snijvlak niet vrij'
+Translated Sentence (beam): huid excisie basaalcelcarcinoom
+Translated Sentence (greedy): huid hals rec hts excisie basaalcelcarcinoom
+Beam Generation Time: 0.2974517345428467 seconds
+Greedy Generation Time: 0.16756010055541992 seconds
+==================================================
+Input Sentence: Huidbiopt kaak rechts: oppervlakkig groeiend basaalcelcarcinoom.
+Gold Standard (Codes): huid kaak rechts biopsie basaalcelcarcinoom
+Translated Sentence (beam): huid biopt basaalcelcarcinoom
+Translated Sentence (greedy): huid biopt basaalcelcarcinoom
+Beam Generation Time: 0.198211669921875 seconds
+Greedy Generation Time: 0.08185100555419922 seconds
+==================================================
+Input Sentence: Cholecystectomie waarin geringe tekenen van cholelithiasis.
+Gold Standard (Codes): galblaas resectie cholelithiasis
+Translated Sentence (beam): galblaas resectie cholelithiasis
+Translated Sentence (greedy): galblaas resectie cholelithiasis
+Beam Generation Time: 0.19750595092773438 seconds
+Greedy Generation Time: 0.08171725273132324 seconds
+==================================================
+Input Sentence: Pleuravocht (rechts): reactief met acute ontsteking, geen maligniteit.
+Gold Standard (Codes): pleuravocht rechts reactief ontsteking 'geen maligniteit'
+Translated Sentence (beam): pleuravocht punctie reactief
+Translated Sentence (greedy): pleuravocht rec hts cytologie reactief 'geen maligniteit '
+Beam Generation Time: 0.1984086036682129 seconds
+Greedy Generation Time: 0.24677324295043945 seconds
+==================================================
+Input Sentence: Niertransplantatie biopt ca. 10 weken na transplantatie: geen duidelijke [CRLF]aanwijzingen voor rejectie. Tubulaire afwijkingen waarbij onder andere wordt [CRLF]gedacht aan een status na ATN, geringe aanwijzingen voor nefrocalcinose en [CRLF]oxalaatkristal: zie uitgebreide overweging.
+Gold Standard (Codes): nier biopt 'reactief beeld'
+Translated Sentence (beam): nier transplantaat biopt 'geen maligniteit '
+Translated Sentence (greedy): nier transplantaat biopt 'geen afwijking '
+Beam Generation Time: 0.42670297622680664 seconds
+Greedy Generation Time: 0.1938459873199463 seconds
+==================================================
+Input Sentence: Excisie kapsel na augmentatie rechts (1) en links (2): fibreus kapsel met geringe ontsteking en reactieve verandering, geen aanwijzing voor maligniteit.
+Gold Standard (Codes): mamma links rechts excisie reactief
+Translated Sentence (beam): mamma rec hts links excisie reactief
+Translated Sentence (greedy): 'weke delen' excisie reactief
+Beam Generation Time: 0.4134864807128906 seconds
+Greedy Generation Time: 0.14211797714233398 seconds
+==================================================
+Input Sentence: Levernaaldbiopten (restmateriaal van CPCT studie, en behorende bij T18-2424): tumor positief. Het beeld past bij metastase adenocarcinoom van de mamma. Op uw verzoek zijn hormoonreceptoren bepaald:[CRLF]- ER: positief (100%)[CRLF]- PR: negatief (0%)[CRLF]- Her-2/neu: negatief
+Gold Standard (Codes): lever biopt 'metastase adenocarcinoom' mamma
+Translated Sentence (beam): lever biopt'metastase adenocarcinoom'mamma
+Translated Sentence (greedy): lever biopt'metastase adenocarcinoom'mamma
+Beam Generation Time: 0.5268411636352539 seconds
+Greedy Generation Time: 0.16048407554626465 seconds
+==================================================
+Input Sentence: Echogeleide aspiratie zwelling hals, links (20x28x22mm): Maligne cellen, passend bij plaveiselcelcarcinoom. Past het best bij lymfklier met metastase plaveiselcelcarcinoom.
+Gold Standard (Codes): lymfklier links echografie 'metastase plaveiselcelcarcinoom' 'primaire tumor onbekend'
+Translated Sentence (beam): lymfklier hals links echografie plaveiselcelcarcinoom
+Translated Sentence (greedy): hals links echografie plaveiselcelcarcinoom
+Beam Generation Time: 0.36547422409057617 seconds
+Greedy Generation Time: 0.09569978713989258 seconds
+==================================================
+Input Sentence: Lever naaldbiopten (rechts): lokalisatie van het bij patient bekende diffuus grootcellige B- cellymfoom.[CRLF]Aanvulling d.d. 30-08-2018:[CRLF]De casus is mede gezien in het regionale lymfomenpanel (******* 28-08-18): diagnose conform.
+Gold Standard (Codes): lever biopsie 'maligne lymfoom' panel
+Translated Sentence (beam): lever biopt'maligne lymfoom'panel
+Translated Sentence (greedy): lever biopt 'diffuus grootcellig b-cel lymfoom'panel
+Beam Generation Time: 0.561525821685791 seconds
+Greedy Generation Time: 0.20462584495544434 seconds
+==================================================
+Input Sentence: Curettement uterus: placentarest met regressieve veranderingen, zonder verdere bijzonderheden.
+Gold Standard (Codes): endometrium curettage reactief 'placenta rest'
+Translated Sentence (beam): endometrium curettage 'geen maligniteit'placentarest
+Translated Sentence (greedy): uterus curettage 'geen maligniteit '
+Beam Generation Time: 0.33785080909729004 seconds
+Greedy Generation Time: 0.15343904495239258 seconds
+==================================================
+Input Sentence: Excisie urethra: benigne ureterale poliep met ontsteking en cystitis glandularis.[CRLF]Het beeld kan passen bij een polypoide urethrale carunkel.[CRLF]Geen aanwijzingen voor dysplasie of maligniteit.
+Gold Standard (Codes): urethra biopt ontsteking poliep 'cystitis glandularis' carunkel
+Translated Sentence (beam): urethra excisie 'geen maligniteit '
+Translated Sentence (greedy): urethra excisie poliep 'geen maligniteit '
+Beam Generation Time: 0.34633445739746094 seconds
+Greedy Generation Time: 0.17927265167236328 seconds
+==================================================
+Input Sentence: Huidexcisie pink links distaal: epidermale cyste.[CRLF]jw/ng
+Gold Standard (Codes): huid hand links excisie cyste
+Translated Sentence (beam): huid excisie 'epidermale cyste '
+Translated Sentence (greedy): huid  pink links excisie 'epidermale cyste '
+Beam Generation Time: 0.2700936794281006 seconds
+Greedy Generation Time: 0.1755373477935791 seconds
+==================================================
+Input Sentence: Excisie onderlip: mucocele.
+Gold Standard (Codes): onderlip excisie mucokele
+Translated Sentence (beam): onderlip excisie mucoc ele
+Translated Sentence (greedy): lip excisie mucoc ele
+Beam Generation Time: 0.21969389915466309 seconds
+Greedy Generation Time: 0.0920724868774414 seconds
+==================================================
+Input Sentence: Urine: Erytrocyturie (> 25 pgv) met dysmorfie (20-40%). Geen [CRLF]erytrocytencilinders, geen (dubbelbrekende) kristallen en geen eosinofiele [CRLF]granulocyten in dit materiaal.[CRLF]Er zijn enkele atypische urotheelcellen (TPS3). Dit kan reactief zijn. Beeld is [CRLF]onvoldoende voor CIS of maligniteit.
+Gold Standard (Codes): urine erytrocyten 'geen maligne cellen'
+Translated Sentence (beam): urine erytrocyten atypie
+Translated Sentence (greedy): urine erytrocyten 'geen maligne cellen'
+Beam Generation Time: 0.23868036270141602 seconds
+Greedy Generation Time: 0.18411993980407715 seconds
+==================================================
+Input Sentence: Huidexcisie laterale zijde rechter oorschelp: sprieterig basaalcelcarcinoom, reikend tot in beide zijsnijranden in de bovenste (gemarkeerde) helft van het preparaat.
+Gold Standard (Codes): huid oor rechts excisie basaalcelcarcinoom
+Translated Sentence (beam): huid oor rec hts excisie basaalcelcarcinoom
+Translated Sentence (greedy): huid oor rec hts excisie basaalcelcarcinoom
+Beam Generation Time: 0.344271183013916 seconds
+Greedy Generation Time: 0.16707849502563477 seconds
+==================================================
+Input Sentence: Huidexcisiepreparaat achter rechter oor: Granuloma pyogenicum (capillair hemangioom). Geen aanwijzingen voor maligniteit.
+Gold Standard (Codes): huid hoofd excisie hemangioom
+Translated Sentence (beam): huid excisie 'granuloma pyogenicum '
+Translated Sentence (greedy): huid excisie 'granuloma pyogenicum '
+Beam Generation Time: 0.3195655345916748 seconds
+Greedy Generation Time: 0.14156579971313477 seconds
+==================================================
+Input Sentence: Huidexcisie coeur: geirriteerde verruca seborrhoica.
+Gold Standard (Codes): huid biopsie 'verruca seborrhoica'
+Translated Sentence (beam): huid coeur excisie'verruca seborrhoica '
+Translated Sentence (greedy): huid coeur excisie'verruca seborrhoica '
+Beam Generation Time: 0.3160359859466553 seconds
+Greedy Generation Time: 0.16361308097839355 seconds
+==================================================
+Input Sentence: Curettage endometrium: necrobiotisch eerste trimester zwangerschapsproduct. Morfologisch geen aanwijzingen voor triploidie of mola hydatidosa. Geen embryonale delen aangetroffen.
+Gold Standard (Codes): endometrium curettage abortus zwangerschapsproduct necrobiose
+Translated Sentence (beam): endometrium curettage 'geen afwijking '
+Translated Sentence (greedy): endometrium curettage 'geen maligniteit'zwangerschapsproduct
+Beam Generation Time: 0.296372652053833 seconds
+Greedy Generation Time: 0.1797797679901123 seconds
+==================================================
+Input Sentence: Biopten van maagantrum: geen afwijkingen.
+Gold Standard (Codes): maag biopt 'geen afwijking'
+Translated Sentence (beam): maag biopt 'geen afwijking '
+Translated Sentence (greedy): maag biopt 'geen afwijking '
+Beam Generation Time: 0.291628360748291 seconds
+Greedy Generation Time: 0.15221929550170898 seconds
+==================================================
+Input Sentence: conclusie[CRLF]Diagnostische huidexcisie pigmentcelletsel schouder rechts mediaal (klinisch [CRLF]1): sterk geA¯rriteerde samengestelde naevus naevocellularis met dysplastische [CRLF]kenmerken. De laesie is radicaal verwijderd.
+Gold Standard (Codes): huid schouder rechts excisie naevus irritatie atypie
+Translated Sentence (beam): huid schouder rec hts excisie 'naevus naevocellularis '
+Translated Sentence (greedy): huid schouder rec hts excisie'samengestelde naevus''dysplastische naevus '
+Beam Generation Time: 0.5925865173339844 seconds
+Greedy Generation Time: 0.32404065132141113 seconds
+==================================================
+Input Sentence: Revisie t.b.v. derden (PA-lab *******, PA-nummer T23-12147), concordant: beenmergbiopt hypocellulaire, rommelig gerangschikte, trilineaire hematopoese met discrete dysplastische kenmerken, geringe (3%) toename onrijpe cellen/blasten en T-cel lymfocytose. Op dit beeld kan mede gezien het eerdere biopt biopt (onder H23-14811/T23-631) differentiaal diagnostisch worden overwogen: een zich ontwikkelende aplastische anemie, beginnende MDS dan wel een exuberant reactief beeld. Zie derhalve ook beoordeling aspiraat en flowcytometrie.[CRLF]Coupes met dank voor inzage retour.
+Gold Standard (Codes): beenmerg biopt reactief dubieus 'myelodysplastisch syndroom' dubieus 'aplastische anemie' dubieus 'revisie ten behoeve van derden concordant'
+Translated Sentence (beam): beenmerg biopt'myelodysplastisch syndroom''revisie ten behoeve van derden concordant '
+Translated Sentence (greedy): beenmerg biopt'myelodysplastisch syndroom''geen zekere diagnose''revisie ten behoeve van derden 
+Beam Generation Time: 0.6900970935821533 seconds
+Greedy Generation Time: 0.39323854446411133 seconds
+==================================================
+Input Sentence: Cervixbiopt met een endocervicale poliep. Er is geen dysplasie of maligniteit.
+Gold Standard (Codes): cervix biopsie poliep
+Translated Sentence (beam): cervix biopt 'geen maligniteit'poliep
+Translated Sentence (greedy): cervix biopt 'geen maligniteit'poliep
+Beam Generation Time: 0.34342241287231445 seconds
+Greedy Generation Time: 0.17597246170043945 seconds
+==================================================
+Input Sentence: Urine (spontaan) met geringe tekenen van ontsteking en geringe haematurie met kristallurie. Geen aanwijzingen voor maligniteit.
+Gold Standard (Codes): urine ontsteking haematurie kristallen
+Translated Sentence (beam): urine ontsteking hematurie
+Translated Sentence (greedy): urine hematurie
+Beam Generation Time: 0.17826247215270996 seconds
+Greedy Generation Time: 0.07134771347045898 seconds
+==================================================
+Input Sentence: Huid stansbiopt neusrug links: solide groeiend basaalcelcarcinoom.
+Gold Standard (Codes): huid biopt neusrug links basaalcelcarcinoom
+Translated Sentence (beam): huid biopt basaalcelcarcinoom
+Translated Sentence (greedy): huid neus links biopt basaalcelcarcinoom
+Beam Generation Time: 0.22336053848266602 seconds
+Greedy Generation Time: 0.11665797233581543 seconds
+==================================================
+Input Sentence: Huidcurettage wang links: verruca seborrhoica in combinatie met actinische keratose. Geen invasieve maligniteit.
+Gold Standard (Codes): huid wang links curettage 'verruca seborrhoica' 'actinische keratose'
+Translated Sentence (beam): huid wang links curettage'verruca seborrhoica '
+Translated Sentence (greedy): huid wang links curettage 'actinische keratose '
+Beam Generation Time: 0.3432426452636719 seconds
+Greedy Generation Time: 0.16472220420837402 seconds
+==================================================
+Input Sentence: Huidstansbiopt (wang rechts): behoudens solaire elastose geen afwijkingen, met name geen aanwijzingen voor basaalcelcarcinoom.
+Gold Standard (Codes): huid wang rechts biopt elastose 'revisie intern'
+Translated Sentence (beam): huid wang rec hts biopt elastose
+Translated Sentence (greedy): huid wang rec hts biopt 'geen afwijking '
+Beam Generation Time: 0.32050204277038574 seconds
+Greedy Generation Time: 0.23694968223571777 seconds
+==================================================
+Input Sentence: Knievocht rechts: geen kristallen. Gering ontstekingsbeeld.[CRLF]Stv
+Gold Standard (Codes): gewrichtsvocht knie rug punctie ontsteking
+Translated Sentence (beam): gewrichtsvocht knie rec hts 'geen maligniteit '
+Translated Sentence (greedy): gewrichtsvocht knie rec hts 'geen afwijking '
+Beam Generation Time: 0.4841904640197754 seconds
+Greedy Generation Time: 0.22334694862365723 seconds
+==================================================
+Input Sentence: Huidbiopt rug: huid met perivasculair en in de hoornlaag een geringe toename van neutrofiele granulocyten en enkele eosinofiele granulocyten. In eerste plaats wordt gedacht aan urticariele overgevoeligheidsreactie.[CRLF]08-11-13/*******/kd
+Gold Standard (Codes): huid rug biopt urticaria
+Translated Sentence (beam): huid rug biopt eczeem
+Translated Sentence (greedy): huid rug biopt ontsteking
+Beam Generation Time: 0.22699666023254395 seconds
+Greedy Generation Time: 0.09793305397033691 seconds
+==================================================
+Input Sentence: Tepelvocht rechts: verdacht maligne.
+Gold Standard (Codes): mamma rechts 'verdacht maligne'
+Translated Sentence (beam): tepelvocht rec hts'spontaan verkregen''verdacht maligne '
+Translated Sentence (greedy): tepelvocht rec hts'verdacht maligne '
+Beam Generation Time: 0.6269781589508057 seconds
+Greedy Generation Time: 0.18715286254882812 seconds
+==================================================
+Input Sentence: Huidexcisie onderbeen rechts: multifocaal morbus Bowen en keratosis actinica. Morbus Bowen reikt tot in een zijsnijvlak. Geen infiltratieve groei aantoonbaar.
+Gold Standard (Codes): huid onderbeen rechts excisie 'morbus bowen' 'keratosis actinica'
+Translated Sentence (beam): huid onderbeen rec hts excisie'morbus bowen''keratosis actinica '
+Translated Sentence (greedy): huid been rec hts excisie'morbus bowen''morbus bowen '
+Beam Generation Time: 0.6344726085662842 seconds
+Greedy Generation Time: 0.32198667526245117 seconds
+==================================================
+Input Sentence: I. Colonslijmvliesbiopten zonder afwijkingen. Geen adenoom of hyperplasie. [CRLF]II. Colonslijmvliesbiopten afkomstig van een tubulair adenoom met laaggradige dysplasie.[CRLF]III. Colonslijmvliesbiopten afkomstig van een hyperplastische poliep.
+Gold Standard (Codes): colon biopt 'geen afwijking'  [C-SEP] colon biopt 'tubulair adenoom'  [C-SEP] colon biopt 'hyperplastische poliep'
+Translated Sentence (beam): colon biopt 'geen afwijking en'  colon biopt 'hyperplastische poliep' colon biopt 'hyperplastische
+Translated Sentence (greedy): colon biopt 'geen afwijking' colon biopt 'hyperplastische poliep' colon biopt 'hyperplastische
+Beam Generation Time: 0.7552902698516846 seconds
+Greedy Generation Time: 0.38660669326782227 seconds
+==================================================
+Input Sentence: huidbiopt bovenarm links: beeld van een lichenoide ontsteking welke goed zou kunnen passen binnen het spectrum van pityriasis lichenoides chronica / PLEVA. Een lichenoide geneesmiddelenreactie is niet uit te sluiten. Niet het beeld van psoriasis of porokeratose.
+Gold Standard (Codes): huid bovenarm links biopt 'pityriasis lichenoides'
+Translated Sentence (beam): huid bovenarm links biopt 'pityriasis lichenoides '
+Translated Sentence (greedy): huid bovenarm links biopt 'lichenoide ontsteking '
+Beam Generation Time: 0.3495903015136719 seconds
+Greedy Generation Time: 0.17956852912902832 seconds
+==================================================
+Input Sentence: A: duodenumbiopten zonder afwijkingen.[CRLF]B: maagbiopten met geringe chronische ontsteking, geringe atrofie en intestinale metaplasie. Geen Helicobacter pylori.[CRLF]*******
+Gold Standard (Codes): duodenum biopt 'geen afwijking' [C-SEP] maag biopt 'reactief beeld' 'intestinale metaplasie'
+Translated Sentence (beam): duodenum biopt 'geen afwijking' maag biopt 'chronische ontsteking'atrofie
+Translated Sentence (greedy): duodenum biopt 'geen afwijking' maag biopt 'chronische ontsteking''intestinale metaplasie '
+Beam Generation Time: 0.7569820880889893 seconds
+Greedy Generation Time: 0.3883235454559326 seconds
+==================================================
+Input Sentence: TUR blaas zijwand rechts: hooggradig papillair urotheelcelcarcinoom graad 3. Het materiaal is te oppervlakkig voor een uitspraak over invasieve groei. Geen muscularis detrusor aanwezig. pTx
+Gold Standard (Codes): blaas endoresectie 'papillair urotheelcelcarcinoom graad 3'
+Translated Sentence (beam): blaas biopt 'papillair urotheelcelcarcinoom '
+Translated Sentence (greedy): blaas biopt 'papillair urotheelcelcarcinoom '
+Beam Generation Time: 0.2764620780944824 seconds
+Greedy Generation Time: 0.1446690559387207 seconds
+==================================================
+Input Sentence: Huidbiopt linker wenkbrauw: basaalcelcarcinoom, deels solide en deels infiltratieve type.[CRLF]Zie voor het overige gelijktijdig ingezonden materiaal het nummer vermeld onder de klinische gegevens.
+Gold Standard (Codes): huid biopt basaalcelcarcinoom
+Translated Sentence (beam): huid hoofd biopt basaalcelcarcinoom
+Translated Sentence (greedy): huid biopt basaalcelcarcinoom
+Beam Generation Time: 0.22819948196411133 seconds
+Greedy Generation Time: 0.09397649765014648 seconds
+==================================================
+Input Sentence: Appendectomie: appendicitis acuta, geen maligniteit.
+Gold Standard (Codes): appendectomie 'appendicitis acuta' 'geen maligniteit'
+Translated Sentence (beam): appendix resectie 'appendicitis acuta '
+Translated Sentence (greedy): appendix resectie 'appendicitis acuta '
+Beam Generation Time: 0.27300286293029785 seconds
+Greedy Generation Time: 0.14009857177734375 seconds
+==================================================
+Input Sentence: Huidbiopt linker zijde neus: vooralsnog beeld van een forse chronische folliculitis. Aanvullend onderzoek volgt.[CRLF]Stv[CRLF]Aanvulling d.d. 04-11-15:[CRLF]Huidbiopt linker zijde neus: reactieve lymfoide hyperplasie bij aanwezigheid van sporen, passend bij mycose. Geen epitheliale maligniteit.[CRLF]Stv
+Gold Standard (Codes): huid neus biopt folliculitis dubieus
+Translated Sentence (beam): huid neus links biopt ontsteking
+Translated Sentence (greedy): huid neus links biopt ontsteking
+Beam Generation Time: 0.23510003089904785 seconds
+Greedy Generation Time: 0.12472367286682129 seconds
+==================================================
+Input Sentence: Lymfklierbiopt, oksel links: beeld passend bij laaggradig folliculair lymfoom.[CRLF]Aanvullend bericht d.d. 13-08-15: [CRLF]Consult *******: (T15-08907; T15-10335; T15-10355): betreffende excisie huid behaarde hoofd, biopt beenmerg en biopt lymfklier oksel links: in de huid en de lymfklier lokalisatie van systemisch folliculair B-cel non-Hodgkin lymfoom. In het lymfklier biopt onvoldoende materiaal voor betrouwbare gradering. In het beenmerg reactieve veranderingen. E/n
+Gold Standard (Codes): lymfklier oksel links biopt 'maligne lymfoom' 'consult elders gevraagd' 'immuunperoxydase reactie'
+Translated Sentence (beam): lymfklier oksel links biopt 'folliculair lymfoom''consult extern concordant '
+Translated Sentence (greedy): lymfklier oksel links biopt 'folliculair lymfoom''consult extern''consult concordant '
+Beam Generation Time: 0.7381339073181152 seconds
+Greedy Generation Time: 0.3560061454772949 seconds
+==================================================
+Input Sentence: Vlokloos beenmerg. Geen diagnose mogelijk.
+Gold Standard (Codes): beenmerg aspiratie 'onvoldoende materiaal'
+Translated Sentence (beam): beenmerg aspiratie 'geen goed mater iaa l'
+Translated Sentence (greedy): beenmerg biopt 'geen representatief mater iaa l'
+Beam Generation Time: 0.41465115547180176 seconds
+Greedy Generation Time: 0.22154951095581055 seconds
+==================================================
+Input Sentence: Spoelvocht LBK: cellen passend bij een niet-kleincellig carcinoom.
+Gold Standard (Codes): 'long bovenkwab' links spoelvocht 'niet kleincellig carcinoom'
+Translated Sentence (beam): long links spoelvocht 'niet kleincellig carcinoom '
+Translated Sentence (greedy): bronchus spoelvocht 'niet kleincellig carcinoom '
+Beam Generation Time: 0.3435676097869873 seconds
+Greedy Generation Time: 0.16395163536071777 seconds
+==================================================
+Input Sentence: Punctie zwelling links in de hals: het celbeeld kan passen bij een speekselklier tumor, best passend bij een Warthin.
+Gold Standard (Codes): hals links 'aspiratie cytologie' 'pap 2' 'geen maligniteit' adenoom warthin
+Translated Sentence (beam): hals punctie warthin 'consult intern '
+Translated Sentence (greedy): hals links punctie 'warthin tumor'
+Beam Generation Time: 0.31778812408447266 seconds
+Greedy Generation Time: 0.12967729568481445 seconds
+==================================================
+Input Sentence: Re-excisie huid binnenkant rechter voet bij status na plaveiselcelcarcinoom: litteken. Geen rest maligniteit.
+Gold Standard (Codes): huid excisie litteken
+Translated Sentence (beam): huid voet rec hts excisie 'geen maligniteit '
+Translated Sentence (greedy): huid excisie litteken
+Beam Generation Time: 0.46269989013671875 seconds
+Greedy Generation Time: 0.08276700973510742 seconds
+==================================================
+Input Sentence: I: Brush rechter middenkwab: geen maligne cellen.[CRLF]II: Spoeling rechter middenkwab: enkele atypische cellen, maligniteit kan niet worden uitgesloten.
+Gold Standard (Codes): long middenkwab rechts brush 'geen maligniteit' [C-SEP] long middenkwab rechts spoeling atypie
+Translated Sentence (beam): long rec hts spoeling 'geen maligniteit' long rec hts cytologie 'g
+Translated Sentence (greedy): long rec hts spoeling 'geen maligniteit' long rec hts spoeling atypie
+Beam Generation Time: 0.7533740997314453 seconds
+Greedy Generation Time: 0.38370442390441895 seconds
+==================================================
+Input Sentence: Uterus extirpatie met een nodus van adenomyosis/endometriosis thv serosa. In beide tubae geen afwijkingen.
+Gold Standard (Codes): uterus resectie 'geen maligniteit' adenomyose
+Translated Sentence (beam): uterus resectie adenomyosis 'geen maligniteit '
+Translated Sentence (greedy): uterus extirpatie 'geen afwijking '
+Beam Generation Time: 0.3913450241088867 seconds
+Greedy Generation Time: 0.1538693904876709 seconds
+==================================================
+Input Sentence: I: Huidbiopt links frontaal: goed gedifferentieerd plaveiselcelcarcinoom; infiltratiediepte plusminus1 mm.[CRLF]II: Huidbiopt linker handrug: hypertrofische actinische keratose. Geen invasieve groei in dit biopt.[CRLF]II: Huidbiopt plekje rechter been, na cryo: epidermis met reactieve veranderingen en atypie; gedacht wordt aan actinische keratose met reactieve veranderingen door cryotherapie. In dit biopt geen overtuigende invasieve groei.
+Gold Standard (Codes): huid biopt plaveiselcelcarcinoom 'actinische keratose'
+Translated Sentence (beam): huid biopt plaveiselcelcarcinoom  huid biopt 'actinische keratose''consult intern '
+Translated Sentence (greedy): huid biopt plaveiselcelcarcinoom  huid biopt 'actinische keratose'reactief
+Beam Generation Time: 0.6782703399658203 seconds
+Greedy Generation Time: 0.272031307220459 seconds
+==================================================
+Input Sentence: Celrijke urine.[CRLF]Ontstekingsbeeld.[CRLF]Atypische cellen, waarschijnlijk reactief.[CRLF]Eventueel herhalen na behandeling van de ontsteking.
+Gold Standard (Codes): urine 'atypie gering' atypie
+Translated Sentence (beam): urine 'atypie gering'
+Translated Sentence (greedy): urine 'atypie gering'
+Beam Generation Time: 0.22455906867980957 seconds
+Greedy Generation Time: 0.11917829513549805 seconds
+==================================================
+Input Sentence: Biopt sacrum: metastase ductaal adenocarcinoom (met osteoclastaire reuscellen) van de mamma, ER diffuus positief (100%).
+Gold Standard (Codes): sacrum biopt 'metastase adenocarcinoom' mamma
+Translated Sentence (beam): peritoneum biopt'metastase adenocarcinoom'mamma
+Translated Sentence (greedy): huid biopt'metastase adenocarcinoom'mamma
+Beam Generation Time: 0.3195343017578125 seconds
+Greedy Generation Time: 0.1535811424255371 seconds
+==================================================
+Input Sentence: Biopten oesofagus: geen evidente afwijkingen, met name geen aanwijzingen voor eosinofiele oesofagitis. Geen schimmel.
+Gold Standard (Codes): oesofagus biopsie 'geen afwijking'
+Translated Sentence (beam): oesofagus biopt 'geen afwijking '
+Translated Sentence (greedy): oesofagus biopt 'geen afwijking '
+Beam Generation Time: 0.295682430267334 seconds
+Greedy Generation Time: 0.15333056449890137 seconds
+==================================================
+Input Sentence: I en II. Cristabeenmerg respectievelijk punctie en biopsie: normaal celrijk beenmerg met geringe monoclonale plasmocytose passend bij een MGUS.[CRLF]Consult Haematopathologiewerkgroep: conclusie conform.
+Gold Standard (Codes): cristabeenmerg punctie biopsie 'monoclonale gammopathie' 'revisie extern' 'revisie concordant' panel
+Translated Sentence (beam): beenmerg 'os ilium' biopt 'geen maligniteit '
+Translated Sentence (greedy): beenmerg 'os ilium'''zijdigheid onbekend'biopt 'geen afwijking' 'crista
+Beam Generation Time: 0.6071681976318359 seconds
+Greedy Generation Time: 0.3915226459503174 seconds
+==================================================
+Input Sentence: Huid re-excisie rechterneusvleugel: rond littekenweefsel een kleine rest basaalcelcarcinoom, radicaal verwijderd.
+Gold Standard (Codes): huid neus rechts reexcisie litteken basaalcelcarcinoom
+Translated Sentence (beam): huid excisie basaalcelcarcinoom
+Translated Sentence (greedy): huid excisie basaalcelcarcinoom
+Beam Generation Time: 0.34206557273864746 seconds
+Greedy Generation Time: 0.0828406810760498 seconds
+==================================================
+Input Sentence: Weefselbiopten waarin een beeld passende bij een tubulovilleus adenoom met laaggradige dysplasie.
+Gold Standard (Codes): colon biopsie 'tubulovilleus adenoom'
+Translated Sentence (beam): 'slijmvlies anus'biopt 'tubulovilleus adenoom''laaggradige dysplasie '
+Translated Sentence (greedy): colon biopt adenoom
+Beam Generation Time: 0.5852751731872559 seconds
+Greedy Generation Time: 0.08270978927612305 seconds
+==================================================
+Input Sentence: Huidbiopt: celrijk dermatofibroom, er bestaat een recidief kans.
+Gold Standard (Codes): huid biopt 'fibreus histiocytoom' recidief
+Translated Sentence (beam): huid biopt dermatofibroom
+Translated Sentence (greedy): huid biopt dermatofibroom
+Beam Generation Time: 0.26847267150878906 seconds
+Greedy Generation Time: 0.08143115043640137 seconds
+==================================================
+Input Sentence: Huidexcisie rug: basaalcelcarcinoom van ten dele superficiA«le, ten dele nodulaire type. De afwijking reikt in een der uiteinden tot nabij de randen. Een kleine reA«xcisie lijkt aanbevolen.
+Gold Standard (Codes): huid biopt basaalcelcarcinoom
+Translated Sentence (beam): huid excisie basaalcelcarcinoom
+Translated Sentence (greedy): huid excisie basaalcelcarcinoom
+Beam Generation Time: 0.17943215370178223 seconds
+Greedy Generation Time: 0.08555817604064941 seconds
+==================================================
+Input Sentence: maagbiopten: maagcorpus en maagantrumslijmvlies met reactieve veranderingen. Geen atrofie, intestinale metaplasie of dysplasie. Geen Helicobacter pylori.
+Gold Standard (Codes): maag biopt 'reactieve verandering'
+Translated Sentence (beam): maag biopt reactief
+Translated Sentence (greedy): maag biopt reactief
+Beam Generation Time: 0.27041172981262207 seconds
+Greedy Generation Time: 0.08598017692565918 seconds
+==================================================
+Input Sentence: Galblaas met actieve ontsteking en reactieve hyperplastische lymfklier. Geen maligniteit
+Gold Standard (Codes): galblaas resectie ontsteking
+Translated Sentence (beam): galblaas resectie ontsteking
+Translated Sentence (greedy): galblaas resectie ontsteking reactief
+Beam Generation Time: 0.27068257331848145 seconds
+Greedy Generation Time: 0.10508847236633301 seconds
+==================================================
+Input Sentence: Huidresectie ter plaatse van vulva: deels solide, deels sprieterig groeiend basaalcelcarcinoom met oppervlakkige ulceratie. Maximale diameter van carcinoom bedraagt ca. 4,5 cm. De diepte van invasie bedraagt 1,4 cm. Het carcinoom groeit focaal tot op ca. 2 mm van het basale chirurgische resectievlak. Ten aanzien van de laterale resectievlakken is een zekere uitspraak niet goed mogelijk omdat het vlak tussen de witte en blauwe speld ingescheurd was. Alle andere snijvlakken waren wel ruim vrij.
+Gold Standard (Codes): huid vulva excisie basaalcelcarcinoom morfometrie 'snijvlak niet vrij' 'diagnose onzeker.'
+Translated Sentence (beam): huid vulva excisie basaalcelcarcinoom
+Translated Sentence (greedy): huid vulva resectie basaalcelcarcinoom'snijvlak vrij'
+Beam Generation Time: 0.4738428592681885 seconds
+Greedy Generation Time: 0.175307035446167 seconds
+==================================================
+Input Sentence: Hoog risico HPV is afwezig[CRLF]Deze HPV uitslag dient te worden verwerkt in bijbehorende cytologisch onderzoek.
+Gold Standard (Codes): cervix uitstrijk 'h.p.v. hoog risico type negatief' 'consult ten behoeve van derden'
+Translated Sentence (beam): cervix uitstrijk 'h.p.v. hoog risico type negatief''consult ten behoeve van derden '
+Translated Sentence (greedy): cervix uitstrijk 'h.p.v. hoog risico type negatief''consult ten behoeve van derden '
+Beam Generation Time: 0.6941454410552979 seconds
+Greedy Generation Time: 0.3273124694824219 seconds
+==================================================
+Input Sentence: Excisie weke delen zwelling rug boven met beeld passend bij lipoom. Geen maligniteit.
+Gold Standard (Codes): 'weke delen' excisie lipoom
+Translated Sentence (beam): 'weke delen' rug excisie lipoom
+Translated Sentence (greedy): 'weke delen' rug excisie lipoom
+Beam Generation Time: 0.2938976287841797 seconds
+Greedy Generation Time: 0.15238642692565918 seconds
+==================================================
+Input Sentence: Vulvabiopt: sterke verdenking op recidief (plaveiselcel)carcinoom. Tweede bericht volgt na aanvullend onderzoek.[CRLF]27-11-13/*******/HMH[CRLF]Aanvulling d.d. 03-12-13:[CRLF]Aanvullende kleuringen: positief is pankeratine maar negatief is keratine 5/6, het oppervlakkige epitheel wel positief.[CRLF]Lokalisatie carcinoom, gezien voor de voorgeschiedenis bij voorkeur recidief (slecht gedifferentieerd) plaveiselcelcarcinoom.[CRLF]03-12-13/*******/HMH
+Gold Standard (Codes): vulva biopt plaveiselcelcarcinoom recidief 'geen zekere diagnose'
+Translated Sentence (beam): vulva biopt plaveiselcelcarcinoom
+Translated Sentence (greedy): vulva biopt plaveiselcelcarcinoom 'onzekere diagnose '
+Beam Generation Time: 0.344740629196167 seconds
+Greedy Generation Time: 0.19586849212646484 seconds
+==================================================
+Input Sentence: Huidexcisie scrotaal rechts: histologisch beeld van een (geruptureerde) epitheliale cyste met uitgebreide actieve chronische ontsteking en reactieve veranderingen.
+Gold Standard (Codes): huid scrotum rechts resectie 'actieve chronische ontsteking' 'epitheliale cyste'
+Translated Sentence (beam): huid excisie cyste
+Translated Sentence (greedy): huid excisie cyste ontsteking
+Beam Generation Time: 0.2721738815307617 seconds
+Greedy Generation Time: 0.1069941520690918 seconds
+==================================================
+Input Sentence: Poliepectomie cervix: poliep met forse decidualisatie. Geen maligniteit.
+Gold Standard (Codes): cervix excisie benigne
+Translated Sentence (beam): cervix excisie 'geen maligniteit'poliep
+Translated Sentence (greedy): cervix excisie poliep
+Beam Generation Time: 0.34445667266845703 seconds
+Greedy Generation Time: 0.08179140090942383 seconds
+==================================================
+Input Sentence: Huidexcisie voorhoofd rechts: basaalcelcarcinoom solide type, resectievlak niet vrij.
+Gold Standard (Codes): huid voorhoofd rechts excisie 'basaalcelcarcinoom solide type' 'resectievlak niet vrij'
+Translated Sentence (beam): huid hoofd excisie basaalcelcarcinoom'snijvlak niet vrij'
+Translated Sentence (greedy): huid excisie 'basaalcelcarcinoom solide type'
+Beam Generation Time: 0.31664419174194336 seconds
+Greedy Generation Time: 0.14035272598266602 seconds
+==================================================
+Input Sentence: Huidexcisie volgens Mohs chirurgie temporaal rechts: snijvlak vrij van basaalcelcarcinoom in eerste ronde Mohs chirurgie.
+Gold Standard (Codes): huid resectie 'mohs resectie' hoofd rechts basaalcelcarcinoom
+Translated Sentence (beam): huid temporaal rec hts'mohs resectie''snijvlak vrij'
+Translated Sentence (greedy): huid temporaal rec hts excisie basaalcelcarcinoom'snijvlak vrij'
+Beam Generation Time: 0.5397236347198486 seconds
+Greedy Generation Time: 0.23593950271606445 seconds
+==================================================
+Input Sentence: Huidexcisie voorhoofd: nodulair groeiend basaalcelcarcinoom. Snijvlakken vrij.
+Gold Standard (Codes): huid gelaat excisie basaalcelcarcinoom 'snijvlakken vrij'
+Translated Sentence (beam): huid excisie basaalcelcarcinoom
+Translated Sentence (greedy): huid excisie basaalcelcarcinoom
+Beam Generation Time: 0.1976604461669922 seconds
+Greedy Generation Time: 0.08178162574768066 seconds
+==================================================
+Input Sentence: I: wang-naald punctie hoofdcarina: kleincellig carcinoom.[CRLF]II: brush linker hoofdbronchus: kleincellig carcinoom.[CRLF]III: spoeling: kleincellig carcinoom.[CRLF]Immuuncytochemisch onderzoek volgt.[CRLF]Aanvulling d.d. 11-11-2013:[CRLF]Het immuunhistochemisch profiel past bij een kleincellig carcinoom.
+Gold Standard (Codes): bronchus links cytologie 'kleincellig carcinoom'
+Translated Sentence (beam): long cytologie 'kleincellig carcinoom '
+Translated Sentence (greedy): long punctie 'kleincellig carcinoom' bronchus links punctie 'kleincellig carcinoom '
+Beam Generation Time: 0.45726680755615234 seconds
+Greedy Generation Time: 0.3141152858734131 seconds
+==================================================
+Input Sentence: Revisie sigmoid resectie (oktober 2012): matig gedifferentieerd adenocarcinoom circulair over een afstand van 3 cm reikend tot in het pericolische vet en focaal tot in het peritoneale oppervlak. Er is angio-invasie. De slijmvliesresectievlakken zijn vrij van tumor. Bij het preparaat volgens het verslag in totaal 31 lymfklieren waarvan 16 met metastasen. [CRLF]Aanvulling: Met behulp van moleculaire analyse van het oncocartapannel wordt een mutatie gezien in KRAS. Er is mogelijk ook een mutatie in AKT1. Deze wordt nog nader onderzocht.
+Gold Standard (Codes): colon excisie adenocarcinoom revisie 'moleculaire biologie' [C-SEP] lymfklier mesenterium excisie 'metastase adenocarcinoom' colon revisie
+Translated Sentence (beam): colon resectie adenocarcinoom revisie
+Translated Sentence (greedy): sigmoid resectie adenocarcinoom revisie
+Beam Generation Time: 0.3522005081176758 seconds
+Greedy Generation Time: 0.11809158325195312 seconds
+==================================================
+Input Sentence: I oesofagusbiopten Z-line: Barrett type oesofagus zonder dysplasie. II oesofagusbiopten: ernstige dysplasie.
+Gold Standard (Codes): oesofagus biopt barrett [C-SEP] oesofagus biopt dysplasie
+Translated Sentence (beam): oesofagus biopt barrett
+Translated Sentence (greedy): oesofagus biopt 'barrett oesofagus '
+Beam Generation Time: 0.32184910774230957 seconds
+Greedy Generation Time: 0.14223217964172363 seconds
+==================================================
+Input Sentence: Huid excisie rechteronderarm: geA¯rriteerde verruca seborrhoica. Geen melanocytaire proliferatie.
+Gold Standard (Codes): huid arm rechts excisie 'verruca seborrhoica'
+Translated Sentence (beam): huid excisie'verruca seborrhoica '
+Translated Sentence (greedy): huid excisie'verruca seborrhoica '
+Beam Generation Time: 0.34120798110961914 seconds
+Greedy Generation Time: 0.14127421379089355 seconds
+==================================================
+Input Sentence: Longbiopt rechts middels VATS: longparenchym met focaal een bronchiolus met minimale ontsteking. In voorhanden materiaal geen bronchiolitis obliterans of andere tekenen van GvHD.
+Gold Standard (Codes): long rechts biopt 'reactieve verandering'
+Translated Sentence (beam): long rec hts biopt 'geen afwijking '
+Translated Sentence (greedy): long rec hts biopt 'geen afwijking '
+Beam Generation Time: 0.44002461433410645 seconds
+Greedy Generation Time: 0.22648882865905762 seconds
+==================================================
+Input Sentence: Pelviene lymfklierdissectie bij bekend prostaatcarcinoom:[CRLF]7 lymfklieren links waarvan twee met carcinoommetastase, passend bij het bekende prostaatcarcinoom, hier met Gleason score 4 +4 = 8. Grootste metastase 9 mm doorsnede, met kapseldoorbraak. Snijranden vrij.[CRLF]11 lymfklieren rechts waarvan twee met carcinoommetastase, passend bij het bekende prostaatcarcinoom, hier met in Gleason score 4 +4 = 8. Hier geen overtuigende kapseldoorbraak
+Gold Standard (Codes): lymfklier 'kleine bekken' links rechts resectie 'metastase adenocarcinoom' prostaat
+Translated Sentence (beam): lymfklier excisie'metastase adenocarcinoom'prostaat
+Translated Sentence (greedy): lymfklier excisie'metastase adenocarcinoom'prostaat
+Beam Generation Time: 0.3944401741027832 seconds
+Greedy Generation Time: 0.17506623268127441 seconds
+==================================================
+Input Sentence: I) 3 mm biopt glanzende papel scalp links parietaal: nodulair basaalcelcarcinoom.[CRLF]II) 3 mm biopt rechter schouder, glanzende papel: nodulair basaalcelcarcinoom.
+Gold Standard (Codes): huid hoofd biopt basaalcelcarcinoom [C-SEP] huid schouder biopt basaalcelcarcinoom
+Translated Sentence (beam): huid hoofd links rec hts biopt basaalcelcarcinoom
+Translated Sentence (greedy): huid hoofd biopt basaalcelcarcinoom
+Beam Generation Time: 0.3445169925689697 seconds
+Greedy Generation Time: 0.0963737964630127 seconds
+==================================================
+Input Sentence: conclusie[CRLF]Galblaasresectie: cholelithiasis met chronische cholecystitis, geen [CRLF]maligniteit.
+Gold Standard (Codes): galblaas resectie galsteen 'chronische ontsteking'
+Translated Sentence (beam): galblaas resectie cholelithiasis
+Translated Sentence (greedy): galblaas resectie cholelithiasis
+Beam Generation Time: 0.31606030464172363 seconds
+Greedy Generation Time: 0.08251237869262695 seconds
+==================================================
+Input Sentence: Punctaat lymfklier lies links: tumorpositief, niet-kleincellig carcinoom. Het beeld zou kunnen passen bij een metastase van het bij de patient bekende urotheelcelcarcinoom, aanvullend onderzoek hiernaar volgt.[CRLF]Aanvulling d.d. 19-10-2016: aanvullend immuunhistochemisch onderzoek levert geen nieuwe inzichten op. Vooralsnog is geen moleculair onderzoek ingezet. Indien gewenst, kan dit alsnog worden verricht.
+Gold Standard (Codes): lymfklier lies links punctaat 'metastase carcinoom' blaas
+Translated Sentence (beam): lymfklier lies links punctie'metastase urotheelcelcarcinoom'blaas
+Translated Sentence (greedy): lymfklier lies links punctaat'metastase carcinoom'blaas
+Beam Generation Time: 0.3857240676879883 seconds
+Greedy Generation Time: 0.19662714004516602 seconds
+==================================================
+Input Sentence: Huid excochleaat penisschacht (para) mediaan: beeld past bij condyloma acuminatum.
+Gold Standard (Codes): huid excisie 'condyloma acuminatum'
+Translated Sentence (beam): huid penis excisie 'condyloma acuminatum '
+Translated Sentence (greedy): huid penis excisie 'condyloma acuminatum '
+Beam Generation Time: 0.4590878486633301 seconds
+Greedy Generation Time: 0.15253710746765137 seconds
+==================================================
+Input Sentence: Huidexcisie voorhoofd links: litteken, beeld kan goed past bij een hypertrofisch litteken. Onvoldoende aanwijzingen voor keloid.
+Gold Standard (Codes): huid voorhoofd excisie litteken
+Translated Sentence (beam): huid hoofd links excisie litteken
+Translated Sentence (greedy): huid hoofd links excisie litteken
+Beam Generation Time: 0.2232828140258789 seconds
+Greedy Generation Time: 0.10631322860717773 seconds
+==================================================
+Input Sentence: Huidexcisiepreparaat kuit links: verruca hyperkeratotica.[CRLF]Stv
+Gold Standard (Codes): huid onderbeen links excisie 'verruca hyperkeratotica'
+Translated Sentence (beam): huid excisie'verruca hyperkeratotica '
+Translated Sentence (greedy): huid been links excisie'verruca hyperkeratotica '
+Beam Generation Time: 0.3415653705596924 seconds
+Greedy Generation Time: 0.17564940452575684 seconds
+==================================================
+Input Sentence: I. Wigexcisie long links: reactieve veranderingen en subpleurale bullae. Geen aanwijzing voor maligniteit.[CRLF]II. Biopt pleurale afwijking links: vetweefsel waarin een vat zonder bijzonderheden.[CRLF]26-10-22/NVE/NVE
+Gold Standard (Codes): long links excisie reactief
+Translated Sentence (beam): long links excisie reactief
+Translated Sentence (greedy): long links excisie reactief 'geen maligniteit '
+Beam Generation Time: 0.27611470222473145 seconds
+Greedy Generation Time: 0.19224953651428223 seconds
+==================================================
+Input Sentence: Colonslijmvliesbiopten met een beeld dat past bij chronische ontsteking, enige activiteit, geen specifieke kenmerken.
+Gold Standard (Codes): colon biopsie 'chronische ontsteking'
+Translated Sentence (beam): colon biopt 'chronische ontsteking '
+Translated Sentence (greedy): colon biopt 'chronische ontsteking '
+Beam Generation Time: 0.27179932594299316 seconds
+Greedy Generation Time: 0.14151835441589355 seconds
+==================================================
+Input Sentence: Huidbiopt rechter onderbeen: histologisch beeld waarbij er een voorkeur is voor een chronische eczemateuze dermatitis.[CRLF]Hoewel psoriasis niet geheel met zekerheid kan worden uitgesloten past het beeld hier minder goed bij.
+Gold Standard (Codes): huid onderbeen rechts biopt eczeem
+Translated Sentence (beam): huid been rec hts biopt 'chronische eczeem '
+Translated Sentence (greedy): huid been rec hts biopt ontsteking
+Beam Generation Time: 0.4638361930847168 seconds
+Greedy Generation Time: 0.18073582649230957 seconds
+==================================================
+Input Sentence: Huidexcisie (arm): verruca seborrhoica.
+Gold Standard (Codes): huid arm resectie 'verruca seborrhoica'
+Translated Sentence (beam): huid excisie'verruca seborrhoica '
+Translated Sentence (greedy): huid arm resectie'verruca seborrhoica '
+Beam Generation Time: 0.29151248931884766 seconds
+Greedy Generation Time: 0.15071845054626465 seconds
+==================================================
+Input Sentence: Biopten duodenum zonder afwijkingen. Geen vlokatrofie.
+Gold Standard (Codes): duodenum biopt 'geen afwijking'
+Translated Sentence (beam): duodenum biopt 'geen afwijking '
+Translated Sentence (greedy): duodenum biopt 'geen afwijking '
+Beam Generation Time: 0.3404374122619629 seconds
+Greedy Generation Time: 0.15161633491516113 seconds
+==================================================
+Input Sentence: Sample hematoom re been waarin bloed. Representatief voor de afwijking?
+Gold Standard (Codes): been rechts bloed 'geen maligniteit'
+Translated Sentence (beam): 'weke delen' been rec hts curettage bloed
+Translated Sentence (greedy): huid biopt 'geen afwijking '
+Beam Generation Time: 0.45724964141845703 seconds
+Greedy Generation Time: 0.1525721549987793 seconds
+==================================================
+Input Sentence: Huidbiopt mediale zijde rechter ooghoek: nodulair basaalcelcarcinoom.
+Gold Standard (Codes): huid oog rechts biopt basaalcelcarcinoom
+Translated Sentence (beam): huid hoofd rec hts biopt basaalcelcarcinoom
+Translated Sentence (greedy): huid oog rec hts biopt basaalcelcarcinoom
+Beam Generation Time: 0.31563496589660645 seconds
+Greedy Generation Time: 0.1640322208404541 seconds
+==================================================
+
+JOB STATISTICS
+==============
+Job ID: 4955996
+Cluster: snellius
+User/Group: msiepel/msiepel
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:17:55
+CPU Efficiency: 51.93% of 00:34:30 core-walltime
+Job Wall-clock time: 00:01:55
+Memory Utilized: 3.16 GB
+Memory Efficiency: 8.09% of 39.06 GB

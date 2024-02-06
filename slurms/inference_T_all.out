@@ -1,0 +1,419 @@
+[nltk_data] Downloading package punkt to /home/msiepel/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Map:   0%|          | 0/15000 [00:00<?, ? examples/s]Map:  20%|██        | 3000/15000 [00:00<00:00, 21168.10 examples/s]Map:  47%|████▋     | 7000/15000 [00:00<00:00, 16468.57 examples/s]Map:  73%|███████▎  | 11000/15000 [00:00<00:00, 19044.32 examples/s]Map: 100%|██████████| 15000/15000 [00:00<00:00, 20359.17 examples/s]Map: 100%|██████████| 15000/15000 [00:00<00:00, 19425.27 examples/s]
+Input Sentence: voorlopige conclusie[CRLF]I. Huid excisiebiopt helix craniaal links: beeld vooralsnog best passen bij [CRLF]actinische keratose, niet volledig verwijderd. Aangezien de centrale lamellen [CRLF]niet volledig zijn aangesneden worden diepere sneden van deze lamellen [CRLF]verricht. Hierover volgt nader bericht.[CRLF]II. Huid excisiebiopt helix caudaal links: actinische keratose, niet volledig [CRLF]verwijderd.
+Gold Standard (Codes): huid helix links 'excisie biopt' 'actinische keratose' 'resectievlak niet vrij'
+Translated Sentence: huid helix links biopt 'actinische keratose '
+==================================================
+Input Sentence: AARD INGREEP: radicale orchidectomie.[CRLF]ZIJDIGHEID: links.[CRLF]TYPE TUMOR: seminoom. [CRLF]TUMORDIAMETER: (bij microscopisch onderzoek tenminste) 3,3 cm.[CRLF]MULTIFOCAAL: voor zo ver te beoordelen; nee.[CRLF]INGROEI IN EPIDIDYMIS: nee. [CRLF]INGROEI IN RETE TESTIS: ja. [CRLF]DOORGROEI DOOR TUNICA *******: nee. [CRLF]INGROEI IN TUNICA VAGINALIS: nee. [CRLF]INGROEI IN FUNICULUS SPERMATICUS: nee.[CRLF]INGROEI IN HET SCROTUM: nee. [CRLF]KIEMCELNEOPLASIE IN SITU: nee.[CRLF](LYMF)ANGIOINVASIE: veel artificieel "ingesmeerd" materiaal; voor zover te beoordelen geen duidelijk beeld van angio-invasie.[CRLF]RESECTIEVLAK FUNICULUS SPERMATICUS: vrij.[CRLF]ANDERE BEVINDINGEN: geen.[CRLF]TNM-CLASSIFICATIE (8e editie): pT1[CRLF]Aanvulling d.d. 8-2-2017[CRLF]Het aanvullende immunohistochemische onderzoek ondersteunt de diagnose seminoom.[CRLF]Bij aanvullend macroscopisch onderzoek was het niet goed mogelijk precieze afmetingen te geven van de tumordiameter. O.b.v. microscopisch onderzoek tumordiameter tenminste 3,3 cm.
+Gold Standard (Codes): testis links resectie seminoom
+Translated Sentence: testis links resectie seminoom
+==================================================
+Input Sentence: Biopt linker mamma (zwelling in litteken links): mammaklierweefsel met geringe chronische ontsteking. Geen tekenen van (in situ) maligniteit.
+Gold Standard (Codes): mamma links biopt 'chronische ontsteking'
+Translated Sentence: mamma links biopt 'chronische ontsteking '
+==================================================
+Input Sentence: Pleuravocht, zijdigheid onbekend: Subacute ontsteking met reactief mesotheel. [CRLF]Geen maligne cellen in dit materiaal.
+Gold Standard (Codes): pleuravocht 'zijdigheid onbekend' 'subacute ontsteking' 'reactief proces' 'geen maligne cellen'
+Translated Sentence: pleura 'zijdigheid onbekend'biopt ontsteking
+==================================================
+Input Sentence: **LET OP! GEWIJZIGDE CONCLUSIE**[CRLF]Speekselklier biopt onderlip: waarin focaal een lymfoplasmacellualir infiltraat met geringe fibrose, waarij de voorkeur uitgaat naar chronische ontsteking.
+Gold Standard (Codes): speekselklier biopt 'morbus sjogren'
+Translated Sentence: speekselklier onderlip biopt 'chronische ontsteking '
+==================================================
+Input Sentence: Huidexcisie (coeur rechts): nodulair basaalcelcarcinoom. Resectieranden zijn vrij.
+Gold Standard (Codes): huid resectie basaalcelcarcinoom
+Translated Sentence: huid resectie basaalcelcarcinoom
+==================================================
+Input Sentence: Vagina  biopt (vlak boven ostium, 12 uur): vagina mucosa zonder afwijkingen. Geen aanwijzingen voor dysplasie of maligniteit.
+Gold Standard (Codes): vagina biopt 'geen maligniteit'
+Translated Sentence: vagina biopt 'geen afwijking '
+==================================================
+Input Sentence: Excisie huid flank rechts: ontstoken skintag (acrochordon). Geen maligniteit.
+Gold Standard (Codes): huid romp excisie skintag
+Translated Sentence: huid romp excisie'skin tag'
+==================================================
+Input Sentence: Punctie lymfklier hals rechts met granulomateuze ontsteking.
+Gold Standard (Codes): lymfklier hals rechts punctie 'granulomateuze ontsteking'
+Translated Sentence: lymfklier hals rec hts biopt 'granulomateuze ontsteking '
+==================================================
+Input Sentence: dikke naaldbiopt lymfklier hals, waarin alleen bind- en spierweefsel. Geen lymfkliermateriaal.
+Gold Standard (Codes): lymfklier hals biopt 'niet representatief materiaal'
+Translated Sentence: lymfklier hals biopt 'geen maligniteit '
+==================================================
+Input Sentence: A: huidbiopt mediale zijde rechter voet / enkel: uitgebreide hyperplasie van de epidermis met onderliggende foci van plaveiselcelcarcinoom (invasiediepte tenminste 1,5 mm).[CRLF]B: huidbiopt onder linker knie: matig gedifferentieerd plaveiselcelcarcinoom, invasiediepte tenminste 2 mm.
+Gold Standard (Codes): huid voet rechts biopt plaveiselcelcarcinoom [C-SEP] huid knie links biopt plaveiselcelcarcinoom
+Translated Sentence: huid voet rec hts biopt plaveiselcelcarcinoom  huid voet links biopt plaveiselcelcarcinoom
+==================================================
+Input Sentence: Huidbiopt wang rechts: epidermale cyste.
+Gold Standard (Codes): huid wang rechts excisie 'epidermale cyste'
+Translated Sentence: huid wang biopt cyste
+==================================================
+Input Sentence: Hepatectomie bij *******: multicysteuze lever en vele von Meyenburg complexen passend bij ADPKD; geen maligniteit.
+Gold Standard (Codes): lever ectomie transplantaat 'aangeboren afwijking' cyste
+Translated Sentence: lever ectomie cyste
+==================================================
+Input Sentence: Huidexcisie (neusrug): nodulair basaalcelcarcinoom met laterale uitbreiding in de vorm van romphuidtype component. Deze laatste component reikt tenminste tegen, vermoedelijk in de 9 uurs zijde ten opzichte van op 3 uur gestelde hechtmarkering. Dit betreft de rechterzijde van de patient richting craniaal.
+Gold Standard (Codes): huid neus resectie basaalcelcarcinoom
+Translated Sentence: huid neus resectie basaalcelcarcinoom
+==================================================
+Input Sentence: Subtotale colectomie: geen structurele afwijkingen, met name geen afwijkingen aan de plexus van Meissner  en de plexus myentericus.
+Gold Standard (Codes): colon excisie 'geen afwijking'
+Translated Sentence: colon resectie'reactieve veranderingen'
+==================================================
+Input Sentence: Excisie huid voorhoofd rechts: M. Bowen, met in een der zijsnijvlakken ook een klein focus met M. Bowen.
+Gold Standard (Codes): huid hoofd excisie 'morbus bowen'
+Translated Sentence: huid hoofd excisie'morbus bowen '
+==================================================
+Input Sentence: Appendectomie: gedilateerde appendix zonder actieve ontsteking.
+Gold Standard (Codes): appendix resectie ontstekingsrest
+Translated Sentence: appendix biopt normaal
+==================================================
+Input Sentence: Vulvabiopt links clitoris: klein slijmvliesfragment waarin slecht gedifferentieerd plaveiselcelcarcinoom (invasiediepte tenminste 1 mm).
+Gold Standard (Codes): vulva biopt plaveiselcelcarcinoom
+Translated Sentence: vulva biopt plaveiselcelcarcinoom
+==================================================
+Input Sentence: Conclusie:[CRLF]Mamma ablatio links:[CRLF]Invasief carcinoom NST graad 1, diameter 2,5mm en DCIS graad 2 (cribiform, [CRLF]solide en micropapillaire type met focale comedo-necrose), diameter 70mm[CRLF]Invasief carcinoom: ER 100% positief, PR 100% positief, HER2neu niet [CRLF]geamplificeerd[CRLF]Resectievlakken DCIS en invasief carcinoom vrij; krapste marge DCIS naar [CRLF]lateraal 5mm, invasief carcinoom rondom >10mm[CRLF]Geen lymfangio-invasieve groei, geen perineurale groei[CRLF]Lymfklieren: een SN met geisoleerde tumorcellen[CRLF]pT1a, N0i+ (0/1) L0 V0 R0 Pn0 G1
+Gold Standard (Codes): mamma links ablatio 'intraductaal carcinoom' [C-SEP] lymfklier axilla 'sentinel node procedure' 'geen maligniteit'
+Translated Sentence: mamma links ablatio 'invasief ductaal carcinoom''invasief carcinoom nst''ductaal carcinoma in situ' 
+==================================================
+Input Sentence: Maagbiopten: maagantrum mucosa met ulcus. Geen aanwijzing voor maligniteit (lymfoom of carcinoom). [CRLF]Aanvullende CMV kleuring is negatief.
+Gold Standard (Codes): maag biopt ulcus
+Translated Sentence: maag biopt ulcus
+==================================================
+Input Sentence: Huidstansbiopsie frontaal, rechts: nodulair en sprieterig basaalcelcarcinoom.[CRLF]Invasie in diepe structuren: afwezig; perineurale invasie: niet aangetroffen.[CRLF]Het betreft een hoog risico BCC.
+Gold Standard (Codes): huid hoofd rechts biopt basaalcelcarcinoom
+Translated Sentence: huid hoofd rec hts biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Cytologische lymfklierpunctie hals rechts.[CRLF]Benigne, past bij reactieve lymfklier.[CRLF]Kwaliteit: voldoende normocellulair.[CRLF]Definitieve conclusie.
+Gold Standard (Codes): lymfklier hals rechts punctie benigne
+Translated Sentence: lymfklier hals rec hts punctie 'geen maligniteit '
+==================================================
+Input Sentence: Huidexcisie borst rechts: overwegend dermale naevus papillomatosus. Volledig verwijderd. Geen dysplasie of maligniteit.
+Gold Standard (Codes): huid borst rechts excisie 'dermale naevus' 'snijvlak vrij'
+Translated Sentence: huid borst rec hts excisie naevus'snijvlak vrij'
+==================================================
+Input Sentence: Reexcisie huid rug: ******* littekenweefsel. Geen atypische cellen van melanocytaire origine.[CRLF]31-01-13/*******/AHA
+Gold Standard (Codes): huid rug reexcisie litteken 'geen tumor'
+Translated Sentence: huid rug reexcisie litteken 'geen tumor'
+==================================================
+Input Sentence: Uterusresectie (30 g), zonder adnexen met veranderingen passend bij prolaps en een klein submuceus leiomyoom. Geen maligniteit.[CRLF]03-11-17/GIE/GIE
+Gold Standard (Codes): uterus resectie leiomyoom prolaps
+Translated Sentence: uterus resectie leiomyoom prolaps
+==================================================
+Input Sentence: Punctie schildklier nodus rechts: beeld kan passen bij multinodulair struma met cysteuze veranderingen.[CRLF]Bethesda 2[CRLF]RCPath Thy2c
+Gold Standard (Codes): schildklier cytologie hyperplasie cyste
+Translated Sentence: schildklier rec hts excisie'struma struma '
+==================================================
+Input Sentence: Huidbiopt onderarm rechts waarin een subtiele lichenoide ontsteking met uitgebreide pigmentincontinentie. Het histologisch beeld kan passen bij een (status na) benigne lichenoide keratose. Geen maligniteit.
+Gold Standard (Codes): huid arm rechts biopt reactief
+Translated Sentence: huid arm biopt 'benigne lichenoide keratose '
+==================================================
+Input Sentence: Voor een toelichting op de resultaten kan een behandelend arts contact opnemen met de medisch immunoloog.
+Gold Standard (Codes): lymfocyt punctie 'geen afwijking'
+Translated Sentence: serum punctie 'geen afwijking '
+==================================================
+Input Sentence: Excochleaat linkerschouder met een dermale naevus naevocellularis. Geen maligniteit.
+Gold Standard (Codes): huid romp excochleaat 'naevus naevocellularis'
+Translated Sentence: huid romp excochleaat 'naevus naevocellularis '
+==================================================
+Input Sentence: Revisiemateriaal ******* ******* te ******* (T22-15267) betreffende lymfklierbiopt ten behoeve van DNA isolatie:  DNA geA¯soleerd en overgebracht naar afdeling medische microbiologie voor verdere analyse aldaar.
+Gold Standard (Codes): lymfklier biopt reactief revisie
+Translated Sentence: lymfklier biopt 'geen diagnose''moleculaire biologie'
+==================================================
+Input Sentence: Huidexcisiebiopt neusrug met basaalcelcarcinoom solide type. De laesie lijkt in toto verwijderd.
+Gold Standard (Codes): huid neus biopt 'basaalcelcarcinoom solide type' 'snijvlak vrij'
+Translated Sentence: huid neusrug excisie 'basaalcelcarcinoom solide type''snijvlak vrij'
+==================================================
+Input Sentence: conclusie[CRLF]Huidbiopt coeur; zijdigheid niet vermeld: kenmerken van een interfase [CRLF]dermatitis, overwogen kan worden een benigne lichenoA¯de keratose.
+Gold Standard (Codes): huid coeur 'zijdigheid onbekend' biopt 'lichenoide ontsteking' 'diagnose onzeker'
+Translated Sentence: huid coeur 'zijdigheid onbekend'biopt 'lichenoide ontsteking''diagnose onzeker''lichenoide
+==================================================
+Input Sentence: Huidbiopten rug: weinig specifiek beeld met perivasculaire ontsteking met lymfocyten en neutrofiele granulocyten en met in I oppervlakkige ulceratie, waarschijnlijk het best te beschouwen als getraumatiseerd eczeem. Geen aanwijzingen voor toxicodermie of bulleus pemphigoA¯d. Immuunfluorescentie onderzoek negatief.
+Gold Standard (Codes): huid rug perivasculair 'neutrofiele granulocyten' biopt ontsteking ulcus eczeem
+Translated Sentence: huid rug biopt 'chronische ontsteking '
+==================================================
+Input Sentence: Bronchusspoelsel LBK: acute niet specifieke ontsteking met (vermoedelijke reactieve) epitheelatypie. Geen overtuigende argumenten voor maligniteit.
+Gold Standard (Codes): bronchus links spoelsel 'geen maligniteit' atypie 'actieve ontsteking'
+Translated Sentence: bronchus links biopt ontsteking
+==================================================
+Input Sentence: Punctie parotis rechts: pleomorf adenoom (******* 4a)
+Gold Standard (Codes): speekselklier parotis rechts cytologie 'geen tumor'
+Translated Sentence: parotis rec hts excisie 'pleiomorf adenoom '
+==================================================
+Input Sentence: Huidexcisie handrug links: atypische plaveiselcellige proliferatie zeer verdacht voor oppervlakkig invasief plaveiselcelcarcinoom. Snijvlakken door tangentiele aansnijding suboptimaal beoordeelbaar. Een kleine re-excisie wordt geadviseerd.[CRLF]*******
+Gold Standard (Codes): huid excisie 'verdacht maligne'
+Translated Sentence: huid excisie'verdacht voor carcinoom '
+==================================================
+Input Sentence: Placenta met navelstreng en vliezen; gewicht 169 g (p25), met maturiteit passend bij de zwangerschapsduur. Geen tekenen van ontsteking.
+Gold Standard (Codes): placenta 'spontaan verkregen' 'geen afwijking'
+Translated Sentence: placenta'spontaan verkregen'hypoxie
+==================================================
+Input Sentence: Vacuumzuigbiopten (BIRADS 3 - 4 via ******* mamma rechts): atrofisch mammaweefsel met focaal enige fibrose met in het stroma enkele verkalkingen, qua vorm, grootte en hoeveelheid overeenkomend met de controle-opname bij medische beeldvorming. Geen (pre) maligniteit.[CRLF]S/m
+Gold Standard (Codes): mamma rechts biopt atrofie verkalking 'geen maligniteit' immunohistochemie 'revisie intern'
+Translated Sentence: mamma rec hts biopt atrofie 'geen maligniteit''revisie intern''revisie concordant
+==================================================
+Input Sentence: Maagslijmvliesbiopten zonder duidelijke afwijkingen.
+Gold Standard (Codes): maag biopsie 'geen afwijking'
+Translated Sentence: maag biopt 'geen afwijking '
+==================================================
+Input Sentence: Huidexcisie volgens Mohs procedure mediale ooghoek links: snijvlakken vrij van basaalcelcarcinoom conform eerdere vriescoupe.
+Gold Standard (Codes): huid 'mediale ooghoek' links 'mohs resectie' 'geen maligniteit' 'vriescoupe concordant'
+Translated Sentence: huid excisie 'geen maligniteit''vriescoupe concordant '
+==================================================
+Input Sentence: Huidexcisie nasolabiaal links: dermale naevus naevocellularis.
+Gold Standard (Codes): huid gelaat links excisie naevus
+Translated Sentence: huid excisie naevus
+==================================================
+Input Sentence: Huidexcisie retro-auriculair rechts: hyperkeratotische papillomateuze laesie met geringe atypie, d.d. verruca vulgaris, hypertrofische actinische keratose. Onvoldoende argumenten voor plaveiselcelcarcinoom. Het snijvlak is vrij.[CRLF]19-01-15/mw. *******/cs
+Gold Standard (Codes): huid retro-auriculair rug excisie verruca
+Translated Sentence: huid hoofd rec hts excisie'verruca vulgaris '
+==================================================
+Input Sentence: Pipelle endometrium: inactief endometrium met (pseudo-) decidualisatie van het stroma. Is er sprake van endogene of exogene progesteron stimulatie?
+Gold Standard (Codes): endometrium pipelle 'geen maligniteit'
+Translated Sentence: endometrium pipelle 'geen maligniteit '
+==================================================
+Input Sentence: Endometriumbiopten: prolifererend endometrium. Geen verdere bijzonderheden.
+Gold Standard (Codes): endometrium biopt 'geen afwijking'
+Translated Sentence: endometrium biopt 'geen afwijking '
+==================================================
+Input Sentence: Poliepectomie (cervix): benigne endocervicale poliep met reactieve veranderingen.
+Gold Standard (Codes): cervix resectie 'geen maligniteit' poliep
+Translated Sentence: cervix excisie poliep
+==================================================
+Input Sentence: Subunguale afwijking duim links: onycholemmale cyste. Geen aanwijzingen voor maligniteit. Geen aanknopingspunten voor Koense tumor.
+Gold Standard (Codes): huid duim links cyste biopt
+Translated Sentence: huid duim links excisie 'epidermale cyste '
+==================================================
+Input Sentence: Huidexcisie (rechter wenkbrauw; Mohs chirurgie): geen maligniteit.
+Gold Standard (Codes): huid excisie 'geen maligniteit' 'vriescoupe concordant'
+Translated Sentence: huid wenkbrauw rec hts excisie 'geen maligniteit '
+==================================================
+Input Sentence: (DEFINITIEF) resectie huidafwijking onder knieholte rechts:  junction naevus. [CRLF]De afwijking is radicaal verwijderd.[CRLF]27-05-2016 Zie ook bevindingen revisie (conform).
+Gold Standard (Codes): huid knie rechts resectie 'geen maligniteit'
+Translated Sentence: huid knie rec hts resectie 'junct ion naevus '
+==================================================
+Input Sentence: maagbiopten:[CRLF]I antrum: fragmentjes maagantrumslijmvlies met beeld van reactieve gastropathie. Geen intestinale metaplasie, dysplasie, atrofie, helicobacter pylori infect.[CRLF]II corpus: fragmentjes maagcorpusslijmvlies met behoudens enig oedeem geen afwijkingen. Geen intestinale metaplasie, dysplasie, atrofie, Helicobacter pylori infect.
+Gold Standard (Codes): maag biopt 'reactieve verandering'
+Translated Sentence: maag biopt reactief
+==================================================
+Input Sentence: Ileocaecale resectie: localisatie zwart pigment, gelijkend op het pigment uit de biopsie. Er is lymfoA¯de hyperplasie zoals op deze plek kan voorkomen, voorts geen afwijkingen. Morfologisch wordt eenzelfde beeld gezien als in de biopsie. In de appendix een beeld van doorgemaakte chronische ontsteking. [CRLF]Het pigment is waarschijnlijk exogeen en lijkt op antracose pigment, veroorzaakt door atmosferische vervuiling.[CRLF]08/05/23 aanvulling conclusie ******* (T23-007257):[CRLF]Revisie *******, ******* T15-40447 / 05-10-2015:[CRLF]Ileocaecale resectie: Er is lymfoA¯de hyperplasie in het ileum en appendix met deposities van zwart pigment. In de appendix zeer focaal hooguit gering chronische, minimaal actieve ontsteking. Geen aanwijzing voor IBD. Het beeld is aspecifiek; onvoldoende aanknopingspunten voor classificerende diagnose. Conform elders.
+Gold Standard (Codes): 'dunne darm' excisie 'geen maligniteit'
+Translated Sentence: colon resectie reactief'revisie extern concordant '
+==================================================
+Input Sentence: Huidexcisie van de schouder links: actinische keratose. Tevens aspecifieke ontsteking. (Nog)  geen maligniteit.
+Gold Standard (Codes): huid schouder links excisie 'actinische keratose'
+Translated Sentence: huid schouder links excisie 'actinische keratose '
+==================================================
+Input Sentence: Huid reexcisie handrug rechts webspace digitus I / II: littekenweefsel en postoperatieve veranderingen. Geen rest van plaveiselcelcarcinoom.
+Gold Standard (Codes): huid 'hand rug' reexcisie litteken 'geen maligniteit'
+Translated Sentence: huid hand rec hts reexcisie 'geen maligniteit '
+==================================================
+Input Sentence: Appendectomie met een uitgebreide acute necrotiserende appendicitis, gepaard met perforatie. Er zijn geen tekenen van maligniteit.
+Gold Standard (Codes): appendix excisie 'acute ontsteking' necrose
+Translated Sentence: appendix excisie 'acute ontsteking'necrose perforatie
+==================================================
+Input Sentence: I huidexcisie kaakhoek/hals links: basaalcelcarcinoom, deels infiltratief, deels (micro) nodulair, reikend tot diep dermaal. De maximale diameter is macroscopisch 12 mm. De snijranden zijn vrij (marge richting de basis 1,5 mm, marge richting de zijkant 3 mm).
+Gold Standard (Codes): huid gelaat links excisie basaalcelcarcinoom
+Translated Sentence: huid gelaat links excisie basaalcelcarcinoom
+==================================================
+Input Sentence: Oesofagusbiopten: maagslijmvliestype biopten met geringe reactieve veranderingen. Niet het specifieke beeld van Barrett. Geen dysplasie.
+Gold Standard (Codes): oesofagus biopt ontsteking
+Translated Sentence: oesofagus biopt reactief
+==================================================
+Input Sentence: I: biopten blaaswand: snijartefact met pseudo invasieve groei door hyperplasie ******* klierbuisjes/ cystitis glandularis achtig beeld. Geen werkelijke maligniteit. Geen papillaire veranderingen.[CRLF]II: tumortje blaas: laaggradig niet invasief papillair urotheelcelcarcinoom. pTaG1.[CRLF]30-06-15/KSF/MMA
+Gold Standard (Codes): blaas biopt hyperplasie artefact 'geen tumor' [C-SEP] blaas biopt urotheelcelcarcinoom morfometrie
+Translated Sentence: blaas biopt atypie hyperplasie 'geen zekere diagnose '
+==================================================
+Input Sentence: Huidbiopt rechter bovenbeen: basaalcelcarcinoom, fibro-epithelioma van Pinkus-type.
+Gold Standard (Codes): huid been rechts biopt basaalcelcarcinoom
+Translated Sentence: huid bovenbeen rec hts biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Huidexcisie paranasaal rechts: solide groeiend basaalcelcarcinoom, sneevlakken vrij.
+Gold Standard (Codes): huid excisie basaalcelcarcinoom
+Translated Sentence: huid gelaat rec hts excisie basaalcelcarcinoom
+==================================================
+Input Sentence: Tweetal huidbiopten (epigastricum en coeur): reactieve veranderingen met ook enige elastose. Geen duidelijke dysplastische kenmerken, geen carcinoomlokalisatie. Wordt verder opgesneden.[CRLF]Bls[CRLF]Aanvulling d.d. 04-02-15:[CRLF]Bij verder opsnijden wordt in de biopsie onder II (coeur) actinische beschadiging gezien en nabij de laterale rand plaatselijk nog een superficieel atypisch celnestje, mogelijk basaalcelcarcinoom.[CRLF]Bls[CRLF]Aanv. dd. 24-2-15:[CRLF]II. Advies: behandeling als superficieel basaalcelcarcinoom.[CRLF]Bls
+Gold Standard (Codes): huid biopsie 'reactieve verandering' [C-SEP] huid biopsie basaalcelcarcinoom dubieus
+Translated Sentence: huid biopsie'reactieve verandering'
+==================================================
+Input Sentence: Leverbiopt waarin een focale nodulaire hyperplasie.
+Gold Standard (Codes): lever biopt 'focale nodulaire hyperplasie'
+Translated Sentence: lever biopt focale
+==================================================
+Input Sentence: Biopt lymfklier submandibulair rechts: localisatie grootcellig carcinoom, immunohistochemisch met een voorkeur voor localisatie plaveiselcelcarcinoom.[CRLF]Revisie (d.d. 06-04-18) [CRLF]De coupes zijn herbeoordeeld in het ******* MC, onder nummer H18-7971; conclusie conform.[CRLF](kh/sd)[CRLF]Aanvulling revisie (d.d. 30-04-18):[CRLF]De tumor is mogelijk HPV geassocieerd. Daarom met name een primaire tumor in de orofarynx worden overwogen. [CRLF](lb/sd)
+Gold Standard (Codes): lymfklier rechts biopt 'grootcellig carcinoom' 'revisie extern concordant'
+Translated Sentence: lymfklier rec hts biopt'metastase carcinoom''localisatie primaire tumor onbekend''revisie extern
+==================================================
+Input Sentence: Huidexcisie oorschelp rechts: actinische keratose.
+Gold Standard (Codes): huid oor rechts excisie 'actinische keratose'
+Translated Sentence: huid oor rec hts excisie 'actinische keratose '
+==================================================
+Input Sentence: Pipelle endometrium: zwak secretoir endometrium zonder atypie of maligniteit. In voorhanden materiaal geen adenomyose.
+Gold Standard (Codes): endometrium pipelle 'geen maligniteit'
+Translated Sentence: endometrium pipelle 'geen maligniteit '
+==================================================
+Input Sentence: Resectie parotis staart links: pleiomorf adenoom, krap in toto verwijderd.
+Gold Standard (Codes): parotis links resectie 'pleiomorf adenoom'
+Translated Sentence: 'glandula parotis'links resectie 'pleiomorf adenoom '
+==================================================
+Input Sentence: Huid shave-excisie ooglid rechts: verruca seborrhoica.
+Gold Standard (Codes): huid ooglid rechts curettage 'verruca seborrhoica'
+Translated Sentence: huid ooglid rec hts shave-excisie'verruca seborrhoica '
+==================================================
+Input Sentence: Consult t.b.v. derden (PA-lab ARUBA, PA-nummer T15-3237):[CRLF]colon descendens slijmvliesbiopten met focaal ulceratie. Het beeld is niet specifiek. In de eerste plaats wordt gedacht aan een ischemische genese. Zie verder microscopische beschrijving. CMV bepaling volgt.[CRLF]Coupes en blokjes met dank retour.[CRLF]Aanvulling: CMV bepaling: negatief. Congo Rood: negatief.
+Gold Standard (Codes): colon biopt ulcus ischemie 'consult ten behoeve van derden'
+Translated Sentence: colon biopt ulcus 'consult ten behoeve van derden '
+==================================================
+Input Sentence: Huidbiopt binnenzijde linker bovenarm: beeld passend bij een solaire keratose.
+Gold Standard (Codes): huid bovenarm links biopt 'solaire keratose'
+Translated Sentence: huid arm links biopt'solaire keratose '
+==================================================
+Input Sentence: Revisie t.b.v. derden (PA-lab ******* *******, PA-nummer T21-51690), concordant:[CRLF]TUR blaashals: hooggradig urotheelcelcarcinoom, graad 3. Infiltratie in detrusor spier is aanwezig. Geen carcinoma in situ (CIS). Geen vaso-invasieve groei.[CRLF]PT2
+Gold Standard (Codes): blaas tur urotheelcelcarcinoom 'revisie t.b.v. derden concordant'
+Translated Sentence: blaas excisie urotheelcelcarcinoom'revisie t.b.v. derden concordant '
+==================================================
+Input Sentence: Biopten mamma links op 9 uur: invasief carcinoom NST, graad 1. Hormoonreceptorstatus volgt.[CRLF]Aanvulling d.d. 10-03-2017:[CRLF]De tumor is positief voor oestrogeenreceptor en progesteronreceptor. Her2neu: FISH volgt.[CRLF]Aanvulling d.d. 15-03-2017:[CRLF](*******) Her2neu (FISH): negatief.
+Gold Standard (Codes): mamma links biopt 'infiltrerend ductaalcarcinoom'
+Translated Sentence: mamma links biopt adenocarcinoom
+==================================================
+Input Sentence: Revisie Laboratorium pathologie *******-*******, *******, T03-23480: I, II. Duodenum- en jejunumbiopten: Dunne darmmucosa zonder overtuigende afwijkingen. Geen evidente toename van intra-epitheliale lymfocyten. Geen vlokatrofie of crypthyperplasie. Geen Giardia lamblia.[CRLF]Zie ook TVU13-12682 en TVU13-13043.[CRLF]Aanvullend bericht (dd. 09-10-2013, nctvg): De microscopie is aangepast. De conclusie blijft ongewijzigd.
+Gold Standard (Codes): duodenum jejunum biopt 'geen afwijking' 'revisie voor derden discordant'
+Translated Sentence: duodenum biopt 'geen afwijking''revisie ten behoeve van derden concordant '
+==================================================
+Input Sentence: excisie hypofysetumor: chromofoob hypofyseadenoom, geen evidente hormoonproductie aantoonbaar.
+Gold Standard (Codes): hypofyse excisie adenoom
+Translated Sentence: buikwand excisie adenoom
+==================================================
+Input Sentence: I. Biopten maagcorpus (grote curvatuur): geen afwijkingen.[CRLF]II. Biopten maagcorpus (kleine curvatuur): geen rest van MALT-lymfoom, maar beperkte hoeveelheid monotypische lambda-positieve 'uitgerijpte' cq terminaal gedifferentieerde plasmacellen.[CRLF]III. Biopten maag cardia: geen afwijkingen.
+Gold Standard (Codes): maag biopt 'geen afwijking'
+Translated Sentence: maag biopt 'geen afwijking '
+==================================================
+Input Sentence: Resectie hersentumor temporaal rechts: Subtiele afwijkingen, passend bij subtiele localisatie van het glioom dat verder wordt beschreven in verslag TVU22-12343.
+Gold Standard (Codes): hersenen rechts resectie glioom
+Translated Sentence: hersenen rec hts resectie 'Sinop mater iaa l'
+==================================================
+Input Sentence: huidbiopt onderrug rechts: verruceuze hyperplasie met reactieve veranderingen. Representatief?
+Gold Standard (Codes): huid rug biopt reactief
+Translated Sentence: huid biopt reactief
+==================================================
+Input Sentence: I en II. Biopt huid (nates en elleboog): het beeld zou op histomorfologische en *******- gronden wel kunnen passen bij dermatitis herpetiformis.
+Gold Standard (Codes): huid biopt dermatitis 'dermatitis herpetiformis' immuunfluorescentie
+Translated Sentence: huid biopt dermatitis
+==================================================
+Input Sentence: ascitesvocht: geen aanwijzingen voor maligniteit, reactief.
+Gold Standard (Codes): ascitesvocht reactief
+Translated Sentence: oogbol rec hts excisie 'geen maligniteit '
+==================================================
+Input Sentence: Het ingestuurde materiaal bestaat uit een ophoping van macrofagen waarin wat cholesterolkristallen met reuscellen. Het beeld kan goed bij een radiculaire cyste passen. Geen odontogene keratocyste.
+Gold Standard (Codes): kaak biopt 'radiculaire cyste'
+Translated Sentence: kaak biopt 'radiculaire cyste '
+==================================================
+Input Sentence: Huidbiopt kaakrand links met chronische dermatitis met sterke eosinofilie. Schimmelkleuring negatief.[CRLF]20-03-13/*******/AHA
+Gold Standard (Codes): huid gelaat biopsie ontsteking eosinofilie
+Translated Sentence: huid gelaat biopsie ontsteking
+==================================================
+Input Sentence: Huidexcisie rug links: deels multifocaal superficieel, deels solide groeiend basaalcelcarcinoom. Snijvlakken vrij. Tevens een dermale naevus naevocellularis.
+Gold Standard (Codes): huid rug links excisie basaalcelcarcinoom 'dermale naevus'
+Translated Sentence: huid rug links excisie basaalcelcarcinoom 'dermale naevus '
+==================================================
+Input Sentence: Huidbiopt linkerbovenbeen: dermale bloeding en hooguit minimale perivasculaire lymfocytaire ontsteking. Het beeld is niet zeer specifiek. Hoewel er geen ijzerdepositie is kan morbus Schamberg of een andere vorm van capillaritis niet met zekerheid worden uitgesloten. Geen aanwijzingen voor vasculitis.
+Gold Standard (Codes): huid been links biopt bloeding
+Translated Sentence: huid been links biopt bloeding
+==================================================
+Input Sentence: Biopten distale oesophagus: overwegend maagcardiaslijmvlies met actieve ontsteking. Geen intestinale metaplasie of dysplasie.
+Gold Standard (Codes): oesofagus biopsie 'reactief beeld'
+Translated Sentence: oesophagus biopt ontsteking
+==================================================
+Input Sentence: conclusie[CRLF]Excisie apicaal granuloom regio 24: fibrohistiocytaire ontsteking zonder [CRLF]bekledend epitheel. Een *******, radiculaire cyste of (reuscel)granuloom kan in [CRLF]dit materiaal niet worden aangetoond of uitgesloten.
+Gold Standard (Codes): mond excisie ontsteking fibrose 'geen maligniteit'
+Translated Sentence: mond excisie 'geen classificerende diagnose '
+==================================================
+Input Sentence: Huidbiopt (binnenzijde linkerbovenbeen): spongiotische dermatitis met oppervlakkige actieve ontsteking, beste passend bij geimpetiginiseerd eczeem. In dit biopt geen typisch beeld van een psoriasis hoewel psoriasis pustulosa bij dit beeld ook niet zeker wordt uitgesloten. Geen aanwijzingen voor schimmels.
+Gold Standard (Codes): huid been links biopt dermatitis
+Translated Sentence: huid been links biopt eczeem
+==================================================
+Input Sentence: Huidexcisie rug rechts: samengestelde naevus naevocellularis.
+Gold Standard (Codes): huid rug excisie 'naevus naevocellularis'
+Translated Sentence: huid rug rec hts excisie 'naevus naevocellularis '
+==================================================
+Input Sentence: Huidstansbiopt rechterscheenbeen: interface veranderingen met veel langerhanse cellen en enige atypie. Mogelijk gaat het om een sterk reactief proces maar consult extern volgt nog om mycosis fungoides uit te sluiten.[CRLF]Consult *******: wat atypisch en epidermotroop infiltraat. Het beeld kan bij passende kliniek goed passen bij mycosis fungoides. Advies doorverwijzing naar dermatoloog met fotografische documentatie.
+Gold Standard (Codes): huid been rechts biopt 'geen zekere diagnose' atypie 'consult extern' 'onderzoek extern' 'moleculaire biologie' 'revisie extern'
+Translated Sentence: huid been rec hts biopt'mycosis fungoides'atypie 'geen zekere diagnose '
+==================================================
+Input Sentence: Hoog risico HPV is afwezig[CRLF]Deze HPV uitslag dient te worden verwerkt in bijbehorende cytologisch onderzoek.
+Gold Standard (Codes): cervix uitstrijk 'h.p.v. hoog risico type negatief' 'consult ten behoeve van derden'
+Translated Sentence: cervix biopt 'humaan papilloma virus''moleculaire biologie'
+==================================================
+Input Sentence: Biopt cervix uteri: fragment plaveiselepitheel, geen endocervicaal epitheel. Transformatiezone niet het beeld. Materiaal wordt dieper doorgesneden, aanvullend bericht volgt[CRLF]Aanvulling d.d. 23-10-19:[CRLF]In diepere doorsnijdingen voornamelijk slijm. Conclusie blijft ongewijzigd.
+Gold Standard (Codes): cervix biopt reactief
+Translated Sentence: cervix biopt 'geen afwijking '
+==================================================
+Input Sentence: Biopsie mamma retro-aureolair links, 5 uur : Infiltrerend ductaal carcinoom.[CRLF]ER + (100%). PR + (100%). Her-2-Neu is negatief.[CRLF]D.d. 16-06-2016. In deze biopten kan het beeld passen bij een graad 1 ductaal carcinoom.
+Gold Standard (Codes): mamma links biopsie 'ductaal carcinoom'
+Translated Sentence: mamma links biopsie 'ductaal carcinoom '
+==================================================
+Input Sentence: Shave papel dig I rechter voet: veranderingen die kunnen passen bij een keratoacanthoom. Geen adnextumor. Geen dysplasie of maligniteit.
+Gold Standard (Codes): huid excisie reactief
+Translated Sentence: huid excisie 'geen maligniteit '
+==================================================
+Input Sentence: Huidexcisie neus: micronodulair groeiend basaalcelcarcinoom (0,7 cm). De snijranden zijn vrij met een krappe marge van minder dan 1 mm naar een van de uiteinden.
+Gold Standard (Codes): huid hoofd excisie basaalcelcarcinoom
+Translated Sentence: huid neus excisie basaalcelcarcinoom
+==================================================
+Input Sentence: Pleuravocht links: Sterk reactief celbeeld met atypische cellen.[CRLF]DD. reactief mesotheel, maligniteit. [CRLF]Immunologisch onderzoek op het ingeblokt cytologisch materiaal (T13-19561).
+Gold Standard (Codes): pleuravocht links cytologie reactief atypie maligniteit
+Translated Sentence: pleura links biopt 'geen maligniteit '
+==================================================
+Input Sentence: Zie aanvulling conclusie T95-08908/C13-613/T02-964.
+Gold Standard (Codes): mamma resectie 'geen diagnose'
+Translated Sentence: huid biopt 'geen diagnose '
+==================================================
+Input Sentence: Endometriumbiopten: hyperplasie met atypie.
+Gold Standard (Codes): endometrium biopt 'geen maligniteit' hyperplasie
+Translated Sentence: endometrium biopt hyperplasie
+==================================================
+Input Sentence: Huid hals rechts met een nodulair basaalcelcarcinoom.  Focale sprieterige groeiwijze is niet uitgesloten.
+Gold Standard (Codes): huid hals biopt basaalcelcarcinoom
+Translated Sentence: huid hals biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Colonbiopten uit het rectumgebied waarin overgang van hooggradige dysplasie naar gebieden verdacht voor infiltratieve groei.
+Gold Standard (Codes): colon biopt adenocarcinoom
+Translated Sentence: colon biopt'verdacht maligne '
+==================================================
+Input Sentence: Huidexcisie rug ter hoogte van thoracale 10 links: samengestelde naevus naevocellularis met enige atypie, onvoldoende voor dysplasie. Geen aanwijzingen voor maligniteit. De laesie is in toto verwijderd.
+Gold Standard (Codes): huid romp excisie naevus
+Translated Sentence: huid rug excisie 'naevus naevocellularis '
+==================================================
+Input Sentence: Hart biopten: geringe rejectie, graad 1r.
+Gold Standard (Codes): hart biopt 'geen diagnose'
+Translated Sentence: hart biopt 'geen diagnose '
+==================================================
+Input Sentence: Excisie afwijking anterieure tonsilpijler links: beeld van een squameus papilloom met reactieve veranderingen. Op verzoek van de kliniek wordt moleculair onderzoek ingezet: HPV typering (*******). Aanvullend bericht volgt.[CRLF]Aanvulling d.d. 27-10-19:[CRLF]MOLECULAIRE DIAGNOSTIEK (pathologie *******):[CRLF]Middels amplificatie met GP5+/6+ primers wordt geen HPV-besmetting aangetoond.[CRLF]De geteste types zijn 4 LowRisk-types (6,11,40,42) en 14 HighRisk types (16,18,31,33,35,39,45,51,52,56,58,59,66,68).
+Gold Standard (Codes): mond tonsil excisie papilloom 'moleculaire biologie'
+Translated Sentence: mond tonsil excisie papilloom'moleculaire biologie'
+==================================================
+Input Sentence: Huidexcisie linker bovenarm: geheel goedaardige dermale melanocytaire naevus.
+Gold Standard (Codes): huid arm links excisie naevus
+Translated Sentence: huid arm links excisie 'dermale naevus '
+==================================================
+Input Sentence: Huid Mohs resectie (op de neusvleugel links): Definitieve resectievlakken zonder tumorlocalisatie (basaalcelcarcinoom). Conform.[CRLF]"NB Interpretatie van de macroscopie is op basis van de door de kliniek aangeleverde beschrijving en/of foto's."
+Gold Standard (Codes): huid resectie gelaat basaalcelcarcinoom
+Translated Sentence: huid resectie gelaat basaalcelcarcinoom 'vriescoupe concordant '
+==================================================
+
+JOB STATISTICS
+==============
+Job ID: 4723977
+Cluster: snellius
+User/Group: msiepel/msiepel
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:27:36 core-walltime
+Job Wall-clock time: 00:01:32
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 39.06 GB (39.06 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

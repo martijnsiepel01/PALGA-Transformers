@@ -1,0 +1,718 @@
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thouroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Token indices sequence length is longer than the specified maximum sequence length for this model (762 > 512). Running this sequence through the model will result in indexing errors
+Input text: I lymfklier onder vena cava: geen metastase. II lymfklier ter hoogte van aorta, III tumormassa ter hoogte van arteria mesenterica inferior en IV tumorweefsel ureter: in alle drie uitgebreide nodale en extranodale lokalisatie van het (mucineus) zegelringcarcinoom van het sigmoid.
+Gold standard: lymfklier abdomen resectie 'geen maligniteit' [C-SEP] lymfklier abdomen resectie 'metastase adenocarcinoom' colon [C-SEP] ureter 'zijdigheid niet vermeld' resectie 'doorgroei tumor' adenocarcinoom 'colon sigmoideum' zegelringcelcarcinoom
+mT5-small: lymfklier excisie'metastase adenocarcinoom'colon
+mT5-base: lymfklier excisie'metastase adenocarcinoom'colon
+flan-t5-small: ureter resectie'geen maligniteit '
+flan-t5-base: lymfklier abdomen excisie'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisie boven wenkbrauw rechts met verruca seborrhoica. Geen rest basaalcelcarcinoom aangetroffen. Snijvlakken vrij.
+Gold standard: huid voorhoofd rechts excisie 'verruca seborrhoica' 'geen maligniteit'
+mT5-small: huid excisie'verruca seborrhoica '
+mT5-base: huid excisie'verruca seborrhoica '
+flan-t5-small: huid gelaat excisie'verruca seborrhoica '
+flan-t5-base: huid wenkbrauw rechts excisie'verruca seborrhoica '
+----------------------------------------------------------------------------------------------------
+Input text: Mamma naaldbiopt (links lateraal boven): lokalisatie invasief lobulair carcinoom, ER en PR positief, HER2-neu negatief.
+Gold standard: mamma links biopt 'lobulair carcinoom' ip
+mT5-small: mamma links biopt'invasief lobulair carcinoom '
+mT5-base: mamma links biopt'invasief lobulair carcinoom '
+flan-t5-small: mamma links biopt'lobulair carcinoom '
+flan-t5-base: mamma links biopt adenocarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Excisie zwellingen abdomen rechts onder: histologisch beeld passend goed bij lipoom(en), deels te classificeren als angiolipoom. Geen duidelijke aanwijzingen voor maligniteit.
+Gold standard: subcutis buik rechts excisie lipoom angiolipoom 'geen maligniteit'
+mT5-small: subcutis excisie lipoom
+mT5-base: subcutis excisie lipoom
+flan-t5-small: ' weke delen'abdomen excisie lipoom
+flan-t5-base: subcutis lies rechts excisie lipoom
+----------------------------------------------------------------------------------------------------
+Input text: Conclusie: Papklasse 1. Hoog risico HPV negatief.
+Gold standard: cervix cytologie 'pap 1' 'moleculaire biologie' 'h.p.v. negatief'
+mT5-small: cervix uitstrijk 'g een afwijking'' humaan papilloma virus test''h.p.v. negatief '
+mT5-base: cervix uitstrijk 'g een afwijking'' humaan papilloma virus test''h.p.v. negatief '
+flan-t5-small: cervix uitstrijk'geen afwijking'' humaan papilloma virus te st''h.p.v. negatief '
+flan-t5-base: cervix uitstrijk'geen afwijking'' humaan papilloma virus''moleculaire biologie '
+----------------------------------------------------------------------------------------------------
+Input text: endoresectie endometrium: endometriumpoliep. Geen complexe hyperplasie of atypie.
+Gold standard: endometrium resectie poliep 'geen maligniteit'
+mT5-small: endometrium biopt poliep
+mT5-base: endometrium biopt poliep
+flan-t5-small: endometrium biopt poliep
+flan-t5-base: endometrium biopt'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: Dunne darmslijmvliesbiopten (overgang jejunum naar ileum): granulerende chronische deels actieve ulcererende ischemische ontsteking. S/l
+Gold standard: 'dunne darm' biopt ontsteking ischemie ulcus
+mT5-small: ' dunne darm'biopt ontsteking
+mT5-base: ' dunne darm'biopt ontsteking
+flan-t5-small: ileum biopt ontsteking
+flan-t5-base: ' dunne darm'biopt ontsteking
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisie (rechts temporaal): nodulair basaalcelcarcinoom. Resectieranden vrij.
+Gold standard: huid hoofd rechts temporaal excisie basaalcelcarcinoom 'snijvlak vrij'
+mT5-small: huid hoofd r ec hts resectie basaalcelcarcinoom
+mT5-base: huid hoofd r ec hts resectie basaalcelcarcinoom
+flan-t5-small: huid hoofd resectie basaalcelcarcinoom
+flan-t5-base: huid hoofd rechts excisie basaalcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: I : Huidbiopsie wang links met keratosis seborrhoica . Er zijn geen tekenen van maligniteit. II : Huidbiopsie onderarm links met basaalcelcarcinoom van het solide type en voor een kleiner deel van het sprieterige type. III: Huidbiopsie bovenarm rechts waarin slechts fragmentje vetweefsel. Geen beoordeelbaar materiaal. Geen diagnose.
+Gold standard: huid wang links biopt 'verruca seborrhoica' [C-SEP] huid onderarm links biopt basaalcelcarcinoom [C-SEP] huid bovenarm rechts biopt 'onvoldoende materiaal voor diagnose'
+mT5-small: huid wang links stansbiopt'keratosis seborrhoica''g een maligniteit'[C-SEP] huid arm r ec hts stansbiopt'basaalcel carcinoom
+mT5-base: huid wang links stansbiopt'keratosis seborrhoica''g een maligniteit'[C-SEP] huid arm r ec hts stansbiopt'basaalcel carcinoom
+flan-t5-small: huid wang links stansbiopt'keratosis seborrhoica'[C-SEP] huid bovenarm rechts stansbiopt'basaalcel carcinoom'' geen maligniteit '
+flan-t5-base: huid wang links stansbiopt'keratosis seborrhoica'' geen maligniteit'[C-SEP] huid arm links stansbiopt'basocellulair carcinoom '
+----------------------------------------------------------------------------------------------------
+Input text: VOORLOPIGE, 23/04/2015. Biopt trachea: vooralsnog geen duidelijke afwijkingen. Aanvullend onderzoek ingezet. DEFINITIEVE, 24/04/2015. Biopt trachea: behoudens squameuze metaplasie, geen duidelijke afwijkingen.
+Gold standard: trachea biopt 'squameuze metaplasie' 'geen afwijking'
+mT5-small: long biopt 'g een afwijking '
+mT5-base: long biopt 'g een afwijking '
+flan-t5-small: slijmvlies tong biopt'geen afwijking '
+flan-t5-base: mond biopt'geen afwijking '
+----------------------------------------------------------------------------------------------------
+Input text: conclusie I. De resectie poliep coecum: tubulair adenoom met laaggradige dysplasie,  snijvlak niet te beoordelen II. Resectie poliep transversum: tubulair adenoom met laaggradige dysplasie,  snijvlak niet te beoordelen. III. Resectie poliep sigmo?d: mucosa met fibrose en chronische ontsteking, niet  specifiek. IV. Biopten rectum: reactieve veranderingen en een focus met actieve erosieve  ontsteking en crush artefact. CMV negatief.
+Gold standard: colon poliep ectomie 'tubulair adenoom' 'laaggradige dysplasie' [C-SEP] colon 'poliep ectomie' ontsteking [C-SEP] colon biopt ontsteking reactief
+mT5-small: colon biopt'tubulair adenoom'' laaggradige dysplasie '
+mT5-base: colon biopt'tubulair adenoom'' laaggradige dysplasie '
+flan-t5-small: colon biopt'tubulair adenoom'' laaggradige dysplasie'[C-SEP] colon biopt reactief
+flan-t5-base: colon resectie'tubulair adenoom'' laaggradige dysplasie '
+----------------------------------------------------------------------------------------------------
+Input text: Mammanaaldbiopten (links) met een ductaal adenocarcinoom. Receptorstatus: ER negatief (< 5%, gaarne herhalen op excisie) en PR positief (30%). Het carcinoom uit de rechter mamma in 2003 betrof een (buisvormend) ductaal carcinoom, ER positief en PR negatief.
+Gold standard: mamma links biopt adenocarcinoom
+mT5-small: mamma links biopt adenocarcinoom
+mT5-base: mamma links biopt adenocarcinoom
+flan-t5-small: mamma links biopt adenocarcinoom
+flan-t5-base: mamma links biopt adenocarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Appendectomie: necrotiserende appendicitis acuta met de klinische en histologische perforatie. Geen aanwijzingen voor maligniteit.
+Gold standard: appendix resectie ontsteking 'geen maligniteit'
+mT5-small: appendix resectie 'acute ontsteking '
+mT5-base: appendix resectie 'acute ontsteking '
+flan-t5-small: appendix resectie ontsteking
+flan-t5-base: appendix resectie'appendicitis acuta '
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisie gelaat: geruptureerde epidermiscyste met opruimreactie. Geen maligniteit.
+Gold standard: huid gelaat excisie 'epidermale cyste' vreemdlichaamsreuscelreactie 'geen maligniteit'
+mT5-small: huid gelaat excisie 'g een maligniteit '
+mT5-base: huid gelaat excisie 'g een maligniteit '
+flan-t5-small: huid excisie epidermiscyste
+flan-t5-base: huid gelaat excisie epidermiscyste
+----------------------------------------------------------------------------------------------------
+Input text: Excisie huid en subcutis scheenbeen links: litteken met uitgebreide reactieve veranderingen, waaronder ook enig waarschijnlijk lichaamsvreemd materiaal. Zie microscopie.
+Gold standard: huid subcutis onderbeen links excisie litteken 'reactieve verandering' vreemdlichaamsreuscelreactie
+mT5-small: huid been links excisie litteken reactief
+mT5-base: huid been links excisie litteken reactief
+flan-t5-small: huid excisie reactief
+flan-t5-base: huid scheenbeen links excisie litteken
+----------------------------------------------------------------------------------------------------
+Input text: Excisie zwelling buccale omslagplooi: beeld consistent met een speekselkliersteen in een cysteuze afvoergang. Geen tekenen van maligniteit.
+Gold standard: mondslijmvlies excisie speekselsteen
+mT5-small: speekselklier lip excisie'cysteuze degeneratie '
+mT5-base: speekselklier lip excisie'cysteuze degeneratie '
+flan-t5-small: ' weke delen'excisie'geen maligniteit '
+flan-t5-base: gingiva excisie exostose
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisiepreparaat bovenarm links waarin localisatie van een matig gedifferentieerd infiltratief groeiend plaveiselcelcarcinoom met infiltratie in de subcutis. Bodem ongeveer 1 mm vrij. De invasieve component is radicaal verwijderd maar de morbus Bowen component reikt tot in sneevlak 6.
+Gold standard: huid bovenarm links excisie plaveiselcelcarcinoom 'snijvlak vrij' [C-SEP] huid bovenarm links excisie 'morbus bowen' 'snijvlak niet vrij'
+mT5-small: huid arm links excisie plaveiselcelcarcinoom'morbus bowen'' snijvlak vrij'
+mT5-base: huid arm links excisie plaveiselcelcarcinoom'morbus bowen'' snijvlak vrij'
+flan-t5-small: huid arm links excisie plaveiselcelcarcinoom
+flan-t5-base: huid excisie plaveiselcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisie gezicht met beeld passend bij een intradermale naevus . Het beeld past bij een congenitale naevus. Niet geheel verwijderd. Er zijn geen tekenen van maligniteit.
+Gold standard: huid gelaat excisie naevus 'congenitale naevus' 'geen maligniteit'
+mT5-small: huid gezicht excisie'naevus naevocellularis'' congenitale naevus''g een maligniteit '
+mT5-base: huid gezicht excisie'naevus naevocellularis'' congenitale naevus''g een maligniteit '
+flan-t5-small: huid excisie'naevus naevocellularis'' snijvlak niet vrij'' geen maligniteit '
+flan-t5-base: huid gelaat excisie'naevus naevocellularis'' congenitale naevus'' geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: Excisie kapsel na heuprevisie links: uitgebreide fibreuze veranderingen met dubbelbrekend materiaal.
+Gold standard: 'weke delen' femur links gewrichtskapsel resectie 'reactieve verandering' litteken vreemdlichaamsreuscelreactie
+mT5-small: heup links excisie 'acute ontsteking '
+mT5-base: heup links excisie 'acute ontsteking '
+flan-t5-small: heup links excisie cyste
+flan-t5-base: heup links excisie'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: I en II. Mammareductie beiderzijds zonder aanwijzingen voor maligniteit.
+Gold standard: mamma links rechts resectie 'geen maligniteit'
+mT5-small: mamma links r ec hts reductie 'g een maligniteit '
+mT5-base: mamma links r ec hts reductie 'g een maligniteit '
+flan-t5-small: mamma beiderzijds resectie'geen maligniteit '
+flan-t5-base: mamma links rechts reductie'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: I. Tubectomie preparaat links zonder (pre)maligniteit en met endometriosis externa met mogelijk enige hyperplasie. II. Tubectomie preparaat rechts zonder (pre)maligniteit. III. Uterus-extirpatie zonder adnexen met in het corpus uteri een graad 1 endometrioid adenocarcinoom, invasief groeiend tot over de helft van de myometriumdikte, serosale oppervlak vrij. Voorts uitgebreide adenomyosis met ook uitbreiding van carcinoom in de adenomyose. Geen overtuigende ingroei in de cervix. Geen overtuigende vaso-invasieve groei of perineurale groei. Aanvullend bericht (02-02-3015): Uitslag moleculaire pathologie: geen aanwijzingen voor Lynch syndroom.
+Gold standard: tuba links resectie endometriose [C-SEP] tuba rechts resectie 'geen maligniteit' [C-SEP] uterus resectie 'endometrioid adenocarcinoom' adenomyose
+mT5-small: uterus resectie 'g een maligniteit'[C-SEP] tuba links r ec hts resectie 'g een maligniteit'[C-SEP] tuba r ec
+mT5-base: uterus resectie 'g een maligniteit'[C-SEP] tuba links r ec hts resectie 'g een maligniteit'[C-SEP] tuba r ec
+flan-t5-small: tuba resectie'endometriosis externa'[C-SEP] tuba rechts resectie'geen afwijking'[C-SEP] ovarium rechts resectie'endometriosis externa '
+flan-t5-base: uterus resectie'geen maligniteit'[C-SEP] tuba links rechts resectie'geen maligniteit'[C-SEP]'tuba uterina'rechts resectie'geen
+----------------------------------------------------------------------------------------------------
+Input text: 21-01-2015 Biopten rechter mamma: enkele dubieuze secretoire calcificaties aangetroffen. Geen carcinoma in situ of maligniteit. Representatief?
+Gold standard: mamma rechts biopt microcalcificatie 'geen maligniteit' dubieus
+mT5-small: mamma r ec hts biopt 'g een maligniteit '
+mT5-base: mamma r ec hts biopt 'g een maligniteit '
+flan-t5-small: mamma rechts biopt'geen maligniteit '
+flan-t5-base: mamma rechts biopt'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: Excisie omentum (bij littekenbreuk): omentum zonder duidelijke afwijkingen.
+Gold standard: omentum resectie 'geen afwijking'
+mT5-small: omentum excisie 'g een afwijking '
+mT5-base: omentum excisie 'g een afwijking '
+flan-t5-small: omentum resectie'geen afwijking '
+flan-t5-base: omentum excisie'geen afwijking '
+----------------------------------------------------------------------------------------------------
+Input text: Appendectomie waarin een flegmoneuze appendicitis.
+Gold standard: appendix resectie appendicitis
+mT5-small: appendix resectie 'acute ontsteking '
+mT5-base: appendix resectie 'acute ontsteking '
+flan-t5-small: appendix resectie'acute ontsteking '
+flan-t5-base: appendix resectie'flegmoneuze ontsteking '
+----------------------------------------------------------------------------------------------------
+Input text: I t/m VI. Prostaatnaaldbiopten (beiderzijds) met glandulaire hyperplasie en ook atrofie. Geen aanwijzingen voor maligniteit.
+Gold standard: prostaat links rechts hyperplasie atrofie 'geen maligniteit'
+mT5-small: prostaat beiderzijds biopt hyperplasie atrofie 'g een maligniteit '
+mT5-base: prostaat beiderzijds biopt hyperplasie atrofie 'g een maligniteit '
+flan-t5-small: prostaat beiderzijds biopt hyperplasie
+flan-t5-base: prostaat links rechts biopt hyperplasie atrofie'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: I  :Polypectomie Coecum: Tubulair adenoom (mucosale poliep) , dysplasie  laaggradig. Diameter : 0.4 cm, snijvlak niet te beoordelen.  II  :Polypectomie Colon descendens: Tubulovilleus adenoom (mucosale poliep) ,  dysplasie laaggradig. Diameter : 1.6 cm, snijvlak niet te beoordelen.  III  :Polypectomie Colon descendens: Tubulair adenoom (mucosale poliep) ,  dysplasie hooggradig. Diameter : 0.9 cm, snijvlak niet te beoordelen.  IV  :Polypectomie Colon descendens: Tubulovilleus adenoom (mucosale poliep) ,  dysplasie laaggradig. Diameter : 1.1 cm, snijvlak vrij.  V  :Polypectomie Colon descendens: Tubulovilleus adenoom (mucosale poliep) ,  dysplasie laaggradig. Diameter : 0.7 cm, snijvlak niet vrij.  VI  :Polypectomie Colon descendens: Tubulair adenoom (mucosale poliep) ,  dysplasie laaggradig. Diameter : 1.5 cm, snijvlak vrij.  VII  :Polypectomie Sigmoid: Ontstekingspoliep (mucosale poliep) , dysplasie  Onbekend. Diameter : 0.2 cm, snijvlak niet te beoordelen.  VIII  :Polypectomie Rectum: Tubulair adenoom (mucosale poliep) , dysplasie  laaggradig. Diameter : 0.3 cm, snijvlak niet te beoordelen.
+Gold standard: colon coecum biopt 'tubulair adenoom' 'geringe dysplasie' [C-SEP] colon 'colon descendens' biopt 'tubulovilleus adenoom' 'geringe dysplasie' 'multipele lokalisaties' [C-SEP] colon 'colon descendens' biopt 'tubulair adenoom' 'geringe dysplasie' [C-SEP] colon 'colon descendens' 'tubulovilleus adenoom' 'geringe dysplasie' 'multipele lokalisaties' [C-SEP] colon 'colon sigmoideum' biopt poliep ontsteking [C-SEP] rectum biopt 'tubulair adenoom' 'geringe dysplasie'
+mT5-small: colon resectie'tubulair adenoom''g een zekere diag nose'[C-SEP] colon resectie'tubulair adenoom''g een
+mT5-base: colon resectie'tubulair adenoom''g een zekere diag nose'[C-SEP] colon resectie'tubulair adenoom''g een
+flan-t5-small: ' colon descendens'resectie'tubulair adenoom'[C-SEP]'colon descendens'resectie'tubulair adenoom'[C-SEP] colon resectie 
+flan-t5-base: colon resectie'tubulair adenoom'[C-SEP] colon resectie'tubulair adenoom'[C-SEP]'colon ascendens'resectie'tubulair adenoom '
+----------------------------------------------------------------------------------------------------
+Input text: I. Huidcurettement temporaal links: morbus Bowen, ontstaan in een verruca seborrhoica. Geen invasieve groei. II. Huidbiopt boven rechter wenkbrauw: geulcereerd basaalcelcarcinoom, deels solide, deels meer sprieterig groeiend. cf/ng
+Gold standard: huid hoofd links temporaal excochleatie 'morbus bowen' 'verruca seborrhoica' [C-SEP] huid voorhoofd rechts biopt basaalcelcarcinoom
+mT5-small: huid hoofd links biopt'verruca seborrhoica '
+mT5-base: huid hoofd links biopt'verruca seborrhoica '
+flan-t5-small: huid hoofd biopt bowen
+flan-t5-base: huid hoofd links curettage'morbus bowen'[C-SEP] huid wenkbrauw rechts biopt basaalcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Lisexsie cervix uteri, met deels matige (CIN-2) en deels ernstige (CIN-3) dysplasie van het plaveiselcelepitheel; geen invasieve groei. Geen atypie van endocervicaal cylinderepitheel.
+Gold standard: cervix lisexcisie 'geen maligniteit' cin-3 'squameuze metaplasie' 'sterke dysplasie' cin-2 'matige dysplasie'
+mT5-small: cervix excisie'ernstige dysplasie '
+mT5-base: cervix excisie'ernstige dysplasie '
+flan-t5-small: uterus cervix excisie cin-2
+flan-t5-base: cervix biopsie'matige dysplasie '
+----------------------------------------------------------------------------------------------------
+Input text: Naaldbiopt linker mamma: voorlopig: voorkeur voor een prolifererend fibroadenoom. 2e bericht volgt na kleuringen ter uitsluiting van maligniteit. 26-05-15/PCL/PCL Aanvulling d.d. 27-05-15: P63, calponine en actine kleuren normaal aan, derhalve geen aanwijzingen voor maligniteit. Conform eerder. 27-05-15/PCL/PCL
+Gold standard: mamma links biopt fibroadenoom 'geen maligniteit' ip
+mT5-small: mamma links biopt fibroadenoom
+mT5-base: mamma links biopt fibroadenoom
+flan-t5-small: mamma links biopt fibroadenoom
+flan-t5-base: mamma links naaldbiopt fibroadenoom
+----------------------------------------------------------------------------------------------------
+Input text: Tubectomie links: extra-uteriene graviditeit.
+Gold standard: tuba links resectie 'extra-uteriene graviditeit'
+mT5-small: 'tuba fallopii'links resectie'extra-uteriene graviditeit '
+mT5-base: 'tuba fallopii'links resectie'extra-uteriene graviditeit '
+flan-t5-small: tuba links resectie'extra-uteriene graviditeit '
+flan-t5-base: tuba links resectie'extra-uteriene graviditeit '
+----------------------------------------------------------------------------------------------------
+Input text: I. Biopten terminale ileum: geen specifieke afwijkingen. Geen aanwijzingen voor morbus Crohn. II. At random colonbiopten: geen specifieke afwijkingen. Geen aanwijzingen voor microscopische colitis. 18-03-15/mw. dr. R.H.J.A. Sinke/rsi
+Gold standard: 'dunne darm' biopt 'geen afwijking' [C-SEP] colon biopt 'geen afwijking'
+mT5-small: ileum biopt 'g een afwijking'[C-SEP] colon biopt 'g een afwijking '
+mT5-base: ileum biopt 'g een afwijking'[C-SEP] colon biopt 'g een afwijking '
+flan-t5-small: ileum biopt'geen afwijking'[C-SEP] colon biopt'geen afwijking '
+flan-t5-base: ileum colon biopt'geen afwijking '
+----------------------------------------------------------------------------------------------------
+Input text: Huidbiopsie rug links: superficieel basaalcelcarcinoom. 22-01-15/mw. C.K. Stobbe/cs
+Gold standard: huid rug been biopt basaalcelcarcinoom
+mT5-small: huid rug links biopsie basaalcelcarcinoom
+mT5-base: huid rug links biopsie basaalcelcarcinoom
+flan-t5-small: huid rug links biopsie basaalcelcarcinoom
+flan-t5-base: huid rug links biopsie basaalcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Consult coupes excisie wervel Th5 links (WE: T 15-27466): metastase  heldercellig carcinoom, goed passend bij primair niercelcarcinoom.
+Gold standard: bot wervel thoracaal links excisie 'metastase niercelcarcinoom nos' nier 'consult extern concordant'
+mT5-small: wervel links excisie'metastase carcinoom'nier 'consult ten behoeve van derden '
+mT5-base: wervel links excisie'metastase carcinoom'nier 'consult ten behoeve van derden '
+flan-t5-small: wervel excisie'metastase heldercellig niercelcarcinoom'nier consult
+flan-t5-base: ' weke delen'hals links excisie'metastase adenocarcinoom'' primaire tumor onbekend''consult te n behoeve van derden
+----------------------------------------------------------------------------------------------------
+Input text: Colonbiopten waarin granulatieweefsel. In dit materiaal geen argumenten voor een poliep of adenoom.
+Gold standard: colon biopt granulatieweefsel 'geen maligniteit'
+mT5-small: colon biopt granulatieweefsel
+mT5-base: colon biopt granulatieweefsel
+flan-t5-small: colon biopt granulatieweefsel
+flan-t5-base: colon biopt granulatieweefsel
+----------------------------------------------------------------------------------------------------
+Input text: Huid (biopt mediale ooghoek links): Dermale naevus.
+Gold standard: huid gelaat links biopt naevus
+mT5-small: huid hoofd biopt'naevus naevocellularis '
+mT5-base: huid hoofd biopt'naevus naevocellularis '
+flan-t5-small: huid oog links biopt'dermale naevus '
+flan-t5-base: huid hoofd biopt'naevus naevocellularis '
+----------------------------------------------------------------------------------------------------
+Input text: Huidbiopsie linker bovenarm met romphuidtype basaalcelcarcinoom.
+Gold standard: huid arm links biopt basaalcelcarcinoom
+mT5-small: huid biopt basaalcelcarcinoom
+mT5-base: huid biopt basaalcelcarcinoom
+flan-t5-small: huid arm links biopsie basaalcelcarcinoom
+flan-t5-base: huid bovenarm links stansbiopt'basaalcelcarcinoom solide type'
+----------------------------------------------------------------------------------------------------
+Input text: Dunne darmbiopten zonder afwijkingen, m.n. geen aanwijzingen voor vlokatrofie.
+Gold standard: 'dunne darm' biopt 'geen afwijking'
+mT5-small: ' dunne darm'biopsie 'g een afwijking en'
+mT5-base: ' dunne darm'biopsie 'g een afwijking en'
+flan-t5-small: ' dunne darm'biopsie'geen afwijking en'
+flan-t5-base: ' dunne darm'biopsie'geen afwijking en'
+----------------------------------------------------------------------------------------------------
+Input text: conclusie Huidbiopt pretibiaal rechts: chronische dermatitis, echter niet specifiek voor  een zekere classificerende diagnose. Geen overtuigende argumenten voor een  vasculitis evenmin contact allergie. Eventueel kan gedacht worden aan een  geneesmiddelreactie.
+Gold standard: huid scheenbeen rechts biopt ontsteking geneesmiddeleffect 'onzekere diagnose'
+mT5-small: huid been r ec hts biopt'chronische dermatitis''g een zekere diag nose '
+mT5-base: huid been r ec hts biopt'chronische dermatitis''g een zekere diag nose '
+flan-t5-small: huid been rechts biopt'chronische ontsteking '
+flan-t5-base: huid pretibiaal rechts biopt'chronische dermatitis '
+----------------------------------------------------------------------------------------------------
+Input text: Resectie endometrium met multipele delen van een endometriumpoliep. Hierin geen hyperplasie dan wel maligniteit.
+Gold standard: endometrium resectie poliep 'geen maligniteit'
+mT5-small: endometrium resectie 'g een maligniteit'poliep
+mT5-base: endometrium resectie 'g een maligniteit'poliep
+flan-t5-small: endometrium resectie'geen maligniteit'poliep
+flan-t5-base: endometrium resectie poliep
+----------------------------------------------------------------------------------------------------
+Input text: Excisiemateriaal neusvleugel rechts: ulcusbodemmateriaal. Geen maligniteit.
+Gold standard: huid neus rechts excisie ulcus 'geen maligniteit'
+mT5-small: neus r ec hts excisie ulcus
+mT5-base: neus r ec hts excisie ulcus
+flan-t5-small: huid neus rechts excisie'geen maligniteit '
+flan-t5-base: huid neus rechts excisie ulcus
+----------------------------------------------------------------------------------------------------
+Input text: I: adnectomie links: clearcell carcinoom uitgaande van het ovarium (maximale tumordiameter 10 cm). Vriescoupe concordant. Het kapsel is niet intact. II: uterus + adnex rechts: uterus met benigne hyperplasie van het endometrium. Geen atypie of maligniteit. Voorts enkele leiomyomen. III: Douglas: endometriose. Geen maligniteit. IV: pelviene klieren rechts: 5 lymfklieren zonder maligniteit (0/5). V: blaasperitoneum: geen maligniteit. VI: pelviene klieren links: 4 lymfklieren zonder maligniteit (0/4). VII: omentum: geen maligniteit. VIII: paracolisch links: vetweefsel en bindweefsel. Geen lymfklier. Geen maligniteit (0/0). IX: paracolische rechts: vetweefsel bindweefsel. Geen lymfklier. Geen maligniteit (0/0). X: para-aortaal: 2 lymfklieren zonder maligniteit (0/2). XI: diafragma: geen maligniteit.
+Gold standard: ovarium links resectie 'clearcell carcinoom' 'vriescoupe concordant' [C-SEP] uterus resectie 'geen maligniteit' leiomyoom [C-SEP] lymfklier 'kleine bekken' excisie 'geen maligniteit' [C-SEP] peritoneum 'cavum douglasi' biopt endometriose 'geen maligniteit' [C-SEP] peritoneum blaas biopt 'geen maligniteit'
+mT5-small: abdomen resectie'clearcell carcinoom'' vriescoupe concordant'[C-SEP] omentum resectie 'g een maligniteit'[C-SEP] omentum resectie 'g een
+mT5-base: abdomen resectie'clearcell carcinoom'' vriescoupe concordant'[C-SEP] omentum resectie 'g een maligniteit'[C-SEP] omentum resectie 'g een
+flan-t5-small: ovarium links resectie'clearcell carcinoom'' vriescoupe concordant'[C-SEP] lymfklier abdomen excisie'geen maligniteit '
+flan-t5-base: ovarium links rechts resectie'sereus carcinoom'' vriescoupe concordant'[C-SEP]'cavum douglasi'resectie'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: I: huid stansbiopt haargrens voor: beeld van een benigne verrukeuze laesie, passend bij verruca seborrhoica differentiaal-diagnostisch epidermale naevus. II: huid stansbiopt haargrens voor midden: solide groeiend basaalcelcarcinoom. III: huid stansbiopt behaarde hoofd middenop rechts: verlittekening. IV: huid curettement rechter oog, lateraal: verruca seborrhoica, hyperkeratotisch papilloom type.
+Gold standard: huid gelaat biopt 'verruca seborrhoica' 'epidermale naevus' 'onzekere diagnose' [C-SEP] huid gelaat biopt basaalcelcarcinoom [C-SEP] huid hoofd rechts biopt litteken [C-SEP] huid gelaat rechts excisie 'verruca seborrhoica'
+mT5-small: huid hoofd biopt'verruca seborrhoica'' verruca seborrhoica '
+mT5-base: huid hoofd biopt'verruca seborrhoica'' verruca seborrhoica '
+flan-t5-small: huid hoofd biopt basaalcelcarcinoom'verruca seborrhoica '
+flan-t5-base: huid biopt'verruca seborrhoica'' geen zekere diagnose '
+----------------------------------------------------------------------------------------------------
+Input text: Excisie vulva: Aspecifiek beeld met granulatieweefsel met actieve en chronische ontsteking. Geen (atheroom)cyste, geen dysplasie. Geen maligniteit.
+Gold standard: vulva excisie ontsteking 'geen maligniteit'
+mT5-small: vulva excisie granulatieweefsel
+mT5-base: vulva excisie granulatieweefsel
+flan-t5-small: vulva excisie granulatieweefsel ontsteking
+flan-t5-base: vulva excisie granulatieweefsel
+----------------------------------------------------------------------------------------------------
+Input text: I: Hemicolectomie rechts : Er wordt een tumor aangetroffen met beeld van een adenocarcinoom ( 65 %) naast mucineus carcinoom ( 30 %) en zegelringcelcarcinoom ( 5 %) . De tumor is matig gedifferentieerd. De maximale grootte bedraagt 6,5 cm. De tumor invadeert tot in het omgevend vetweefsel. Er is een kleine perforatie. Het meest nabij gelegen sneevlak is distaal. Dit sneevlak is vrij.  De marge t.o.v. dit sneevlak bedraagt 4  cm. Het circumferentiele snijvlak is vrij.  De marge t.o.v. dit sneevlak bedraagt 3  cm. Er is geen vasoinvasieve groei. Geen perineurale invasie. Aantal separate poliepen: 1 , waarvan adenomateus laaggradig dysplastisch: 1 . Aantal lymfklieren onderzocht: 15 . Geen metastasen. Stadieringsvoorstel: pT3 , N0 (Stadiering volgens TNM versie 5, conform afspraak werkgroep gastro-intestinale tumoren IKZ regio). II: Low anterior resectie : Status na voorbestraling 5x5 Gy met geringe tumorregressie (Mandard IV). Er wordt een tumor aangetroffen met beeld van een adenocarcinoom . De tumor is matig gedifferentieerd. De maximale grootte bedraagt 3 cm. De tumor invadeert tot in het omgevend vetweefsel. Het meest nabij gelegen sneevlak is distaal. Dit sneevlak is vrij.  De marge t.o.v. dit sneevlak bedraagt 2,5  cm. Het circumferentiele snijvlak is vrij.  De marge t.o.v. dit sneevlak bedraagt 3  cm. Er is geen vasoinvasieve groei. Geen perineurale invasie. Aantal lymfklieren onderzocht: 21 . Geen metastasen. Stadieringsvoorstel: y pT3 , N0 (Stadiering volgens TNM versie 5, conform afspraak werkgroep gastro-intestinale tumoren IKZ regio). 4-2-2015: Op verzoek van de oncologievergadering dd 3-2-2015 is MSI-bepaling op beide tumoren ingezet. De uitslag wordt binnen 10 werkdagen verwacht. MOLECULAIRE PATHOLOGIE dd 12-2-2015 MSI-high (in colon rechts) en MSI-stable (in rectum) aangetoond. Dit is informatief in het kader van therapie en niet vanwege een mogelijk associatie met het Lynch syndroom (zie opmerking onder microscopie). AANVULLEND 16-3-2015 (Judith Jeuken):  Deze aanvulling is gemaakt vanwege een administratieve wijziging. De medische inhoud blijft ongewijzigd.
+Gold standard: colon resectie adenocarcinoom 'snijvlak vrij' [C-SEP] colon sectie adenoom 'laaggradige dysplasie' [C-SEP] lymfklier resectie 'geen maligniteit' [C-SEP] colon resectie adenocarcinoom 'snijvlak vrij'
+mT5-small: colon hemiectomie adenocarcinoom r ec hts [C-SEP] lymfklier colon excisie'metastase adenocarcinoom'colon [C-SEP] colon rectum resectie 'g een maligniteit '
+mT5-base: colon hemiectomie adenocarcinoom r ec hts [C-SEP] lymfklier colon excisie'metastase adenocarcinoom'colon [C-SEP] colon rectum resectie 'g een maligniteit '
+flan-t5-small: colon hemiectomie adenocarcinoom rechts resectie'mucineus adenocarcinoom'[C-SEP] lymfklier colon excisie'geen maligniteit '
+flan-t5-base: colon rechts resectie adenocarcinoom [C-SEP] lymfklier colon excisie'metastase adenocarcinoom'colon
+----------------------------------------------------------------------------------------------------
+Input text: Levernaaldbiopten: lokalisatie slecht gedifferentieerd carcinoom, voorkeur kleincellig carcinoom. Aanvullend immuunhistochemisch onderzoek ter ondersteuning volgt. Aanvulling d.d. 22-06-2015: Immuunhistochemisch onderzoek geeft steun voor kleincellig carcinoom.
+Gold standard: lever biopt 'metastase carcinoom' 'kleincellig carcinoom' 'lokalisatie primaire tumor onbekend'
+mT5-small: lever biopt'kleincellig carcinoom '
+mT5-base: lever biopt'kleincellig carcinoom '
+flan-t5-small: lever biopt'kleincellig carcinoom '
+flan-t5-base: lever biopt'metastase kleincellig carcinoom'long
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisie neus: litteken; geen restant BCC aantoonbaar. N.B. voor cito-aanvragen dient vooraf telefonisch te worden overlegd met het secretariaat van de Pathologie.
+Gold standard: huid neus excisie litteken 'geen maligniteit'
+mT5-small: huid neus excisie litteken
+mT5-base: huid neus excisie litteken
+flan-t5-small: huid neus excisie litteken
+flan-t5-base: huid excisie litteken
+----------------------------------------------------------------------------------------------------
+Input text: Biopten duodenum: subtotale vlokatrofie, dit kan passen bij Marsh classificatie IIIA, maar daarnaast ook bevindingen die gezien worden bij ischemie. Kan dat klinisch? In de maag tekenen van ontsteking, zonder intestinale metaplasie. Kleuring tegen Helicobacter pylori volgt. Aanvulling d.d. 03-04-15: De aanvullend verrichte immuunhistochemische kleuring tegen Helicobacter pylori blijft negatief.
+Gold standard: duodenum biopt coeliakie [C-SEP] maag biopt ontsteking
+mT5-small: duodenum biopt vlokatrofie
+mT5-base: duodenum biopt vlokatrofie
+flan-t5-small: duodenum biopt coeliakie
+flan-t5-base: duodenum biopt coeliakie
+----------------------------------------------------------------------------------------------------
+Input text: Excisie mediale ooghoek rechts: kleine rest van eerdere basaalcelcarcinoom, nodulair type, randen zijn vrij. 20-04-15/PCL/PCL
+Gold standard: huid ooglid rechts excisie basaalcelcarcinoom 'snijvlak vrij'
+mT5-small: huid gelaat excisie basaalcelcarcinoom
+mT5-base: huid gelaat excisie basaalcelcarcinoom
+flan-t5-small: huid excisie basaalcelcarcinoom
+flan-t5-base: huid gelaat excisie basaalcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: I. Schildwachtklier procedure oksel links: Lymfklier met reactieve veranderingen zonder carcinoommetastase, bevestigd met behulp van immuunhistochemie. II. Ablatio mamma links (na neo adjuvante chemotherapie): Mammaweefsel met ductectasieen, geringe ductaal hyperplasie met wat kalk en uitgebreide fibrose. Geen verdachte kenmerken (meer). ZIE AANVULLEND ONDERZOEK.
+Gold standard: mamma links ablatio reactief 'geen maligniteit' [C-SEP] lymfeklier oksel links 'sentinel node procedure' excisie reactief 'geen maligniteit'
+mT5-small: lymfklier oksel links resectie reactief 'g een maligniteit '
+mT5-base: lymfklier oksel links resectie reactief 'g een maligniteit '
+flan-t5-small: mamma links resectie'geen maligniteit '
+flan-t5-base: lymfklier oksel links excisie'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: Huidbiopt rug: dermale naevus naevocellularis.
+Gold standard: huid rug biopt naevus
+mT5-small: huid rug biopt'dermale naevus '
+mT5-base: huid rug biopt'dermale naevus '
+flan-t5-small: huid rug biopt'dermale naevus '
+flan-t5-base: huid rug biopt'naevus naevocellularis '
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisie (linker scheenbeen) waarin een deels nodulair- en deels multifocaal superficieel basaalcelcarcinoom; irradicaal verwijderd.
+Gold standard: huid onderbeen links excisie basaalcelcarcinoom 'snijvlak niet vrij'
+mT5-small: huid been links excisie basaalcelcarcinoom
+mT5-base: huid been links excisie basaalcelcarcinoom
+flan-t5-small: huid been links excisie basaalcelcarcinoom'snijvlak vrij '
+flan-t5-base: huid been links excisie basaalcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Appendectomie: flegmoneus ontstoken appendix met peri-appendicitis.
+Gold standard: appendix resectie ontsteking
+mT5-small: appendix resectie ontsteking
+mT5-base: appendix resectie ontsteking
+flan-t5-small: appendix resectie ontsteking
+flan-t5-base: appendix resectie ontsteking
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisiepreparaat (exacte herkomst klinisch niet gegeven): verruca seborrhoica. 26-05-15/J.A. Ruizeveld de Winter/rw
+Gold standard: huid 'geen topografie' excisie 'verruca seborrhoica'
+mT5-small: huid'topografie onbekend'excisie'verruca seborrhoica '
+mT5-base: huid'topografie onbekend'excisie'verruca seborrhoica '
+flan-t5-small: huid'topografie onbekend'excisie'verruca seborrhoica '
+flan-t5-base: huid excisie'verruca seborrhoica '
+----------------------------------------------------------------------------------------------------
+Input text: conclusie Maagantrum en corpusbiopten met een geringe chronische gastritis. Geen  dysplasie. Geen Helicobacter pylori.
+Gold standard: maag biopt ontsteking
+mT5-small: maag biopt ontsteking
+mT5-base: maag biopt ontsteking
+flan-t5-small: maag biopt'chronische ontsteking '
+flan-t5-base: maag biopt'chronische ontsteking '
+----------------------------------------------------------------------------------------------------
+Input text: Colonslijmvlies (biopt transversum): Tubulovilleus adenoom met geringe dysplasie.
+Gold standard: colon 'colon transversum' biopt 'tubulovilleus adenoom' 'geringe dysplasie'
+mT5-small: colon biopt'tubulair adenoom''geringe dysplasie '
+mT5-base: colon biopt'tubulair adenoom''geringe dysplasie '
+flan-t5-small: colon biopt adenoom
+flan-t5-base: colon biopt'tubulovilleus adenoom'' geringe dysplasie '
+----------------------------------------------------------------------------------------------------
+Input text: curettage zwelling elleboog rechts: cornu cutaneum. Omtrent een eventuele onderliggende laesie kan geen uitspraak worden gedaan.
+Gold standard: huid curettage elleboog rechts 'cornu cutaneum'
+mT5-small: 'weke delen' elleboog r ec hts curettage'cornu cutaneum '
+mT5-base: 'weke delen' elleboog r ec hts curettage'cornu cutaneum '
+flan-t5-small: ' weke delen'elleboog rechts curettage'cornu cutaneum '
+flan-t5-base: ' weke delen'elleboog rechts excisie'cornu cutaneum '
+----------------------------------------------------------------------------------------------------
+Input text: Biopten distale oesophagus: oppervlakkige biopten van plaveiselepitheel zonder atypie met tevens ulcusmateriaal, waarin geen tumor kan worden aangetoond.
+Gold standard: oesofagus biopt ulcus 'geen maligniteit'
+mT5-small: oesofagus biopt reactief
+mT5-base: oesofagus biopt reactief
+flan-t5-small: oes op hagus biopt ulcus'geen maligniteit '
+flan-t5-base: oes op hagus biopt ulcus
+----------------------------------------------------------------------------------------------------
+Input text: I en II: Prostaatbiopten links en rechts waarin geen maligniteitskenmerken.
+Gold standard: prostaat links rechts biopt 'geen maligniteit'
+mT5-small: prostaat beiderzijds biopt 'g een maligniteit '
+mT5-base: prostaat beiderzijds biopt 'g een maligniteit '
+flan-t5-small: prostaat links rechts biopt'geen maligniteit '
+flan-t5-base: prostaat biopt'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: I  :Polypectomie Coecum: Niet te beoordelen door forse cauterisatieartefacten.  Diameter : 0.3 cm, snijvlak niet te beoordelen. . II  :Polypectomie Colon transversum: Tubulair adenoom (mucosale poliep) ,  dysplasie laaggradig. Diameter : 0.6 cm, snijvlak niet te beoordelen. . III  :Polypectomie Flexura Lienalis: Tubulair adenoom (mucosale poliep) ,  dysplasie laaggradig. Diameter : 0.5 cm, snijvlak niet te beoordelen. . IV  :Polypectomie Flexura Lienalis: Tubulair adenoom (mucosale poliep) ,  dysplasie laaggradig. Diameter : 0.4 cm, snijvlak niet te beoordelen. . V  :Polypectomie Sigmoid: Tubulair adenoom (mucosale poliep) , dysplasie  laaggradig. Diameter : 0.4 cm, snijvlak niet te beoordelen. . VI  :Polypectomie Sigmoid: Tubulovilleus adenoom (mucosale poliep) , dysplasie  laaggradig. , Laaggradige dysplasie. Tevens 2-tal foci met hooggradige  dysplasie, in totaal <10% van het totaal. . Diameter : 2.5 cm, snijvlak vrij. .
+Gold standard: poliep colon resectie 'geen diagnose' [C-SEP] poliep colon resectie 'tubulair adenoom' 'laaggradige dysplasie' [C-SEP] poliep colon resectie 'tubulair adenoom' 'laaggradige dysplasie' [C-SEP] poliep colon resectie 'tubulair adenoom' 'laaggradige dysplasie' [C-SEP] poliep colon resectie 'tubulair adenoom' 'laaggradige dysplasie' [C-SEP] poliep colon resectie 'tubulovilleus adenoom' 'hooggradige dysplasie' 'snijvlak vrij'
+mT5-small: coecum resectie'tubulair adenoom'[C-SEP] sigmoid resectie'tubulair adenoom'' hooggradige dysplasie'[C-SEP] sigmoid resectie'tubulair adenoom 
+mT5-base: coecum resectie'tubulair adenoom'[C-SEP] sigmoid resectie'tubulair adenoom'' hooggradige dysplasie'[C-SEP] sigmoid resectie'tubulair adenoom 
+flan-t5-small: colon resectie'tubulair adenoom'[C-SEP]'colon transversum'resectie'tubulair adenoom'[C-SEP] sigmoid resectie'tubulair adenoom '
+flan-t5-base: colon resectie'tubulair adenoom'[C-SEP]'colon ascendens'resectie'tubulair adenoom'[C-SEP] sigmoid resectie'tubulair adenoom '
+----------------------------------------------------------------------------------------------------
+Input text: Huid curettage (rechter ooglid) met een beeld waarop in de eerste plaats wordt gedacht aan een ontstoken verruca seborrhoica. Geen aanwijzingen voor maligniteit.
+Gold standard: huid gelaat rechts excisie 'verruca seborrhoica'
+mT5-small: huid hoofd r ec hts curettage'verruca seborrhoica '
+mT5-base: huid hoofd r ec hts curettage'verruca seborrhoica '
+flan-t5-small: huid ooglid rechts curettage'verruca seborrhoica '
+flan-t5-base: huid ooglid rechts curettage'verruca seborrhoica '
+----------------------------------------------------------------------------------------------------
+Input text: I en II. AARD INGREEP: subtotale colectomie LOKALISATIE TUMOR:  Tumor 1: nabij flexura lienalis Tumor 2: proximaal van flexura hepatica Tumor 3: coecum/colon ascendens Tumor 4: sigmoid TYPE TUMOR: adenocarcinoom (alle 4) DIFFERENTIATIEGRAAD: matig gedifferentieerd (alle 4) TUMORDIAMETER: resp. 3,8cm, 2,5cm, 4,0cm en 2,5cm INVASIEDIEPTE: tot in het pericolisch vetweefsel (tumor 1 en 3, zie microscopie voor overige tumoren) AFSTAND TOT HET DICHTSTBIJZIJNDE DARMRESECTIEVLAK: 7 cm (tumor 4 richting distaal) TOTAAL AANTAL LYMFKLIEREN: 24 AANTAL LYMFKLIERMETASTASEN: 0 TUMOR DEPOSITS: nee LYMFANGIO-INVASIE: nee VENEUZE INVASIE: nee  PERINEURALE GROEI: nee ANDERE BEVINDINGEN: multipele poliepeuze laesies waaronder minstens 28 tubulaire adenomen met laaggradige dysplasie, 1 tubulair adenoom met deels hooggradige dysplasie, 2x sessiel serrated laesie zonder dysplasie (t.p.v. klep van Bauhin en appendix) en meerdere benigne poliepeuze laesies (deels hyperplastische poliepen). TNM-CLASSIFICATIE (7e editie): pT3(4)N0
+Gold standard: colon resectie adenocarcinoom 'snijvlak vrij' [C-SEP] lymfeklier resectie 'geen maligniteit' [C-SEP] colon resectie 'tubulair adenoom' 'laaggradige dysplasie' 'hooggradige dysplasie'
+mT5-small: colon resectie adenocarcinoom'snijvlak vrij'
+mT5-base: colon resectie adenocarcinoom'snijvlak vrij'
+flan-t5-small: colon resectie adenocarcinoom
+flan-t5-base: colon resectie adenocarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Biopsie oesofagus: Oesofagusepitheel zonder afwijkingen. Er is een geringe chronische ontsteking. Geen aanwijzingen voor eosinofiele oesofagitis.
+Gold standard: oesofagus biopt ontsteking
+mT5-small: oesofagus biopsie 'g een afwijking '
+mT5-base: oesofagus biopsie 'g een afwijking '
+flan-t5-small: oesofagus biopsie'geen afwijking '
+flan-t5-base: oesofagus biopsie'geen afwijking '
+----------------------------------------------------------------------------------------------------
+Input text: Cervixbiopt met enige ontsteking en focaal wat squameuze metaplasie. Geen evidente dysplasie.
+Gold standard: cervix biopt 'geen maligniteit' 'squameuze metaplasie'
+mT5-small: cervix biopt 'g een maligniteit '
+mT5-base: cervix biopt 'g een maligniteit '
+flan-t5-small: cervix biopt'geen maligniteit '
+flan-t5-base: cervix biopt'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: Rectumbiopten: adenocarcinoom.
+Gold standard: rectum biopt adenocarcinoom
+mT5-small: rectum biopt adenocarcinoom
+mT5-base: rectum biopt adenocarcinoom
+flan-t5-small: rectum biopt adenocarcinoom
+flan-t5-base: rectum biopt adenocarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Oesophagusbiopten: geringe chronisch ontstoken Barrett oesophagus, geen dysplasie. 15-06-15/PCL/PCL
+Gold standard: oesofagus biopt ontsteking 'intestinale metaplasie' barrett
+mT5-small: oesophagus biopt ontsteking
+mT5-base: oesophagus biopt ontsteking
+flan-t5-small: oes op hagus biopt barrett
+flan-t5-base: oes op hagus biopt barrett
+----------------------------------------------------------------------------------------------------
+Input text: Resectievlak ureter links: geen malingiteit. Uitslag vriescoupe concordant.
+Gold standard: ureter links resectie 'geen maligniteit' 'vriescoupe concordant'
+mT5-small: ureter links resectie 'g een maligniteit'' vriescoupe concordant '
+mT5-base: ureter links resectie 'g een maligniteit'' vriescoupe concordant '
+flan-t5-small: ureter links resectie'geen afwijking'' vriescoupe concordant '
+flan-t5-base: ureter links excisie'geen maligniteit'' vriescoupe concordant '
+----------------------------------------------------------------------------------------------------
+Input text: Biopt wand aneurysma abdominale aorta uit 2012 (Aneurysma Express studie): aneurysmawand met uitgebreide degeneratie van de media en reactieve bindweefsel toename in de adventitia met geringe chronische ontsteking. Op basis van dit biopt kan de etiologie van het aneurysma niet achterhaald worden. Gaarne PA-onderzoek van het aneurysma van de aorta ascendens na operatie.
+Gold standard: bloedvat aorta abdomen biopt aneurysma reactief ontsteking
+mT5-small: aorta biopt reactief
+mT5-base: aorta biopt reactief
+flan-t5-small: aorta biopt'geen maligniteit '
+flan-t5-base: mond biopt ontsteking
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisie (therapeutisch) preauriculair links met een nodulair basocellulair carcinoom. Diameter laesie: 11 mm. De resectieranden zijn vrij. Marge vrij: 2,5 mm.
+Gold standard: huid wang links excisie basaalcelcarcinoom 'snijvlak vrij'
+mT5-small: huid preauriculair links excisie basaalcelcarcinoom'resectievlak vrij'
+mT5-base: huid preauriculair links excisie basaalcelcarcinoom'resectievlak vrij'
+flan-t5-small: huid preauriculair links excisie basaalcelcarcinoom'resectievlak vrij '
+flan-t5-base: huid preauriculair links excisie basaalcelcarcinoom'resectievlak vrij '
+----------------------------------------------------------------------------------------------------
+Input text: nclusie I. Lymfklieren kleine bekken rechts: zes lymfklieren zonder tekenen van  maligniteit. De kleuring wordt nog verricht hierover volgt nader bericht. II. Vier lymfklieren uit linker kleine bekken zonder tekenen van maligniteit. III. Uterus, vagina manchet en parametrium alsmede tubae zonder tekenen van  maligniteit geen afwijkingen. definitieve bevindingen I. Lymfklieren kleine bekken rechts: zes lymfklieren zonder tekenen van  maligniteit. II. Vier lymfklieren uit linker kleine bekken zonder tekenen van maligniteit. III. Uterus, vaginamanchet en parametrium alsmede tubae zonder tekenen van  maligniteit geen afwijkingen. definitieve bevindingen conform de eerdere conclusie. In II nog een extra lymfklieren zonder tekenen  van maligniteit: zes lymfklieren zonder tekenen van maligniteit.
+Gold standard: uterus resectie 'geen maligniteit'
+mT5-small: lymfklier bekken links r ec hts resectie 'g een maligniteit'' vriescoupe concordant'[C-SEP] lymfklier bekken links r ec h
+mT5-base: lymfklier bekken links r ec hts resectie 'g een maligniteit'' vriescoupe concordant'[C-SEP] lymfklier bekken links r ec h
+flan-t5-small: uterus endometrium resectie'geen maligniteit'[C-SEP] ovarium links rechts resectie'geen maligniteit'[C-SEP] uterus endometrium resectie'geen maligniteit '
+flan-t5-base: lymfklier bekken resectie'geen maligniteit'[C-SEP]'kleine bekken'resectie'geen maligniteit'[C-SEP] lymfklier bekken resectie'geen maligniteit
+----------------------------------------------------------------------------------------------------
+Input text: Excisie weke delen regio 13: ontstekingsbeeld met een opvallende aanwezigheid van plasmacellen. Aanvullende immunohistochemie volgt nog. Bericht hierover volgt separaat. AANVULLEND BERICHT (d.d. 20-01-15):  Aanvullende immunohistochemische kleuring voor kappa en lambda toont een polyclonaal beeld. Bovenstaande conclusie blijft gehandhaafd.  (kh/jz)
+Gold standard: 'weke delen' kaak excisie ontsteking 'geen maligniteit'
+mT5-small: 'weke delen' kaak excisie ontsteking
+mT5-base: 'weke delen' kaak excisie ontsteking
+flan-t5-small: ' weke delen'kaak excisie ontsteking
+flan-t5-base: ' weke delen'excisie'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: I AARD INGREEP: excisiebiopsie  zijdigheid: links DIAGNOSE: ductaal carcinoma in situ DIAMETER: te samen met reactieve veranderingen centraal 2 cm  GRADERING:  graad 2 RADICAAL: ja  TUMOR VRIJE MARGE: 4 mm MULTIFOCAAL:  nee ANDERE BEVINDINGEN: er is een beperkte hoeveelheid ductaal carcinoma in situ,  verspreid rondom de biopsieholte. II: AARD INGREEP: schildwachtlymfklierexcisie  LOKALISATIE: oksel  ZIJDIGHEID: links  AANTAL LYMFKLIEREN:1 AANTAL MET GEISOLEERDE TUMORCELLEN:0 AANTAL MET MICROMETASTASEN:0 AANTAL MET MACROMETASTASEN: 0 MASSALE EXTRANODALE GROEI:  niet van toepassing ANDERE BEVINDINGEN: geen
+Gold standard: mamma links resectie 'ductaal carcinoma in situ' 'snijvlak vrij' [C-SEP] lymfklier oksel links resectie 'geen maligniteit' 'schildwachtklier procedure'
+mT5-small: mamma links resectie'ductaal carcinoma in situ' 'consult intern '
+mT5-base: mamma links resectie'ductaal carcinoma in situ' 'consult intern '
+flan-t5-small: lymfklier oksel links excisie'ductaal carcinoma in situ'' schildwachtklier procedure'' geen maligniteit '
+flan-t5-base: lymfklier excisie'metastase melanoom'mamma
+----------------------------------------------------------------------------------------------------
+Input text: Hysteroscopische resectie intracavitaire afwijking (uterus): histologisch beeld dat goed kan passen bij een submucosaal gelegen leiomyoom, in dit materiaal geen argumenten voor atypie of maligniteit.
+Gold standard: endometrium uterus excisie 'geen maligniteit' leiomyoom
+mT5-small: uterus biopt leiomyoom
+mT5-base: uterus biopt leiomyoom
+flan-t5-small: uterus resectie leiomyoom
+flan-t5-base: uterus resectie leiomyoom
+----------------------------------------------------------------------------------------------------
+Input text: huidexcisie links laterale bovenbeen: samengestelde naevus. Geen dysplasie of maligniteit.
+Gold standard: huid 'boven been' links excisie naevus
+mT5-small: huid bovenbeen links excisie'samengestelde naevus '
+mT5-base: huid bovenbeen links excisie'samengestelde naevus '
+flan-t5-small: huid been links excisie'naevus naevocellularis '
+flan-t5-base: huid been links excisie'samengestelde naevus '
+----------------------------------------------------------------------------------------------------
+Input text: Naaldbiopt zwelling speekselklier (rechts): in dit materiaal geen tumorrest. Fibreus weefsel, mogelijk littekenweefsel met plaatselijk lymfoid weefsel.
+Gold standard: speekselklier rechts biopt 'geen maligniteit' litteken
+mT5-small: speekselklier r ec hts biopt 'g een maligniteit'litteken
+mT5-base: speekselklier r ec hts biopt 'g een maligniteit'litteken
+flan-t5-small: mamma rechts biopt'geen maligniteit '
+flan-t5-base: speekselklier biopt'geen diagnose '
+----------------------------------------------------------------------------------------------------
+Input text: Lisexcisie cervix: matig tot focaal ernstige dysplasie, CIN 3. Geen atypie van het cilinderepitheel. De resectievlakken lijken vrij.
+Gold standard: cervix lisexcisie cin-3 'squameuze metaplasie' 'sterke dysplasie' 'snijvlak vrij'
+mT5-small: cervix excisie'ernstige dysplasie '
+mT5-base: cervix excisie'ernstige dysplasie '
+flan-t5-small: cervix excisie'ernstige dysplasie '
+flan-t5-base: cervix excisie'ernstige dysplasie '
+----------------------------------------------------------------------------------------------------
+Input text: Adnex extirpatie rechts: fibroom/ fibrothecoom, geen maligniteit. Tuba zonder afwijkingen. Adnexextirpatie links: geen afwijkingen.
+Gold standard: ovarium rechts resectie fibrothecoom 'geen maligniteit' [C-SEP] ovarium links resectie 'geen maligniteit'
+mT5-small: tuba r ec hts resectie fibroom
+mT5-base: tuba r ec hts resectie fibroom
+flan-t5-small: ovarium tuba rechts resectie fibroom'geen maligniteit '
+flan-t5-base: adnex rechts resectie fibroom
+----------------------------------------------------------------------------------------------------
+Input text: Sigmoidslijmvliesbiopten zonder afwijkingen, bij dieper doorsnijden een gelijk beeld. V/b
+Gold standard: colon biopt 'geen afwijking'
+mT5-small: sigmoid biopt 'g een afwijking '
+mT5-base: sigmoid biopt 'g een afwijking '
+flan-t5-small: sigmoid biopsie'geen afwijking '
+flan-t5-base: sigmoid biopt'geen afwijking '
+----------------------------------------------------------------------------------------------------
+Input text: Uterusresectie inclusief adnexen (beiderzijds) met een goed gedifferentieerd endometrioid adenocarcinoom van het endometrium infiltrerend over de helft van de wanddikte. Geen doorgroei in de endocervix, serosa of parametria. Geen metastasering naar de beide adnexen. Tevens enkele leiomyomen zonder aanwijzingen voor maligniteit, diameter maximaal 2,0 cm. Cervix zonder dysplasie. In het rechter ovarium een benigne papillair sereus cystadenofibroom. Tubae zonder afwijkingen. Beide ovaria tonen stromale hyperplasie, mogelijk verantwoordelijk voor een toegenomen hormonale activiteit. Classificatie: pT1B, FIGO IB, graad I.
+Gold standard: uterus resectie 'endometrioid adenocarcinoom' leiomyoom [C-SEP] ovarium rechts resectie 'sereus cystadenofibroom'
+mT5-small: uterus endometrium resectie adenocarcinoom [C-SEP] ovarium links resectie 'g een maligniteit'[C-SEP] ovarium r ec hts resectie 'g een maligniteit '
+mT5-base: uterus endometrium resectie adenocarcinoom [C-SEP] ovarium links resectie 'g een maligniteit'[C-SEP] ovarium r ec hts resectie 'g een maligniteit '
+flan-t5-small: uterus resectie adenocarcinoom [C-SEP] ovarium rechts links resectie'geen maligniteit '
+flan-t5-base: uterus endometrium resectie adenocarcinoom [C-SEP] adnex beiderzijds resectie'geen maligniteit'[C-SEP]'tuba uterina'resectie'geen maligniteit'[C-SEP] ovarium rechts
+----------------------------------------------------------------------------------------------------
+Input text: Voorlopige uitslag: I - III. Longwigexcisie (apex rechter bovenkwab, apex rechter middenkwab en apex rechteronderkwab, revisie JBZ T12-26983): Temporele en spatiele heterogene fibrose met fibroblasten foci en honeycombing. Geen granulomen of sterke toename van ontsteking. Voorkeur voor een UIP patroon. Gaarne multidisciplinair bespreken. Coupes worden behouden tot  bespreking
+Gold standard: long rechts excisie 'usual interstitial pneumonia' 'revisie extern concordant'
+mT5-small: long r ec hts'bovenkwab long' r ec hts'bronchoalveolaire lavage'fibrose 'g een zekere di
+mT5-base: long r ec hts'bovenkwab long' r ec hts'bronchoalveolaire lavage'fibrose 'g een zekere di
+flan-t5-small: long rechts wigexcisie fibrose
+flan-t5-base: long rechts bovenkwab'partiele resectie'fibrose
+----------------------------------------------------------------------------------------------------
+Input text: I: huid excisie linker bovenarm lateraal met een radicaal verwijderde dermale naevus. Geen dysplastische kenmerken. II: huidexcisie rechter onderbeen mediaal met een radicaal verwijderde grensvlaknaevus. Geen dysplastische kenmerken. 20-01-15/LOY/LOY
+Gold standard: huid arm links excisie 'dermale naevus naevocellularis' [C-SEP] huid been rechts excisie grensvlaknaevus
+mT5-small: huid bovenarm links r ec hts excisie naevus
+mT5-base: huid bovenarm links r ec hts excisie naevus
+flan-t5-small: huid bovenarm links excisie naevus [C-SEP] huid been rechts excisie grensvlaknaevus
+flan-t5-base: huid bovenarm links excisie'dermale naevus'[C-SEP] huid been rechts excisie'dermale naevus '
+----------------------------------------------------------------------------------------------------
+Input text: Huidbiopt schouder rechts: lichenoide grensvlakontsteking. Het beeld kan passen bij een lichenoide geneesmiddelenreactie. In de dd staan lichen planus en lupus erythematosus maar het beeld is voor geen van beide kenmerkend. Zie microscopie.  25-02-15/mw. drs. C.E. Kurpershoek/eku
+Gold standard: huid romp rechts biopt geneesmiddelenreactie 'lichenoide ontsteking'
+mT5-small: huid schouder r ec hts biopt'lichenoide ontsteking '
+mT5-base: huid schouder r ec hts biopt'lichenoide ontsteking '
+flan-t5-small: huid schouder rechts biopt'lichenoide ontsteking '
+flan-t5-base: huid schouder rechts biopt 'lichen planus'' onzekere diagnose '
+----------------------------------------------------------------------------------------------------
+Input text: Vacuum biopsie Birads IV laesie mamma rechts: ductaal carcinoom in situ graad II geassocieerd met microcalcificaties; geen aanwijzingen voor invasieve groei.
+Gold standard: mamma rechts 'stereotaktische biopsie' 'ductaal carcinoma in situ' microcalcificatie
+mT5-small: mamma r ec hts biopsie'ductaal carcinoma in situ'
+mT5-base: mamma r ec hts biopsie'ductaal carcinoma in situ'
+flan-t5-small: mamma rechts biopt'ductaal carcinoom in situ '
+flan-t5-base: mamma rechts biopt'ductaal carcinoma in situ '
+----------------------------------------------------------------------------------------------------
+Input text: Huidbiopt(gelaat rechts) met een sprieterig basaalcelcarcinoom.
+Gold standard: huid gelaat rechts biopt basaalcelcarcinoom
+mT5-small: huid gelaat biopt basaalcelcarcinoom
+mT5-base: huid gelaat biopt basaalcelcarcinoom
+flan-t5-small: huid biopt basaalcelcarcinoom
+flan-t5-base: huid gelaat biopt basaalcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Huidbiopt rug: basaalcelcarcinoom deels nodulaire deels adenomatoide type. Beperkt tot middermis.
+Gold standard: huid rug biopt basaalcelcarcinoom
+mT5-small: huid rug biopt basaalcelcarcinoom
+mT5-base: huid rug biopt basaalcelcarcinoom
+flan-t5-small: huid rug biopt basaalcelcarcinoom
+flan-t5-base: huid rug biopt basaalcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: I: huidexcisie arm rechts: superficieel spreidend melanoom. Diameter 10 mm. Breslow-dikte 1,27 mm. Dermale mitotische activiteit. Geen ulceratie. Geen microsatellieten. Geen regressie. Geen preexsistente naevus. De laesie reikt tot aan/in het zijsnijvlak. Marge ten opzichte van het diepe snijvlak 1,5 mm. Een reexcisie is geindiceerd. pT2a II: huidexcisie temporaal rechts: dermale melanocytaire naevus. Geen dysplasie of maligniteit. III: huidexcisie borstbeen rechts: dermale melanocytaire naevus. Geen dysplasie of maligniteit. IV: huidexcisie onderbuik: dermale melanocytaire naevus. Geen dysplasie of maligniteit. V: huidexcisie flank / borst links: dermale melanocytaire naevus. Geen dysplasie of maligniteit. VI: huidexcisie temporaal links: dermale melanocytaire naevus. Geen dysplasie of maligniteit. VII: huidexcisie borst rechts mediaal: dermale melanocytaire naevus. Geen dysplasie of maligniteit.
+Gold standard: huid arm rechts excisie melanoom [C-SEP] huid gelaat rug excisie naevus [C-SEP] huid borst rechts excisie naevus [C-SEP] huid buik excisie naevus [C-SEP] huid borst links excisie naevus [C-SEP] huid gelaat links excisie naevus
+mT5-small: huid arm r ec hts excisie'superficieel spreidend melanoom'[C-SEP] huid borst links excisie'dermale naevus'[C-SEP] huid borst 
+mT5-base: huid arm r ec hts excisie'superficieel spreidend melanoom'[C-SEP] huid borst links excisie'dermale naevus'[C-SEP] huid borst 
+flan-t5-small: huid arm rechts excisie'superficieel spreidend melanoom'' resectievlak vrij'[C-SEP] huid borst rechts excisie'dermale naevus '
+flan-t5-base: huid arm rechts excisie melanoom [C-SEP] huid slaap links excisie'dermale naevus'[C-SEP] huid wang links excisie'dermale naevus '
+----------------------------------------------------------------------------------------------------
+Input text: I: huidbiopt slaap rechts: keratosis actinica. II: huidbiopt handrug rechts: hyperkeratose en aanduiding van keratosis actinica. III: huidbiopt handrug links: aspecifieke hyperkeratose.
+Gold standard: huid gelaat rechts biopt 'actinische keratose' [C-SEP] huid hand rechts biopt 'actinische keratose' [C-SEP] huid hand links biopt hyperkeratose
+mT5-small: huid biopt'keratosis actinica '
+mT5-base: huid biopt'keratosis actinica '
+flan-t5-small: huid slaap rechts biopt'keratosis actinica'[C-SEP] huid hand rechts biopt hyperkeratose
+flan-t5-base: huid biopt'keratosis actinica '
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisie dijbeen rechts: matig gedifferentieerd plaveiselcelcarcinoom met focaal sprieterige groeiwijze (diameter 8 mm, infiltratiediepte 2 mm), in toto verwijderd met een minimale marge van 1,5 mm richting het zijsnijvlak. Geen perineurale of angio-invasieve groei. 02-07-15/drs. A.J.J. Smits/aj
+Gold standard: huid bovenbeen rechts excisie plaveiselcelcarcinoom 'snijvlak vrij'
+mT5-small: huid been r ec hts excisie plaveiselcelcarcinoom
+mT5-base: huid been r ec hts excisie plaveiselcelcarcinoom
+flan-t5-small: huid been rechts excisie plaveiselcelcarcinoom
+flan-t5-base: huid been rechts excisie plaveiselcelcarcinoom'snijvlak vrij '
+----------------------------------------------------------------------------------------------------
+Input text: Huidexcisie rechterzijde voorhoofd met nodulair groeiend basaalcelcarcinoom. Randen vrij.
+Gold standard: huid gelaat rechts excisie basaalcelcarcinoom 'snijvlak vrij'
+mT5-small: huid excisie basaalcelcarcinoom
+mT5-base: huid excisie basaalcelcarcinoom
+flan-t5-small: huid excisie basaalcelcarcinoom
+flan-t5-base: huid excisie basaalcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Excisiebiopt van de linker mamma retro-areolair op 7 uur met intraductaal papilloom, geen aanwijzingen voor maligniteit. Geen epitheelatypie. De tumor lijkt compleet verwijderd. V/w
+Gold standard: mamma links excisie 'intraductaal papilloom' 'geen maligniteit' 'snijvlak vrij'
+mT5-small: mamma links biopt papilloom
+mT5-base: mamma links biopt papilloom
+flan-t5-small: mamma links excisie papilloom
+flan-t5-base: mamma links biopt'intraductaal papilloom'' geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: Transuretraal verkregen prostaatendoresectiemateriaal toont een klein focus adenocarcinoom waarschijnlijk Gleason 3 + 3 graad 6 maar mogelijk ook met een kleine zegelringcarcinoom component (graad 3 + 5 is 8). Overweeg naaldbiopten van de periferie voor verdere gradering en volumebepaling).
+Gold standard: prostaat 'transurethrale resectie' adenocarcinoom zegelringcelcarcinoom
+mT5-small: prostaat biopt adenocarcinoom
+mT5-base: prostaat biopt adenocarcinoom
+flan-t5-small: prostaat 't ra nsur et ra le resectie'adenocarcinoom
+flan-t5-base: prostaat'transurethrale resectie'adenocarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Resectie galblaas met cholecystolithiasis en chronische ontsteking. Geen aanwijzingen voor maligniteit.
+Gold standard: galblaas resectie cholecystolithiasis 'geen maligniteit'
+mT5-small: galblaas resectie cholecystolithiasis'chronische ontsteking '
+mT5-base: galblaas resectie cholecystolithiasis'chronische ontsteking '
+flan-t5-small: galblaas resectie'chronische ontsteking '
+flan-t5-base: galblaas resectie ontsteking
+----------------------------------------------------------------------------------------------------
+Input text: I t/m III. Kleine papillaire laesie, achterwand en bodem tumor: in de inzendingen I en II uitgebreid hooggradig urotheelcelcarcinoom na 3 met infiltratie in stroma en glad spierweefsel; in III een klein fragmentje papillair urotheelcelcarcinoom dat vanwege de sterke thermische beschadiging niet goed te graderen is, maar waarbij geen evidente invasieve groei aanwezig is. Gezien de discrepantie tussen de klinische gegevens en de bevindingen bij histologisch onderzoek: klopt de nummering op de potjes?
+Gold standard: blaas 'transurethrale resectie' urotheelcelcarcinoom
+mT5-small: blaas biopt urotheelcelcarcinoom
+mT5-base: blaas biopt urotheelcelcarcinoom
+flan-t5-small: blaas excisie urotheelcelcarcinoom
+flan-t5-base: blaas excisie urotheelcelcarcinoom
+----------------------------------------------------------------------------------------------------
+Input text: Huidbiopsie bovenarm rechts: aspecifieke geringe superficiele perivasculaire dermatitis in combinatie met minimale diffuse hyperparakeratosis. Geen goede classificerende diagnose. Geen typisch beeld van toxicodermie, lichen simplex of psoriasis. Diabetische pruritus dan wel eczeem niet uit te sluiten.
+Gold standard: huid arm rechts biopt ontsteking 'geen zekere diagnose'
+mT5-small: huid bovenarm r ec hts biopt 'g een zekere diag nose '
+mT5-base: huid bovenarm r ec hts biopt 'g een zekere diag nose '
+flan-t5-small: huid arm rechts biopsie'geen diagnose '
+flan-t5-base: huid biopt'geen classificerende diagnose '
+----------------------------------------------------------------------------------------------------
+Input text: Huidbiopt (rechts parietaal): huid met plaatselijk beeld passend bij een verruca seborrhoica en geringe reactieve veranderingen passend in het kader van eczeem. Geen maligniteit. 29-04-15/Dr. R.Torenbeek/rt
+Gold standard: huid hoofd rechts biopt 'verruca seborrhoica' 'chronische dermatitis' eczeem
+mT5-small: huid hoofd biopt'verruca seborrhoica '
+mT5-base: huid hoofd biopt'verruca seborrhoica '
+flan-t5-small: huid hoofd biopt'verruca seborrhoica '
+flan-t5-base: huid hoofd biopt'verruca seborrhoica '
+----------------------------------------------------------------------------------------------------
+Input text: Colonbiopten bij patient klinisch bekend met colitis ulcerosa: I poliep 80 cm: kenmerken van mgl. inflammatoire poliep. Geen dysplasie. II 25-60 cm (op potje 61-20 cm): in alle aangeleverde biopten matige chronisch actieve ontsteking met IBD trekken. Geen granulomen. Geen dysplasie.
+Gold standard: colon biopt 'inflammatoire poliep' ontsteking
+mT5-small: colon biopt'colitis ulcerosa '
+mT5-base: colon biopt'colitis ulcerosa '
+flan-t5-small: colon biopt ontsteking
+flan-t5-base: colon biopt'colitis ulcerosa'' geen zekere diagnose '
+----------------------------------------------------------------------------------------------------
+Input text: I en II. Slokdarmbiopten op 35 en 25 cm: geen afwijkingen.
+Gold standard: oesofagus biopt 'geen afwijking' 'multipele lokalisaties'
+mT5-small: slokdarm biopt 'g een afwijking '
+mT5-base: slokdarm biopt 'g een afwijking '
+flan-t5-small: slokdarm biopt'geen afwijking '
+flan-t5-base: slokdarm biopt'geen afwijking '
+----------------------------------------------------------------------------------------------------
+Input text: VOORLOPIGE. Naaldbiopten klier retromandibulair: fragmentjes parotisklierweefsel met delen van een primaire (benigne) speekselkliertumor, nog niet goed nader te duiden; geen aanwijzingen voor metastase van een longcarcinoom; definitieve diagnose volgt na consult extern. DEFINITIEVE d.d. 15/01/2015 (n.a.v. consult extern). Naaldbiopten klier retromandibulair: fragmentjes parotisklierweefsel waarin een pleiomorf adenoom en focaal mogelijk ook aanwijzingen voor mogelijk een Warthin tumor; geen aanwijzingen voor metastase van een longcarcinoom. Aanvulling d.d. 22/06/2015. Revisie extern concordant.
+Gold standard: parotis biopt 'pleiomorf adenoom' 'warthin tumor' 'geen maligniteit' 'revisie extern concordant'
+mT5-small: lymfklier mediastinum biopt 'g een maligniteit'' warthin tumor' 'consult intern''consult intern '
+mT5-base: lymfklier mediastinum biopt 'g een maligniteit'' warthin tumor' 'consult intern''consult intern '
+flan-t5-small: lymfklier biopt'metastase carcinoom'' primaire tumor onbekend '
+flan-t5-base: ' glandula parotis'biopt'pleiomorf adenoom'' geen maligniteit'' revisie extern concordant '
+----------------------------------------------------------------------------------------------------
+Input text: Naaldbiopsie mamma links op 1 uur: in voorhanden materiaal beeld passend bij hyperplasie, onvoldoende aanwijzingen voor in-situ-carcinoom, geen invasieve maligniteit.
+Gold standard: mamma links biopt hyperplasie 'geen maligniteit'
+mT5-small: mamma links biopt hyperplasie
+mT5-base: mamma links biopt hyperplasie
+flan-t5-small: mamma links biopt hyperplasie
+flan-t5-base: mamma links naaldbiopt'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: Huid re-excisie onderrug waarin littekenweefsel zonder restant melanoom danwel satellietlaesie. Daarnaast een schildwachtklier zonder tumorlokalisatie, ook na aanvullend marker onderzoek.
+Gold standard: huid rug lumbaal excisie litteken 'geen maligniteit' [C-SEP] lymfklier 'localisatie onbekend' excisie schildwachtklierprocedure 'geen maligniteit'
+mT5-small: huid rug excisie litteken melanoom 'diag nose onzeker '
+mT5-base: huid rug excisie litteken melanoom 'diag nose onzeker '
+flan-t5-small: huid rug excisie litteken'geen maligniteit'' geen maligniteit '
+flan-t5-base: huid rug excisie litteken'geen maligniteit '
+----------------------------------------------------------------------------------------------------
+Input text: Maag biopten (corpus): neuro-endocriene tumor graad 3 (alias neuroendocrien carcinoom).
+Gold standard: maag biopt 'neuroendocriene tumor' 'neuroendocrien carcinoom' carcinoid
+mT5-small: maag biopt'neuroendocriene tumor'
+mT5-base: maag biopt'neuroendocriene tumor'
+flan-t5-small: maag biopt'neuroendocriene tumor graad 3'
+flan-t5-base: maag biopt'neuroendocriene tumor '
+----------------------------------------------------------------------------------------------------
+
+JOB STATISTICS
+==============
+Job ID: 5112335
+Cluster: snellius
+User/Group: msiepel/msiepel
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:36:18 core-walltime
+Job Wall-clock time: 00:02:01
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 39.06 GB (39.06 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
