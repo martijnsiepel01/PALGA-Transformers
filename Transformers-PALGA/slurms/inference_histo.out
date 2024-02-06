@@ -1,0 +1,516 @@
+range(0, 100)
+Input Sentence: Excisie onderbeen links: basaalcelcarcinoom deels superficiele en deels solide type. Lijkt net geheel verwijderd, richting B krap. 
+Gold Standard (Codes): huid onderbeen links excisie basaalcelcarcinoom
+Translated Sentence (CSV input): huid * excisie * basaalcelcarcinoom
+Translated Sentence (TSV input): huid been links excisie basaalcelcarcinoom
+==================================================
+Input Sentence: Huidexcisie hoofd / hals, ooglid: basaalcelcarcinoom, nodulair - en micronodulair groeiend. Sneeranden tumorvrij met krapste marge van 0,4 mm richting blauw geinkte laterale sneevlak (voor klinisch - anatomische orientatie gaarne correlatie met gegevens macroscopie). 
+Gold Standard (Codes): huid gelaat excisie basalioom 'sneevlak vrij'
+Translated Sentence (CSV input): huid *hals* excisie * basaalcelcarcinoom * sneevlak vrij
+Translated Sentence (TSV input): huid hoofd excisie basaalcelcarcinoom'snijvlakken vrij'
+==================================================
+Input Sentence: ******* ******* zks, 's *******, T09-21002; Conclusie elders: Naaldbiopt longtumor links dorsaal: lokalisatie voor grootcellig carcinoom passend bij weinig gedifferentieerd adenocarcinoom. CK7 positief, TTF-1 negatief. Geen zekere primaire origine aan te geven.  Aanvullend moleculair biologisch onderzoek EGFR / K-ras analyse: GEEN mutaties aangetoond 
+Gold Standard (Codes): thorax links naaldbiopt 'grootcellig carcinoom' 'moleculaire biologie'
+Translated Sentence (CSV input): long*links* biopt * adenocarcinoom * moleculaire biologie
+Translated Sentence (TSV input): long links biopt adenocarcinoom'moleculaire biologie'
+==================================================
+Input Sentence: Huidbiopt rug: micronodulair groeiend basaalcelcarcinoom dat zich uitbreidt tot in de diepe reticulaire dermis (tot in de bodem van dit biopt). 
+Gold Standard (Codes): huid rug biopt basaalcelcarcinoom
+Translated Sentence (CSV input): huid * biopt *rug* basaalcelcarcinoom
+Translated Sentence (TSV input): huid rug biopt basaalcelcarcinoom
+==================================================
+Input Sentence: conclusie    Longbiopt rechts: lokalisatie van een niet kleincellig carcinoom, morfologisch     en (immuno)histochemisch voorkeur voor een adenocarcinoom. 
+Gold Standard (Codes): long rechts biopt adenocarcinoom 'grootcellig carcinoom'
+Translated Sentence (CSV input): long*r ec hts* biopt *niet kleincellig carcinoom
+Translated Sentence (TSV input): long r ec hts biopt adenocarcinoom
+==================================================
+Input Sentence: conclusie naaldbiopten mamma rechts met een ductaal adenocarcinoom zonder aanwijzingen  voor amplificatie van het HER2-neu gen. 
+Gold Standard (Codes): mamma rechts biopt adenocarcinoom 'consult extern'
+Translated Sentence (CSV input): mamma*r ec hts* biopt * adenocarcinoom *consult extern
+Translated Sentence (TSV input): mamma r ec hts biopt adenocarcinoom
+==================================================
+Input Sentence: revisie huidexcisie preparaat linker wang d.d. 25 november 2004 (******* T04-32749): lentigo maligna, op meerdere plaatsen tot in de zijsnijrand reikend. Invasieve groei wordt niet gezien. Beoordeling conform inzender. Coupes hier voor bespreking.    Casus besproken op 13-10-2011. Coupes met dank retour. 
+Gold Standard (Codes): huid wang links resectie 'revisie extern' 'lentigo maligna' 'snijvlakken niet vrij'
+Translated Sentence (CSV input): huid *wang*links* excisie * revisie extern
+Translated Sentence (TSV input): huid wang links excisie'lentigo maligna'' revisie extern '
+==================================================
+Input Sentence: Huidbiopt bovenbeen links: lentigo simplex.  Flr/cs 
+Gold Standard (Codes): huid bovenbeen links biopt 'lentigo simplex'
+Translated Sentence (CSV input): huid * bovenbeen *links* biopt * lentigo simplex
+Translated Sentence (TSV input): huid biopt'lentigo simplex '
+==================================================
+Input Sentence: Huidexcisie rug rechts: Ulcererend basaalcelcarcinoom geheel verwijderd. 
+Gold Standard (Codes): huid rug rechts excisie basaalcelcarcinoom
+Translated Sentence (CSV input): huid *rug* excisie * basalioom
+Translated Sentence (TSV input): huid rug excisie basaalcelcarcinoom
+==================================================
+Input Sentence: Naaldbiopt ruimte-innemend proces rechter nier: beeld passend bij niercelcarcinoom. 
+Gold Standard (Codes): nier rechts biopt adenocarcinoom
+Translated Sentence (CSV input): nier*r ec hts* biopt * niercelcarcinoom
+Translated Sentence (TSV input): nier biopt adenocarcinoom
+==================================================
+Input Sentence: Excisie linker bovenbeen met chronische diepe abcederende folliculitis. 
+Gold Standard (Codes): huid bovenbeen links folliculitis
+Translated Sentence (CSV input): huid * excisie * epitheelcyste
+Translated Sentence (TSV input): bovenbeen links excisie'chronische ontsteking '
+==================================================
+Input Sentence:   Endometriumpoliepje. Ik herken geen cervixweefsel.   
+Gold Standard (Codes): uterus biopsie endometriumpoliep
+Translated Sentence (CSV input): endometrium * curettage *g een afwijking
+Translated Sentence (TSV input): endometrium biopt 'g een afwijking '
+==================================================
+Input Sentence: Huidbiopt wang links: keratosis actinica, hypertrofische type. 
+Gold Standard (Codes): wang links biopsie 'keratosis actinica'
+Translated Sentence (CSV input): huid *wang*links* biopsie * keratosis actinica
+Translated Sentence (TSV input): ' huid'' biopt'' keratosis '
+==================================================
+Input Sentence: Galblaas met adenomyosis en lichte chronische ontsteking. Voorts cholelithiasis (klinisch gegeven) 
+Gold Standard (Codes): galblaas resectie cholelithiasis adenomyose 'chronische ontsteking'
+Translated Sentence (CSV input): galblaas * resectie * adenomyose * chronische ontsteking
+Translated Sentence (TSV input): galblaas'chronische ontsteking '
+==================================================
+Input Sentence: Consultcoupes uit het PA-laboratorium *******: hersenmetastase met het aspect van een matig gedifferentieerd adenocarcinoom (conform de collega's in *******). In de eerste plaats wordt, mede gezien het markeronderzoek, gedacht aan een metastase van een adenocarcinoom van de long. Echter een metastase van een medullair schildkliercarcinoom kan niet met zekerheid uitgesloten worden. Graag correlatie met de kliniek. 
+Gold Standard (Codes): hersenen 'consult elders gevraagd' 'metastase  adenocarcinoom' 'localisatie primaire tumor onbekend' 'consult extern'
+Translated Sentence (CSV input): hersenen * biopsie * metastase adenocarcinoom * localisatie primaire tumor onbekend *consult extern
+Translated Sentence (TSV input): hersenen biopt'metastase adenocarcinoom''consult t.b.v. derden '
+==================================================
+Input Sentence: A: biopsie maag antrum waarin ontstekingsresten.  B: biopsie maag corpus waarin geringe atrofie met intestinale metaplasie van het incomplete type. Geen dysplasie. Geen helicobacter pylori. 
+Gold Standard (Codes): maag biopt ontstekingsrest [C-SEP] maag corpus biopt 'intestinale metaplasie'
+Translated Sentence (CSV input): maag * biopt * intestinale metaplasie
+Translated Sentence (TSV input): maag biopt ontsteking [C-SEP] maag biopt ontsteking
+==================================================
+Input Sentence: Zwelling labium majus links: Panniculitis met obliteratieve vasculitis (flebitis); klinisch aanwijzingen voor systeemziekte? Nodulaire vasculitis? 
+Gold Standard (Codes): subcutis biopt panniculitis
+Translated Sentence (CSV input): pees * biopt * panniculitis
+Translated Sentence (TSV input): ' pees cerebri'links ontsteking
+==================================================
+Input Sentence: Lokale excisie weke delen lesie linker bovenbeen: leiomyosarcoom, verwijderd met minimale marges. Maligniteitsgraad I.  Excisie biopsie rechter kuit: lipoom. 
+Gold Standard (Codes): 'weke delen' been links excisie leiomyosarcoom
+Translated Sentence (CSV input): weke delen* been * excisie *g een maligniteit
+Translated Sentence (TSV input): 'weke delen' bovenbeen excisie leiomyosarcoom
+==================================================
+Input Sentence: Huidbiopt linker onderbeen: solide groeiend basaalcelcarcinoom. 
+Gold Standard (Codes): huid been links biopt 'basocellulair carcinoom'
+Translated Sentence (CSV input): huid * biopt * basaalcelcarcinoom
+Translated Sentence (TSV input): huid biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Vriescoupe sigmoidtumor biopten met focaal invasief adenocarcinoom. 
+Gold Standard (Codes): sigmoid biopt adenocarcinoom 'vriescoupe concordant'
+Translated Sentence (CSV input): colon* biopt * adenocarcinoom * vriescoupe concordant
+Translated Sentence (TSV input): colon biopt adenocarcinoom
+==================================================
+Input Sentence: is er een niertumor aanwezig of vroeger verwijderd. 
+Gold Standard (Codes): pleura biopt links carcinoommetastase nier 'consult extern'
+Translated Sentence (CSV input): weke delen* biopt * g.a.
+Translated Sentence (TSV input): huid neus excisie basaalcelcarcinoom
+==================================================
+Input Sentence: Consult materiaal ******* Ziekenhuis te ******* (T12-05110) betreffende     excisie weke delen oksel van onbekende zijdigheid waarin lokalisatie melanoom,     ten behoeve van BRAF mutatie analyse: conform elders in het weefsel lokalisatie     melanoom. In de tumor werd geen BRAF exon 15 mutatie aangetoond. 
+Gold Standard (Codes): 'weke delen' oksel excisie 'metastase melanoom' huid 'braf mutatie niet aanwezig'
+Translated Sentence (CSV input): weke delen* oksel * excisie * metastase melanoom * huid
+Translated Sentence (TSV input): 'weke delen' oog excisie'metastase melanoom''consult ten behoeve van derden '
+==================================================
+Input Sentence: I en II brokkelig uiteenvallende stukjes endometrium met een geringe klierbuisproliferatie zonder tekenen van secretie.enig cervicaal weefsel zonder afwijkingen. 
+Gold Standard (Codes): endometrium curettage proliferatiefase
+Translated Sentence (CSV input): импlench weefsel * biopsie *g een afwijking en
+Translated Sentence (TSV input): mammareductie links r ec hts g.a.
+==================================================
+Input Sentence: Huidbiopt (voorhoofd rechts): basaalcelcarcinoom, vermoedelijk deels nodulair en deels sprieterig groeiend. 
+Gold Standard (Codes): huid hoofd biopt basaalcelcarcinoom
+Translated Sentence (CSV input): huid *hoofd* biopt * basaalcelcarcinoom
+Translated Sentence (TSV input): huid voorhoofd biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Huid (excisie oor links): nodulair basaalcelcarcinoom, snijranden vrij.   
+Gold Standard (Codes): huid oor links excisie basaalcelcarcinoom
+Translated Sentence (CSV input): huid *oor*links* excisie * basaalcelcarcinoom
+Translated Sentence (TSV input): huid oor links excisie basaalcelcarcinoom
+==================================================
+Input Sentence: Huidexcisie wang rechts met daarin een maligne melanoom, het beste te beschouwen als een superficieel spreidend maligne melanoom. Breslow-dikte 1,5 mm. Geen echte ulceratie. Met name craniaal wel een krappe marge. 
+Gold Standard (Codes): huid wang rechts excisie 'maligne melanoom'
+Translated Sentence (CSV input): huid *wang*r ec hts* melanoom
+Translated Sentence (TSV input): huid wang r ec hts excisie melanoom
+==================================================
+Input Sentence: Coecumbiopt: goed tot matig gedifferentieerd adenocarcinoom. 
+Gold Standard (Codes): coecum biopt adenocarcinoom
+Translated Sentence (CSV input): colon* biopsie * adenocarcinoom
+Translated Sentence (TSV input): colon biopsie adenocarcinoom
+==================================================
+Input Sentence: (voorlopig): TUR blaastumor: solide pseudosarcomateus urotheelcarcinoom graad 3. Hooggradig maligne. Uitgebreide diepe spierinvasie.    Kleuringen zijn ingezet, definitief bericht volgt.    08-01-10/*******/OOM    Aanvulling d.d. 12-01-10:  De kleuringen wijzen eerder in de richting van een carcinosarcoom dan van een pseudosarcomateus carcinoom. De tumor is hoog gradig maligne.    12-01-10/*******/OOM 
+Gold Standard (Codes): blaas resectie 'pseudosarcomateus carcinoom' carcinoom
+Translated Sentence (CSV input): blaas * biopsie * pseudosarcomateus carcinoom * carcinoom
+Translated Sentence (TSV input): blaas excisie urotheelcelcarcinoom
+==================================================
+Input Sentence: conclusie Huidexcisie (topografie niet vermeld): lokalisatie matig gedifferentieerd  plaveiselcelcarcinoom, maximale diameter 1,2cm. Invasiediepte 4,2mm. De  resectievlakken zijn vrij van maligniteit met een minimale afstand van 5,2mm  naar de laterale resectieranden en 3,6 mm naar het diepe-/basis resectievlak.  In de caudale resectierand wordt tevens een actinische keratose gezien. 
+Gold Standard (Codes): huid 'topografie onbekend' excisie plaveiselcelcarcinoom 'resectievlak vrij'
+Translated Sentence (CSV input): huid * topografie onbekend * excisie * plaveiselcelcarcinoom * resectievlak vrij
+Translated Sentence (TSV input): huid anus excisie plaveiselcelcarcinoom'resectievlak vrij'
+==================================================
+Input Sentence: I. Huidbiopt (rechter been): Blue naevus^II. Huidbiopt (buik): verruca seborrhoica. 
+Gold Standard (Codes): huid biopt romp 'verruca seborrhoica'
+Translated Sentence (CSV input): huid * romp * biopt * verruca seborrhoica
+Translated Sentence (TSV input): huid biopt'verruca seborrhoica'[C-SEP] huid biopt'verruca seborrhoica '
+==================================================
+Input Sentence: TUR-blaasmateriaal met urotheelcarcinoom graad 3 dat infiltreert in de lamina propria. Geen spierinvasie aantoonbaar.  bls/as 
+Gold Standard (Codes): urineblaas 'transurethrale resectie' 'urotheelcelcarcinoom graad 3'
+Translated Sentence (CSV input): urineblaas * transurethrale resectie * overgangscelcarcinoom graad 3
+Translated Sentence (TSV input): urineblaas tur'overgangscelcarcinoom graad 3'
+==================================================
+Input Sentence: (voorlopig): colon rectum met ernstige actieve ulcererende ontsteking (IBD) beeld kan goed passen bij colitis ulcerosa. Geen aanwijzingen voor maligniteit zoals is aangetroffen onder T07-16092. Aanvullende kleuringen worden nog verricht, hierover volgt nader bericht. De snijvlakken tonen een actieve ontsteking. 
+Gold Standard (Codes): colon resectie 'colitis ulcerosa'
+Translated Sentence (CSV input): colon* resectie * colitis ulcerosa
+Translated Sentence (TSV input): colon biopt'colitis ulcerosa '
+==================================================
+Input Sentence: Huidbiopt (sternum; midden): basaalcelcarcinoom (superficieel type).    03-04-13/*******/rw 
+Gold Standard (Codes): huid sternum biopt basaalcelcarcinoom
+Translated Sentence (CSV input): huid * romp * biopt * basaalcelcarcinoom
+Translated Sentence (TSV input): huid romp biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Biopt mondbodem: Matig gedifferentieerd plaveiselcelcarcinoom, plaatselijk verdacht op invasieve groei. 
+Gold Standard (Codes): 'mondbodem ' ' biopsie ' ' plaveiselcelcarcinoom'
+Translated Sentence (CSV input): mondbodem * biopt * plaveiselcelcarcinoom
+Translated Sentence (TSV input): mond biopt plaveiselcelcarcinoom
+==================================================
+Input Sentence: Excisie nek met beeld passend bij epitheelcyste. 
+Gold Standard (Codes): huid nek excisie epitheelcyste
+Translated Sentence (CSV input): subcutis *nek* excisie * epitheelcyste
+Translated Sentence (TSV input): knie excisie ganglion
+==================================================
+Input Sentence: weinig celrijk sputum waarin geen aanwijzingen voor maligniteit of een specifieke ontsteking, Papanicolaou klasse II. 
+Gold Standard (Codes): sputum 'pap 2'
+Translated Sentence (CSV input): sputum *pap 2
+Translated Sentence (TSV input): liquor cytologie 'pap 2'
+==================================================
+Input Sentence: Huidbiopt mediale ooghoek links: nodulair basaalcelcarcinoom. 
+Gold Standard (Codes): huid ooghoek links biopt basaalcelcarcinoom
+Translated Sentence (CSV input): huid * biopt * basaalcelcarcinoom
+Translated Sentence (TSV input): huid biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Huidexcisie borst links hoog: deels superficieel en deels nodulair groeiend basaalcelcarcinoom, geen sprieterige groei. De resectievlakken zijn vrij.    25-07-12/mw. *******/ng 
+Gold Standard (Codes): huid borst links excisie basaalcelcarcinoom
+Translated Sentence (CSV input): huid * borst *links* excisie * basaalcelcarcinoom
+Translated Sentence (TSV input): huid borst links excisie basaalcelcarcinoom
+==================================================
+Input Sentence: Partieel thoraxwandresectiepreparaat links (rib 7 en rib 5): status na resectie rib 6 in verband met Ewingsarcoom. In de ventrale helft van het preparaat een omvangrijk recidief van het eerder behandelde Ewingsarcoom met massale uitbreiding in de weke delen resectievlakken (ventraal, craniaal en cranio-parietaal). 
+Gold Standard (Codes): thoraxwand resectie ewingsarcoom
+Translated Sentence (CSV input): voetzool * resectie * ewing liposarcoom
+Translated Sentence (TSV input): femur links excisie'status na operatie''partiele resectie'' metastase sarcoom'】【。】
+==================================================
+Input Sentence: Aanvullend immunocytochemisch onderzoek op cervixmateriaal van B96-10907 waarvan de uitslag Pap-klasse I (geen afwijkingen) gehandhaafd blijft.   
+Gold Standard (Codes): cervixepitheel 'geen afwijkingen' immunocytochemie
+Translated Sentence (CSV input): cervixepitheel * immunocytochemie
+Translated Sentence (TSV input): cervixepitheel cytologie'cervixepitheel biologie'
+==================================================
+Input Sentence: Huidexcisie rechts temporaal met goed gedifferentieerd plaveiselcelcarcinoom. De resectievlakken zullen nog nader worden onderzocht.  Cre/ts    Aanvulling d.d. 13-11-2003:  Bij aanvullend onderzoek zijn de resectievlakken vrij.  Cre/wve 
+Gold Standard (Codes): huid slaap rechts excisie plaveiselcelcarcinoom maligniteit 1keer
+Translated Sentence (CSV input): huid * gelaat * excisie * plaveiselcelcarcinoom
+Translated Sentence (TSV input): huid gelaat excisie plaveiselcelcarcinoom'sneevlak vrij'
+==================================================
+Input Sentence: Dikke naaldbiopsie lever (rechter kwab): carcinoom met een variabele morfologie, het beste passend bij primair hepatocellulair carcinoom met focaal galgang-differentiatie. Zie microscopie. 
+Gold Standard (Codes): lever biopt 'hepatocellulair carcinoom' galgangcarcinoom revisie
+Translated Sentence (CSV input): lever* biopt * hepatocellulair carcinoom * revisie
+Translated Sentence (TSV input): lever biopt r ec hts carcinoom
+==================================================
+Input Sentence: ******* huid EM nr 93.60366: uitgebreide localisatie van schuimcellen in de dermis. 
+Gold Standard (Codes): huid biopsie stofwisselingsstoornis em 'consult extern'
+Translated Sentence (CSV input): neus * biopsie * reusceltumor peesschede
+Translated Sentence (TSV input): 'oud rapport'
+==================================================
+Input Sentence: I: Orchidectomie (rechts) met een klassiek seminoom, (diameter 9 cm) met ingroei in de retetestis, ingroei in de epididymis en ingroei in de tunica albuginea. Er is vasoinvasieve groei. Er zijn enkele grotere (in transit) metastasen in de funiculus spermaticus.  Het resectievlak is vrij. pT3.  Geen non-seminoom component in dit uitgebreid onderzochte preparaat aangetroffen.  II: funiculusresectievlak (rechts) zonder specifieke afwijkingen. Geen maligniteit.   
+Gold Standard (Codes): testis rechts resectie seminoom
+Translated Sentence (CSV input): testis *r ec hts* resectie * seminoom
+Translated Sentence (TSV input): testis r ec hts resectie seminoom [C-SEP] testis r ec hts resectie'resectievlak niet vrij'
+==================================================
+Input Sentence: Curettement endometrium: Cervixweefsel zonder atypie. Onvoldoende materiaal ter beoordeling van het endometrium. 
+Gold Standard (Codes): endometrium curettage 'onvoldoende materiaal'
+Translated Sentence (CSV input): endometrium * curettage * onvoldoende mater i aa l
+Translated Sentence (TSV input): endometrium curettement 'g een maligniteit '
+==================================================
+Input Sentence: Biopt trachea op 9 uur en centrale biopten tumor linkerbovenkwab: maligne cellen, voorkeursdiagnose kleincellig carcinoom. Ter bevestiging volgt immuunhistologisch onderzoek. Cytologisch materiaal tumor linkerbovenkwab: enkele sterk atypische cellen, beeld komt overeen met de tumorcellen gezien in inzending 1 en 3. 
+Gold Standard (Codes): trachea biopt 'kleincellig carcinoom' [C-SEP] bronchus biopt links 'kleincellig carcinoom'
+Translated Sentence (CSV input): long*links* biopt * carcinoom
+Translated Sentence (TSV input): long links biopsie carcinoom immuunperoxydasereactie
+==================================================
+Input Sentence: huidexcisie preparaat waarin een epidermiscyste. 
+Gold Standard (Codes): huid epidermiscyste
+Translated Sentence (CSV input): huid * excisie * epidermiscyste
+Translated Sentence (TSV input): huid excisie epidermiscyste
+==================================================
+Input Sentence: Tweetal biopten huid links temporaal: morbus Bowen 
+Gold Standard (Codes): 'morbus bowen' huid hoofd links
+Translated Sentence (CSV input): huid * biopt * morbus bowen
+Translated Sentence (TSV input): huid hoofd biopsie'morbus bowen '
+==================================================
+Input Sentence: Huidexcisie temporaal rechts: goed gedifferentieerd plaveiselcelcarcinoom, radicaal verwijderd. 
+Gold Standard (Codes): huid gelaat rechts excisie plaveiselcelcarcinoom
+Translated Sentence (CSV input): huid * excisie * plaveiselcelcarcinoom
+Translated Sentence (TSV input): huid temporaal r ec hts excisie plaveiselcelcarcinoom
+==================================================
+Input Sentence: Twee forse metastasen van melanoom, gelijkend op dat van T05-7650, klinisch respectievelijk onder de scapula en in de oksel. De metastasen lijken krap doch volledig verwijderd.    CONCLUSIE: *******.  Revisie okselklierdissectie links, debulking linker oksel en resectie metastase onder linker scapula: metastasen maligne melanoom.  AVL/T06-10747/09-02-07/AT 
+Gold Standard (Codes): subcutis rug oksel excisie 'metastase melanoom' rug 'revisie extern concordant'
+Translated Sentence (CSV input): huid *rug* excisie * metastase melanoom *rug* revisie extern concordant
+Translated Sentence (TSV input): lymfklier oksel links excisie'metastase melanoom'huid
+==================================================
+Input Sentence: Naaldbiopsie mamma rechts, mediale onderkwadrant, met een DCIS van het cribriforme type. De maligniteitsgraad is intermediair. 
+Gold Standard (Codes): mamma rechts naaldbiopsie 'ductaal carcinoom in situ'
+Translated Sentence (CSV input): mamma*r ec hts* naaldbiopsie * ductaal carcinoom in situ
+Translated Sentence (TSV input): mamma r ec hts naaldbiopsie'ductaal carcinoma in situ'
+==================================================
+Input Sentence: Hemicolectomie rechts: slecht gedifferentieerd adenocarcinoom van 3 bij 4 cm. nabij de basis van de appendix groeiend door alle wandlagen tot diep in het serosale vet. In omgevend vet uitgebreide tumor localisatie deels in lymfklieren. De snijranden zijn vrij. 
+Gold Standard (Codes): colon rechts coecum excisie adenocarcinoom
+Translated Sentence (CSV input): colon* resectie * adenocarcinoom
+Translated Sentence (TSV input): colon r ec hts resectie adenocarcinoom
+==================================================
+Input Sentence: NIEUWE CONCLUSIE NA AANVULLEND ONDERZOEK:  ******* coupes nr. T99-33220: huidexcisie onderooglid links: lokalisatie van basaalcelcarcinoom solide type. De lesie is niet radikaal verwijderd. Zie voor onze mening hieromtrent paragraaf Ad 3 in het aanvullend bericht. 
+Gold Standard (Codes): ooglid rechts excisie 'basaalcelcarcinoom solide type' 'sneevlak niet vrij' 'revisie extern'
+Translated Sentence (CSV input): huid * ooglid *links* excisie * basaalcelcarcinoom solide type* resectievlak niet vrij* revisie extern * revisie concordant
+Translated Sentence (TSV input): huid onderooglid links excisie'basaalcel carcinoom''consult extern '
+==================================================
+Input Sentence: Trabeculair groeiend basaalcelcarcinoom van de kinhuid. De laesie is in toto verwijderd.   
+Gold Standard (Codes): huid excisie basaalcelcarcinoom
+Translated Sentence (CSV input): huid * excisie * basaalcelcarcinoom
+Translated Sentence (TSV input): huid excisie basaalcelcarcinoom
+==================================================
+Input Sentence:   Biopten polypeus proces op 13 tot 16 cm ab ano: fragmenten van  tubulovilleus adenoom, overwegend villeus met overwegend geringe,  plaatselijk matige dysplasie. Er zijn onvoldoende aanknopingspunten voor  ernstige dysplasie in deze biopten. Cave representativiteit.   
+Gold Standard (Codes): colon biopsie poliep adenoom
+Translated Sentence (CSV input): papil van vater * biopt * dysplasie gering
+Translated Sentence (TSV input): rectum biopt adenoom dysplasie
+==================================================
+Input Sentence: Huidbiopt van het behaarde hoofd, waarin een capillair haemangioom.   *******/*******/23 oktober 1996 cvp 
+Gold Standard (Codes): huid hoofd biopsie haemangioma
+Translated Sentence (CSV input): huid hoofd* biopsie * haemangioma
+Translated Sentence (TSV input): huid hoofd biopsie haem angioom
+==================================================
+Input Sentence: conclusie    Huidexcisie schouder links: superficieel spreidend maligne melanoom, max.     diameter 9 mm.     - Clark-level III, Breslow dikte 0,9 mm.    - Geen ulceratie of satellitose.    - Brisk lymfocytair afweer respons, geen regressie.    - Geen dermale mitosefiguren.    - Geen perineurale groei of lymfangio-invasie.    - Krap radicaal verwijderd met marges van respectievelijk 1 mm naar blauw     geïnkte en 0,5 mm naar geel geïnkte resectierand. 
+Gold Standard (Codes): huid schouder links excisie 'superficial spreading maligne melanoom' 'resectievlak vrij'
+Translated Sentence (CSV input): huid * schouder *links* excisie * maligne melanoom
+Translated Sentence (TSV input): huid schouder links excisie'maligne melanoom '
+==================================================
+Input Sentence: Huidstukje afkomstig van de jukboog waarin een sprieterig groeiend basaalcelcarcinoom. Niet radicaal verwijderd. 
+Gold Standard (Codes): huid biopt basaalcelcarcinoom hoofd
+Translated Sentence (CSV input): huid *wang*links* excisie * basaalcelcarcinoom *
+Translated Sentence (TSV input): huid biopt basaalcelcarcinoom 
+==================================================
+Input Sentence: Maagantrumbiopten: antrumtype slijmvlies met forse chronische gering actieve ontsteking, met veel Helicobacter pylori. Geen atrofie, metaplasie of dysplasie. 
+Gold Standard (Codes): maag biopt ontsteking 'helicobacter pylori'
+Translated Sentence (CSV input): maag * biopt * ontsteking
+Translated Sentence (TSV input): maag biopt ontsteking
+==================================================
+Input Sentence: Oppervlakkige biopten waarvan het beeld past bij een carcinoma planocellulare. 
+Gold Standard (Codes): lip biopsie 'carcinoma planocellulare'
+Translated Sentence (CSV input): mamma*links* biopsie * carcinoma
+Translated Sentence (TSV input): effekt biopsie'verruceus carcinoom '
+==================================================
+Input Sentence: Naaldlokalisatiebiopsie mamma Re: infiltrerend ductaalcarcinoom, diam 1.6 cm. MAI 12/10 hpf. Bloom-Richardsonscore graad 2a3. Tumoruitbreiding in fascie van spierweefsel aanwezig. Het snijvlak is niet tumorvrij. ER- en PR- receptorbepalingen volgen nog. 
+Gold Standard (Codes): mamma rechts excisie 'infiltrerend ductaal carcinoom'
+Translated Sentence (CSV input): mamma*r ec hts* biopt * infiltrerend ductaal carcinoom
+Translated Sentence (TSV input): mamma links lumpectomie'infiltrerend ductaal carcinoom '
+==================================================
+Input Sentence: Huidbiopt voetzool rechts: invasief maligne melanoom met uitgebreide ulceratie. Breslowdiepte tenminste 3 mm met perineurale uitbreiding. Vaatinvasie wordt niet gezien. 
+Gold Standard (Codes): huid biopt 'maligne melanoom'
+Translated Sentence (CSV input): huid *r ec hts* biopt * maligne melanoom
+Translated Sentence (TSV input): huid biopt melanoom
+==================================================
+Input Sentence: Okselklierdissectie rechts: 11 lymfklieren waarvan 1 met macrometastase adenocarcinoom mamma, geen extranodale groei. Topklier tumorvrij. 
+Gold Standard (Codes): oksel lymfklier rechts excisie 'metastase adenocarcinoom' mamma
+Translated Sentence (CSV input): lymfklier * oksel *r ec hts* resectie * metastase adenocarcinoom *mamma
+Translated Sentence (TSV input): lymfklier oksel r ec hts excisie'metastase adenocarcinoom'mamma
+==================================================
+Input Sentence:  Huidbiopt neus / rechter ooghoek: Basaalcelcarcinoom, nodulaire groeiwijze. De bioptranden lijken vrij. 
+Gold Standard (Codes): huid gelaat rechts biopt basaalcelcarcinoom
+Translated Sentence (CSV input): huid * neus * biopt * basaalcelcarcinoom
+Translated Sentence (TSV input): huid biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Huidexcisie (linker schouder ventraal) met een nodulair basaalcelcarcinoom, in toto verwijderd. Tevens reactieve veranderingen na eerdere biopsie. Zie T08-23771. 
+Gold Standard (Codes): huid schouder links excisie basaalcelcarcinoom
+Translated Sentence (CSV input): huid * excisie * basaalcelcarcinoom
+Translated Sentence (TSV input): huid schouder links excisie basaalcelcarcinoom
+==================================================
+Input Sentence: I. Excisie intraperitoneale laesie (uterus): sclerotisch bindweefsel. Het histologisch beeld lijkt te passen bij een verkalkt leiomyoom. Geen aanwijzingen voor maligniteit.  II. Subtotale colectomie: een drietal deels mucineuze adenocarcinomen, waarvan het eerste gelegen in het coecum (maximale diameter 7,0 cm) met doorgroei door alle wandlagen en reikend tot zeer dichtbij de serosa. De tweede tumor bevindt zich in het colon transversum (maximale diameter 3,6 cm) en groeit eveneens door alle wandlagen van de darm tot in het subserosale vetweefsel. In het sigmoid een derde tumor (diameter 2,3 cm) met invasieve groei in de steel. Voorts in het colon ascendens een poliep met in de steel een slijmmeer zonder tumorcellen, mogelijk passend bij een carcinoom met regressie. Verder in de darm 63 andere poliepen. Het betreft tubulaire adenomen met laaggradige dysplasie. Op 7,0 cm van het distale resectievlak een gebied met diverticulitis en dreigende perforatie. In het mesenteriale vetweefsel totaal 40 lymfklieren zonder aanwijzingen voor maligniteit.  Classificatie: pT3(3)N0.    Aanvulling d.d. 20-4-2010 n.a.v. Oncologiebespreking d.d. 12-4-2010:  II. Middels immuunhistochemisch onderzoek is in tumor 1 en tumor 2 focaal angio-invasieve groei aangetoond. 
+Gold Standard (Codes): colon resectie adenocarcinoom adenoom 'laaggradige dysplasie' diverticulitis immuunhistochemie [C-SEP] lymfklier colon excisie 'geen maligniteit'
+Translated Sentence (CSV input): colon* resectie * adenocarcinoom * resectievlak vrij
+Translated Sentence (TSV input): colon sigmoid resectie adenocarcinoom [C-SEP]'lymfklier colon' excisie 'g een maligniteit '
+==================================================
+Input Sentence: Rectumbiopten: weinig gedifferentieerd adenosquameus carcinoom. 
+Gold Standard (Codes): colon rectum biopt 'adenosquameus carcinoom'
+Translated Sentence (CSV input): rectum * biopsie * carcinoom
+Translated Sentence (TSV input): rectum biopsie'ongedifferentieerd carcinoom '
+==================================================
+Input Sentence: huidexcisie rechter onderbeen met nodulair groeiend basaalcelcarcinoom, de laesie is compleet verwijderd. 
+Gold Standard (Codes): huid excisie basaalcelcarcinoom
+Translated Sentence (CSV input): huid * excisie * basaalcelcarcinoom
+Translated Sentence (TSV input): huid excisie basaalcelcarcinoom
+==================================================
+Input Sentence: 512-61: menstruatie; 977-70: epidermiscysten; 6518-73: cur/tuba/cyste: chron.endometritis/2x tuba/epidermiscyste labium majus; 7017-81: tum.neus/r.arm: basaalcelcarcinoom/dermatofibroom. 
+Gold Standard (Codes): 'oud rapport'
+Translated Sentence (CSV input): oud rapport
+Translated Sentence (TSV input): 'oud rapport'
+==================================================
+Input Sentence: Mamma (segmentexcisie lateraal boven rechts): infiltrerend ductaal carcinoom (matig gedifferentieerd adenocarcinoom, maligniteitsgraad I, diameter 1,2 cm), locaal radicaal geexcideerd.  Een intracapsulaire basale okselkliermetastase (totaal 17).     
+Gold Standard (Codes): 'mamma rechts' segmentectomie 'infiltrerend ductaal carcinoom' revisie [C-SEP] 'lymfklier oksel' rechts 'metastase adenocarcinoom' mamma revisie
+Translated Sentence (CSV input): mamma*r ec hts* segmentectomie * infiltrerend ductaal carcinoom *consult
+Translated Sentence (TSV input): mamma amputatie r ec hts'infiltrerend ductaal carcinoom'revisie [C-SEP] lymfklier oksel r ec hts'metastase adenocarcinoom'mamma revisie
+==================================================
+Input Sentence: Het histologisch beeld is best verenigbaar met chronisch urticaria. 
+Gold Standard (Codes): huid urticaria biopsie
+Translated Sentence (CSV input): arteria temporalis *links* biopsie * degeneratie
+Translated Sentence (TSV input): hand r ec hts biopsie necrose
+==================================================
+Input Sentence: Pipelle endometrium: adenocarcinoom endometrioide type, graad I.   
+Gold Standard (Codes): endometrium curettage adenocarcinoom
+Translated Sentence (CSV input): endometrium * curettage * adenocarcinoom
+Translated Sentence (TSV input): endometrium pipelle adenocarcinoom
+==================================================
+Input Sentence: Mamma vacuum biopten links (laterale bovenkwadrant): ductaal carcinoom in situ (DCIS) graad 2. Geen infiltratieve groei. 
+Gold Standard (Codes): mamma links biopt 'ductaal carcinoom in situ'
+Translated Sentence (CSV input): mamma*links* biopt * carcinoma in situ
+Translated Sentence (TSV input): mamma links biopt'ductaal carcinoom in situ' revisie
+==================================================
+Input Sentence: Huidexcisie onderarm rechts: dermatofibroom. Benigne.   
+Gold Standard (Codes): huid arm rechts excisie dermatofibroom
+Translated Sentence (CSV input): huid * excisie * dermatofibroom
+Translated Sentence (TSV input): huid excisie r ec hts dermatofibroom
+==================================================
+Input Sentence: I. SNB procedure linker oksel: een lymfklier zonder (micro-) metastasen of losse tumorcellen.  II. Ablatio mammae links: infiltrerend lobulair carcinoom (diameter maximaal 1,9 cm); snijvlakken vrij; aanvullend bericht met betrekking tot gradering en HER2-neu receptor bepaling volgt.    Aanvulling II.  Tumorgraad 2 (volgens de gemodificeerde Bloom Richardson score); Her-2-Neu negatief; ER positief / PR positief (zie T09-31198). 
+Gold Standard (Codes): mamma resectie adenocarcinoom [C-SEP] lymfklier resectie 'geen maligniteit'
+Translated Sentence (CSV input): lymfklier * resectie *g een maligniteit
+Translated Sentence (TSV input): mamma links amputatie'infiltrerend lobulair carcinoom'[C-SEP] lymfklier oksel links excisie 'g een metastase '
+==================================================
+Input Sentence: Huidexcisie van de linkerknie toont een dermaal leiomyoom. Ook in 1995 is een dergelijke afwijking bij patiente geconstateerd. Is er sprake van een syndroom? 
+Gold Standard (Codes): huid biopt leiomyoom onderwijs
+Translated Sentence (CSV input): huid * excisie * leiomyoom
+Translated Sentence (TSV input): huid excisie litteken 'g een afwijking en'
+==================================================
+Input Sentence: Barrett oesofagus met slecht gedifferentieerd adenocarcinoom. 
+Gold Standard (Codes): 'barrett oesofagitis' biopt adenocarcinoom
+Translated Sentence (CSV input): oesofagus * biopt * adenocarcinoom
+Translated Sentence (TSV input): oesophagus adenocarcinoom
+==================================================
+Input Sentence: Mamma (segmentexcisie links): infiltrerend ductaalcarcinoom (slecht gedifferentieerd adenocarcinoom, maligniteitsgraad 3, diameter 2,2 cm) lokaal volledig geexcideerd.  Okselschildwachtklier vrij van tumor (6).  22-09-06, PTR/ 
+Gold Standard (Codes): mamma links segmentectomie 'infiltrerend ductaalcarcinoom' revisie [C-SEP] 'lymfklier ' oksel links excisie 'geen afwijking' 'schildwachtklier procedure' revisie
+Translated Sentence (CSV input): mamma*links* segmentectomie * infiltrerend ductaal carcinoom * revisie
+Translated Sentence (TSV input): mamma links segmentectomie'infiltrerend ductaal carcinoom'revisie [C-SEP] lymfklier oksel links excisie 'g een afwijking'revisie
+==================================================
+Input Sentence: I. Blaasbiopt, achterwand: biopt blaasweefsel reikend tot in de muscularis propria, met urotheel met atypie beloordeeld als geringe tot matige dysplasie; tevens enige chronische ontsteking.  II. Blaasbiopt, zijwand rechts: blaasbiopt reikend tot in de muscularis propria, zonder afwijkingen.  III. Blaasbiopt, dak: als II.  IV. Biopten blaastumor: solide groeiend urotheelcelcarcinoom graad-3, met invasieve groei tot in het spierweefsel van de muscularis propria.  cf/ng 
+Gold Standard (Codes): blaas biopt urotheelcelcarcinoom
+Translated Sentence (CSV input): blaas * biopt * urotheelcelcarcinoom graad 3
+Translated Sentence (TSV input): blaas biopt urotheelcelcarcinoom [C-SEP] blaas biopt'chronische ontsteking '
+==================================================
+Input Sentence: I + II + III: Weefsel nabij het acromio-claviculaire gewricht, kapsel re. schouder en humeruskop waarin waarschijnlijk onvoldoende representatief materiaal aanwezig is. Voornamelijk reactieve bindweefselproliferatie en tekenen van botdestructie worden gezien. Enkele van de weefselstukjes zouden afkomstig kunnen zijn van een reusceltumor van het bot. Een grot 
+Gold Standard (Codes): bot biopsie 'verdacht maligne' 
+Translated Sentence (CSV input): bot* biopsie * reusceltumor peesschede *
+Translated Sentence (TSV input): ' digitus ii i' excisie'chronische ontsteking '
+==================================================
+Input Sentence: Huidexcisie schouder met goed gedifferentieerd plaveiselcelcarcinoom, geheel verwijderd 
+Gold Standard (Codes): schouder huid excisie plaveiselcelcarcinoom
+Translated Sentence (CSV input): huid * excisie *hand* plaveiselcelcarcinoom
+Translated Sentence (TSV input): huid schouder links excisie plaveiselcelcarcinoom'sneevlak vrij'
+==================================================
+Input Sentence: 1. Botmetastase van grootcellig ongedifferentieerd carcinoom.   2. Bindweefsel, waarin doorgroei van grootcellig ongedifferentieerd carcinoom. Het beeld past bij de bekende primaire longtumor. 
+Gold Standard (Codes): schedel 'metastase ongedifferentieerd carcinoom' long
+Translated Sentence (CSV input): lymfklier * mediastinum * metastase grootcellig carcinoom *long
+Translated Sentence (TSV input): bot'metastase grootcellig carcinoom'long
+==================================================
+Input Sentence: Histologisch naaldbiopt intraabdominale massa: Non Hogkin Lymfoom, diffuus grootcellig B-cel lymfoom. 
+Gold Standard (Codes): 'lymfklier abdomen' biopt 'non hodgkin lymfoom'
+Translated Sentence (CSV input): lymfklier * biopt *non hodgkin lymfoom
+Translated Sentence (TSV input): lymfklier biopt'maligne lymfoom '
+==================================================
+Input Sentence: Huidexcisiepreparaat afkomstig van het rechter onderbeen met daarin een beeld van een dermatofibroom. 
+Gold Standard (Codes): huid been rechts excisie dermatofibroma
+Translated Sentence (CSV input): huid * onderbeen *r ec hts* excisie * dermatofibroom
+Translated Sentence (TSV input): huid onderbeen excisie dermatofibroom
+==================================================
+Input Sentence:  Materiaal niet goed geschikt voor betrouwbare diagnostiek. Voor zover te beoordproces. 
+Gold Standard (Codes): buikwand cytologie 'geen diagnose'
+Translated Sentence (CSV input): mamma* zijdigheid onbekend *g een zekere diag nose
+Translated Sentence (TSV input): urine cytologie 'niet te weinig mater i aa l'
+==================================================
+Input Sentence: Excisie sessiele poliep rectum: matig gedifferentieerd adenocarcinoom, diameter 1,5 cm. De tumor blijft beperkt tot de submucosa. Geen zekere uitspraak over het resectievlak mogelijk. PT1Nx.    21-04-11/*******/kd 
+Gold Standard (Codes): colon excisie adenocarcinoom
+Translated Sentence (CSV input): rectum * excisie * adenocarcinoom
+Translated Sentence (TSV input): rectum excisie adenocarcinoom
+==================================================
+Input Sentence: Schildwachtklier linkeroksel: een lymfklier zonder tumorlokalisatie; pN0(sn). 
+Gold Standard (Codes): lymfklier oksel links excisie schildwachtklierprocedure 'geen maligniteit'
+Translated Sentence (CSV input): lymfklier * axilla *links* excisie *g een maligniteit
+Translated Sentence (TSV input): lymfklier oksel links schildwachtklier procedure 'g een maligniteit '
+==================================================
+Input Sentence: I: urethra snijvlak; vrij van tumor. Conform vriescoupe.^II: linker ureter snijvlak; vrij van tumor. Conform vriescoupe.^III: rechter ureter snijvlak: vrij van tumor. In de definitieve coupes zien wij geen losse cellen meer die in de vriescoupe te zien zijn.^IV: rechter ureter snijvlak: tumorvrij. Conform vriescoupe.^V: cystoprostatectomie preparaat: in de achterwand van de blaas is er lokalisatie van weinig gedifferentieerd invasief urotheelcelcarcinoom graad III. De tumor groeit uitgebreid tot in het perivesicale vetweefsel. Focaal vaatinvasie. Het circumferentieel snijvlak is vrij. In het perivesicaal vetweefsel 1 lymfklier met reactieve veranderingen.^Prostaat: in de prostaat geringe glandulaire hyperplasie. In de vesicula seminalis geen afwijkingen. Geen tekenen van maligniteit. 
+Gold Standard (Codes): blaas resectie 'urotheelcarcinoom graad 3' [C-SEP] prostaat resectie 'geen maligniteit'
+Translated Sentence (CSV input): blaas * resectie *g een maligniteit
+Translated Sentence (TSV input): blaas resectie'urotheelcelcarcinoom graad 3''resectievlak niet vrij' [C-SEP] prostaat resectie 'g een maligniteit '
+==================================================
+Input Sentence: Tumor biopten links frontaal: beeld past bij een laaggradig diffuus astrocytoom graad II. In dit materiaal geen aanwijzingen voor hogere maligniteitsgraad. Eventueel te vergelijken met radiologische bevindingen. 
+Gold Standard (Codes): cerebrum links biopt astrocytoom 'ip reactie'
+Translated Sentence (CSV input): cerebrum *links* biopt *g een afwijking
+Translated Sentence (TSV input): hersenen biopt astrocytoom
+==================================================
+Input Sentence: I.  Huidbiopt (schouder): Basaalcelcarcinoom.  II. Huidbiopt (mediaal links, A): Basaalcelcarcinoom, gering lymfocytair      perifolliculair ontstekingsinfiltraat.  III.Huidbiopt (mediaal links, B): Basaalcelcarcinoom.  IV. Huidbiopt (mediaal rechts A): Basaalcelcarcinoom.  V.  Huidbiopt (mediaal rechts B): Basaalcelcarcinoom, voorts ulcererende      ontsteking van dermis en epidermis.  VI. Huidbiopt  (lateraal rechts): Basaalcelcarcinoom. 
+Gold Standard (Codes): huid rug biopt basaalcelcarcinoom ontsteking
+Translated Sentence (CSV input): huid * gelaat * biopt * basaalcelcarcinoom
+Translated Sentence (TSV input): huid schouder links biopt basaalcelcarcinoom [C-SEP] huid gelaat r ec hts biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Histologisch passend bij een recidiverende tonsillitis. 
+Gold Standard (Codes): tonsillitis
+Translated Sentence (CSV input): subcutis *mamma*r ec hts* gynaecomastie
+Translated Sentence (TSV input): huid hand r ec hts dermatofibroom
+==================================================
+Input Sentence: Excisie tumortje ooglid: Dermale naevus. 
+Gold Standard (Codes): ooglid excisie 'dermale naevus'
+Translated Sentence (CSV input): ooglid * excisie * basaalcelcarcinoom
+Translated Sentence (TSV input): huid excisie'dermale naevus '
+==================================================
+Input Sentence: Beeld van dermoidcyste van het linker ovarium. 
+Gold Standard (Codes): ovarium links dermoidcyste
+Translated Sentence (CSV input): ovarium *links* dermoidcyste
+Translated Sentence (TSV input): ovarium links extirpatie necrose
+==================================================
+Input Sentence: Lymfklieren uit de hals waarin lokalisatie van een maligne non Hodgkin lymfoom, grootcellig T-celtype. 
+Gold Standard (Codes): 'lymfklier hals' excisie immuunhistochemie 'maligne lymfoom' immuunhistochemie
+Translated Sentence (CSV input): lymfklier *hals* excisie * maligne lymfoom
+Translated Sentence (TSV input): hals lymfklier excisie'maligne lymfoom '
+==================================================
+Input Sentence: Huidbiopt rechts op de neus: basaalcelcarcinoom, superficiele groeiwijze. 
+Gold Standard (Codes): huid biopt basaalcelcarcinoom
+Translated Sentence (CSV input): huid * biopt * basaalcelcarcinoom
+Translated Sentence (TSV input): huid neus rechts biopt basaalcelcarcinoom
+==================================================
+Input Sentence: Reeds ingesneden lumpectomiepreparaat van de linker mamma lateraal met het beeld van infiltrerend tubulolobulair carcinoom. Tumor maximaal 1 cm met daarbij cancerisatie van lobuli en er is enige angioinvasieve groei aanwezig. Minimale afstand tot resectievlak is 1 cm. 
+Gold Standard (Codes): mamma lumpectomie links 'infiltrerend lobulair carcinoom' 'tubulair carcinoom' 'oestrogeenreceptorbepaling positief'
+Translated Sentence (CSV input): mamma*links* resectievlak vrij* ductaal carcinoom
+Translated Sentence (TSV input): mamma links lumpectomie adenocarcinoom
+==================================================
+Input Sentence: Huidbiopt linker wang: oppervlakkig infiltrerend goed gedifferentieerd plaveiselcelcarcinoom. Ruime excisie van de laesie wordt geadviseerd. 
+Gold Standard (Codes): huid biopt plaveiselcelcarcinoom
+Translated Sentence (CSV input): huid *wang*links* biopt * plaveiselcelcarcinoom
+Translated Sentence (TSV input): huid biopsie plaveiselcelcarcinoom
+==================================================
+Input Sentence: I: Endocervixcurettement, waarin weinig atrofisch ectocervicaal plaveiselepitheel.  II: Endometriumcurettage, waarin fragmentjes van een grotendeels weinig gedifferentieerd (graad 3) endometroid carcinoom.  *******/ip 8 november 1996 
+Gold Standard (Codes): endometrium curettage adenocarcinoom
+Translated Sentence (CSV input): endometrium * curettage * adenocarcinoom
+Translated Sentence (TSV input): endocervix curettage curettage'abortus incompletus '
+==================================================
+Input Sentence: Multiloculair mucineus cystadenoom van het rechter ovarium. 
+Gold Standard (Codes): ovarium rechts operatie 'mucineus cystadenoom'
+Translated Sentence (CSV input): ovarium *r ec hts*operatie* mucineus cystadenoom
+Translated Sentence (TSV input): ovarium r ec hts'slecht carcinoom '
+==================================================
+Input Sentence: I. Blaasbiopten (bodem/rand): verdenking op de aanwezigheid van een papillair overgangscelcarcinoom. Te veel artificiele beschadiging voor een zeklere diagnose.  II. Blaasresectiemateriaal (blaastumor rechts lateraal; tur): matig gedifferentieerd papillair overgangscelcarcinoom met infiltratie tot in het stroma. Spierweefsel van de muscularis externa is niet aanwezig. 
+Gold Standard (Codes): blaas biopt 'papillair urotheelcelcarcinoom' 'verdacht maligne' [C-SEP] blaas resectie 'papillair overgangscelcarcinoom'
+Translated Sentence (CSV input): blaas *r ec hts* resectie * papillair overgangscelcarcinoom
+Translated Sentence (TSV input): blaas biopt'overgangscelcarcinoom graad 1'
+==================================================
+
+JOB STATISTICS
+==============
+Job ID: 4579768
+Cluster: snellius
+User/Group: msiepel/msiepel
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:28:48 core-walltime
+Job Wall-clock time: 00:01:36
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 39.06 GB (39.06 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
