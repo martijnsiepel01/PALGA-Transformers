@@ -72,4 +72,4 @@ if __name__ == "__main__":
          args.comment, args.patience, args.freeze_all_but_x_layers)
     
     # sbatch train.sh --num_train_epochs 50 --data_set all --local_model_path "/home/msiepel/models/mT5_small" --comment "mt5-small_default_settings_final" --patience 10
-         
+    # test
