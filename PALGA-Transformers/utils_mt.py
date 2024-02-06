@@ -342,3 +342,4 @@ def train_model(model, optimizer, accelerator, max_generate_length, train_datalo
     artifact = wandb.Artifact("best_model", type="model")
     artifact.add_file(f'Transformers-PALGA/models/trained_models/{run_name}.pth')
     wandb.log_artifact(artifact)
+    # test
