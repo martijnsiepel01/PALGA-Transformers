@@ -20,3 +20,5 @@ wandb
 .bash_profile
 models
 data
+slurm-*
+.gitconfig

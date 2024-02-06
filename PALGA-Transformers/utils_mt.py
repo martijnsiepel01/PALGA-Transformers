@@ -8,7 +8,7 @@ from transformers import MT5Tokenizer, DataCollatorForSeq2Seq, AutoModelForSeq2S
 import evaluate
 from accelerate import Accelerator
 
-def load_tokenizer(local_tokenizer_path = 'Transformers-PALGA/flan_tokenizer'):
+def load_tokenizer(local_tokenizer_path = 'PALGA-Transformers/flan_tokenizer'):
     tokenizer = T5Tokenizer.from_pretrained(local_tokenizer_path)
     return tokenizer
 
@@ -41,7 +41,7 @@ def preprocess_function(examples, tokenizer, max_length_sentence):
     return model_inputs
 
 def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
-    data_files = {"train": f"data/{data_set}/{data_set}_norm_train.tsv", "test": f"data/{data_set}/{data_set}_norm_test.tsv", "validation": f"data/{data_set}/{data_set}_norm_validation.tsv"}
+    data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
     dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
     dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
     tokenized_datasets = dataset.map(
@@ -56,7 +56,7 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
 
 
 def prepare_test_dataset(tokenizer, max_length_sentence):
-    test_data_location = "Transformers-PALGA/data/gold_P1.tsv"
+    test_data_location = "PALGA-Transformers/data/gold_P1.tsv"
     dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
     dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
     tokenized_datasets = dataset.map(
@@ -93,7 +93,7 @@ def freeze_layers(model, freeze_all_but_x_layers):
     return model
 
 
-def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path = 'Transformers-PALGA/models/flan-t5-small'):
+def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path = 'PALGA-Transformers/models/flan-t5-small'):
     model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, local_files_only=True)
     model.resize_token_embeddings(len(tokenizer))
 
@@ -323,7 +323,7 @@ def train_model(model, optimizer, accelerator, max_generate_length, train_datalo
         if eval_metrics["loss"] < lowest_loss:  # Update loss accordingly
             lowest_loss = eval_metrics["loss"]
             best_model_state_dict = model.state_dict()  # Save the state dict of the best model
-            torch.save(model.state_dict(), f'Transformers-PALGA/models/trained_models/{run_name}.pth')  # Save the model weights
+            torch.save(model.state_dict(), f'PALGA-Transformers/models/trained_models/{run_name}.pth')  # Save the model weights
             early_stopping_counter = 0
         else:
             early_stopping_counter += 1
@@ -340,6 +340,5 @@ def train_model(model, optimizer, accelerator, max_generate_length, train_datalo
 
     # Save the best model weights as a W&B artifact
     artifact = wandb.Artifact("best_model", type="model")
-    artifact.add_file(f'Transformers-PALGA/models/trained_models/{run_name}.pth')
+    artifact.add_file(f'PALGA-Transformers/models/trained_models/{run_name}.pth')
     wandb.log_artifact(artifact)
-    # test

@@ -9,6 +9,7 @@
 #SBATCH --time=48:00:00
 #SBATCH --mem=40000M
 
-source .venv/bin/activate
+source ../.venv/bin/activate
 
-python train_mt.py "$@"
+
+python PALGA-Transformers/train_mt.py "$@"
