@@ -81,9 +81,9 @@ def freeze_layers(model, freeze_all_but_x_layers):
     for param in model.decoder.block[-freeze_all_but_x_layers:].parameters():
         param.requires_grad = True
 
-    model.encoder.final_layer_norm.weight.requires_grad = False
-    model.decoder.final_layer_norm.weight.requires_grad = False
-    model.lm_head.weight.requires_grad = False
+    model.encoder.final_layer_norm.weight.requires_grad = True
+    model.decoder.final_layer_norm.weight.requires_grad = True
+    model.lm_head.weight.requires_grad = True
 
 
     # Optionally, print out which layers are trainable to verify
