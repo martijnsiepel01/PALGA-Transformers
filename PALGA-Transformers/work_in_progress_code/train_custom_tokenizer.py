@@ -21,8 +21,8 @@ def train_sentencepiece_tokenizer(input_file_path, model_prefix, vocab_size, spe
     spm.SentencePieceTrainer.Train(spm_command)
 
 # Path to your dataset
-input_file = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_train.tsv"
-temp_file_path = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/all/temp_train_data.txt"
+input_file = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_train.tsv"
+temp_file_path = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/temp_train_data.txt"
 
 # Convert your dataset to the required format if it's not already in plain text
 # For example, converting from TSV to plain text as in the initial question
@@ -32,8 +32,8 @@ with open(input_file, "r") as file, open(temp_file_path, "w") as temp_file:
         temp_file.write(row[0] + "\n")
 
 # Training parameters
-model_prefix = "t5_custom_8000_1"
-vocab_size = 8000
+model_prefix = "t5_custom_128000_1"
+vocab_size = 128000
 special_tokens = ["[PAD]", "[UNK]", "[CLS]", "[MASK]", "[C-SEP]"]  # Include your special tokens here
 
 # Train the tokenizer
