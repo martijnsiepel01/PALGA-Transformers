@@ -9,8 +9,11 @@ import evaluate
 from accelerate import Accelerator
 
 def load_tokenizer(local_tokenizer_path = 'PALGA-Transformers/flan_tokenizer'):
-    tokenizer = T5Tokenizer.from_pretrained(local_tokenizer_path)
+    # tokenizer = T5Tokenizer.from_pretrained(local_tokenizer_path)
+    tokenizer = T5Tokenizer(vocab_file=local_tokenizer_path)
     return tokenizer
+
+
 
 
 def generate_config_and_run_name(num_train_epochs, max_length_sentence, train_batch_size, validation_batch_size, learning_rate, max_generate_length, data_set, local_model_path, comment, patience, freeze_all_but_x_layers):
