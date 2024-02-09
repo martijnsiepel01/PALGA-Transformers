@@ -4,20 +4,19 @@ from datasets import load_dataset
 import random
 
 # Path to your PyTorch checkpoint (.pth) file
-checkpoint_model1 = '/home/msiepel/models/trained_models/epochs50_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelmT5_small_commentmT5_small_baseline_patience5.pth'
-checkpoint_model2 = '/home/msiepel/models/trained_models/epochs50_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelmT5_base_commentmT5_base_baseline_patience5.pth'
-checkpoint_model3 = '/home/msiepel/models/trained_models/epochs50_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelflan-t5-small_commentflan-t5-small_baseline_patience5.pth'
-checkpoint_model4 = '/home/msiepel/models/trained_models/epochs50_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelflan-t5-base_commentflan-t5-base_baseline_patience5_freezeallbutxlayers0.pth'
+checkpoint_model1 = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/trained_models/epochs15_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelflan-t5-small_commentprocessed_unigram_custom_tokenizer_vocab_16000_1_patience3_freezeallbutxlayers0.pth'
+checkpoint_model2 = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/trained_models/epochs15_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelflan-t5-small_commentunigram_custom_tokenizer_vocab_16000_1_patience3_freezeallbutxlayers0.pth'
+checkpoint_model3 = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/trained_models/epochs15_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelflan-t5-small_commentcustom_tokenizer_vocab_16000_patience3_freezeallbutxlayers0.pth'
+checkpoint_model4 = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/trained_models/epochs15_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelflan-t5-small_commentcustom_tokenizer_vocab_16000_098_patience3_freezeallbutxlayers0.pth'
 
 # # Define the configuration for your MT5 model
-config1 = MT5Config.from_pretrained('/home/msiepel/models/mT5_small/config.json')
-config2 = MT5Config.from_pretrained('/home/msiepel/models/mT5_base/config.json')
-config3 = T5Config.from_pretrained('/home/msiepel/models/flan-t5-small/config.json')
-config4 = T5Config.from_pretrained('/home/msiepel/models/flan-t5-base/config.json')
+config = T5Config.from_pretrained('/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/flan-t5-small/config.json')
 
+tokenizer1 = T5Tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_16000/processed_unigram_t5_custom_16000_1.model')
+tokenizer2 = T5Tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_16000/unigram_t5_custom_16000_1.model')
+tokenizer3 = T5Tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_16000/t5_custom_16000_1.model')
+tokenizer4 = T5Tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_16000/t5_custom_16000_098.model')
 
-tokenizer1 = MT5Tokenizer.from_pretrained('/home/msiepel/tokenizer')
-tokenizer2 = T5Tokenizer.from_pretrained('/home/msiepel/flan_tokenizer')
 
 # # config = MT5Config.from_pretrained("google/flan-t5-small")
 # # tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-small")
@@ -32,9 +31,8 @@ def preprocess_function(examples, tokenizer, max_length_sentence):
     )
     return model_inputs
 
-def prepare_test_dataset(tokenizer, max_length_sentence):
+def prepare_test_dataset(test_data_location, tokenizer, max_length_sentence):
     # test_data_location = "/home/msiepel/data/all/all_norm_test.tsv"
-    test_data_location = "/home/msiepel/data/gold_P1.tsv"
     dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
     dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
     tokenized_datasets = dataset.map(
@@ -47,20 +45,20 @@ def prepare_test_dataset(tokenizer, max_length_sentence):
     return test_dataset
 
 
-test_dataset = prepare_test_dataset(tokenizer1, max_length_sentence)
+test_dataset_1 = prepare_test_dataset('/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/processed_gold_P1.tsv', tokenizer1, max_length_sentence)
+test_dataset_2 = prepare_test_dataset('/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_P1.tsv', tokenizer2, max_length_sentence)
 
-
-model1 = MT5ForConditionalGeneration(config1)
+model1 = T5ForConditionalGeneration(config)
 model1.resize_token_embeddings(len(tokenizer1))
 
-model2 = MT5ForConditionalGeneration(config2)
-model2.resize_token_embeddings(len(tokenizer1))
+model2 = T5ForConditionalGeneration(config)
+model2.resize_token_embeddings(len(tokenizer2))
 
-model3 = T5ForConditionalGeneration(config3)
-model3.resize_token_embeddings(len(tokenizer2))
+model3 = T5ForConditionalGeneration(config)
+model3.resize_token_embeddings(len(tokenizer3))
 
-model4 = T5ForConditionalGeneration(config4)
-model4.resize_token_embeddings(len(tokenizer2))
+model4 = T5ForConditionalGeneration(config)
+model4.resize_token_embeddings(len(tokenizer4))
 
 state_dict1 = torch.load(checkpoint_model1, map_location='cpu')  # 'map_location' argument for loading on CPU
 model1.load_state_dict(state_dict1)
@@ -74,35 +72,40 @@ model3.load_state_dict(state_dict3)
 state_dict4 = torch.load(checkpoint_model4, map_location='cpu')  # 'map_location' argument for loading on CPU
 model4.load_state_dict(state_dict4)
 
-
 # Get 100 random indices from the training dataset
-random_indices = random.sample(range(len(test_dataset)), 100)
+random_indices = random.sample(range(len(test_dataset_1)), 100)
 for index in random_indices:
-    sample = test_dataset[index]
-    input_text = sample["Conclusie"]
-    gold_standard = sample["Codes"]
+    sample_1 = test_dataset_1[index]
+    input_text_1 = sample_1["Conclusie"]
+    gold_standard_1 = sample_1["Codes"]
+
+    sample_2 = test_dataset_2[index]
+    input_text_2 = sample_2["Conclusie"]
+    gold_standard_2 = sample_2["Codes"]
 
     # Generate translation for the input sentence
-    input_ids1 = tokenizer1.encode(input_text, return_tensors='pt')
-    input_ids2 = tokenizer2.encode(input_text, return_tensors='pt')
+    input_ids1 = tokenizer1.encode(input_text_1, return_tensors='pt')
+    input_ids2 = tokenizer2.encode(input_text_2, return_tensors='pt')
+    input_ids3 = tokenizer3.encode(input_text_2, return_tensors='pt')
+    input_ids4 = tokenizer4.encode(input_text_2, return_tensors='pt')
 
     output1 = model1.generate(input_ids1, max_length=32)
     translated_text1 = tokenizer1.decode(output1[0], skip_special_tokens=True)
 
-    output2 = model2.generate(input_ids1, max_length=32)
-    translated_text2 = tokenizer1.decode(output1[0], skip_special_tokens=True)
+    output2 = model2.generate(input_ids2, max_length=32)
+    translated_text2 = tokenizer2.decode(output2[0], skip_special_tokens=True)
 
-    output3 = model3.generate(input_ids2, max_length=32)
-    translated_text3 = tokenizer2.decode(output3[0], skip_special_tokens=True)
+    output3 = model3.generate(input_ids3, max_length=32)
+    translated_text3 = tokenizer3.decode(output3[0], skip_special_tokens=True)
 
-    output4 = model4.generate(input_ids2, max_length=32)
-    translated_text4 = tokenizer2.decode(output4[0], skip_special_tokens=True)
+    output4 = model4.generate(input_ids4, max_length=32)
+    translated_text4 = tokenizer4.decode(output4[0], skip_special_tokens=True)
 
     # Print input, output, and gold standard
-    print(f"Input text: {input_text}")
-    print(f"Gold standard: {gold_standard}")
-    print(f"mT5-small: {translated_text1}")
-    print(f"mT5-base: {translated_text2}")
-    print(f"flan-t5-small: {translated_text3}")
-    print(f"flan-t5-base: {translated_text4}")
+    print(f"Input text: {input_text_1}")
+    print(f"Gold standard:     {gold_standard_1}")
+    print(f"Processed Unigram: {translated_text1}")
+    print(f"Unigram:           {translated_text2}")
+    print(f"BSP 1:             {translated_text3}")
+    print(f"BSP 098:           {translated_text4}")
     print("-"*100)

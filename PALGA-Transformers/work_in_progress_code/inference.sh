@@ -9,6 +9,6 @@
 #SBATCH --time=10:00:00
 #SBATCH --mem=40000M
 
-source .venv/bin/activate
+source ../.venv/bin/activate
 
-python work_in_progress_code/inference.py 
+python PALGA-Transformers/work_in_progress_code/inference.py 

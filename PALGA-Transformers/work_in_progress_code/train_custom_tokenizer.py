@@ -14,14 +14,14 @@ def train_sentencepiece_tokenizer(input_file_path, model_prefix, vocab_size, spe
     """
     # Preparing SentencePiece command
     spm_command = f'--input={input_file_path} --model_prefix={model_prefix} ' \
-                  f'--vocab_size={vocab_size} --character_coverage=1.0 ' \
-                  f'--model_type=bpe --control_symbols={",".join(special_tokens)}'
+                  f'--vocab_size={vocab_size} --character_coverage=0.98 ' \
+                  f'--model_type=unigram --control_symbols={",".join(special_tokens)}'
     
     # Train the SentencePiece model
     spm.SentencePieceTrainer.Train(spm_command)
 
 # Path to your dataset
-input_file = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/processed_all_norm_train.tsv"
+input_file = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_train.tsv"
 temp_file_path = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/temp_train_data.txt"
 
 # Convert your dataset to the required format if it's not already in plain text
@@ -32,7 +32,7 @@ with open(input_file, "r") as file, open(temp_file_path, "w") as temp_file:
         temp_file.write(row[0] + "\n")
 
 # Training parameters
-model_prefix = "processed_t5_custom_16000_1"
+model_prefix = "unigram_t5_custom_16000_098"
 vocab_size = 16000
 special_tokens = ["[PAD]", "[UNK]", "[CLS]", "[MASK]", "[C-SEP]"]  # Include your special tokens here
 
