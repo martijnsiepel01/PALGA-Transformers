@@ -7,14 +7,12 @@ import pandas as pd
 from transformers import MT5Tokenizer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, AdamW, T5Tokenizer
 import evaluate
 from accelerate import Accelerator
+from datasets import concatenate_datasets
 
 def load_tokenizer(local_tokenizer_path = 'PALGA-Transformers/flan_tokenizer'):
     # tokenizer = T5Tokenizer.from_pretrained(local_tokenizer_path)
     tokenizer = MT5Tokenizer(vocab_file=local_tokenizer_path)
     return tokenizer
-
-
-
 
 def generate_config_and_run_name(num_train_epochs, max_length_sentence, train_batch_size, validation_batch_size, learning_rate, max_generate_length, data_set, local_model_path, comment, patience, freeze_all_but_x_layers):
     config = {
@@ -44,18 +42,44 @@ def preprocess_function(examples, tokenizer, max_length_sentence):
     return model_inputs
 
 def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
+    # Define file paths for the first dataset
     data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
-    dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
-    dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
-    dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
-    tokenized_datasets = dataset.map(
-        lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
-        batched=True
-    )
-    tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
-    tokenized_datasets.set_format("torch")
-    train_dataset = tokenized_datasets['train']
-    val_dataset = tokenized_datasets['validation']
+    
+    # Load the first dataset
+    dataset1 = load_dataset("csv", data_files=data_files, delimiter="\t")
+    
+    # Define and load the second dataset
+    data_set = "histo"
+    data_files2 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
+    dataset2 = load_dataset("csv", data_files=data_files2, delimiter="\t")
+    
+    # Define and load the third dataset
+    data_set = "autopsies"
+    data_files3 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
+    dataset3 = load_dataset("csv", data_files=data_files3, delimiter="\t")
+
+    # Concatenate the datasets for each split separately
+    train_datasets = concatenate_datasets([dataset1["train"], dataset2["train"], dataset3["train"]])
+    test_datasets = concatenate_datasets([dataset1["test"], dataset2["test"], dataset3["test"]])
+    validation_datasets = concatenate_datasets([dataset1["validation"], dataset2["validation"], dataset3["validation"]])
+
+    # Combine the splits back into a single dataset dictionary
+    dataset = {"train": train_datasets, "test": test_datasets, "validation": validation_datasets}
+
+   # Further processing (filtering and tokenizing)
+    for split in dataset.keys():
+        dataset[split] = dataset[split].filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
+        dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
+        dataset[split] = dataset[split].map(
+            lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
+            batched=True
+        )
+        dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes"])
+        dataset[split].set_format("torch")
+
+    train_dataset = dataset['train']
+    val_dataset = dataset['validation']
+
     return train_dataset, val_dataset
 
 
