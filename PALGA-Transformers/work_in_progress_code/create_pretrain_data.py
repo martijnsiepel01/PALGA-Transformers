@@ -4,7 +4,7 @@ import random
 
 
 # Specify the path to your TSV file
-file_path = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_train.tsv"
+file_path = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_validation.tsv"
 
 # Load the TSV file into a DataFrame
 df = pd.read_csv(file_path, sep="\t")
@@ -125,4 +125,4 @@ for index, row in df.iterrows():
 data_df = pd.DataFrame(data, columns=headers)
 
 # Write the DataFrame to a TSV file
-data_df.to_csv("/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/pretrain_all_train.tsv", sep='\t', index=False)
+data_df.to_csv("/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/pretrain_all/pretrain_all_validation.tsv", sep='\t', index=False)
