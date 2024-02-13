@@ -1,6 +1,6 @@
 import pandas as pd
 import string
-from transformers import AutoTokenizer, AutoModel, MT5Tokenizer, MBart50TokenizerFast
+from transformers import AutoTokenizer, AutoModel, MT5Tokenizer, MBart50TokenizerFast, T5Tokenizer
 
 
 # -- load a PALGA thesaurus file (snomed_xxxxxxxx.txt) and extract the terms
@@ -20,11 +20,9 @@ def get_unique_thesaurus_term_words(thesaurus_file_name):
     return unique_term_words
 
 
-utw = get_unique_thesaurus_term_words('/home/msiepel/data/snomed_20230426.txt')
+utw = get_unique_thesaurus_term_words('/home/gburger01/snomed_20230426.txt')
 
-# tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-small")
-tokenizer = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")
-
+tokenizer = T5Tokenizer.from_pretrained('google/mt5-small')
 
 # -- delete the words from the list of unique PALGA thesaurus term words already in the tokenizer's vocabulary:
 utw = set(utw) - set(tokenizer.vocab.keys())
@@ -35,4 +33,4 @@ tokenizer.add_tokens(list(utw))
 # -- add special tokens ('[C-SEP]' in the code series)
 tokenizer.add_tokens('[C-SEP]', special_tokens=True)
 
-tokenizer.save_pretrained('/home/msiepel/mbart_mmt_tokenizer')
+tokenizer.save_pretrained('/home/gburger01/PALGA-Transformers/PALGA-Transformers/mt5-small-tokenizer')

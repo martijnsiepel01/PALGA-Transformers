@@ -10,7 +10,7 @@ from accelerate import Accelerator
 
 def load_tokenizer(local_tokenizer_path = 'PALGA-Transformers/flan_tokenizer'):
     # tokenizer = T5Tokenizer.from_pretrained(local_tokenizer_path)
-    tokenizer = T5Tokenizer(vocab_file=local_tokenizer_path)
+    tokenizer = MT5Tokenizer(vocab_file=local_tokenizer_path)
     return tokenizer
 
 
@@ -47,6 +47,7 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
     data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
     dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
     dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
+    dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
     tokenized_datasets = dataset.map(
         lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
         batched=True
@@ -62,6 +63,7 @@ def prepare_test_dataset(tokenizer, max_length_sentence):
     test_data_location = "PALGA-Transformers/data/gold_P1.tsv"
     dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
     dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
+    dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
     tokenized_datasets = dataset.map(
         lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
         batched=True
