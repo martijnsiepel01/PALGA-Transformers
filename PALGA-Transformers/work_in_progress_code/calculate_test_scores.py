@@ -355,8 +355,8 @@ best_score, best_params = random_search(
     dataloader=test_dataloader_gold,
     tokenizer=tokenizer,
     max_generate_length=32,
-    comment="Hyperparameter search with 16000_1 model"
+    comment="Hyperparameter search with 16000_098 model"
 )
 
 print(f"Best score: {best_score}")
-prinat(f"Best params: {best_params}")
+print(f"Best params: {best_params}")
