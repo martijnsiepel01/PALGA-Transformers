@@ -158,7 +158,16 @@ def train_step(model, dataloader, optimizer, accelerator):
         total_train_loss += loss.item()
 
     avg_train_loss = total_train_loss / len(dataloader)
-    return avg_train_loss
+    train_perplexity = torch.exp(torch.tensor(avg_train_loss))  # Calculate train perplexity
+
+    train_metrics = {
+            "loss": avg_train_loss,
+            "perplexity": train_perplexity.item()  # Convert to Python float for logging or printing
+        }
+    
+    return train_metrics  # Return as a Python float
+
+
 
 def validation_step(model, dataloader):
     model.eval()
@@ -180,13 +189,15 @@ def validation_step(model, dataloader):
     
     return eval_metrics
 
-def wandb_log_metrics(epoch, avg_train_loss, eval_metrics):
+def wandb_log_metrics(epoch, train_metrics, eval_metrics):
     wandb.log({
-                "epoch/epoch": epoch,
-                "loss/train_loss": avg_train_loss,
-                "loss/eval_loss": eval_metrics["loss"],
-                "eval/perplexity": eval_metrics["perplexity"]
-            })
+        "epoch/epoch": epoch,
+        "loss/train_loss": train_metrics['loss'],
+        "train/perplexity": train_metrics['perplexity'], 
+        "loss/eval_loss": eval_metrics["loss"],
+        "eval/perplexity": eval_metrics["perplexity"]
+    })
+
 
 def train_model(model, optimizer, accelerator, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, run_name, patience):
     num_training_steps = num_train_epochs * len(train_dataloader)
@@ -197,11 +208,11 @@ def train_model(model, optimizer, accelerator, train_dataloader, eval_dataloader
     best_model_state_dict = None
 
     for epoch in range(num_train_epochs):
-        avg_train_loss = train_step(model, train_dataloader, optimizer, accelerator)
+        train_metrics = train_step(model, train_dataloader, optimizer, accelerator)
         eval_metrics = validation_step(model, eval_dataloader)
 
         # Log metrics to WandB
-        wandb_log_metrics(epoch, avg_train_loss, eval_metrics)
+        wandb_log_metrics(epoch, train_metrics, eval_metrics)
 
         if eval_metrics["loss"] < lowest_loss:  # Update loss accordingly
             lowest_loss = eval_metrics["loss"]
@@ -234,7 +245,7 @@ def generate_config_and_run_name(num_train_epochs, max_length_sentence, train_ba
         'comment': comment
     }
 
-    run_name = f'epochs{num_train_epochs}_maxlen{max_length_sentence}_trainbs{train_batch_size}_valbs{validation_batch_size}_lr{learning_rate}_dataset{data_set}_patience{patience}_comment{comment}'
+    run_name = f'epochs{num_train_epochs}_maxlen{max_length_sentence}_trainbs{train_batch_size}_valbs{validation_batch_size}_lr{lr}_dataset{data_set}_patience{patience}_comment{comment}'
 
     return config, run_name
 
@@ -244,8 +255,8 @@ train_batch_size = 8
 validation_batch_size = 4
 max_length_sentence = 1024
 lr = 1e-4
-num_train_epochs = 2
-comment = 'pretrain_all_translation_pair_span_corruption_test'  # Example, you might generate it with the function instead
+num_train_epochs = 25
+comment = 'pretrain_translation_pair_span_corruption_test'  # Example, you might generate it with the function instead
 patience = 3
 
 config, run_name = generate_config_and_run_name(
