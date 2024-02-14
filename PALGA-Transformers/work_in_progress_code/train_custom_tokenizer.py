@@ -38,8 +38,8 @@ with open(temp_file_path, "w") as temp_file:
                 temp_file.write(row[0] + "\n")
 
 # Training parameters
-model_prefix = "combined_data_unigram_t5_custom_16000_098"
-vocab_size = 16000
+model_prefix = "combined_data_unigram_t5_custom_32128_098"
+vocab_size = 32128
 special_tokens = ["[PAD]", "[UNK]", "[CLS]", "[MASK]", "[C-SEP]"]  # Include your special tokens here
 
 # Train the tokenizer

@@ -32,13 +32,35 @@ def prepare_test_dataset(test_data_location, tokenizer, max_length_sentence):
     # return test_dataset.select(range(5))
 
 def print_test_predictions(decoded_input_ids, decoded_labels, decoded_preds):
+    # Load BLEU and ROUGE metrics
+    bleu_metric = evaluate.load('sacrebleu')
+    rouge_metric = evaluate.load('rouge')
+
     for i, (input_seq, label) in enumerate(zip(decoded_input_ids, decoded_labels)):
-        # Assuming a field width of 25 for the label part and variable content on the right
         print(f"Input Sequence:            {input_seq}")
         print(f"Label:                     {label}")
-        for key in decoded_preds.keys():
-            # Adjust 25 to the length you need for your longest "Prediction (Type):" string
-            print(f"Prediction ({key.capitalize()}):".ljust(27) + f"{decoded_preds[key][i]}")
+
+        for key, preds in decoded_preds.items():
+            prediction = preds[i]
+            # Format inputs correctly for the metrics
+            # Note: 'sacrebleu' expects a list of references per prediction for BLEU calculation
+            bleu_metric.add_batch(predictions=[prediction], references=[[label]])
+            bleu_score = bleu_metric.compute()['score']
+
+            rouge_metric.add_batch(predictions=[prediction], references=[[label]])
+            rouge_scores = rouge_metric.compute()
+
+            count = 0
+            sum_scores = 0
+
+            for _, score in rouge_scores.items():
+                count += 1 
+                sum_scores += score
+
+            average_rouge_scores = sum_scores / count if count else 0
+
+
+            print(f"Prediction ({key.capitalize()}):".ljust(27) + f"{prediction}, BLEU: {bleu_score:.2f}, ROUGE: {average_rouge_scores*100:.2f}")
         print('-' * 100)
 
 def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
@@ -52,14 +74,14 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
             print(f"{param}: {value}")
 
 
-    # metric_greedy = evaluate.load("sacrebleu")
+    metric_greedy = evaluate.load("sacrebleu")
     metric_contrastive = evaluate.load("sacrebleu")
     metric_sampling = evaluate.load("sacrebleu")
     metric_beam = evaluate.load("sacrebleu")
     metric_beam_sampling = evaluate.load("sacrebleu")
     metric_diverse_beam = evaluate.load("sacrebleu")
 
-    # rouge_greedy = evaluate.load('rouge')
+    rouge_greedy = evaluate.load('rouge')
     rouge_contrastive = evaluate.load('rouge')
     rouge_sampling = evaluate.load('rouge')
     rouge_beam = evaluate.load('rouge')
@@ -68,7 +90,7 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
 
     model.eval()
     all_preds = {
-        # 'greedy': [],
+        'greedy': [],
         'contrastive': [],
         'sampling': [],
         'beam': [],
@@ -81,12 +103,12 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
     for batch in tqdm(dataloader, desc="Evaluation"):
         with torch.no_grad():
             # Greedy search
-            # all_preds['greedy'].extend(model.generate(
-            #     batch["input_ids"],
-            #     attention_mask=batch["attention_mask"],
-            #     max_length=max_generate_length,
-            #     **greedy_params
-            # ))
+            all_preds['greedy'].extend(model.generate(
+                batch["input_ids"],
+                attention_mask=batch["attention_mask"],
+                max_length=max_generate_length,
+                **greedy_params
+            ))
 
             # Contrastive search
             all_preds['contrastive'].extend(model.generate(
@@ -156,7 +178,7 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
 
         # Assume metric_objects is a dictionary mapping prediction types to their respective metric objects
     metric_objects = {
-        # 'greedy': metric_greedy,
+        'greedy': metric_greedy,
         'contrastive': metric_contrastive,
         'sampling': metric_sampling,
         'beam': metric_beam,
@@ -177,7 +199,7 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
 
     # Assuming similar setup for ROUGE metrics
     rouge_metric_objects = {
-        # 'greedy': rouge_greedy,
+        'greedy': rouge_greedy,
         'contrastive': rouge_contrastive,
         'sampling': rouge_sampling,
         'beam': rouge_beam,
@@ -190,18 +212,15 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
         rouge_metric_objects[key].add_batch(predictions=predictions, references=decoded_labels)
         rouge_scores[key] = rouge_metric_objects[key].compute()
 
-    # # Print test predictions using the separate function
-    # print_test_predictions(decoded_input_ids, decoded_labels, decoded_preds)
+    # Print test predictions using the separate function
+    print_test_predictions(decoded_input_ids, decoded_labels, decoded_preds)
 
-    # # Assuming 'comment' is a string variable that holds some introductory text
-    # print(comment)
+    # Dynamically print BLEU scores from the bleu_scores dictionary
+    for key, score in bleu_scores.items():
+        print(f"BLEU Score ({key.replace('_', ' ').capitalize()}): {score:.2f}")
 
-    # # Dynamically print BLEU scores from the bleu_scores dictionary
-    # for key, score in bleu_scores.items():
-    #     print(f"BLEU Score ({key.replace('_', ' ').capitalize()}): {score:.2f}")
-
-    # # Add a separator for readability, if desired
-    # print('-' * 50)
+    # Add a separator for readability, if desired
+    print('-' * 50)
 
     # First, calculate the average ROUGE F1 score for each strategy
     average_rouge_f1_scores = {}
@@ -214,10 +233,10 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
             count += 1
         average_rouge_f1_scores[key] = sum_f1_scores / count if count else 0
 
-    # # Then print the averages
-    # print("Average ROUGE F1 Scores:")
-    # for key, avg_score in average_rouge_f1_scores.items():
-    #     print(f"ROUGE Score ({key.replace('_', ' ').capitalize()}): {avg_score:.2f}")
+    # Then print the averages
+    print("Average ROUGE F1 Scores:")
+    for key, avg_score in average_rouge_f1_scores.items():
+        print(f"ROUGE Score ({key.replace('_', ' ').capitalize()}): {avg_score:.2f}")
 
     return bleu_scores
 
@@ -268,7 +287,7 @@ test_dataloader_gold = prepare_dataloader(test_dataset_gold, collator, batch_siz
 # test_dataloader = prepare_dataloader(test_dataset, collator, batch_size)
 
 
-def random_search(model, dataloader, tokenizer, max_generate_length, comment, n_runs=100):
+def random_search(model, dataloader, tokenizer, max_generate_length, comment, parameter_space, n_runs=100):
     best_score = float('-inf')  # Initialize the best score as the lowest possible value
     best_params = {}  # Dictionary to store the best parameters
 
@@ -330,33 +349,63 @@ def select_diverse_beam_params():
     return {'num_beams': num_beams, 'num_beam_groups': num_beam_groups, 'diversity_penalty': diversity_penalty}
 
 
-parameter_space = {
-    'contrastive_params': {
-        'penalty_alpha': np.linspace(0.7, 1.0, 4).tolist(),  # Convert to list
-        'top_k': list(range(1, 6))  # Convert range to list
-    },
-    'sampling_params': {
-        'temperature': np.linspace(0.5, 0.7, 3).tolist(),  # Convert to list
-        'top_k': list(range(20, 51, 10))  # Convert range to list
-    },
-    'beam_params': {
-        'num_beams': list(range(4, 10)),  # Convert range to list
-        'no_repeat_ngram_size': [1]  # Convert range to list
-    },
-    'beam_sampling_params': {
-        'num_beams': list(range(4, 10)),  # Convert range to list
-        'no_repeat_ngram_size': [1],  # Convert range to list
-        'do_sample': [True]
-    },
-}
+# parameter_space = {
+#     'contrastive_params': {
+#         'penalty_alpha': np.linspace(0.7, 1.0, 4).tolist(),  # Convert to list
+#         'top_k': list(range(1, 6))  # Convert range to list
+#     },
+#     'sampling_params': {
+#         'temperature': np.linspace(0.5, 0.7, 3).tolist(),  # Convert to list
+#         'top_k': list(range(20, 51, 10))  # Convert range to list
+#     },
+#     'beam_params': {
+#         'num_beams': list(range(4, 10)),  # Convert range to list
+#         'no_repeat_ngram_size': [1]  # Convert range to list
+#     },
+#     'beam_sampling_params': {
+#         'num_beams': list(range(4, 10)),  # Convert range to list
+#         'no_repeat_ngram_size': [1],  # Convert range to list
+#         'do_sample': [True]
+#     },
+# }
 
-best_score, best_params = random_search(
-    model=model,
-    dataloader=test_dataloader_gold,
-    tokenizer=tokenizer,
-    max_generate_length=32,
-    comment="Hyperparameter search with 16000_098 model"
-)
+# best_score, best_params = random_search(
+#     model=model,
+#     dataloader=test_dataloader_gold,
+#     tokenizer=tokenizer,
+#     max_generate_length=32,
+#     parameter_space=parameter_space,
+#     comment="Hyperparameter search with 16000_098 model"
+# )
 
-print(f"Best score: {best_score}")
-print(f"Best params: {best_params}")
+# print(f"Best score: {best_score}")
+# print(f"Best params: {best_params}")
+
+settings = {
+    'greedy_params': {},
+        'contrastive_params': {
+            'penalty_alpha': 0.7,
+            'top_k': 3
+        },
+        'sampling_params': {
+            'temperature': 0.7,
+            'top_k': 20
+        },
+        'beam_params': {
+            'num_beams': 8,
+            'no_repeat_ngram_size': 1
+        },
+        'beam_sampling_params': {
+            'num_beams': 7,
+            'no_repeat_ngram_size': 1,
+            'do_sample': True
+        },
+        'diverse_beam_params': {
+            'diversity_penalty': 0.3,
+            'num_beams': 6,
+            'num_beam_groups': 2
+            # 'diversity_penalty_scale': 0.8
+        }
+    }
+
+validation_step(model, test_dataloader_gold, tokenizer, 32, "Validation Step", **settings)
