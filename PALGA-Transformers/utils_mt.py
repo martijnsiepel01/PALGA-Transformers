@@ -29,13 +29,13 @@ def generate_config_and_run_name(num_train_epochs, max_length_sentence, train_ba
         'freeze_all_but_x_layers': freeze_all_but_x_layers,
     }
 
-    run_name = f'epochs{num_train_epochs}_maxlengthsentence{max_length_sentence}_trainbatchsize{train_batch_size}_validationbatchsize{validation_batch_size}_lr{learning_rate}_maxgeneratelength{max_generate_length}_dataset{data_set}_model{local_model_path.split("/")[-1]}_comment{comment}_patience{patience}_freezeallbutxlayers{freeze_all_but_x_layers}'
+    run_name = f'epochs{num_train_epochs}_dataset{data_set}_model{local_model_path.split("/")[-1]}_comment{comment}_patience{patience}_freezeallbutxlayers{freeze_all_but_x_layers}'
 
     return config, run_name
 
 def preprocess_function(examples, tokenizer, max_length_sentence):
-    inputs = [ex for ex in examples["Conclusie"]]
-    targets = [ex for ex in examples["Codes"]]
+    inputs = [ex.lower() for ex in examples["Conclusie"]]
+    targets = [ex.lower() for ex in examples["Codes"]]
     model_inputs = tokenizer(
         inputs, text_target=targets, max_length=max_length_sentence, truncation=True
     )
