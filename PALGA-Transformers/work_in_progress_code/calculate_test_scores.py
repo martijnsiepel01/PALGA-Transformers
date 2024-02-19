@@ -10,8 +10,8 @@ import random
 
 
 def preprocess_function(examples, tokenizer, max_length_sentence):
-    inputs = [ex for ex in examples["Conclusie"]]
-    targets = [ex for ex in examples["Codes"]]
+    inputs = [ex.lower() for ex in examples["Conclusie"]]
+    targets = [ex.lower() for ex in examples["Codes"]]
     model_inputs = tokenizer(
         inputs, text_target=targets, max_length=max_length_sentence, truncation=True
     )
@@ -28,8 +28,8 @@ def prepare_test_dataset(test_data_location, tokenizer, max_length_sentence):
     tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
     tokenized_datasets.set_format("torch")
     test_dataset = tokenized_datasets['train']
-    return test_dataset
-    # return test_dataset.select(range(5))
+    # return test_dataset
+    return test_dataset.select(range(1000))
 
 def print_test_predictions(decoded_input_ids, decoded_labels, decoded_preds):
     # Load BLEU and ROUGE metrics
@@ -37,8 +37,8 @@ def print_test_predictions(decoded_input_ids, decoded_labels, decoded_preds):
     rouge_metric = evaluate.load('rouge')
 
     for i, (input_seq, label) in enumerate(zip(decoded_input_ids, decoded_labels)):
-        print(f"Input Sequence:            {input_seq}")
-        print(f"Label:                     {label}")
+        print(f"Input Sequence:                {input_seq}")
+        print(f"Label:                         {label}")
 
         for key, preds in decoded_preds.items():
             prediction = preds[i]
@@ -60,7 +60,7 @@ def print_test_predictions(decoded_input_ids, decoded_labels, decoded_preds):
             average_rouge_scores = sum_scores / count if count else 0
 
 
-            print(f"Prediction ({key.capitalize()}):".ljust(27) + f"{prediction}, BLEU: {bleu_score:.2f}, ROUGE: {average_rouge_scores*100:.2f}")
+            print(f"Prediction ({key.capitalize()}):".ljust(31) + f"{prediction}, BLEU: {bleu_score:.2f}, ROUGE: {average_rouge_scores*100:.2f}")
         print('-' * 100)
 
 def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
@@ -75,30 +75,44 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
 
 
     metric_greedy = evaluate.load("sacrebleu")
+    metric_greedy_long = evaluate.load("sacrebleu")
     metric_contrastive = evaluate.load("sacrebleu")
+    metric_contrastive_long = evaluate.load("sacrebleu")
     metric_sampling = evaluate.load("sacrebleu")
-    metric_beam = evaluate.load("sacrebleu")
-    metric_beam_sampling = evaluate.load("sacrebleu")
+    metric_sampling_long = evaluate.load("sacrebleu")
+    # metric_beam = evaluate.load("sacrebleu")
+    # metric_beam_sampling = evaluate.load("sacrebleu")
     metric_diverse_beam = evaluate.load("sacrebleu")
+    metric_diverse_beam_long = evaluate.load("sacrebleu")
 
     rouge_greedy = evaluate.load('rouge')
+    rouge_greedy_long = evaluate.load('rouge')
     rouge_contrastive = evaluate.load('rouge')
+    rouge_contrastive_long = evaluate.load('rouge')
     rouge_sampling = evaluate.load('rouge')
-    rouge_beam = evaluate.load('rouge')
-    rouge_beam_sampling = evaluate.load('rouge')
+    rouge_sampling_long = evaluate.load('rouge')
+    # rouge_beam = evaluate.load('rouge')
+    # rouge_beam_sampling = evaluate.load('rouge')
     rouge_diverse_beam = evaluate.load('rouge')
+    rouge_diverse_beam_long = evaluate.load('rouge')
 
     model.eval()
     all_preds = {
         'greedy': [],
+        'greedy_long': [],
         'contrastive': [],
+        'contrastive_long': [],
         'sampling': [],
-        'beam': [],
-        'beam_sampling': [],
-        'diverse_beam': []
+        'sampling_long': [],
+        # 'beam': [],
+        # 'beam_sampling': [],
+        'diverse_beam': [],
+        'diverse_beam_long': [],
     }
     all_labels = []
     all_input_ids = []
+
+    max_generate_length_long = max_generate_length * 2
 
     for batch in tqdm(dataloader, desc="Evaluation"):
         with torch.no_grad():
@@ -110,11 +124,27 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
                 **greedy_params
             ))
 
+            # Greedy search long
+            all_preds['greedy_long'].extend(model.generate(
+                batch["input_ids"],
+                attention_mask=batch["attention_mask"],
+                max_length=max_generate_length_long,
+                **greedy_params
+            ))
+
             # Contrastive search
             all_preds['contrastive'].extend(model.generate(
                 batch["input_ids"],
                 attention_mask=batch["attention_mask"],
                 max_length=max_generate_length,
+                **contrastive_params
+            ))
+
+            # Contrastive search long
+            all_preds['contrastive_long'].extend(model.generate(
+                batch["input_ids"],
+                attention_mask=batch["attention_mask"],
+                max_length=max_generate_length_long,
                 **contrastive_params
             ))
 
@@ -126,27 +156,43 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
                 **sampling_params
             ))
 
-            # Beam search
-            all_preds['beam'].extend(model.generate(
+            # Multinomial Sampling long
+            all_preds['sampling_long'].extend(model.generate(
                 batch["input_ids"],
                 attention_mask=batch["attention_mask"],
-                max_length=max_generate_length,
-                **beam_params
+                max_length=max_generate_length_long,
+                **sampling_params
             ))
 
-            # Beam search with Multinomial Sampling
-            all_preds['beam_sampling'].extend(model.generate(
-                batch["input_ids"],
-                attention_mask=batch["attention_mask"],
-                max_length=max_generate_length,
-                **beam_sampling_params
-            ))
+            # # Beam search
+            # all_preds['beam'].extend(model.generate(
+            #     batch["input_ids"],
+            #     attention_mask=batch["attention_mask"],
+            #     max_length=max_generate_length,
+            #     **beam_params
+            # ))
+
+            # # Beam search with Multinomial Sampling
+            # all_preds['beam_sampling'].extend(model.generate(
+            #     batch["input_ids"],
+            #     attention_mask=batch["attention_mask"],
+            #     max_length=max_generate_length,
+            #     **beam_sampling_params
+            # ))
 
             # Diverse Beam Search Decoding
             all_preds['diverse_beam'].extend(model.generate(
                 batch["input_ids"],
                 attention_mask=batch["attention_mask"],
                 max_length=max_generate_length,
+                **diverse_beam_params
+            ))
+
+            # Diverse Beam Search Decoding long
+            all_preds['diverse_beam_long'].extend(model.generate(
+                batch["input_ids"],
+                attention_mask=batch["attention_mask"],
+                max_length=max_generate_length_long,
                 **diverse_beam_params
             ))
 
@@ -179,11 +225,15 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
         # Assume metric_objects is a dictionary mapping prediction types to their respective metric objects
     metric_objects = {
         'greedy': metric_greedy,
+        'greedy_long': metric_greedy_long,
         'contrastive': metric_contrastive,
+        'contrastive_long': metric_contrastive_long,
         'sampling': metric_sampling,
-        'beam': metric_beam,
-        'beam_sampling': metric_beam_sampling,
-        'diverse_beam': metric_diverse_beam
+        'sampling_long': metric_sampling_long,
+        # 'beam': metric_beam,
+        # 'beam_sampling': metric_beam_sampling,
+        'diverse_beam': metric_diverse_beam,
+        'diverse_beam_long': metric_diverse_beam_long,
     }
 
     # Initialize dictionaries to hold BLEU and ROUGE scores
@@ -200,11 +250,15 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
     # Assuming similar setup for ROUGE metrics
     rouge_metric_objects = {
         'greedy': rouge_greedy,
+        'greedy_long': rouge_greedy_long,
         'contrastive': rouge_contrastive,
+        'contrastive_long': rouge_contrastive_long,
         'sampling': rouge_sampling,
-        'beam': rouge_beam,
-        'beam_sampling': rouge_beam_sampling,
-        'diverse_beam': rouge_diverse_beam
+        'sampling_long': rouge_sampling_long,
+        # 'beam': rouge_beam,
+        # 'beam_sampling': rouge_beam_sampling,
+        'diverse_beam': rouge_diverse_beam,
+        'diverse_beam_long': rouge_diverse_beam_long,
     }
 
     # Compute ROUGE scores in a similar fashion
@@ -255,14 +309,15 @@ def prepare_dataloader(dataset, data_collator, batch_size):
     return dataloader
 
 
-tokenizer = T5Tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_16000/unigram_t5_custom_16000_098.model')
+tokenizer = T5Tokenizer('/home/msiepel/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_32128/combined_data_unigram_t5_custom_32128_098_lower_case.model')
 max_length_sentence = 512
 
-test_dataset_gold = prepare_test_dataset('/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_P1.tsv', tokenizer, max_length_sentence)
-test_dataset = prepare_test_dataset('/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_test.tsv', tokenizer, max_length_sentence)
+# test_dataset_gold = prepare_test_dataset('/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/gold_P1.tsv', tokenizer, max_length_sentence)
+test_dataset = prepare_test_dataset('/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_test.tsv', tokenizer, max_length_sentence)
 
-config = T5Config.from_pretrained('/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/flan-t5-small/config.json')
-checkpoint_model = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/trained_models/epochs15_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelflan-small-unigram-098-checkpoint_commentunigram_16000_098_model_flan_small_from_checkpoint_patience3_freezeallbutxlayers0.pth'
+config = T5Config.from_pretrained('/home/msiepel/PALGA-Transformers/PALGA-Transformers/models/flan-t5-small/config.json')
+
+checkpoint_model = '/home/msiepel/PALGA-Transformers/PALGA-Transformers/models/trained_models/epochs15_datasetall_modelflan-t5-small_commentcombined_data_unigram_32128_098_lower_case_on_combined_data_with_flan_small_model_patience3_freezeallbutxlayers0.pth'
 
 
 # tokenizer = T5Tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_128000/t5_custom_128000_1.model')
@@ -283,8 +338,8 @@ batch_size = 32
 
 collator = prepare_datacollator(tokenizer, model)
 
-test_dataloader_gold = prepare_dataloader(test_dataset_gold, collator, batch_size)
-# test_dataloader = prepare_dataloader(test_dataset, collator, batch_size)
+# test_dataloader_gold = prepare_dataloader(test_dataset_gold, collator, batch_size)
+test_dataloader = prepare_dataloader(test_dataset, collator, batch_size)
 
 
 def random_search(model, dataloader, tokenizer, max_generate_length, comment, parameter_space, n_runs=100):
@@ -391,15 +446,15 @@ settings = {
             'temperature': 0.7,
             'top_k': 20
         },
-        'beam_params': {
-            'num_beams': 8,
-            'no_repeat_ngram_size': 1
-        },
-        'beam_sampling_params': {
-            'num_beams': 7,
-            'no_repeat_ngram_size': 1,
-            'do_sample': True
-        },
+        # 'beam_params': {
+        #     'num_beams': 8,
+        #     'no_repeat_ngram_size': 1
+        # },
+        # 'beam_sampling_params': {
+        #     'num_beams': 7,
+        #     'no_repeat_ngram_size': 1,
+        #     'do_sample': True
+        # },
         'diverse_beam_params': {
             'diversity_penalty': 0.3,
             'num_beams': 6,
@@ -408,4 +463,4 @@ settings = {
         }
     }
 
-validation_step(model, test_dataloader_gold, tokenizer, 32, "Validation Step", **settings)
+validation_step(model, test_dataloader, tokenizer, 32, "Validation Step", **settings)

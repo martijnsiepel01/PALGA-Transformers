@@ -2,7 +2,7 @@ from utils_mt import *
 import argparse
 
 def main(num_train_epochs, max_generate_length, train_batch_size, validation_batch_size, learning_rate,
-         max_length_sentence, data_set, local_tokenizer_path, local_model_path, comment, patience, freeze_all_but_x_layers):
+         max_length_sentence, data_set, local_tokenizer_path, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy):
     
     # Generate config and run name
     config, run_name = generate_config_and_run_name(
@@ -16,7 +16,8 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
         local_model_path,
         comment,
         patience,
-        freeze_all_but_x_layers
+        freeze_all_but_x_layers,
+        lr_strategy
     )
 
     # Print run name
@@ -40,11 +41,14 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
     data_collator = prepare_datacollator(tokenizer, model)
     train_dataloader, eval_dataloader, test_dataloader = prepare_dataloaders(train_dataset, val_dataset, test_dataset, data_collator, train_batch_size, validation_batch_size)
     
+    num_training_steps = num_train_epochs * len(train_dataloader)
+
     # Prepare training objects
-    optimizer, accelerator, model, optimizer, train_dataloader, eval_dataloader, test_dataloader = prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloader, test_dataloader)
+    optimizer, accelerator, model, train_dataloader, eval_dataloader, test_dataloader, scheduler = prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloader, test_dataloader, lr_strategy, num_training_steps)
+
 
     # Training and evaluation
-    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience)
+    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience, scheduler)
 
 # Entry point of the program
 if __name__ == "__main__":
@@ -63,10 +67,11 @@ if __name__ == "__main__":
     parser.add_argument("--comment", type=str, default='', help="Comment for the current run")
     parser.add_argument("--patience", type=int, default=3, help="Patience for early stopping")
     parser.add_argument("--freeze_all_but_x_layers", type=int, default=0, help="Number of layers NOT to freeze")
+    parser.add_argument("--lr_strategy", type=str, default='AdamW', help="AdamW or ST-LR")
 
     args = parser.parse_args()
 
     # Call main function with the parsed arguments
     main(args.num_train_epochs, args.max_generate_length, args.train_batch_size, args.validation_batch_size,
          args.learning_rate, args.max_length_sentence, args.data_set, args.local_tokenizer_path, args.local_model_path, 
-         args.comment, args.patience, args.freeze_all_but_x_layers)
+         args.comment, args.patience, args.freeze_all_but_x_layers, args.lr_strategy)

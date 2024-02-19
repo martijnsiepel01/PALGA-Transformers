@@ -8,13 +8,14 @@ from transformers import MT5Tokenizer, DataCollatorForSeq2Seq, AutoModelForSeq2S
 import evaluate
 from accelerate import Accelerator
 from datasets import concatenate_datasets
+import math
 
 def load_tokenizer(local_tokenizer_path = 'PALGA-Transformers/flan_tokenizer'):
     tokenizer = T5Tokenizer.from_pretrained(local_tokenizer_path)
     # tokenizer = MT5Tokenizer(vocab_file=local_tokenizer_path)
     return tokenizer
 
-def generate_config_and_run_name(num_train_epochs, max_length_sentence, train_batch_size, validation_batch_size, learning_rate, max_generate_length, data_set, local_model_path, comment, patience, freeze_all_but_x_layers):
+def generate_config_and_run_name(num_train_epochs, max_length_sentence, train_batch_size, validation_batch_size, learning_rate, max_generate_length, data_set, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy):
     config = {
         'num_train_epochs': num_train_epochs,
         'max_length_sentence': max_length_sentence,
@@ -27,9 +28,10 @@ def generate_config_and_run_name(num_train_epochs, max_length_sentence, train_ba
         'comment': comment,
         'patience': patience,
         'freeze_all_but_x_layers': freeze_all_but_x_layers,
+        'lr_strategy': lr_strategy
     }
 
-    run_name = f'epochs{num_train_epochs}_dataset{data_set}_model{local_model_path.split("/")[-1]}_comment{comment}_patience{patience}_freezeallbutxlayers{freeze_all_but_x_layers}'
+    run_name = f'epochs{num_train_epochs}_dataset{data_set}_model{local_model_path.split("/")[-1]}_comment{comment}_patience{patience}_freezeallbutxlayers{freeze_all_but_x_layers}_lrstrategy{lr_strategy}'
 
     return config, run_name
 
@@ -46,25 +48,25 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
     data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
     
     # Load the first dataset
-    dataset1 = load_dataset("csv", data_files=data_files, delimiter="\t")
+    dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
     
-    # Define and load the second dataset
-    data_set = "histo"
-    data_files2 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
-    dataset2 = load_dataset("csv", data_files=data_files2, delimiter="\t")
+    # # Define and load the second dataset
+    # data_set = "histo"
+    # data_files2 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
+    # dataset2 = load_dataset("csv", data_files=data_files2, delimiter="\t")
     
-    # Define and load the third dataset
-    data_set = "autopsies"
-    data_files3 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
-    dataset3 = load_dataset("csv", data_files=data_files3, delimiter="\t")
+    # # Define and load the third dataset
+    # data_set = "autopsies"
+    # data_files3 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
+    # dataset3 = load_dataset("csv", data_files=data_files3, delimiter="\t")
 
-    # Concatenate the datasets for each split separately
-    train_datasets = concatenate_datasets([dataset1["train"], dataset2["train"], dataset3["train"]])
-    test_datasets = concatenate_datasets([dataset1["test"], dataset2["test"], dataset3["test"]])
-    validation_datasets = concatenate_datasets([dataset1["validation"], dataset2["validation"], dataset3["validation"]])
+    # # Concatenate the datasets for each split separately
+    # train_datasets = concatenate_datasets([dataset["train"], dataset2["train"], dataset3["train"]])
+    # test_datasets = concatenate_datasets([dataset["test"], dataset2["test"], dataset3["test"]])
+    # validation_datasets = concatenate_datasets([dataset["validation"], dataset2["validation"], dataset3["validation"]])
 
-    # Combine the splits back into a single dataset dictionary
-    dataset = {"train": train_datasets, "test": test_datasets, "validation": validation_datasets}
+    # # Combine the splits back into a single dataset dictionary
+    # dataset = {"train": train_datasets, "test": test_datasets, "validation": validation_datasets}
 
    # Further processing (filtering and tokenizing)
     for split in dataset.keys():
@@ -154,21 +156,44 @@ def prepare_dataloaders(train_dataset, val_dataset, test_dataset, data_collator,
     )
     return train_dataloader, eval_dataloader, test_dataloader
 
-def prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloader, test_dataloader):
+
+def slanted_triangular_learning_rate(step, total_steps, lr_start, lr_max, cut_frac, ratio):
+    if step < total_steps * cut_frac:
+        p = step / (total_steps * cut_frac)
+    else:
+        p = 1 - (step - total_steps * cut_frac) / (total_steps * (1 - cut_frac))
+    lr = lr_start + (lr_max - lr_start) * p
+    return lr * (1 / (1 + ratio * step))
+
+
+def prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloader, test_dataloader, lr_strategy, total_steps):
     optimizer = AdamW(model.parameters(), lr=learning_rate)
     accelerator = Accelerator()
     model, optimizer, train_dataloader, eval_dataloader, test_dataloader = accelerator.prepare(
         model, optimizer, train_dataloader, eval_dataloader, test_dataloader
-    )
-    return optimizer, accelerator, model, optimizer, train_dataloader, eval_dataloader, test_dataloader
+    )    
+    scheduler = None
+    if lr_strategy == "ST-LR":
+        # Adjusted parameters for ST-LR to keep the learning rate close to 1e-4
+        lr_start = 5e-5  # Start slightly lower than the target learning rate
+        lr_max = 2e-4    # Peak learning rate, slightly above the target
+        cut_frac = 0.1   # Proportion of training steps to increase the learning rate
+        ratio = 32       # Controls the steepness of the learning rate decrease
+        
+        lr_lambda = lambda step: slanted_triangular_learning_rate(step, total_steps, lr_start, lr_max, cut_frac, ratio)
+        scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
+    
+    return optimizer, accelerator, model, train_dataloader, eval_dataloader, test_dataloader, scheduler
 
 
-def train_step(model, dataloader, optimizer, accelerator):
+def train_step(model, dataloader, optimizer, accelerator, scheduler):
     model.train()
     total_train_loss = 0.0
 
     for batch in tqdm(dataloader, desc="Training"):
         outputs = model(**batch)
+        if scheduler:
+            scheduler.step()
         loss = outputs.loss
         optimizer.zero_grad()
         accelerator.backward(loss)
@@ -333,16 +358,13 @@ def wandb_log_metrics(epoch, avg_train_loss, eval_metrics, test_metrics):
                 "test/F1-Bleu-Rouge": test_metrics["bleu_rouge_f1"],
             })
 
-def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience=3):
-    num_training_steps = num_train_epochs * len(train_dataloader)
-    print(f"Number of training steps: {num_training_steps}")
-
+def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience, scheduler):
     lowest_loss = float("inf")
     early_stopping_counter = 0
     best_model_state_dict = None
 
     for epoch in range(num_train_epochs):
-        avg_train_loss = train_step(model, train_dataloader, optimizer, accelerator)
+        avg_train_loss = train_step(model, train_dataloader, optimizer, accelerator, scheduler)
         eval_metrics = validation_step(model, eval_dataloader, tokenizer, max_generate_length)
         test_metrics, decoded_test_preds, decoded_test_labels, decoded_test_input = test_step(model, test_dataloader, tokenizer, max_generate_length)
 
