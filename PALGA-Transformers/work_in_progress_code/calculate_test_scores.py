@@ -17,7 +17,7 @@ def preprocess_function(examples, tokenizer, max_length_sentence):
     )
     return model_inputs
 
-def prepare_test_dataset(test_data_location, tokenizer, max_length_sentence):
+def prepare_test_dataset(test_data_location, tokenizer, max_length_sentence, return_subset):
     # test_data_location = "/home/msiepel/data/all/all_norm_test.tsv"
     dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
     dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
@@ -28,8 +28,10 @@ def prepare_test_dataset(test_data_location, tokenizer, max_length_sentence):
     tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
     tokenized_datasets.set_format("torch")
     test_dataset = tokenized_datasets['train']
-    # return test_dataset
-    return test_dataset.select(range(1000))
+    if return_subset:
+        return test_dataset.select(range(1000))
+    else:
+        return test_dataset
 
 def print_test_predictions(decoded_input_ids, decoded_labels, decoded_preds):
     # Load BLEU and ROUGE metrics
@@ -74,23 +76,23 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
             print(f"{param}: {value}")
 
 
-    metric_greedy = evaluate.load("sacrebleu")
-    metric_greedy_long = evaluate.load("sacrebleu")
-    metric_contrastive = evaluate.load("sacrebleu")
-    metric_contrastive_long = evaluate.load("sacrebleu")
-    metric_sampling = evaluate.load("sacrebleu")
-    metric_sampling_long = evaluate.load("sacrebleu")
+    # metric_greedy = evaluate.load("sacrebleu")
+    # metric_greedy_long = evaluate.load("sacrebleu")
+    # metric_contrastive = evaluate.load("sacrebleu")
+    # metric_contrastive_long = evaluate.load("sacrebleu")
+    # metric_sampling = evaluate.load("sacrebleu")
+    # metric_sampling_long = evaluate.load("sacrebleu")
     # metric_beam = evaluate.load("sacrebleu")
     # metric_beam_sampling = evaluate.load("sacrebleu")
     metric_diverse_beam = evaluate.load("sacrebleu")
     metric_diverse_beam_long = evaluate.load("sacrebleu")
 
-    rouge_greedy = evaluate.load('rouge')
-    rouge_greedy_long = evaluate.load('rouge')
-    rouge_contrastive = evaluate.load('rouge')
-    rouge_contrastive_long = evaluate.load('rouge')
-    rouge_sampling = evaluate.load('rouge')
-    rouge_sampling_long = evaluate.load('rouge')
+    # rouge_greedy = evaluate.load('rouge')
+    # rouge_greedy_long = evaluate.load('rouge')
+    # rouge_contrastive = evaluate.load('rouge')
+    # rouge_contrastive_long = evaluate.load('rouge')
+    # rouge_sampling = evaluate.load('rouge')
+    # rouge_sampling_long = evaluate.load('rouge')
     # rouge_beam = evaluate.load('rouge')
     # rouge_beam_sampling = evaluate.load('rouge')
     rouge_diverse_beam = evaluate.load('rouge')
@@ -98,12 +100,12 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
 
     model.eval()
     all_preds = {
-        'greedy': [],
-        'greedy_long': [],
-        'contrastive': [],
-        'contrastive_long': [],
-        'sampling': [],
-        'sampling_long': [],
+        # 'greedy': [],
+        # 'greedy_long': [],
+        # 'contrastive': [],
+        # 'contrastive_long': [],
+        # 'sampling': [],
+        # 'sampling_long': [],
         # 'beam': [],
         # 'beam_sampling': [],
         'diverse_beam': [],
@@ -116,53 +118,53 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
 
     for batch in tqdm(dataloader, desc="Evaluation"):
         with torch.no_grad():
-            # Greedy search
-            all_preds['greedy'].extend(model.generate(
-                batch["input_ids"],
-                attention_mask=batch["attention_mask"],
-                max_length=max_generate_length,
-                **greedy_params
-            ))
+            # # Greedy search
+            # all_preds['greedy'].extend(model.generate(
+            #     batch["input_ids"],
+            #     attention_mask=batch["attention_mask"],
+            #     max_length=max_generate_length,
+            #     **greedy_params
+            # ))
 
-            # Greedy search long
-            all_preds['greedy_long'].extend(model.generate(
-                batch["input_ids"],
-                attention_mask=batch["attention_mask"],
-                max_length=max_generate_length_long,
-                **greedy_params
-            ))
+            # # Greedy search long
+            # all_preds['greedy_long'].extend(model.generate(
+            #     batch["input_ids"],
+            #     attention_mask=batch["attention_mask"],
+            #     max_length=max_generate_length_long,
+            #     **greedy_params
+            # ))
 
-            # Contrastive search
-            all_preds['contrastive'].extend(model.generate(
-                batch["input_ids"],
-                attention_mask=batch["attention_mask"],
-                max_length=max_generate_length,
-                **contrastive_params
-            ))
+            # # Contrastive search
+            # all_preds['contrastive'].extend(model.generate(
+            #     batch["input_ids"],
+            #     attention_mask=batch["attention_mask"],
+            #     max_length=max_generate_length,
+            #     **contrastive_params
+            # ))
 
-            # Contrastive search long
-            all_preds['contrastive_long'].extend(model.generate(
-                batch["input_ids"],
-                attention_mask=batch["attention_mask"],
-                max_length=max_generate_length_long,
-                **contrastive_params
-            ))
+            # # Contrastive search long
+            # all_preds['contrastive_long'].extend(model.generate(
+            #     batch["input_ids"],
+            #     attention_mask=batch["attention_mask"],
+            #     max_length=max_generate_length_long,
+            #     **contrastive_params
+            # ))
 
-            # Multinomial Sampling
-            all_preds['sampling'].extend(model.generate(
-                batch["input_ids"],
-                attention_mask=batch["attention_mask"],
-                max_length=max_generate_length,
-                **sampling_params
-            ))
+            # # Multinomial Sampling
+            # all_preds['sampling'].extend(model.generate(
+            #     batch["input_ids"],
+            #     attention_mask=batch["attention_mask"],
+            #     max_length=max_generate_length,
+            #     **sampling_params
+            # ))
 
-            # Multinomial Sampling long
-            all_preds['sampling_long'].extend(model.generate(
-                batch["input_ids"],
-                attention_mask=batch["attention_mask"],
-                max_length=max_generate_length_long,
-                **sampling_params
-            ))
+            # # Multinomial Sampling long
+            # all_preds['sampling_long'].extend(model.generate(
+            #     batch["input_ids"],
+            #     attention_mask=batch["attention_mask"],
+            #     max_length=max_generate_length_long,
+            #     **sampling_params
+            # ))
 
             # # Beam search
             # all_preds['beam'].extend(model.generate(
@@ -223,13 +225,13 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
 
 
         # Assume metric_objects is a dictionary mapping prediction types to their respective metric objects
-    metric_objects = {
-        'greedy': metric_greedy,
-        'greedy_long': metric_greedy_long,
-        'contrastive': metric_contrastive,
-        'contrastive_long': metric_contrastive_long,
-        'sampling': metric_sampling,
-        'sampling_long': metric_sampling_long,
+    metric_objects = { 
+        # 'greedy': metric_greedy,
+        # 'greedy_long': metric_greedy_long,
+        # 'contrastive': metric_contrastive,
+        # 'contrastive_long': metric_contrastive_long,
+        # 'sampling': metric_sampling,
+        # 'sampling_long': metric_sampling_long,
         # 'beam': metric_beam,
         # 'beam_sampling': metric_beam_sampling,
         'diverse_beam': metric_diverse_beam,
@@ -249,12 +251,12 @@ def validation_step(model, dataloader, tokenizer, max_generate_length, comment,
 
     # Assuming similar setup for ROUGE metrics
     rouge_metric_objects = {
-        'greedy': rouge_greedy,
-        'greedy_long': rouge_greedy_long,
-        'contrastive': rouge_contrastive,
-        'contrastive_long': rouge_contrastive_long,
-        'sampling': rouge_sampling,
-        'sampling_long': rouge_sampling_long,
+        # 'greedy': rouge_greedy,
+        # 'greedy_long': rouge_greedy_long,
+        # 'contrastive': rouge_contrastive,
+        # 'contrastive_long': rouge_contrastive_long,
+        # 'sampling': rouge_sampling,
+        # 'sampling_long': rouge_sampling_long,
         # 'beam': rouge_beam,
         # 'beam_sampling': rouge_beam_sampling,
         'diverse_beam': rouge_diverse_beam,
@@ -307,39 +309,6 @@ def prepare_dataloader(dataset, data_collator, batch_size):
         batch_size=batch_size
     )
     return dataloader
-
-
-tokenizer = T5Tokenizer('/home/msiepel/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_32128/combined_data_unigram_t5_custom_32128_098_lower_case.model')
-max_length_sentence = 512
-
-# test_dataset_gold = prepare_test_dataset('/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/gold_P1.tsv', tokenizer, max_length_sentence)
-test_dataset = prepare_test_dataset('/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_test.tsv', tokenizer, max_length_sentence)
-
-config = T5Config.from_pretrained('/home/msiepel/PALGA-Transformers/PALGA-Transformers/models/flan-t5-small/config.json')
-
-checkpoint_model = '/home/msiepel/PALGA-Transformers/PALGA-Transformers/models/trained_models/epochs15_datasetall_modelflan-t5-small_commentcombined_data_unigram_32128_098_lower_case_on_combined_data_with_flan_small_model_patience3_freezeallbutxlayers0.pth'
-
-
-# tokenizer = T5Tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_128000/t5_custom_128000_1.model')
-# max_length_sentence = 512
-
-# test_dataset_gold = prepare_test_dataset('/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/processed_gold_P1.tsv', tokenizer, max_length_sentence)
-# test_dataset = prepare_test_dataset('/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_test.tsv', tokenizer, max_length_sentence)
-
-# config = T5Config.from_pretrained('/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/flan-t5-small/config.json')
-# checkpoint_model = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/trained_models/epochs15_maxlengthsentence512_trainbatchsize8_validationbatchsize4_lr0.0001_maxgeneratelength32_datasetall_modelflan-t5-small_commentcustom_tokenizer_vocab_128000_patience3_freezeallbutxlayers0.pth'
-
-
-model = T5ForConditionalGeneration(config)
-model.resize_token_embeddings(len(tokenizer))
-model.load_state_dict(torch.load(checkpoint_model))
-
-batch_size = 32  
-
-collator = prepare_datacollator(tokenizer, model)
-
-# test_dataloader_gold = prepare_dataloader(test_dataset_gold, collator, batch_size)
-test_dataloader = prepare_dataloader(test_dataset, collator, batch_size)
 
 
 def random_search(model, dataloader, tokenizer, max_generate_length, comment, parameter_space, n_runs=100):
@@ -430,37 +399,110 @@ def select_diverse_beam_params():
 #     tokenizer=tokenizer,
 #     max_generate_length=32,
 #     parameter_space=parameter_space,
-#     comment="Hyperparameter search with 16000_098 model"
+#     comment="Hyperparameter search with 32128_1 model"
 # )
 
 # print(f"Best score: {best_score}")
 # print(f"Best params: {best_params}")
 
+# settings = {
+#     # 'greedy_params': {},
+#     #     'contrastive_params': {
+#     #         'penalty_alpha': 0.7,
+#     #         'top_k': 3,
+#     #         # 'no_repeat_ngram_size': 5,
+#     #     },
+#         'sampling_params': {
+#             'temperature': 0.7,
+#             'top_k': 20,
+#             # 'no_repeat_ngram_size': 5,
+#         },
+#         # 'beam_params': {
+#         #     'num_beams': 8,
+#         #     'no_repeat_ngram_size': 1
+#         # },
+#         # 'beam_sampling_params': {
+#         #     'num_beams': 7,
+#         #     'no_repeat_ngram_size': 1,
+#         #     'do_sample': True
+#         # },
+#         'diverse_beam_params': {
+#             'diversity_penalty': 0.3,
+#             'num_beams': 6,
+#             'num_beam_groups': 2,
+#             'no_repeat_ngram_size': 5,
+#         }
+#     }
+
+
+
+# def get_unique_thesaurus_term_words(thesaurus_file_name):
+#     unique_term_words = []
+
+#     with open(thesaurus_file_name, "r", encoding='latin-1') as fh: # utf-8 encoding gives an error
+#         for line in fh:
+#             term = line.split("|")[0]
+#             term_words = term.split()
+#             for w in term_words:
+#                 if not w in unique_term_words: # add if not already in list
+#                     unique_term_words.append(w)
+
+#     return unique_term_words
+
+
+# allowed_words = get_unique_thesaurus_term_words('/home/gburger01/snomed_20230426.txt')
+
+# # Get the full vocabulary
+# vocab = tokenizer.get_vocab()
+
+# # Convert allowed words to their token IDs
+# allowed_ids = [vocab[word] for word in allowed_words if word in vocab]
+
+# # List of special token strings you want to include
+# special_tokens_strings = ['<unk>', '<s>', '</s>', '[PAD]', '[UNK]', '[CLS]', '[MASK]', '[C-SEP]']
+
+# # Convert special token strings to their token IDs using the vocabulary
+# special_tokens_ids = [vocab.get(token) for token in special_tokens_strings if token in vocab]
+
+# # Combine allowed IDs with special token IDs, ensuring no duplicates and removing None values
+# allowed_ids_set = set(id for id in (allowed_ids + special_tokens_ids) if id is not None)
+
+# # Create a set of all token IDs in the vocabulary
+# all_ids = set(vocab.values())
+
+# # Subtract the set of allowed token IDs from the set of all token IDs to get the bad words IDs
+# bad_words_ids = list(all_ids - allowed_ids_set)
+# bad_words_ids_list_of_lists = [[bw_id] for bw_id in bad_words_ids]
+
+
 settings = {
-    'greedy_params': {},
-        'contrastive_params': {
-            'penalty_alpha': 0.7,
-            'top_k': 3
-        },
-        'sampling_params': {
-            'temperature': 0.7,
-            'top_k': 20
-        },
-        # 'beam_params': {
-        #     'num_beams': 8,
-        #     'no_repeat_ngram_size': 1
-        # },
-        # 'beam_sampling_params': {
-        #     'num_beams': 7,
-        #     'no_repeat_ngram_size': 1,
-        #     'do_sample': True
-        # },
         'diverse_beam_params': {
             'diversity_penalty': 0.3,
             'num_beams': 6,
-            'num_beam_groups': 2
-            # 'diversity_penalty_scale': 0.8
+            'num_beam_groups': 2,
         }
     }
 
-validation_step(model, test_dataloader, tokenizer, 32, "Validation Step", **settings)
+config = T5Config.from_pretrained('/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/flan-t5-small/config.json')
+tokenizer_paths = ['/home/gburger01/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_16000/combined_data_unigram_t5_custom_16000_1_lower_case.model', '/home/gburger01/PALGA-Transformers/PALGA-Transformers/custom_t5_tokenizer_32128/combined_data_unigram_t5_custom_32128_1_lower_case.model']
+checkpoint_paths = ['/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/trained_models/num_train_epochs15_data_setall_commentcombined_data_unigram_lower_case_16000_1_combined_data.pth', '/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/trained_models/num_train_epochs15_data_setall_commentcombined_data_unigram_lower_case_32128_1_combined_data.pth']
+dataset_locations = ['/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_P1.tsv', '/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_test.tsv']
+batch_size = 32  
+max_length_sentence = 512
+
+for tokenizer, checkpoint in zip(tokenizer_paths, checkpoint_paths):
+    print("Loading tokenizer from", tokenizer)
+    print("Loading model from", checkpoint)
+    tokenizer = T5Tokenizer(tokenizer)
+    model = T5ForConditionalGeneration(config)
+    model.resize_token_embeddings(len(tokenizer))
+    model.load_state_dict(torch.load(checkpoint))
+    collator = prepare_datacollator(tokenizer, model)
+    for dataset_location in dataset_locations:
+        print(f"Test data location: {dataset_location}")
+        if dataset_location == '/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_P1.tsv':
+            test_dataset = prepare_test_dataset(dataset_location, tokenizer, max_length_sentence, False)
+        else:
+            test_dataset = prepare_test_dataset(dataset_location, tokenizer, max_length_sentence, True)
+        test_dataloader = prepare_dataloader(test_dataset, collator, batch_size)
+        validation_step(model, test_dataloader, tokenizer, 32, "Validation Step", **settings)

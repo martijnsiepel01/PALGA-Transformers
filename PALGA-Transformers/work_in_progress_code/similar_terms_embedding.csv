@@ -1,0 +1,2240 @@
+Not_Found_Term,Found_Term,Similarity,Count
+ischaemie,toxaemie,0.9656479954719543,2523
+geen afwijkingen,zenuwstelsel afwijking,0.9474259614944458,1767
+oesophagus,hypomelanose,0.9326083660125732,1631
+vpb,brocq,0.900749921798706,1072
+do,kind,0.8996831774711609,880
+cirrhose,dystrofie,0.9518905878067015,603
+tur,tand,0.9500131011009216,413
+thrombose,flebotrombose,0.9579569101333618,388
+adenocarcinoma,adenocarcinoom,0.98234623670578,379
+basaalcel carcinoom,carcinoom basaalcel,0.99031263589859,366
+lymfeklier,lymffollikel,0.9629598259925842,318
+coronair arterie,arteriole,0.9516188502311708,303
+trombus,morbus behcet,0.9426897168159484,299
+arteriolosclerose,arteriosclerose,0.9731351733207704,299
+ip,ec,0.9395056366920472,297
+reactieve veranderingen,hemorragisch vocht,0.9347488880157472,293
+lokalisatie primaire tumor onbekend,prolifererende tricholemmale tumor,0.9591426849365234,266
+thromboembolie,tromboembolie,0.9689205288887024,249
+bb,ml,0.9355430603027344,237
+myocard infarct,myocardinfarct,0.9447245001792908,224
+ibd,agd,0.9594266414642334,220
+lokalisatie onbekend,etiologie onbekend,0.948317050933838,165
+wekedelen,onderbeen,0.9396320581436156,152
+transuretrale resectie,transurethrale resectie,0.974463164806366,151
+infiltrerend ductaalcarcinoom,infiltrerend ductaal carcinoom,0.9836509227752686,140
+vpab,mlpa,0.9279996156692504,135
+excisiebiopt,circumcisie,0.9551655650138856,127
+ductaal carcinoom in situ,ductaal carcinoma in situ,0.983932375907898,125
+keratoacanthoom,adenoacanthoom,0.9632288217544556,122
+nefrosclerose,flebosclerose,0.973645806312561,119
+steatosis,peliosis,0.9704626202583312,114
+basalioma,pleurae,0.9320786595344543,111
+intrauteriene vruchtdood,intra uteriene vruchtdood,0.9695563912391664,109
+carcinoma,carcinoid,0.9727504253387452,107
+re-excisie,reexcisie,0.9402635097503662,106
+fibro-epitheliale poliep,fibroepitheliale poliep,0.9845753908157348,103
+trombo-embolie,tromboembolie,0.95489239692688,103
+maag antrum,antrum maag,0.9887511134147644,102
+haematoom,acanthoom,0.957779049873352,100
+haematurie,maagresectie,0.9611884355545044,100
+atherosclerosis,atherosclerosis generalisata,0.9541302919387816,100
+dunnedarm,colonwand,0.9420595169067384,95
+adenomyosis,adenoiditis,0.974724054336548,95
+diffuus grootcellig b-cellymfoom,diffuus grootcellig b cel lymfoom,0.9815102815628052,95
+haemangioom,hibernoom,0.952621340751648,93
+diverticulosis,reticulosis,0.9664998054504396,92
+mucocele,mucokele,0.957507312297821,89
+coronair sclerose,carcinoom basaalcel,0.9358548521995544,87
+multi-orgaanfalen,multi orgaan falen,0.9557108283042908,87
+maag corpus,corpus maag,0.9781748652458192,86
+aortadissectie,intussusceptie,0.957310140132904,86
+emphyseem,immunoblast,0.9410073757171632,86
+pap2,pap 3a2,0.9549014568328856,85
+non-hodgkinlymfoom,non hodgkin lymfoom,0.9402546882629396,84
+immuunperoxydase reactie,immuunperoxydase,0.965631663799286,84
+keratose actinica,keratosis seborroica,0.9543433785438538,80
+humaan papillomavirus test,humaan papilloma virus test,0.9803786277770996,79
+1keer,endm,0.9165596961975098,74
+ip reactie,reactief,0.9131651520729064,73
+ecsqm,ec sqm,0.9289939403533936,67
+progesteronreceptorbepaling positief,oestrogeenreceptorbepaling positief,0.9761671423912048,67
+basaalcelcarcinoma,basaalcelcarcinoom,0.9815213084220886,66
+hypovolemische shock,hypovolaemische shock,0.9569669365882874,65
+pre-auriculair,palatum durum,0.9295264482498168,65
+haemorrhagie,groeihormoon,0.964147925376892,64
+retro-auriculair,regeneratieve nodus,0.9267498850822448,60
+neuro-endocriene tumor,neuroendocriene tumor,0.9805827140808104,59
+shavebiopt,shave biopt,0.9496759176254272,57
+farynx,falanx,0.949498414993286,57
+carcinoom in situ,carcinoma in situ,0.9792977571487428,54
+tubulairadenoom,lipoadenoom,0.9567127823829652,52
+b-cellymfoom,ml lymfocytair b,0.9279989004135132,51
+haemorrhagisch infarct,dermatofibromen,0.961064636707306,51
+skintag,skin tag,0.9224051237106324,50
+cholesterolosis,hypercholesterolemia,0.9635663628578186,49
+aspiratiecytologie,trombocytopenische purpura,0.9459213018417358,49
+ductaalcarcinoom,eilandcelcarcinoom,0.9669569730758668,49
+schildwachtklierprocedure,dysplastisch schildklierweefsel,0.9702335596084596,49
+paraaortaal,para aortaal,0.9471457600593568,48
+2maal,metatarsale 2,0.9023155570030212,47
+eerste maligniteit,geen maligniteit,0.9630277156829834,47
+paraffinecoupe,panfolliculoom,0.9598487615585328,46
+acute tubulus necrose,carcinoma solidum,0.9200867414474488,46
+mantelcellymfoom,lipofagengranuloom,0.9762023091316224,46
+arteriosclerosis,arteriolosclerosis,0.9678294658660888,45
+anastomose,acanthose,0.9543499946594238,44
+encephalopathie,encefalopathie,0.9651851058006288,44
+seborrhoische keratose,lichen planusachtige keratose,0.9630026817321776,44
+leiomyoma,leiomyomata,0.9598085284233092,44
+2 maal,maal,0.9187109470367432,44
+multiorgaanfalen,submandibulair,0.922464907169342,41
+grawitz tumor,burkitt tumor,0.954992949962616,41
+orofarynx,acromegalie,0.9404006600379944,40
+ischaemische necrose,ischemische necrose,0.9461328983306884,39
+encefalitis,putrefactio,0.9677338600158693,39
+levercirrhose,leverparenchym,0.9544718861579896,39
+revisie tbv derden,revisie niet verwerkt,0.9502246975898744,39
+dad,kin,0.8741282820701599,37
+fibrosis,torulosis,0.9579540491104126,37
+progesteronreceptorbepaling negatief,immuunperoxydasereactie positief,0.97871333360672,37
+revisie tbv derden concordant,revisie voor derden concordant,0.966839075088501,36
+nasofarynx,haemopericard,0.9260225892066956,36
+ischaemische colitis,ischemische colitis,0.973197340965271,35
+nevus,nervus,0.9702125191688538,34
+excisiebiopsie,conusexcisie,0.9709078669548036,33
+consult tbv derden,consult voor derden,0.9327142238616944,33
+basaalcel carcinoom solide type,basaalcelcarcinoom solide type,0.9765657782554626,32
+geen duidelijke afwijkingen,zonder duidelijke afwijking,0.9867047071456908,32
+hematothorax,haematothorax,0.9320800304412842,32
+congenitale afwijkingen,verdachte cellen,0.927940309047699,31
+grootcelligcarcinoom,plaatepitheelcarcinoom,0.9657288789749146,31
+ipreactie,stralingsreactie,0.9489368796348572,30
+tricho-epithelioom,trichoepithelioom,0.961187779903412,30
+aortaklep stenose,vroeg neonatale sterfte,0.9537066221237184,30
+hart tamponade,harttamponade,0.9350310564041138,29
+gastro-intestinale stromaceltumor,gastrointestinale stromaceltumor,0.990509033203125,29
+asphyxie,asfyxie,0.9428301453590392,28
+ductaalcarcinoom in situ,ductaal carcinoma in situ,0.9510996341705322,28
+alcoholabusus,ureterostomie,0.9331350326538086,27
+degeneratieve veranderingen,hyaliene degeneratie,0.9443304538726808,27
+ductaalcarcinoma in situ,ductaal carcinoma in situ,0.9733814597129822,27
+thrombo-embolie,metabole dood,0.9221333265304564,27
+coronairsclerosis,arterosclerosis,0.9742465615272522,27
+subduraal haematoom,mesodermale mengtumor,0.9699742197990416,26
+hemopericard,hemoperitoneum,0.9470469355583192,26
+t-cellymfoom,pseudolymfoom,0.9224636554718018,26
+cristabeenmerg,middenvoetsbeen,0.9702016711235046,25
+crista biopt,botbiopt,0.931972861289978,25
+re excisie,excisie,0.9643556475639344,25
+necrosis,argyrosis,0.9493533372879028,25
+plaveiselcel carcinoom,plaveiselcelcarcinoom,0.9710981249809264,25
+wig excisie,wigexcisie,0.9411178827285768,25
+melanoom in situ,melanoma in situ,0.9672265648841858,24
+ventrikelfibrilleren,ventrikel fibrilleren,0.9641353487968444,23
+grensvlak naevus,zwembroek naevus,0.9418710470199584,23
+leukocytoclastische vasculitis,leucocytoclastische vasculitis,0.9848225116729736,23
+hart ventrikel,ventrikel hart,0.9867562651634216,23
+metastase adenocarcinoma,metastase adenocarcinoom,0.9915143847465516,23
+aspiratie pneumonie,lobulaire pneumonie,0.9732186198234558,22
+hemorrhagie,ulcusbodem,0.9593451023101808,22
+anthracose,melanophoren,0.9468889236450196,22
+invasief ductaalcarcinoom,invasief ductaal carcinoom,0.9800374507904052,22
+reusceltumor van de peesschede,reusceltumor van de weke delen,0.9691858291625975,21
+polycythaemia vera,polycythemia vera,0.9491325616836548,21
+intrauterine vruchtdood,metastase talgkliercarcinoom,0.9504573345184326,21
+amyloidangiopathie,hemangioblastoom,0.9462772011756896,21
+urine blaas,urineblaas,0.9384294152259828,21
+oesophagitis,oesophagitis acuta,0.9784302115440368,21
+maligne lymfoom b-cel,maligne b cel lymfoom,0.9844138026237488,20
+endometriosis,endometriosis internal,0.9749589562416076,20
+navelstreng afwijking,navelstrengafwijking,0.9594128131866456,20
+lipoma,stoma,0.9419827461242676,19
+amyloidosis,lichen amyloidosis,0.9484456777572632,19
+inverted papilloom,inverted papilloma,0.9735676050186156,19
+adenocarcinoom in situ,adenocarcinoma in situ,0.9855831265449524,19
+arterie coronaria,arteria coronaria,0.9806575775146484,19
+m.bowen,morbus bowen,0.8348876237869263,19
+hand rug,rug,0.9183270931243896,18
+lichen sclerosus et atroficus,lichen sclerosus et atrophicus,0.9777939319610596,18
+auto-immuun hepatitis,autoimmuun hepatitis,0.9717918038368224,18
+ethmoid,sigmoid,0.9529423713684082,18
+actinische keratosis,keratosis actinic,0.9409821629524232,18
+primaire lokalisatie onbekend,familiaire mediterrane koorts,0.947227954864502,18
+pipelle biopt,biopten,0.954619526863098,18
+bulleus pemfigoid,bulleus pemphigoid,0.9703744053840636,18
+porokeratose,papillomatose,0.9349178671836852,18
+oestrogeen receptorbepaling positief,progesteron receptorbepaling positief,0.9523200988769532,18
+therapieeffect,stralingseffect,0.9377680420875548,17
+irritatie fibroom,contaminatie,0.9192794561386108,17
+ip positief,hpv negatief,0.9348341822624208,17
+plaveiselcelcarcinoma,plaveiselcelcarcinoom,0.9867451786994934,17
+naald biopt,biopten,0.9450512528419496,17
+chronische lymfatische leucaemie,chronische lymfatische leukemie,0.9620214104652404,17
+multiorgaan falen,multi orgaan falen,0.9565892815589904,17
+infarct litteken,infarctlitteken,0.969905436038971,17
+gastro-intestinale stromatumor,gastrointestinale stromaceltumor,0.9847744703292848,17
+morfea,pecoma,0.9451614618301392,17
+pyelonephritis,pyelonephritis acuta,0.9828214645385742,16
+boven been,beenvenen,0.8973309397697449,16
+ischaemisch infarct,anaemisch infarct,0.9746132493019104,16
+caverneus haemangioom,bulleus longemfyseem,0.9495049715042114,16
+lymfklier paraaortaal,lymfklier para aortaal,0.9794678688049316,16
+grootcellig neuro-endocrien carcinoom,grootcellig neuroendocrien carcinoom,0.9878111481666564,16
+neuro-endocriene tumor graad 1,neuroendocriene tumor graad 1,0.9868522882461548,16
+adenoma,tubular adenoma,0.9365049600601196,16
+aktinische keratose,seborroische keratose,0.9492043256759644,16
+pigmentincontinentie,pigmentdepositie,0.9358786344528198,16
+copd,milt,0.915643572807312,16
+maligne lymfoom centroblastair,metastase maligne ameloblastoom,0.9626359939575196,16
+grawitz-tumor,burkitt tumor,0.9302451014518738,16
+haemangioma,abnormaal,0.9419836401939392,15
+peri-anaal,huid perianaal,0.9147523641586304,15
+ebv,brocq,0.915775179862976,15
+chronische myelomonocyten leukemie,chronische myelomonocytenleukemie,0.9797831177711488,15
+artherosclerose,atherosclerose,0.950853705406189,15
+2keer,endm,0.9016586542129515,15
+fibroma,fibrine,0.9470266103744508,15
+mohsresectie,maagresectie,0.9724677801132202,15
+gliosis,peliosis,0.96991765499115,14
+neuro-endocrien carcinoom,neuroendocrien carcinoom,0.9808353185653688,14
+ductus carcinoma infiltrerend,ductuscarcinoom infiltrerend,0.976474940776825,14
+metastase grawitz tumor,metastase dooierzak tumor,0.9622899889945984,14
+cirrhosis,hypertrichosis,0.943651020526886,14
+calcinosis,carcinosis,0.9831960201263428,14
+cin3,cco3,0.9578192830085754,14
+adhaesie,adhesie,0.915251851081848,14
+frontotemporale dementie,essentiele trombocytemie,0.9486533403396606,14
+haemochromatose,chondromatose,0.966411590576172,13
+geen afwijkingen.,zonder afwijking,0.9356035590171814,13
+barrett oesofagitis,barrett oesofagus,0.9599182605743408,13
+rheumatoide arthritis,arthritis rheumatica,0.939939260482788,13
+multipele localisaties,multipele lokalisaties,0.8952937126159668,13
+pap5,ccp6,0.954301118850708,13
+geneesmiddel effect,geneesmiddeleffect,0.937113642692566,13
+haemorrhagische gastritis,atrofische gastritis,0.9605203866958618,13
+arterie pulmonalis,arteria pulmonalis atresie,0.9778885841369628,13
+oesophagusslijmvlies,nasopharynxslijmvlies,0.9659988880157472,13
+omphalocele,ecchymose,0.966602861881256,13
+haemosiderose,choreoathetose,0.961372137069702,13
+melanoma,melanoderma,0.9811722040176392,13
+infiltrerend ductus carcinoom,infiltrerend ductuscarcinoom,0.9864014387130736,13
+metastase infiltrerend ductaalcarcinoom,metastase infiltrerend ductaal carcinoom,0.989668071269989,13
+aspergillosis,adiponecrosis,0.9505544900894164,13
+aorta klep,rijp teratoom,0.9404829144477844,12
+cin1,cca0,0.9518861174583436,12
+ductaalcarcinoom infiltrerend,ductaal carcinoom infiltrerend,0.9787936210632324,12
+her2-neu negatief,her2neu negatief,0.9805439114570618,12
+urotheelcel carcinoom,urotheelcelcarcinoom,0.9718309044837952,12
+dermatofibroma,ureterostomie,0.9628556966781616,12
+basaalcel carcinoom superficieel type,basaalcelcarcinoom superficieel type,0.9797773957252502,12
+capillair haemangioom,haemangioma capillare,0.95513516664505,12
+acute myeloide leucaemie,myocardium ventrikel,0.94996839761734,12
+lobulair carcinoom in situ,lobulair carcinoma in situ,0.9839428663253784,12
+aterosclerose,otosclerose,0.960166037082672,12
+atheromatose,atheromatosis,0.9139428734779358,12
+basaal cel carcinoom,lobulair en ductaal carcinoom,0.9616993069648744,12
+glomerulosclerosis,fibrosclerosis,0.968614101409912,12
+barrett oesophagus,barrett oesophagitis,0.9504095315933228,12
+cis,colon,0.9295745491981506,11
+haemorrhagische ontsteking,flegmoneuze ontsteking,0.9667675495147704,11
+myofibrosis,myofibrosis cordis,0.9535601735115052,11
+keratoacanthoma,cholesteatoom,0.9385490417480468,11
+placentainsufficientie,leverinsufficientie,0.9727655053138732,11
+lichenoide keratosis,lichenoide keratosis benigne,0.9784623980522156,11
+neurofibroma,neurofibroom,0.9790383577346802,11
+sarcoidosis,panmyelosis,0.961055338382721,11
+hematopericard,hidradenocarcinoom,0.9517915844917296,11
+anaemie,anemie,0.9509353637695312,11
+metastase neuro-endocriene tumor,metastase neuroendocriene tumor,0.986538290977478,11
+operatie verandering,vettige verandering,0.8999068737030029,11
+streng ileus,navelvene,0.94286447763443,11
+phyllodestumor,adenofibroma phyllodes,0.9634632468223572,11
+hooggradig neuro-endocrien carcinoom,hooggradig neuroendocrien carcinoom,0.987188994884491,11
+talgklier adenoom,placentair weefsel,0.9526795148849488,11
+extramedullaire haematopoese,extramedullaire hemopoese,0.979305386543274,10
+gastrointestinale stromacel tumor,gastrointestinale stroma tumor,0.9922446012496948,10
+bacteriemie,bacterie,0.951964795589447,10
+hydrocele,hydrokele,0.971327543258667,10
+geen lokalisatie,een lokalisatie,0.9790403246879578,10
+abortus materiaal,necrotisch materiaal,0.9585536122322084,10
+infarceringen,vergroeiingen,0.9333841800689696,10
+sclerosis,scleritis,0.960335373878479,10
+prematuritas,maturitas,0.9505926966667176,10
+gastrointestinale stromatumor,gastrointestinale stromaceltumor,0.9943106770515442,10
+multiple myeloom,multiple myeloma,0.9511468410491944,10
+longbovenkwab,bovenkwab,0.9807112216949464,10
+hormoonreceptorbepaling,hormoonreceptor bepaling,0.9790599942207336,10
+spoelcellipoom,myxolipoom,0.9569947719573976,10
+clear cell acanthoom,clear cell cystadenoom,0.9580825567245485,10
+tubulus necrose,tubulaire necrose,0.9542831182479858,10
+litteken weefsel,verkalkt weefsel,0.9638596773147584,10
+multi orgaanfalen,multi orgaan falen,0.97463858127594,10
+maligne melanoma,maligne melanoom,0.9615143537521362,10
+anencephalie,porencefalie,0.9577631950378418,10
+basale cellencarcinoom,basale cellen carcinoom,0.9746409058570862,10
+3 maal,maal,0.9119573831558228,10
+glioblastoma,glioblastoom,0.973594605922699,10
+micronodulaire levercirrhose,neurogene spieratrofie,0.963525891304016,10
+cin2,cco2,0.9575338959693908,10
+micro-invasief plaveiselcelcarcinoom,plaveiselcelcarcinoom microinvasief,0.984437882900238,9
+shaveexcisie,shave excisie,0.94796621799469,9
+s,kind,0.8985507488250732,9
+primaire biliaire cirrhose,secundaire biliaire cirrose,0.964660108089447,9
+combined naevus,combined nevus,0.9354680776596068,9
+haemorrhagische necrose,metanefrisch adenofibroom,0.9593343734741212,9
+cholestasis,condylomata,0.9534062147140504,9
+metastase grootcelligcarcinoom,metastase heldercellig niercelcarcinoom,0.9731385707855223,9
+corticobasale degeneratie,fibrinoide degeneratie,0.9642777442932128,9
+her-2-neu negatief,her2neu negatief,0.927592158317566,9
+circulatie stoornis,lactatie stoornis,0.9635868072509766,9
+benigne lichenoide keratosis,lichenoide keratosis benigne,0.9944220781326294,9
+onder ooglid,onderste ooglid,0.9636399149894714,9
+pap3,pap 3a1,0.9568700790405272,9
+overgang cardia oesophagus,overgang cardia oesofagus,0.9638928174972534,9
+bethesda2,bethesda 2,0.945116400718689,9
+schimmel infectie,schimmelinfectie,0.9326232075691224,9
+lymfocytosis,pneumatosis intestinalis,0.9542842507362366,9
+linkerventrikel,zegelringcellen,0.9738885164260864,9
+sinus ethmoidalis,plexus chorioideus,0.9539917707443236,9
+elastosis,elastosis cutis,0.9586355686187744,9
+meningioom,meningiosarcoom,0.9618527889251708,9
+kiemceltumor,eilandceltumor,0.9673223495483398,9
+immuunperoxidase reactie,immuunperoxidase,0.9736979007720948,9
+dermoid cyste,dermoid cyst,0.9886070489883424,9
+pap1,pap 3a1,0.959646224975586,9
+geen tumorlokalisatie,geen tumorlocalisatie,0.9163488149642944,9
+brenner-tumor,brenners tumor,0.9549269080162048,9
+metastase neuro-endocrien carcinoom,metastase neuroendocrien carcinoom,0.9872130155563354,9
+geneesmiddelen effect,geneesmiddeleneffect,0.9524277448654176,9
+thrombotische thrombocytopenische purpura,trombotische trombocytopenische purpura,0.9742885828018188,8
+anthracosilicosis,panmyelophtise,0.9637359976768494,8
+ziekte van parkinson,syndroom van potter,0.9186964631080629,8
+nsip,ikc,0.938598096370697,8
+maag cardia,cardia maag,0.9669140577316284,8
+cytomegalievirus,cytomegalie virus,0.9636338949203492,8
+tracheostoma,tracheobronchitis,0.9403533339500428,8
+fundusklierpoliep,fundusklier poliep,0.9683647751808168,8
+creutzfeldt jacob,creutzfeldt jakob,0.976337194442749,8
+le,des,0.9634069800376892,8
+reaktief,handgewricht,0.9445167779922484,8
+oesophagus ,hypomelanose,0.9326083660125732,8
+dikkedarm,sikkelcel,0.9407214522361756,8
+cholangiocarcinoma,cholangiocarcinoom,0.9800515174865724,8
+spitznaevus,nierhilus,0.9443820118904114,8
+maligne b-cellymfoom,lymfoide poliep,0.9458997249603271,8
+emphysema,amoebiasis,0.9505897760391236,8
+carcinoom metastase,metastase carcinoom,0.9927026629447936,8
+metastase ductus carcinoma infiltrerend,metastase ductuscarcinoom infiltrerend,0.9825331568717957,8
+ischaemie.,toxaemie,0.9524110555648804,8
+1maal,igm,0.9168528318405152,8
+elektronenmicroscopie,myxoliposarcoom,0.9524413347244264,8
+oesophagus varices,oesofagus varices,0.9462536573410034,8
+colloidcarcinoom,lipoidcarcinoom,0.9836679697036744,8
+arterosclerose,coronairsclerose,0.959183156490326,8
+her2 neu negatief,her2neu negatief,0.9822730422019958,8
+haemorrhoid,hemochromatose,0.9591923356056212,8
+brenner tumor,brenners tumor,0.9888138771057128,8
+mitralis klep,bijholten neus,0.9532607793807985,8
+aritmogene rechter ventrikeldysplasie,aritmogene rechterventrikeldysplasie,0.9832056164741516,7
+plasmocytosis,pleocytosis,0.977985978126526,7
+mitralis insufficientie,renale insufficientie,0.9536190629005432,7
+geen lokalisatie opgegeven,congenitaal verkeerde positie,0.9620741605758668,7
+bethesda1,bethesda 1,0.9448688626289368,7
+hemolytisch uremisch syndroom,necrolytisch migratoir erytheem,0.9683861136436462,7
+punktie,gangreen,0.9071068167686462,7
+bijkomende bevindingen,afwijkende cellen,0.9647423028945924,7
+dikkedarmslijmvlies,pharynxslijmvlies,0.973279595375061,7
+bloedingen,streng,0.9482558965682985,7
+hydrocefalus,hydrocephalus,0.954970359802246,7
+endometriose cyste,endometrioide cyste,0.9791428446769714,7
+pap4,ccp3,0.9573094844818116,7
+virus infectie,virusinfectie,0.946845293045044,7
+petechie,petechiae,0.9556825160980223,7
+operatieeffect,operatieverandering,0.9254906177520752,7
+metastase urotheelcel carcinoom,metastase urotheelcelcarcinoom,0.98626047372818,7
+tbc,ikc,0.930834949016571,7
+aplastische anaemie,aplastische anemie,0.9843372106552124,7
+arterio veneuze malformatie,arterioveneuze varix,0.9534236192703248,7
+osteoporosis,acrocyanosis,0.9766546487808228,7
+reusceltumor van peesschede,subcutis behaarde hoofd,0.9569356441497804,7
+warty dyskeratoom,warty dyskeratoma,0.9729330539703368,7
+lichaamsvreemdmateriaal,cerebrospinaalvocht,0.9629485607147216,7
+glioblastoom multiforme,glioblastoma multiforme,0.9902833700180054,7
+lipomatosis,uterus myomatosis,0.957804262638092,7
+multisysteematrofie,osteodystrofie,0.9533148407936096,7
+arthrose,bekkenholte,0.9368088245391846,7
+extramedullaire hematopoiese,hematopoiesis extramedullary,0.9630130529403688,7
+lichen sclerose,lichen ruber,0.9314112067222596,7
+non hodgkinlymfoom,tweelobbige milt,0.9470583200454712,7
+granulairceltumor,granulosaceltumor,0.979370653629303,7
+ga,mu,0.9528976678848268,7
+angio-immunoblastair t-cellymfoom,angioimmunoblastair t cel lymfoom,0.9693905711174012,7
+oestrogeenreceptor bepaling positief,oestrogeenreceptorbepaling positief,0.9928250908851624,7
+micronodulaire cirrhose,micronodulair thymoom,0.96002995967865,7
+glandulaparotis,glandula paraurethralis,0.9703627824783324,7
+hairy cel leukemie,hairycel leukemie,0.9292545914649964,7
+achterwandinfarct,hechtingsgranuloom,0.9740332365036012,7
+voornaamste pathologiebevinding,voornaamste pathologie bevinding,0.9802661538124084,7
+monoklonale gammopathie,vlokatrofie duodenum,0.9656429886817932,7
+eczema,ischemie,0.9332125186920166,7
+haemorragie,hemorragie,0.9597561955451964,7
+stereotactische biopsie,stereotaktische biopsie,0.9705265760421752,7
+spermatocele,spermatokele,0.973785161972046,7
+asthma,diabetes,0.959395945072174,7
+maligne lymfoom centrocytair,metastase maligne lymfoom,0.9701415300369264,7
+methyleringsonderzoek,gedissemineerde ontsteking,0.9238647818565368,6
+morphaea,morphea,0.9870779514312744,6
+naald biopsie,biopsie naald,0.9724667072296144,6
+amyotrofische lateraal sclerose,gedifferentieerd teratoom,0.9689476490020752,6
+maligne lymfoom t cel type,maligne b cel lymfoom,0.94978129863739,6
+b cellymfoom,lymfocyt,0.9247508645057678,6
+spitz nevus,spitz naevus,0.9495830535888672,6
+kd,k d,0.954259157180786,6
+herpes simplexvirus,herpes simplex virus,0.9476041197776794,6
+fibro-epitheliaal papilloom,fibroepitheliaal papilloom,0.9838392734527588,6
+haematoma,haematometra,0.9728701710700988,6
+pneumokok,kattekrabziekte,0.9424260854721068,6
+doorgroeitumor,intussusceptie,0.9533193111419678,6
+kaposisarcoom,hemangiosarcoom,0.9763712882995604,6
+boven arm,spieren arm,0.9175567626953124,6
+coronair vaten,capillair,0.941974401473999,6
+urether,kartagener,0.9295349717140198,6
+mucinosis,carcinosis,0.9802703857421876,6
+glanspenis,pyelitis,0.9314818978309632,6
+intravasculair grootcellig b-cellymfoom,intravasculair grootcellig b cel lymfoom,0.980294704437256,6
+pheochromocytoom,feochromocytoom,0.9803416728973388,6
+vin3,vin iii,0.941720962524414,6
+vagina top,vagina,0.9312278032302856,6
+verruca seborroica,verruca senilis,0.9576019048690796,6
+chronische myeloide leucaemie,chronische salpingo ooforitis,0.9576023817062378,6
+leiomyosarcoma,leiomyosarcoom,0.9812257289886476,6
+obdcutie,submentaal,0.9568270444869996,6
+maligne lymfoom centroblastair centrocytair,ml centroblastair centrocytair folliculair le,0.9855996370315552,6
+anthracosilicose,corticosteroiden,0.9641329050064088,6
+phaeochromocytoom,feochromocytoom,0.957643747329712,6
+infarkt,infarcten,0.9295733571052552,6
+barrett syndroom,gardner syndroom,0.9740720987319946,6
+encephalomalacie,encefalomalacie,0.9669840931892396,6
+atrium septum defect,premaligne tumor,0.893872082233429,6
+papilloma,papillomata,0.9724721908569336,6
+perifeer t-cellymfoom,metastase invasief carcinoom nst,0.9362726211547852,6
+peri-appendicitis,etterige appendicitis,0.9553059935569764,6
+humaan papillomavirus,humaan papilloma virus,0.9612367153167723,6
+clear cell carcinoom,glassy cell carcinoom,0.9542579650878906,6
+disease',cancer,0.8737338781356812,6
+sektie,pyaemie,0.9332445859909058,6
+maligne lymfoom b cel type,ml lymfoblastair t cel type,0.9615227580070496,6
+stasisdermatitis,stralingsdermatitis,0.9828680157661438,6
+myocard hypertrofie,myeloide hyperplasie,0.9540445804595948,6
+basaalcelcarcinoom superficieeltype,pseudoglandulair plaveiselcelcarcinoom,0.9613471031188964,6
+mesencefalon,mesonefrosrest,0.9787737131118774,6
+2-maal,b cel,0.8692452907562256,6
+consult tbv derden concordant,consult voor derden concordant,0.9582732915878296,6
+auto-immuun ziekte,autoimmuun ziekte,0.971462905406952,6
+onder arm,spier hand,0.9130228757858276,6
+uip,ikc,0.932762324810028,6
+4maal,metatarsale 4,0.8984391689300537,6
+para-iliacaal,iliacaal,0.9602850675582886,6
+sessiel serrated laesie,sessiel serrated lesie,0.9823211431503296,6
+inverted folliculaire keratosis,cysteuze glandulaire hyperplasie,0.9587258100509644,6
+streptokok,wervelkolom,0.951928734779358,6
+haemorrhagische cystitis,hyperplasie erytropoiese,0.9536389112472534,6
+muco-epidermoidcarcinoom,mucoid epidermoid carcinoom,0.9781975746154784,6
+metastase grootcellig neuro-endocrien carcinoom,metastase grootcellig neuroendocrien carcinoom,0.9919159412384032,6
+alcoholische levercirrhose,alcoholische levercirrose,0.9579609632492064,6
+regressieve veranderingen,navelstrengarterie,0.9387487769126892,6
+melkgang carcinoom,melkgangcarcinoom,0.9715853333473206,6
+lis excisie,excisie,0.945903778076172,6
+ductaal carcinoma infiltrerend,ductaal carcinoom infiltrerend,0.988715887069702,5
+pilomatrixoma,cholelithiasis,0.954921305179596,5
+fibroepithelioma,sebaceous epithelioma,0.963671624660492,5
+punctie klinikus,chorionvlok necrose,0.9050960540771484,5
+mesenteriaal thrombose,necrotiserende bronchopneumonie,0.9652230739593506,5
+atriumfibrilleren,beademingseffecten,0.949194073677063,5
+metastase plaveiselcel carcinoom,metastase spoelcel carcinoom,0.9886853098869324,5
+retentiecyste,reciduaalcyste,0.9282934069633484,5
+if negatief,afstoting acuut,0.8924421072006226,5
+hemorrhagisch infarct,anaemisch infarct,0.9565481543540956,5
+ip ,ec,0.9395056366920472,5
+schildwachter klier procedure,schildwachterklier procedure,0.9883929491043092,5
+ruptuur in myocardinfarct,ruptuur in aneurysma,0.9655434489250184,5
+granulatie weefsel,perianaal weefsel,0.9485591650009156,5
+thrombo embolie,metabole dood,0.9384657740592957,5
+fibro-epithelioom,fibroepithelioom,0.9666869640350342,5
+meso colon,tubae,0.929025173187256,5
+superficial spreading melanoom,superficial spreading melanoma,0.9758192300796508,5
+endometrium poliep,endometrium secretiefase,0.9667735695838928,5
+ischaemie ,toxaemie,0.9656479954719543,5
+plaveiselcelcarcinoom in situ,plaveiselcelcarcinoma in situ,0.9872757196426392,5
+arterio sclerose,sulcus gingivalis,0.9391142129898072,5
+aangeboren afwijkingen,zonder kenmerkende afwijking,0.9532866477966307,5
+pleiomorfadenoom,pleiomorf sarcoom,0.9656863808631896,5
+pneumatosis,pleocytosis,0.9643352031707764,5
+diffuus grootcellig bcellymfoom,angioimmunoblastair t cel lymfoom,0.9595715403556824,5
+metastase hooggradig neuro-endocrien carcinoom,metastase hooggradig neuroendocrien carcinoom,0.9904683232307434,5
+encephalocele,colliquatienecrose,0.9626576900482178,5
+sikkelcelanaemie,psammoom lichaampjes,0.9625730514526368,5
+aortabifurcatieprothese,xanthoendothelioom,0.9681389331817628,5
+cholesterol embolus,cholesterolembolus,0.9621205925941468,5
+mamma reductie,reductie mamma,0.9781513810157776,5
+essentiele thrombocytemie,essentiele trombocytemie,0.9835591316223145,5
+basaalcelcarcinoom morphaeatype,pseudovasculair plaveiselcelcarcinoom,0.968406856060028,5
+hpv,pcr,0.922247588634491,5
+halonaevus,neuronaevus,0.9520329236984252,5
+boven ooglid,bovenste ooglid,0.9689370393753052,5
+ischaemische infarcering,ischemische infarcering,0.9586564302444458,5
+veneuze thrombose,veneuze trombose,0.9609206318855286,5
+reinkes oedeem,reinke s oedeem,0.9706141352653505,5
+pemfigus vulgaris,pemphigus vulgaris,0.9818233847618104,5
+av,ec,0.9348262548446656,5
+hyalinemembranen,hyaliene membranenpneumonie,0.9592516422271729,5
+benigne huidadnextumor,huidadnextumor benigne,0.9939488768577576,5
+aortaklep insufficientie,aortaklep,0.951114058494568,5
+dermale nevus,dermale naevus,0.9596830606460572,5
+grootcellig anaplastisch t-cellymfoom,grootcellig anaplastisch t cel lymfoom,0.9810327887535096,5
+laryngocele,laryngokele,0.9699400067329408,5
+specimenradiografie,angiografie,0.9344590902328492,5
+haemorrhagische infarcering,verkregen immuundeficientie,0.94265216588974,5
+metastase neuro-endocriene tumor graad 1,metastase neuroendocriene tumor graad 1,0.9913828372955322,5
+chorio-amnionitis,chorioamnionitis acuta,0.9659971594810486,5
+3keer,panin 3,0.9073473811149596,5
+metastase,metafyse,0.9368788599967957,5
+haemofagocytose,erytrofagocytose,0.963123083114624,5
+beenmerg embolie,gedupliceerd rapport,0.946437656879425,5
+galgang adenoom,adenoom tepel,0.9464378952980042,5
+metastasen,galstase,0.9369633793830872,5
+mesothelioma,sarcomatoid mesothelioom,0.9671459197998048,5
+condyloma,condylomata,0.9674121141433716,5
+v,v g,0.9246018528938292,5
+ventrikel septum defect,maligne merkelcel tumor,0.9267178773880004,5
+tubulointerstitiele nefritis,postinfectieuze glomerulonefritis,0.9679439663887024,5
+steathose,nefrose,0.9494973421096802,4
+verkalkingen,vergroeiingen,0.9704834818840028,4
+endstage kidney,end stage kidney,0.9515130519866944,4
+ependymoma,epiglottis,0.9494951367378236,4
+extranodaal marginale zone b-cellymfoom,extranodaal marginale zone lymfoom,0.9695393443107604,4
+colloidnodus,colloidmilium,0.9504891633987428,4
+valvula van bauhini,valvula bauhini,0.950589120388031,4
+angiolipoma,leiomyomata,0.951282560825348,4
+maligne huidadnextumor,huidadnextumor maligne,0.9937439560890198,4
+aorta stenose,thoracale aorta,0.9725038409233092,4
+astrocytoma,thoracotomie,0.9307918548583984,4
+p.c.r.,f s g s,0.8186180591583252,4
+1 maal,maal,0.930899977684021,4
+papillair overgangsepitheel carcinoom,papillair carcinoom overgangsepitheel,0.9966593384742736,4
+m bowen,bowen,0.9295383095741272,4
+leucaemie,peyronie,0.9529640078544616,4
+m. parkinson,morbus parkinson,0.8813490271568298,4
+fraktuur,fractuur,0.9709601998329164,4
+pemfigoid,pemphigoid,0.952021062374115,4
+vpb.,b cel,0.8773900270462036,4
+benigne prostaat hypertrofie,prostaat hypertrofie,0.971836507320404,4
+arterie mesenterica superior,vena mesenterica superior,0.9730550050735474,4
+arteria coronaria sinistra,arteria coronaria,0.9665767550468444,4
+insulinoma,adenosis,0.9318996667861938,4
+haemorrhagische shock,hypovolaemische shock,0.9524410963058472,4
+metastase neuro-endocriene tumor graad 2,metastase neuroendocriene tumor graad 2,0.991301417350769,4
+if positief,malpositie,0.8757431507110596,4
+pilomatricoma,chorioretinitis,0.949353814125061,4
+placenta passend bij de termijn,placenta passend bij termijn,0.971916437149048,4
+haemochromatosis,nefroblastomatosis,0.9720160365104676,4
+dysplastische nevus,dysplastische naevus,0.9723336100578308,4
+stucco keratose,stuccokeratose,0.8857327699661255,4
+gastro-intestinale stroma tumor,gastrointestinale stroma tumor,0.9896418452262878,4
+lymfeklieren,cerumenklier,0.9685202836990356,4
+aritmogene rechter ventrikel dysplasie,congenitaal dubbele uitstroomopening rechter ventrikel,0.9685231447219848,4
+reumatoide arthritis,arthritis rheumatica,0.9494907855987548,4
+if,kind,0.8719969987869263,4
+tur ,tand,0.9500131011009216,4
+overgangsepitheel carcinoom,carcinoom overgangsepitheel,0.9921661615371704,4
+hemangioma,spongiosa,0.9376775026321412,4
+siderosis,argyrosis,0.9384735226631165,4
+auto-immuunziekte,autonome zenuwstelsel,0.9479404091835022,4
+alcoholcirrhose,harthypertrofie,0.9428189992904664,4
+basocellulaircarcinoom,basocellulair carcinoom,0.9768891334533693,4
+haemofagocytisch syndroom infectie geassocieerd,infectie geassocieerd hemofagocytisch syndroom,0.9838675260543824,4
+her2-neu positief,her2neu positief,0.977273166179657,4
+3maal,panin 3,0.920756697654724,4
+extrauteriene graviditeit,normale graviditeit,0.9629619121551514,4
+dooierzaktumor,dooierzakrest,0.957779049873352,4
+dna dubieus,rna dubieus,0.91031414270401,4
+sinus histiocytose,chyleus exsudaat,0.957751989364624,4
+ductaal carcinoma insitu,ductaal carcinoom,0.9631022214889526,4
+sarcoma,pecoma,0.9441559314727784,4
+progressieve multifocale leuko-encefalopathie,progressieve multifocale leukoencefalopathie,0.9838215708732604,4
+seminoma,seminoom,0.94642573595047,4
+aritmogene rechterventrikel dysplasie,aritmogene rechterventrikeldysplasie,0.9845508933067322,4
+brickerblaas,bricker blaas,0.9465251564979552,4
+ischaemische enteritis,ischemische enteritis,0.958293080329895,4
+oligodendroglioma,oligodendroglioom,0.9763172268867492,4
+embryonaalcel carcinoom,embryonaalcelcarcinoom,0.9850459098815918,4
+carunkel,furunkel,0.9061572551727296,4
+adenocarcinoma.,adenocarcinoom,0.9572210311889648,4
+verrukeuze hyperplasie,verruceuze hyperplasie,0.9587528705596924,4
+rest tumor,tumorlet,0.9240642786026,4
+kyphoscoliose,mesosigmoideum,0.94692724943161,4
+clear cell carcinoma,transitional cell carcinoma,0.9586844444274902,4
+uremie,anemie,0.9583162665367126,4
+t cellymfoom,t cel lymfoom,0.92208331823349,4
+staphylococcen,tympanosclerose,0.9582717418670654,4
+niet kleincelligcarcinoom,kleincellig osteosarcoom,0.9791922569274902,4
+thrombotische afsluiting,trombotische afsluiting,0.9829111099243164,4
+trombo embolie,tromboembolie,0.9613781571388244,4
+granuloma,granuloom,0.943450391292572,4
+hyalinose,fytobezoar,0.943387806415558,4
+intraductaalcarcinoom,intraductaal carcinoom,0.9795387387275696,4
+arterie cerebri media,arteria cerebri media,0.9737508296966552,4
+maligne lymfoom centroblastair centrocytair folliculair,ml centroblastair centrocytair folliculair le,0.9835368394851683,4
+omfalocele,encefalopathie,0.962062120437622,4
+corpulmonale,porencefalie,0.9579165577888488,4
+media degeneratie,voorste mediastinum,0.9429478645324708,4
+besprekingen concordant,progeria volwassenen,0.946124792098999,4
+infiltrerend ductaalcarcinoom ,infiltrerend ductaal carcinoom,0.9836509227752686,4
+metastase clear cell carcinoom,metastase ductaal carcinoom,0.9440224170684814,4
+maligne lymfoom centroblastair centrocytair diffuus,ml centroblastair centrocytair folliculair le,0.983694851398468,4
+operatieveranderingen,operatielitteken,0.9416489601135254,4
+blue nevus,blue naevus,0.946618676185608,4
+clonaliteitsbepaling,bestralingsnecrose,0.9569751024246216,4
+lymphklier,lymfocyten,0.945042371749878,4
+acute haemorrhagische ontsteking,acute flegmoneuze ontsteking,0.9648513793945312,4
+serrated adenoma,tubular adenoma,0.940343976020813,4
+haemosiderosis,rontgendermatitis,0.9555025100708008,4
+basaalcel carcinoom sprieterig type,basaalcelcarcinoom sprieterig type,0.9816831946372986,4
+liposarcoma,liposarcoom,0.974632203578949,4
+hypoxaemie,hypothyreoidie,0.9650110602378844,4
+spinalioma,spinalioom,0.917449712753296,4
+oud achterwandinfarct,oud achterwand infarct,0.9744027853012084,4
+lobulair carcinoma infiltrerend,lobulair carcinoom infiltrerend,0.9878116846084596,4
+elastose solaris,lentigo solaris,0.9404403567314148,4
+omfalokele,omphalokele,0.9544717669487,4
+myoma,stoma,0.9449601769447328,4
+ecsqmendm,knieschijf,0.917804718017578,4
+acute myeloide leukaemie,acute myeloide leukemie,0.954429030418396,4
+geisoleerde tumorcel metastase,metastase clearcell carcinoom,0.9594423174858092,4
+epidermoid cyste,epidermoidcarcinoom,0.954425036907196,4
+stafylococcus aureus,staphylococcus aureus,0.9884045124053956,4
+galgang hamartoom,galganghamartoom,0.9393996596336364,4
+urotheelcelcarcinoma,urotheelcelcarcinoom,0.9871129989624025,4
+acrodermatitis chronica atroficans,acrodermatitis chronica atrophicans,0.9826381206512452,4
+fibromatosis,fibrosclerosis,0.9750003814697266,4
+haemorragisch infarct,hemorragisch infarct,0.9801138639450072,4
+schwannoma,schaamlip,0.9346129298210144,4
+hyaline membraan pneumonie,hyaline membraanpneumonie,0.986378848552704,4
+naevus naevocellularis met junctionactiviteit,naevus naevocellularis met junction activiteit,0.9864517450332642,4
+large cell acanthoom,large cell acanthoma,0.9560924172401428,4
+colonascendens,colon ascendens,0.9645463228225708,4
+dissectie,obductie,0.9591797590255736,4
+mesenteriaalthrombose,mesenteriaaltrombose,0.9754855036735536,4
+reflux oesophagitis,reflux oesofagitis,0.969626009464264,3
+metastase grawitz-tumor,metastase dooierzak tumor,0.95127135515213,3
+metastase maligne perifere zenuwschedetumor,metastase maligne leydigceltumor,0.9696029424667358,3
+ventrikulus,ventriculus,0.9583876132965088,3
+endometriose interna,endometrium secretiefase,0.9594339728355408,3
+langerhanse celhistiocytosis,metastase pneumocytoom,0.9612092971801758,3
+polycytemia vera,arteria poplitea,0.93501877784729,3
+cholelithiase,chorionruimte,0.9613302946090698,3
+hemi ectomie,ectomie,0.9446282386779784,3
+myxoma,myxoma cordis,0.9504178166389464,3
+pap0,ccp0,0.9585779309272766,3
+nier en,nier,0.9506632089614868,3
+naad lekkage,dubreuilh,0.9510131478309632,3
+oestrogeen receptor bepaling positief,oestrogene receptorbepaling positief,0.9350454807281494,3
+mitralis stenose,vena renalis trombose,0.9590765237808228,3
+zonder afwijkingen,ponsbloedingen,0.951433539390564,3
+lymfoom,lymfocyt,0.9605608582496644,3
+oestrogeen receptorbepaling negatief,progesteron receptorbepaling negatief,0.9517035484313964,3
+septische necrosehaard,aseptische necrose,0.9455812573432922,3
+nevus nevocellularis,nervus tibialis,0.959778130054474,3
+pleiocytose,histiocytose,0.969703495502472,3
+em,ec,0.9452502131462096,3
+botmetaplasie,sialometaplasie,0.9693436622619628,3
+mucoviscoidosis,leiomyosarcoom,0.9598998427391052,3
+t-celrijk b-cellymfoom,t celrijk b cel lymfoom,0.9598804712295532,3
+infarct haemorrhagisch,gerekanaliseerde thrombus,0.9603243470191956,3
+dunnedarmslijmvlies,dunne darmslijmvlies,0.9698070287704468,3
+barrettslijmvlies,barrett slijmvlies,0.9658694267272948,3
+micro-invasief carcinoom,microinvasief carcinoom,0.9686437249183656,3
+peri-apicaal granuloom,apicaal granuloom,0.9572258591651917,3
+creutzfeldt jacob.,creutzfeld jacob,0.9470881223678588,3
+hemorrhagische shock,hypovolaemische shock,0.9471455812454224,3
+glomus tumor,hiluscel tumor,0.9643430709838868,3
+pre-eclampsie,preeclampsie,0.9644362330436708,3
+rechterventrikel,rechter ventrikel,0.9477705359458924,3
+ruiter embolie,ruiterembolie,0.9666644334793092,3
+insektenbeet,bekkenbeenderen,0.9557799696922302,3
+haemolyse,systeem,0.9492427110671996,3
+synoviitis,villus synovialis,0.9403088092803956,3
+afwijkingen,ponsbloedingen,0.948344588279724,3
+leukaemie,toxaemie,0.9490011930465698,3
+lokale peritonitis,reumatoide arteritis,0.9540443420410156,3
+flow cytometrie,flowcytometrie,0.9488357305526732,3
+verouderings verschijnsel,verouderingsverschijnsel,0.9387576580047609,3
+ewing sarcoma,ewing sarcoom,0.9487365484237672,3
+murale trombus,murale thrombus,0.9662691354751588,3
+artheriosclerose,duodenumholte,0.9486916065216064,3
+arterie renalis,vena renalis,0.9662452936172484,3
+chondrosarcoma,rabdomyosarcoom,0.9658394455909728,3
+biliaire cirrhose,lobulaire pneumonie,0.9641911387443542,3
+mitraal klep,rijp teratoom,0.9375362992286682,3
+coronair thrombose,gebarsten aneurysma,0.9520955681800842,3
+rechteronderkwab,schildklierkwab,0.9631651639938354,3
+shavebiopsie,leverbiopsie,0.9500021934509276,3
+arterie carotis,arteria carotis,0.958109974861145,3
+mycosis,myositis,0.9685630798339844,3
+bestralingsveranderingen,zegelringcellen,0.958016276359558,3
+maligne lymfoom malt type,lymfoide poliep,0.9433190822601318,3
+holoprosencephalie,holoprosencefalie,0.9684209227561952,3
+multipel myeloma,multipel myeloom,0.9615358710289,3
+haemoperitoneum,intussusceptie,0.9683107137680054,3
+sebaceoma,adenosarcoom,0.9429314732551576,3
+basaalcel carcinoom solide type.,basaalcelcarcinoom solide type,0.968242347240448,3
+verrukeus carcinoom,spoelcellig carcinoom,0.9623729586601256,3
+alpha 1 antitrypsine deficientie,alfa 1 antitrypsine deficientie,0.967971920967102,3
+necrose door ischaemie,necrose door ischemie,0.9628483653068542,3
+antrummaag,platybasia,0.94210946559906,3
+resektie,retentie,0.967660665512085,3
+colostoma,cranium,0.942086935043335,3
+encefalocele,encefalopathie,0.963035762310028,3
+mucormycosis,panmyelophtise,0.963147521018982,3
+katheterisatie,catheterisatie,0.9673697352409364,3
+hepatocellulaircarcinoom,juxtacorticaal chondrosarcoom,0.9699947834014891,3
+fibrinethrombus,fibrine thrombus,0.9351873993873596,3
+transuretrale resectie ,transurethrale resectie,0.974463164806366,3
+erythropoese,erytropoese,0.975383758544922,3
+rechterbovenkwab,kraakbeenweefsel,0.971608340740204,3
+ischaemische cardiomyopathie,ischemische cardiomyopathie,0.981825053691864,3
+hydro-ureter,hydroureter,0.872587263584137,3
+toxoplasmosis,toxoplasma,0.972628116607666,3
+mucostase,cholestase,0.9246044158935548,3
+broncho alveolaire lavage,bronchiolo alveolaire lavage,0.974742829799652,3
+truncus brachiocefalicus,truncus brachiocephalicus,0.98712557554245,3
+vreemdlichaam reuscelreactie,vreemdlichaamreuscelreactie,0.9866257309913636,3
+papillair urotheelcel carcinoom,papillair urotheelcelcarcinoom,0.9871296286582948,3
+oestrogeenreceptor bepaling negatief,oestrogeenreceptorbepaling negatief,0.9932186007499696,3
+niercel carcinoom,oatcel carcinoom,0.9749804735183716,3
+hamartoma,oxalaat,0.9280242323875428,3
+rheumatoide artritis,reumatoide artritis,0.9774112701416016,3
+nonhodgkin lymfoom,non hodgkin lymfoom,0.9822999238967896,3
+gastro-intestinale stromacel tumor,gastrointestinale stroma tumor,0.9862360954284668,3
+stromacel tumor gastrointestinaal,metastase gastrointestinale stroma tumor,0.9752204418182372,3
+metastase nietkleincellig carcinoom,metastase heldercellig niercelcarcinoom,0.9797447323799132,3
+metastasecarcinoom,epidermoidcarcinoom,0.9784712195396424,3
+folliculair lymfoom graad 1-2,folliculair lymfoom graad 1 en 2,0.9935176372528076,3
+endo-echo grafie,endo echografie,0.924557328224182,3
+acute lymfoblasten leukemie,acute lymfoblastaire leukemie,0.9792391657829284,3
+ischaemische nefrosclerose,ischemische nefrosclerose,0.9724957942962646,3
+4 maal,maal,0.8984720706939697,3
+sessiel serrated adenoma,fluor vaginalis,0.9192193746566772,3
+idiopathische thrombocytopenische purpura,idiopathische trombocytopenische purpura,0.9918269515037536,3
+rabdomyolysis,rhabdomyolysis,0.9743067026138306,3
+metastase ductaalcarcinoom,metastase ductaal carcinoom,0.9802794456481934,3
+reusceltumor weke delen,maligne reusceltumor weke delen,0.9743170738220216,3
+hypertrophie,hypertrofie,0.980802059173584,3
+paraaortale lymfklier,aortale lymfklier,0.9802622199058532,3
+abortus rest,abortus,0.8996607065200806,3
+boop,dood,0.9289932250976562,3
+metastaseadenocarcinoom,syringoadenocarcinoom,0.971685826778412,3
+praeputium,pessarium,0.92883038520813,3
+vpd,pcr,0.917454481124878,3
+stasedermatitis,acrodermatitis,0.9813838601112366,3
+large granular lymfocytic leukemia,large granular lymphocytic leukemia,0.9925817847251892,3
+revisie tbv derden discordant,revisie voor derden discordant,0.973879098892212,3
+streptococceninfectie,streptococcen infectie,0.9724754095077516,3
+bronchioloalveolaircarcinoom,bronchioloalveolair carcinoom,0.9902089238166808,3
+dubbelcarcinoom,galgangcarcinoom,0.9717413783073424,3
+therapie keuze test,effect van therapie,0.8897449374198914,3
+von meyenburgcomplex,oksellymfklier,0.913904309272766,3
+hart dilatatie,dilatatie,0.93354594707489,3
+k-ras mutatie aanwezig,kras mutatie aanwezig,0.9758719801902772,3
+megaloblastaire anaemie,megaloblastaire anemie,0.9787320494651794,3
+aktieve chronische ontsteking,middenoor chronische ontsteking,0.985133707523346,3
+posttransplantatie lymfoproliferatieve ziekte,lymfoproliferatieve ziekte,0.9827689528465272,3
+mond bodem,bodem mond,0.994901180267334,3
+m. crohn,crohn,0.9105727672576904,3
+autoimmuun haemolytische anaemie,autoimmuun hemolytische anemie,0.9839032292366028,3
+hart decompensatie,parasieteninfectie,0.9264304041862488,3
+maligne lymfoom centrocytair centroblastair,ml centroblastair centrocytair folliculair le,0.984972596168518,3
+tractus gastro-intestinalis,tractus gastrointestinalis,0.9787548184394836,3
+m.kahler,kahler,0.8877102732658386,3
+auto-immuun thyreoiditis,autoimmuun thyreoiditis,0.9786971807479858,3
+basaalcel carcinoom morfea type,basaalcelcarcinoom morfea type,0.9762195944786072,3
+hydronephrose,osteosclerose,0.9304215908050536,3
+arithmie,angiectasie,0.9342293739318848,3
+lymfklier parailiacaal,lymfklier parasternaal,0.9701902866363524,3
+hurthle cell adenoom,ductaal adenoom,0.9300498366355896,3
+meningeoma,stoma,0.9095380902290344,3
+chronische lymfatische leukaemie,chronische lymfatische leukemie,0.976118266582489,3
+intraepitheliale lymfocytose,intra epitheliale lymfocytose,0.9909775257110596,3
+mutatieanalyse,mutatie analyse,0.9271944165229796,3
+metastasen carcinoom,metaplastisch carcinoom,0.9705323576927184,3
+neuro-endocriene tumor graad 2,neuroendocriene tumor graad 2,0.9869669675827026,3
+incisiebiopt,dermoiedcyste,0.9332124590873718,3
+ijzergebreksanaemie,talgklierhyperplasie,0.9784926176071168,3
+placenta rest,placenta,0.9018996953964232,3
+spermatogenese rijpingsstoornis,rijpingsstoornis spermatogenese,0.9947478175163268,3
+m. bowen,morbus bowen,0.8348876237869263,3
+multiple organfailure,lever pericentraal,0.9042672514915466,3
+oksel lymfklier,lymfklier oksel,0.9853555560112,3
+transmuraal infarct,intramuraal uterusmyoom,0.9224212765693665,3
+non hodgkin lymfoma,non hodgkin lymfoom,0.9853533506393432,3
+6maal,bethesda 6,0.8773574829101562,3
+mama,dia,0.9225902557373048,2
+epitheel hyperplasie,stromale hyperplasie,0.9614704847335817,2
+coronair arteria,arteria coronaria,0.9782647490501404,2
+endometrium in proliferatie fase,endometrium in proliferatiefase,0.9877507090568542,2
+basalioma.,granuloma disciforme,0.8957219123840332,2
+verklevingen,vergroeiingen,0.961547076702118,2
+phlegmoneuze ontsteking,flegmoneuze ontsteking,0.9874292612075806,2
+nier insufficientie,placenta insufficientie,0.9433130621910096,2
+hurthlecel adenoom,oxyfiel adenoom,0.9229488968849182,2
+coronair,varix,0.9435091018676758,2
+stans biopt,biopten,0.9432337880134584,2
+virus pneumonie,viruspneumonie,0.9616540670394896,2
+planocellulaircarcinoom,planocellulair carcinoom,0.9782872200012208,2
+oesophagusvarices,osteoclastoom,0.9614413976669312,2
+mucineus cystadenoma,mucineus cystadenoom,0.987666130065918,2
+revisie ten behoeve derden concordant,revisie ten behoeve van derden concordant,0.979126274585724,2
+fibroadenoma,fibroadenoom,0.9619424343109132,2
+hersenventrikels,hersenventrikel,0.9874420166015624,2
+arteriele thrombose,arteriele thrombus,0.961349070072174,2
+urotheelcel carcinoom graad 2,urotheelcelcarcinoom graad 2,0.9785516858100892,2
+intraepidermaal carcinoom,intraepidermal carcinoma,0.9874594807624816,2
+urotheelcel carcinoom graad 1,urotheelcelcarcinoom graad 1,0.9783414006233216,2
+dysgerminoma,syringomyelie,0.9550509452819824,2
+fundus klier poliep,fundusklier poliep,0.9701246619224548,2
+angiokeratoma,angiokeratoom,0.9621499180793762,2
+atrium septumdefect,intermediair carcinoom,0.92489492893219,2
+tong basis,palatine process,0.889887809753418,2
+nier-en,niervene,0.9253201484680176,2
+m. hodgkin,hodgkin,0.925429344177246,2
+brunnerse klieren,brunnerse klier,0.9888784289360046,2
+basaalcelcarcinoma.,basaalcelcarcinoom,0.96307635307312,2
+resectie vlak vrij,resectievlak niet vrij,0.9769818782806396,2
+trans urethrale resectie,transurethrale resectie,0.9767993092536926,2
+drugsverslaving,drugs verslaving,0.9258875846862792,2
+renal cell carcinoom,renal cell carcinoma,0.9890113472938538,2
+metastase zegelring carcinoom,metastase zegelringcarcinoom,0.9766451120376588,2
+eilandcel tumor,acinaircel tumor,0.9765649437904358,2
+coronair insufficientie,renale insufficientie,0.9634385704994202,2
+ventrikel achterwand,centraal zenuwstelsel,0.9574170708656312,2
+grensvlak naevus.,synoviavlok,0.9268580079078674,2
+chole lithiasis,cholelithiasis,0.9540034532546996,2
+m. kahler,kahler,0.8877102732658386,2
+hyaliene membranen ziekte,hyaliene membranenziekte,0.9761347770690918,2
+t-prolymfocyten leukemie,b prolymfocytenleukemie,0.9539641737937928,2
+haemorragische ontsteking,hemorragische ontsteking,0.9893758893013,2
+akute tubulusnecrose,tubulusnecrose,0.9771887063980104,2
+navelstrengpathologie,navelstreng pathologie,0.97720468044281,2
+tubulair adenoma,adenoma malignum,0.9483872652053832,2
+pancreas kop,femurkop,0.9248600602149964,2
+osteoarthrose,osteoartrose,0.9877696633338928,2
+chronisch lymfatische leucaemie,dermopathische lymfadenopathie,0.9623721241950988,2
+a iliaca,placenta accreta,0.9238791465759276,2
+erythrofagocytose,erytrofagocytose,0.9778083562850952,2
+shock nier,nier,0.9238949418067932,2
+tumor rest,congenitale rest,0.9240848422050476,2
+biliaire levercirrhose,perifeer reuscelgranuloom,0.9625550508499146,2
+hydro ureter,hydroureter,0.8947930932044983,2
+litteken vorming,zenuwstelsel,0.9625841975212096,2
+ttp,fap,0.9242653846740724,2
+motor neuron ziekte,motorneuron ziekte,0.9881070852279664,2
+nephrolithiasis,urethritis cystica,0.9544240236282348,2
+vreemd lichaamsreactie,necrotiserende myopathie,0.9626792669296264,2
+metastase kleincellig carcinoma,metastase kleincellig carcinoom,0.9882463216781616,2
+maligne lymphoom,maligne ependymoom,0.9628154635429382,2
+shocknier,spier,0.9423169493675232,2
+mond slijmvlies,slijmvlies mond,0.9884987473487854,2
+astma bronchiale,bulleus longemfyseem,0.9247397184371948,2
+lymfatische leucaemie,atypische vasculaire lesie,0.9628801345825196,2
+muco-epidermoid carcinoom,mucoid epidermoid carcinoom,0.987349569797516,2
+chondroma,pyometra,0.9556229114532472,2
+carcinoom in situ ,carcinoma in situ,0.9792977571487428,2
+leydig cel hyperplasie,endocriene cellen maag hyperplasie,0.9583015441894532,2
+cholelitiasis,cholelithiasis,0.9583694338798524,2
+metastase zegelringcel carcinoom,metastase zegelringcelcarcinoom,0.986048460006714,2
+metastase niet kleincelligcarcinoom,metastase kleincellig osteosarcoom,0.9860596656799316,2
+insektensteek,vetstapelingsziekte,0.9585139751434326,2
+keratosis,keratitis,0.9585359692573548,2
+sertoli-cel only syndroom,periapicaal granuloom,0.900872766971588,2
+voet rug,spier rug,0.9457722306251526,2
+pseudo-epitheliomateuze hyperplasie,pseudoepitheliomateuze hyperplasie,0.9865396022796632,2
+alveolaircelcarcinoom,alveolaircel carcinoom,0.9822422862052916,2
+progesteroneffect,epidermoidcyste,0.9457117319107056,2
+her-2-neu positief,her2neu positief,0.91451495885849,2
+barrett-oesophagus,barrett oesophagitis,0.947216808795929,2
+acute chronische ontsteking,acute en chronische ontsteking,0.9820095300674438,2
+neus septum,septum primum,0.9587282538414,2
+ischaemische hartziekte syndroom,ischemische hartziekte syndroom,0.9819047451019288,2
+hemorrhagische gastritis,lymfocytaire gastritis,0.9587568640708924,2
+groot cellig carcinoom,grootcellig carcinoom,0.9455658793449402,2
+aneurysmaruptuur,menstruerend endometrium,0.9472185373306274,2
+kyphoscoliosis,epithelioidcel naevus,0.9472789168357848,2
+rechter hartoor,rechter nier,0.959012806415558,2
+tamponade,tampon,0.9451889395713806,2
+a. coronaria,vena coronaria,0.913899540901184,2
+haemangiosarcoma,epitheelatrofie,0.94584858417511,2
+renal cel carcinoma,renal cell carcinoma,0.956210732460022,2
+hemophagocytosis,poikilocytosis,0.9581527709960938,2
+milan1,milan 1,0.906741201877594,2
+microcephalie,microcephaal,0.9575295448303224,2
+meningoencefalitis,ulcusperforatie,0.9575541019439696,2
+multiple sclerose,diffuse sclerose,0.9088446497917176,2
+auto immuunziekte,autonome zenuwstelsel,0.9468094110488892,2
+intraepitheliaal carcinoom,intra epitheliaal carcinoom,0.9843295216560364,2
+pulmonale veno-occlusieve ziekte,pulmonale venoocclusieve ziekte,0.9842437505722046,2
+diffuus grootcellig b cellymfoom,diffuus grootcellig b cel lymfoom,0.9842402935028076,2
+epitheliale inclusie cyste,epitheliale inclusiecyste,0.9842098951339722,2
+degeneratieve afwijkingen,degeneratieve gewrichtsaandoening,0.9464241862297058,2
+alcoholische cirrhose,alcoholische cirrose,0.9464036226272584,2
+haemothorax,glomangioom,0.9463235139846802,2
+ductaal carcinoom in situ ,ductaal carcinoma in situ,0.983932375907898,2
+reuma knobbel,dubbel pyelum,0.9468870759010316,2
+pemfigus foliaceus,pemphigus foliaceus,0.983782172203064,2
+coxarthrose,coxartrose,0.9836585521697998,2
+electronen microscopie,electronenmicroscopie,0.9048786163330078,2
+hematosalpinx,fotodermatose,0.9570000171661376,2
+niet  gedicteerd,consult voor derden discordant,0.9115339517593384,2
+hypernephroom,hyperkeratose,0.9130061268806458,2
+ziekte van crohn,ziekte van danon,0.9830281138420104,2
+kleincellig lymfocytair b-cellymfoom,kleincellig lymfocytair b cel lymfoom,0.9815863370895386,2
+a pulmonalis,subpleuraal,0.9171648025512696,2
+m hirschsprung,hirschsprung,0.9793152809143066,2
+hyaliene membraan ziekte,hyaliene membraanziekte,0.9871010184288024,2
+tumorembolus,tumor embolus,0.9602418541908264,2
+zwangerschapsveranderingen,schildwachtklier,0.9602893590927124,2
+leucopenie,leukopenie,0.9411463737487792,2
+hidradenoma,vaatanomalie,0.9602985978126526,2
+sertolicell only syndroma,sertoli cell only syndroma,0.9555816650390624,2
+keratoacanthoom.,adenoacanthoom,0.9481205344200134,2
+pericard vocht,vocht pericard,0.9871760606765748,2
+emfysema pulmonum,lymfocytair thymoom,0.9554587602615356,2
+metastase melkgang carcinoom,metastase melkgangcarcinoom,0.9796370267868042,2
+hoog gradig urotheelcelcarcinoom,hooggradig papillair urotheelcelcarcinoom,0.9796139001846312,2
+rheuma knobbel,dubbel pyelum,0.9606236219406128,2
+faecoliet,faecesretentie,0.960695743560791,2
+peri-apicaal weefsel,perirectaal weefsel,0.943922519683838,2
+zegelring carcinoom,zegelringcarcinoom,0.9554396867752076,2
+groei achterstand,periureteraal weefsel,0.9608522057533264,2
+hypoglykemie,hypospermie,0.9438063502311708,2
+pulmonaal arterie,placenta succenturiata,0.955378532409668,2
+acinaircelcarcinoom,acinaircel carcinoom,0.9794731736183168,2
+alzheimers disease,alzheimer s disease,0.9872407913208008,2
+prionziekte,prion ziekte,0.961172878742218,2
+endometrioidcarcinoom,endometrioid carcinoom,0.9793818593025208,2
+coma diabeticum,epithelioma benign,0.944190502166748,2
+consult ten behoeve derden,consult ten behoeve van derden,0.9600423574447632,2
+cirrosis,melanosis,0.9562004804611206,2
+sle,wrat,0.9443038702011108,2
+onbekende term,localisatie onbekend,0.9173355102539062,2
+chronische lymfatische leukemie b-celtype,chronische lymfatische leukemie t cel type,0.9815277457237244,2
+bvo,bursa,0.9173557162284852,2
+multiple lokalisaties,multipele lokalisaties,0.9001308083534241,2
+infiltrerend ductaalcarcinoom.,infiltrerend ductaal carcinoom,0.9811728596687316,2
+punctie clinicus,medicamenten,0.9176689386367798,2
+geen tumor rest,congenitale rest,0.9177507758140564,2
+auto-immuunhepatitis,autoimmuun gastritis,0.9561097621917723,2
+metastase kleincelligcarcinoom,metastase kleincellig osteosarcoom,0.9808578491210938,2
+adeno carcinoom,maligne carcinoid,0.9474772810935974,2
+yolk sac tumor,yolksac tumor,0.9475579857826232,2
+mammaamputatie,mammareductie,0.9447471499443054,2
+hyaline membraan ziekte,hyaline membraanziekte,0.9807578325271606,2
+diarrhee,stuit,0.8992953300476074,2
+myocard fibrose,myocardfibrose,0.9477214217185974,2
+geneesmiddelenreactie,geneesmiddeleneffect,0.9803214073181152,2
+pseudo-angiomateuze stromahyperplasie,pseudoangiomateuze stromahyperplasie,0.9869848489761353,2
+m parkinson,parkinson,0.947828471660614,2
+inclusie cyste,inclusie cysten,0.9801117777824402,2
+kleincellig carcinoma,kleincellig carcinoom,0.9800817966461182,2
+rheumatische nodus,reumatische nodus,0.9800727367401124,2
+syringoma,parakeratosis,0.9411855340003968,2
+morbus takayashu,morbus takayasu,0.976357638835907,2
+peesschedefibroom,myxofibroom,0.9272457361221312,2
+akute stuwing,veneuze stuwing,0.9309571385383606,2
+mitraal insufficientie,renale insufficientie,0.9668066501617432,2
+lymfocele,lymfocyt,0.9727053642272948,2
+pneumoconiosis,pneumoconiose,0.9668462872505188,2
+schildwachterklierprocedure,dysplastisch schildklierweefsel,0.9725911617279052,2
+1-maal,maal,0.8720563054084778,2
+pleuraplaque,melanoblastoom,0.952246367931366,2
+samengestelde nevus,samengestelde naevus,0.9670421481132508,2
+hemopericardium,endocardium,0.9670668840408324,2
+reuscel arteriitis,arteriitis acuta,0.9723502397537231,2
+sinus sphenoidalis,ductus galactophorus,0.9722496867179872,2
+multi systeematrofie,metastase fibrosarcoom,0.931086242198944,2
+niet-kleincelligcarcinoom,heldercellig niercelcarcinoom,0.9719112515449524,2
+lymph klier,chronisch ulcus,0.9311074018478394,2
+5keer,endm,0.8696304559707642,2
+silicosis,culicosis,0.9721440672874452,2
+veno-occlusive disease,hydatide disease,0.9370484352111816,2
+ip reactie positief,i p reactie positief,0.950088381767273,2
+sentinelnode,duodenum,0.9368302226066588,2
+acute haemorrhagische pancreatitis,acute hemorragische cholecystitis,0.9676307439804076,2
+kleincelligcarcinoom,kleincellig osteosarcoom,0.9676311016082764,2
+vpad,mlpa,0.9314600825309752,2
+lymfeadenopathie,nefrotubulopathie,0.967682957649231,2
+nephrosclerose,osteosclerose,0.9667991399765016,2
+hyperemie,hypercalcaemie,0.9523208141326904,2
+ventrikelseptum defect,ventrikelseptum,0.9523351788520812,2
+myelomeningocele,myelomonoblast,0.963905930519104,2
+sphenoid,sigmoid,0.9497745633125304,2
+nasolabiaal plooi,nasolabiaalplooi,0.9735769629478456,2
+schrompelnieren,schrompelnier,0.9734576344490052,2
+basaalcelhyperplasie,epitheelhyperplasie,0.973448634147644,2
+coma hepaticum,lipomatose,0.929594337940216,2
+vbp,pap iiib,0.9296302795410156,2
+long emphyseem,longsegment,0.9300242066383362,2
+reticulaire erythemateuze mucinosis,folliculaire mucinose,0.9733870029449464,2
+contact dermatitis,contactdermatitis,0.9664796590805054,2
+arterie carotis interna,arteria carotis interna,0.973204791545868,2
+embryonaalcarcinoom,embryonaalcelcarcinoom,0.9910188913345336,2
+melanose,lipidose,0.9665579199790956,2
+clear cell adenocarcinoom,acinic cell adenocarcinoma,0.9497997760772704,2
+dwarslesie,dwarslaesie,0.9382930994033812,2
+arteria coronaria dextra,arteria vertebralis,0.9665695428848268,2
+intrauterien,intra uterien,0.930532693862915,2
+revisieextern concordant,revisie concordant,0.9382265210151672,2
+heldercellig niercel carcinoom,heldercellig niercelcarcinoom,0.9910549521446228,2
+ductuscarcinoma infiltrerend,ductuscarcinoom infiltrerend,0.9912953972816468,2
+lichen sclerosus et atroficans,lichen sclerosus et atrophicans,0.9729251861572266,2
+basaalceladenoom,basaalcellenpapilloom,0.9667015075683594,2
+metastase infiltrerend ductus carcinoom,metastase infiltrerend ductuscarcinoom,0.992222011089325,2
+corpus luteumcyste,corpus luteum cyste,0.9679263234138488,2
+steatonecrose,coronairsclerose,0.952892243862152,2
+pseudo cyste,pseudocyste,0.9695687294006348,2
+#NAAM?,nataal,0.8450430035591125,2
+arterie basilaris,arteria basilaris,0.9690065383911132,2
+nodaal marginale zone b-cellymfoom,nodaal marginale zone b cel lymfoom,0.9691457748413086,2
+ziekte van huntington,syndroom van zellweger,0.9332584738731384,2
+onderhuidsweefsel,onderhuids bindweefsel,0.9693519473075868,2
+dood oorzaak,droog gangreen,0.9350611567497252,2
+alcohol hepatitis,alcoholische hepatitis,0.9511290192604064,2
+haemangiopericytoma,haemopericardium,0.969461977481842,2
+geen rest tumor,geen tumor,0.9333721399307252,2
+paraganglioma,paraganglioom,0.9695567488670348,2
+lithiase,galstase,0.9506545066833496,2
+lymphklier oksel,lymfklier oksel,0.9679269194602966,2
+malakoplakie,buikaorta,0.9336307048797609,2
+maligne lymfoom lymfoblastair t,t lymfoblastair lymfoom,0.9696328639984132,2
+adenocarcinoom metastase,metastase adenocarcinoom,0.9951213002204896,2
+atypisch fibroxantoom,atypisch fibroxanthoom,0.9703500270843506,2
+dna positief,rna test positief,0.9338261485099792,2
+acute promyelocyten leukemie,acute promyelocytenleukemie,0.9698016047477722,2
+herniadiafragmatica,hernia diafragmatica,0.950946569442749,2
+cryoglobulinemie,cryofibrinogeenaemie,0.934358537197113,2
+hartklep insufficientie,hartpunt,0.934685230255127,2
+endosalpingiosis,endosalpingiose,0.9699628353118896,2
+progressieve multifocale leucoencephalopathie,progressieve multifocale leukencefalopathie,0.968961238861084,2
+neurofibromatosis,gliomatosis cerebri,0.9513301849365234,2
+reaktieve verandering,regressieve verandering,0.9688338041305542,2
+varicocele,varicokele,0.9513701796531676,2
+atriumseptum defect,endometriosis internal,0.9315550327301024,2
+igg 4 gerelateerde ziekte,igg4 gerelateerde ziekte,0.9924343824386596,2
+gastro intestinale stroma tumor,gastrointestinale stroma tumor,0.9925953149795532,2
+status astmaticus,astma,0.8603072166442871,2
+progressieve multifocale leukoencephalopathie,progressieve multifocale leukoencefalopathie,0.9929208159446716,2
+refractaire anaemie,refractaire anemie,0.9716075658798218,2
+kaposi sarcoma,kaposi s sarcoma,0.9684288501739502,2
+anca,adca,0.9517354369163512,2
+m huntington,huntington,0.9359980821609496,2
+asc-us,adc i s,0.8573705554008484,2
+acinair celcarcinoom,acinair adenocarcinoom,0.9685198664665222,2
+leverfalen,spiermarker,0.9322896599769592,2
+olfactorius neuroblastoom,olfactorius neuroblastoma,0.9930607080459596,2
+links verschuiving,linksverschuiving,0.951523780822754,2
+zwangerschapsprodukt,zwangerschapsrest,0.9685580730438232,2
+hemosiderosis,tubulonecrosis,0.9713420271873474,2
+aktieve ontsteking,erosieve ontsteking,0.9711328744888306,2
+papillair urotheelcelcarcinoma graad 2,papillair urotheelcelcarcinoom graad 2,0.9934399724006652,2
+seborrhoische dermatitis,eczemateuze dermatitis,0.9687628746032716,2
+arterie femoralis,arteria femoralis,0.9710798263549804,2
+acute leucaemie,acute pyelitis,0.9355720281600952,2
+decompensatiocordis,metatypisch carcinoom,0.9295697212219238,2
+haemolytische streptococ alfa,beta hemolytische streptococcen,0.9524238109588624,2
+lipoid pneumonie,diffuse bronchopneumonie,0.9660800099372864,2
+extra hepatische galgang,extrahepatische galgang,0.9741662740707396,2
+granulair celtumor,maligne sertoliceltumor,0.9640905857086182,2
+acinair cel carcinoom,alveolair carcinoom,0.9656368494033812,2
+infiltrerend lobulaircarcinoom,infiltrerend lobulair carcinoom,0.989723265171051,2
+long hilus,hilus long,0.9646970629692078,2
+ventrikel,schedel,0.9537591934204102,2
+fibro-epithelioma,adenosquameus carcinoom,0.95351380109787,2
+maligne lymfoom b-cel type,ml lymfoblastair t cel type,0.9530760049819946,2
+tumor embolie,tumor embolus,0.9742408394813538,2
+retroplacentair haematoom,anovulatoir veranderd endometrium,0.9641847014427184,2
+basaalcelcarcinoma solide type,basaalcelcarcinoom solide type,0.9905115962028505,2
+alfa1 antitrypsine deficientie,alfa 1 antitrypsine deficientie,0.9904963970184326,2
+reuscel granuloom,reuscel fibroom,0.9747649431228638,2
+infiltrerend ductus carcinoma,ductuscarcinoom infiltrerend,0.975757360458374,2
+c3,c 3,0.9397562146186828,2
+conus excisie,excisie,0.927698016166687,2
+parvo virus,parvovirus,0.9290003180503844,2
+rheumaknobbel,reumaknobbel,0.975666046142578,2
+antrum maagslijmvlies,cardia maagslijmvlies,0.9751918315887452,2
+basaal celcarcinoom,nodulair basaalcelcarcinoom,0.9651743173599244,2
+ipmn,ikc,0.928420066833496,2
+basalcelcarcinoom,lipoidcarcinoom,0.964275360107422,2
+cardiale cirrhose,bronchiale endo echografie,0.9650773406028748,2
+doorgroei van tumor,doorgroei tumor,0.9534257054328918,2
+actinomycosis,hemoperitoneum,0.9533403515815736,2
+a.carotis,subcutis oor,0.8847815990447998,2
+metastase embryonaalcel carcinoom,metastase embryonaalcelcarcinoom,0.9905312657356262,2
+progesteron receptor bepaling positief,progesteron receptorbepaling positief,0.9643208980560304,2
+voedselaspiratie,vruchtwateraspiratie,0.9737470149993896,2
+ganglioglioma,ganglioglioom,0.9639205932617188,2
+klonaliteitsbepaling,plasmocellulaire ontsteking,0.973723530769348,2
+ip negatief,hpv negatief,0.9392215609550476,2
+medicatieeffect,appendicitisrest,0.9278553128242492,2
+intima fibrose,intimafibrose,0.9405008554458618,2
+kerato-acanthoma,kerato acanthoom,0.966057062149048,2
+maligne melanoom in situ,maligne melanoma in situ,0.9737573862075806,2
+klatskintumor,grawitztumor,0.9639201164245604,2
+autoimmuunziekte,autoimmuun ziekte,0.9657551646232604,2
+cardio myopathie,portio epitheel,0.9493451714515686,2
+melanoom metastase,metastase melanoom,0.9900528788566588,2
+cholecystolithiase,erytroblastose,0.973779797554016,2
+cystadenoma,melanoderma,0.953904390335083,2
+anus slijmvlies,slijmvlies anus,0.9738405346870422,2
+metastase lobulair carcinoma infiltrerend,metastase lobulair carcinoom infiltrerend,0.9899569749832152,2
+progesteronreceptor bepaling positief,goed gedifferentieerd overgangsepitheelcarcinoom,0.9646854996681212,2
+geen aanwijzingen voor maligniteit,geen aanwijzing voor maligniteit,0.9905898571014404,2
+ards,agd,0.9410419464111328,2
+hormonaal effekt,prolactine hormoon,0.9505868554115297,1
+vp.b.,m inv c,0.8501248359680176,1
+mega-ureter,ureter,0.8884553909301758,1
+metanephrisch adenoom,symplastisch leiomyoom,0.9493468403816224,1
+thorax wand,thorax,0.9015783071517944,1
+antistolling,graviditeit,0.8899375200271606,1
+cryptokokken,waterpokken,0.8842928409576416,1
+24maal,extraduraal,0.8891775012016296,1
+linker hemisfeer,hemisfeer,0.9487148523330688,1
+immuun cytochemie,immuuncytochemie,0.9486212730407716,1
+fibreuze papel van de neus,fimbriae van de tuba,0.9471735954284668,1
+adenomyosis.,adenoiditis,0.9471231698989868,1
+adenofibroma,karyorrhexis,0.9505701065063475,1
+pleomorf adenoma,adenosarcoom,0.949328064918518,1
+m.pick,pick,0.8561973571777344,1
+multipele organ failure,multipele fracturen,0.8896802663803101,1
+stem band,stemband,0.8541990518569946,1
+kin-2,cin 2,0.9017353653907776,1
+a. carotis,subcutis oor,0.8847815990447998,1
+chronische venostase,chronische atrofische gastritis,0.8884106874465942,1
+pancraeas,parodontium,0.8873515129089355,1
+chronische rejektie,psychische stoornis,0.950683891773224,1
+arterio sclerosis,synovitis acuta,0.9491806030273438,1
+chondroid syringoma,ganglioneuromatose,0.94913911819458,1
+mediane hals cyste,mediane halscyste,0.9507115483283995,1
+m. grover,morbus grover,0.8240809440612793,1
+intrauterine vrucht dood,vroeg neonatale sterfte,0.9490529894828796,1
+ziekte van creutzfeldt jakob,eindfalanx van de wijsvinger,0.9507187008857728,1
+by-pass',endm at e,0.8331440687179565,1
+cheilognatho palatoschisis,gestoorde hematopoese,0.946807861328125,1
+vet necrose,bot necrose,0.95078307390213,1
+hart(dilatatie,dilatatie,0.9063950777053832,1
+infiltraat,acuut infarct,0.9508159160614014,1
+hydradenoma,keratodermia,0.946807861328125,1
+vinger4,vinger 4,0.9467806220054626,1
+peritoneaal holte,benigne teratoom,0.9468565583229064,1
+urine de blaas,cyt blaas,0.9051271080970764,1
+h.p.v. hoogrisico subtype,h p v laag risico subtype,0.8444351553916931,1
+steatose hepatis,leucostase,0.9039875268936156,1
+e. coli,melanosis coli,0.8385424613952637,1
+galgang atresie,thoracale wervel,0.9489586353302002,1
+thrombosis,mucostasis,0.9470297694206238,1
+multipel organ failure,multiple organ failure,0.903575837612152,1
+tcellymfoom,cystadenolymfoom,0.9506241083145142,1
+borderlinetumor,borderline maligniteit,0.9470004439353944,1
+bijnier beiderzijds,beiderzijds,0.9489644765853882,1
+haemangio-endothelioom,mesoblasten nefroom,0.948988676071167,1
+stafylokokken,chorionvlokken,0.9048148989677428,1
+9keer,frontaal,0.8858205676078796,1
+sikkel cel,dubreuilh,0.9469671845436096,1
+5maal,metatarsale 5,0.8883606195449829,1
+haemangiofibroma,lymfangiosarcoom,0.9506399631500244,1
+shock lever,lever,0.886403501033783,1
+exantheem,epoophoron,0.9493471384048462,1
+shock-nier,reactief beeld,0.8673682808876038,1
+lastige diagnose code!??,status na injectie,0.8593859672546387,1
+b-cellymfoom.,ml lymfocytair b,0.9007149338722229,1
+bijbevinding,verwijding,0.9499129056930542,1
+a. femoralis,hernia femoralis,0.874464213848114,1
+atrioventriculaire bundel linker tak,atrioventriculair klep,0.9499433636665344,1
+farynx ,falanx,0.949498414993286,1
+diaphragma,neurolemma,0.9480145573616028,1
+micro-abces ,apicaal abces,0.895517110824585,1
+krab effect,thymoom type b2,0.8731551766395569,1
+meningokok,melkgang,0.9483752846717834,1
+overgangs epitheelcarcinoom,overgangsepitheelcarcinoom,0.9484347701072692,1
+sle.,sqm,0.8954450488090515,1
+bulleus emphyseem,emfyseem bulleus,0.9479222893714904,1
+hoefijzer nier,niet gebruiken,0.9479066133499146,1
+26maal,anencefaal,0.8789183497428894,1
+trombus.,morbus behcet,0.8953785300254822,1
+sepsis lever,lever steatose,0.8794620633125305,1
+iuvd,kuf,0.8787404298782349,1
+spindle cell lipoom,spindle cell nevus,0.8957701921463013,1
+galactocele,cristabiopt,0.9483435750007628,1
+syndroom',syndese,0.9495558738708496,1
+leydigcel tumor,goedaardige tumor,0.949636459350586,1
+ga.,gal,0.8767216801643372,1
+corbovinum,botfractuur,0.9496808052062988,1
+multipele localisaties.,multipel myeloom,0.8781189322471619,1
+incisiebiopsie,opruimreactie,0.9482855796813964,1
+ip-reactie,reactief,0.8962966203689575,1
+naevus naevo cellularis,naevus sebaceus senilis,0.9495495557785034,1
+boven kwab long,bovenkwab long,0.9481464624404908,1
+a. basilaris,partus normaal,0.8765478134155273,1
+a carotis,carotid body,0.8784974217414856,1
+ochronosis,culicosis,0.9481982588768004,1
+tweeling zwangerschap,tweelingzwangerschap,0.9481650590896606,1
+arterie coronair,arteriole,0.948323130607605,1
+tbc.,hrm,0.8960450887680054,1
+leucokeratose,leucospermie,0.9478749632835388,1
+11keer,tenen,0.8705940246582031,1
+6keer,endm,0.879794716835022,1
+poliepectomie,sympathectomie,0.950464963912964,1
+vet embolie,vetembolie,0.9503047466278076,1
+m.psoas,dyspl m,0.8839288949966431,1
+vin3.,pin iii,0.8922727704048157,1
+seborrhoische keratose.,lichen planusachtige keratose,0.9474194645881652,1
+multiple system atrofy,multiple system atrophy,0.8688561320304871,1
+10keer,teennagel,0.8669822216033936,1
+bot biopt,biopt,0.9473370909690856,1
+thecoma,agd,0.8930107355117798,1
+bot biopt ,biopt,0.9473370909690856,1
+5 maal,maal,0.8903239369392395,1
+pleura vocht,pleuraholte,0.9473021030426024,1
+axonen,axon,0.9504735469818116,1
+cysten nier,ehler danlos,0.947290301322937,1
+volgt,skelet,0.9002187848091125,1
+2 - maal,b cel,0.8692452907562256,1
+geen  afwijkingen,zenuwstelsel afwijking,0.9474259614944458,1
+contusie haarden,arterie hoofd,0.9494229555130004,1
+hartfalen,galsteen,0.9476166367530824,1
+boeding,cushing,0.8798032402992249,1
+cholesterol granuloom,granulocytose,0.947828471660614,1
+sex cord stroma tumor,gonadal stromal tumor,0.9478262662887572,1
+pathol-nummer = s05-1,c erb2 negatief,0.8939982056617737,1
+"pheochromocytoma,nos",nephronophthisis,0.9494097828865052,1
+athero sclerose,voedsel aspiratie,0.9476776719093324,1
+retropharyngeaal,laryngectomie,0.9501787424087524,1
+papillair fibro-elastoom,maligne sertoli leydigceltumor,0.9502044320106506,1
+cute ontsteking,functie,0.8822261691093445,1
+m. temporalis,os temporale,0.8823552131652832,1
+nier arterie,arterieel,0.948472023010254,1
+a femoralis,ulceraties,0.8695714473724365,1
+dermatofibroma.,myelomonoblast,0.9475128054618835,1
+mammareduktie,naadlekkage,0.9485459923744202,1
+chronische rheumatoide arthritis,chronische glomerulonefritis,0.9466196298599244,1
+diamacro,dilatatio,0.9441410899162292,1
+22 maal,maal,0.9069032669067384,1
+frontotemporale dementie.,desquamatieve ontsteking,0.9392289519309998,1
+papil necrose,corticale necrose,0.9400392174720764,1
+coronairlijden,leydigcel,0.9400384426116944,1
+ulceratief,ulceratie,0.9398555755615234,1
+hus,pus,0.9397964477539062,1
+merkel cel carcinoom,parietaal cel carcinoom,0.93971848487854,1
+ilven,seniel,0.9396004676818848,1
+ml-bcll,ml b cel,0.9291115403175354,1
+clear cell adenoma,tubular adenoma,0.9291685223579408,1
+ewingsarcoom,hidradenoom,0.9394482374191284,1
+auto-immuunproces,autoimmuun proces,0.9292420744895936,1
+pre-auriculair ,palatum durum,0.9295264482498168,1
+sepsus,tarsus,0.9393543004989624,1
+von meijenburg complex,von meyenburg complex,0.939257025718689,1
+"nb ip gebruikte wij vroeger in zmc bij alle nummers met immunoperoxidase reactie (ihc). nu laat ik het weg, was vroeger voor de declaratie van belang",primair cutaan cd8 positief agressief epidermotroop t cel lymfoom,0.9295543432235718,1
+haemorroid,immatuur,0.9402035474777222,1
+infardt,wervel,0.9391669034957886,1
+gram positieve kok,gram positieve bacillen,0.9390493035316468,1
+hpv hoogrisico type negatief,teratoom postpubertaal type,0.9389495849609376,1
+fibro adenoom,monomorf adenoom,0.9389090538024902,1
+pneumoniae,pneumonia,0.9388288855552672,1
+caudatum,caecum,0.9387593269348145,1
+h elicobacter pylori,mycobacterium avium,0.9386388659477234,1
+bijnier-en,bijnieren,0.9385467171669006,1
+doodsoorzaak. long,doodsoorzaak,0.9304665327072144,1
+myeloma,tularaemie,0.9383151531219482,1
+midden oor,bodem mond,0.9305803775787354,1
+perifeer,sequester,0.9380928874015808,1
+geen tumor cellen,geen tumor,0.9379130601882936,1
+casus vervolgen,syndroom van fahr,0.9401111602783204,1
+colontransversum,endometrium,0.9402173161506652,1
+lymfvat invasie,lymfvat,0.9466140270233154,1
+hyperemisch,voldragen,0.927698016166687,1
+panelbeoordeling concordant,atheromateuze verandering,0.926970601081848,1
+cysteuze veranderingen,georganiseerde thrombus,0.9270063638687134,1
+ifl,thenar,0.9271640777587892,1
+morbusbowen,hoornparels,0.9416340589523317,1
+spindle cell carcinoom,glassy cell carcinoom,0.94135582447052,1
+veno occlusive disease,hydatide disease,0.941345751285553,1
+keratoacantoma,polymenorrhoea,0.9412450790405272,1
+migratiestoornissen,georganiseerd hematoom,0.9273689985275269,1
+acuut oedeem,her2neu negatief,0.9410998821258544,1
+beenmergsternum,campylobacter,0.9410290718078612,1
+pleva,vulva,0.9275864362716676,1
+bijt fibroom,caries blijvend gebit,0.9275866150856018,1
+chordoma,chorda,0.9409920573234558,1
+gd,g d,0.940962851047516,1
+post operatieve toestand.,postoperatieve toestand,0.9286702275276184,1
+myelolipoma,cricopharynx,0.9409080743789672,1
+toxicosis,iritis,0.9277985095977784,1
+kin-3,panin 3,0.9278112053871156,1
+lactasedeficientie,posthepatitische levercirrose,0.940883457660675,1
+micro curettage,curettage,0.9408328533172609,1
+von recklinghausen,werdnig hoffmann,0.940817415714264,1
+bethesda5,bethesda 5,0.9407432079315186,1
+onder kaak,onderkaak,0.9279612302780152,1
+leucemie,septicemie,0.9281377792358398,1
+geen,teek,0.9284172058105468,1
+tunnelcluster,endocervicale tunnelcluster,0.9285482168197632,1
+her 2 neu negatief,her2neu negatief,0.940302848815918,1
+pseudolymphoma,neoplasma,0.9286404252052308,1
+neus-keelholte,bijholte neus,0.9306113719940186,1
+psammomabodies,tromboembolie,0.9378969073295592,1
+niets ingevoerd,erytropoese rijpingsremming,0.9378364086151124,1
+metrorrhagie,hypernefroom,0.935163676738739,1
+openbiopt,pipellebiopt,0.9326307773590088,1
+acute leukaemie,traumatische ruptuur,0.9326406717300416,1
+nec,bot,0.9357818961143494,1
+ontstekings rest,ontsteking,0.9357712864875792,1
+"hersenen met afwijkingen die passen bij bestaand hebbende hypertensie, met hebben verlopen agonale, globale hypoxie. geen macroscopische infarcten of bloedingen.",geen voor maligniteit verdachte cellen gevonden,0.9355502128601074,1
+nagel bed,nagelbed,0.932733416557312,1
+fibro-elastose,fibroserende adenose,0.9327479004859924,1
+teen1,teen 1,0.9329540729522704,1
+mohs,pons,0.9329718947410583,1
+cerebro vasculair accident,cerebrovasculair accident,0.9355305433273317,1
+angio-sarcoom,metastase kaposi sarcoom,0.933156192302704,1
+leukemoide reactie,autoimmuun reactie,0.9353805780410768,1
+artritis acuta,artritis,0.950829029083252,1
+extrauterine graviditeit,lentigineuze hyperplasie,0.9332823157310486,1
+pankreas,pancreas,0.9306272864341736,1
+pseudomyxoma,hygroma cysticum,0.933424711227417,1
+plasmacel mastitis,blunt duct adenosis,0.9334415197372437,1
+cyste rechts,epididymis rechts,0.9349657893180848,1
+levercel necrose,coxartrose,0.9335744380950928,1
+pulmonaal insufficientie,renale insufficientie,0.9336389899253844,1
+pineoblastoma,bronchopulmonaal,0.9337694048881532,1
+doods oorzaak,hodgkin sarcoom,0.9348533153533936,1
+bij-oortje,bovenkwab,0.9339242577552797,1
+necrose haard,morbus cowden,0.9347712397575378,1
+atriumhart,atrium hart,0.9340050220489502,1
+multipele localisatie,multipele myeloom,0.9346718192100524,1
+"sorry, hier kan ik echt niets op bedenken",ckit mutatie niet aanwezig,0.9344425201416016,1
+fibro-adenoom,oxyfiel adenoom,0.9345951080322266,1
+m. kimmelstiel-wilson,kimmelstiel wilson,0.9325549006462096,1
+reechts,rechter,0.9358909130096436,1
+non-hodgkinlymfoom.,tweelobbige milt,0.9322977662086488,1
+vers stam,spieren,0.9359588623046876,1
+stressulcus,hemorroid,0.930675745010376,1
+cylindercel veranderingen,atrium fibrilleren,0.9307008385658264,1
+. oesophagus,barrett oesophagitis,0.9375817179679872,1
+resectievolgens mohs,myelopoiese rechtsverschuiving,0.9375720620155334,1
+hart fibrillatie,hartfibrillatie,0.9375412464141846,1
+immuun deficientie,folinezuur deficientie,0.9309538006782532,1
+genezen tuberculose,tuberculose,0.9371924996376038,1
+aneurysmadissecans,dyshaematopoiese,0.9371715784072876,1
+knie holte,hamartie,0.9311355352401732,1
+carcinoma.,carcinoid,0.9312344193458556,1
+angio-invasie,angioinvasie,0.9314249753952026,1
+bcel lymfoom,nodulair lymfoom,0.9315418004989624,1
+poliep ectomie,trombocytemie,0.9368021488189696,1
+tubulovilleusadenoma,melanosarcoom,0.9367886185646056,1
+ashy dermatose,iga dermatose,0.9367522597312928,1
+leopardsyndroom,adenofibroom,0.9366887211799622,1
+adipo necrose,tubulaire necrose,0.9315871000289916,1
+thrombo-embolieen,getromboseerde vene,0.9366734623908995,1
+irritatie-fibroom,folinezuur deficientie,0.936585545539856,1
+pml,hrm,0.9316447377204896,1
+l-sil,l e cel,0.9317581057548524,1
+onder kwab,onderbuik,0.9321498274803162,1
+pancreas staart,thoracale wervel,0.9364326000213624,1
+motoneuron disease,granulosa cell tumor,0.9363757371902466,1
+vena cava superiorsyndroom,intima arteriewand,0.9321560263633728,1
+ramus descendens a.coronaria,ramus descendens arteria coronaria,0.9322275519371032,1
+reaktief proces,progesteron preparaat,0.9361591339111328,1
+hurthle cel tumor,maligne mestcel tumor,0.9418515563011168,1
+leydig cel tumor,dubbele maligne tumor,0.9265981912612916,1
+neurogeen,neurogeen sarcoom,0.9419153332710266,1
+long stuwing,stuwing,0.917508065700531,1
+staphylococ,stafylococ,0.945598840713501,1
+sentinelnode procedure,whipple procedure,0.9146477580070496,1
+peritonitis en nieren,metastase maligne thymoom,0.9454358816146852,1
+friedreichs ataxia,friedreich s ataxia,0.9454158544540404,1
+dyshematopoiese,synoviale cyste,0.945381999015808,1
+primaire localisatie uterus,tonsilla lingualis,0.9452741742134094,1
+slaap streek,slaapstreek,0.9452669024467468,1
+cardiacarrest,spinalioom,0.9166159629821776,1
+praeauriculair,praematuritas,0.9451647996902466,1
+sympaticus,serous cystoma,0.9166854619979858,1
+arthrose.,bekkenholte,0.9168782234191896,1
+koprostase,kyfoscoliose,0.9171662926673888,1
+opticusatrofie,plasmacytoom,0.9450587034225464,1
+huidvulva,vaginawand,0.917811930179596,1
+hart infarct,infarct,0.9199718832969666,1
+kalk depositie,amalgaam depositie,0.9178704023361206,1
+gemelliplacenta,arteriosclerose,0.944886326789856,1
+rontgen localisatie,veteranenziekte,0.9448813199996948,1
+angio invasie,tubo ovariaal,0.9178988337516784,1
+beenmergcrista,endometriaal,0.9447752237319946,1
+fibrolipoma,cricopharynx,0.9446511268615724,1
+sertoli cel only syndroom,caplan syndroom,0.9182506799697876,1
+nier insufficientie.,placenta insufficientie,0.918555498123169,1
+consultintern,consult overeenstemming,0.9191309213638306,1
+neus rug,subcutis rug,0.9194043278694152,1
+verlittekening,strengvorming,0.9195604920387268,1
+grensvlak-naevus,zwembroek naevus,0.9444848895072936,1
+athelectase,osteofyt,0.9444763660430908,1
+basaal cell adenoom,ductaal adenoom,0.9456406831741332,1
+meckel,skelet,0.9457464814186096,1
+pylorus stenose,anus praeter,0.9457833170890808,1
+katheter urine,urineflegmone,0.9139317274093628,1
+10 maal,maal,0.9071222543716432,1
+a hepatica,cataract,0.907243013381958,1
+adenocarcinom ain situ,intracanaliculair adenofibroom,0.9465017318725586,1
+hoofd bronchus,cyt bronchus,0.907657265663147,1
+leversteatosis,angiomatosis,0.94646954536438,1
+vvd,v k,0.9097907543182372,1
+23 maal,maal,0.9102545380592346,1
+bethesda3,bethesda 3,0.9463087916374208,1
+8 maal,maal,0.9104676842689514,1
+intramusculair myxoma,aneurysma sacculare,0.9462582468986512,1
+cardiomyopatie,hemangiomatose,0.9461840391159058,1
+"hersenen met status lacunaris (hypertensie), zonder bloedingen of infarcten.",miltlymfoom met villeuze lymfocyten,0.9106985330581664,1
+streptokokken infectie,autonome zenuwplexus,0.9107285141944884,1
+operatie veranderingen,mamma sparende operatie,0.9112703204154968,1
+enteriitis,placentitis,0.9460809826850892,1
+mitralis-stenose,metabole stoornis,0.9459792971611024,1
+urine-blaas,papilloom urineblaas,0.911714494228363,1
+m pectoralis,cervicale lymfklier,0.912001132965088,1
+verslag consult extern,organiserende thrombus,0.912766695022583,1
+onder arm ,spier hand,0.9130228757858276,1
+aorta boog,droog gangreen,0.9130712151527404,1
+11 maal,maal,0.9130801558494568,1
+m psoas,dyspl m,0.9133552312850952,1
+feces,absces,0.9136266112327576,1
+a.coronaria,vena coronaria,0.913899540901184,1
+spoelcellipoom.,myxolipoom,0.9458191990852356,1
+rontgenlokalisatie,galgangproliferatie,0.9457889795303344,1
+morbushodgkin,schaamstreek,0.919851779937744,1
+papil oedeem,cervicaal merg,0.9443835020065308,1
+geentumor,geen resttumor,0.9419204592704772,1
+scheen been ,scheen,0.9423936605453492,1
+serose,coecum,0.942964255809784,1
+pseudo-artrose,pseudoartrose,0.9236164093017578,1
+degeneratieve veranderingen.,verslijmende degeneratie,0.9236280918121338,1
+metastasen grawitz tumor,buschke loewenstein tumor,0.9238620400428772,1
+trisomie21,trisomie 21,0.9428829550743104,1
+superior,complement,0.9238851070404052,1
+placenta villus,villitis placentae,0.9241122603416444,1
+warthintumor,haemopericard,0.9426170587539672,1
+chromosomale afwijkingen,middenoor chronische ontsteking,0.9245263338088988,1
+subependymoma,appendicitis subacuta,0.9425918459892272,1
+grensvlak nevus,grensvlaknaevus,0.9424988031387328,1
+atheroom cyste,atheroom,0.9424386024475098,1
+sperma granuloom,cartilago thyroidea,0.9424380660057068,1
+polycytaemia vera,polycythemia vera,0.924735426902771,1
+glioma,gliose,0.9442317485809326,1
+oude infarcten,infarcten,0.9423121213912964,1
+dna negatief,rna negatief,0.9422212839126588,1
+geen polymorf,polymorfie,0.924929141998291,1
+dunnedarm ,colonwand,0.9420595169067384,1
+m. rectus abdominis,musculus rectus abdominis,0.9251117706298828,1
+pneumokokken,megakaryocyten,0.92511785030365,1
+ventrikel septum,ventrikelseptum,0.9419851899147034,1
+m.hodgkin,hodgkin,0.925429344177246,1
+alfa-1-antitrypsinedeficientie,alfa 1 antitrypsine deficientie,0.925502061843872,1
+mitralis ring,randsinus placenta,0.9256110787391664,1
+diverticulosis.,reticulosis,0.925772786140442,1
+mineralisatie stoornis,lactatie stoornis,0.9419808983802797,1
+linksrechts onbekend,afwijkende cellen,0.9263232946395874,1
+cardiamaag,naadlekkage,0.943004846572876,1
+hydrocefalie,hydranencefalie,0.943060040473938,1
+cirrhose.,dieulafoy,0.9230562448501588,1
+overgevoeligheids reactie,hurthlecelmetaplasie,0.9430980682373048,1
+carcinoom in situ.,carcinoma in situ,0.944222927093506,1
+cel arm,falanx hand,0.9202672243118286,1
+hematothorax.,haematothorax,0.920326054096222,1
+lower nefron nefrose,subdurale bloeding,0.920520544052124,1
+linker coronair arterie,coronair trombose,0.9346327185630798,1
+nierlinks,nier links rechts,0.9209856986999512,1
+obstructieileus,haemopericardium,0.9441275596618652,1
+a mesenterica superior,vena mesenterica superior,0.9211655855178832,1
+eaa,ei,0.9439484477043152,1
+mastopatie,amputatie,0.9439424276351928,1
+phaeochromocytoma,erythropoietic porphyria,0.943895936012268,1
+atero sclerose,sclerose,0.921311855316162,1
+weefsel concrement,kalkconcrement,0.94379860162735,1
+nigra,placenta,0.9214358329772948,1
+geenafwijkingen,tussenwervelschijf,0.9436694979667664,1
+onder kwab long,onderkwab long,0.9436576962471008,1
+pyothorax,haematothorax,0.9435783624649048,1
+secretie fase,dementie,0.9219892024993896,1
+reuscel tumor peesschede,mesenchymale tumor,0.9434756636619568,1
+lymfvat-invasie,atrioventriculair klep,0.9434695243835448,1
+hand palm,palm,0.9224686622619628,1
+depressie,infectie,0.9225937128067015,1
+hurthle cel adenoom,abortus twee maanden,0.9433022737503052,1
+fibroepithelioma.,sebaceous epithelioma,0.9432836174964904,1
+erythrokeratodermie,hypoalbuminaemie,0.943239152431488,1
+thalamus/hypothalamus,lichen myxoedematosus,0.94318825006485,1
+hydronefrosis,tubulonecrosis,0.943127989768982,1
+struma nodosum colloides,struma colloides nodosum,0.998599410057068,1
+a. iliaca externa,vena iliaca externa,0.9596279859542848,1
+bloeding in de lichaamsholte,bloeding in lichaamsholte,0.9508295655250548,1
+maligne lymfoom immunocytoom,maligne lymfocytair thymoom,0.9757486581802368,1
+clearcell meningeoom,transitioneel meningeoom,0.9750051498413086,1
+pdl 1 positief,pdl1 positief,0.975040078163147,1
+benigne prostaat hyperplasie,prostaat hyperplasie,0.9750791788101196,1
+papillaircarcinoom,papillair adenocarcinoom,0.975188374519348,1
+lymfeklier hals,lymfklieren hals,0.975519597530365,1
+hydrocefalus internus,hydrocephalus internus,0.9755463004112244,1
+intramucosaalcarcinoom,intramucosaal carcinoom,0.9755935668945312,1
+dunnelaag cytologie,maag cytologie,0.9756197333335876,1
+bronchiolo-alveolair carcinoom,bronchiolair alveolair carcinoom,0.9756875038146972,1
+vreemdlichaams reuscel reactie,vreemdlichaamsreactie met reuscellen,0.9757809638977052,1
+acinic cel tumor,metastase acinic cel tumor,0.9749251008033752,1
+arteriolonefrosclerosis,arterionephrosclerosis,0.9758148193359376,1
+metastase sereuscystadenocarcinoom,metastase pilomatrixcarcinoom,0.975969672203064,1
+voornaamste pathologiebevinding.,voornaamste pathologie bevinding,0.9760006666183472,1
+periventriculaire leukoencephalopathie,dysplastisch cerebellair gangliocytoom,0.9760138988494872,1
+basaalcel carcinoma,carcinoom basaalcel,0.97609144449234,1
+hyperplasie van lymfatisch weefsel,hyperplasie lymfatisch weefsel,0.9761366844177246,1
+overgangscelpapilloom inverted type,overgangscel papilloom inverted type,0.9761887192726136,1
+metachromatische leucodystrofie,metachromatische leukodystrofie,0.9762554168701172,1
+maligne mesothelioma,metastase maligne mesothelioom,0.9763283729553224,1
+maligne lymfoom lymfocytair,maligne lymfocytair thymoom,0.9749295711517334,1
+m crohn,crohn,0.9748015999794006,1
+infectie geassocieerd haemofagocytisch syndroom,metastase slecht gedifferentieerd adenocarcinoom,0.9734184741973876,1
+folliculaire keratosis,folliculaire mucinose,0.9741166234016418,1
+clearcelcarcinoom,clearcell carcinoom,0.9734554886817932,1
+fibrothecoma,fibrothecoom,0.9735273718833924,1
+gastro intestinale stroma celtumor,maligne gastrointestinale stromaceltumor,0.9736417531967164,1
+lymfeklier mediastinum,lymfklier mediastinum,0.9736655950546264,1
+elastofibroma,elastofibroma dorsi,0.9736955165863036,1
+encefalopathy,encephalopathy,0.9737181663513184,1
+lymfklieren bekken,lymfklieren oksel,0.9738730192184448,1
+chromosomale translokatie,chromosomale translocatie,0.9739193320274352,1
+farynxslijmvlies,nasopharynxslijmvlies,0.9740399718284608,1
+revisiee xtern concordant,revisie extern concordant,0.9742349982261658,1
+adenomyosis ,adenoiditis,0.974724054336548,1
+naso labiaalplooi,nasolabiaalplooi,0.9742386341094972,1
+osteopetrosis,acrocyanosis,0.974259912967682,1
+endometriumcarcinoom,epidermoidcarcinoom,0.9743271470069884,1
+rheumatoide nodus,reumatoide nodus,0.9743282198905944,1
+enteropathie-geassocieerd t-cellymfoom,enteropathie geassocieerd t cel lymfoom,0.9744118452072144,1
+felty syndroom,felty syndroma,0.974422812461853,1
+haemolytische anaemie,autoimmuun hemolytische anemie,0.9744863510131836,1
+granulair cell tumor,granulosa cell tumor,0.9745988845825196,1
+neuroma,neurolemma,0.9746401906013488,1
+maligne lymphoom centroblastair centrocytair,ml centroblastair centrocytair diffuus,0.9763811230659484,1
+dysfunktie,dysfunctie,0.976383090019226,1
+lymfklieren abdomen,lymfklier abdomen,0.9763866066932678,1
+vene jugularis,vena jugularis,0.9779807329177856,1
+metastase adenocarcinoom8mamma,mesonephric adenocarcinoma,0.9775786399841307,1
+osteosarcoma,osteosarcoom,0.9776248931884766,1
+hamarthoom,hamartoom,0.9777096509933472,1
+adenopapillair carcinoma.,adenopapillair carcinoom,0.9777495861053468,1
+chronisch obstructief longlijden,nodulair dysplastisch schildklierweefsel,0.9777957797050476,1
+lymfklieren kleine bekken,lymfklier kleine bekken,0.9778175950050354,1
+arithmogene rechter ventrikel dysplasie,ml lymfocytair slecht gedifferentieerd diffuus ra,0.9778231382369996,1
+maligne lymfoom grootcellig anaplastisch,grootcellig anaplastisch t cel lymfoom,0.9778656959533693,1
+strumanodosa colloides,struma colloides nodosum,0.9778808951377868,1
+tubair graviditeit,tubaire graviditeit,0.9780009388923644,1
+interstitiele fibrose long,interstitiele fibrose,0.9764211773872375,1
+angio-immunoblastair tcellymfoom,angioimmunoblastair lymfoom,0.9781020879745485,1
+neuro-endocriene celhyperplasie,neuroendocriene cel hyperplasie,0.9783931970596312,1
+non hodgkin lymphoom,non hodgkin lymfoom,0.9784424304962158,1
+papillairspier hart ventrikel,papillairspier hartkamer,0.9784764051437378,1
+metastase kleincellig longcarcinoom low,metastase kleincellig longcarcinoom,0.978502631187439,1
+urotheelcel carcinoom graad 3,urotheelcelcarcinoom graad 3,0.9785056114196776,1
+metastase muco-epidermoid carcinoom,metastase papillair epidermoid carcinoom,0.9785414934158324,1
+para-aorthale lymfklier,para aortale lymfklier,0.978704869747162,1
+progesteronreceptorbepaling negatief ,immuunperoxydasereactie positief,0.97871333360672,1
+neuro endocrien carcinoom,neuroendocrien carcinoom,0.97756427526474,1
+krasmutatie aanwezig,nras mutatie aanwezig,0.9775165319442748,1
+vene renalis,vena renalis,0.9774978160858154,1
+post inflammatoire hyperpigmentatie,postinflammatoire hyperpigmentatie,0.9774885773658752,1
+lymfklieren buik,lymfklieren oksel,0.9767005443572998,1
+collecting ductcarcinoma,collecting duct carcinoma,0.9767225980758668,1
+status na inbrengen catheter,status na inbrengen van catheter,0.9767255783081056,1
+osteochondrosis,nephrosclerosis,0.9767794609069824,1
+radiculair cyste,radiculaire cyste,0.9768139123916626,1
+groot cellig ongedifferentieerd carcinoom,grootcellig ongedifferentieerd carcinoom,0.9768361449241638,1
+revisie ten behoeve derden,revisie ten behoeve van derden,0.9769213795661926,1
+haemosiderine pigment,hemosiderine pigment,0.9769939184188844,1
+staphylococcen infectie,pneumococcen infectie,0.9771392941474916,1
+vreemdlichaam reuscel reactie,granulomateuze vreemdlichaamsreactie,0.9771538376808168,1
+follikulair carcinoom,planocellulair carcinoom,0.977161943912506,1
+hemophilus influenzae,haemophilus influenzae,0.9771779775619508,1
+metastase maligne haemangiopericytoom,metastase maligne hemangioendothelioom,0.9771799445152284,1
+arterie basilaris trombose,arteria basilaris trombose,0.9771897196769714,1
+purulentebronchopneumonie,adrenoleukodystrofie,0.9772462844848632,1
+ml immunocytoom lymphoplasmocytair,ml immunocytoom lymfoplasmacytoid,0.9774059057235718,1
+pd l1 positief,pdl1 positief,0.9774322509765624,1
+glomerulo nefritis,glomerulonefritis,0.9774479269981384,1
+erythroblastose,erytrocytose,0.9774752855300904,1
+acuut rheuma,reuma acuut,0.9734258651733398,1
+m hodgkin,hodgkin,0.9733986854553224,1
+foto dermatitis,stase dermatitis,0.9689958691596984,1
+ontstekings poliep,ontstekingspoliep,0.9705877900123596,1
+metastase endometrium stromacelsarcoom,metastase epithelioidcel sarcoom,0.9702540636062622,1
+prolymfocyten leukemie,lymfocytaire leukemie,0.9702907800674438,1
+maligne lymfoom lymfoblastair,lymfoblastair lymfoom,0.9703548550605774,1
+bulleus pemfigoid ,bulleus pemphigoid,0.9703744053840636,1
+lobulair carcinomainsitu,pleiomorf lobulair carcinoom,0.9703789353370668,1
+cholaemische nefrose,seborroische keratose,0.9704995155334472,1
+lymfklieren mediastinum,lymfklier mediastinum,0.9705181121826172,1
+progesteronreceptor bepaling negatief,granulatieweefsel met vreemdlichaamreuscelreactie,0.9705554246902466,1
+speeksel klier,speekselklier,0.9705810546875,1
+plaveiselcelcarcinoma.,plaveiselcelcarcinoom,0.97059565782547,1
+cristabeenmerg ,middenvoetsbeen,0.9702016711235046,1
+lymfklieroksel,lymfklierweefsel,0.9706467986106871,1
+arterie cerebri anterior,arteria cerebri anterior,0.9706539511680604,1
+erythroblasten leukemie,erytroleukemie,0.9706993699073792,1
+haemopoetisch weefsel,erytropoetisch weefsel,0.9707260727882384,1
+synoviitis villonodularis pigmentosa,parapsoriasis lichenoides varioliformis,0.970732808113098,1
+syfilis,syphilis,0.970739722251892,1
+progressieve multifocale leucencephalopathie,progressieve multifocale leukencefalopathie,0.9707617163658142,1
+organiserende trombus,organiserende thrombus,0.9708348512649536,1
+chronische neutrofiele leukaemie,autoimmuun hemolytische anemie,0.970925271511078,1
+schildwachtklierprocedure ,dysplastisch schildklierweefsel,0.9702335596084596,1
+lupusnefritis,lymfadenitis,0.970188319683075,1
+ductaalcarcinoma  in situ,ductaal carcinoma in situ,0.9733814597129822,1
+nekrose,nefrose,0.9697157740592957,1
+gecombineerde nevus,gecombineerde naevus,0.9690903425216676,1
+macronodulaire levercirrhose,kleincellig osteosarcoom,0.9691359996795654,1
+matigedysplasie,myelodysplasie raebt,0.96925687789917,1
+maligne brenner tumor,dubbele maligne tumor,0.9693810939788818,1
+subphrenisch abces,subfrenisch abces,0.96948504447937,1
+m sjogren,sjogren,0.9695305228233336,1
+b-cel cll small lymphocytic lymphoma,b cell cll small lymphocytic lymphoma,0.969569742679596,1
+ethiologie onbekend,etiologie onbekend,0.9695791006088256,1
+cerebraal oedeem,cerebraaloedeem,0.9696102738380432,1
+haemolytisch uremisch syndroom,autoimmuun hemolytische anemie,0.9697566032409668,1
+diffuus grootcellig bcel lymfoom,diffuus grootcellig b cel lymfoom,0.9701597690582277,1
+leukoencephalopathie,leukencefalopathie,0.9697825908660888,1
+parietaal kwab grote hersenen,temporaalkwab grote hersenen,0.9698407053947448,1
+keratose actinica bowenoide type,metastase liposarcoom gemengd type,0.9699043035507202,1
+bronchus carcinoom,plexus carcinoom,0.9699490666389464,1
+reserve cel hyperplasie,reservecellen hyperplasie,0.9699699878692628,1
+hoog gradige dysplasie,hooggradige dysplasie,0.9700286388397216,1
+fibro-epitheliale poliep.,fibroepitheliale poliep,0.9700800776481628,1
+prostaatcarcinoom,teratocarcinoom,0.9701279401779176,1
+bicuspidaal klep,bicuspidaalklep,0.9701435565948486,1
+interstitiele celtumor,interstitiele pneumonie,0.970938503742218,1
+eilandjesceltumor,verslikpneumonie,0.9709513187408448,1
+parafaryngeaal,draadgranuloom,0.9710050225257874,1
+musculus gluteus maximus,musculus glutaeus maximus,0.9724792242050172,1
+endometrium in menstruatie fase,endometrium in menstruatiefase,0.9720838069915771,1
+synoviosarcoma,synoviosarcoom,0.9720942974090576,1
+intraductcarcinoom,intraductaal carcinoom,0.9720945954322816,1
+pseudomelanose,pseudomelanoom,0.9720986485481262,1
+arterie umbilicalis,arteria umbilicalis,0.9721606969833374,1
+embryonaalcel carcinoma,embryonaal carcinoom,0.972162425518036,1
+uretra,urethra,0.9721697568893432,1
+leukencephalopathie,leukencefalopathie,0.972170352935791,1
+subcutaanweefsel,subcutaan vetweefsel,0.9722025394439696,1
+seborrhoisch eczeem,dyshidrotisch eczeem,0.9725022315979004,1
+lymfklier het sigmoid,lymfklier sigmoid,0.9711002707481384,1
+plaveisel cel carcinoom,parietaal cel carcinoom,0.9727929830551147,1
+merkelcel carcinoom,merkelcelcarcinoom,0.9728468060493468,1
+post-inflammatoire hyperpigmentatie,postinflammatoire hyperpigmentatie,0.972902536392212,1
+ventriculitis,folliculitis,0.9729403257369996,1
+marginale insertie van de navelstreng,marginale insertie van navelstreng,0.9729571342468262,1
+thrombocytemie,trombocytemie,0.9730679392814636,1
+haemangioendothelioma,epitheelmetaplasie,0.9731212854385376,1
+cheilognathopalatoschisis,cheilognatopalatoschisis,0.9732190370559692,1
+aterosclerotisch aneurysma,atherosclerotisch aneurysma,0.9733573794364928,1
+vreemd lichaam reuscelreactie,congenitaal dubbele structuur,0.9720816612243652,1
+metastase adenocarcinoom vier diagnose darm,metastase interdigiterend dendritisch cel sarcoom,0.9720622301101683,1
+essentiele thrombocytaemie,geinverteerde folliculaire keratose,0.9719600677490234,1
+endometrium stromasarcoom,endometrioid stromasarcoom,0.9719196557998656,1
+juxta-corticaal osteosarcoom,laaggradig centraal osteosarcoom,0.971213698387146,1
+vruchtwater aspiratie,vruchtwateraspiratie,0.9712537527084352,1
+maligne lymfoom centroblastisch-centrocytisch diffuus,ml centroblastisch centrocytisch diffuus le,0.9712581038475036,1
+cholecystolitiasis,cholecystolithiasis,0.9712876081466676,1
+degeneratieve celafwijkingen,degeneratieve celafwijking,0.971360206604004,1
+idiopatische trombocytemie,idiopathische trombocytopenie,0.9713775515556335,1
+poly-arteriitis nodosa,polyarteriitis nodosa,0.9713951945304872,1
+auto immuun ziekte,autoimmuun ziekte,0.971441388130188,1
+arterie hepatica,arteria hepatica,0.9714561700820924,1
+castnefropathie,endocriene myopathie,0.9715023040771484,1
+leucencefalopathie,encefalopathie,0.9716191291809082,1
+mortons neuroma,mortons neuroom,0.9716589450836182,1
+basilaris thrombose,basilaris trombose,0.9716756939888,1
+nodulair hidradenoma,nodulair hidradenoom,0.971698522567749,1
+eosinofiel,eosinofilie,0.971804678440094,1
+retro peritoneaal,retroperitoneaal,0.9718449115753174,1
+metastase kiemceltumor,metastase niercelcarcinoom nos,0.9718629121780396,1
+pneunomie,nefrotomie,0.9718813300132751,1
+metastase endometrium stromasarcoom,metastase parosteaal osteosarcoom,0.9718955159187316,1
+voornaamste pathologie bevindingen,voornaamste pathologie bevinding,0.978810966014862,1
+invasie carcinoom,invasief carcinoom,0.9788431525230408,1
+lymfklier paraoesophageaal,lymfklier para oesofageaal,0.9791443943977356,1
+erythropoese microblastair,erytropoese microblastair,0.9889517426490784,1
+klieren van brunner,klier van brunner,0.988300323486328,1
+metastase neuroendokriene tumor,metastase neuroendocriene tumor,0.9884230494499208,1
+sigmoid slijmvlies,slijmvlies sigmoid,0.9885866045951844,1
+desmoplastisch tricho-epithelioom,desmoplastisch trichoepithelioom,0.9886204600334167,1
+resectievlakniet vrij,resectievlakken niet vrij,0.9886345863342284,1
+metastase neuro endocriene tumor,metastase neuroendocriene tumor,0.9886487722396852,1
+eosinophiel infiltraat,eosinofiel infiltraat,0.9887153506278992,1
+superficial spreading maligne melanoom in situ,superficial spreading maligne melanoma in situ,0.98881733417511,1
+infiltrerend ductcarcinoma,infiltrerend ductcarcinoom,0.9889170527458192,1
+neus slijmvlies,slijmvlies neus,0.9889970421791076,1
+atheriosclerose,atherosclerose,0.9880788922309875,1
+plasmacel hyperplasie,plasmacellen hyperplasie,0.9890361428260804,1
+metastase neuroblastoma,metastase neuroblastoom,0.9891548752784728,1
+metastase sereus papillair oppervlakte papilloom borderline maligniteit,sereus oppervlakte papilloom borderline maligniteit,0.9891849160194396,1
+papillair urotheelcel carcinoom graad 1,papillair urotheelcelcarcinoom graad 1,0.9893215894699096,1
+metastase urotheel celcarcinoom,metastase urotheelcarcinoom,0.9893957376480104,1
+gastrointestinale stroma cel tumor,metastase gastrointestinale stroma tumor,0.989568829536438,1
+sertoli cell only syndroom,sertoli cell only syndroma,0.9895778298377992,1
+nefrosclerosis,nephrosclerosis,0.989648699760437,1
+hooggradig b-cel lymfoom met myc en bcl2 enof bcl6 translocatie,hooggradig b cel lymfoom met myc en bcl2 en of bcl6 translocatie,0.9896593689918518,1
+plasmacel infiltraat,plasmacellen infiltraat,0.9881848096847534,1
+idiopathische thrombocytemie,idiopathische trombocytemie,0.9880079627037048,1
+eilandcel carcinoom,eilandcelcarcinoom,0.9794020056724548,1
+colon slijmvlies,slijmvlies colon,0.9869360327720642,1
+infiltrerend duct carcinoom,infiltrerend ductcarcinoom,0.9859965443611144,1
+maligne rhabdoid tumor,maligne rabdoid tumor,0.986212432384491,1
+aorta bifurcatieprothese,aortabifurcatie prothese,0.9865670204162598,1
+b-cell cll small lymfocytic lymphoma,b cell cll small lymphocytic lymphoma,0.9866438508033752,1
+progressieve supra nucleaire paralyse,progressieve supranucleaire paralyse,0.9867146015167236,1
+rectum slijmvlies,slijmvlies rectum,0.9867879152297974,1
+hyperplasie erythropoese,hyperplasie erytropoese,0.986787974834442,1
+polymorfe licht eruptie,polymorfe lichteruptie,0.98683762550354,1
+papillair niercel carcinoom,papillair niercelcarcinoom,0.9868552088737488,1
+haemorragische pneumonie,hemorragische pneumonie,0.9870716333389282,1
+bronchio alveolaire lavage,bronchiolo alveolaire lavage,0.9878865480422974,1
+spinocellulair carcinoma,spinocellulair carcinoom,0.9870859980583192,1
+extra capillaire glomerulonefritis,extracapillaire glomerulonefritis,0.9871984124183656,1
+plaveiselcelcarcinoom in situ ,plaveiselcelcarcinoma in situ,0.9872757196426392,1
+basocellulair carcinoma,basocellulair carcinoom,0.9874418377876282,1
+overgangscelcarcinoma graad 1,overgangscelcarcinoom graad 1,0.9874923229217528,1
+reservecel hyperplasie,reservecellen hyperplasie,0.9876115322113036,1
+laaggradig neuro-endocrien carcinoom,laaggradig neuroendocrien carcinoom,0.9877219200134276,1
+metastase planocellulaircarcinoom,metastase planocellulair carcinoom,0.9877353310585022,1
+clearcel carcinoom,clearcell carcinoom,0.9878565073013306,1
+osteoarthritis,osteoartritis,0.9897419810295104,1
+urotheelcelcarcinoom graad3,urotheelcelcarcinoom graad 3,0.9899394512176514,1
+hooggradig neuroendocriencarcinoom,hooggradig neuroendocrien carcinoom,0.9900996088981628,1
+papillair urotheelcarcinoma graad 1,papillair urotheelcarcinoom graad 1,0.9932273626327516,1
+insertio velamentosa navelstreng,navelstreng insertio velamentosa,0.9920362830162048,1
+metastase urotheelcelcarcinoom graad3,metastase urotheelcelcarcinoom graad 3,0.992173433303833,1
+kleincellig anaplastisch bronchus carcinoom,kleincellig anaplastisch bronchuscarcinoom,0.9922778606414796,1
+lymfoepitheliale lesie benigne,lymfoepitheliale laesie benigne,0.9926449060440063,1
+papillair urotheelcelcarcinoma,papillair urotheelcelcarcinoom,0.992738664150238,1
+thrombotische trombocytopenische purpura,trombotische trombocytopenische purpura,0.9928156137466432,1
+metastase infiltrerend ductaal carcinoma,metastase infiltrerend ductaal carcinoom,0.9928231835365297,1
+papillair sereus cystadenocarcinoma,papillair sereus cystadenocarcinoom,0.9929449558258056,1
+metastase gastro-intestinale stroma tumor,metastase gastrointestinale stroma tumor,0.9929602146148682,1
+folliculair lymfoom graad 12,folliculair lymfoom graad 3,0.9934067726135254,1
+urotheelcelcarcinoma graad 3,urotheelcelcarcinoom graad 3,0.9901427626609802,1
+metastase gastro-intestinale stromaceltumor,metastase gastrointestinale stromaceltumor,0.9936119318008424,1
+papillair urotheelcelcarcinoma graad 1,papillair urotheelcelcarcinoom graad 1,0.993759274482727,1
+diffuus grootcelig b-cel lymfoom,diffuus grootcellig b cel lymfoom,0.994018018245697,1
+fascitis necroticans,faciitis necroticans,0.9940576553344728,1
+metastase kleincellig long carcinoom,long metastase kleincellig carcinoom,0.9945999383926392,1
+dysembryoplastische neuro-epitheliale tumor,dysembryoplastische neuroepitheliale tumor,0.9947301745414734,1
+oesofagus slijmvlies,slijmvlies oesofagus,0.9950224161148072,1
+metastase gastrointestinale stromacel tumor,metastase gastrointestinale stroma tumor,0.9958063960075378,1
+lupus erythemathosus,lupus erythematosus,0.9958595037460328,1
+kleincellig ongedifferentieerd carcinoma,kleincellig ongedifferentieerd carcinoom,0.9918416738510132,1
+cervix slijmvlies,slijmvlies cervix,0.9918110966682434,1
+angitis carcinomatosa,pleuritis carcinomatosa,0.9917312860488892,1
+bijnierschors adenoom,adenoom bijnierschors,0.9916906356811525,1
+voornaamste pathologische bevinding,voornaamste pathologie bevinding,0.990159809589386,1
+thrombotische microangiopathie,trombotische microangiopathie,0.990178406238556,1
+grootcellig anaplastisch carcinoma,grootcellig anaplastisch carcinoom,0.9902844429016112,1
+papillair cystadenocarcinoma,papillair cystadenocarcinoom,0.990447461605072,1
+osteoarthropathie,osteoartropathie,0.9904476404190063,1
+sarcoom metastase,metastase sarcoom,0.9904488921165466,1
+progressieve multifocale leucoencefalopathie,progressieve multifocale leukencefalopathie,0.990572452545166,1
+goed gedifferentieerd adenocarcinoma,goed gedifferentieerd adenocarcinoom,0.990616738796234,1
+chronische en actieve ontsteking,chronische actieve ontsteking,0.9907494187355042,1
+invasief ductaal carcinoma,invasief ductaal carcinoom,0.990827739238739,1
+superficieel basaalcelcarcinoma,superficieel basaalcelcarcinoom,0.9908549189567566,1
+kleincellig anaplastisch carcinoma,kleincellig anaplastisch carcinoom,0.9908559918403624,1
+oestrogeenreceptorbepalingpositief,oestrogeenreceptorbepaling negatief,0.9909403324127196,1
+adenoid cystic carcinoom,adenoid cystic carcinoma,0.9913288354873656,1
+syringocystadenoom papilliferum,syringocystadenoma papilliferum,0.9914729595184326,1
+folliculair schildklier carcinoom,folliculair schildkliercarcinoom,0.9915395975112916,1
+metastase lymfo-epitheliaal carcinoom,metastase lymfoepitheliaal carcinoom,0.991572916507721,1
+vreemdlichaamsreuscelreaktie,vreemdlichaamsreuscelreactie,0.991577923297882,1
+papillair urotheelcelcarcinoom in situ,papillair urotheelcelcarcinoma in situ,0.991648495197296,1
+erythroplasie van queyrat,erytroplasie van queyrat,0.9858596324920654,1
+atherosklerose,atherosclerose,0.985717236995697,1
+sideroachrestische anaemie,sideroachrestische anemie,0.9856230020523072,1
+haemorragische gastritis,hemorragische gastritis,0.9815467000007628,1
+primaire trombocytaemie,primaire trombocytemie,0.9809998869895936,1
+hilusceltumor,reusceltumor,0.981006681919098,1
+para psoriasis,psoriasis,0.9810523390769958,1
+choriocarcinoma,choriocarcinoom,0.981099247932434,1
+refractaire anaemie met excess blasten,refractaire anemie met excess blasten,0.9812166690826416,1
+vreemdlichaamsreuscel reactie,vreemdlichaamreuscelreactie,0.9812820553779602,1
+mucineus cystadenoom van borderline maligniteit,sereus cystadenoom borderline maligniteit,0.9812988638877868,1
+geen afwijking en,geen afwijking,0.981429934501648,1
+ductaal carcinoma,ductaal carcinoom,0.981538951396942,1
+ductuscarcinoma in situ,ductus carcinoma in situ,0.9815586805343628,1
+reusceltumor van weke delen,reusceltumor van de weke delen,0.9821513891220092,1
+papillair nierceladenoom,papillair syringadenoom,0.9815703630447388,1
+thrombocytose,trombocytose,0.9816445112228394,1
+arterie iliaca communis,arteria iliaca communis,0.9816953539848328,1
+middenkwab van long,onderkwab van long,0.981725573539734,1
+endometrium stroma sarcoom,endometrium stroma nodule,0.9817352294921876,1
+tubulair carcinoma,tubulair carcinoom,0.9817862510681152,1
+bronchoalveolairelavage,bronchoalveolair,0.9818518757820128,1
+gastro intestinale stromatumor,gastrointestinale stromaceltumor,0.9818575382232666,1
+endometrium in secretie fase,endometrium in secretiefase,0.9819753766059875,1
+chronische idiopatische myelofibrose,chronische idiopathische myelofibrose,0.9809805154800416,1
+arteriolosclerotische nefrosclerose,arteriosclerotische nefrosclerose,0.9809291362762452,1
+neuro-endocrien carcinoom ,neuroendocrien carcinoom,0.9808353185653688,1
+revisie van ten behoeve van derden,revisie ten behoeve van derden,0.980757772922516,1
+overgangscel carcinoom graad 3,overgangscelcarcinoom graad 3,0.9795635938644408,1
+grampositieve bacterie,gram positieve bacterie,0.9796767830848694,1
+klepinsufficientie,hartklepinsufficientie,0.9796863794326782,1
+glandulaire cystische poliep maag fundus,glandulaire cystische poliep maagfundus,0.9797085523605348,1
+urotheel celcarcinoom,metastase urotheelcarcinoom,0.9798073172569276,1
+intra dermale naevus,intradermale naevus,0.9798470735549928,1
+vreemdlichaam materiaal,vreemdlichaammateriaal,0.9798641204833984,1
+lobulair carcinoma infiltrerend.,lobulair carcinoom infiltrerend,0.980121910572052,1
+obstructieve trombus,obstructieve thrombus,0.9802148938179016,1
+pyelonefritis acuta,pyelonefritis,0.9802570343017578,1
+afsluitende thrombose,afsluitende trombose,0.9803464412689208,1
+transitional cellcarcinoma,transitional cell carcinoma,0.9803670644760132,1
+leukocytoclastische vasculitis.,leucocytoclastische vasculitis,0.9804158806800842,1
+neurotheceoom,neurothekeoom,0.980419397354126,1
+neuroendocriene carcinoom,neuroendocrien carcinoom,0.9805974960327148,1
+thrombophlebitis,pylephlebitis,0.9806395769119264,1
+catarrhale ontsteking,catarrale ontsteking,0.9807164072990416,1
+hernia diaphragmatica,hernia diafragmatica,0.9807440638542176,1
+maligne lymfoom centroblastisch centrocytisch folliculair,ml centroblastisch centrocytisch folliculair le,0.9807481169700624,1
+multi systeem atrofie,multisysteem atrofie,0.981986165046692,1
+metastase carcinosarcoma,metastase carcinosarcoom,0.9822371006011964,1
+vene mesenterica superior,vena mesenterica superior,0.98556649684906,1
+pseudoarthrose,pseudoartrose,0.9847723841667176,1
+angio-immunoblastair t-cel lymfoom,angioimmunoblastair t cel lymfoom,0.9840128421783448,1
+geboorte gewicht te hoog,geboortegewicht te hoog,0.9840213656425476,1
+cysteuze masthopatie,cysteuze masthopathie,0.9843542575836182,1
+actieve erythropoese,actieve erytropoese,0.9844145774841307,1
+ramus circumflexus linker coronair arterie,ramus circumflexus linker coronairarterie,0.9844650626182556,1
+plexiforme lesie,plexiforme laesie,0.9845415949821472,1
+vreemdlichaams materiaal,vreemdlichaammateriaal,0.9845514297485352,1
+haemolytisch uraemisch syndroom,hemolytisch uraemisch syndroom,0.9845867156982422,1
+ramus circum flexus linker arteria coronaria,ramus circumflexus linker arteria coronaria,0.9846133589744568,1
+foetomaternaal transfusiesyndroom,foetomaternaal transfusie syndroom,0.9849514961242676,1
+gastro-intestinale stroma cel tumor,metastase gastrointestinale stroma tumor,0.9823006391525269,1
+sebaceous carcinoom,sebaceous carcinoma,0.9849610328674316,1
+kreutzfeldt jakob virus,creutzfeldt jakob virus,0.985055685043335,1
+mucoepidermoidcarcinoom,mucoepidermoid carcinoom,0.9850730299949646,1
+diffuusgrootcellig b-cel lymfoom,diffuus grootcellig b cel lymfoom,0.9853020310401917,1
+beta haemolytische streptococ,beta hemolytische streptococcen,0.9853317737579346,1
+langerhanse celhistiocytose,langerhanse cel histiocytose,0.9854047298431396,1
+snijvlakvrij,snijvlak vrij,0.9854460954666138,1
+lentigo maligna melanoma,lentigo maligna melanoom,0.9854533672332764,1
+intravasculair grootcellig b-ce llymfoom,intravasculair grootcellig b cel lymfoom,0.9855614900588988,1
+ductaal carcinoom in  situ,ductaal carcinoma in situ,0.983932375907898,1
+hepatocellular carcinoom,hepatocellular carcinoma,0.9838844537734984,1
+metastase adenocarcinoom long,metastase adenocarcinoom,0.9838454127311708,1
+infiltrerend  ductaalcarcinoom,infiltrerend ductaal carcinoom,0.9836509227752686,1
+creutzfeld jakob,creutzfeldt jakob,0.9823338985443116,1
+bronchoalveolaircelcarcinoom,bronchioloalveolair carcinoom,0.982501983642578,1
+maligne lymfoom immunoblastair,maligne lymfocytair thymoom,0.982577919960022,1
+gynaecomasthie,gynaecomastie,0.9825810790061952,1
+antifosfolipiden thrombofilie,antifosfolipiden trombofilie,0.9825887084007264,1
+salivary ductcarcinoom,salivary duct carcinoom,0.9826793670654296,1
+gastro intestinale stroma cel tumor,metastase gastrointestinale stroma tumor,0.983026385307312,1
+primitieve neuro-ectodermale tumor,maligne primitieve neuroectodermale tumor,0.983090341091156,1
+hidradenoom papilliferum,hidradenoma papilliferum,0.9831044673919678,1
+heldercelig niercel carcinoom,heldercellig niercelcarcinoom,0.9831284284591676,1
+cardia maag slijmvlies,slijmvlies cardia maag,0.9831771850585938,1
+oesophagotracheale fistel,oesofagotracheale fistel,0.9831905364990234,1
+maligne lymfoom grootcellig ongekerfd diffuus,diffuus slecht gedifferentieerd lymfocytair maligne lymfoom,0.9832335710525512,1
+metastase clearcelcarcinoom,metastase eilandcelcarcinoom,0.9834129214286804,1
+neuro endocriene tumor,neuroendocriene tumor,0.9834278225898744,1
+spermatogeneserijpingsstoornis,spermatogene rijpingsstoornis,0.9834760427474976,1
+occipitaal kwab grote hersenen,occipitaalkwab grote hersenen,0.9835225343704224,1
+erythroide hypoplasie,erytroide hypoplasie,0.9835704565048218,1
+granulosacel tumor,granulaircel tumor,0.983648419380188,1
+extrahepathische galgang,extrahepatische galgang,0.9690313935279846,1
+epithelioid haemangioendothelioom,epithelioid hemangioendothelioom,0.9689452052116394,1
+myocard-infarct,vers myocardinfarct,0.9508549571037292,1
+discusprolaps,discus prolaps,0.957153022289276,1
+wilms tumor,brenners tumor,0.9567503929138184,1
+oligoastrocytoma,plasmocytopenie,0.9567508697509766,1
+leydig celtumor,osteogeen sarcoom,0.9568138718605042,1
+multinodulair struma,bursa subdeltoidea,0.9568412899971008,1
+follikel cyste,lymffollikel,0.9568673372268676,1
+darmen,semen,0.95687735080719,1
+rekanalisatie,priapisme,0.9568933248519896,1
+ductaalcarcinoom.,ductaal carcinoom,0.9569094181060792,1
+haemofilie,longemfyseem,0.9570501446723938,1
+nier cel carcinoom,gastrine cel,0.9571675658226012,1
+acute myelomonocyten leukaemie,metastase slijmvormend adenocarcinoom,0.956608772277832,1
+congenitale hartafwijkingen,afwijkende kerngrootte,0.9572227001190186,1
+de subarachnoidale bloeding,subarachnoidale bloeding,0.9572535157203674,1
+basalecellencarcinoom,niercelcarcinoom,0.9572618007659912,1
+myokardinfarct,hidrocystoom,0.9572694301605223,1
+micronodulaire cirrhosis,cirrhosis micronodularis,0.9572800993919371,1
+pemfigus,pemphigus,0.9573101997375488,1
+revisie tbv van derden,revisie voor derden,0.9573436379432678,1
+subcutisbuik,subepicardiaal,0.9573546051979064,1
+supra claviculair,nodulair paragranuloom,0.957428514957428,1
+thrombocytosis,pleocytosis,0.9567474126815796,1
+oesophagusslijm,bloedgroepantagonisme,0.9566006660461426,1
+if epidermaal basaalmembraan,i f epidermaal basaalmembraan,0.9557037949562072,1
+glycogeen stapeling,glycogeenstapeling,0.9560180306434632,1
+gastrojejunaal,gehoorbeentje,0.9557663798332214,1
+protese,coniose,0.9557980298995972,1
+achterwand,tandwortel,0.9558219909667968,1
+eiland cel tumor,metastase wilms tumor,0.9558454751968384,1
+torsie navelstreng,navelstreng,0.9558613300323486,1
+haemorrhagisch oedeem,gebruik enkelvoudige termen,0.9559298753738404,1
+arterioveneushemangioom,metastase medulloepithelioom,0.9559445381164552,1
+hepato-renaal syndroom,juxta articulair myxoom,0.955945611000061,1
+long emfyseem,emfyseem,0.9559898972511292,1
+hypophyse,hypopharynx,0.956058382987976,1
+herseninfarct,hydranencefalie,0.95657080411911,1
+peritoneaal vocht,peritoneaalvocht,0.95616614818573,1
+ureterocele,ureterostomie,0.9561762809753418,1
+immuun histochemie,immuunhistochemie,0.956184446811676,1
+diagnose volgt,eerdere diagnose,0.9562747478485109,1
+trombosis,vetembolus,0.956279993057251,1
+benigne synovioma,benigne synovioom,0.9562922716140748,1
+lewylichaampje,pistoolkogelwond,0.9563534259796144,1
+basilaristhrombose,ureterostomie,0.956456422805786,1
+chronisch emphyseem,chronisch emfyseem,0.9565008878707886,1
+pleiomorfsarcoom,hechtgranuloom,0.9574447274208068,1
+cysteuze mediadegeneratie,mediadegeneratie,0.9574870467185974,1
+heup kop,heupkop,0.9575290083885192,1
+pancoasttumor,sertoliceltumor,0.958854615688324,1
+acute monocyten leukemie,acute monocytenleukemie,0.9586517810821532,1
+immunocytoma,apocrine cyste,0.9586693048477172,1
+mitraal stenose,vena renalis trombose,0.9586722254753112,1
+voedsel,voedselrest,0.9587136507034302,1
+broncho-pneumonie,purulente bronchopneumonie,0.9587278962135316,1
+proliferatie fase,proliferatiefase,0.9587898254394532,1
+anthracosis,mucostasis,0.9588018655776978,1
+lever cirrose,levercirrose,0.9588341116905212,1
+acute pyelonephritis,fytofotodermatitis,0.9588358998298644,1
+ruptuur in myocard infarct,ruptuur in aneurysma,0.9588798880577089,1
+fecaalstase,faecaalstase,0.9576156735420228,1
+transpositie van de grote vaten,fascie van de onderste extremiteit,0.9590697884559632,1
+plasmocytoma,plasmocytopenie,0.95907723903656,1
+granular cel tumor,granular cell tumor,0.9590857625007628,1
+sikkelcel anemie,mesodermale mengtumor,0.959140419960022,1
+sternumbeenmerg,handwortelbeenderen,0.9591776132583618,1
+myosferulose,myospherulose,0.9592017531394958,1
+extrahepatischegalgang,intrahepatische galgang,0.959212064743042,1
+papillomavirus,papovavirus,0.9593662023544312,1
+neuroborreliosis,trichomoniasis,0.9593809247016908,1
+intra uteriene vrucht dood,intra uteriene vruchtdood,0.958628237247467,1
+artheriolosclerose,arteriolonefrosclerose,0.9585825204849244,1
+hypertermie,hyperaemie,0.9585735201835632,1
+nefropatie,nefrectomie,0.9584460258483888,1
+myelodysplastisch,cholecystitis,0.9576625823974608,1
+myeloide leukaemie,lobaire pneumonie,0.9576693177223206,1
+pulmonaal sclerose,bronchiaal spoelsel,0.9576704502105712,1
+esthesioneuroblastoma,epithelioidcel sarcoom,0.9576749205589294,1
+galgang-proliferatie,galgangproliferatie,0.957682728767395,1
+vaten,pezen,0.9577353000640868,1
+oncocytose,sferocytose,0.9577917456626892,1
+acute hemorrhagische ontsteking,acute ulcererende ontsteking,0.9578110575675964,1
+reusceltumor van het bot,stroma van het endometrium,0.9578139781951904,1
+"endocarditis,thrombotisch niet-bacterieel",endocarditis trombotisch niet bacterieel,0.9578292965888976,1
+hidrocystoma,erytroblastose,0.9578497409820556,1
+cylindroma,chlamydia,0.9578625559806824,1
+myoepithelioma,synucleopathie,0.9578874111175536,1
+para-oesophageaal,hyaline membraanziekte,0.9579418301582336,1
+glomerulopatie,spoelcelcarcinoom,0.9579551219940186,1
+diagnoseonzeker,diagnose onzeker,0.957987368106842,1
+neus vleugel,bijholten neus,0.958004891872406,1
+pecoom,papilloom,0.9580085277557372,1
+erythrocyten,mesonephros,0.9582021236419678,1
+fibroxanthoma,fibroxanthoom,0.9557095766067504,1
+hyperostosis,argyrosis,0.9556952714920044,1
+fungusinfectie,fungus infectie,0.9688321352005004,1
+arthritis,diabetes,0.9527641534805298,1
+niet gedikteerd,ingegroeide haar,0.9520990252494812,1
+boven buik,bovenbuik,0.952137053012848,1
+lokalisatie tumor,spermatocytaire tumor,0.9521394371986388,1
+en chondroom,chondroom,0.9521411061286926,1
+oestrogeen  receptorbepaling positief,progesteron receptorbepaling positief,0.9523200988769532,1
+antracosis,myelomatosis,0.9524272084236144,1
+myeloide leucaemie,teratoide laesie,0.95245361328125,1
+huidadnex adenoom,huidadnexadenoom,0.9524607062339784,1
+arhtrose,hemartrose,0.9524893760681152,1
+agranulocytosis,poikilocytosis,0.9527785181999208,1
+pseudoarthrosis,argyrosis,0.9520920515060424,1
+bethesda4,bethesda 4,0.9528117179870604,1
+strumanodosum,struma lymphomatosa,0.9528536796569824,1
+hartinfarkt,dysgerminoom,0.9528679251670836,1
+lichenoide keratosis.,lichenoide keratosis benigne,0.9529120922088624,1
+ontstekingen,ponsbloedingen,0.952934205532074,1
+ziekte van bowen,ziekte van danon,0.9529439806938172,1
+perifeer tcel lymfoom,perifeer t cel lymfoom,0.952967882156372,1
+intra ductaal papilloom,intraductaal papilloom,0.9529716968536376,1
+follikelcentrumlymfoom graad1-2.,follikelcentrum lymfoom graad 1 en 2,0.9531375169754028,1
+mammasparende operatie,mamma sparende operatie,0.9520984888076782,1
+gliosarcoma,gliosarcoom,0.9520429372787476,1
+divertikulitis,hidradenitis,0.9556334018707277,1
+tcel lymfoom,malt lymfoom,0.9511959552764891,1
+vaginauitstrijk,geslachtsanomalie,0.9508565664291382,1
+chorangiomatosis,chorangiomatose,0.950895369052887,1
+cytomegalie virus infectie,cytomegalie virus,0.9510077238082886,1
+hurthle cel carcinoom,invasief lobulair carcinoom,0.951057493686676,1
+spongiosis,spongiosa,0.9510586857795716,1
+ileocoecaal hoek,ileocoecaalhoek,0.9510957598686218,1
+hemorrhoid,hyalinosis,0.9511021375656128,1
+hematoma,melanoderma,0.9511349201202391,1
+shocknieren,vetlever,0.9511542916297911,1
+synovio sarcoom,synoviaal sarcoom,0.951215386390686,1
+carcinoma insitu,oatcell carcinoma,0.952023148536682,1
+morbus paget van de vulva,spierlaag van de ureter,0.9512617588043212,1
+pleiomorph adenoom,mesenchymaal hamartoom,0.9513939023017884,1
+pleurale plak,pleuravocht,0.9513964653015136,1
+ventrikel hypertrofie,hypertrofische gastritis,0.9515215754508972,1
+placentapathologie,placenta pathologie,0.9518716335296632,1
+cirrhose ,dystrofie,0.9518905878067015,1
+emfysema,diafyse,0.951975166797638,1
+scar lesion,scar laesion,0.9519860148429872,1
+schistosoma,parapemphigus,0.9520041942596436,1
+nonhodgkinlymfoom,immuunperoxydase negatief,0.953230917453766,1
+ulcererendeontsteking,progesterontherapie,0.9533040523529052,1
+histiocytosis x,pleiocytosis,0.953307807445526,1
+adultrespiratorydistresssyndrome,dysfunktionerend endometrium,0.9549473524093628,1
+aterme,erosie,0.9542482495307922,1
+lyme disease,collagen disease,0.954364776611328,1
+vaat anomalie,cavum uteri,0.9543846845626832,1
+osilium,ephelis,0.954398274421692,1
+oligo hydramnion,hydramnion,0.9544394016265868,1
+pin3,pin iii,0.9548222422599792,1
+katheterurine,catheterurine,0.9548227787017822,1
+leucocytose,histiocytose,0.9548291563987732,1
+clear cel acanthoom,clearcell acanthoom,0.9549201130867004,1
+junctionnaevus,junctional nevus,0.9549897909164428,1
+haemangiomatosis,leucokeratosis,0.9533655047416688,1
+synoviale chondromatosis,metastase feochromocytoom,0.9550178050994872,1
+piloleiomyoma,polymyositis,0.9550988674163818,1
+endocervicale poliep,endocervicaal,0.9551540613174438,1
+excisiebiopt ,circumcisie,0.9551655650138856,1
+fibrosarcoma,fibrosarcoom,0.9552101492881776,1
+haematopoese,erytropoese,0.9554340839385986,1
+hartklep prothese,hartklepprothese,0.95550799369812,1
+broncho-alveolaire lavage,bronchiolo alveolaire lavage,0.955597460269928,1
+rinofyma,pyometra,0.9556316137313844,1
+masthopathie,mastopathie,0.9541903734207152,1
+ziekte van alport,ziekte van pompe,0.9541703462600708,1
+chron ontsteking,collagene ontsteking,0.95414936542511,1
+carcinoominsitu,amficrien carcinoom,0.9541476964950562,1
+encephalo meningitis,subacute meningitis,0.9534978866577148,1
+maligne lymfoom centroblastair.,ml centroblastair diffuus,0.953535795211792,1
+pyonephrose,pyelonephron,0.95354425907135,1
+intra-uteriene vrucht dood,intra uteriene vruchtdood,0.9535641670227052,1
+para tracheaal,choriaal plaat,0.9535678625106812,1
+nefrosclerose.,otosclerose,0.9536082744598388,1
+leiomyomatosis,naevus lipomatosis,0.9536369442939758,1
+fibroblastair meningeoma,ameloblastisch fibroom,0.953680455684662,1
+para-aortale klier,para aortale lymfklier,0.953746259212494,1
+epithelioma,epithelioma benign,0.9538331031799316,1
+krabeffekt,haarfollikel,0.953889548778534,1
+fibrine trombus,fibrine thrombus,0.953945815563202,1
+insitu hybridisatie techniek,transsexualisatie operatie vrouw man,0.9539484977722168,1
+t - prolymfocyten leukemie,b prolymfocytenleukemie,0.9539641737937928,1
+arteriolosclerose.,arteriosclerose,0.9540260434150696,1
+hemorrhagische necrose,metastase grawitztumor,0.9540913105010986,1
+oligo-astrocytoom,anaplastisch astrocytoom,0.9541190266609192,1
+lokalisatie primaire tumor onbekend.,primaire tumor onbekend,0.95412415266037,1
+geen congenitale afwijkingen,mamma geen afwijkingen,0.9541319608688354,1
+endometrium in sekretiefase,endometrium in menstruatiefase,0.9594438672065736,1
+maligne phyllodestumor,acrolentigineus melanoom,0.9594971537590028,1
+onderkwablong,onderkwab,0.9595019817352296,1
+sertoli-leydig celtumor,maligne sertoli leydigceltumor,0.96598219871521,1
+galgang hyperplasie,seniele hyperplasie,0.9654968976974488,1
+astrocytoma graad ii,astrocytoom graad ii,0.9655276536941528,1
+conuscervix,exocervix,0.9655386209487916,1
+lymfklieren paraaortaal,lymfklier para iliacaal,0.9656040668487548,1
+hurthle celcarcinoom,hurthlecelcarcinoom,0.96563982963562,1
+hemochromatosis,schistozomiasis,0.9657430052757264,1
+trichofolliculoma,trichofolliculoom,0.9657973051071168,1
+myelo proliferatief syndroom,primitieve neuroblastaire cel,0.965893566608429,1
+ml immunocytoma,ml immunoblastisch,0.965939462184906,1
+geboortetrauma,glomangioom,0.9661155939102172,1
+intraabdominaal,subpleuraal,0.9653863906860352,1
+mantel cel lymfoom,maligne b cel lymfoom,0.96611887216568,1
+arterie mesenterica,arteria mesenterica,0.9661406874656676,1
+erythroblastosis,erythroblastosis foetalis,0.9661415815353394,1
+amyotrophische lateraal sclerose,nodulaire schildklierdysplasie,0.9661805033683776,1
+lymfklieren lies,lymfklier lies,0.9662063717842102,1
+clearcellacanthoom,clearcell hidradenoom,0.9662232398986816,1
+auto-immuun reactie,autoimmuun reactie,0.9662716388702391,1
+primaire biliaire levercirrhose,secundaire biliaire levercirrose,0.9663020372390748,1
+micro-calcificatie,microcalcificatie,0.9663277268409728,1
+adeno carcinoma in situ,ductus carcinoma in situ,0.9653890132904052,1
+lymfoblasten leukemie,lymfocytaire merker,0.9653654098510742,1
+cryptococcosis,cryptococcose,0.959552526473999,1
+oesophagitis',oesophagitis acuta,0.9649454355239868,1
+chronische myeloide leukaemie,chronische myeloide leukemie,0.964479923248291,1
+naevus nevocellularis,naevus fibromatosus,0.9645177125930786,1
+vers myocard infarct,vers myocardinfarct,0.9645190834999084,1
+bovenkwablong,bovenkwab,0.9645482897758484,1
+clearcellcarcinoom,urotheelcarcinoom,0.9645527005195618,1
+trans-urethrale resectie,transurethrale resectie,0.9646499156951904,1
+transurethraleresectie,transurethrale resectie,0.9646611213684082,1
+cirrhose door alcoholmisbruik,cirrose door alcoholmisbruik,0.964750349521637,1
+maligne lymfoom centroblastair diffuus,ml centroblastair centrocytair folliculair le,0.964816391468048,1
+deciduale veranderingen,hyaliene degeneratie,0.964945673942566,1
+sacro-iliacaal gewricht,gepigmenteerde dermale naevus,0.9652165174484252,1
+wartin tumor,warthin tumor,0.9649623036384584,1
+sereuscystadenoom,syringadenoom,0.9649784564971924,1
+maligne lymfoom diffuus centroblastair,primair effusie lymfoom,0.9650164246559144,1
+geruptureerd myocardinfarct,geruptureerd aneurysma,0.9650212526321412,1
+nevus sebaceus,nervus saphenus,0.9650384783744812,1
+nodulaire prostaat hypertrofie,nodulaire prostaathypertrofie,0.965066134929657,1
+aspiratie maag inhoud,aspiratie darminhoud,0.9650863409042358,1
+meningocele,meningococcen,0.9651689529418944,1
+ml lymfocytair b - cell,ml lymfoblastair t cell type,0.9651846289634703,1
+primair scleroserendeintrahepatische cholangitis,dermatopathische lymfadenopathie,0.9663842916488647,1
+bronchus long,bronchus en long,0.9664619565010072,1
+maligne lymfoma,maligne lymfoom,0.966471254825592,1
+beiderzijds hersenoedeem,heldercellig meningeoom,0.9684588313102722,1
+hoog gradig neuro-endocrien carcinoom,hooggradig neuroendocrien carcinoom,0.9677831530570984,1
+neurinoma,neurilemma,0.9678554534912108,1
+intima proliferatie,proliferatie,0.9678955078125,1
+poikilocytose,plasmocytose,0.9679515361785888,1
+thrombocythaemie,immuunhistochemie,0.9680122137069702,1
+heldercelligniercelcarcinoom,metastase heldercellig niercelcarcinoom,0.9680235981941224,1
+pilar sheath acanthoma,pilar sheath acanthoom,0.9682267904281616,1
+thrombotische micro-angiopathie,trombotische microangiopathie,0.968366265296936,1
+lymfklieren leverhilus,inguinale lymfklier,0.9683701992034912,1
+lymfoepithelioma,lymphogranuloma malignum,0.9684687256813048,1
+superficiele fibromatosis,agressive fibromatosis,0.9664795398712158,1
+carcinoidtumor,ductuscarcinoom,0.9684987664222716,1
+bijschildklier rechtsonder,bijschildklier rechts onder,0.9685060381889344,1
+sinuspiriformis,sinus piriformis,0.9685239791870116,1
+myocardiopathie,myocardinfarct,0.968573808670044,1
+nevus verrucosus,naevus verrucosus,0.968612551689148,1
+musculus,botcallus,0.9686927795410156,1
+motor neuron-ziekte,motorneuron ziekte,0.9687698483467102,1
+lymfeklieromentum,pneumococcen,0.9688007831573486,1
+essentiele trombocythemie,myeloproliferatieve ziekte,0.9688198566436768,1
+spatium retroperitoneale,spatium vesicouterinum,0.9676401019096376,1
+mukeuze cyste,muceuze cyste,0.9676138162612916,1
+lobulaircarcinoom,lobulair adenocarcinoom,0.9675506353378296,1
+lymfo reticulaire maligniteit,lymforeticulaire maligniteit,0.9675329327583312,1
+erythrofagie,isthmuspoliep,0.9665098190307616,1
+angiosarcoma,angiosarcoom,0.9665170907974244,1
+melanose ,lipidose,0.9665579199790956,1
+transpositie van grote vaten,transpositie grote vaten,0.9665678143501282,1
+oesophaguscarcinoom,adenomyoepithelioom,0.966597855091095,1
+cheilognathopalatoschisis.,cheilognatopalatoschisis,0.9666475057601928,1
+pseudoangiomateuze stroma hyperplasie,pseudoepitheliomateuze hyperplasie,0.966651976108551,1
+transurethrale resektie,interstitieel longemfyseem,0.966688334941864,1
+her2neunegatief,hermafrodiet,0.9667569398880004,1
+idiopathische hypertrofische pachymeningitis,idiopatische hypertrofische pachymeningitis,0.9667598605155944,1
+mestcel hyperplasie,lobulaire hyperplasie,0.9668702483177184,1
+acute hemorrhagische pancreatitis,acrodermatitis pustularis,0.9669349193572998,1
+epidermale nevus,nervus lingualis,0.9670143723487854,1
+prolymfocyten leucaemie,calcificerende stenose,0.9670279622077942,1
+stafylokokkeninfectie,erytroblastenleukemie,0.9670791625976562,1
+haemorrhagische diathese,ulerythema ophryogenes,0.967415988445282,1
+geen lokalisatie maligne lymfoom,fascie van het diafragma urogenitale,0.967443585395813,1
+bronchioalveolairelavage,plasmocellulaire infiltratie,0.9674858450889589,1
+oxyphiel adenoom,oxyfiel adenoom,0.9675204753875732,1
+uretrocele,dystrofie,0.964477837085724,1
+littekeninfarct,oxalaatkristallen,0.9642705321311952,1
+carcinosarcoma,carcinosarcoom,0.964263916015625,1
+druk groef,drukgroef,0.9614229202270508,1
+haemangioblastoom,lymfangiosarcoom,0.9610162973403932,1
+anafylactic shock,anaphylactic shock,0.9611098766326904,1
+rechter bijnier,subfrenisch gebied,0.96116840839386,1
+localisatie van tumor,localisatie maligne tumor,0.9612247943878174,1
+ramus circumflexus,glomus coccygealis,0.961231768131256,1
+barrettoesophagitis,hepatosplenomegalie,0.9612964391708374,1
+striatum,corpus striatum,0.961296558380127,1
+endodermale sinustumor,endometriumcellen abnormaal,0.961300015449524,1
+centraal reuscel granuloom,reuscel angiofibroom,0.9614169597625732,1
+m kahler,kahler,0.9614887237548828,1
+progesteron receptor bepaling negatief,progesteron receptorbepaling positief,0.9622166752815248,1
+groot cellig neuro-endocrien carcinoom,hooggradig neuroendocrien carcinoom,0.9614956378936768,1
+histoplasmosis,histoplasmose,0.9617915153503418,1
+morphometrie,myometrium,0.9618250727653505,1
+thymuscarcinoom,thymus carcinoom,0.9618824124336244,1
+lymfeklier rectum,lymfklier rectum,0.9619417190551758,1
+solutioplacentae,granulocytopenie,0.9619429111480712,1
+hiluslymfklier,lymfklierkapsel,0.9619616866111756,1
+betesda 3,bethesda 3,0.9619908332824708,1
+lymfklier dissectie,parasternale lymfklier,0.96213561296463,1
+astrocytoma graad 4,astrocytoom graad 4,0.9609668850898744,1
+renal celcarcinoom,intratubulair choriocarcinoom,0.960779070854187,1
+hemorrhagisch oedeem,perihepatisch gebied,0.9607568383216858,1
+heldercelligniercel carcinoom,infiltrerend solide papillair carcinoom,0.9605000019073486,1
+vena cavasuperior syndroom,vena suprarenalis,0.9595857858657836,1
+hepatitisb,hepatitis b,0.959588885307312,1
+hemosiderotische fibrohistiocytaire lipomateuze laesie,hemosiderotische fibrohistiocytaire lipomateuze lesie,0.9976224899291992,1
+vrouwelijk genitaal apparaat,vrouwelijk genitaalapparaat,0.959679126739502,1
+asbestosis,asbestose,0.959689199924469,1
+pseudo poliep,pseudopoliep,0.9598008394241332,1
+scleroserende adenosis,genezen glomerulonefritis,0.95986145734787,1
+pulmonalehypertensie,peritoneaalvocht,0.95997154712677,1
+navelstrengafwijkingen,tussenwervelschijf,0.9600024223327636,1
+extra medullaire hematopoiese,metastase soliede carcinoom,0.9600168466567992,1
+slijmvliesmond,sneevlakken vrij,0.9600325226783752,1
+kieuwboog rest,kieuwboog,0.9600609540939332,1
+grampositieve bacterien,gram negatieve bacterien,0.9600875377655028,1
+herzfehlercellen,hersenventrikel,0.9601930975914,1
+ziekte van hashimoto,syndroom van mikulicz,0.9602662920951844,1
+mucineus cyst adenoom,mucineus adenoom,0.9602970480918884,1
+lymfangioleiomyomatosis,lymfangioleiomyomatose,0.9604104161262512,1
+perirenaalvet,peritoneaalvocht,0.9604118466377258,1
+myelomonocyten leukemie,lymfocytaire leukemie,0.96042138338089,1
+vlok atrofie,condyloom vlak,0.96214497089386,1
+thrombopenie,trombopenie,0.9622721076011658,1
+cytomegalievirus infectie,cytomegalievirusinfectie,0.9642531275749208,1
+aorta abdominale aneurysma,geruptureerd aneurysma aorta abdominalis,0.9637747406959534,1
+decompensatio,decompensatio cordis,0.9632557034492492,1
+hemorrhagische cystitis,cholecystitis acuta,0.9632663130760192,1
+bacteriele endacarditis,bacteriele endocarditis,0.963374137878418,1
+maligne lymphoma,lymphoma malignum,0.9633761048316956,1
+desmoid type fibromatosis,agressive fibromatosis,0.9634233713150024,1
+lymphklier rectum,lymfklier rectum,0.9636143445968628,1
+maligne perifere zenuwschedetumor,abnormaal ontspringende arterie,0.9636840224266052,1
+retroperitoneaal hematoom,metastase myoepitheliaal carcinoom,0.9636949300765992,1
+autoimmuunhepatitis,epitheloidcelgranuloom,0.9637713432312012,1
+ductus carcinoma insitu,intracysteus carcinoom,0.9638251066207886,1
+insektebeet,hermafrodiet,0.9622869491577148,1
+sub acute ontsteking,acute ontsteking,0.9638307094573976,1
+intrahepatischegalgang,intrahepatische galgang,0.9638710618019104,1
+acute myeloide leucemie,acute myeloide leukemie,0.9638877511024476,1
+barretts oesofagitis,barretts oesophagitis,0.9639267325401306,1
+ischaemische infarct,anaemisch infarct,0.9639509916305542,1
+nietkleincelligcarcinoom,tweeslippige pulmonaalklep,0.9639769792556764,1
+angio dysplasie,matige dysplasie,0.964081048965454,1
+broncho pneumonie,lobulaire pneumonie,0.9642387628555298,1
+papillairschildkliercarcinoom,trofoblastproliferatie,0.9642491340637208,1
+vreemdlichaam reactie,granuloom vreemdlichaam,0.9631812572479248,1
+parapemfigus,parapemphigus,0.9631563425064088,1
+urotheelcel carcinoma,oatcell carcinoma,0.963068425655365,1
+chondrocalcinosis,melanodermatitis,0.9630541801452636,1
+interstitiele fibrosis,tubulo interstitiele nefritis,0.9623426795005798,1
+endoechografie,eilandceladenoom,0.9623805284500122,1
+akute lymfatische leukaemie,autoimmuun hemolytische anemie,0.9624080061912536,1
+long transplantaat,transplantaat,0.9625139832496644,1
+lymfklier oesophagus,lymfklier oesofagus,0.962519347667694,1
+acute haemorrhagische cystitis,acute hemorragische cholecystitis,0.9625845551490784,1
+verdacht voormaligniteit,vegetatief zenuwstelsel,0.9626030325889589,1
+ductaalcarcinoma,ductaal carcinoom,0.9626694321632384,1
+holoprosencephalie.,holoprosencefalie,0.962717354297638,1
+thromboembolieen,immuunperoxydase positief,0.9627215266227722,1
+pleuraholte rechts,metacarpale gewricht,0.9627460837364196,1
+galstasis,lithiasis,0.962763249874115,1
+astrocytoma graad 2,astrocytoom graad 2,0.962809145450592,1
+schade,scheur,0.9628158807754515,1
+adenocarcinoom in situ.,adenocarcinoma in situ,0.9628546833992004,1
+de temporaalkwab,temporaalkwab,0.9628874659538268,1
+extra medullaire haematopoese,extramedullaire hemopoese,0.962959051132202,1
+tepel vocht,tepelvocht,0.963009774684906,1
+talamus,thalamus,0.9630118608474731,1
+by-pass,rejectie borderline,0.8051928281784058,1

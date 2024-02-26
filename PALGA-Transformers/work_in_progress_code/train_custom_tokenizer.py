@@ -14,7 +14,7 @@ def train_sentencepiece_tokenizer(input_file_path, model_prefix, vocab_size, spe
     """
     # Preparing SentencePiece command
     spm_command = f'--input={input_file_path} --model_prefix={model_prefix} ' \
-                  f'--vocab_size={vocab_size} --character_coverage=0.98 ' \
+                  f'--vocab_size={vocab_size} --character_coverage=1.0' \
                   f'--model_type=unigram --control_symbols={",".join(special_tokens)}'
     
     # Train the SentencePiece model
@@ -36,11 +36,11 @@ with open(temp_file_path, "w") as temp_file:
             reader = csv.reader(file, delimiter="\t")
             count = 0
             for row in reader:
-                temp_file.write(row[0].lower() + "\n")  # Convert input to lowercase
-                temp_file.write(row[1].lower() + "\n")  # Convert input to lowercase
+                temp_file.write(row[0].lower().replace("[c-sep]", "").replace("[crlf]", "") + "\n")  # Convert input to lowercase and remove [C-SEP]
+                # temp_file.write(row[1].lower() + "\n")  # Convert input to lowercase
 
 # Training parameters
-model_prefix = "combined_data_unigram_t5_custom_32128_098_lower_case_with_codes"
+model_prefix = "combined_data_unigram_t5_custom_32128_1_lower_case"
 vocab_size = 32128
 special_tokens = ["[PAD]", "[UNK]", "[CLS]", "[MASK]", "[C-SEP]"]  # Include your special tokens here
 

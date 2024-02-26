@@ -1,19 +1,57 @@
 from transformers import AutoTokenizer
+from datasets import load_dataset
+
 
 # Initialize your tokenizer (replace with your tokenizer)
-tokenizer = AutoTokenizer.from_pretrained('/home/msiepel/tokenizer')
+tokenizer = AutoTokenizer.from_pretrained('PALGA-Transformers/PALGA-Transformers/flan_tokenizer')
 
-def count_tokens(sentence, tokenizer):
-    # Tokenize the sentence
-    tokens = tokenizer.tokenize(sentence)
 
-    # Return the number of tokens
-    return len(tokens)
+def preprocess_function(examples, tokenizer, max_length_sentence):
+    inputs = examples["Conclusie"]
+    targets = examples["Palga_codes"]
+    print(inputs)
+    print(targets)
 
-# Example sentence
-sentence = "Input Sequence: I: Hemicolectomie rechts : Er wordt een tumor aangetroffen met beeld van een adenocarcinoom ( 65 %) naast mucineus carcinoom ( 30 %) en zegelringcelcarcinoom ( 5 %). De tumor is matig gedifferentieerd. De maximale grootte bedraagt 6,5 cm. De tumor invadeert tot in het omgevend vetweefsel. Er is een kleine perforatie. Het meest nabij gelegen sneevlak is distaal. Dit sneevlak is vrij. De marge t.o.v. dit sneevlak bedraagt 4 cm. Het circumferentiele snijvlak is vrij. De marge t.o.v. dit sneevlak bedraagt 3 cm. Er is geen vasoinvasieve groei. Geen perineurale invasie. Aantal separate poliepen: 1, waarvan adenomateus laaggradig dysplastisch: 1. Aantal lymfklieren onderzocht: 15. Geen metastasen. Stadieringsvoorstel: pT3, N0 (Stadiering volgens TNM versie 5, conform afspraak werkgroep gastro-intestinale tumoren IKZ regio). II: Low anterior resectie : Status na voorbestraling 5x5 Gy met geringe tumorregressie (Mandard IV). Er wordt een tumor aangetroffen met beeld van een adenocarcinoom. De tumor is matig gedifferentieerd. De maximale grootte bedraagt 3 cm. De tumor invadeert tot in het omgevend vetweefsel. Het meest nabij gelegen sneevlak is distaal. Dit sneevlak is vrij. De marge t.o.v. dit sneevlak bedraagt 2,5 cm. Het circumferentiele snijvlak is vrij. De marge t.o.v. dit sneevlak bedraagt 3 cm. Er is geen vasoinvasieve groei. Geen perineurale invasie. Aantal lymfklieren onderzocht: 21. Geen metastasen. Stadieringsvoorstel: y pT3, N0 (Stadiering volgens TNM versie 5, conform afspraak werkgroep gastro-intestinale tumoren IKZ regio). 4-2-2015: Op verzoek van de oncologievergadering dd 3-2-2015 is MSI-bepaling op beide tumoren ingezet. De uitslag wordt binnen 10 werkdagen verwacht. MOLECULAIRE PATHOLOGIE dd 12-2-2015 MSI-high (in colon rechts) en MSI-stable (in rectum) aangetoond. Dit is informatief in het kader van therapie en niet vanwege een mogelijk associatie met het Lynch syndroom (zie opmerking onder microscopie). AANVULLEND 16-3-2015 (Judith Jeuken): Deze aanvulling is gemaakt vanwege een administratieve wijziging. De medische inhoud blijft ongewijzigd."
+    model_inputs = tokenizer(
+        inputs, text_target=targets, max_length=max_length_sentence, truncation=True
+    )
 
-# Count the number of tokens in the sentence
-num_tokens = count_tokens(sentence, tokenizer)
+    # Decode the token IDs to text for both inputs and targets
+    decoded_inputs = [tokenizer.decode(token_ids, skip_special_tokens=True) for token_ids in model_inputs['input_ids']]
+    if 'labels' in model_inputs:  # Ensure 'labels' exists before decoding (depends on the tokenizer)
+        decoded_targets = [tokenizer.decode(token_ids, skip_special_tokens=True) for token_ids in model_inputs['labels']]
+        print("Decoded Targets:", decoded_targets)
+    print("Decoded Inputs:", decoded_inputs)
+    exit()
+    return model_inputs
 
-print("Number of tokens:", num_tokens)
+
+def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
+    # Define file paths for the first dataset
+    data_files = {"train": f"PALGA-Transformers/PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
+    
+    # Load the first dataset
+    dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
+
+   # Further processing (filtering and tokenizing)
+    print(dataset)
+    print(dataset.keys())
+    for split in dataset.keys():
+        dataset[split] = dataset[split].filter(lambda example: example["Palga_codes"] is not None and example["Palga_codes"] != '')
+        dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
+        dataset[split] = dataset[split].map(
+            lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
+            batched=False
+        )
+        dataset[split] = dataset[split].remove_columns(["Conclusie", "Palga_codes"])
+        dataset[split].set_format("torch")
+
+    train_dataset = dataset['train']
+    val_dataset = dataset['validation']
+
+    return train_dataset, val_dataset
+
+
+train_dataset, val_dataset = prepare_datasets_tsv("histo", tokenizer, 512)
+
+print(train_dataset[:5])

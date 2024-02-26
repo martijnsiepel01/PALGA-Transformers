@@ -1,0 +1,1147 @@
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Map:   0%|          | 0/997 [00:00<?, ? examples/s]Map: 100%|██████████| 997/997 [00:00<00:00, 2925.45 examples/s]Map: 100%|██████████| 997/997 [00:00<00:00, 2888.22 examples/s]
+Validation Step Parameters:
+greedy_params: {}
+contrastive_params: {'penalty_alpha': 0.7, 'top_k': 3}
+sampling_params: {'temperature': 0.7, 'top_k': 20}
+beam_params: {}
+beam_sampling_params: {}
+diverse_beam_params: {'diversity_penalty': 0.3, 'num_beams': 6, 'num_beam_groups': 2}
+Evaluation:   0%|          | 0/4 [00:00<?, ?it/s]/gpfs/home3/gburger01/.venv/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:392: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/gpfs/home3/gburger01/.venv/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:407: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+Evaluation:  25%|██▌       | 1/4 [00:41<02:04, 41.57s/it]Evaluation:  50%|█████     | 2/4 [01:13<01:11, 35.68s/it]Evaluation:  75%|███████▌  | 3/4 [01:41<00:32, 32.39s/it]Evaluation: 100%|██████████| 4/4 [01:46<00:00, 21.70s/it]Evaluation: 100%|██████████| 4/4 [01:46<00:00, 26.73s/it]
+Input Sequence:                i. huidecisie linkerschouder littekenvorming. geen rest basaalcelcarcinoom. ii. huidecisie nasolabiaal rechts nodulair basaalcelcarcinoom, radicaal verwijderd.
+Label:                         huid schouder links ecisie litteken geen maligniteit
+Prediction (Greedy):           huid schouder links resectie basaalcelcarcinoom c-sep huid romp resectie basaalcelcarcinoom, BLEU: 15.62, ROUGE: 31.25
+Prediction (Greedy_long):      huid schouder links resectie basaalcelcarcinoom c-sep huid romp resectie basaalcelcarcinoom, BLEU: 15.62, ROUGE: 31.25
+Prediction (Contrastive):      huid schouder links resectie basaalcelcarcinoom c-sep huid romp resectie basaalcelcarcinoom, BLEU: 15.62, ROUGE: 31.25
+Prediction (Contrastive_long): huid schouder links resectie basaalcelcarcinoom c-sep huid romp resectie basaalcelcarcinoom, BLEU: 15.62, ROUGE: 31.25
+Prediction (Sampling):         huid schouder links resectie basaalcelcarcinoom c-sep huid romp resectie basaalcelcarcinoom, BLEU: 15.62, ROUGE: 31.25
+Prediction (Sampling_long):    huid schouder links resectie basaalcelcarcinoom c-sep huid romp resectie basaalcelcarcinoom, BLEU: 15.62, ROUGE: 31.25
+Prediction (Diverse_beam):     huid romp resectie basaalcelcarcinoom, BLEU: 7.55, ROUGE: 13.64
+Prediction (Diverse_beam_long):huid romp resectie basaalcelcarcinoom, BLEU: 7.55, ROUGE: 13.64
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i duodenumbiopten met toename van de intraepitheliale lymfocyten, doch geen duidelijke atrofie marsh. ii en iii  biopsie oesofagus distale oesofagus en proimale oesofagus  oesofagusepitheel zonder afwijkingen. er zijn geen ontstekingsverschijnselen. geen aanknopingspunten voor eosinofiele oesofagitis.
+Label:                         duodenum biopt coeliakie c-sep oesofagus biopt geen afwijking
+Prediction (Greedy):           duodenum biopt geen afwijking c-sep oesofagus biopsie geen afwijking, BLEU: 25.10, ROUGE: 69.97
+Prediction (Greedy_long):      duodenum biopt geen afwijking c-sep oesofagus biopsie geen afwijking, BLEU: 25.10, ROUGE: 69.97
+Prediction (Contrastive):      duodenum biopt geen afwijking c-sep oesofagus biopsie geen afwijking, BLEU: 25.10, ROUGE: 69.97
+Prediction (Contrastive_long): duodenum biopt geen afwijking c-sep oesofagus biopsie geen afwijking, BLEU: 25.10, ROUGE: 69.97
+Prediction (Sampling):         duodenum biopt geen afwijking c-sep oesofagus biopsie geen afwijking, BLEU: 25.10, ROUGE: 69.97
+Prediction (Sampling_long):    duodenum biopt geen afwijking c-sep oesofagus biopsie geen afwijking, BLEU: 25.10, ROUGE: 69.97
+Prediction (Diverse_beam):     duodenum biopt geen afwijking c-sep oesofagus biopsie geen afwijking, BLEU: 25.10, ROUGE: 69.97
+Prediction (Diverse_beam_long):duodenum biopt geen afwijking c-sep oesofagus biopt geen afwijking, BLEU: 51.33, ROUGE: 80.80
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie coeur verruca seborrhoica met irritatie.
+Label:                         huid borst ecisie verruca seborrhoica
+Prediction (Greedy):           huid coeur ecisie verruca seborrhoica, BLEU: 42.73, ROUGE: 72.50
+Prediction (Greedy_long):      huid coeur ecisie verruca seborrhoica, BLEU: 42.73, ROUGE: 72.50
+Prediction (Contrastive):      huid   coeur   ecisie   verruca seborrhoica, BLEU: 42.73, ROUGE: 72.50
+Prediction (Contrastive_long): huid   coeur   ecisie   verruca seborrhoica snijvlak vrij, BLEU: 26.27, ROUGE: 60.00
+Prediction (Sampling):         huid coeur ecisie verruca seborrhoica, BLEU: 42.73, ROUGE: 72.50
+Prediction (Sampling_long):    huid coeur ecisie verruca seborrhoica, BLEU: 42.73, ROUGE: 72.50
+Prediction (Diverse_beam):     huid coeur ecisie verruca seborrhoica, BLEU: 42.73, ROUGE: 72.50
+Prediction (Diverse_beam_long):huid coeur ecisie verruca seborrhoica, BLEU: 42.73, ROUGE: 72.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie navel epidermiscyste geen maligniteit.
+Label:                         huid navel buik ecisie epidermale cyste geen maligniteit
+Prediction (Greedy):           huid navel ecisie epidermiscyste, BLEU: 13.01, ROUGE: 42.50
+Prediction (Greedy_long):      huid navel ecisie epidermiscyste, BLEU: 13.01, ROUGE: 42.50
+Prediction (Contrastive):      topografie onbekend resectie epidermiscyste, BLEU: 0.00, ROUGE: 0.00
+Prediction (Contrastive_long): topografie onbekend resectie epidermiscyste, BLEU: 0.00, ROUGE: 0.00
+Prediction (Sampling):         huid navel ecisie epidermiscyste, BLEU: 13.01, ROUGE: 42.50
+Prediction (Sampling_long):    huid navel ecisie epidermiscyste, BLEU: 13.01, ROUGE: 42.50
+Prediction (Diverse_beam):     huid navel ecisie epidermiscyste, BLEU: 13.01, ROUGE: 42.50
+Prediction (Diverse_beam_long):huid navel ecisie epidermiscyste, BLEU: 13.01, ROUGE: 42.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i polypectomie coecum niet te beoordelen door forse cauterisatieartefacten. diameter . cm, snijvlak niet te beoordelen.. ii polypectomie colon transversum tubulair adenoom mucosale poliep, dysplasie laaggradig. diameter . cm, snijvlak niet te beoordelen.. iii polypectomie fleura lienalis tubulair adenoom mucosale poliep, dysplasie laaggradig. diameter . cm, snijvlak niet te beoordelen.. iv polypectomie fleura lienalis tubulair adenoom mucosale poliep, dysplasie laaggradig. diameter . cm, snijvlak niet te beoordelen.. v polypectomie sigmoid tubulair adenoom mucosale poliep, dysplasie laaggradig. diameter . cm, snijvlak niet te beoordelen.. vi polypectomie sigmoid tubulovilleus adenoom mucosale poliep, dysplasie laaggradig., laaggradige dysplasie. tevens -tal foci met hooggradige dysplasie, in totaal  van het totaal.. diameter . cm, snijvlak vrij..
+Label:                         poliep colon resectie geen diagnose c-sep poliep colon resectie tubulair adenoom laaggradige dysplasie c-sep poliep colon resectie tubulair adenoom laaggradige dysplasie c-sep poliep colon resectie tubulair adenoom laaggradige dysplasie c-sep poliep colon resectie tubulair adenoom laaggradige dysplasie c-sep poliep colon resectie tubulovilleus adenoom hooggradige dysplasie snijvlak vrij
+Prediction (Greedy):           coecum partiele resectie tubulair adenoom c-sep colon transversum resectie tubulair adenoom, BLEU: 0.96, ROUGE: 25.13
+Prediction (Greedy_long):      coecum partiele resectie tubulair adenoom c-sep colon transversum resectie tubulair adenoom c-sep sigmoid resectie tubulair adenoom c-sep sigmoid resectie tubulovilleus adenoom c, BLEU: 6.27, ROUGE: 45.00
+Prediction (Contrastive):      coecum transurethrale resectie tubulair adenoom c-sep colon transversum resectie tubulair niercelcarcinoom, BLEU: 0.72, ROUGE: 21.98
+Prediction (Contrastive_long): coecum transurethrale resectie tubulair adenoom c-sep colon transversum resectie tubulair niercelcarcinoom c-sep sigmoid resectie tubulair adenoom c-sep sigmoid resectie tubulovilleus adenoom, BLEU: 5.28, ROUGE: 42.28
+Prediction (Sampling):         coecum partiele resectie tubulair adenoom c-sep colon transversum resectie tubulair adenoom, BLEU: 0.96, ROUGE: 25.13
+Prediction (Sampling_long):    coecum partiele resectie tubulair adenoom c-sep colon transversum resectie tubulair adenoom c-sep sigmoid resectie tubulair adenoom c-sep sigmoid resectie tubulovilleus adenoom c, BLEU: 6.27, ROUGE: 45.00
+Prediction (Diverse_beam):     colon resectie tubulair adenoom c-sep colon resectie tubulair adenoom c-sep sigmoid, BLEU: 1.88, ROUGE: 34.04
+Prediction (Diverse_beam_long):colon resectie tubulair adenoom c-sep colon resectie tubulair adenoom c-sep colon resectie tubulair adenoom c-sep sigmoid resectie tubulovilleus adenoom c-sep sigmoid resectie, BLEU: 12.93, ROUGE: 54.74
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i  shaveecisie mamma rechts lateraal met keratosis seborrhoica van het acanthotische type. er zijn geen tekenen van maligniteit. ii  huidecisie schouder links met beeld passend bij een intradermale naevuscelnaevus. er zijn geen tekenen van maligniteit.
+Label:                         huid mamma rechts ecisie verruca seborrhoica c-sep huid schouder links ecisie dermale naevus naevocellularis
+Prediction (Greedy):           huid mamma rechts shave ecisie keratosis seborrhoica c-sep huid schouder links ecisie, BLEU: 46.15, ROUGE: 74.31
+Prediction (Greedy_long):      huid mamma rechts shave ecisie keratosis seborrhoica c-sep huid schouder links ecisie naevus naevocellularis geen maligniteit, BLEU: 42.61, ROUGE: 75.94
+Prediction (Contrastive):      huid mamma rechts shave ecisie keratosis seborrhoica c-sep huid schouder links ecisie, BLEU: 46.15, ROUGE: 74.31
+Prediction (Contrastive_long): huid mamma rechts shave ecisie keratosis seborrhoica c-sep huid schouder links ecisie naevus naevocellularis geen maligniteit, BLEU: 42.61, ROUGE: 75.94
+Prediction (Sampling):         huid mamma rechts shave ecisie keratosis seborrhoica c-sep huid schouder links ecisie, BLEU: 46.15, ROUGE: 74.31
+Prediction (Sampling_long):    huid mamma rechts shave ecisie keratosis seborrhoica c-sep huid schouder links ecisie naevus naevocellularis geen maligniteit, BLEU: 42.61, ROUGE: 75.94
+Prediction (Diverse_beam):     huid mamma rechts shave ecisie keratosis seborrhoica c-sep huid schouder links ecisie, BLEU: 46.15, ROUGE: 74.31
+Prediction (Diverse_beam_long):huid mamma rechts shave ecisie keratosis seborrhoica c-sep huid schouder links ecisie naevus naevocellularis geen maligniteit, BLEU: 42.61, ROUGE: 75.94
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie rechts palmair beeld best passend bij prurigo nodularis.
+Label:                         huid hand rechts ecisie prurigo nodularis
+Prediction (Greedy):           huid ecisie prurigo nodularis, BLEU: 38.75, ROUGE: 72.50
+Prediction (Greedy_long):      huid ecisie prurigo nodularis, BLEU: 38.75, ROUGE: 72.50
+Prediction (Contrastive):      digitus manus  rechts ecisie prurigo nodularis, BLEU: 50.81, ROUGE: 65.00
+Prediction (Contrastive_long): digitus manus  rechts ecisie prurigo nodularis, BLEU: 50.81, ROUGE: 65.00
+Prediction (Sampling):         huid ecisie prurigo nodularis, BLEU: 38.75, ROUGE: 72.50
+Prediction (Sampling_long):    huid ecisie prurigo nodularis, BLEU: 38.75, ROUGE: 72.50
+Prediction (Diverse_beam):     huid ecisie prurigo nodularis, BLEU: 38.75, ROUGE: 72.50
+Prediction (Diverse_beam_long):huid ecisie prurigo nodularis, BLEU: 38.75, ROUGE: 72.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i maagantrum twee maagantrumslijmvliesbiopten met chronische en multifocaal actieve ontsteking bij aanwezigheid van helicobacter-achtige micro-organismen. er is intestinale metaplasie. geen dysplasie. ii maagcorpus twee maagcorpusslijmvliesbiopten met chronische ontsteking bij aanwezigheid van helicobacter-achtige micro-organismen. geen intestinale metaplasie. geen dysplasie. iii oesofagus twee oppervlakkige en flardige oesofagusbiopten, die nagenoeg geheel bestaan uit normaal uitrijpend meerlagig plaveiselepitheel met ontsteking.
+Label:                         antrum maag corpus maag biopt helicobacter pylori gastritis c-sep oesofagus biopt ontsteking geen maligniteit
+Prediction (Greedy):           maag biopt ontsteking helicobacter intestinale metaplasie c-sep oesofagus biopt ontsteking, BLEU: 21.76, ROUGE: 56.57
+Prediction (Greedy_long):      maag biopt ontsteking helicobacter intestinale metaplasie c-sep oesofagus biopt ontsteking, BLEU: 21.76, ROUGE: 56.57
+Prediction (Contrastive):      maagslijmvlies biopt actieve ontsteking helicobacter-aortaal intestinale metaplasie c-sep maag biopt chronische ontsteking helicobacter, BLEU: 7.53, ROUGE: 35.24
+Prediction (Contrastive_long): maagslijmvlies biopt actieve ontsteking helicobacter-aortaal intestinale metaplasie c-sep maag biopt chronische ontsteking helicobacter-aortaal, BLEU: 7.19, ROUGE: 34.09
+Prediction (Sampling):         maag biopt ontsteking helicobacter intestinale metaplasie c-sep oesofagus biopt ontsteking, BLEU: 21.76, ROUGE: 56.57
+Prediction (Sampling_long):    maag biopt ontsteking helicobacter intestinale metaplasie c-sep oesofagus biopt ontsteking, BLEU: 21.76, ROUGE: 56.57
+Prediction (Diverse_beam):     maag biopt ontsteking helicobacter intestinale metaplasie c-sep oesofagus biopt ontsteking, BLEU: 21.76, ROUGE: 56.57
+Prediction (Diverse_beam_long):maag biopt ontsteking helicobacter intestinale metaplasie c-sep oesofagus biopt ontsteking, BLEU: 21.76, ROUGE: 56.57
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i. peritoneumbiopten stukje peritoneum waarin sclerotisch stroma met dystrofe calcificaties. geen specifieke kenmerken, geen maligniteit. ii. buikspoelvocht geen aanwijzingen voor maligniteit of ontsteking. iii. uterus met rechter ovarium geen maligniteit. corpus uteri met plaatselijk een klein intramuraal leiomyoom. ovarium met een simpele mucineuze cyste  cm.
+Label:                         peritoneum biopt reactief geen maligniteit c-sep ascites cytologie geen afwijking c-sep uterus resectie geen maligniteit leiomyoom c-sep ovarium resectie rechts mucineus cystadenoom
+Prediction (Greedy):           peritoneum biopt calcificatie c-sep uterus corpus uteri ecisie cyste geen maligniteit, BLEU: 4.78, ROUGE: 34.09
+Prediction (Greedy_long):      peritoneum biopt calcificatie c-sep uterus corpus uteri ecisie cyste geen maligniteit, BLEU: 4.78, ROUGE: 34.09
+Prediction (Contrastive):      corpus uteri biopt geen maligniteit calcificatie c-sep uterus etirpatie leiomyoom endometrium in, BLEU: 4.61, ROUGE: 31.80
+Prediction (Contrastive_long): corpus uteri biopt geen maligniteit calcificatie c-sep uterus etirpatie leiomyoom endometrium in proliferatiefase c-sep ovarium rechts etirpatie geen maligniteit, BLEU: 7.49, ROUGE: 44.86
+Prediction (Sampling):         peritoneum biopt calcificatie c-sep uterus corpus uteri ecisie cyste geen maligniteit, BLEU: 4.78, ROUGE: 34.09
+Prediction (Sampling_long):    peritoneum biopt calcificatie c-sep uterus corpus uteri ecisie cyste geen maligniteit, BLEU: 4.78, ROUGE: 34.09
+Prediction (Diverse_beam):     peritoneum biopt calcificatie c-sep uterus ecisie geen maligniteit leiomyoom c-sep uterus, BLEU: 11.66, ROUGE: 49.20
+Prediction (Diverse_beam_long):peritoneum biopt calcificatie c-sep uterus ecisie geen maligniteit leiomyoom c-sep uterus ecisie geen maligniteit leiomyoom c-sep uterus ecisie geen maligniteit leiomyoom, BLEU: 16.97, ROUGE: 51.41
+----------------------------------------------------------------------------------------------------
+Input Sequence:                voorlopige. naaldbiopten klier retromandibulair fragmentjes parotisklierweefsel met delen van een primaire benigne speekselkliertumor, nog niet goed nader te duiden geen aanwijzingen voor metastase van een longcarcinoom definitieve diagnose volgt na consult etern. definitieve d.d.  n.a.v. consult etern. naaldbiopten klier retromandibulair fragmentjes parotisklierweefsel waarin een pleiomorf adenoom en focaal mogelijk ook aanwijzingen voor mogelijk een warthin tumor geen aanwijzingen voor metastase van een longcarcinoom. aanvulling d.d.. revisie etern concordant.
+Label:                         parotis biopt pleiomorf adenoom warthin tumor geen maligniteit revisie etern concordant
+Prediction (Greedy):           parotis biopt pleiomorf adenoom revisie etern concordant revisie etern, BLEU: 34.57, ROUGE: 66.39
+Prediction (Greedy_long):      parotis biopt pleiomorf adenoom revisie etern concordant revisie etern concordant, BLEU: 34.38, ROUGE: 63.16
+Prediction (Contrastive):      parotis biopt immunohistochemie consult etern concordant c-sep parotis biopt pleiomorf adenoom, BLEU: 27.90, ROUGE: 39.96
+Prediction (Contrastive_long): parotis biopt immunohistochemie consult etern concordant c-sep parotis biopt pleiomorf adenoom geen zekere diagnose revisie etern concordant revisie etern concordant, BLEU: 17.92, ROUGE: 45.83
+Prediction (Sampling):         parotis biopt pleiomorf adenoom revisie etern concordant revisie etern, BLEU: 34.57, ROUGE: 66.39
+Prediction (Sampling_long):    parotis biopt pleiomorf adenoom revisie etern concordant revisie etern concordant, BLEU: 34.38, ROUGE: 63.16
+Prediction (Diverse_beam):     parotis biopt pleiomorf adenoom revisie etern concordant revisie etern concordant, BLEU: 34.38, ROUGE: 63.16
+Prediction (Diverse_beam_long):parotis biopt pleiomorf adenoom revisie etern concordant revisie etern concordant revisie etern concordant revisie etern concordant, BLEU: 22.14, ROUGE: 48.89
+----------------------------------------------------------------------------------------------------
+Input Sequence:                biopten terminale ileum geen afwijkingen geen ontstekingsinfiltraat van betekenis. geen dysplasie.
+Label:                         ileum biopt geen afwijking
+Prediction (Greedy):           ileum biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Greedy_long):      ileum biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive):      ileum biopt g.a. c-sep colon biopt geen afwijking, BLEU: 16.59, ROUGE: 55.36
+Prediction (Contrastive_long): ileum biopt g.a. c-sep colon biopt geen afwijking, BLEU: 16.59, ROUGE: 55.36
+Prediction (Sampling):         ileum biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling_long):    ileum biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam):     ileum biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):ileum biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                curettage zwelling elleboog rechts cornu cutaneum. omtrent een eventuele onderliggende laesie kan geen uitspraak worden gedaan.
+Label:                         huid curettage elleboog rechts cornu cutaneum
+Prediction (Greedy):           huid elleboog rechts curettage cornu cutaneum, BLEU: 25.41, ROUGE: 76.67
+Prediction (Greedy_long):      huid elleboog rechts curettage cornu cutaneum, BLEU: 25.41, ROUGE: 76.67
+Prediction (Contrastive):      weke delen elleboog curettage cornu cutaneum, BLEU: 19.30, ROUGE: 46.67
+Prediction (Contrastive_long): weke delen elleboog curettage cornu cutaneum, BLEU: 19.30, ROUGE: 46.67
+Prediction (Sampling):         huid elleboog rechts curettage cornu cutaneum, BLEU: 25.41, ROUGE: 76.67
+Prediction (Sampling_long):    huid elleboog rechts curettage cornu cutaneum, BLEU: 25.41, ROUGE: 76.67
+Prediction (Diverse_beam):     huid elleboog rechts curettage cornu cutaneum, BLEU: 25.41, ROUGE: 76.67
+Prediction (Diverse_beam_long):huid elleboog rechts curettage cornu cutaneum, BLEU: 25.41, ROUGE: 76.67
+----------------------------------------------------------------------------------------------------
+Input Sequence:                lymfklier ecisie links iliacaal twee lymfklieren en vetweefsel zonder aanwijzingen voor metastase carcinoom. vriescoupe conform.
+Label:                         lymfklier lies links ecisie geen maligniteit vriescoupe concordant
+Prediction (Greedy):           lymfklier lies links ecisie geen maligniteit vriescoupe concordant vriescoupe concordant, BLEU: 75.98, ROUGE: 88.54
+Prediction (Greedy_long):      lymfklier lies links ecisie geen maligniteit vriescoupe concordant vriescoupe concordant vriescoupe concordant, BLEU: 61.32, ROUGE: 79.44
+Prediction (Contrastive):      lymfklier ecisie reactieve verandering vriescoupe voor derden consult intern, BLEU: 6.27, ROUGE: 26.47
+Prediction (Contrastive_long): lymfklier ecisie reactieve verandering vriescoupe voor derden consult intern, BLEU: 6.27, ROUGE: 26.47
+Prediction (Sampling):         lymfklier lies links ecisie geen maligniteit vriescoupe concordant vriescoupe concordant, BLEU: 75.98, ROUGE: 88.54
+Prediction (Sampling_long):    lymfklier lies links ecisie geen maligniteit vriescoupe concordant vriescoupe concordant vriescoupe concordant, BLEU: 61.32, ROUGE: 79.44
+Prediction (Diverse_beam):     lymfklier lies links ecisie geen maligniteit vriescoupe concordant vriescoupe concordant, BLEU: 75.98, ROUGE: 88.54
+Prediction (Diverse_beam_long):lymfklier ecisie geen maligniteit vriescoupe concordant vriescoupe concordant vriescoupe concordant vriescoupe concordant vriescoupe concordant, BLEU: 27.82, ROUGE: 50.91
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huid biopt paranasaal rechts naevus naevocellularis.
+Label:                         huid gelaat rechts biopt dermale naevus naevocellularis
+Prediction (Greedy):           huid biopt naevus naevocellularis, BLEU: 17.95, ROUGE: 60.10
+Prediction (Greedy_long):      huid biopt naevus naevocellularis, BLEU: 17.95, ROUGE: 60.10
+Prediction (Contrastive):      huid   biopt   naevus naevocellularis, BLEU: 17.95, ROUGE: 60.10
+Prediction (Contrastive_long): huid   biopt   naevus naevocellularis, BLEU: 17.95, ROUGE: 60.10
+Prediction (Sampling):         huid biopt naevus naevocellularis, BLEU: 17.95, ROUGE: 60.10
+Prediction (Sampling_long):    huid biopt naevus naevocellularis, BLEU: 17.95, ROUGE: 60.10
+Prediction (Diverse_beam):     huid biopt naevus naevocellularis, BLEU: 17.95, ROUGE: 60.10
+Prediction (Diverse_beam_long):huid biopt naevus naevocellularis, BLEU: 17.95, ROUGE: 60.10
+----------------------------------------------------------------------------------------------------
+Input Sequence:                resectie galblaas met cholecystolithiasis en chronische ontsteking. geen aanwijzingen voor maligniteit.
+Label:                         galblaas resectie cholecystolithiasis geen maligniteit
+Prediction (Greedy):           galblaas resectie cholecystolithiasis chronische ontsteking, BLEU: 39.76, ROUGE: 57.50
+Prediction (Greedy_long):      galblaas resectie cholecystolithiasis chronische ontsteking, BLEU: 39.76, ROUGE: 57.50
+Prediction (Contrastive):      galblaas cholecystolithiasis chronische etirpatie geen maligniteit, BLEU: 19.30, ROUGE: 60.10
+Prediction (Contrastive_long): galblaas cholecystolithiasis chronische etirpatie geen maligniteit, BLEU: 19.30, ROUGE: 60.10
+Prediction (Sampling):         galblaas resectie cholecystolithiasis chronische ontsteking, BLEU: 39.76, ROUGE: 57.50
+Prediction (Sampling_long):    galblaas resectie cholecystolithiasis chronische ontsteking, BLEU: 39.76, ROUGE: 57.50
+Prediction (Diverse_beam):     galblaas resectie cholecystolithiasis chronische ontsteking, BLEU: 39.76, ROUGE: 57.50
+Prediction (Diverse_beam_long):galblaas resectie cholecystolithiasis chronische ontsteking, BLEU: 39.76, ROUGE: 57.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidbiopsie schouder links met basaalcelcarcinoom van het solide type. niet geheel verwijderd.
+Label:                         huid schouder links biopt basaalcelcarcinoom snijvlak niet vrij
+Prediction (Greedy):           huid schouder links stansbiopt basaalcel carcinoom snijvlak niet vrij, BLEU: 29.85, ROUGE: 66.27
+Prediction (Greedy_long):      huid schouder links stansbiopt basaalcel carcinoom snijvlak niet vrij, BLEU: 29.85, ROUGE: 66.27
+Prediction (Contrastive):      huid   schouder   links   stansbiopt    basaalcelcarcinoom, BLEU: 23.45, ROUGE: 55.24
+Prediction (Contrastive_long): huid   schouder   links   stansbiopt    basaalcelcarcinoom snijvlak niet te beoordelen, BLEU: 29.85, ROUGE: 66.27
+Prediction (Sampling):         huid schouder links stansbiopt basaalcel carcinoom snijvlak niet vrij, BLEU: 29.85, ROUGE: 66.27
+Prediction (Sampling_long):    huid schouder links stansbiopt basaalcel carcinoom snijvlak niet vrij, BLEU: 29.85, ROUGE: 66.27
+Prediction (Diverse_beam):     huid schouder links stansbiopt basaalcel carcinoom snijvlak niet vrij, BLEU: 29.85, ROUGE: 66.27
+Prediction (Diverse_beam_long):huid schouder links stansbiopt basaalcel carcinoom snijvlak niet vrij, BLEU: 29.85, ROUGE: 66.27
+----------------------------------------------------------------------------------------------------
+Input Sequence:                besluit colon ascendens  t.e.m.  poliepectomie van een tubulair adenoom met lichte dysplasie. volledig verwijderd in alle fragmenten behalve in fragment. colon ascendens  poliepectomie van een hyperplastische poliep. colon transversum  poliepectomie van een tubulair adenoom met lichte dysplasie. volledig verwijderd. colon descendens  poliepectomie van een hyperplastische poliep. sigmoid  poliepectomie van een tubulair adenoom met lichte dysplasie. volledig verwijderd. sigmoid  poliepectomie van een tubulair adenoom met fokaal hooggradige dysplasie. volledig verwijderd. sigmoid  poliepectomie van een hyperplastische poliep. sigmoid  poliepectomie van een tubulair adenoom met lichte dysplasie. volledig verwijderd. sigmoid  poliepectomie van een hyperplastische poliep. rectum  poliepectomie van een tubulair adenoom met lichte dysplasie. volledig verwijderd.
+Label:                         colon biopt tubulair adenoom geringe dysplasie c-sep colon biopt hyperplastische poliep c-sep colon biopt tubulair adenoom hooggradige dysplasie
+Prediction (Greedy):           colon ecisie tubulair adenoom laaggradige dysplasie c-sep colon ecisie, BLEU: 8.59, ROUGE: 42.14
+Prediction (Greedy_long):      colon ecisie tubulair adenoom laaggradige dysplasie c-sep colon ecisie tubulair adenoom laaggradige dysplasie, BLEU: 12.25, ROUGE: 51.93
+Prediction (Contrastive):      colon ascendens ecisie tubulair adenoom c-sep colon descendens ecisie, BLEU: 5.25, ROUGE: 35.36
+Prediction (Contrastive_long): colon ascendens ecisie tubulair adenoom c-sep colon descendens ecisie tubulair adenoom c-sep rectum ecisie tubulair adenoom laaggradige dysplasie, BLEU: 8.23, ROUGE: 47.83
+Prediction (Sampling):         colon ecisie tubulair adenoom laaggradige dysplasie c-sep colon ecisie, BLEU: 8.59, ROUGE: 42.14
+Prediction (Sampling_long):    colon ecisie tubulair adenoom laaggradige dysplasie c-sep colon ecisie tubulair adenoom laaggradige dysplasie, BLEU: 12.25, ROUGE: 51.93
+Prediction (Diverse_beam):     colon ecisie tubulair adenoom laaggradige dysplasie c-sep colon ecisie, BLEU: 8.59, ROUGE: 42.14
+Prediction (Diverse_beam_long):colon ecisie tubulair adenoom c-sep colon ecisie tubulair adenoom c-sep rectum ecisie hyperplastische poliep, BLEU: 9.03, ROUGE: 47.71
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i prostaatbiopten links, geen aanwijzingen voor maligniteit. ii prostaatbiopten rechts, in twee biopten enkele atypische klierbuizen asap.
+Label:                         prostaat links biopt geen maligniteit c-sep prostaat rechts biopt onzekere diagnose
+Prediction (Greedy):           prostaat biopt atypie, BLEU: 0.00, ROUGE: 20.00
+Prediction (Greedy_long):      prostaat biopt atypie, BLEU: 0.00, ROUGE: 20.00
+Prediction (Contrastive):      prostaat biopt immunohistochemie, BLEU: 0.00, ROUGE: 20.00
+Prediction (Contrastive_long): prostaat biopt immunohistochemie, BLEU: 0.00, ROUGE: 20.00
+Prediction (Sampling):         prostaat biopt atypie, BLEU: 0.00, ROUGE: 20.00
+Prediction (Sampling_long):    prostaat biopt atypie, BLEU: 0.00, ROUGE: 20.00
+Prediction (Diverse_beam):     prostaat biopt atypie, BLEU: 0.00, ROUGE: 20.00
+Prediction (Diverse_beam_long):prostaat biopt atypie, BLEU: 0.00, ROUGE: 20.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie hals links waarin een verruca seborrhoica. geen maligniteit.
+Label:                         huid hand links ecisie verruca seborrhoica
+Prediction (Greedy):           huid hals links ecisie verruca seborrhoica, BLEU: 53.73, ROUGE: 77.50
+Prediction (Greedy_long):      huid hals links ecisie verruca seborrhoica, BLEU: 53.73, ROUGE: 77.50
+Prediction (Contrastive):      huid   hals   links   ecisie   verruca seborrhoica, BLEU: 53.73, ROUGE: 77.50
+Prediction (Contrastive_long): huid   hals   links   ecisie   verruca seborrhoica geen maligniteit, BLEU: 36.56, ROUGE: 66.07
+Prediction (Sampling):         huid hals links ecisie verruca seborrhoica, BLEU: 53.73, ROUGE: 77.50
+Prediction (Sampling_long):    huid hals links ecisie verruca seborrhoica, BLEU: 53.73, ROUGE: 77.50
+Prediction (Diverse_beam):     huid hals links ecisie verruca seborrhoica, BLEU: 53.73, ROUGE: 77.50
+Prediction (Diverse_beam_long):huid hals links ecisie verruca seborrhoica, BLEU: 53.73, ROUGE: 77.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie rug met een superficieel groeiend basaalcelcarcinoom. snijvlakken vrij.
+Label:                         huid rug ecisie basaalcelcarcinoom snijvlak vrij
+Prediction (Greedy):           huid rug ecisie basaalcelcarcinoom, BLEU: 60.65, ROUGE: 78.75
+Prediction (Greedy_long):      huid rug ecisie basaalcelcarcinoom, BLEU: 60.65, ROUGE: 78.75
+Prediction (Contrastive):      huid rug ecisie basaalcelcarcinoom, BLEU: 60.65, ROUGE: 78.75
+Prediction (Contrastive_long): huid rug ecisie basaalcelcarcinoom, BLEU: 60.65, ROUGE: 78.75
+Prediction (Sampling):         huid rug ecisie basaalcelcarcinoom, BLEU: 60.65, ROUGE: 78.75
+Prediction (Sampling_long):    huid rug ecisie basaalcelcarcinoom, BLEU: 60.65, ROUGE: 78.75
+Prediction (Diverse_beam):     huid rug ecisie basaalcelcarcinoom snijvlak vrij, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):huid rug ecisie basaalcelcarcinoom snijvlak vrij, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidbiopt laterale zijde clavicula rechts  actinische keratose. huidbiopt boven linker tepel  actinische keratose met acantholyse. huidbiopt rug paravertebraal links  oppervlakkig groeiend basaalcelcarcinoom.
+Label:                         huid borst rug biopt actinische keratose c-sep huid mamma links actinische keratose c-sep huid rug biopt basaalcelcarcinoom
+Prediction (Greedy):           huid romp biopt actinische keratose basaalcelcarcinoom, BLEU: 5.49, ROUGE: 34.35
+Prediction (Greedy_long):      huid romp biopt actinische keratose basaalcelcarcinoom, BLEU: 5.49, ROUGE: 34.35
+Prediction (Contrastive):      huid   biopt   actinische keratose basaalcelcarcinoom, BLEU: 4.10, ROUGE: 35.80
+Prediction (Contrastive_long): huid   biopt   actinische keratose basaalcelcarcinoom c-sep huid   biopt   actinische keratose c-se, BLEU: 12.99, ROUGE: 60.00
+Prediction (Sampling):         huid romp biopt actinische keratose basaalcelcarcinoom, BLEU: 5.49, ROUGE: 34.35
+Prediction (Sampling_long):    huid romp biopt actinische keratose basaalcelcarcinoom, BLEU: 5.49, ROUGE: 34.35
+Prediction (Diverse_beam):     huid romp biopt actinische keratose basaalcelcarcinoom, BLEU: 5.49, ROUGE: 34.35
+Prediction (Diverse_beam_long):huid clavicula rechts biopt actinische keratose c-sep huid tepel links biopt actinische keratose c-sep huid rug links biopt basaalcelcarcinoom, BLEU: 42.46, ROUGE: 74.47
+----------------------------------------------------------------------------------------------------
+Input Sequence:                naaldbiopt litteken mamma rechts, bij status na grm rechts infiltrerend carcinoom, geen speciaal type, er positief, pr positief, her-neu negatief. mede gelet op de receptorstatus betreft het waarschijnlijk een recidief van het bij patient bekende mammacarcinoom uit.
+Label:                         mamma rechts biopt adenocarcinoom
+Prediction (Greedy):           mamma rechts naaldbiopt adenocarcinoom recidief, BLEU: 23.64, ROUGE: 57.14
+Prediction (Greedy_long):      mamma rechts naaldbiopt adenocarcinoom recidief, BLEU: 23.64, ROUGE: 57.14
+Prediction (Contrastive):      mamma rechts biopt metastase adenocarcinoom mamma, BLEU: 32.47, ROUGE: 72.50
+Prediction (Contrastive_long): mamma rechts biopt metastase adenocarcinoom mamma, BLEU: 32.47, ROUGE: 72.50
+Prediction (Sampling):         mamma rechts naaldbiopt adenocarcinoom recidief, BLEU: 23.64, ROUGE: 57.14
+Prediction (Sampling_long):    mamma rechts naaldbiopt adenocarcinoom recidief, BLEU: 23.64, ROUGE: 57.14
+Prediction (Diverse_beam):     mamma rechts biopt adenocarcinoom oestrogeenreceptorbepaling positief progesteron receptorbepaling positief herneu negatief revisie intern, BLEU: 19.34, ROUGE: 45.29
+Prediction (Diverse_beam_long):mamma rechts biopt adenocarcinoom oestrogeenreceptorbepaling positief progesteron receptorbepaling positief herneu negatief revisie intern revisie concordant revisie intern revisie concordant revisie concordant, BLEU: 11.37, ROUGE: 30.52
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i huidecisie temporaal links lateraal met nodulair groeiend basaalcelcarcinoom. de laesie reikt tot in de rand op  uur. ii huidecisie temporaal links mediaal met nodulair groeiend basaalcelcarcinoom reikend tot aan de rand op  uur. compleet verwijderd. iii huidecisie voorhoofd met nodulair groeiend basaalcelcarcinoom, compleet verwijderd. diameter van de laesie, cm. vrije marge  mm. iv huidecisie temporaal met reactieve veranderingen.
+Label:                         huid gelaat links ecisie basaalcelcarcinoom snijvlak niet vrij c-sep huid gelaat links basaalcelcarcinoom snijvlak vrij c-sep huid gelaat ecisie basaalcelcarcinoom snijvlak vrij c-sep huid gelaat ecisie reactief
+Prediction (Greedy):           huid gelaat ecisie basaalcelcarcinoom snijvlak vrij, BLEU: 3.02, ROUGE: 32.35
+Prediction (Greedy_long):      huid gelaat ecisie basaalcelcarcinoom snijvlak vrij, BLEU: 3.02, ROUGE: 32.35
+Prediction (Contrastive):      huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 15.25
+Prediction (Contrastive_long): huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 15.25
+Prediction (Sampling):         huid gelaat ecisie basaalcelcarcinoom snijvlak vrij, BLEU: 3.02, ROUGE: 32.35
+Prediction (Sampling_long):    huid gelaat ecisie basaalcelcarcinoom snijvlak vrij, BLEU: 3.02, ROUGE: 32.35
+Prediction (Diverse_beam):     huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 15.25
+Prediction (Diverse_beam_long):huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 15.25
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidbiopt rug het beeld past het best bij pityriasis lichenoides et varioliformis.
+Label:                         huid rug biopt pityriasis lichenoides
+Prediction (Greedy):           huid rug biopt pityriasis lichenoides, BLEU: 100.00, ROUGE: 100.00
+Prediction (Greedy_long):      huid rug biopt pityriasis lichenoides, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive):      huid   rug   biopt  spinale   geen maligniteit consult, BLEU: 24.45, ROUGE: 47.50
+Prediction (Contrastive_long): huid   rug   biopt  spinale   geen maligniteit consult intern, BLEU: 20.56, ROUGE: 43.71
+Prediction (Sampling):         huid rug biopt pityriasis lichenoides, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling_long):    huid rug biopt pityriasis lichenoides, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam):     huid rug biopt pityriasis lichenoides, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):huid rug biopt pityriasis lichenoides, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                cervibiopt en endocervicale curettage cin-. --oomoom
+Label:                         cervi biopt cin
+Prediction (Greedy):           cervi biopsie cin-, BLEU: 0.00, ROUGE: 50.00
+Prediction (Greedy_long):      cervi biopsie cin-, BLEU: 0.00, ROUGE: 50.00
+Prediction (Contrastive):      cervi biopsie cin-, BLEU: 0.00, ROUGE: 50.00
+Prediction (Contrastive_long): cervi biopsie cin-, BLEU: 0.00, ROUGE: 50.00
+Prediction (Sampling):         cervi biopsie cin-, BLEU: 0.00, ROUGE: 50.00
+Prediction (Sampling_long):    cervi biopsie cin-, BLEU: 0.00, ROUGE: 50.00
+Prediction (Diverse_beam):     cervi biopsie cin-, BLEU: 0.00, ROUGE: 50.00
+Prediction (Diverse_beam_long):cervi biopsie cin-, BLEU: 0.00, ROUGE: 50.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i. ileumbiopt dunnedarmslijmvlies met geringe lymfoide hyperplasie. geen atrofie. ii. colonbiopten dikkedarmslijmvlies zonder afwijkingen. met name geen collageneuze of microscopische colitis. n.b. zie voor de poliepen t-.
+Label:                         ileum biopt lymfoide hyperplasie c-sep colon biopt geen afwijking
+Prediction (Greedy):           ileum biopt lymfoide hyperplasie c-sep colon biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Greedy_long):      ileum biopt lymfoide hyperplasie c-sep colon biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive):      ileum biopt lymfoide hyperplasie immuunhistochemie c-sep colon biopt geen afwijking, BLEU: 65.80, ROUGE: 92.48
+Prediction (Contrastive_long): ileum biopt lymfoide hyperplasie immuunhistochemie c-sep colon biopt geen afwijking, BLEU: 65.80, ROUGE: 92.48
+Prediction (Sampling):         ileum biopt lymfoide hyperplasie c-sep colon biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling_long):    ileum biopt lymfoide hyperplasie c-sep colon biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam):     ileum biopt lymfoide hyperplasie c-sep colon biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):ileum biopt lymfoide hyperplasie c-sep colon biopt geen afwijking, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                endocervicaal poliepje met enige chronische ontsteking
+Label:                         cervi biopt chronische ontsteking
+Prediction (Greedy):           slokdarm biopt ontsteking, BLEU: 0.00, ROUGE: 42.86
+Prediction (Greedy_long):      slokdarm biopt ontsteking, BLEU: 0.00, ROUGE: 42.86
+Prediction (Contrastive):      slokdarm biopt geen maligniteit, BLEU: 15.97, ROUGE: 18.75
+Prediction (Contrastive_long): slokdarm biopt geen maligniteit, BLEU: 15.97, ROUGE: 18.75
+Prediction (Sampling):         slokdarm biopt ontsteking, BLEU: 0.00, ROUGE: 42.86
+Prediction (Sampling_long):    slokdarm biopt ontsteking, BLEU: 0.00, ROUGE: 42.86
+Prediction (Diverse_beam):     slokdarm biopt ontsteking, BLEU: 0.00, ROUGE: 42.86
+Prediction (Diverse_beam_long):slokdarm biopt ontsteking, BLEU: 0.00, ROUGE: 42.86
+----------------------------------------------------------------------------------------------------
+Input Sequence:                maag biopten waarin een geringe chronische, niet specifieke ontsteking. geen helicobacters. dunne darm slijmvliesbiopten zonder afwijkingen.
+Label:                         maag biopt ontsteking c-sep dunne darm biopt geen afwijking
+Prediction (Greedy):           maag biopsie ontsteking, BLEU: 0.00, ROUGE: 23.08
+Prediction (Greedy_long):      maag biopsie ontsteking, BLEU: 0.00, ROUGE: 23.08
+Prediction (Contrastive):      dunne darm biopt g.a., BLEU: 18.37, ROUGE: 37.69
+Prediction (Contrastive_long): dunne darm biopt g.a., BLEU: 18.37, ROUGE: 37.69
+Prediction (Sampling):         maag biopsie ontsteking, BLEU: 0.00, ROUGE: 23.08
+Prediction (Sampling_long):    maag biopsie ontsteking, BLEU: 0.00, ROUGE: 23.08
+Prediction (Diverse_beam):     maag biopsie ontsteking, BLEU: 0.00, ROUGE: 23.08
+Prediction (Diverse_beam_long):maag biopt ontsteking, BLEU: 0.00, ROUGE: 43.71
+----------------------------------------------------------------------------------------------------
+Input Sequence:                -- biopten rechter mamma enkele dubieuze secretoire calcificaties aangetroffen. geen carcinoma in situ of maligniteit. representatief
+Label:                         mamma rechts biopt microcalcificatie geen maligniteit dubieus
+Prediction (Greedy):           mamma rechts biopt calcificatie geen maligniteit, BLEU: 32.16, ROUGE: 71.33
+Prediction (Greedy_long):      mamma rechts biopt calcificatie geen maligniteit, BLEU: 32.16, ROUGE: 71.33
+Prediction (Contrastive):      mamma   rechts   biopt   geen maligniteit    geen, BLEU: 32.16, ROUGE: 71.33
+Prediction (Contrastive_long): mamma   rechts   biopt   geen maligniteit    geen maligniteit      biopt   geen maligniteit, BLEU: 19.64, ROUGE: 54.12
+Prediction (Sampling):         mamma rechts biopt calcificatie geen maligniteit, BLEU: 32.16, ROUGE: 71.33
+Prediction (Sampling_long):    mamma rechts biopt calcificatie geen maligniteit, BLEU: 32.16, ROUGE: 71.33
+Prediction (Diverse_beam):     mamma rechts biopt calcificatie geen maligniteit, BLEU: 32.16, ROUGE: 71.33
+Prediction (Diverse_beam_long):mamma rechts biopt calcificatie geen maligniteit, BLEU: 32.16, ROUGE: 71.33
+----------------------------------------------------------------------------------------------------
+Input Sequence:                poliepectomie, middelste neusgang links ontstekingspoliep met geringe eosinofilie. geen inverted papilloom, geen maligniteit.
+Label:                         neus links biopt poliep geen maligniteit
+Prediction (Greedy):           neus links ecisie ontstekingspoliep eosinofilie, BLEU: 17.49, ROUGE: 32.83
+Prediction (Greedy_long):      neus links ecisie ontstekingspoliep eosinofilie, BLEU: 17.49, ROUGE: 32.83
+Prediction (Contrastive):      neus resectie actieve ontsteking poliep, BLEU: 10.40, ROUGE: 27.27
+Prediction (Contrastive_long): neus resectie actieve ontsteking poliep, BLEU: 10.40, ROUGE: 27.27
+Prediction (Sampling):         neus links ecisie ontstekingspoliep eosinofilie, BLEU: 17.49, ROUGE: 32.83
+Prediction (Sampling_long):    neus links ecisie ontstekingspoliep eosinofilie, BLEU: 17.49, ROUGE: 32.83
+Prediction (Diverse_beam):     neus links ecisie ontstekingspoliep eosinofilie, BLEU: 17.49, ROUGE: 32.83
+Prediction (Diverse_beam_long):neus links ecisie ontstekingspoliep eosinofilie, BLEU: 17.49, ROUGE: 32.83
+----------------------------------------------------------------------------------------------------
+Input Sequence:                biopten maag antrum, maag corpus  in beide biopten normaal slijmvlies zonder ontsteking of helicobacter pylori. geen dysplasie. biopten duodenum  normaal slijmvlies zonder argumenten voor coeliakie. geen giardia of dysplasie. biopten terminale ileum, pars ascendens, pars transversum  en pars descendens  in alle biopten normaal slijmvlies zonder argumenten voor microscopische colitis. geen dysplasie.
+Label:                         maag biopt geen afwijking c-sep duodenum biopt geen afwijking c-sep colon biopt geen afwijking
+Prediction (Greedy):           duodenum biopt geen afwijking, BLEU: 8.21, ROUGE: 38.33
+Prediction (Greedy_long):      duodenum biopt geen afwijking, BLEU: 8.21, ROUGE: 38.33
+Prediction (Contrastive):      dunne darm biopt geen afwijking, BLEU: 6.57, ROUGE: 26.69
+Prediction (Contrastive_long): dunne darm biopt geen afwijking, BLEU: 6.57, ROUGE: 26.69
+Prediction (Sampling):         duodenum biopt geen afwijking, BLEU: 8.21, ROUGE: 38.33
+Prediction (Sampling_long):    duodenum biopt geen afwijking, BLEU: 8.21, ROUGE: 38.33
+Prediction (Diverse_beam):     maag biopt geen afwijking c-sep duodenum biopt geen afwijking, BLEU: 57.38, ROUGE: 76.44
+Prediction (Diverse_beam_long):maag biopt geen afwijking c-sep duodenum biopt geen afwijking, BLEU: 57.38, ROUGE: 76.44
+----------------------------------------------------------------------------------------------------
+Input Sequence:                conclusie corpus van de maag - hyperplasie van de parientale cellen - doet de patient gebruik maken van protonpomp inhibitors geen dysplasie. geen h. pyori op he kleuring.
+Label:                         maag biopt hyperplasie reactief
+Prediction (Greedy):           maag obductie geen afwijking, BLEU: 15.97, ROUGE: 18.75
+Prediction (Greedy_long):      maag obductie geen afwijking, BLEU: 15.97, ROUGE: 18.75
+Prediction (Contrastive):      maag status na operatie geen maligniteit, BLEU: 8.12, ROUGE: 15.00
+Prediction (Contrastive_long): maag status na operatie geen maligniteit, BLEU: 8.12, ROUGE: 15.00
+Prediction (Sampling):         maag obductie geen afwijking, BLEU: 15.97, ROUGE: 18.75
+Prediction (Sampling_long):    maag obductie geen afwijking, BLEU: 15.97, ROUGE: 18.75
+Prediction (Diverse_beam):     maag obductie geen afwijking, BLEU: 15.97, ROUGE: 18.75
+Prediction (Diverse_beam_long):maag obductie geen afwijking, BLEU: 15.97, ROUGE: 18.75
+----------------------------------------------------------------------------------------------------
+Input Sequence:                slijmvliesbiopten klinisch oesofagus overgang plaveiselepitheel naar maagtype slijmvlies met geringe chronische en minmaal actieve ontsteking. geen dysplasie, geen maligniteit. --drs. a.h.a.g. oomsaoo
+Label:                         oesofagus biopt ontsteking geen maligniteit
+Prediction (Greedy):           oesofagus biopt ontsteking, BLEU: 0.00, ROUGE: 72.92
+Prediction (Greedy_long):      oesofagus biopt ontsteking, BLEU: 0.00, ROUGE: 72.92
+Prediction (Contrastive):      oesofagus biopt chronische actieve  ontsteking, BLEU: 23.64, ROUGE: 51.25
+Prediction (Contrastive_long): oesofagus biopt chronische actieve  ontsteking, BLEU: 23.64, ROUGE: 51.25
+Prediction (Sampling):         oesofagus biopt ontsteking, BLEU: 0.00, ROUGE: 72.92
+Prediction (Sampling_long):    oesofagus biopt ontsteking, BLEU: 0.00, ROUGE: 72.92
+Prediction (Diverse_beam):     oesofagus biopt ontsteking, BLEU: 0.00, ROUGE: 72.92
+Prediction (Diverse_beam_long):oesofagus biopt ontsteking, BLEU: 0.00, ROUGE: 72.92
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huid ecisie bilnaad rechts dermale melanocytaire naevus. --k.j. hoogduinkd
+Label:                         huid bil rechts ecisie dermale naevus naevocellularis
+Prediction (Greedy):           huid bil rechts ecisie naevus, BLEU: 47.40, ROUGE: 77.50
+Prediction (Greedy_long):      huid bil rechts ecisie naevus, BLEU: 47.40, ROUGE: 77.50
+Prediction (Contrastive):      huid   biopt   dermale naevus onderwijs, BLEU: 15.85, ROUGE: 42.50
+Prediction (Contrastive_long): huid   biopt   dermale naevus onderwijs, BLEU: 15.85, ROUGE: 42.50
+Prediction (Sampling):         huid bil rechts ecisie naevus, BLEU: 47.40, ROUGE: 77.50
+Prediction (Sampling_long):    huid bil rechts ecisie naevus, BLEU: 47.40, ROUGE: 77.50
+Prediction (Diverse_beam):     huid bil rechts ecisie naevus, BLEU: 47.40, ROUGE: 77.50
+Prediction (Diverse_beam_long):huid bil rechts ecisie naevus, BLEU: 47.40, ROUGE: 77.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                biopten maagantrum en maagcorpus waarin een matig ernstig, chronisch actieve ontsteking met helicobacter pylori. geen intestinale metaplasie. geen dysplasie.
+Label:                         maag biopt helicobacter pylori gastritis
+Prediction (Greedy):           maag biopt ontsteking, BLEU: 0.00, ROUGE: 45.83
+Prediction (Greedy_long):      maag biopt ontsteking, BLEU: 0.00, ROUGE: 45.83
+Prediction (Contrastive):      maag biopt chronische actieve ontsteking immunohistochemie onderwijs, BLEU: 13.13, ROUGE: 30.00
+Prediction (Contrastive_long): maag biopt chronische actieve ontsteking immunohistochemie onderwijs, BLEU: 13.13, ROUGE: 30.00
+Prediction (Sampling):         maag biopt ontsteking, BLEU: 0.00, ROUGE: 45.83
+Prediction (Sampling_long):    maag biopt ontsteking, BLEU: 0.00, ROUGE: 45.83
+Prediction (Diverse_beam):     maag biopt ontsteking helicobacter pylori, BLEU: 30.21, ROUGE: 72.50
+Prediction (Diverse_beam_long):maag biopt ontsteking helicobacter pylori, BLEU: 30.21, ROUGE: 72.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i prostaatbiopten links aantal biopten , in alle  de biopten adenocarcinoom.  vol. gleason score  . ii prostaatbiopten rechts aantal biopten , in  van de  biopten adenocarcinoom  vol. gleason score  .
+Label:                         prostaat links rechts biopt adenocarcinoom
+Prediction (Greedy):           prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 64.58
+Prediction (Greedy_long):      prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 64.58
+Prediction (Contrastive):      prostaat biopt adenocarcinoom immunohistochemie, BLEU: 27.53, ROUGE: 57.14
+Prediction (Contrastive_long): prostaat biopt adenocarcinoom immunohistochemie, BLEU: 27.53, ROUGE: 57.14
+Prediction (Sampling):         prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 64.58
+Prediction (Sampling_long):    prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 64.58
+Prediction (Diverse_beam):     prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 64.58
+Prediction (Diverse_beam_long):prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 64.58
+----------------------------------------------------------------------------------------------------
+Input Sequence:                a totale thyroidectomie papillair schildkliercarcinoom in de rechter schildklierkwab en de isthmus, geschatte diameter  cm, reikend multifocaal tot zeer dicht bij het snijvlak. er is uitgebreide lymfangio-invasieve groei. geen overtuigende uitbreiding in perithyreoidaal vetweefsel. in het preparaat  bijschildklieren aanwezig. paratracheaal beiderzijds en pretracheaal in  lymfklieren waarvan  zijn tumorpositief. b lymfklierresectie, paratracheaal rechts laag  van de  lymfklieren tumorpositief. c lymfklierresectie, halsklierresectie rechts level   van  lymfklieren tumorpositief. level   van de  lymfklieren tumorpositief. level   van de  lymfklieren tumorpositief. level a  van de  lymfklieren tumorpositief. level b  lymfklieren zonder maligniteit. tnm classificatie de editie ptnb lymfklierstatus tezamen inzending a-c.
+Label:                         schildklier resectie papillair carcinoom c-sep lymfeklier hals resectie metastase carcinoom schildklier
+Prediction (Greedy):           schildklier rechts resectie papillair schildkliercarcinoom snijvlak niet vrij c-sep lymfklier hals rechts resectie metastase papillair, BLEU: 8.55, ROUGE: 48.63
+Prediction (Greedy_long):      schildklier rechts resectie papillair schildkliercarcinoom snijvlak niet vrij c-sep lymfklier hals rechts resectie metastase papillair schildkliercarcinoom schildklier c-sep lymfklier hals rechts resectie metastase papillair schildkliercarcinoom schildklier, BLEU: 4.86, ROUGE: 37.70
+Prediction (Contrastive):      schildklier resectie papillair schildkliercarcinoom immunohistochemie c-sep lymfklier hals resectie metastase carcinoom schildklier revisie, BLEU: 39.83, ROUGE: 72.28
+Prediction (Contrastive_long): schildklier resectie papillair schildkliercarcinoom immunohistochemie c-sep lymfklier hals resectie metastase carcinoom schildklier revisie etern revisie concordant, BLEU: 31.54, ROUGE: 64.69
+Prediction (Sampling):         schildklier rechts resectie papillair schildkliercarcinoom snijvlak niet vrij c-sep lymfklier hals rechts resectie metastase papillair, BLEU: 8.55, ROUGE: 48.63
+Prediction (Sampling_long):    schildklier rechts resectie papillair schildkliercarcinoom snijvlak niet vrij c-sep lymfklier hals rechts resectie metastase papillair schildkliercarcinoom schildklier c-sep lymfklier hals rechts resectie metastase papillair schildkliercarcinoom schildklier, BLEU: 4.86, ROUGE: 37.70
+Prediction (Diverse_beam):     schildklier rechts resectie papillair schildkliercarcinoom snijvlak niet vrij c-sep lymfklier hals rechts resectie metastase papillair, BLEU: 8.55, ROUGE: 48.63
+Prediction (Diverse_beam_long):schildklier rechts resectie papillair schildkliercarcinoom snijvlak niet vrij c-sep lymfklier hals rechts resectie metastase papillair schildkliercarcinoom schildklier c-sep lymfklier hals rechts resectie metastase papillair schildkliercarcinoom schildklier c-sep, BLEU: 4.67, ROUGE: 35.89
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidbiopt thora voorzijde midden i, strekzijde rechter bovenbeen ii beide goed passend bij lichen planus. er werd geen acantholyse gezien.
+Label:                         huid borst biopt lichen planus c-sep huid been rechts biopt lichen planus
+Prediction (Greedy):           huid biopt lichen planus, BLEU: 8.65, ROUGE: 41.96
+Prediction (Greedy_long):      huid biopt lichen planus, BLEU: 8.65, ROUGE: 41.96
+Prediction (Contrastive):      huid   biopt  lichen planus consult intern, BLEU: 11.94, ROUGE: 37.46
+Prediction (Contrastive_long): huid   biopt  lichen planus consult intern, BLEU: 11.94, ROUGE: 37.46
+Prediction (Sampling):         huid biopt lichen planus, BLEU: 8.65, ROUGE: 41.96
+Prediction (Sampling_long):    huid biopt lichen planus, BLEU: 8.65, ROUGE: 41.96
+Prediction (Diverse_beam):     huid biopt lichen planus, BLEU: 8.65, ROUGE: 41.96
+Prediction (Diverse_beam_long):huid biopt lichen planus, BLEU: 8.65, ROUGE: 41.96
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie rechterzijde voorhoofd met nodulair groeiend basaalcelcarcinoom. randen vrij.
+Label:                         huid gelaat rechts ecisie basaalcelcarcinoom snijvlak vrij
+Prediction (Greedy):           huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Greedy_long):      huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Contrastive):      huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Contrastive_long): huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Sampling):         huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Sampling_long):    huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Diverse_beam):     huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Diverse_beam_long):huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+----------------------------------------------------------------------------------------------------
+Input Sequence:                cervi biopten geringe dysplasie, cin. geen maligniteit.
+Label:                         cervi biopt geringe dysplasie cin
+Prediction (Greedy):           cervi biopt geringe dysplasie, BLEU: 77.88, ROUGE: 88.10
+Prediction (Greedy_long):      cervi biopt geringe dysplasie, BLEU: 77.88, ROUGE: 88.10
+Prediction (Contrastive):      cervi biopt geringe dysplasie, BLEU: 77.88, ROUGE: 88.10
+Prediction (Contrastive_long): cervi biopt geringe dysplasie, BLEU: 77.88, ROUGE: 88.10
+Prediction (Sampling):         cervi biopt geringe dysplasie, BLEU: 77.88, ROUGE: 88.10
+Prediction (Sampling_long):    cervi biopt geringe dysplasie, BLEU: 77.88, ROUGE: 88.10
+Prediction (Diverse_beam):     cervi biopt geringe dysplasie, BLEU: 77.88, ROUGE: 88.10
+Prediction (Diverse_beam_long):cervi biopt geringe dysplasie, BLEU: 77.88, ROUGE: 88.10
+----------------------------------------------------------------------------------------------------
+Input Sequence:                besluit  ecisie colon descendens waarin een tubulovilleus adenoom met laaggradige dysplasie. volledig verwijderd , cm.  ecisie sigmod waarin een tubulair adenoom met laaggradige dysplasie. volledig verwijderd.  ecisie rectosigmod waarin een tubulair adenoom met laaggradige dysplasie. a minima verwijderd.
+Label:                         colon biopt tubulovilleus adenoom laaggradige dysplasie c-sep colon biopt tubulair adenoom laaggradige dysplasie
+Prediction (Greedy):           colon ecisie tubulovilleus adenoom laaggradige dysplasie, BLEU: 16.73, ROUGE: 45.83
+Prediction (Greedy_long):      colon ecisie tubulovilleus adenoom laaggradige dysplasie, BLEU: 16.73, ROUGE: 45.83
+Prediction (Contrastive):      colon descendens ecisie tubulovilleus adenoom laaggradige dysplasie, BLEU: 18.45, ROUGE: 43.61
+Prediction (Contrastive_long): colon descendens ecisie tubulovilleus adenoom laaggradige dysplasie, BLEU: 18.45, ROUGE: 43.61
+Prediction (Sampling):         colon ecisie tubulovilleus adenoom laaggradige dysplasie, BLEU: 16.73, ROUGE: 45.83
+Prediction (Sampling_long):    colon ecisie tubulovilleus adenoom laaggradige dysplasie, BLEU: 16.73, ROUGE: 45.83
+Prediction (Diverse_beam):     colon ecisie tubulovilleus adenoom laaggradige dysplasie, BLEU: 16.73, ROUGE: 45.83
+Prediction (Diverse_beam_long):colon ecisie tubulovilleus adenoom laaggradige dysplasie, BLEU: 16.73, ROUGE: 45.83
+----------------------------------------------------------------------------------------------------
+Input Sequence:                slijmvlies incisiebiopt tong mediaan ter hoogte van de sulcus terminalis uitgebreid chronische actieve ontsteking met reactieve veranderingen en een matig uitgebreide hoeveelheid schimmeldraden, passend bij een schimmelinfectie. geen aanwijzingen voor dysplasie of maligniteit.
+Label:                         tong biopt ontsteking mycose geen maligniteit
+Prediction (Greedy):           tong biopt schimmelinfectie, BLEU: 0.00, ROUGE: 40.48
+Prediction (Greedy_long):      tong biopt schimmelinfectie, BLEU: 0.00, ROUGE: 40.48
+Prediction (Contrastive):      tong biopt immunohistochemie chronische actieve ontsteking schimmel schimmel schimmelinfectie, BLEU: 10.55, ROUGE: 33.85
+Prediction (Contrastive_long): tong biopt immunohistochemie chronische actieve ontsteking schimmel schimmel schimmelinfectie, BLEU: 10.55, ROUGE: 33.85
+Prediction (Sampling):         tong biopt schimmelinfectie, BLEU: 0.00, ROUGE: 40.48
+Prediction (Sampling_long):    tong biopt schimmelinfectie, BLEU: 0.00, ROUGE: 40.48
+Prediction (Diverse_beam):     tong biopt schimmelinfectie, BLEU: 0.00, ROUGE: 40.48
+Prediction (Diverse_beam_long):tong biopt schimmelinfectie, BLEU: 0.00, ROUGE: 40.48
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i. huidecisie bovenrug midden met een samengestelde naevus naevocellularis met congenitale kenmerken. ii. huidecisie bovenbeen links met een dermale naevus naevocellularis.
+Label:                         huid rug ecisie samengestelde naevus naevocellularis c-sep huid been links ecisie dermale naevus naevocellularis
+Prediction (Greedy):           huid rug ecisie naevus naevocellularis c-sep huid bovenbeen links ecisie naevus naevocellularis, BLEU: 31.61, ROUGE: 79.67
+Prediction (Greedy_long):      huid rug ecisie naevus naevocellularis c-sep huid bovenbeen links ecisie naevus naevocellularis, BLEU: 31.61, ROUGE: 79.67
+Prediction (Contrastive):      huid rug ecisie naevus naevocellularis c-sep huid bovenbeen links ecisie naevus naevocellularis, BLEU: 31.61, ROUGE: 79.67
+Prediction (Contrastive_long): huid rug ecisie naevus naevocellularis c-sep huid bovenbeen links ecisie naevus naevocellularis, BLEU: 31.61, ROUGE: 79.67
+Prediction (Sampling):         huid rug ecisie naevus naevocellularis c-sep huid bovenbeen links ecisie naevus naevocellularis, BLEU: 31.61, ROUGE: 79.67
+Prediction (Sampling_long):    huid rug ecisie naevus naevocellularis c-sep huid bovenbeen links ecisie naevus naevocellularis, BLEU: 31.61, ROUGE: 79.67
+Prediction (Diverse_beam):     huid rug ecisie naevus naevocellularis c-sep huid bovenbeen links ecisie naevus naevocellularis, BLEU: 31.61, ROUGE: 79.67
+Prediction (Diverse_beam_long):huid rug ecisie naevus naevocellularis c-sep huid bovenbeen links ecisie naevus naevocellularis, BLEU: 31.61, ROUGE: 79.67
+----------------------------------------------------------------------------------------------------
+Input Sequence:                biopten rectum niet specifieke, geringe actieve ontsteking zonder overtuigende aanwijzingen voor een chronische inflammatoire darmziekte. geen granulomen.
+Label:                         colon biopt ontsteking
+Prediction (Greedy):           rectum biopt ontsteking, BLEU: 0.00, ROUGE: 62.50
+Prediction (Greedy_long):      rectum biopt ontsteking, BLEU: 0.00, ROUGE: 62.50
+Prediction (Contrastive):      colon   biopt   ontsteking c-sep rectum biopt actieve ontsteking, BLEU: 20.56, ROUGE: 47.50
+Prediction (Contrastive_long): colon   biopt   ontsteking c-sep rectum biopt actieve ontsteking, BLEU: 20.56, ROUGE: 47.50
+Prediction (Sampling):         rectum biopt ontsteking, BLEU: 0.00, ROUGE: 62.50
+Prediction (Sampling_long):    rectum biopt ontsteking, BLEU: 0.00, ROUGE: 62.50
+Prediction (Diverse_beam):     rectum biopt ontsteking, BLEU: 0.00, ROUGE: 62.50
+Prediction (Diverse_beam_long):rectum biopt ontsteking, BLEU: 0.00, ROUGE: 62.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie onderarm links volaire zijde goed tot matig gedifferentieerd plaveiselcelcarcinoom. geen sprietige groeiwijze. diameter  mm. invasiediepte  mm. geen perineurale en vaso-invasieve groei. marges tov zijsnijvlak  mm en diepe snijvlak  mm.
+Label:                         huid arm links ecisie plaveiselcelcarcinoom snijvlak vrij
+Prediction (Greedy):           huid onderarm links ecisie plaveiselcelcarcinoom snijvlak vrij, BLEU: 64.35, ROUGE: 80.95
+Prediction (Greedy_long):      huid onderarm links ecisie plaveiselcelcarcinoom snijvlak vrij, BLEU: 64.35, ROUGE: 80.95
+Prediction (Contrastive):      huid   arm   links   ecisie   plaveiselcelcarcinoom, BLEU: 67.03, ROUGE: 82.50
+Prediction (Contrastive_long): huid   arm   links   ecisie   plaveiselcelcarcinoom snijvlak vrij snijvlak vrij, BLEU: 72.60, ROUGE: 87.05
+Prediction (Sampling):         huid onderarm links ecisie plaveiselcelcarcinoom snijvlak vrij, BLEU: 64.35, ROUGE: 80.95
+Prediction (Sampling_long):    huid onderarm links ecisie plaveiselcelcarcinoom snijvlak vrij, BLEU: 64.35, ROUGE: 80.95
+Prediction (Diverse_beam):     huid onderarm links ecisie plaveiselcelcarcinoom snijvlak vrij, BLEU: 64.35, ROUGE: 80.95
+Prediction (Diverse_beam_long):huid onderarm links ecisie plaveiselcelcarcinoom snijvlak vrij, BLEU: 64.35, ROUGE: 80.95
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i, ii biopten maag antrum en corpus reactief veranderd antrum- en corpustype slijmvlies met in het corpus intestinale metaplasie en chronische ontsteking. geen dysplasie. geen helicobacter pylori. iii biopten oesofagus plaveiselepitheel zonder afwijkingen. geen eosinofiele oesofagitis.
+Label:                         maag biopt reactief ontsteking intestinale metaplasie c-sep oesofagus biopt geen afwijking
+Prediction (Greedy):           maag biopt reactief c-sep oesofagus biopt geen afwijking, BLEU: 47.52, ROUGE: 82.71
+Prediction (Greedy_long):      maag biopt reactief c-sep oesofagus biopt geen afwijking, BLEU: 47.52, ROUGE: 82.71
+Prediction (Contrastive):      maag antrum biopt intestinale metaplasie chronische ontsteking c-sep oesofagus biopt geen afwijkingen, BLEU: 27.90, ROUGE: 66.87
+Prediction (Contrastive_long): maag antrum biopt intestinale metaplasie chronische ontsteking c-sep oesofagus biopt geen afwijkingen, BLEU: 27.90, ROUGE: 66.87
+Prediction (Sampling):         maag biopt reactief c-sep oesofagus biopt geen afwijking, BLEU: 47.52, ROUGE: 82.71
+Prediction (Sampling_long):    maag biopt reactief c-sep oesofagus biopt geen afwijking, BLEU: 47.52, ROUGE: 82.71
+Prediction (Diverse_beam):     maag biopt reactief c-sep oesofagus biopt geen afwijking, BLEU: 47.52, ROUGE: 82.71
+Prediction (Diverse_beam_long):maag biopt reactief c-sep oesofagus biopt geen afwijkingen, BLEU: 34.36, ROUGE: 72.93
+----------------------------------------------------------------------------------------------------
+Input Sequence:                biopten litteken eerdere poliepectomie wat reactieve veranderingen met bloedingsrest, mogelijk na eerdere ingreep. geen duidelijke rest van dysplasie.
+Label:                         colon biopt reactief
+Prediction (Greedy):           colon biopt reactief, BLEU: 0.00, ROUGE: 100.00
+Prediction (Greedy_long):      colon biopt reactief, BLEU: 0.00, ROUGE: 100.00
+Prediction (Contrastive):      colon   biopt  immunohistochemie   reactief c-sep, BLEU: 23.64, ROUGE: 57.14
+Prediction (Contrastive_long): colon   biopt  immunohistochemie   reactief c-sep sinus maillaris biopt reactieve verandering, BLEU: 9.29, ROUGE: 36.31
+Prediction (Sampling):         colon biopt reactief, BLEU: 0.00, ROUGE: 100.00
+Prediction (Sampling_long):    colon biopt reactief, BLEU: 0.00, ROUGE: 100.00
+Prediction (Diverse_beam):     colon biopt reactief, BLEU: 0.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):colon biopt reactief, BLEU: 0.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                . huidecisie van de schouder links waarin een vrij oppervlakkig gelokaliseerd basaalcelcarcinoom met nodulair groeipatroon. de ecisie is radicaal.. huidecisie van de bovenrug centraal waarin een intradermale melanocytaire naevus zonder atypie.
+Label:                         huid schouder links ecisie basaalcelcarcinoom snijvlak vrij c-sep huid rug ecisie dermale naevus naevocellularis
+Prediction (Greedy):           huid schouder links ecisie basaalcelcarcinoom c-sep huid rug ecisie naevus, BLEU: 45.29, ROUGE: 80.13
+Prediction (Greedy_long):      huid schouder links ecisie basaalcelcarcinoom c-sep huid rug ecisie naevus, BLEU: 45.29, ROUGE: 80.13
+Prediction (Contrastive):      huid schouder links ecisie basaalcelcarcinoom c-sep huid rug ecisie naevus, BLEU: 45.29, ROUGE: 80.13
+Prediction (Contrastive_long): huid schouder links ecisie basaalcelcarcinoom c-sep huid rug ecisie naevus, BLEU: 45.29, ROUGE: 80.13
+Prediction (Sampling):         huid schouder links ecisie basaalcelcarcinoom c-sep huid rug ecisie naevus, BLEU: 45.29, ROUGE: 80.13
+Prediction (Sampling_long):    huid schouder links ecisie basaalcelcarcinoom c-sep huid rug ecisie naevus, BLEU: 45.29, ROUGE: 80.13
+Prediction (Diverse_beam):     huid schouder links ecisie basaalcelcarcinoom c-sep huid rug ecisie naevus, BLEU: 45.29, ROUGE: 80.13
+Prediction (Diverse_beam_long):huid schouder links ecisie basaalcelcarcinoom c-sep huid rug ecisie naevus, BLEU: 45.29, ROUGE: 80.13
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie mediale ooghoek links nodulair type basaalcelcarcinoom, radicaal verwijderd. kleinste marge, mm naar basaal. nevenbevinding epidermale cyste.
+Label:                         huid gelaat links ecisie basaalcelcarcinoom epidermale cyste snijvlak vrij
+Prediction (Greedy):           huid ooghoek links ecisie basaalcelcarcinoom epidermale cyste, BLEU: 48.35, ROUGE: 70.54
+Prediction (Greedy_long):      huid ooghoek links ecisie basaalcelcarcinoom epidermale cyste, BLEU: 48.35, ROUGE: 70.54
+Prediction (Contrastive):      huid   gelaat   links   ecisie   basaalcelcarcinoom, BLEU: 44.93, ROUGE: 70.24
+Prediction (Contrastive_long): huid   gelaat   links   ecisie   basaalcelcarcinoom  epidermale cyste snijvlak vrij consult intern, BLEU: 78.61, ROUGE: 89.72
+Prediction (Sampling):         huid ooghoek links ecisie basaalcelcarcinoom epidermale cyste, BLEU: 48.35, ROUGE: 70.54
+Prediction (Sampling_long):    huid ooghoek links ecisie basaalcelcarcinoom epidermale cyste, BLEU: 48.35, ROUGE: 70.54
+Prediction (Diverse_beam):     huid ooghoek links ecisie basaalcelcarcinoom epidermale cyste, BLEU: 48.35, ROUGE: 70.54
+Prediction (Diverse_beam_long):huid ooghoek links ecisie basaalcelcarcinoom epidermale cyste, BLEU: 48.35, ROUGE: 70.54
+----------------------------------------------------------------------------------------------------
+Input Sequence:                poliep op cm tubulair adenoom met laaggradige dysplasie. geen maligniteit.
+Label:                         colon biopt tubulair adenoom laaggradige dysplasie
+Prediction (Greedy):           colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Greedy_long):      colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Contrastive):      colon ascendens biopt tubulair adenoom laaggradige dysplasie, BLEU: 64.35, ROUGE: 87.41
+Prediction (Contrastive_long): colon ascendens biopt tubulair adenoom laaggradige dysplasie, BLEU: 64.35, ROUGE: 87.41
+Prediction (Sampling):         colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Sampling_long):    colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Diverse_beam):     colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Diverse_beam_long):colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i polypectomie colon ascendens sessiel serrated laesie. geen dysplasie. diameter. cm, snijvlak niet te beoordelen. ii biopt colon descendens hyperplastische poliep mucosale poliep. iii polypectomie sigmoid tubulair adenoom mucosale poliep, dysplasie laaggradig. diameter. cm, snijvlak niet te beoordelen. iv polypectomie proimale rectum hyperplastische poliep mucosale poliep. diameter. cm, snijvlak niet te beoordelen. v polypectomie distale rectum tubulair adenoom mucosale poliep, dysplasie laaggradig.
+Label:                         colon biopt sessiel serrated adenoom c-sep colon biopt hyperplastische poliep c-sep colon biopt tubulair adenoom laaggradige dysplasie c-sep colon biopt hyperplastische poliep c-sep colon biopt tubulair adenoom laaggradige dysplasie
+Prediction (Greedy):           colon biopt sessiel serrated lesie c-sep sigmoid biopt tubulair adenoom laaggradige dysplasie, BLEU: 13.22, ROUGE: 44.96
+Prediction (Greedy_long):      colon biopt sessiel serrated lesie c-sep sigmoid biopt tubulair adenoom laaggradige dysplasie, BLEU: 13.22, ROUGE: 44.96
+Prediction (Contrastive):      colon ascendens biopt sessiel serrated lesie c-sep sigmoid biopt tubulair adenoom laaggradig, BLEU: 5.53, ROUGE: 35.03
+Prediction (Contrastive_long): colon ascendens biopt sessiel serrated lesie c-sep sigmoid biopt tubulair adenoom laaggradige dysplasie c-sep rectum biopt tubulair adenoom laaggradige dysplasie, BLEU: 31.63, ROUGE: 61.36
+Prediction (Sampling):         colon biopt sessiel serrated lesie c-sep sigmoid biopt tubulair adenoom laaggradige dysplasie, BLEU: 13.22, ROUGE: 44.96
+Prediction (Sampling_long):    colon biopt sessiel serrated lesie c-sep sigmoid biopt tubulair adenoom laaggradige dysplasie, BLEU: 13.22, ROUGE: 44.96
+Prediction (Diverse_beam):     colon biopt sessiel serrated lesie c-sep sigmoid biopt tubulair adenoom hyperplastische poliep, BLEU: 8.51, ROUGE: 43.82
+Prediction (Diverse_beam_long):colon ascendens biopt sessiel serrated lesie c-sep sigmoid biopt tubulair adenoom c-sep rectum biopt tubulair adenoom c-sep rectum biopt tubulair adenoom c-s, BLEU: 12.59, ROUGE: 53.69
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i polypectomie coecum tubulair adenoom mucosale poliep, dysplasie laaggradig. diameter . cm, snijvlak niet te beoordelen.. ii polypectomie coecum tubulovilleus adenoom mucosale poliep, dysplasie laaggradig. diameter . cm, snijvlak niet te beoordelen.. iii polypectomie coecum tubulair adenoom mucosale poliep, dysplasie hooggradig. diameter . cm, snijvlak niet vrij.. iv polypectomie colon descendens tubulair adenoom mucosale poliep, dysplasie laaggradig. diameter . cm, snijvlak niet te beoordelen..
+Label:                         colon biopt tubulair adenoom laaggradige dysplasie c-sep colon biopt tubulovilleus adenoom laaggradige dysplasie c-sep colon biopt tubulair adenoom laaggradige dysplasie c-sep colon biopt tubulair adenoom laaggradige dysplasie
+Prediction (Greedy):           coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum, BLEU: 2.74, ROUGE: 32.79
+Prediction (Greedy_long):      coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie, BLEU: 5.42, ROUGE: 40.38
+Prediction (Contrastive):      coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum, BLEU: 2.74, ROUGE: 32.79
+Prediction (Contrastive_long): coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie, BLEU: 5.42, ROUGE: 40.38
+Prediction (Sampling):         coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum, BLEU: 2.74, ROUGE: 32.79
+Prediction (Sampling_long):    coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie, BLEU: 5.42, ROUGE: 40.38
+Prediction (Diverse_beam):     coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum, BLEU: 2.74, ROUGE: 32.79
+Prediction (Diverse_beam_long):coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie tubulair adenoom c-sep coecum resectie, BLEU: 5.42, ROUGE: 40.38
+----------------------------------------------------------------------------------------------------
+Input Sequence:                conclusie huidbiopt pretibiaal rechts chronische dermatitis, echter niet specifiek voor een zekere classificerende diagnose. geen overtuigende argumenten voor een vasculitis evenmin contact allergie. eventueel kan gedacht worden aan een geneesmiddelreactie.
+Label:                         huid scheenbeen rechts biopt ontsteking geneesmiddeleffect onzekere diagnose
+Prediction (Greedy):           huid been rechts biopt chronische dermatitis geen zekere diagnose, BLEU: 11.34, ROUGE: 38.63
+Prediction (Greedy_long):      huid been rechts biopt chronische dermatitis geen zekere diagnose, BLEU: 11.34, ROUGE: 38.63
+Prediction (Contrastive):      huid been biopt chronische dermatitis geen classificerende diagnose, BLEU: 7.27, ROUGE: 28.12
+Prediction (Contrastive_long): huid been biopt chronische dermatitis geen classificerende diagnose, BLEU: 7.27, ROUGE: 28.12
+Prediction (Sampling):         huid been rechts biopt chronische dermatitis geen zekere diagnose, BLEU: 11.34, ROUGE: 38.63
+Prediction (Sampling_long):    huid been rechts biopt chronische dermatitis geen zekere diagnose, BLEU: 11.34, ROUGE: 38.63
+Prediction (Diverse_beam):     huid been rechts biopt chronische dermatitis geen zekere diagnose geen zekere diagnose, BLEU: 8.05, ROUGE: 32.78
+Prediction (Diverse_beam_long):huid been rechts biopt chronische dermatitis geen zekere diagnose geen zekere diagnose geen zekere diagnose geen zekere diagnose, BLEU: 5.11, ROUGE: 25.16
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie rug boven midden met m. bowen. geen tekenen van invasieve groei. het letsel reikt plaatselijk rakelings aan het snijvlak radicaliteit is dubieus
+Label:                         huid rug ecisie morbus bowen
+Prediction (Greedy):           huid rug ecisie morbus bowen snijvlak niet vrij, BLEU: 51.70, ROUGE: 75.87
+Prediction (Greedy_long):      huid rug ecisie morbus bowen snijvlak niet vrij, BLEU: 51.70, ROUGE: 75.87
+Prediction (Contrastive):      huid   rug   ecisie   bowen snijvlak niet vrij, BLEU: 26.27, ROUGE: 60.00
+Prediction (Contrastive_long): huid   rug   ecisie   bowen snijvlak niet vrij consult ten behoeve van derden geen zekere diagnose, BLEU: 10.51, ROUGE: 35.56
+Prediction (Sampling):         huid rug ecisie morbus bowen snijvlak niet vrij, BLEU: 51.70, ROUGE: 75.87
+Prediction (Sampling_long):    huid rug ecisie morbus bowen snijvlak niet vrij, BLEU: 51.70, ROUGE: 75.87
+Prediction (Diverse_beam):     huid rug ecisie morbus bowen snijvlak niet vrij snijvlak dubieus, BLEU: 39.28, ROUGE: 65.38
+Prediction (Diverse_beam_long):huid rug ecisie morbus bowen snijvlak niet vrij snijvlak dubieus geen zekere diagnose, BLEU: 28.92, ROUGE: 54.17
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie retro-auriculair morbus bowen reikend tot in het  uurs laterale resectievlak. overige resectievlakken wel vrij. geen invasieve groei.
+Label:                         huid hoofd morbus bowen snijvlak niet vrij
+Prediction (Greedy):           huid retro-auriculair ecisie morbus bowen resectievlak vrij, BLEU: 15.62, ROUGE: 43.85
+Prediction (Greedy_long):      huid retro-auriculair ecisie morbus bowen resectievlak vrij, BLEU: 15.62, ROUGE: 43.85
+Prediction (Contrastive):      huid retro-auriculair ecisie morbus bowen resectievlak niet vrij, BLEU: 16.52, ROUGE: 54.02
+Prediction (Contrastive_long): huid retro-auriculair ecisie morbus bowen resectievlak niet vrij, BLEU: 16.52, ROUGE: 54.02
+Prediction (Sampling):         huid retro-auriculair ecisie morbus bowen resectievlak vrij, BLEU: 15.62, ROUGE: 43.85
+Prediction (Sampling_long):    huid retro-auriculair ecisie morbus bowen resectievlak vrij, BLEU: 15.62, ROUGE: 43.85
+Prediction (Diverse_beam):     huid retro-auriculair ecisie morbus bowen resectievlak niet vrij, BLEU: 16.52, ROUGE: 54.02
+Prediction (Diverse_beam_long):huid retro-auriculair ecisie morbus bowen resectievlak niet vrij, BLEU: 16.52, ROUGE: 54.02
+----------------------------------------------------------------------------------------------------
+Input Sequence:                ecisie weke delen regio  ontstekingsbeeld met een opvallende aanwezigheid van plasmacellen. aanvullende immunohistochemie volgt nog. bericht hierover volgt separaat. aanvullend bericht d.d. -- aanvullende immunohistochemische kleuring voor kappa en lambda toont een polyclonaal beeld. bovenstaande conclusie blijft gehandhaafd. khjz
+Label:                         weke delen kaak ecisie ontsteking geen maligniteit
+Prediction (Greedy):           weke delen kaak ecisie ontsteking, BLEU: 67.03, ROUGE: 82.50
+Prediction (Greedy_long):      weke delen kaak ecisie ontsteking, BLEU: 67.03, ROUGE: 82.50
+Prediction (Contrastive):      weke delen kaak ecisie geen classificerende diagnose, BLEU: 43.47, ROUGE: 66.07
+Prediction (Contrastive_long): weke delen kaak ecisie geen classificerende diagnose, BLEU: 43.47, ROUGE: 66.07
+Prediction (Sampling):         weke delen kaak ecisie ontsteking, BLEU: 67.03, ROUGE: 82.50
+Prediction (Sampling_long):    weke delen kaak ecisie ontsteking, BLEU: 67.03, ROUGE: 82.50
+Prediction (Diverse_beam):     weke delen kaak ecisie ontsteking consult etern consult concordant, BLEU: 44.63, ROUGE: 61.16
+Prediction (Diverse_beam_long):weke delen kaak ecisie ontsteking consult etern consult concordant consult etern concordant, BLEU: 31.70, ROUGE: 51.24
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidstukje afkomstig van de rechter wang met een basocellulair carcinoom met zowel een superficieel als een nodulaire groeiwijze. de sneeranden zijn alle tumor vrij.
+Label:                         huid gelaat rechts ecisie basaalcelcarcinoom snijvlak vrij
+Prediction (Greedy):           huid ecisie basaalcelcarcinoom superficieel type wang rechts, BLEU: 15.62, ROUGE: 39.88
+Prediction (Greedy_long):      huid ecisie basaalcelcarcinoom superficieel type wang rechts, BLEU: 15.62, ROUGE: 39.88
+Prediction (Contrastive):      huid   wang   rechts   biopt   superficieel type   rechts, BLEU: 7.81, ROUGE: 21.43
+Prediction (Contrastive_long): huid   wang   rechts   biopt   superficieel type   rechts   basaalcelcarcinoom, BLEU: 7.27, ROUGE: 30.00
+Prediction (Sampling):         huid ecisie basaalcelcarcinoom superficieel type wang rechts, BLEU: 15.62, ROUGE: 39.88
+Prediction (Sampling_long):    huid ecisie basaalcelcarcinoom superficieel type wang rechts, BLEU: 15.62, ROUGE: 39.88
+Prediction (Diverse_beam):     huid ecisie basaalcelcarcinoom superficieel type wang rechts, BLEU: 15.62, ROUGE: 39.88
+Prediction (Diverse_beam_long):huid ecisie basaalcelcarcinoom superficieel type wang rechts, BLEU: 15.62, ROUGE: 39.88
+----------------------------------------------------------------------------------------------------
+Input Sequence:                galblaasresectie reactieve veranderingen en meerdere galsteentjes. geen dysplasie of maligniteit. koa
+Label:                         galblaas resectie reactief cholecystolithiasis geen maligniteit
+Prediction (Greedy):           galblaas resectie reactief, BLEU: 0.00, ROUGE: 64.29
+Prediction (Greedy_long):      galblaas resectie reactief, BLEU: 0.00, ROUGE: 64.29
+Prediction (Contrastive):      galblaas resectie reactief, BLEU: 0.00, ROUGE: 64.29
+Prediction (Contrastive_long): galblaas resectie reactief, BLEU: 0.00, ROUGE: 64.29
+Prediction (Sampling):         galblaas resectie reactief, BLEU: 0.00, ROUGE: 64.29
+Prediction (Sampling_long):    galblaas resectie reactief, BLEU: 0.00, ROUGE: 64.29
+Prediction (Diverse_beam):     galblaas resectie reactief, BLEU: 0.00, ROUGE: 64.29
+Prediction (Diverse_beam_long):galblaas resectie reactief, BLEU: 0.00, ROUGE: 64.29
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie temporaal rechts met superficieel basaalcelcarcinoom. resectievlakken vrij.
+Label:                         huid gelaat rechts ecisie basaalcelcarcinoom snijvlak vrij
+Prediction (Greedy):           huid temporaal rechts ecisie basaalcelcarcinoom, BLEU: 28.64, ROUGE: 60.00
+Prediction (Greedy_long):      huid temporaal rechts ecisie basaalcelcarcinoom, BLEU: 28.64, ROUGE: 60.00
+Prediction (Contrastive):      huid   ecisie   basaalcelcarcinoom resectievlakken vrij, BLEU: 17.03, ROUGE: 55.00
+Prediction (Contrastive_long): huid   ecisie   basaalcelcarcinoom resectievlakken vrij, BLEU: 17.03, ROUGE: 55.00
+Prediction (Sampling):         huid temporaal rechts ecisie basaalcelcarcinoom, BLEU: 28.64, ROUGE: 60.00
+Prediction (Sampling_long):    huid temporaal rechts ecisie basaalcelcarcinoom, BLEU: 28.64, ROUGE: 60.00
+Prediction (Diverse_beam):     huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Diverse_beam_long):huid ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+----------------------------------------------------------------------------------------------------
+Input Sequence:                uterusetirpatie zonder adnea wegens prolaps uterus met een klein goedaardig myoom. --oomoom
+Label:                         uterus resectie leiomyoom
+Prediction (Greedy):           uterus resectie leiomyoom, BLEU: 0.00, ROUGE: 100.00
+Prediction (Greedy_long):      uterus resectie leiomyoom, BLEU: 0.00, ROUGE: 100.00
+Prediction (Contrastive):      uterus resectie geen maligniteit leiomyoom, BLEU: 23.64, ROUGE: 64.58
+Prediction (Contrastive_long): uterus resectie geen maligniteit leiomyoom, BLEU: 23.64, ROUGE: 64.58
+Prediction (Sampling):         uterus resectie leiomyoom, BLEU: 0.00, ROUGE: 100.00
+Prediction (Sampling_long):    uterus resectie leiomyoom, BLEU: 0.00, ROUGE: 100.00
+Prediction (Diverse_beam):     uterus resectie leiomyoom, BLEU: 0.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):uterus resectie leiomyoom, BLEU: 0.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                voorlopig huidbiopsie midden op het voorhoofd erosieve ontsteking. het materiaal wordt dieper ingesneden, definitief bericht volgt. --oomoom aanvulling d.d. -- na dieper insnijden huidbiopsie voorhoofd erosieve ontsteking. geen maligniteit, geen specificiteit. --oomoom
+Label:                         huid gelaat biopt ontsteking geen maligniteit
+Prediction (Greedy):           huid hoofd biopsie erosie, BLEU: 9.69, ROUGE: 15.00
+Prediction (Greedy_long):      huid hoofd biopsie erosie, BLEU: 9.69, ROUGE: 15.00
+Prediction (Contrastive):      huid biopsie ontsteking immunohistochemie, BLEU: 11.52, ROUGE: 30.00
+Prediction (Contrastive_long): huid biopsie ontsteking immunohistochemie, BLEU: 11.52, ROUGE: 30.00
+Prediction (Sampling):         huid hoofd biopsie erosie, BLEU: 9.69, ROUGE: 15.00
+Prediction (Sampling_long):    huid hoofd biopsie erosie, BLEU: 9.69, ROUGE: 15.00
+Prediction (Diverse_beam):     huid hoofd biopsie ontsteking, BLEU: 11.52, ROUGE: 30.00
+Prediction (Diverse_beam_long):huid hoofd biopsie ontsteking, BLEU: 11.52, ROUGE: 30.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                resectie endometrium met multipele delen van een endometriumpoliep. hierin geen hyperplasie dan wel maligniteit.
+Label:                         endometrium resectie poliep geen maligniteit
+Prediction (Greedy):           endometrium resectie geen maligniteit poliep, BLEU: 31.95, ROUGE: 77.50
+Prediction (Greedy_long):      endometrium resectie geen maligniteit poliep, BLEU: 31.95, ROUGE: 77.50
+Prediction (Contrastive):      endometrium resectie geen maligniteit poliep, BLEU: 31.95, ROUGE: 77.50
+Prediction (Contrastive_long): endometrium resectie geen maligniteit poliep, BLEU: 31.95, ROUGE: 77.50
+Prediction (Sampling):         endometrium resectie geen maligniteit poliep, BLEU: 31.95, ROUGE: 77.50
+Prediction (Sampling_long):    endometrium resectie geen maligniteit poliep, BLEU: 31.95, ROUGE: 77.50
+Prediction (Diverse_beam):     endometrium resectie geen maligniteit poliep, BLEU: 31.95, ROUGE: 77.50
+Prediction (Diverse_beam_long):endometrium resectie geen maligniteit poliep, BLEU: 31.95, ROUGE: 77.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie bovenarm rechts melanoom in situ met centraal een klein focus invasief melanoom breslow dikte, mm geen mitotische activiteit, geen ulceratie. geen regressie. geen satelliet laesies. de snijvlakken zijn vrij van de laesie marge tov zijsnijvlak  mm en tov diepe snijvlak  mm. tnm pta
+Label:                         huid arm rechts ecisie melanoma in situ melanoom snijvlak vrij
+Prediction (Greedy):           huid arm rechts ecisie melanoom in situ snijvlak vrij, BLEU: 37.17, ROUGE: 80.50
+Prediction (Greedy_long):      huid arm rechts ecisie melanoom in situ snijvlak vrij, BLEU: 37.17, ROUGE: 80.50
+Prediction (Contrastive):      huid   ecisie   melanoom   melanoom, BLEU: 4.69, ROUGE: 32.14
+Prediction (Contrastive_long): huid   ecisie   melanoom   melanoom    snijvlak vrij snijvlak vrij, BLEU: 18.19, ROUGE: 47.92
+Prediction (Sampling):         huid arm rechts ecisie melanoom in situ snijvlak vrij, BLEU: 37.17, ROUGE: 80.50
+Prediction (Sampling_long):    huid arm rechts ecisie melanoom in situ snijvlak vrij, BLEU: 37.17, ROUGE: 80.50
+Prediction (Diverse_beam):     huid arm rechts ecisie melanoma in situ snijvlak vrij, BLEU: 71.89, ROUGE: 91.64
+Prediction (Diverse_beam_long):huid arm rechts ecisie melanoma in situ snijvlak vrij, BLEU: 71.89, ROUGE: 91.64
+----------------------------------------------------------------------------------------------------
+Input Sequence:                slijmvliesbiopten sigmoid zonder afwijkingen.
+Label:                         colon biopt geen afwijking
+Prediction (Greedy):           sigmoid biopt geen afwijking, BLEU: 59.46, ROUGE: 72.92
+Prediction (Greedy_long):      sigmoid biopt geen afwijking, BLEU: 59.46, ROUGE: 72.92
+Prediction (Contrastive):      sigmoid biopt g.a. geen afwijking, BLEU: 12.22, ROUGE: 51.25
+Prediction (Contrastive_long): sigmoid biopt g.a. geen afwijking, BLEU: 12.22, ROUGE: 51.25
+Prediction (Sampling):         sigmoid biopt geen afwijking, BLEU: 59.46, ROUGE: 72.92
+Prediction (Sampling_long):    sigmoid biopt geen afwijking, BLEU: 59.46, ROUGE: 72.92
+Prediction (Diverse_beam):     sigmoid biopt geen afwijking, BLEU: 59.46, ROUGE: 72.92
+Prediction (Diverse_beam_long):sigmoid biopt geen afwijking, BLEU: 59.46, ROUGE: 72.92
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i. schildwachtklier procedure oksel links lymfklier met reactieve veranderingen zonder carcinoommetastase, bevestigd met behulp van immuunhistochemie. ii. ablatio mamma links na neo adjuvante chemotherapie mammaweefsel met ductectasieen, geringe ductaal hyperplasie met wat kalk en uitgebreide fibrose. geen verdachte kenmerken meer. zie aanvullend onderzoek.
+Label:                         mamma links ablatio reactief geen maligniteit c-sep lymfeklier oksel links sentinel node procedure ecisie reactief geen maligniteit
+Prediction (Greedy):           mamma links ablatio reactieve verandering c-sep mamma links ablatio reactieve verandering, BLEU: 9.19, ROUGE: 35.36
+Prediction (Greedy_long):      mamma links ablatio reactieve verandering c-sep mamma links ablatio reactieve verandering, BLEU: 9.19, ROUGE: 35.36
+Prediction (Contrastive):      lymfklier oksel resectie reactieve verandering c-sep mamma links ablatio geen maligniteit consult, BLEU: 11.37, ROUGE: 35.93
+Prediction (Contrastive_long): lymfklier oksel resectie reactieve verandering c-sep mamma links ablatio geen maligniteit consult intern, BLEU: 11.56, ROUGE: 34.79
+Prediction (Sampling):         mamma links ablatio reactieve verandering c-sep mamma links ablatio reactieve verandering, BLEU: 9.19, ROUGE: 35.36
+Prediction (Sampling_long):    mamma links ablatio reactieve verandering c-sep mamma links ablatio reactieve verandering, BLEU: 9.19, ROUGE: 35.36
+Prediction (Diverse_beam):     mamma links ablatio geen maligniteit c-sep lymfklier oksel links resectie reactief c-sep mamma links, BLEU: 16.79, ROUGE: 53.49
+Prediction (Diverse_beam_long):mamma links ablatio geen maligniteit c-sep lymfklier oksel links resectie geen maligniteit reactief c-sep mamma links ablatio geen maligniteit c-sep mamma links ablatio geen maligniteit fibrose, BLEU: 11.65, ROUGE: 46.08
+----------------------------------------------------------------------------------------------------
+Input Sequence:                ecisie subcutis schouderblad - rug waarin een lipoom, cm diameter met geringe reactieve veranderingen.
+Label:                         weke delen rug lipoom
+Prediction (Greedy):           subcutis rug ecisie lipoom, BLEU: 19.00, ROUGE: 37.50
+Prediction (Greedy_long):      subcutis rug ecisie lipoom, BLEU: 19.00, ROUGE: 37.50
+Prediction (Contrastive):      weke delen subcutis rug ecisie lipoom, BLEU: 19.30, ROUGE: 66.25
+Prediction (Contrastive_long): weke delen subcutis rug ecisie lipoom, BLEU: 19.30, ROUGE: 66.25
+Prediction (Sampling):         subcutis rug ecisie lipoom, BLEU: 19.00, ROUGE: 37.50
+Prediction (Sampling_long):    subcutis rug ecisie lipoom, BLEU: 19.00, ROUGE: 37.50
+Prediction (Diverse_beam):     subcutis ecisie lipoom, BLEU: 0.00, ROUGE: 21.43
+Prediction (Diverse_beam_long):subcutis ecisie lipoom, BLEU: 0.00, ROUGE: 21.43
+----------------------------------------------------------------------------------------------------
+Input Sequence:                a. adne links ovarium en tuba zonder rest maligniteit. verspreid niet-atypische inclusiecysten met hierrond meerdere calcificaties. b. adne rechts ovarium en tuba zonder rest maligniteit. verspreid niet-atypische inclusiecysten met hierrond meerdere calcificaties. c. omentum een enkel celgroepje, morfologisch en immuunhistochemisch passend bij restmaligniteit hooggradig sereus carcinoom nagenoeg complete pathologische respons. voorts fibrose en chronische ontsteking, met psammomateuze verkalkingen. etra ingesloten weefsel toont een gelijkaardig beeld. d. biopten dunne darm geen aanwijzingen voor maligniteit.
+Label:                         ovarium links resectie geen maligniteit c-sep ovarium rechts geen maligniteit c-sep omentum resectie metastase sereus adenocarcinoom ovarium c-sep dunne darm biopt geen maligniteit
+Prediction (Greedy):           ovarium links resectie hooggradig sereus carcinoom c-sep omentum resectie geen maligniteit c-sep, BLEU: 15.67, ROUGE: 49.34
+Prediction (Greedy_long):      ovarium links resectie hooggradig sereus carcinoom c-sep omentum resectie geen maligniteit c-sep dunne darm resectie geen maligniteit, BLEU: 23.38, ROUGE: 60.62
+Prediction (Contrastive):      ovarium resectie hooggradig sereus carcinoom immunohistochemie c-sep omentum resectie geen maligniteit c-s, BLEU: 9.11, ROUGE: 40.39
+Prediction (Contrastive_long): ovarium resectie hooggradig sereus carcinoom immunohistochemie c-sep omentum resectie geen maligniteit c-sep dunne darm resectie geen maligniteit, BLEU: 20.53, ROUGE: 54.96
+Prediction (Sampling):         ovarium links resectie hooggradig sereus carcinoom c-sep omentum resectie geen maligniteit c-sep, BLEU: 15.67, ROUGE: 49.34
+Prediction (Sampling_long):    ovarium links resectie hooggradig sereus carcinoom c-sep omentum resectie geen maligniteit c-sep dunne darm resectie geen maligniteit, BLEU: 23.38, ROUGE: 60.62
+Prediction (Diverse_beam):     ovarium links resectie hooggradig sereus carcinoom c-sep omentum resectie geen maligniteit c-sep, BLEU: 15.67, ROUGE: 49.34
+Prediction (Diverse_beam_long):ovarium links ecisie hooggradig sereus carcinoom c-sep omentum ecisie geen maligniteit c-sep dunne darm biopt geen maligniteit, BLEU: 29.42, ROUGE: 58.35
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidbiopt linker pols geringe chronische perivasculaire lymfocytaire dermatitis. geringe hyperplasie en hyperpigmentatie van het epitheel. dit beeld kan goed passen bij post inflammatoire hyperpigmentatie. geen aanwijzingen voor vasculitis of lues. in  aanvullend bericht in aanvullende giemsa-kleuring meer dan  mestcellen per hpf. dit past goed bij urticaria pigmentosa.
+Label:                         huid arm links biopt urticaria pigmentosa
+Prediction (Greedy):           huid pols links biopt hyperpigmentatie, BLEU: 19.36, ROUGE: 46.46
+Prediction (Greedy_long):      huid pols links biopt hyperpigmentatie, BLEU: 19.36, ROUGE: 46.46
+Prediction (Contrastive):      topografie onbekend biopt hyperpigmentatie, BLEU: 9.69, ROUGE: 15.00
+Prediction (Contrastive_long): topografie onbekend biopt hyperpigmentatie, BLEU: 9.69, ROUGE: 15.00
+Prediction (Sampling):         huid pols links biopt hyperpigmentatie, BLEU: 19.36, ROUGE: 46.46
+Prediction (Sampling_long):    huid pols links biopt hyperpigmentatie, BLEU: 19.36, ROUGE: 46.46
+Prediction (Diverse_beam):     huid pols links biopt hyperpigmentatie geen zekere diagnose consult intern, BLEU: 9.29, ROUGE: 31.70
+Prediction (Diverse_beam_long):huid pols links biopt hyperpigmentatie geen zekere diagnose, BLEU: 12.22, ROUGE: 36.31
+----------------------------------------------------------------------------------------------------
+Input Sequence:                biopten colon uitgebreide chronisch actieve ontsteking. beeld past bij colitis ulcerosa. geen cmv aantoonbaar. geen dysplasie.
+Label:                         colon biopt ontsteking colitis ulcerosa
+Prediction (Greedy):           colon biopt ontsteking colitis ulcerosa, BLEU: 100.00, ROUGE: 100.00
+Prediction (Greedy_long):      colon biopt ontsteking colitis ulcerosa, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive):      colon   biopt  immunohistochemie   chronische ontsteking colitis ulcerosa, BLEU: 30.74, ROUGE: 77.50
+Prediction (Contrastive_long): colon   biopt  immunohistochemie   chronische ontsteking colitis ulcerosa, BLEU: 30.74, ROUGE: 77.50
+Prediction (Sampling):         colon biopt ontsteking colitis ulcerosa, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling_long):    colon biopt ontsteking colitis ulcerosa, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam):     colon biopt ontsteking colitis ulcerosa, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):colon biopt ontsteking colitis ulcerosa, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie rug links, status na eerder onderzoek t- nodulair groeiend basaalcelcarcinoom, volledig verwijderd.
+Label:                         huid rug links ecisie basaalcelcarcinoom snijvlak vrij
+Prediction (Greedy):           rug ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Greedy_long):      rug ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Contrastive):      status na operatie ecisie basaalcelcarcinoom, BLEU: 14.32, ROUGE: 30.00
+Prediction (Contrastive_long): status na operatie ecisie basaalcelcarcinoom, BLEU: 14.32, ROUGE: 30.00
+Prediction (Sampling):         rug ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Sampling_long):    rug ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Diverse_beam):     rug ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+Prediction (Diverse_beam_long):rug ecisie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 51.25
+----------------------------------------------------------------------------------------------------
+Input Sequence:                appendectomie necrotiserende appendicitis acuta met de klinische en histologische perforatie. geen aanwijzingen voor maligniteit.
+Label:                         appendi resectie ontsteking geen maligniteit
+Prediction (Greedy):           appendi resectie ontsteking, BLEU: 0.00, ROUGE: 72.92
+Prediction (Greedy_long):      appendi resectie ontsteking, BLEU: 0.00, ROUGE: 72.92
+Prediction (Contrastive):      appendi resectie appendicitis acuta perforatie, BLEU: 21.36, ROUGE: 36.25
+Prediction (Contrastive_long): appendi resectie appendicitis acuta perforatie, BLEU: 21.36, ROUGE: 36.25
+Prediction (Sampling):         appendi resectie ontsteking, BLEU: 0.00, ROUGE: 72.92
+Prediction (Sampling_long):    appendi resectie ontsteking, BLEU: 0.00, ROUGE: 72.92
+Prediction (Diverse_beam):     appendi resectie ontsteking perforatie, BLEU: 46.31, ROUGE: 64.29
+Prediction (Diverse_beam_long):appendi resectie ontsteking perforatie, BLEU: 46.31, ROUGE: 64.29
+----------------------------------------------------------------------------------------------------
+Input Sequence:                besluit  biopten duodenum zonder significante afwijkingen.  maagbiopten corpus en antrum waarin niet-actieve, gering chronische gastritis. geen helicobacter pylori.
+Label:                         duodenum biopt geen afwijking c-sep maag biopt ontsteking
+Prediction (Greedy):           duodenum biopt geen afwijking c-sep maag biopt ontsteking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Greedy_long):      duodenum biopt geen afwijking c-sep maag biopt ontsteking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive):      maag antrum biopt chronische ontsteking, BLEU: 7.72, ROUGE: 32.14
+Prediction (Contrastive_long): maag antrum biopt chronische ontsteking, BLEU: 7.72, ROUGE: 32.14
+Prediction (Sampling):         duodenum biopt geen afwijking c-sep maag biopt ontsteking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling_long):    duodenum biopt geen afwijking c-sep maag biopt ontsteking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam):     duodenum biopt geen afwijking c-sep maag biopt ontsteking, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):duodenum biopt geen afwijking c-sep maag biopt ontsteking, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huid ecisie boven rug rechts -tal huidecisies  curettage met eenmaal gepigmenteerde verruca seborrhoica. tweede curretage met verrukeuze hyperplasie met geringe cytonucleaire atypie. een ontstoken verruca seborrhoica of actinische keratose kunnen overwogen worden. aanvullend onderzoek volgt. hiervan ontvangt u een aanvullend bericht. --mw. drs. i. leticvl aanvulling bij aanvullend onderzoek enige voorkeur naar ontstoken verruca seborrhoica. --mw. drs. i. leticvl
+Label:                         huid rug rechts ecisie verruca seborrhoica
+Prediction (Greedy):           huid rug rechts ecisie verruca seborrhoica verruca seborrhoica geen zekere diagnose, BLEU: 46.17, ROUGE: 69.61
+Prediction (Greedy_long):      huid rug rechts ecisie verruca seborrhoica verruca seborrhoica geen zekere diagnose, BLEU: 46.17, ROUGE: 69.61
+Prediction (Contrastive):      huid   rug   rechts   ecisie   verruca seborrhoica, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive_long): huid   rug   rechts   ecisie   verruca seborrhoica geen zekere diagnose verruca seborrhoica geen zekere diagnose, BLEU: 34.99, ROUGE: 58.89
+Prediction (Sampling):         huid rug rechts ecisie verruca seborrhoica verruca seborrhoica geen zekere diagnose, BLEU: 46.17, ROUGE: 69.61
+Prediction (Sampling_long):    huid rug rechts ecisie verruca seborrhoica verruca seborrhoica geen zekere diagnose, BLEU: 46.17, ROUGE: 69.61
+Prediction (Diverse_beam):     huid rug rechts ecisie verruca seborrhoica verruca seborrhoica geen zekere diagnose, BLEU: 46.17, ROUGE: 69.61
+Prediction (Diverse_beam_long):huid rug rechts ecisie verruca seborrhoica verruca seborrhoica geen zekere diagnose geen zekere diagnose geen zekere diagnose, BLEU: 28.18, ROUGE: 51.04
+----------------------------------------------------------------------------------------------------
+Input Sequence:                poliepectomie colon ascendens tubulair adenoom met laaggradige dysplasie.
+Label:                         colon biopt tubulair adenoom laaggradige dysplasie
+Prediction (Greedy):           colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Greedy_long):      colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Contrastive):      colon ascendens biopt tubulair adenoom laaggradige dysplasie, BLEU: 64.35, ROUGE: 87.41
+Prediction (Contrastive_long): colon ascendens biopt tubulair adenoom laaggradige dysplasie, BLEU: 64.35, ROUGE: 87.41
+Prediction (Sampling):         colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Sampling_long):    colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Diverse_beam):     colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+Prediction (Diverse_beam_long):colon biopt adenoom, BLEU: 0.00, ROUGE: 57.14
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i huid ecisie linker bovenarm lateraal met een radicaal verwijderde dermale naevus. geen dysplastische kenmerken. ii huidecisie rechter onderbeen mediaal met een radicaal verwijderde grensvlaknaevus. geen dysplastische kenmerken. --loyloy
+Label:                         huid arm links ecisie dermale naevus naevocellularis c-sep huid been rechts ecisie grensvlaknaevus
+Prediction (Greedy):           huid arm links ecisie dermale naevus c-sep huid onderbeen rechts ecisie grensvlaknaevus, BLEU: 53.12, ROUGE: 84.67
+Prediction (Greedy_long):      huid arm links ecisie dermale naevus c-sep huid onderbeen rechts ecisie grensvlaknaevus, BLEU: 53.12, ROUGE: 84.67
+Prediction (Contrastive):      huid   arm   links   ecisie   dermale naevus c, BLEU: 34.34, ROUGE: 63.16
+Prediction (Contrastive_long): huid   arm   links   ecisie   dermale naevus c-sep huid   been   rechts   ecisie   naevus, BLEU: 67.61, ROUGE: 86.67
+Prediction (Sampling):         huid arm links ecisie dermale naevus c-sep huid onderbeen rechts ecisie grensvlaknaevus, BLEU: 53.12, ROUGE: 84.67
+Prediction (Sampling_long):    huid arm links ecisie dermale naevus c-sep huid onderbeen rechts ecisie grensvlaknaevus, BLEU: 53.12, ROUGE: 84.67
+Prediction (Diverse_beam):     huid arm links ecisie dermale naevus c-sep huid been rechts ecisie grensvlaknaevus, BLEU: 76.77, ROUGE: 94.22
+Prediction (Diverse_beam_long):huid arm links ecisie dermale naevus c-sep huid been rechts ecisie grensvlaknaevus, BLEU: 76.77, ROUGE: 94.22
+----------------------------------------------------------------------------------------------------
+Input Sequence:                ileumbiopten geen afwijkingen. sigmoid en rectumbiopten chronisch inflammatoir darmlijden met aanzienlijke ontstekingsactiviteit. geen specifiek type maar een lichte voorkeur voor morbus crohn. --oomoom
+Label:                         dunne darm biopt geen afwijking c-sep colon biopt ontsteking
+Prediction (Greedy):           colon biopsie ontsteking crohn, BLEU: 5.44, ROUGE: 21.43
+Prediction (Greedy_long):      colon biopsie ontsteking crohn, BLEU: 5.44, ROUGE: 21.43
+Prediction (Contrastive):      colon biopsie geen afwijking, BLEU: 10.13, ROUGE: 29.17
+Prediction (Contrastive_long): colon biopsie geen afwijking, BLEU: 10.13, ROUGE: 29.17
+Prediction (Sampling):         colon biopsie ontsteking crohn, BLEU: 5.44, ROUGE: 21.43
+Prediction (Sampling_long):    colon biopsie ontsteking crohn, BLEU: 5.44, ROUGE: 21.43
+Prediction (Diverse_beam):     colon biopsie ontsteking crohn, BLEU: 5.44, ROUGE: 21.43
+Prediction (Diverse_beam_long):colon biopsie ontsteking crohn, BLEU: 5.44, ROUGE: 21.43
+----------------------------------------------------------------------------------------------------
+Input Sequence:                mammabiopten rechts het beeld past bij een fibroadenoom.
+Label:                         mamma rechts biopt fibroadenoom
+Prediction (Greedy):           mamma rechts biopt fibroadenoom, BLEU: 100.00, ROUGE: 100.00
+Prediction (Greedy_long):      mamma rechts biopt fibroadenoom, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive):      mamma rechts biopt fibroadenoom, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive_long): mamma rechts biopt fibroadenoom, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling):         mamma rechts biopt fibroadenoom, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling_long):    mamma rechts biopt fibroadenoom, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam):     mamma rechts biopt fibroadenoom, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):mamma rechts biopt fibroadenoom, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidbiopt linker wenkbrauw met elastose en hyperpigmentatie. er werden geen aanwijzingen gevonden voor maligniteit.
+Label:                         huid gelaat links biopt reactief geen maligniteit
+Prediction (Greedy):           huid wenkbrauw links biopt elastose hyperpigmentatie, BLEU: 15.21, ROUGE: 39.16
+Prediction (Greedy_long):      huid wenkbrauw links biopt elastose hyperpigmentatie, BLEU: 15.21, ROUGE: 39.16
+Prediction (Contrastive):      huid   wenkbrauw   links   biopt   geen maligniteit c, BLEU: 19.64, ROUGE: 61.90
+Prediction (Contrastive_long): huid   wenkbrauw   links   biopt   geen maligniteit c-sep huid   biopt   geen maligniteit, BLEU: 11.21, ROUGE: 45.36
+Prediction (Sampling):         huid wenkbrauw links biopt elastose hyperpigmentatie, BLEU: 15.21, ROUGE: 39.16
+Prediction (Sampling_long):    huid wenkbrauw links biopt elastose hyperpigmentatie, BLEU: 15.21, ROUGE: 39.16
+Prediction (Diverse_beam):     huid wenkbrauw links biopt elastose hyperpigmentatie, BLEU: 15.21, ROUGE: 39.16
+Prediction (Diverse_beam_long):huid wenkbrauw links biopt elastose hyperpigmentatie, BLEU: 15.21, ROUGE: 39.16
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie voorhoofd geen aanwijzingen voor rest tumor. actinische beschadiging, en verdenking op microscopisch focus actinische keratosis dicht bij mediale uiteinde.
+Label:                         huid gelaat ecisie actinische keratose geen maligniteit
+Prediction (Greedy):           huid ecisie actinische keratose, BLEU: 30.18, ROUGE: 65.66
+Prediction (Greedy_long):      huid ecisie actinische keratose, BLEU: 30.18, ROUGE: 65.66
+Prediction (Contrastive):      huid   ecisie   actinische keratose geen maligniteit, BLEU: 67.32, ROUGE: 87.41
+Prediction (Contrastive_long): huid   ecisie   actinische keratose geen maligniteit actinische keratosis geen zekere diagnose, BLEU: 36.72, ROUGE: 62.50
+Prediction (Sampling):         huid ecisie actinische keratose, BLEU: 30.18, ROUGE: 65.66
+Prediction (Sampling_long):    huid ecisie actinische keratose, BLEU: 30.18, ROUGE: 65.66
+Prediction (Diverse_beam):     huid ecisie actinische keratose, BLEU: 30.18, ROUGE: 65.66
+Prediction (Diverse_beam_long):huid ecisie actinische keratose, BLEU: 30.18, ROUGE: 65.66
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i. huidecisie oksel dermale naevus naevocellularis. ii. huidecisie rug huid met dysplastische kenmerken, echter onvoldoende voor de diagnose dysplastische naevus. in toto verwijderd.
+Label:                         huid oksel ecisie dermale naevus naevocellularis c-sep huid rug ecisie samengestelde naevus naevocellularis
+Prediction (Greedy):           huid oksel ecisie dermale naevus c-sep huid rug ecisie dysplastische naevus, BLEU: 50.31, ROUGE: 80.13
+Prediction (Greedy_long):      huid oksel ecisie dermale naevus c-sep huid rug ecisie dysplastische naevus, BLEU: 50.31, ROUGE: 80.13
+Prediction (Contrastive):      huid oksel ecisie naevus immunohistochemie c-sep huid rug ecisie dysplastische naevus, BLEU: 30.13, ROUGE: 70.19
+Prediction (Contrastive_long): huid oksel ecisie naevus immunohistochemie c-sep huid rug ecisie dysplastische naevus, BLEU: 30.13, ROUGE: 70.19
+Prediction (Sampling):         huid oksel ecisie dermale naevus c-sep huid rug ecisie dysplastische naevus, BLEU: 50.31, ROUGE: 80.13
+Prediction (Sampling_long):    huid oksel ecisie dermale naevus c-sep huid rug ecisie dysplastische naevus, BLEU: 50.31, ROUGE: 80.13
+Prediction (Diverse_beam):     huid oksel rechts ecisie dermale naevus c-sep huid rug ecisie dysplastische naevus, BLEU: 32.28, ROUGE: 75.11
+Prediction (Diverse_beam_long):huid oksel ecisie dermale naevus c-sep huid rug ecisie dysplastische naevus, BLEU: 50.31, ROUGE: 80.13
+----------------------------------------------------------------------------------------------------
+Input Sequence:                prostaatnaaldbiopten linkst  en rechts  links een klein focus adenocarcinoom in  van de  biopten,. gleason score  is.
+Label:                         prostaat biopt links adenocarcinoom
+Prediction (Greedy):           prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 74.29
+Prediction (Greedy_long):      prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 74.29
+Prediction (Contrastive):      prostaat biopt adenocarcinoom immunohistochemie, BLEU: 35.36, ROUGE: 64.58
+Prediction (Contrastive_long): prostaat biopt adenocarcinoom immunohistochemie, BLEU: 35.36, ROUGE: 64.58
+Prediction (Sampling):         prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 74.29
+Prediction (Sampling_long):    prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 74.29
+Prediction (Diverse_beam):     prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 74.29
+Prediction (Diverse_beam_long):prostaat biopt adenocarcinoom, BLEU: 0.00, ROUGE: 74.29
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidbiopsie rug links superficieel basaalcelcarcinoom. --mw. c.k. stobbecs
+Label:                         huid rug been biopt basaalcelcarcinoom
+Prediction (Greedy):           huid rug links biopsie basaalcelcarcinoom, BLEU: 23.64, ROUGE: 51.25
+Prediction (Greedy_long):      huid rug links biopsie basaalcelcarcinoom, BLEU: 23.64, ROUGE: 51.25
+Prediction (Contrastive):      huid   rug   biopsie   basaalcelcarcinoom    verdacht, BLEU: 23.64, ROUGE: 51.25
+Prediction (Contrastive_long): huid   rug   biopsie   basaalcelcarcinoom    verdacht basaalcel, BLEU: 17.97, ROUGE: 46.46
+Prediction (Sampling):         huid rug links biopsie basaalcelcarcinoom, BLEU: 23.64, ROUGE: 51.25
+Prediction (Sampling_long):    huid rug links biopsie basaalcelcarcinoom, BLEU: 23.64, ROUGE: 51.25
+Prediction (Diverse_beam):     huid rug links biopsie basaalcelcarcinoom, BLEU: 23.64, ROUGE: 51.25
+Prediction (Diverse_beam_long):huid rug biopsie basaalcelcarcinoom, BLEU: 27.53, ROUGE: 57.14
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huid ecisie linker onderbeen atypische mesenchymale proliferatie met nodulaire en diffuse infiltratieve groei. het beeld kan passen bij een giant cell fibroblastoom dermatofibrosarcoom protuberans. verder werd een gededifferentieerd liposarcoom en een pleiomorf sarcoom nog overwogen. de snijranden zijn niet vrij. de casus zal worden opgestuurd naar het regionale weke delen panel en er zal moleculair onderzoek worden verricht dit om tot een definitieve diagnose te komen. --k.j. hoogduinkd aanvulling wekedelenpanel wdp  -  beeld wordt geduid als een bizar  atypisch dermatofibroom. de aanvullende moleculaire bepalingen waren reeds bepaald in emc afdeling pathologie panr h- negatief voor dfsp geen aanwijzing colapdgfb fusie en voor liposarcoom mdm fish geen amplificatie.
+Label:                         huid been links ecisie atypie dermatofibroom panel consult concordant
+Prediction (Greedy):           huid been links ecisie onzekere diagnose consult etern consult concordant consult, BLEU: 27.90, ROUGE: 56.11
+Prediction (Greedy_long):      huid been links ecisie onzekere diagnose consult etern consult concordant consult etern consult concordant consult etern consult concordant, BLEU: 15.99, ROUGE: 41.33
+Prediction (Contrastive):      huid   been  resectie  ofibrosarcoom protuberans   plaveiselcelcarcinoom vriescoupe concordant, BLEU: 10.79, ROUGE: 29.80
+Prediction (Contrastive_long): huid   been  resectie  ofibrosarcoom protuberans   plaveiselcelcarcinoom vriescoupe concordant c-sep huid ecisie geen zekere diagnose consult etern consult, BLEU: 5.75, ROUGE: 26.07
+Prediction (Sampling):         huid been links ecisie onzekere diagnose consult etern consult concordant consult, BLEU: 27.90, ROUGE: 56.11
+Prediction (Sampling_long):    huid been links ecisie onzekere diagnose consult etern consult concordant consult etern consult concordant consult etern consult concordant, BLEU: 15.99, ROUGE: 41.33
+Prediction (Diverse_beam):     huid been links ecisie atypie onzekere diagnose consult etern consult concordant, BLEU: 40.35, ROUGE: 66.39
+Prediction (Diverse_beam_long):huid been links ecisie atypie onzekere diagnose consult etern consult concordant c-sep huid been links ecisie liposarcoom onzekere diagnose consult etern, BLEU: 19.55, ROUGE: 42.49
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i ascites atypische cellen, morfologisch passend bij de maligniteit beschreven onder iii. ii biopt blaasperitoneum atypisch epiteel, passend bij de maligniteit beschreven onder iii. iii resectie uterus met adneen heteroloog carcinosarcoom,  van het myometrium innemend, met angioinvasieve groei. er en pr negatief. daarbij laesionale cellen in tuba en ovarium links. figo iva. tevens aanwezigheid van leiomyomen. iv biopt rectosigmoid atypische cellen, passend bij de maligniteit beschreven onder iii. v omentumbiopt geen maligniteit. ipe.
+Label:                         ascites cytologie carcinosarcoom uterus c-sep peritoneum biopt carcinosarcoom uterus c-sep uterus resectie carcinosarcoom leiomyoom c-sep colon biopt carcinosarcoom uterus c-sep omentum biopt geen maligniteit
+Prediction (Greedy):           uterus resectie atypische cellen c-sep ovarium links resectie atypische cellen c-sep, BLEU: 2.73, ROUGE: 25.80
+Prediction (Greedy_long):      uterus resectie atypische cellen c-sep ovarium links resectie atypische cellen c-sep uterus resectie atypische cellen leiomyoom c-sep ovarium links resectie atypische cellen c-sep, BLEU: 8.30, ROUGE: 39.33
+Prediction (Contrastive):      uterus partiele resectie maligniteit plaveiselcelcarcinoom c-sep ovarium links etirpatie geen maligniteit c, BLEU: 3.13, ROUGE: 25.73
+Prediction (Contrastive_long): uterus partiele resectie maligniteit plaveiselcelcarcinoom c-sep ovarium links etirpatie geen maligniteit c-sep uterus resectie atypische cellen c-sep ovarium links etirpatie geen maligniteit, BLEU: 8.30, ROUGE: 37.01
+Prediction (Sampling):         uterus resectie atypische cellen c-sep ovarium links resectie atypische cellen c-sep, BLEU: 2.73, ROUGE: 25.80
+Prediction (Sampling_long):    uterus resectie atypische cellen c-sep ovarium links resectie atypische cellen c-sep uterus resectie atypische cellen leiomyoom c-sep ovarium links resectie atypische cellen c-sep, BLEU: 8.30, ROUGE: 39.33
+Prediction (Diverse_beam):     uterus resectie atypische cellen c-sep ovarium links resectie atypische cellen c-sep, BLEU: 2.73, ROUGE: 25.80
+Prediction (Diverse_beam_long):uterus resectie atypische cellen c-sep uterus resectie atypische cellen leiomyoom c-sep ovarium links resectie atypische cellen c-sep ovarium links resectie atypische cellen c-sep, BLEU: 8.30, ROUGE: 37.51
+----------------------------------------------------------------------------------------------------
+Input Sequence:                biopten duodenum  dunne darm geen specifieke afwijkingen, geen steun voor coeliakie.
+Label:                         dunne darm biopt geen afwijking
+Prediction (Greedy):           duodenum biopt geen afwijking, BLEU: 46.31, ROUGE: 64.29
+Prediction (Greedy_long):      duodenum biopt geen afwijking, BLEU: 46.31, ROUGE: 64.29
+Prediction (Contrastive):      dunne darm biopt g.a., BLEU: 24.45, ROUGE: 57.50
+Prediction (Contrastive_long): dunne darm biopt g.a., BLEU: 24.45, ROUGE: 57.50
+Prediction (Sampling):         duodenum biopt geen afwijking, BLEU: 46.31, ROUGE: 64.29
+Prediction (Sampling_long):    duodenum biopt geen afwijking, BLEU: 46.31, ROUGE: 64.29
+Prediction (Diverse_beam):     duodenum biopt geen afwijking, BLEU: 46.31, ROUGE: 64.29
+Prediction (Diverse_beam_long):duodenum biopt geen afwijking, BLEU: 46.31, ROUGE: 64.29
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i tm vi. prostaatnaaldbiopten beiderzijds met glandulaire hyperplasie en ook atrofie. geen aanwijzingen voor maligniteit.
+Label:                         prostaat links rechts hyperplasie atrofie geen maligniteit
+Prediction (Greedy):           prostaat biopt hyperplasie atrofie, BLEU: 16.70, ROUGE: 46.46
+Prediction (Greedy_long):      prostaat biopt hyperplasie atrofie, BLEU: 16.70, ROUGE: 46.46
+Prediction (Contrastive):      prostaat naaldbiopsie hyperplasie atrofie, BLEU: 16.70, ROUGE: 46.46
+Prediction (Contrastive_long): prostaat naaldbiopsie hyperplasie atrofie, BLEU: 16.70, ROUGE: 46.46
+Prediction (Sampling):         prostaat biopt hyperplasie atrofie, BLEU: 16.70, ROUGE: 46.46
+Prediction (Sampling_long):    prostaat biopt hyperplasie atrofie, BLEU: 16.70, ROUGE: 46.46
+Prediction (Diverse_beam):     prostaat biopt hyperplasie atrofie, BLEU: 16.70, ROUGE: 46.46
+Prediction (Diverse_beam_long):prostaat biopt hyperplasie atrofie, BLEU: 16.70, ROUGE: 46.46
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i. duodenumbiopten met een gering toegenomen chronisch ontstekingsinfiltraat. geen vlokatrofie. ii. bulbus duodenibiopten waarin een gering toegenomen chronisch ontstekingsinfiltraat. tevens een maagcorpus-type slijmvlies ook met een gering chronisch ontstekingsinfiltraat. geen helicobacter pylori. iii. maagbiopten antrum en corpus waairn een gering chronisch ontstekingsifiltraat. geen helicobacter pylori micro-organismen, geen atrofie. iv. en v. oesophagusbiopten omslagplooi op  cm en mid slokdarm waarin reactieve veranderingen en een minimale chrosnisch ontstekingsinfiltraat met focaal activiteit. geen eosinofiele oesofagitis.
+Label:                         duodenum biopt ontsteking c-sep maag biopt ontsteking c-sep oesofagus biopt reactief ontsteking
+Prediction (Greedy):           duodenum biopt ontsteking c-sep maag biopt ontsteking c-sep oesophagus biopt reactief, BLEU: 67.75, ROUGE: 86.67
+Prediction (Greedy_long):      duodenum biopt ontsteking c-sep maag biopt ontsteking c-sep oesophagus biopt reactief, BLEU: 67.75, ROUGE: 86.67
+Prediction (Contrastive):      duodenum biopt chronische ontsteking i.p.reactie immunohistochemie c-sep oesophagus biopt reactief consult intern, BLEU: 7.66, ROUGE: 41.76
+Prediction (Contrastive_long): duodenum biopt chronische ontsteking i.p.reactie immunohistochemie c-sep oesophagus biopt reactief consult intern onderwijs, BLEU: 7.16, ROUGE: 40.36
+Prediction (Sampling):         duodenum biopt ontsteking c-sep maag biopt ontsteking c-sep oesophagus biopt reactief, BLEU: 67.75, ROUGE: 86.67
+Prediction (Sampling_long):    duodenum biopt ontsteking c-sep maag biopt ontsteking c-sep oesophagus biopt reactief, BLEU: 67.75, ROUGE: 86.67
+Prediction (Diverse_beam):     duodenum biopt chronisch actieve ontsteking c-sep maag biopt chronische ontsteking c-sep, BLEU: 28.95, ROUGE: 69.56
+Prediction (Diverse_beam_long):duodenum biopt chronisch actieve ontsteking c-sep maag biopt chronische ontsteking c-sep oesophagus biopt reactief, BLEU: 26.58, ROUGE: 74.29
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i. tubectomie preparaat links zonder premaligniteit en met endometriosis eterna met mogelijk enige hyperplasie. ii. tubectomie preparaat rechts zonder premaligniteit. iii. uterus-etirpatie zonder adneen met in het corpus uteri een graad  endometrioid adenocarcinoom, invasief groeiend tot over de helft van de myometriumdikte, serosale oppervlak vrij. voorts uitgebreide adenomyosis met ook uitbreiding van carcinoom in de adenomyose. geen overtuigende ingroei in de cervi. geen overtuigende vaso-invasieve groei of perineurale groei. aanvullend bericht -- uitslag moleculaire pathologie geen aanwijzingen voor lynch syndroom.
+Label:                         tuba links resectie endometriose c-sep tuba rechts resectie geen maligniteit c-sep uterus resectie endometrioid adenocarcinoom adenomyose
+Prediction (Greedy):           uterus resectie adenocarcinoom endometriosis eterna c-sep tuba links rechts resectie geen afwijking, BLEU: 14.95, ROUGE: 49.05
+Prediction (Greedy_long):      uterus resectie adenocarcinoom endometriosis eterna c-sep tuba links rechts resectie geen afwijking c-sep uterus resectie geen maligniteit, BLEU: 21.67, ROUGE: 61.51
+Prediction (Contrastive):      tuba fallopii links resectie g.a. c-sep uterus resectie geen maligniteit adenomyose endometrium in, BLEU: 17.92, ROUGE: 52.10
+Prediction (Contrastive_long): tuba fallopii links resectie g.a. c-sep uterus resectie geen maligniteit adenomyose endometrium in proliferatiefase c-sep uterus resectie geen maligniteit c-sep cervi resectie geen, BLEU: 15.33, ROUGE: 50.41
+Prediction (Sampling):         uterus resectie adenocarcinoom endometriosis eterna c-sep tuba links rechts resectie geen afwijking, BLEU: 14.95, ROUGE: 49.05
+Prediction (Sampling_long):    uterus resectie adenocarcinoom endometriosis eterna c-sep tuba links rechts resectie geen afwijking c-sep uterus resectie geen maligniteit, BLEU: 21.67, ROUGE: 61.51
+Prediction (Diverse_beam):     uterus resectie geen maligniteit endometriosis eterna endometriosis eterna c-se, BLEU: 9.70, ROUGE: 28.98
+Prediction (Diverse_beam_long):uterus resectie geen maligniteit endometriosis eterna endometriosis eterna c-sep uterus resectie geen maligniteit c-sep cervi resectie geen maligniteit c-sep, BLEU: 18.95, ROUGE: 44.21
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i cervibiopt op  uur cin  met koilocytose. geen invasieve groei. geen uitbreiding onderliggende klierbuizen. geen cilindercel atypie. ii huid biopt op  uur cin  met koilocytose. geen invasieve groei. geen uitbreiding onderliggende klierbuizen. geen cilindercel atypie.
+Label:                         cervi biopt ernstige dysplasie cin- c-sep cervi biopt matige dysplasie cin-
+Prediction (Greedy):           cervi biopt cin- koilocytose, BLEU: 6.14, ROUGE: 31.70
+Prediction (Greedy_long):      cervi biopt cin- koilocytose, BLEU: 6.14, ROUGE: 31.70
+Prediction (Contrastive):      cervi biopt cin- koilocytose, BLEU: 6.14, ROUGE: 31.70
+Prediction (Contrastive_long): cervi biopt cin- koilocytose, BLEU: 6.14, ROUGE: 31.70
+Prediction (Sampling):         cervi biopt cin- koilocytose, BLEU: 6.14, ROUGE: 31.70
+Prediction (Sampling_long):    cervi biopt cin- koilocytose, BLEU: 6.14, ROUGE: 31.70
+Prediction (Diverse_beam):     cervi biopt cin- koilocytose, BLEU: 6.14, ROUGE: 31.70
+Prediction (Diverse_beam_long):cervi biopt cin- koilocytose, BLEU: 6.14, ROUGE: 31.70
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidecisie retro-auriculair li nodulair groeiend basaalcelcarcinoom, geheel verwijderd.
+Label:                         huid hoofd links ecisie basaalcelcarcinoom snijvlak vrij
+Prediction (Greedy):           huid retro-auriculair ecisie basaalcelcarcinoom, BLEU: 16.70, ROUGE: 42.50
+Prediction (Greedy_long):      huid retro-auriculair ecisie basaalcelcarcinoom, BLEU: 16.70, ROUGE: 42.50
+Prediction (Contrastive):      huid retro- pre-auriculair ecisie basaalcelcarcinoom, BLEU: 15.85, ROUGE: 39.16
+Prediction (Contrastive_long): huid retro- pre-auriculair ecisie basaalcelcarcinoom, BLEU: 15.85, ROUGE: 39.16
+Prediction (Sampling):         huid retro-auriculair ecisie basaalcelcarcinoom, BLEU: 16.70, ROUGE: 42.50
+Prediction (Sampling_long):    huid retro-auriculair ecisie basaalcelcarcinoom, BLEU: 16.70, ROUGE: 42.50
+Prediction (Diverse_beam):     huid retro-auriculair ecisie basaalcelcarcinoom, BLEU: 16.70, ROUGE: 42.50
+Prediction (Diverse_beam_long):huid retro-auriculair ecisie basaalcelcarcinoom, BLEU: 16.70, ROUGE: 42.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                i en ii huidbiopten wang, respectievelijk rechts en links behoudens geringe ectatische vaatjes geen significante afwijkingen gevonden. beeld kan eventueel passen in het kader van een rosacea.
+Label:                         huid gelaat rechts links biopt rosacea
+Prediction (Greedy):           huid wang rechts biopt rosacea, BLEU: 20.80, ROUGE: 60.10
+Prediction (Greedy_long):      huid wang rechts biopt rosacea, BLEU: 20.80, ROUGE: 60.10
+Prediction (Contrastive):      huid biopt rosacea immunohistochemie, BLEU: 21.44, ROUGE: 51.25
+Prediction (Contrastive_long): huid biopt rosacea immunohistochemie, BLEU: 21.44, ROUGE: 51.25
+Prediction (Sampling):         huid wang rechts biopt rosacea, BLEU: 20.80, ROUGE: 60.10
+Prediction (Sampling_long):    huid wang rechts biopt rosacea, BLEU: 20.80, ROUGE: 60.10
+Prediction (Diverse_beam):     huid wang biopt rosacea, BLEU: 21.44, ROUGE: 51.25
+Prediction (Diverse_beam_long):huid wang biopt rosacea, BLEU: 21.44, ROUGE: 51.25
+----------------------------------------------------------------------------------------------------
+Input Sequence:                slokdarmbiopten waarin uitgebreide intestinale metaplasie, passend bij barrett slijmvlies. hierin wordt focaal laaggradige dysplasie aangetroffen.
+Label:                         oesofagus biopt barrett slijmvlies laaggradige dysplasie
+Prediction (Greedy):           slokdarm biopt barrett laaggradige dysplasie, BLEU: 24.74, ROUGE: 65.66
+Prediction (Greedy_long):      slokdarm biopt barrett laaggradige dysplasie, BLEU: 24.74, ROUGE: 65.66
+Prediction (Contrastive):      slokdarm biopt barrett slijmvlies immunohistochemie laaggradige dysplasie, BLEU: 30.74, ROUGE: 71.33
+Prediction (Contrastive_long): slokdarm biopt barrett slijmvlies immunohistochemie laaggradige dysplasie, BLEU: 30.74, ROUGE: 71.33
+Prediction (Sampling):         slokdarm biopt barrett laaggradige dysplasie, BLEU: 24.74, ROUGE: 65.66
+Prediction (Sampling_long):    slokdarm biopt barrett laaggradige dysplasie, BLEU: 24.74, ROUGE: 65.66
+Prediction (Diverse_beam):     slokdarm biopt barrett dysplasie, BLEU: 21.44, ROUGE: 51.25
+Prediction (Diverse_beam_long):slokdarm biopt barrett dysplasie, BLEU: 21.44, ROUGE: 51.25
+----------------------------------------------------------------------------------------------------
+Input Sequence:                dunne darmbiopten zonder afwijkingen, m.n. geen aanwijzingen voor vlokatrofie.
+Label:                         dunne darm biopt geen afwijking
+Prediction (Greedy):           dunne darm biopsie geen afwijkingen, BLEU: 23.64, ROUGE: 51.25
+Prediction (Greedy_long):      dunne darm biopsie geen afwijkingen, BLEU: 23.64, ROUGE: 51.25
+Prediction (Contrastive):      topografie onbekend biopt geen afwijkingen, BLEU: 21.36, ROUGE: 36.25
+Prediction (Contrastive_long): topografie onbekend biopt geen afwijkingen, BLEU: 21.36, ROUGE: 36.25
+Prediction (Sampling):         dunne darm biopsie geen afwijkingen, BLEU: 23.64, ROUGE: 51.25
+Prediction (Sampling_long):    dunne darm biopsie geen afwijkingen, BLEU: 23.64, ROUGE: 51.25
+Prediction (Diverse_beam):     dunne darm biopsie geen afwijkingen, BLEU: 23.64, ROUGE: 51.25
+Prediction (Diverse_beam_long):dunne darm biopsie geen afwijkingen, BLEU: 23.64, ROUGE: 51.25
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidstukje afkomstig van het linker oor met een sprietig groeiend basocellulair carcinoom.
+Label:                         huid hoofd biopt links basaalcelcarcinoom
+Prediction (Greedy):           huid ecisie basaalcelcarcinoom sprieterig type oor links, BLEU: 8.64, ROUGE: 29.17
+Prediction (Greedy_long):      huid ecisie basaalcelcarcinoom sprieterig type oor links, BLEU: 8.64, ROUGE: 29.17
+Prediction (Contrastive):      huid ecisie basaalcelcarcinoom sprieterig type oor links, BLEU: 8.64, ROUGE: 29.17
+Prediction (Contrastive_long): huid ecisie basaalcelcarcinoom sprieterig type oor links, BLEU: 8.64, ROUGE: 29.17
+Prediction (Sampling):         huid ecisie basaalcelcarcinoom sprieterig type oor links, BLEU: 8.64, ROUGE: 29.17
+Prediction (Sampling_long):    huid ecisie basaalcelcarcinoom sprieterig type oor links, BLEU: 8.64, ROUGE: 29.17
+Prediction (Diverse_beam):     huid ecisie basaalcelcarcinoom sprieterig type oor links, BLEU: 8.64, ROUGE: 29.17
+Prediction (Diverse_beam_long):huid ecisie basaalcelcarcinoom sprieterig type oor links, BLEU: 8.64, ROUGE: 29.17
+----------------------------------------------------------------------------------------------------
+Input Sequence:                endometriumbiopten onregelmatig uitrijpend endometrium. in dit materiaal geen aanwijzingen voor hyperplasie of maligniteit.
+Label:                         endometrium biopt geen maligniteit
+Prediction (Greedy):           endometrium biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Greedy_long):      endometrium biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive):      endometrium biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive_long): endometrium biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling):         endometrium biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling_long):    endometrium biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam):     endometrium biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):endometrium biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                wigecisie linker bovenkwab bulleus emfyseem en pleurale fibrose.
+Label:                         long links ecisie emfyseem fibrose
+Prediction (Greedy):           long links wigecisie emfyseem fibrose, BLEU: 30.21, ROUGE: 72.50
+Prediction (Greedy_long):      long links wigecisie emfyseem fibrose, BLEU: 30.21, ROUGE: 72.50
+Prediction (Contrastive):      long bovenkwab biopt bulleus emfyseem fibrose, BLEU: 17.97, ROUGE: 46.46
+Prediction (Contrastive_long): long bovenkwab biopt bulleus emfyseem fibrose, BLEU: 17.97, ROUGE: 46.46
+Prediction (Sampling):         long links wigecisie emfyseem fibrose, BLEU: 30.21, ROUGE: 72.50
+Prediction (Sampling_long):    long links wigecisie emfyseem fibrose, BLEU: 30.21, ROUGE: 72.50
+Prediction (Diverse_beam):     long links wigecisie emfyseem fibrose, BLEU: 30.21, ROUGE: 72.50
+Prediction (Diverse_beam_long):long links wigecisie emfyseem fibrose, BLEU: 30.21, ROUGE: 72.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidstans naast neus links centraal geulcereerd basaalcelcarcinoom solide type. dieptegroei in voorliggend biopt, mm.
+Label:                         huid gelaat links biopt basaalcelcarcinoom
+Prediction (Greedy):           huid hoofd links biopt basaalcelcarcinoom, BLEU: 42.73, ROUGE: 72.50
+Prediction (Greedy_long):      huid hoofd links biopt basaalcelcarcinoom, BLEU: 42.73, ROUGE: 72.50
+Prediction (Contrastive):      huid   gelaat   links   biopt   basaalcelcarcinoom, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive_long): huid   gelaat   links   biopt   basaalcelcarcinoom, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling):         huid hoofd links biopt basaalcelcarcinoom, BLEU: 42.73, ROUGE: 72.50
+Prediction (Sampling_long):    huid hoofd links biopt basaalcelcarcinoom, BLEU: 42.73, ROUGE: 72.50
+Prediction (Diverse_beam):     huid hoofd links biopt basaalcelcarcinoom, BLEU: 42.73, ROUGE: 72.50
+Prediction (Diverse_beam_long):huid hoofd links biopt basaalcelcarcinoom, BLEU: 42.73, ROUGE: 72.50
+----------------------------------------------------------------------------------------------------
+Input Sequence:                huidbiopt bil rechts reactieve veranderingen met bloedingsresten. geen granulomen. geen virale veranderingen. geen schimmels en zuurvaste staven. zie ook revisie van eerdere biopt onder nummer h-.
+Label:                         huid bil rechts biopt reactief
+Prediction (Greedy):           huid bil rechts biopt reactief, BLEU: 100.00, ROUGE: 100.00
+Prediction (Greedy_long):      huid bil rechts biopt reactief, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive):      huid   bil   rechts   biopt   geen maligniteit, BLEU: 50.81, ROUGE: 71.21
+Prediction (Contrastive_long): huid   bil   rechts   biopt   geen maligniteit     biopt   reactief revisie etern revisie, BLEU: 26.66, ROUGE: 61.16
+Prediction (Sampling):         huid bil rechts biopt reactief, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling_long):    huid bil rechts biopt reactief, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam):     huid bil rechts biopt reactief, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):huid bil rechts biopt reactief, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                beenmergbiopt hypocellulaire, trilineaire hematopoese waarin histologisch en immuunhistochemisch geen aanwijzingen voor lokalisatie van plasmacellulaire maligniteit. zie ook flowcytometrie en aspiratie.
+Label:                         beenmerg biopt geen maligniteit
+Prediction (Greedy):           beenmerg biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Greedy_long):      beenmerg biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Contrastive):      beenmerg biopt immunohistochemie geen maligniteit, BLEU: 30.21, ROUGE: 80.95
+Prediction (Contrastive_long): beenmerg biopt immunohistochemie geen maligniteit, BLEU: 30.21, ROUGE: 80.95
+Prediction (Sampling):         beenmerg biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Sampling_long):    beenmerg biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam):     beenmerg biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+Prediction (Diverse_beam_long):beenmerg biopt geen maligniteit, BLEU: 100.00, ROUGE: 100.00
+----------------------------------------------------------------------------------------------------
+Input Sequence:                definitief, bevestigd door mesotheliomenpanel biopten pleura rechts histologisch en immunohistochemisch beeld van maligne mesothelioom, eptheliale type.
+Label:                         pleura rechts biopt mesothelioom panel consult concordant
+Prediction (Greedy):           pleura rechts biopt maligne mesothelioom consult intern, BLEU: 27.78, ROUGE: 61.90
+Prediction (Greedy_long):      pleura rechts biopt maligne mesothelioom consult intern, BLEU: 27.78, ROUGE: 61.90
+Prediction (Contrastive):      pleura parietalis rechts biopt maligne mesothelioom consult intern onderwijs, BLEU: 11.99, ROUGE: 50.45
+Prediction (Contrastive_long): pleura parietalis rechts biopt maligne mesothelioom consult intern onderwijs, BLEU: 11.99, ROUGE: 50.45
+Prediction (Sampling):         pleura rechts biopt maligne mesothelioom consult intern, BLEU: 27.78, ROUGE: 61.90
+Prediction (Sampling_long):    pleura rechts biopt maligne mesothelioom consult intern, BLEU: 27.78, ROUGE: 61.90
+Prediction (Diverse_beam):     pleura rechts biopt maligne mesothelioom consult etern consult concordant, BLEU: 23.36, ROUGE: 66.96
+Prediction (Diverse_beam_long):pleura rechts biopt maligne mesothelioom consult etern concordant, BLEU: 24.45, ROUGE: 67.69
+----------------------------------------------------------------------------------------------------
+BLEU Score (Greedy): 27.05
+BLEU Score (Greedy long): 28.08
+BLEU Score (Contrastive): 19.71
+BLEU Score (Contrastive long): 23.66
+BLEU Score (Sampling): 27.05
+BLEU Score (Sampling long): 28.08
+BLEU Score (Diverse beam): 28.36
+BLEU Score (Diverse beam long): 30.42
+--------------------------------------------------
+Average ROUGE F1 Scores:
+ROUGE Score (Greedy): 0.61
+ROUGE Score (Greedy long): 0.61
+ROUGE Score (Contrastive): 0.52
+ROUGE Score (Contrastive long): 0.52
+ROUGE Score (Sampling): 0.61
+ROUGE Score (Sampling long): 0.61
+ROUGE Score (Diverse beam): 0.61
+ROUGE Score (Diverse beam long): 0.61
+
+JOB STATISTICS
+==============
+Job ID: 5267954
+Cluster: snellius
+User/Group: gburger01/gburger01
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 01:14:42 core-walltime
+Job Wall-clock time: 00:04:09
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 39.06 GB (39.06 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

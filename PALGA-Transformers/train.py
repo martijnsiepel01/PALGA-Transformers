@@ -1,24 +1,18 @@
-from utils_mt import *
+from finetune_utils import *
+from shared_utils import *
 import argparse
 
 def main(num_train_epochs, max_generate_length, train_batch_size, validation_batch_size, learning_rate,
-         max_length_sentence, data_set, local_tokenizer_path, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy):
+         max_length_sentence, data_set, local_tokenizer_path, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy, codes):
     
     # Generate config and run name
     config, run_name = generate_config_and_run_name(
-        num_train_epochs,
-        max_length_sentence,
-        train_batch_size,
-        validation_batch_size,
-        learning_rate,
-        max_generate_length,
-        data_set,
-        local_model_path,
-        comment,
-        patience,
-        freeze_all_but_x_layers,
-        lr_strategy
+        num_train_epochs=num_train_epochs,
+        data_set=data_set,
+        comment=comment,
+        codes=codes,
     )
+
 
     # Print run name
     print(f"Run name: {run_name}")
@@ -31,8 +25,8 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
 
     # Load datasets
     if data_set == "autopsies" or data_set == "histo" or "all" in data_set:
-        train_dataset, val_dataset = prepare_datasets_tsv(data_set, tokenizer, max_length_sentence)
-        test_dataset = prepare_test_dataset(tokenizer, max_length_sentence)
+        train_dataset, val_dataset = prepare_datasets_tsv(data_set, tokenizer, max_length_sentence, codes)
+        test_dataset = prepare_test_dataset(tokenizer, max_length_sentence, codes)
     
     # Setup model and tokenizer
     model = setup_model(tokenizer, freeze_all_but_x_layers, local_model_path)
@@ -40,15 +34,14 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
     # Prepare datacollator and dataloaders
     data_collator = prepare_datacollator(tokenizer, model)
     train_dataloader, eval_dataloader, test_dataloader = prepare_dataloaders(train_dataset, val_dataset, test_dataset, data_collator, train_batch_size, validation_batch_size)
-    
+
     num_training_steps = num_train_epochs * len(train_dataloader)
 
     # Prepare training objects
     optimizer, accelerator, model, train_dataloader, eval_dataloader, test_dataloader, scheduler = prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloader, test_dataloader, lr_strategy, num_training_steps)
 
-
     # Training and evaluation
-    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience, scheduler)
+    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience, scheduler, codes)
 
 # Entry point of the program
 if __name__ == "__main__":
@@ -68,10 +61,11 @@ if __name__ == "__main__":
     parser.add_argument("--patience", type=int, default=3, help="Patience for early stopping")
     parser.add_argument("--freeze_all_but_x_layers", type=int, default=0, help="Number of layers NOT to freeze")
     parser.add_argument("--lr_strategy", type=str, default='AdamW', help="AdamW or ST-LR")
+    parser.add_argument("--codes", type=lambda x: (str(x).lower() == 'true'), default=False, help="Use PALGA codes or not")
 
     args = parser.parse_args()
 
     # Call main function with the parsed arguments
     main(args.num_train_epochs, args.max_generate_length, args.train_batch_size, args.validation_batch_size,
          args.learning_rate, args.max_length_sentence, args.data_set, args.local_tokenizer_path, args.local_model_path, 
-         args.comment, args.patience, args.freeze_all_but_x_layers, args.lr_strategy)
+         args.comment, args.patience, args.freeze_all_but_x_layers, args.lr_strategy, args.codes)

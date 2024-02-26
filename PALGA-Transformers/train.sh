@@ -6,10 +6,10 @@
 #SBATCH --gres=gpu:1
 #SBATCH --job-name=train
 #SBATCH --cpus-per-task=18
-#SBATCH --time=3:00:00
+#SBATCH --time=4:00:00
 #SBATCH --mem=40000M
 
 source ../.venv/bin/activate
 
 
-python PALGA-Transformers/train_mt.py "$@"
+python PALGA-Transformers/train.py "$@"

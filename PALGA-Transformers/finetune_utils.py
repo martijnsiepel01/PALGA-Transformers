@@ -1,54 +1,52 @@
 import torch
-from torch.utils.data import DataLoader
 from tqdm import tqdm
 from datasets import load_dataset
 import wandb
 import pandas as pd
-from transformers import MT5Tokenizer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, AdamW, T5Tokenizer
+from transformers import AutoModelForSeq2SeqLM, AdamW
 import evaluate
 from accelerate import Accelerator
 from datasets import concatenate_datasets
-import math
 
-def load_tokenizer(local_tokenizer_path = 'PALGA-Transformers/flan_tokenizer'):
-    tokenizer = T5Tokenizer.from_pretrained(local_tokenizer_path)
-    # tokenizer = MT5Tokenizer(vocab_file=local_tokenizer_path)
-    return tokenizer
-
-def generate_config_and_run_name(num_train_epochs, max_length_sentence, train_batch_size, validation_batch_size, learning_rate, max_generate_length, data_set, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy):
-    config = {
-        'num_train_epochs': num_train_epochs,
-        'max_length_sentence': max_length_sentence,
-        'train_batch_size': train_batch_size,
-        'validation_batch_size': validation_batch_size,
-        'lr': learning_rate,
-        'max_generate_length': max_generate_length,
-        'data_set': data_set,
-        'local_model_path': local_model_path,
-        'comment': comment,
-        'patience': patience,
-        'freeze_all_but_x_layers': freeze_all_but_x_layers,
-        'lr_strategy': lr_strategy
-    }
-
-    run_name = f'epochs{num_train_epochs}_dataset{data_set}_model{local_model_path.split("/")[-1]}_comment{comment}_patience{patience}_freezeallbutxlayers{freeze_all_but_x_layers}_lrstrategy{lr_strategy}'
-
-    return config, run_name
 
 def preprocess_function(examples, tokenizer, max_length_sentence):
     inputs = [ex.lower() for ex in examples["Conclusie"]]
-    targets = [ex.lower() for ex in examples["Codes"]]
+    targets = [ex.lower() for ex in examples["Palga_codes"]]
     model_inputs = tokenizer(
         inputs, text_target=targets, max_length=max_length_sentence, truncation=True
     )
     return model_inputs
 
-def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
+def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence, codes):
     # Define file paths for the first dataset
-    data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
+    if codes:
+        data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
+        dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
+        for split in dataset.keys():
+            dataset[split] = dataset[split].filter(lambda example: example["Palga_codes"] is not None and example["Palga_codes"] != '')
+            dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
+            dataset[split] = dataset[split].map(
+                lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
+                batched=True
+            )
+            dataset[split] = dataset[split].remove_columns(["Conclusie", "Palga_codes", 'terms', 'Codes'])
+            dataset[split].set_format("torch")
+    else:
+        data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
+        dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
+        for split in dataset.keys():
+            dataset[split] = dataset[split].filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
+            dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
+            dataset[split] = dataset[split].map(
+                lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
+                batched=True
+            )
+            dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes"])
+            dataset[split].set_format("torch")
+    
     
     # Load the first dataset
-    dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
+    
     
     # # Define and load the second dataset
     # data_set = "histo"
@@ -69,32 +67,35 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
     # dataset = {"train": train_datasets, "test": test_datasets, "validation": validation_datasets}
 
    # Further processing (filtering and tokenizing)
-    for split in dataset.keys():
-        dataset[split] = dataset[split].filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
-        dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
-        dataset[split] = dataset[split].map(
-            lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
-            batched=True
-        )
-        dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes"])
-        dataset[split].set_format("torch")
+    
 
     train_dataset = dataset['train']
     val_dataset = dataset['validation']
-
     return train_dataset, val_dataset
 
 
-def prepare_test_dataset(tokenizer, max_length_sentence):
-    test_data_location = "PALGA-Transformers/data/gold_P1.tsv"
-    dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
-    dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
-    dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
-    tokenized_datasets = dataset.map(
-        lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
-        batched=True
-    )
-    tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
+def prepare_test_dataset(tokenizer, max_length_sentence, codes):
+    if codes:
+        test_data_location = "PALGA-Transformers/data/gold_P1_with_codes.tsv"
+        dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
+        dataset = dataset.filter(lambda example: example["Palga_codes"] is not None and example["Palga_codes"] != '')
+        dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
+        tokenized_datasets = dataset.map(
+            lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
+            batched=True
+        )
+        tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Palga_codes", 'terms', 'Codes'])
+    else:
+        test_data_location = "PALGA-Transformers/data/gold_P1.tsv"
+        dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
+        dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
+        dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
+        tokenized_datasets = dataset.map(
+            lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
+            batched=True
+        )
+        tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
+    
     tokenized_datasets.set_format("torch")
     test_dataset = tokenized_datasets['train']
     return test_dataset
@@ -132,29 +133,6 @@ def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path = 'PALGA-Tr
         model = freeze_layers(model, freeze_all_but_x_layers)
         
     return model
-
-def prepare_datacollator(tokenizer, model):
-    data_collator = DataCollatorForSeq2Seq(tokenizer, model=model)
-    return data_collator
-
-def prepare_dataloaders(train_dataset, val_dataset, test_dataset, data_collator, train_batch_size, validation_batch_size):
-    train_dataloader = DataLoader(
-        train_dataset,
-        shuffle=True,
-        collate_fn=data_collator,
-        batch_size=train_batch_size,
-    )
-    eval_dataloader = DataLoader(
-        val_dataset, 
-        collate_fn=data_collator, 
-        batch_size=validation_batch_size
-    )
-    test_dataloader = DataLoader(
-        test_dataset, 
-        collate_fn=data_collator, 
-        batch_size=validation_batch_size
-    )
-    return train_dataloader, eval_dataloader, test_dataloader
 
 
 def slanted_triangular_learning_rate(step, total_steps, lr_start, lr_max, cut_frac, ratio):
@@ -330,13 +308,35 @@ def test_step(model, dataloader, tokenizer, max_generate_length):
     
     return test_metrics, decoded_test_preds, decoded_test_labels, decoded_test_inputs
 
-def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input):
+def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input, codes):
     print("Predictions on Test Data in the Last Epoch:")
+    # Load the thesaurus
+    thesaurus_location = '/home/gburger01/snomed_20230426.txt'
+    thesaurus = pd.read_csv(thesaurus_location, sep='|', encoding='latin-1')
+
+    # Function to get word from code
+    def get_word_from_code(code):
+        if code == '[c-sep]':
+            return code
+        else:
+            word = thesaurus[(thesaurus['DEPALCE'].str.lower() == code.lower()) & (thesaurus['DESTACE'] == 'V')]['DETEROM'].values
+            return word[0] if len(word) > 0 else 'Unknown'
+
     for input_seq, label, pred in zip(decoded_test_input, decoded_test_labels, decoded_test_preds):
         print("Input Sequence:", input_seq)
         print("Label:", label)
         print("Prediction:", pred)
-        print('-'*100)  
+
+        if codes:
+            # Convert codes to words for label
+            label_words = [get_word_from_code(code) for code in label.split()]
+            print("Label Words:", ' '.join(label_words))
+
+            # Convert codes to words for prediction
+            pred_words = [get_word_from_code(code) for code in pred.split()]
+            print("Prediction Words:", ' '.join(pred_words))
+
+        print('-'*100)
 
 def wandb_log_metrics(epoch, avg_train_loss, eval_metrics, test_metrics):
     wandb.log({
@@ -358,7 +358,7 @@ def wandb_log_metrics(epoch, avg_train_loss, eval_metrics, test_metrics):
                 "test/F1-Bleu-Rouge": test_metrics["bleu_rouge_f1"],
             })
 
-def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience, scheduler):
+def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience, scheduler, codes):
     lowest_loss = float("inf")
     early_stopping_counter = 0
     best_model_state_dict = None
@@ -387,7 +387,7 @@ def train_model(model, optimizer, accelerator, max_generate_length, train_datalo
 
     # Run print_test_predictions with the best model
     test_metrics, decoded_test_preds, decoded_test_labels, decoded_test_input = test_step(model, test_dataloader, tokenizer, max_generate_length)
-    print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input)
+    print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input, codes)
 
     # Save the best model weights as a W&B artifact
     artifact = wandb.Artifact("best_model", type="model")
