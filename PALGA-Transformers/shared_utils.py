@@ -1,9 +1,9 @@
 from torch.utils.data import DataLoader
-from transformers import DataCollatorForSeq2Seq, T5Tokenizer
+from transformers import DataCollatorForSeq2Seq, T5Tokenizer, MT5Tokenizer
 
 
 def load_tokenizer(local_tokenizer_path):
-    tokenizer = T5Tokenizer.from_pretrained(local_tokenizer_path)
+    tokenizer = MT5Tokenizer.from_pretrained(local_tokenizer_path)
     return tokenizer
 
 def prepare_datacollator(tokenizer, model):

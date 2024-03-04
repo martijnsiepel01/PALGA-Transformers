@@ -22,7 +22,7 @@ def get_unique_thesaurus_term_words(thesaurus_file_name):
 
 utw = get_unique_thesaurus_term_words('/home/gburger01/snomed_20230426.txt')
 
-tokenizer = T5Tokenizer.from_pretrained('google/mt5-small')
+tokenizer = AutoTokenizer.from_pretrained('google/mt5-base')
 
 # -- delete the words from the list of unique PALGA thesaurus term words already in the tokenizer's vocabulary:
 utw = set(utw) - set(tokenizer.vocab.keys())
@@ -33,4 +33,4 @@ tokenizer.add_tokens(list(utw))
 # -- add special tokens ('[C-SEP]' in the code series)
 tokenizer.add_tokens('[C-SEP]', special_tokens=True)
 
-tokenizer.save_pretrained('/home/gburger01/PALGA-Transformers/PALGA-Transformers/mt5-small-tokenizer')
+tokenizer.save_pretrained('/home/gburger01/PALGA-Transformers/PALGA-Transformers/mt5-base-tokenizer')

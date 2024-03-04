@@ -11,7 +11,7 @@ from datasets import concatenate_datasets
 
 def preprocess_function(examples, tokenizer, max_length_sentence):
     inputs = [ex.lower() for ex in examples["Conclusie"]]
-    targets = [ex.lower() for ex in examples["Palga_codes"]]
+    targets = [ex.lower() for ex in examples["Codes"]]
     model_inputs = tokenizer(
         inputs, text_target=targets, max_length=max_length_sentence, truncation=True
     )
@@ -23,13 +23,13 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence, codes):
         data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
         dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
         for split in dataset.keys():
-            dataset[split] = dataset[split].filter(lambda example: example["Palga_codes"] is not None and example["Palga_codes"] != '')
+            dataset[split] = dataset[split].filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
             dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
             dataset[split] = dataset[split].map(
                 lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
                 batched=True
             )
-            dataset[split] = dataset[split].remove_columns(["Conclusie", "Palga_codes", 'terms', 'Codes'])
+            dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes"])
             dataset[split].set_format("torch")
     else:
         data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
@@ -76,15 +76,15 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence, codes):
 
 def prepare_test_dataset(tokenizer, max_length_sentence, codes):
     if codes:
-        test_data_location = "PALGA-Transformers/data/gold_P1_with_codes.tsv"
+        test_data_location = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
         dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
-        dataset = dataset.filter(lambda example: example["Palga_codes"] is not None and example["Palga_codes"] != '')
+        dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
         dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
         tokenized_datasets = dataset.map(
             lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
             batched=True
         )
-        tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Palga_codes", 'terms', 'Codes'])
+        tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
     else:
         test_data_location = "PALGA-Transformers/data/gold_P1.tsv"
         dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
@@ -324,16 +324,17 @@ def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test
 
     for input_seq, label, pred in zip(decoded_test_input, decoded_test_labels, decoded_test_preds):
         print("Input Sequence:", input_seq)
-        print("Label:", label)
-        print("Prediction:", pred)
+        print("Label:           ", label)
+        print("Prediction:      ", pred)
 
         if codes:
             # Convert codes to words for label
             label_words = [get_word_from_code(code) for code in label.split()]
-            print("Label Words:", ' '.join(label_words))
+            print("Label Words:     ", ' '.join(label_words))
 
             # Convert codes to words for prediction
             pred_words = [get_word_from_code(code) for code in pred.split()]
+            
             print("Prediction Words:", ' '.join(pred_words))
 
         print('-'*100)

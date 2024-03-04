@@ -21,12 +21,14 @@ def train_sentencepiece_tokenizer(input_file_path, model_prefix, vocab_size, spe
     spm.SentencePieceTrainer.Train(spm_command)
 
 # Path to your dataset
-input_files = [
-    "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_train.tsv",
-    "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_train.tsv",
-    "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/histo/histo_norm_train.tsv"
-]
-temp_file_path = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/temp_train_data.txt"
+# input_files = [
+#     "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_train.tsv",
+#     "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_train.tsv",
+#     "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/histo/histo_norm_train.tsv"
+# ]
+    
+input_files = ['/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/histo/histo_norm_train_with_codes.tsv']
+temp_file_path = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/temp_train_data.txt"
 
 # Convert your dataset to the required format if it's not already in plain text
 # For example, converting from TSV to plain text as in the initial question
@@ -37,11 +39,11 @@ with open(temp_file_path, "w") as temp_file:
             count = 0
             for row in reader:
                 temp_file.write(row[0].lower().replace("[c-sep]", "").replace("[crlf]", "") + "\n")  # Convert input to lowercase and remove [C-SEP]
-                # temp_file.write(row[1].lower() + "\n")  # Convert input to lowercase
+                temp_file.write(row[1].lower() + "\n")  # Convert input to lowercase
 
 # Training parameters
-model_prefix = "combined_data_unigram_t5_custom_32128_1_lower_case"
-vocab_size = 32128
+model_prefix = "histo_unigram_t5_custom_32128_1_lower_case_with_codes"
+vocab_size = 16000
 special_tokens = ["[PAD]", "[UNK]", "[CLS]", "[MASK]", "[C-SEP]"]  # Include your special tokens here
 
 # Train the tokenizer

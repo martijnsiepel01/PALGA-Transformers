@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # Read the TSV file into a DataFrame
-df = pd.read_csv('/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/all/dataset_all_raw_new.tsv', sep='\t')
+df = pd.read_csv('/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all.tsv', sep='\t')
 
 # Remove the first and third columns
 df = df.drop(df.columns[[0, 2]], axis=1)
@@ -24,12 +24,12 @@ train_df = train_df.drop('Type', axis=1)
 val_df = val_df.drop('Type', axis=1)
 
 # Define base path for writing files
-base_path = '/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_'
+base_path = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_'
 
 # Write the splits to files
-train_df.to_csv(f'{base_path}train_with_codes.tsv', sep='\t', index=False)
-test_df.to_csv(f'{base_path}test_with_codes.tsv', sep='\t', index=False)
-val_df.to_csv(f'{base_path}validation_with_codes.tsv', sep='\t', index=False)
+train_df.to_csv(f'{base_path}train.tsv', sep='\t', index=False)
+test_df.to_csv(f'{base_path}test.tsv', sep='\t', index=False)
+val_df.to_csv(f'{base_path}validation.tsv', sep='\t', index=False)
 
 # Print confirmation
 print("Splits have been written to files successfully.")
