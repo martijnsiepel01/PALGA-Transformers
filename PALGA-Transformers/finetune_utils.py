@@ -17,84 +17,55 @@ def preprocess_function(examples, tokenizer, max_length_sentence):
     )
     return model_inputs
 
-def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence, codes):
+def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
     # Define file paths for the first dataset
-    if codes:
-        data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
-        dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
-        for split in dataset.keys():
-            dataset[split] = dataset[split].filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
-            dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
-            dataset[split] = dataset[split].map(
-                lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
-                batched=True
-            )
-            dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes"])
-            dataset[split].set_format("torch")
-    else:
-        data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
-        dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
-        for split in dataset.keys():
-            dataset[split] = dataset[split].filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
-            dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
-            dataset[split] = dataset[split].map(
-                lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
-                batched=True
-            )
-            dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes"])
-            dataset[split].set_format("torch")
-    
-    
-    # Load the first dataset
-    
-    
-    # # Define and load the second dataset
-    # data_set = "histo"
-    # data_files2 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
-    # dataset2 = load_dataset("csv", data_files=data_files2, delimiter="\t")
-    
-    # # Define and load the third dataset
-    # data_set = "autopsies"
-    # data_files3 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation.tsv"}
-    # dataset3 = load_dataset("csv", data_files=data_files3, delimiter="\t")
+    data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
+    dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
 
-    # # Concatenate the datasets for each split separately
-    # train_datasets = concatenate_datasets([dataset["train"], dataset2["train"], dataset3["train"]])
-    # test_datasets = concatenate_datasets([dataset["test"], dataset2["test"], dataset3["test"]])
-    # validation_datasets = concatenate_datasets([dataset["validation"], dataset2["validation"], dataset3["validation"]])
-
-    # # Combine the splits back into a single dataset dictionary
-    # dataset = {"train": train_datasets, "test": test_datasets, "validation": validation_datasets}
-
-   # Further processing (filtering and tokenizing)
+    # Define and load the second dataset
+    data_set = "histo"
+    data_files2 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
+    dataset2 = load_dataset("csv", data_files=data_files2, delimiter="\t")
     
+    # Define and load the third dataset
+    data_set = "autopsies"
+    data_files3 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
+    dataset3 = load_dataset("csv", data_files=data_files3, delimiter="\t")
+
+
+    # Concatenate the datasets for each split separately
+    train_datasets = concatenate_datasets([dataset["train"], dataset2["train"], dataset3["train"]])
+    test_datasets = concatenate_datasets([dataset["test"], dataset2["test"], dataset3["test"]])
+    validation_datasets = concatenate_datasets([dataset["validation"], dataset2["validation"], dataset3["validation"]])
+
+    # Combine the splits back into a single dataset dictionary
+    dataset = {"train": train_datasets, "test": test_datasets, "validation": validation_datasets}
+
+    for split in dataset.keys():
+        dataset[split] = dataset[split].filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
+        dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
+        dataset[split] = dataset[split].map(
+            lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
+            batched=True
+        )
+        dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes"])
+        dataset[split].set_format("torch")
 
     train_dataset = dataset['train']
     val_dataset = dataset['validation']
     return train_dataset, val_dataset
 
 
-def prepare_test_dataset(tokenizer, max_length_sentence, codes):
-    if codes:
-        test_data_location = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
-        dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
-        dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
-        dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
-        tokenized_datasets = dataset.map(
-            lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
-            batched=True
-        )
-        tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
-    else:
-        test_data_location = "PALGA-Transformers/data/gold_P1.tsv"
-        dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
-        dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
-        dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
-        tokenized_datasets = dataset.map(
-            lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
-            batched=True
-        )
-        tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
+def prepare_test_dataset(tokenizer, max_length_sentence):
+    test_data_location = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
+    dataset = load_dataset("csv", data_files=test_data_location, delimiter="\t")
+    dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
+    dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
+    tokenized_datasets = dataset.map(
+        lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
+        batched=True
+    )
+    tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
     
     tokenized_datasets.set_format("torch")
     test_dataset = tokenized_datasets['train']
@@ -308,7 +279,7 @@ def test_step(model, dataloader, tokenizer, max_generate_length):
     
     return test_metrics, decoded_test_preds, decoded_test_labels, decoded_test_inputs
 
-def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input, codes):
+def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input):
     print("Predictions on Test Data in the Last Epoch:")
     # Load the thesaurus
     thesaurus_location = '/home/gburger01/snomed_20230426.txt'
@@ -327,15 +298,14 @@ def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test
         print("Label:           ", label)
         print("Prediction:      ", pred)
 
-        if codes:
-            # Convert codes to words for label
-            label_words = [get_word_from_code(code) for code in label.split()]
-            print("Label Words:     ", ' '.join(label_words))
+        # Convert codes to words for label
+        label_words = [get_word_from_code(code) for code in label.split()]
+        print("Label Words:     ", ' '.join(label_words))
 
-            # Convert codes to words for prediction
-            pred_words = [get_word_from_code(code) for code in pred.split()]
-            
-            print("Prediction Words:", ' '.join(pred_words))
+        # Convert codes to words for prediction
+        pred_words = [get_word_from_code(code) for code in pred.split()]
+        
+        print("Prediction Words:", ' '.join(pred_words))
 
         print('-'*100)
 
@@ -359,7 +329,7 @@ def wandb_log_metrics(epoch, avg_train_loss, eval_metrics, test_metrics):
                 "test/F1-Bleu-Rouge": test_metrics["bleu_rouge_f1"],
             })
 
-def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience, scheduler, codes):
+def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience, scheduler):
     lowest_loss = float("inf")
     early_stopping_counter = 0
     best_model_state_dict = None
@@ -388,7 +358,7 @@ def train_model(model, optimizer, accelerator, max_generate_length, train_datalo
 
     # Run print_test_predictions with the best model
     test_metrics, decoded_test_preds, decoded_test_labels, decoded_test_input = test_step(model, test_dataloader, tokenizer, max_generate_length)
-    print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input, codes)
+    print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input)
 
     # Save the best model weights as a W&B artifact
     artifact = wandb.Artifact("best_model", type="model")

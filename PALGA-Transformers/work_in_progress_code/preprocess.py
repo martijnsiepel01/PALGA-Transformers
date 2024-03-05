@@ -9,15 +9,19 @@ def preprocess_sentence(sentence):
     # Remove punctuation and special characters
     sentence = re.sub(r'[^\w\s\[\]]', '', sentence)
 
+    # Convert to lowercase
+    sentence = sentence.lower()
+
+    # Replace all occurrences of "[crlf]" with a space
+    sentence = sentence.replace("[crlf]", " ")
+
     return sentence
 
 # Specify the path to your TSV file
-tsv_file = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_validation.tsv'
+tsv_file = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv'
 
 # Read the TSV file into a DataFrame
 df = pd.read_csv(tsv_file, sep='\t')
-
-df['Codes'] = df['Codes'].astype(str)  # Ensure 'Codes' column is treated as string
 
 df['Conclusie'] = df['Conclusie'].apply(preprocess_sentence)
 
@@ -26,7 +30,7 @@ directory = os.path.dirname(tsv_file)
 filename = os.path.basename(tsv_file)
 
 # Create the new file path for the processed TSV file
-processed_tsv_file = os.path.join(directory, f"processed_{filename}")
+processed_tsv_file = os.path.join(directory, f"{filename}")
 
 # Write the processed DataFrame to the new TSV file
 df.to_csv(processed_tsv_file, sep='\t', index=False)
