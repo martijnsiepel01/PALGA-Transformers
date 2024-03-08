@@ -3,7 +3,7 @@ from shared_utils import *
 import argparse
 
 def main(num_train_epochs, max_generate_length, train_batch_size, validation_batch_size, learning_rate,
-         max_length_sentence, data_set, local_tokenizer_path, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy):
+         max_length_sentence, data_set, local_tokenizer_path, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy, optimizer_type):
     
     # Generate config and run name
     config, run_name = generate_config_and_run_name(
@@ -24,24 +24,23 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
 
     # Load datasets
     if data_set == "autopsies" or data_set == "histo" or "all" in data_set:
-        train_dataset, val_dataset = prepare_datasets_tsv(data_set, tokenizer, max_length_sentence)
-        test_dataset = prepare_test_dataset(tokenizer, max_length_sentence)
+        train_dataset, val_datasets = prepare_datasets_tsv(data_set, tokenizer, max_length_sentence)
+        test_datasets = prepare_test_dataset(tokenizer, max_length_sentence)
     
     # Setup model and tokenizer
     model = setup_model(tokenizer, freeze_all_but_x_layers, local_model_path)
     
     # Prepare datacollator and dataloaders
     data_collator = prepare_datacollator(tokenizer, model)
-    train_dataloader, eval_dataloader, test_dataloader = prepare_dataloaders(train_dataset, val_dataset, test_dataset, data_collator, train_batch_size, validation_batch_size)
-    print(len(train_dataloader), len(eval_dataloader), len(test_dataloader))
+    train_dataloader, eval_dataloaders, test_dataloaders = prepare_dataloaders(train_dataset, val_datasets, test_datasets, data_collator, train_batch_size, validation_batch_size)
 
     num_training_steps = num_train_epochs * len(train_dataloader)
 
     # Prepare training objects
-    optimizer, accelerator, model, train_dataloader, eval_dataloader, test_dataloader, scheduler = prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloader, test_dataloader, lr_strategy, num_training_steps)
+    optimizer, accelerator, model, train_dataloader, eval_dataloaders, test_dataloaders, scheduler = prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloaders, test_dataloaders, lr_strategy, num_training_steps, optimizer_type)
 
     # Training and evaluation
-    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloader, test_dataloader, num_train_epochs, tokenizer, run_name, patience, scheduler)
+    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, test_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler)
 
 # Entry point of the program
 if __name__ == "__main__":
@@ -55,16 +54,17 @@ if __name__ == "__main__":
     parser.add_argument("--learning_rate", type=float, default=1e-4, help="Learning rate")
     parser.add_argument("--max_length_sentence", type=int, default=512, help="Max length of sentence")
     parser.add_argument("--data_set", type=str, default='all', help="Dataset name")
-    parser.add_argument("--local_tokenizer_path", type=str, default='PALGA-Transformers/flan_tokenizer', help="Local tokenizer path")
-    parser.add_argument("--local_model_path", type=str, default='PALGA-Transformers/models/flan-t5-small', help="Local model path")
+    parser.add_argument("--local_tokenizer_path", type=str, default='google/mT5-small', help="Local tokenizer path")
+    parser.add_argument("--local_model_path", type=str, default='PALGA-Transformers/models/mT5-small', help="Local model path")
     parser.add_argument("--comment", type=str, default='', help="Comment for the current run")
     parser.add_argument("--patience", type=int, default=3, help="Patience for early stopping")
     parser.add_argument("--freeze_all_but_x_layers", type=int, default=0, help="Number of layers NOT to freeze")
     parser.add_argument("--lr_strategy", type=str, default='AdamW', help="AdamW or ST-LR")
+    parser.add_argument("--optimizer_type", type=str, default='AdamW', help="Optimizer type")
 
     args = parser.parse_args()
 
     # Call main function with the parsed arguments
     main(args.num_train_epochs, args.max_generate_length, args.train_batch_size, args.validation_batch_size,
          args.learning_rate, args.max_length_sentence, args.data_set, args.local_tokenizer_path, args.local_model_path, 
-         args.comment, args.patience, args.freeze_all_but_x_layers, args.lr_strategy)
+         args.comment, args.patience, args.freeze_all_but_x_layers, args.lr_strategy, args.optimizer_type)
