@@ -3,11 +3,21 @@ import numpy as np
 import random
 
 
-# Specify the path to your TSV file
-file_path = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_validation.tsv"
+# Specify the paths to your TSV files
+file_paths = [
+    "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/all/all_norm_validation_with_codes.tsv",
+    "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_validation.tsv",
+    "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/histo/histo_norm_validation_with_codes.tsv"
+]
 
-# Load the TSV file into a DataFrame
-df = pd.read_csv(file_path, sep="\t")
+# Load the TSV files into a DataFrame
+dfs = []
+for file_path in file_paths:
+    df = pd.read_csv(file_path, sep="\t")
+    dfs.append(df)
+
+# Concatenate the DataFrames
+df = pd.concat(dfs, ignore_index=True)
 
 conclusies = df['Conclusie']
 codes = df['Codes']
@@ -102,6 +112,8 @@ data = []
 for index, row in df.iterrows():
     source_sentence = row['Conclusie']
     target_sentence = row['Codes']
+    if str(target_sentence) == "nan":
+        continue
     input_sequence_span_corruption, output_sequence_span_corruption, _ = span_corruption(source_sentence, seed=1)
     input_sequence_translation_pair_span_corruption, output_sequence_translation_pair_span_corruption = translation_pair_span_corruption(source_sentence, target_sentence, seed=1)
     input_sequence_source_only_span_corruption_with_target_concat, output_sequence_source_only_span_corruption_with_target_concat = source_only_span_corruption_with_target_concat(source_sentence, target_sentence, seed=1)
@@ -125,4 +137,4 @@ for index, row in df.iterrows():
 data_df = pd.DataFrame(data, columns=headers)
 
 # Write the DataFrame to a TSV file
-data_df.to_csv("/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/pretrain_all/pretrain_all_validation.tsv", sep='\t', index=False)
+data_df.to_csv("/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/pretrain_all/pretrain_all_validation_combined.tsv", sep='\t', index=False)

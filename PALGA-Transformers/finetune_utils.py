@@ -9,24 +9,7 @@ from accelerate import Accelerator
 from datasets import concatenate_datasets
 
 
-   # # Define and load the second dataset
-    # data_set = "histo"
-    # data_files2 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
-    # dataset2 = load_dataset("csv", data_files=data_files2, delimiter="\t")
-    
-    # # Define and load the third dataset
-    # data_set = "autopsies"
-    # data_files3 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
-    # dataset3 = load_dataset("csv", data_files=data_files3, delimiter="\t")
 
-
-    # # Concatenate the datasets for each split separately
-    # train_datasets = concatenate_datasets([dataset["train"], dataset2["train"], dataset3["train"]])
-    # test_datasets = concatenate_datasets([dataset["test"], dataset2["test"], dataset3["test"]])
-    # validation_datasets = concatenate_datasets([dataset["validation"], dataset2["validation"], dataset3["validation"]])
-
-    # # Combine the splits back into a single dataset dictionary
-    # dataset = {"train": train_datasets, "test": test_datasets, "validation": validation_datasets}
 
 
 def preprocess_function(examples, tokenizer, max_length_sentence):
@@ -41,6 +24,26 @@ def preprocess_function(examples, tokenizer, max_length_sentence):
 def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
     data_files = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
     dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
+
+    if data_set == "all":
+        # Define and load the second dataset
+        data_set = "histo"
+        data_files2 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
+        dataset2 = load_dataset("csv", data_files=data_files2, delimiter="\t")
+        
+        # Define and load the third dataset
+        data_set = "autopsies"
+        data_files3 = {"train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv", "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv", "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"}
+        dataset3 = load_dataset("csv", data_files=data_files3, delimiter="\t")
+
+
+        # Concatenate the datasets for each split separately
+        train_datasets = concatenate_datasets([dataset["train"], dataset2["train"], dataset3["train"]])
+        test_datasets = concatenate_datasets([dataset["test"], dataset2["test"], dataset3["test"]])
+        validation_datasets = concatenate_datasets([dataset["validation"], dataset2["validation"], dataset3["validation"]])
+
+        # Combine the splits back into a single dataset dictionary
+        dataset = {"train": train_datasets, "test": test_datasets, "validation": validation_datasets}
 
     for split in dataset.keys():
         dataset[split] = dataset[split].filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
@@ -69,7 +72,7 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
     return train_dataset, val_datasets
 
 def prepare_test_dataset(tokenizer, max_length_sentence):
-    test_data_location = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
+    test_data_location = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
     dataset = load_dataset("csv", data_files={"test": test_data_location}, delimiter="\t")['test']
     
     dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
@@ -147,7 +150,7 @@ def prepare_training_objects(learning_rate, model, train_dataloader, eval_datalo
     elif optimizer_type.lower() == 'adafactor':
         optimizer = Adafactor(
             model.parameters(),
-            lr=3e-3,  # Learning rate
+            lr=1e-4,  # Learning rate
             eps=(1e-30, 1e-3),
             clip_threshold=1.0,
             decay_rate=-0.8,
@@ -206,8 +209,8 @@ def train_step(model, dataloader, optimizer, accelerator, scheduler, tokenizer):
         # print(f"Batch {batch_idx}: Output 'c-sep' counts: {output_c_sep_counts}")
 
         # Calculate reweight factors for each sequence in the batch
-        # reweight_factors = [calculate_reweight_factor(inp, out) for inp, out in zip(input_c_sep_counts, output_c_sep_counts)]
-        reweight_factors = [1 for _ in range(len(input_c_sep_counts))]  # Set to 1 for each sequence
+        reweight_factors = [calculate_reweight_factor(inp, out) for inp, out in zip(input_c_sep_counts, output_c_sep_counts)]
+        # reweight_factors = [1 for _ in range(len(input_c_sep_counts))]  # Set to 1 for each sequence
 
 
         # Print reweight factors for verification
@@ -218,7 +221,7 @@ def train_step(model, dataloader, optimizer, accelerator, scheduler, tokenizer):
         weighted_loss = weighted_losses.mean()  # Calculate mean to combine individual losses
 
         # Print weighted loss for verification
-        print(f"Batch {batch_idx}: Weighted loss: {weighted_loss.item()}")
+        # print(f"Batch {batch_idx}: Weighted loss: {weighted_loss.item()}")
 
         optimizer.zero_grad()
         accelerator.backward(weighted_loss)
@@ -230,7 +233,7 @@ def train_step(model, dataloader, optimizer, accelerator, scheduler, tokenizer):
         total_train_loss += weighted_loss.item()
 
     avg_train_loss = total_train_loss / len(dataloader)
-    print(f"Average training loss: {avg_train_loss}")
+    # print(f"Average training loss: {avg_train_loss}")
     return avg_train_loss
 
 def count_c_sep(tokens, tokenizer):
@@ -244,7 +247,7 @@ def count_c_sep(tokens, tokenizer):
 def calculate_reweight_factor(input_count, output_count):
     # No change needed, works on individual counts
     diff = abs(input_count - output_count)
-    reweight_factor = 1 + diff  # Adjust formula as needed
+    reweight_factor = (1 + diff)  # Adjust formula as needed
     return reweight_factor
 
 
@@ -281,6 +284,7 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length):
                     diversity_penalty=0.3,
                     num_beams=6,
                     num_beam_groups=2,
+                    no_repeat_ngram_size = 4
                 )
 
             labels = batch["labels"]
@@ -360,6 +364,7 @@ def test_step(model, test_dataloaders, tokenizer, max_generate_length):
                     diversity_penalty=0.3,
                     num_beams=6,
                     num_beam_groups=2,
+                    no_repeat_ngram_size = 4
                 )
                 loss = model(**batch).loss
                 total_loss += loss.item()
@@ -410,12 +415,12 @@ def test_step(model, test_dataloaders, tokenizer, max_generate_length):
 def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input):
     print("Predictions on Test Data in the Last Epoch:")
     # Load the thesaurus
-    thesaurus_location = '/home/gburger01/snomed_20230426.txt'
+    thesaurus_location = '/home/msiepel/snomed_20230426.txt'
     thesaurus = pd.read_csv(thesaurus_location, sep='|', encoding='latin-1')
 
     # Function to get word from code
     def get_word_from_code(code):
-        if code == '[c-sep]':
+        if code == '[C-SEP]':
             return code
         else:
             word = thesaurus[(thesaurus['DEPALCE'].str.lower() == code.lower()) & (thesaurus['DESTACE'] == 'V')]['DETEROM'].values
@@ -438,6 +443,18 @@ def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test
         print('-'*100)
 
 def wandb_log_metrics(epoch, avg_train_loss, eval_metrics, test_metrics):
+    # Compute average evaluation metrics
+    avg_eval_loss = (eval_metrics["loss_shortest"] + eval_metrics["loss_short"] + eval_metrics["loss_average"] + eval_metrics["loss_long"] + eval_metrics["loss_longest"]) / 5
+    avg_eval_bleu = (eval_metrics["bleu_shortest"] + eval_metrics["bleu_short"] + eval_metrics["bleu_average"] + eval_metrics["bleu_long"] + eval_metrics["bleu_longest"]) / 5
+    avg_eval_rouge = (eval_metrics["average_rouge_shortest"] + eval_metrics["average_rouge_short"] + eval_metrics["average_rouge_average"] + eval_metrics["average_rouge_long"] + eval_metrics["average_rouge_longest"]) / 5
+    avg_eval_f1_bleu_rouge = (eval_metrics["bleu_rouge_f1_shortest"] + eval_metrics["bleu_rouge_f1_short"] + eval_metrics["bleu_rouge_f1_average"] + eval_metrics["bleu_rouge_f1_long"] + eval_metrics["bleu_rouge_f1_longest"]) / 5
+    
+    # Compute average test metrics
+    avg_test_loss = (test_metrics["loss_shortest"] + test_metrics["loss_short"] + test_metrics["loss_average"] + test_metrics["loss_long"] + test_metrics["loss_longest"]) / 5
+    avg_test_bleu = (test_metrics["bleu_shortest"] + test_metrics["bleu_short"] + test_metrics["bleu_average"] + test_metrics["bleu_long"] + test_metrics["bleu_longest"]) / 5
+    avg_test_rouge = (test_metrics["average_rouge_shortest"] + test_metrics["average_rouge_short"] + test_metrics["average_rouge_average"] + test_metrics["average_rouge_long"] + test_metrics["average_rouge_longest"]) / 5
+    avg_test_f1_bleu_rouge = (test_metrics["bleu_rouge_f1_shortest"] + test_metrics["bleu_rouge_f1_short"] + test_metrics["bleu_rouge_f1_average"] + test_metrics["bleu_rouge_f1_long"] + test_metrics["bleu_rouge_f1_longest"]) / 5
+
     wandb.log({
                 "epoch/epoch": epoch,
                 "training/train_loss": avg_train_loss,
@@ -481,6 +498,14 @@ def wandb_log_metrics(epoch, avg_train_loss, eval_metrics, test_metrics):
                 "average/test_F1-Bleu-Rouge_average": test_metrics["bleu_rouge_f1_average"],
                 "long/test_F1-Bleu-Rouge_long": test_metrics["bleu_rouge_f1_long"],
                 "longest/test_F1-Bleu-Rouge_longest": test_metrics["bleu_rouge_f1_longest"],
+                "evaluation/avg_loss": avg_eval_loss,
+                "evaluation/avg_bleu": avg_eval_bleu,
+                "evaluation/avg_rouge": avg_eval_rouge,
+                "evaluation/avg_f1_bleu_rouge": avg_eval_f1_bleu_rouge,
+                "test/avg_loss": avg_test_loss,
+                "test/avg_bleu": avg_test_bleu,
+                "test/avg_rouge": avg_test_rouge,
+                "test/avg_f1_bleu_rouge": avg_test_f1_bleu_rouge,
             })
 
 def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, test_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler):

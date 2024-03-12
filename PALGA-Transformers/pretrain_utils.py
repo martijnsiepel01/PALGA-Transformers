@@ -30,11 +30,10 @@ def preprocess_function(examples, tokenizer, max_length_sentence, task):
     return model_inputs
 
 def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence, task):
-    # Specify paths for train, validation, and test datasets
     data_files = {
         "train": f"PALGA-Transformers/data/all/{data_set}_train.tsv",
-        # "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_validation.tsv",
-        # "test": f"PALGA-Transformers/data/{data_set}/{data_set}_test.tsv"
+        "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_validation.tsv",
+        "test": f"PALGA-Transformers/data/{data_set}/{data_set}_test.tsv"
     }
 
     # Load the dataset
