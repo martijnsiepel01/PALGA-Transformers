@@ -5,6 +5,8 @@ from accelerate import Accelerator
 import wandb
 from tqdm import tqdm
 import torch
+import math
+
 
 
 def load_model(tokenizer):
@@ -31,9 +33,9 @@ def preprocess_function(examples, tokenizer, max_length_sentence, task):
 
 def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence, task):
     data_files = {
-        "train": f"PALGA-Transformers/data/all/{data_set}_train.tsv",
-        "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_validation.tsv",
-        "test": f"PALGA-Transformers/data/{data_set}/{data_set}_test.tsv"
+        "train": f"PALGA-Transformers/data/{data_set}/{data_set}_{task}_train.tsv",
+        "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_{task}_validation.tsv",
+        "test": f"PALGA-Transformers/data/{data_set}/{data_set}_{task}_test.tsv"
     }
 
     # Load the dataset
@@ -57,13 +59,13 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence, task):
     tokenized_datasets[split].set_format("torch")
 
     # Optionally select a subset of the data for each split
-    train_dataset = tokenized_datasets["train"].select(range(5))
-    val_dataset = tokenized_datasets["train"].select(range(5))
-    test_dataset = tokenized_datasets["train"].select(range(5))
+    # train_dataset = tokenized_datasets["train"].select(range(int(len(tokenized_datasets["train"]) * 0.20)))
+    # val_dataset = tokenized_datasets["validation"].select(range(int(len(tokenized_datasets["validation"]) * 0.20)))
+    # test_dataset = tokenized_datasets["test"].select(range(int(len(tokenized_datasets["test"]) * 0.20)))
 
-    # train_dataset = tokenized_datasets["train"]
-    # val_dataset = tokenized_datasets["validation"]
-    # test_dataset = tokenized_datasets["test"]
+    train_dataset = tokenized_datasets["train"]
+    val_dataset = tokenized_datasets["validation"]
+    test_dataset = tokenized_datasets["test"]
 
     return train_dataset, val_dataset, test_dataset
 
@@ -76,12 +78,46 @@ def prepare_training_objects(learning_rate, model, train_dataloader, eval_datalo
     )
     return optimizer, accelerator, model, optimizer, train_dataloader, eval_dataloader, test_dataloader
 
+def prepare_dataloaders_pretrain(train_dataset, val_dataset, test_dataset, data_collator, train_batch_size, validation_batch_size):
+    train_dataloader = DataLoader(
+        train_dataset,
+        shuffle=True,
+        collate_fn=data_collator,
+        batch_size=train_batch_size,
+    )
+    
+    eval_dataloader = DataLoader(
+        val_dataset,
+        shuffle=True,
+        collate_fn=data_collator,
+        batch_size=train_batch_size,
+    )
+    
+    test_dataloader = DataLoader(
+        test_dataset,
+        shuffle=True,
+        collate_fn=data_collator,
+        batch_size=train_batch_size,
+    )
+    
+    return train_dataloader, eval_dataloader, test_dataloader
 
-def train_step(model, dataloader, optimizer, accelerator):
+# Define the learning rate scheduler
+def inverse_square_root_schedule(optimizer, step, warmup_steps=1e4, init_lr=0.01):
+    step = max(step, warmup_steps)
+    lr = init_lr / math.sqrt(step)
+    for param_group in optimizer.param_groups:
+        param_group['lr'] = lr
+
+# Modify the train_step function to include the learning rate scheduler
+def train_step(model, dataloader, optimizer, accelerator, current_step, warmup_steps=1e4, init_lr=0.01):
     model.train()
     total_train_loss = 0.0
 
     for batch in tqdm(dataloader, desc="Training"):
+        # Update the learning rate
+        # inverse_square_root_schedule(optimizer, current_step, warmup_steps, init_lr)
+        
         outputs = model(**batch)
         loss = outputs.loss
         optimizer.zero_grad()
@@ -89,6 +125,7 @@ def train_step(model, dataloader, optimizer, accelerator):
         optimizer.step()
 
         total_train_loss += loss.item()
+        current_step += 1  # Increment the step count
 
     avg_train_loss = total_train_loss / len(dataloader)
     train_perplexity = torch.exp(torch.tensor(avg_train_loss))  # Calculate train perplexity
@@ -98,7 +135,8 @@ def train_step(model, dataloader, optimizer, accelerator):
             "perplexity": train_perplexity.item()  # Convert to Python float for logging or printing
         }
     
-    return train_metrics  # Return as a Python float
+    return train_metrics, current_step  # Return train metrics and the updated step count
+
 
 
 def validation_step(model, dataloader):
@@ -138,9 +176,9 @@ def train_model(model, optimizer, accelerator, train_dataloader, eval_dataloader
     lowest_loss = float("inf")
     early_stopping_counter = 0
     best_model_state_dict = None
-
+    current_step = 0
     for epoch in range(num_train_epochs):
-        train_metrics = train_step(model, train_dataloader, optimizer, accelerator)
+        train_metrics, current_step = train_step(model, train_dataloader, optimizer, accelerator, current_step)
         eval_metrics = validation_step(model, eval_dataloader)
 
         # Log metrics to WandB
