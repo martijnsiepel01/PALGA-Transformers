@@ -48,11 +48,11 @@ if __name__ == "__main__":
 
     # Define the command-line arguments
     parser.add_argument("--num_train_epochs", type=int, default=15, help="Number of training epochs")
-    parser.add_argument("--max_generate_length", type=int, default=32, help="Max length for generation")
+    parser.add_argument("--max_generate_length", type=int, default=128, help="Max length for generation")
     parser.add_argument("--train_batch_size", type=int, default=8, help="Training batch size")
     parser.add_argument("--validation_batch_size", type=int, default=4, help="Validation batch size")
     parser.add_argument("--learning_rate", type=float, default=1e-4, help="Learning rate")
-    parser.add_argument("--max_length_sentence", type=int, default=512, help="Max length of sentence")
+    parser.add_argument("--max_length_sentence", type=int, default=2048, help="Max length of sentence")
     parser.add_argument("--data_set", type=str, default='all', help="Dataset name")
     parser.add_argument("--local_tokenizer_path", type=str, default='google/mT5-small', help="Local tokenizer path")
     parser.add_argument("--local_model_path", type=str, default='PALGA-Transformers/models/mT5-small', help="Local model path")

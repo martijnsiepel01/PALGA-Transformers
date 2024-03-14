@@ -7,10 +7,9 @@ from transformers import AutoModelForSeq2SeqLM, AdamW, Adafactor
 import evaluate
 from accelerate import Accelerator
 from datasets import concatenate_datasets
+import random
 
-
-
-
+experiment_id = str(random.randint(1, 1000000))
 
 def preprocess_function(examples, tokenizer, max_length_sentence):
     inputs = [ex.lower() for ex in examples["Conclusie"]]
@@ -267,8 +266,8 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length):
 
     # Iterate through each eval dataloader
     for dataloader, name in zip(eval_dataloaders, dataloader_names):
-        metric = evaluate.load("sacrebleu")
-        rouge = evaluate.load('rouge')
+        metric = evaluate.load("sacrebleu", experiment_id=experiment_id)
+        rouge = evaluate.load('rouge', experiment_id=experiment_id)
 
         model.eval()
         total_eval_loss = 0.0
@@ -284,7 +283,7 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length):
                     diversity_penalty=0.3,
                     num_beams=6,
                     num_beam_groups=2,
-                    no_repeat_ngram_size = 4
+                    # no_repeat_ngram_size = 4
                 )
 
             labels = batch["labels"]
@@ -326,12 +325,6 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length):
 
     return all_eval_metrics
 
-
-from tqdm import tqdm
-import torch
-import evaluate
-import pandas as pd  # Make sure you have pandas for your printing function later
-
 def test_step(model, test_dataloaders, tokenizer, max_generate_length):
     dataloader_names = ["shortest", "short", "average", "long", "longest"]
     all_test_metrics = {}
@@ -344,8 +337,8 @@ def test_step(model, test_dataloaders, tokenizer, max_generate_length):
         raise ValueError("There must be exactly 5 test dataloaders.")
 
     for dataloader, name in zip(test_dataloaders, dataloader_names):
-        metric = evaluate.load("sacrebleu")
-        rouge = evaluate.load('rouge')
+        metric = evaluate.load("sacrebleu", experiment_id=experiment_id)
+        rouge = evaluate.load('rouge', experiment_id=experiment_id)
 
         model.eval()
         total_loss = 0
@@ -364,7 +357,7 @@ def test_step(model, test_dataloaders, tokenizer, max_generate_length):
                     diversity_penalty=0.3,
                     num_beams=6,
                     num_beam_groups=2,
-                    no_repeat_ngram_size = 4
+                    # no_repeat_ngram_size = 4
                 )
                 loss = model(**batch).loss
                 total_loss += loss.item()
@@ -420,8 +413,8 @@ def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test
 
     # Function to get word from code
     def get_word_from_code(code):
-        if code == '[C-SEP]':
-            return code
+        if code == '[C-SEP]' or code == '[c-sep]':
+            return '[C-SEP]'
         else:
             word = thesaurus[(thesaurus['DEPALCE'].str.lower() == code.lower()) & (thesaurus['DESTACE'] == 'V')]['DETEROM'].values
             return word[0] if len(word) > 0 else 'Unknown'
