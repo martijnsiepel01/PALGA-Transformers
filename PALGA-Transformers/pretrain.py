@@ -47,8 +47,8 @@ if __name__ == "__main__":
     # Define command-line arguments
     parser.add_argument("--num_train_epochs", type=int, default=5, help="Number of training epochs")
     parser.add_argument("--max_length_sentence", type=int, default=512, help="Max length of sentence")
-    parser.add_argument("--train_batch_size", type=int, default=4, help="Training batch size")
-    parser.add_argument("--validation_batch_size", type=int, default=2, help="Validation batch size")
+    parser.add_argument("--train_batch_size", type=int, default=32, help="Training batch size")
+    parser.add_argument("--validation_batch_size", type=int, default=16, help="Validation batch size")
     parser.add_argument("--learning_rate", type=float, default=1e-4, help="Learning rate")
     parser.add_argument("--data_set", type=str, default='pretrain', help="Dataset name")
     parser.add_argument("--comment", type=str, default='test', help="Comment for the current run")

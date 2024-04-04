@@ -3,7 +3,8 @@ from shared_utils import *
 import argparse
 
 def main(num_train_epochs, max_generate_length, train_batch_size, validation_batch_size, learning_rate,
-         max_length_sentence, data_set, local_tokenizer_path, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy, optimizer_type):
+         max_length_sentence, data_set, local_tokenizer_path, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy, optimizer_type
+         , dropout_rate):
     
     # Generate config and run name
     config, run_name = generate_config_and_run_name(
@@ -28,7 +29,7 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
         test_datasets = prepare_test_dataset(tokenizer, max_length_sentence)
     
     # Setup model and tokenizer
-    model = setup_model(tokenizer, freeze_all_but_x_layers, local_model_path)
+    model = setup_model(tokenizer, freeze_all_but_x_layers, local_model_path, dropout_rate)
     
     # Prepare datacollator and dataloaders
     data_collator = prepare_datacollator(tokenizer, model)
@@ -61,10 +62,11 @@ if __name__ == "__main__":
     parser.add_argument("--freeze_all_but_x_layers", type=int, default=0, help="Number of layers NOT to freeze")
     parser.add_argument("--lr_strategy", type=str, default='AdamW', help="AdamW or ST-LR")
     parser.add_argument("--optimizer_type", type=str, default='AdamW', help="Optimizer type")
+    parser.add_argument("--dropout_rate", type=float, default=0.1, help="Dropout rate")
 
     args = parser.parse_args()
 
     # Call main function with the parsed arguments
     main(args.num_train_epochs, args.max_generate_length, args.train_batch_size, args.validation_batch_size,
          args.learning_rate, args.max_length_sentence, args.data_set, args.local_tokenizer_path, args.local_model_path, 
-         args.comment, args.patience, args.freeze_all_but_x_layers, args.lr_strategy, args.optimizer_type)
+         args.comment, args.patience, args.freeze_all_but_x_layers, args.lr_strategy, args.optimizer_type, args.dropout_rate)

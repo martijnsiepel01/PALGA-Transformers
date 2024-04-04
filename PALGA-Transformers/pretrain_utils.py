@@ -59,9 +59,9 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence, task):
     tokenized_datasets[split].set_format("torch")
 
     # Optionally select a subset of the data for each split
-    # train_dataset = tokenized_datasets["train"].select(range(int(len(tokenized_datasets["train"]) * 0.20)))
-    # val_dataset = tokenized_datasets["validation"].select(range(int(len(tokenized_datasets["validation"]) * 0.20)))
-    # test_dataset = tokenized_datasets["test"].select(range(int(len(tokenized_datasets["test"]) * 0.20)))
+    # train_dataset = tokenized_datasets["train"].select(range(int(len(tokenized_datasets["train"]) * 0.05)))
+    # val_dataset = tokenized_datasets["validation"].select(range(int(len(tokenized_datasets["validation"]) * 0.05)))
+    # test_dataset = tokenized_datasets["test"].select(range(int(len(tokenized_datasets["test"]) * 0.05)))
 
     train_dataset = tokenized_datasets["train"]
     val_dataset = tokenized_datasets["validation"]
@@ -125,7 +125,7 @@ def train_step(model, dataloader, optimizer, accelerator, current_step, warmup_s
         optimizer.step()
 
         total_train_loss += loss.item()
-        current_step += 1  # Increment the step count
+        # current_step += 1  # Increment the step count
 
     avg_train_loss = total_train_loss / len(dataloader)
     train_perplexity = torch.exp(torch.tensor(avg_train_loss))  # Calculate train perplexity

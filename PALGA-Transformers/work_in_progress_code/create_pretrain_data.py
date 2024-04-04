@@ -33,7 +33,7 @@ def span_corruption(sentence, mean_span_length=3, mask_rate=0.15, seed=None, sta
         random.seed(seed)
 
     words = sentence.split()
-    num_words = len(words)
+    num_words = len(words)  
     spans = []
     target_spans = []
     i = 0
