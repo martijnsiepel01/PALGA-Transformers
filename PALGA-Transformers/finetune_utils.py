@@ -107,7 +107,7 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
     return train_dataset, val_datasets
 
 def prepare_test_dataset(tokenizer, max_length_sentence):
-    test_data_location = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
+    test_data_location = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
     dataset = load_dataset("csv", data_files={"test": test_data_location}, delimiter="\t")['test']
     
     dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
@@ -177,13 +177,16 @@ def freeze_layers(model, freeze_all_but_x_layers):
 
 
 
-def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path='PALGA-Transformers/models/flan-t5-small', dropout_rate=0.1, rank=4, lora_alpha=32, lora_dropout=0.01):
-    config = AutoConfig.from_pretrained(local_model_path, local_files_only=True)
+def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path='PALGA-Transformers/models/flan-t5-small', dropout_rate=0.1, rank=16, lora_alpha=32, lora_dropout=0.01):
+    # config = AutoConfig.from_pretrained(local_model_path, local_files_only=True)
+    config = AutoConfig.from_pretrained(local_model_path)
 
     if dropout_rate is not None:
         config.dropout_rate = dropout_rate
     
-    model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config, local_files_only=True)
+    # model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config, local_files_only=True)
+    model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config, load_in_8bit=True)
+    print(f"Model footprint: {model.get_memory_footprint()}")
 
     model.resize_token_embeddings(len(tokenizer))
     
@@ -264,13 +267,13 @@ def prepare_training_objects(learning_rate, model, train_dataloader, eval_datalo
     return optimizer, accelerator, model, train_dataloader, eval_dataloaders, test_dataloaders, scheduler
 
 
-df = pd.read_csv('/home/msiepel/snomed_20230426.txt', delimiter='|', encoding='latin')
+df = pd.read_csv('/home/gburger01/snomed_20230426.txt', delimiter='|', encoding='latin')
 unique_codes = df[df["DESTACE"] == "V"]["DEPALCE"].str.lower().unique().tolist()
 
 # Initialize an empty set to store the first tokens or token IDs
 first_tokens_set = set()
 
-tokenizer = load_tokenizer('/home/msiepel/PALGA-Transformers/PALGA-Transformers/T5_small_32128_with_codes_csep_normal_token')
+tokenizer = load_tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/T5_small_32128_with_codes_csep_normal_token')
 
 for word in unique_codes:
     # Tokenize the word
@@ -556,7 +559,7 @@ def test_step(model, test_dataloaders, tokenizer, max_generate_length):
 def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input):
     print("Predictions on Validation Data in the Last Epoch:")
     # Load the thesaurus
-    thesaurus_location = '/home/msiepel/snomed_20230426.txt'
+    thesaurus_location = '/home/gburger01/snomed_20230426.txt'
     thesaurus = pd.read_csv(thesaurus_location, sep='|', encoding='latin-1')
 
     # Function to get word from code
