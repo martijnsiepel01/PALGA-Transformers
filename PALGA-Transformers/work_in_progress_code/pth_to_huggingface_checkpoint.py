@@ -9,13 +9,14 @@ from transformers import AutoModelForSeq2SeqLM, T5Config, MT5Tokenizer, T5Tokeni
 
 # model = MT5ForConditionalGeneration(config=config)
 # tokenizer = AutoTokenizer.from_pretrained("/home/msiepel/PALGA-Transformers/PALGA-Transformers/T5_small_32128_with_codes_csep_normal_token")
-tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")
+tokenizer = AutoTokenizer.from_pretrained("/home/gburger01/PALGA-Transformers/PALGA-Transformers/T5_small_32128_pretrain_with_codes")
+print(len(tokenizer))
 
-config = MT5Config(decoder_start_token_id=tokenizer.pad_token_id) 
-model = MT5ForConditionalGeneration(config)
+config = T5Config(decoder_start_token_id=tokenizer.pad_token_id) 
+model = T5ForConditionalGeneration(config)
 model.resize_token_embeddings(len(tokenizer))
 
 # Load the weights
-model.load_state_dict(torch.load("/home/msiepel/PALGA-Transformers/PALGA-Transformers/models/trained_models/num_train_epochs15_data_sethisto_commentbaseline_mT5_small.pth"))
+model.load_state_dict(torch.load("/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/pretrained_models/num_train_epochs50_data_setpretrain_commentpretrain_100_percent_custom_tokenizer_with_full_codes_taskspan_corruption.pth"))
 
-model.save_pretrained("/home/msiepel/PALGA-Transformers/PALGA-Transformers/models/mT5_small_baseline_checkpoint")
+model.save_pretrained("/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/T5-small_v2")

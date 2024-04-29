@@ -18,7 +18,7 @@ def preprocess_sentence(sentence):
     return sentence
 
 # Specify the path to your TSV file
-tsv_file = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv'
+tsv_file = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/combined_gold_standard_with_codes.tsv'
 
 # Read the TSV file into a DataFrame
 df = pd.read_csv(tsv_file, sep='\t')
@@ -33,7 +33,7 @@ filename = os.path.basename(tsv_file)
 processed_tsv_file = os.path.join(directory, f"{filename}")
 
 # Write the processed DataFrame to the new TSV file
-df.to_csv(processed_tsv_file, sep='\t', index=False)
+df.to_csv(tsv_file, sep='\t', index=False)
 print("done")
 
 # def print_non_az_characters(tsv_file):

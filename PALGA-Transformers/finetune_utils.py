@@ -24,13 +24,25 @@ def preprocess_function(examples, tokenizer, max_length_sentence):
     return model_inputs
 
 def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
-    # Load the datasets
+    # Function to convert all string columns to lowercase
+    def make_lowercase(example):
+        for key, value in example.items():
+            if isinstance(value, str):
+                example[key] = value.lower()
+        return example
+    
     data_files = {
         "train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv",
         "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv",
         "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"
+        # "train": f"/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_train_short.tsv",
+        # "test": f"/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_test_short.tsv",
+        # "validation": f"/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_validation_short.tsv"
     }
     dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
+    print(len(dataset['train']))
+    dataset = dataset.map(make_lowercase)
+
 
     # Concatenate additional datasets if 'all' is specified
     if data_set == "all":
@@ -42,6 +54,8 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
             "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"
         }
         dataset2 = load_dataset("csv", data_files=data_files2, delimiter="\t")
+        print(len(dataset2['train']))
+        dataset2 = dataset2.map(make_lowercase)
         dataset2 = dataset2.map(lambda example: {'Type': 'T', **example})
         
         # Load and concatenate third dataset
@@ -52,6 +66,8 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
             "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"
         }
         dataset3 = load_dataset("csv", data_files=data_files3, delimiter="\t")
+        print(len(dataset3['train']))
+        dataset3 = dataset3.map(make_lowercase)
         dataset3 = dataset3.map(lambda example: {'Type': 'S', **example})
 
         # Concatenate the datasets
@@ -61,20 +77,21 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
             "validation": concatenate_datasets([dataset["validation"], dataset2["validation"], dataset3["validation"]])
         }
 
-    # # Function to sample n_samples for each type from the dataset
-    # def sample_by_type(dataset, n_samples):
-    #     sampled = []
-    #     for type_value in ['C', 'T', 'S']:
-    #         filtered = dataset.filter(lambda example: example['Type'] == type_value)
-    #         sampled.append(filtered.shuffle().select(range(min(n_samples, len(filtered)))))
-    #     return concatenate_datasets(sampled)
+        # # Function to sample n_samples for each type from the dataset
+        # def sample_by_type(dataset, n_samples, double_sample = 0):
+        #     sampled = []
+        #     for type_value in ['C', 'T', 'S']:
+        #         if type_value == 'T' and double_sample == 1:
+        #             n_samples = n_samples * 2
+        #         filtered = dataset.filter(lambda example: example['Type'] == type_value)
+        #         sampled.append(filtered.shuffle().select(range(min(n_samples, len(filtered)))))
+        #     return concatenate_datasets(sampled)
 
-    # # Sampling datasets to contain specified number of rows for each Type
-    # dataset["train"] = sample_by_type(dataset["train"], 40000)
-    # dataset["test"] = sample_by_type(dataset["test"], 5000)
-    # dataset["validation"] = sample_by_type(dataset["validation"], 5000)
+        # # Sampling datasets to contain specified number of rows for each Type
+        # dataset["train"] = sample_by_type(dataset["train"], 40000, 1)
+        # dataset["test"] = sample_by_type(dataset["test"], 5000)
+        # dataset["validation"] = sample_by_type(dataset["validation"], 5000)
 
-    # print(dataset)
 
     # Filter rows where 'Codes' or 'Conclusie' is not null or empty, and preprocess
     for split in dataset.keys():
@@ -87,10 +104,12 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
         # dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes", "Type"])
         dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes"])
 
-    print(dataset)
-
     # Sort the validation dataset by 'length' for histogram-based splitting
     val_dataset = dataset['validation'].sort("length")
+
+    print(len(dataset['train']))
+    print(len(dataset['validation']))
+    print(len(dataset['test']))
 
     # Split the validation dataset into 5 parts
     total_length = len(val_dataset)
@@ -184,32 +203,33 @@ def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path='PALGA-Tran
     if dropout_rate is not None:
         config.dropout_rate = dropout_rate
     
-    # model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config, local_files_only=True)
-    model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config, load_in_8bit=True)
+    # model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config, local_files_only=True, load_in_8bit=True)
+    model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config)
     print(f"Model footprint: {model.get_memory_footprint()}")
-
+    print(torch.cuda.device_count())
     model.resize_token_embeddings(len(tokenizer))
     
-    # LoRA Configuration
-    lora_config = LoraConfig(
-        task_type='seq2seq_lm',  # Specify the task type if required; here, 'seq2seq_lm' for sequence-to-sequence language modeling
-        r=rank,  # Rank of the update matrices
-        lora_alpha=lora_alpha,  # LoRA scaling factor
-        lora_dropout=lora_dropout,  # Dropout rate for LoRA layers
-        target_modules=["k","q","v","o"],    
-        )
+    # # LoRA Configuration
+    # lora_config = LoraConfig(
+    #     task_type='seq2seq_lm',  # Specify the task type if required; here, 'seq2seq_lm' for sequence-to-sequence language modeling
+    #     r=rank,  # Rank of the update matrices
+    #     lora_alpha=lora_alpha,  # LoRA scaling factor
+    #     lora_dropout=lora_dropout,  # Dropout rate for LoRA layers
+    #     target_modules=["k","q","v","o"],    
+    #     # target_modules=["q", "v"],
+    #     )
     
-    # Apply LoRA Configuration to the model
-    model = get_peft_model(model, lora_config)
+    # # Apply LoRA Configuration to the model
+    # model = get_peft_model(model, lora_config)
 
-    print(model.print_trainable_parameters())
+    # print(model.print_trainable_parameters())
     
     if freeze_all_but_x_layers > 0:
         # Assuming a utility function `freeze_layers` exists to freeze parameters
         # This would need to be adapted based on how you want to freeze layers
         model = freeze_layers(model, freeze_all_but_x_layers)
     
-    return model, tokenizer
+    return model
 
 
 def slanted_triangular_learning_rate(step, total_steps, lr_start, lr_max, cut_frac, ratio):
@@ -223,9 +243,10 @@ def slanted_triangular_learning_rate(step, total_steps, lr_start, lr_max, cut_fr
 
 def prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloaders, test_dataloaders, lr_strategy, total_steps, optimizer_type='adamw'):
     # Select optimizer based on optimizer_type
-    model = model[0]
+    # model = model[0]
     if optimizer_type.lower() == 'adamw':
-        optimizer = AdamW(model.base_model.model.parameters(), lr=learning_rate)
+        # optimizer = AdamW(model.base_model.model.parameters(), lr=learning_rate)
+        optimizer = AdamW(model.parameters(), lr=learning_rate)
     elif optimizer_type.lower() == 'adafactor':
         optimizer = Adafactor(
             model.parameters(),
@@ -273,18 +294,18 @@ unique_codes = df[df["DESTACE"] == "V"]["DEPALCE"].str.lower().unique().tolist()
 # Initialize an empty set to store the first tokens or token IDs
 first_tokens_set = set()
 
-tokenizer = load_tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/T5_small_32128_with_codes_csep_normal_token')
+# tokenizer = load_tokenizer('/home/gburger01/PALGA-Transformers/PALGA-Transformers/T5_small_32128_with_codes_csep_normal_token')
 
-for word in unique_codes:
-    # Tokenize the word
-    tokens = tokenizer.tokenize(word)
-    # Ensure the word was tokenized and has at least one token
-    if tokens:
-        # Extract the first token
-        first_token = tokens[0]
-        first_token_id = tokenizer.convert_tokens_to_ids(first_token)
-        # Add the first token or token ID to the set
-        first_tokens_set.add(first_token_id)  # or first_token_id if using token IDs
+# for word in unique_codes:
+#     # Tokenize the word
+#     tokens = tokenizer.tokenize(word)
+#     # Ensure the word was tokenized and has at least one token
+#     if tokens:
+#         # Extract the first token
+#         first_token = tokens[0]
+#         first_token_id = tokenizer.convert_tokens_to_ids(first_token)
+#         # Add the first token or token ID to the set
+#         first_tokens_set.add(first_token_id)  # or first_token_id if using token IDs
 
 
 # def prefix_allowed_tokens_fn(batch_id, sent):
@@ -330,6 +351,21 @@ for word in unique_codes:
 #     valid_token_ids.update(first_tokens_set)
 #     return list(valid_token_ids)
 
+thesaurus_location = '/home/gburger01/snomed_20230426.txt'
+thesaurus = pd.read_csv(thesaurus_location, sep='|', encoding='latin-1')
+
+# Function to get word from code
+def get_word_from_code(code):
+    if code == '[C-SEP]' or code == '[c-sep]':
+        return '[C-SEP]'
+    else:
+        word = thesaurus[(thesaurus['DEPALCE'].str.lower() == code.lower()) & (thesaurus['DESTACE'] == 'V')]['DETEROM'].values
+        return word[0] if len(word) > 0 else 'Unknown'
+    
+def custom_decode(tokenizer, token_ids):
+    tokens = [tokenizer.decode([tid], skip_special_tokens=True) for tid in token_ids]
+    decoded_string = ' '.join(tokens).replace(' </s>', '').replace('  c  s e p ', "[C-SEP]").strip()
+    return decoded_string
 
 def train_step(model, dataloader, optimizer, accelerator, scheduler, tokenizer):
     model.train()
@@ -385,7 +421,7 @@ def count_c_sep(tokens, tokenizer):
     # Adjust to handle a batch of sequences and return a list of counts
     counts = []
     for sequence in tokens:
-        token_list = tokenizer.decode(sequence, skip_special_tokens=True).split()
+        token_list = custom_decode(tokenizer, sequence).split()
         counts.append(sum(1 for token in token_list if 'c-sep' in token))
     return counts
 
@@ -396,7 +432,6 @@ def calculate_reweight_factor(input_count, output_count):
         reweight_factor = (1 + diff)  # Adjust formula as needed
         return reweight_factor
     return 1
-
 
 
 def validation_step(model, eval_dataloaders, tokenizer, max_generate_length):
@@ -431,6 +466,7 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length):
                     diversity_penalty=0.3,
                     num_beams=6,
                     num_beam_groups=2,
+                    no_repeat_ngram_size=3
                 )
                 loss = model(**batch).loss
                 total_loss += loss.item()
@@ -440,15 +476,28 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length):
             filtered_labels = [[token_id for token_id in token if token_id != -100] for token in batch["labels"]]
             
             # Decoding filtered predictions and labels
-            decoded_preds = [tokenizer.decode(pred, skip_special_tokens=True) for pred in filtered_preds]
-            decoded_labels = [tokenizer.decode(label, skip_special_tokens=True) for label in filtered_labels]
+            decoded_preds = [custom_decode(tokenizer, pred) for pred in filtered_preds]
+            decoded_labels = [custom_decode(tokenizer, label) for label in filtered_labels]
 
             all_preds.extend(decoded_preds)
             all_labels.extend(decoded_labels)
 
             # Decoding input sequences for detailed analysis or printing later
             decoded_inputs = tokenizer.batch_decode(batch["input_ids"], skip_special_tokens=True)
+
+            
             decoded_validation_inputs.extend(decoded_inputs)
+
+            # Print decoded examples for this batch
+            print(f"Validation examples from {name}:")
+            for i in range(min(1, len(decoded_preds))):  # Ensure there are enough examples to print
+                pred_words = [get_word_from_code(code) for code in decoded_preds[i].split()]
+                label_words = [get_word_from_code(code) for code in decoded_labels[i].split()]
+
+                print(f"Input: {decoded_inputs[i]}")
+                print(f"Prediction: {pred_words}")
+                print(f"Label: {label_words}")
+                print("----------")
 
         # Compute metrics for each dataloader
         bleu = metric.compute(predictions=all_preds, references=[[label] for label in all_labels])
@@ -559,16 +608,6 @@ def test_step(model, test_dataloaders, tokenizer, max_generate_length):
 def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input):
     print("Predictions on Validation Data in the Last Epoch:")
     # Load the thesaurus
-    thesaurus_location = '/home/gburger01/snomed_20230426.txt'
-    thesaurus = pd.read_csv(thesaurus_location, sep='|', encoding='latin-1')
-
-    # Function to get word from code
-    def get_word_from_code(code):
-        if code == '[C-SEP]' or code == '[c-sep]':
-            return '[C-SEP]'
-        else:
-            word = thesaurus[(thesaurus['DEPALCE'].str.lower() == code.lower()) & (thesaurus['DESTACE'] == 'V')]['DETEROM'].values
-            return word[0] if len(word) > 0 else 'Unknown'
 
     random_indices = random.sample(range(len(decoded_test_input)), 100)
 

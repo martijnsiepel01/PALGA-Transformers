@@ -24,9 +24,8 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
     tokenizer = load_tokenizer(local_tokenizer_path)
 
     # Load datasets
-    if data_set == "autopsies" or data_set == "histo" or "all" in data_set:
-        train_dataset, val_datasets = prepare_datasets_tsv(data_set, tokenizer, max_length_sentence)
-        test_datasets = prepare_test_dataset(tokenizer, max_length_sentence)
+    train_dataset, val_datasets = prepare_datasets_tsv(data_set, tokenizer, max_length_sentence)
+    test_datasets = prepare_test_dataset(tokenizer, max_length_sentence)
     
     # Setup model and tokenizer
     model = setup_model(tokenizer, freeze_all_but_x_layers, local_model_path, dropout_rate)
