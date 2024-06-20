@@ -1,0 +1,3378 @@
+Original::Replacement
+\n\s*\n::. 
+(\w+[hnrlityxemfpcbgs])omen\b::$1oom 
+chordomen::chordoom
+apudomen::apudoom
+(tubulo)?villeuze::$1villeus
+tubulair(e)?::tubulair
+(\w+)cysten\b:: $1 cyste 
+\bcysten\b:: cysten cyste 
+axillair\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier oksel
+bronchia\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier bronchus
+hilair\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier longhilus
+(para(\-)?)?il(e|i)aca\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier iliacaal
+inguina\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier lies
+intrapulmona\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier long
+mediastin\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier mediastinum
+mesenteri\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier mesenterium
+mesocolisch\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier mesocolon
+occipita\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier achterhoofd
+(para(\-)?)?oeso(f|ph)ag\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier oesofagus
+para(\-)?aorta\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier para-aortaal
+parasterna\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier parasternaal
+paratrachea\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier trachea
+retroperitone\\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier retroperitoneum
+subdigastrisch\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier subdigastrisch
+submenta\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier submentaal
+submandibulair\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier kaakhoek
+pelvi(e)?n\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier kleine bekken
+kleine bekken\w*\s+(lymf(e)?)?klier(en)?\b::lymfklier kleine bekken
+verstandskies::gebitselement
+radix\s+mesenterica::mesenterium
+steatosis\s+hepatis::lever steatose
+\bm\.\s*psoas\b:: musculus psoas 
+cardia(al|le):: hart 
+emfysemateu(s|ze)::emfyseem
+\bmds\b:: beenmerg myelodysplastisch syndroom
+\bvsd\b:: ventrikelseptumdefect 
+\bventrikel\s*(voor|zij|achter)?wand\b:: ventrikel hart 
+ouder\s+infarct::oud infarct
+oude(re)?\s+infarcten::oud infarct
+funisitis::navelstreng ontsteking
+copd::chronische obstructieve longziekte
+beeld::
+hoofdzakelijk::
+maligniteitsgraad::
+index::
+enkele::
+oorzaa?k\w*::
+krabben::krabeffect
+para\-?umbilica(al|le)::navel
+xi(ph|f)oid::processus xiphoideus
+\bec\b::
+antrumgastritis::antrum maag ontsteking
+\ban(um|(aal|ale))\b::anus
+\bperianale::perianaal
+(niet\s+specifiek\s+voor)|(geen\s+specifieke\s+(kenmerken\s+(van|(passend|horend)\s+bij|aanwijzingen\s+voor)))::geen 
+aspecifieke::
+(zonder|niet|onvoldoende)[^\.\,\;\w]*specifiek(e)?::
+niet[^\.\,\;\w]*destructieve:: 
+niet[^\.\,\;\w]*actieve:: 
+niet[^\.\,\;\w]*necrotiserend(e)?:: 
+flanker\w*::
+carcinoom\s+in\s+situ::carcinoma in situ
+in\s+situ\s+carcinoom::carcinoma in situ
+(zij|bodem)?sn(ee|ij)vlak(ken)?::snijvlak
+duct(aal)?carcino(om|ma)::ductaal carcino$2
+dun(ne)?darm::dunne darm
+dik(ke)?darm::colon
+pectora(al|le)::thorax
+(geen|zonder)\s+kenmerkend(e)?\s+(bijzonderheid|bijzonderheden|verandering(en)?)::geen afwijking
+in toto::snijvlak vrij
+(geheel|volledig)\s+verwijderd::snijvlak vrij
+cristabeenmerg::crista beenmerg
+cristabiopt::beenmerg crista iliaca biopt
+\-grad::grad
+mesocolisch(e)?::mesocolon
+\bpre\-::pre
+caec::coec
+farynx::pharynx
+eth?mo.d::etmoid
+vrij van::vrij geen
+oestrogeen\w+::oestrogeenreceptorbepaling
+progesteron\w+::progesteronreceptorbepaling
+(schildwacht\w+|sentinel)::sentinel node procedure lymfklier
+linker(\w+)::$1 links
+rechter(\w+)::$1 rechts
+linker\b::links 
+rechter\b::rechts 
+abortuscurett(age|ement)::endometrium curettage abortus
+accuminat(a|um)::acuminat$1
+adenoca(rcinoma)?\b::adenocarcinoom
+adenocarcinoom\s+in\s+situ\b:: adenocarcinoma in situ
+adnexectomie::ovarium ectomie
+afwijkingen::afwijking
+b(y|ij)zonderheden::afwijking
+amputatiepreparaat::amputatie
+anterior\s*resectie::sigmoid resectie
+aspiratiecytologie::aspiratie cytologie
+barrett::oesofagus barrett
+biopsy::biopt
+(boven|onder)rug::rug
+brenner::brennertumor
+cll::chronische lymfatische leukemie
+dcis::ductaal carcinoma in situ
+debulking(slaparotomie)?::excisie
+elektrocon(us|isatie)::exconisatie
+endometriumpipelle::endometrium biopt
+epiploicum::epiploica
+geprikkeld(e)?::prikkeling
+h(a)?emangio(ma|om)::hemangioom
+hemicastratie::testis ectomie
+hemicolectomie::colon ectomie
+hemicolectomiepreparaat::colon ectomie
+(hemi)?orchid?ectomie::testis ectomie
+(hemi)?strumectomie(preparaat)?::schildklier ectomie
+(hemi)?thyr(e)?oidectomie(preparaat)?::schildklier ectomie
+hilus(lymf(e)?)?klier(en)?::lymfklier longhilus
+hoofdcarina::carina
+huidpons::huid stansbiopt
+immuunhistochemisch(e)?::immuunhistochemie
+irradica(al|le)::sneevlak niet vrij
+\bitc\b::micrometastase
+keratoacanthoom::kerato-acanthoom
+klievingsvlak::snijvlak
+kopnecrose::necrose
+lcis::lobulair carcinoma in situ
+l(l)?etz::lisexcisie
+lipoma\b::lipoom 
+lobectomie::long ectomie
+lumpectomie::mamma lumpectomie
+lymfkliertoilet::lymfklier oksel ectomie
+mastopathisch(e)?::mastopathie
+metasta(tisch(e)?|se(n)?)\b::metastase maligne tumor
+myomectomie::ectomie leiomyoom
+n(a)?evi::naevus
+nevus::naevus
+oksel(klier)?(dissectie|toilet)::lymfklier oksel ectomie
+okseltopklier::lymfklier oksel
+ontstoken::ontsteking
+orchidectomie::testis ectomie
+ovariectomie::ovarium ectomie
+parotidectomie::glandula parotis ectomie
+\bpin\b::dysplasie
+pneum(on)?ectomie::long ectomie
+pseudomembraneu(s|ze)::pseudomembraneuze ontsteking
+radica(al|le)\s+verwijder\w+::snijvlak vrij
+recta(al|le)::rectum
+resectierand(en)?::sneevlak
+resectievlak(ken)?::sneevlak
+sana::geen afwijking
+seborrhoicae::seborrhoica
+seminoma::seminoom
+sll::lymfocytair lymfoom
+\bsn\b::schildwachtklier
+sn(ij|ee)rand(en)?::sneevlak
+spermato(c|k)ele::funiculus spermaticus spermatokele
+stemplooi::stemband
+(inter|sub)mammair::borst
+topklier::lymfklier
+transformatiezone::cervix
+transtrachea(al|le)::trachea
+\btur(\-)?::endoresectie
+\bturp\b::prostaat endoresectie 
+vaat\s*ingroei::angioinvasie
+vaat\s*sn(ee|ij)vlak::bloedvat snijvlak
+vain::dysplasie
+veranderingen::verandering
+verruc(ae|eu(s|ze))::verruca
+verwijder(d|ing)::excisie
+\b(u|d)?vin\b::dysplasie
+vulgares::vulgaris
+zijsn(ee|ij)vlak::snijvlak
+zijsn(ee|ij)vlakken::snijvlak
+(zuig|vacuum)curettage::curettage
+vacuumbiopt(en)?::biopt
+(dunne|dikke)\s+darm(\w+)::$1 darm $2
+(\w+)cele::$1kele
+tumor(vrij(e)?|negatie(ve|f))::geen maligniteit
+tumorpositie(ve|f)::metastase maligne tumor
+\b(posi|nega)tieve\b::$1tief
+ascendens::colon ascendens
+transversum::colon transversum
+descendens::colon descendens
+(\w+)meta((\')?s(tase(n)?)?)?\b::$1 metastase maligne tumor
+(b|t)\-cellymfoom::$1-cel lymfoom
+nefro(\-)?ureterectomie::nier ureter ectomie
+ant(i|e)?helix::anthelix
+epigastri(um|o)::epigastrisch
+choledochus::ductus choledochus
+zygoma::jukbeen
+para(\-)?ureth?ra(al|le)::urethra
+tubectomie::tuba fallopii ectomie
+vriescoupe\s+conform::vriescoupe concordant
+conform\s+vriescoupe::vriescoupe concordant
+\bduodeni\b::duodenum
+billroth\s+(i|1)::billroth 1 maagresectie
+billroth\s+(ii|2)::billroth 2 maagresectie
+planocellulair\s+carcinoom::plaveiselcelcarcinoom
+corebiopt(en)?::biopt
+\been\s+van\s+(de\s+)?__number__::__number__1 van __number__
+\bnet\s+(graad\s+)?([1-3])\b:: neuroendocriene tumor graad $2 
+\bnet\s+(graad\s+)?i\b:: neuroendocriene tumor graad 1 
+\bnet\s+(graad\s+)?ii\b:: neuroendocriene tumor graad 2 
+\bnet\s+(graad\s+)?iii\b:: neuroendocriene tumor graad 3 
+\bnec\b:: grootcellig neuroendocrien carcinoom 
+neuro\-endocrie?n::neuroendocrien
+neuroendocrine::neuroendocriene
+\bpolyps\b::polyp
+gastro(\-)?oeso(ph|f)agea(le|al)::oesofagus maag
+skintags?::skin tag
+nefrectomie::nier ectomie
+dlbcl::diffuus grootcellig b-cel lymfoom
+b\s+cel::b-cel
+ovaria::ovarium
+cdle::chronische discoide lupus erythematodes
+\bmohs::mohs resectie
+\bnormale\b::normaal
+\banorectale\b::anorectaal
+\bbilregio\b::bil
+vertex::kruin
+nucha(al|le)::nek
+porokeratose::porokeratosis
+ectopisch(e)?::ectopie
+\bcervicale\s+(lymf)?klier(en)?\b:: lymfklier hals 
+(endo)?cervica(al|le)::cervix
+\bscalp\b::huid behaarde hoofd
+subcuta(an|ne)::subcutis
+pancreat(ic)?o\-?biliair::pancreas extrahepatische galgang intrahepatische galgang
+ileocolisch(e)?::ileum colon
+\bsterni\b::sternum
+intraperiton*::buikholte
+peritonea(al|le)?::peritoneum
+matig(e)?\s+(ge)?diff\w+\b::graad 2
+(weinig|slecht)(e)?\s+(ge)?diff\w+\b::graad 3
+goed(e)?\s+(ge)?diff\w+\b::graad 1
+diff\w+:?\s+goed\b::graad 1
+diff\w+:?\s+matig\b::graad 2
+diff\w+:?\s+(weinig|slecht)\b::graad 3
+z-lijn::oesofagus cardia maag
+colorecta(al|le)::colon rectum
+decollete::borst
+ascendensresectie::colon ascendens resectie
+transversumresectie::colon transversum resectie
+descendensresectie::colon descendens resectie
+intestinaaltype::intestinaal type
+canthus::ooghoek
+malleolus::enkel
+her2(\-)?neu\s*:::her2neu 
+reusceltumor(tje)?\s+(van\s+de\s+)?peesschede::reusceltumor peesschede
+embolisatie(s)?::embolie
+\bcin\s*(\-|\s)\s*i\b::cin-1
+\bcin\s*(\-|\s)\s*ii\b::cin-2
+\bcin\s*(\-|\s)\s*iii\b::cin-3
+\bliezen\b::lies
+ischa?emisch(e)?::ischemie
+glabella::neus voorhoofd
+premaxilla::maxilla
+bullectomie::long bulla ectomie
+pleurectomie::pleura ectomie
+\babortus\b::endometrium abortus
+folliculaire\s+lymfoom::folliculair lymfoom
+grootcellig ca\b::grootcellig carcinoom
+plaveiselcelca\b::plaveiselcelcarcinoom
+\b(niet|zonder|geen|nergens|evenmin)\s+maligne\b::geen maligniteit
+frontoparietaal::voorhoofd parietaal
+\brok\b::onderkwab long rechts
+\brmk\b::middenkwab long rechts
+\brbk\b::bovenkwab long rechts
+\blbk\b::bovenkwab long links
+\blok\b::onderkwab long links
+\bniet\s*\-\s*kleincellig\b::niet kleincellig
+(temporofrontaal|frontotempora(al|le))::voorhoofd slaap
+adenomyosis::adenomyose
+\been\s+enkel\b::type
+sigmo\wd::sigmoid
+nasolabia(al|le)\b::nasolabiaalplooi
+trombus::thrombus
+non(\-|\s+)hodgkin(\s*|(\s+maligne\s+))lymfoom::maligne non hodgkin lymfoom
+niet\s+bekend::onbekend
+niet\s+bekende::onbekende
+cervicale\s+lymfklier::lymfklier hals
+midoeso(f|ph)agea(al|le)::oesofagus
+interscapulair::rug
+pre\-?sacra(al|le)::regio sacralis
+ileostoma::ileum anus praeter
+\b(suspect|onzeker)(e)?\b::verdacht
+\biuvd\b::intra-uteriene vruchtdood
+necrotisch(e)?::necrose
+\b(sub)?scapulaire?:: scapula 
+\bdissectie\b:: resectie 
+\bala\s+nasi\b:: neusvleugel
+\bmyoom:: leiomyoom
+(antrum|corpus|fundus|cardia)biopt(en)?::$1 maag biopt
+basaalcelcarcinoma::basaalcelcarcinoom
+cyst\b::cyste 
+\bmcp\b:: metacarpofalangeaal gewricht 
+maligniteitskenmerk(en)?::maligniteit
+ontstekings(activiteit|kenmerk(en)?)::ontsteking
+\bdetrusor:: muscularis propria van de urineblaas
+punctaat::punctie
+(snij)?randen\s+vrij::snijvlak vrij
+compleet verwijderd::snijvlak vrij
+volledig verwijderd::snijvlak vrij
+geheel verwijderd::snijvlak vrij
+compleet omsneden::snijvlak vrij
+volledig omsneden::snijvlak vrij
+geheel omsneden::snijvlak vrij
+naruke::lymfklier long
+lingula::lingula long
+chronische\s+gastritis::maag chronische ontsteking
+\bcolitis\b:: colon ontsteking 
+\bduodenitis\b:: duodenum ontsteking 
+\bileitis\b:: ileum ontsteking 
+\batherosclerotische?\b:: atherosclerose
+keratoderma::keratodermie
+bilatera(al|le)::beiderzijds
+oorspron(g|kelijke?):: 
+\btemporale:: temporaal
+her\-2/neu::her2neu
+glute((aal|ale)|us)::bil
+shave\-?(biopt|excisie):: shave $1
+(para\-?)umbilica(al|le)::navel
+spitzna?evus::spitz naevus
+mgus::monoclonale gammopathie
+\bitp\b:: idiopathische thrombocytopenische purpura 
+\bperine(al|le)\b:: perineum 
+pubis(\s*regio)\b:: schaamstreek
+\bwekedelen\b:: weke delen 
+geth?romboseerde?:: trombose 
+\bvenous\s+lake\b:: venectasie 
+eosinofiele\s+oeso(f|ph)agitis::oesofagus eosinofiele ontsteking
+\beb?us\b:: endo-echografie 
+\bre\-excisie\b:: reexcisie 
+\bre\-?resectie\b:: reexcisie
+reusceltumor(tje)?\s+van\s+de\s+peesschede::reusceltumor peesschede
+endomyometrium\b::endometrium myometrium 
+sym(f|ph)yse::symfyse schaambeen
+atherosclerotische?::atherosclerose
+\bin\s+(dit\s+(materiaal|weefsel|biopt)|(deze\s+(biopsie|excisie|resectie)))\b:: 
+(\w+)naaldbiopten\b::$1 naaldbiopt 
+purulente?::purulente ontsteking 
+adenomyomatos(e|is)::adenomyomateuze hyperplasie
+pancreatico\-?biliaire?:: pancreas extrahepatische galweg
+\bdens\b:: 
+\bfemoraal\b:: femur 
+mantelcellymfoom::mantelcel lymfoom
+\bsynovitis:: synovium ontsteking
+supraclaviculair(e)?::supraclaviculair 
+(geth?romboseerde?|th?rombose)::trombose
+\btandenrij\b:: 
+lymfoplasmoc(ellul|yt)air\s+lymfoom::lymfoplasmacytair lymfoom
+\bproctitis::rectum ontsteking
+\bproctocolitis::rectum colon ontsteking
+caruncula\s+urethrae::urethra caruncula urethrae
+hydatiden::hydatide
+extra\s*\-?\s*uterie?ne\s+::extra-uteriene 
+; metaplastische?::metaplasie
+sulcus\s+nasi::nasolabiaalplooi
+salpingo\-?o( |o)phorectomie:: tuba fallopii ovarium ectomie
+(decidua(le)?|gedecidualiseerde?)::deciduale verandering
+inverted\s+papillo(om|men)::inverted papilloma
+preauriculaire::preauriculair
+sessiel\s+serrated\s+laesie::sessiel serrated lesie
+(low(\s+|\-)anterior)|(\blar\b)::sigmoid rectum
+(?<!-)\b(c|th|l|s)\d\d?\b:: wervel 
+\-lymfoom:: lymfoom
+uterus\s+myomatosus::uterus leiomyoom
+hairy(\-?|\s*)cell?\s*leu(c|k)a?emi(e|a)::hairycel leukemie
+\bmili\w{1,2}::milium
+adenomateu(s|ze)::dysplasie adenoom
+warty\s+dyskerato(om|men)::warty dyskeratoma
+folliculaire\s+cystitis::urineblaas folliculaire ontsteking
+retrosterna(al|le)::sternum mediastinum
+cirrhose::cirrose
+\bniet\s+((geheel|helemaal|volkomen)\s+)?uit(gesloten|\s+te\s+sluiten)\b:: 
+cellymfoom::cel lymfoom
+microscopie::
+funiculitis::navelstreng ontsteking
+leu(c|k)a?emie::leukemie
+lamina papyracea::ethmoid
+\bniet\s+afwijkend:: geen afwijking 
+\bein\b:: endometrioide intraepitheliale neoplasie 
+huidige?:: 
+(invasieve|infiltratie(f|ve))?\s+carcinoom\s+nst::invasief carcinoom nst
+\bnates\b:: bil 
+columella\s+nasi::neus 
+\baxillaire?\b:: oksel 
+\bpappill?air:: papillair
+\bpapilair:: papillair
+\bbasale\s+cellen\s+carcino(om|men)\b:: basaalcelcarcinoom
+\bsuboculair\b:: onderooglid 
+\bvaatmalformatie\b:: vaatmisvorming 
+\bphiltrum:: bovenlip
+\btcr\-(m|p)\b:: corpus uteri resectie 
+niet(\s+|\-)kleincellige::
+\balk(\s|\-)negatie(f|ve)\b:: alk negatief 
+\bcmmo?l\b:: chronische myelomonocytenleukemie 
+nodulaire?\s+lymfocyten\s+predominante?\s+((m\.?|morbus)\s+)?hodgkin((\s+|\-)?lymfoom)?::hodgkin nodulair lymfocyten predominant
+\bklinische?\s+(verdenking\s+op|verdacht\s+voor)\b:: geen 
+digitus\s+pedis\s+__number__1::grote teen
+digitus\s+pedis\s+__number__2::tweede teen
+digitus\s+pedis\s+__number__3::derde teen
+digitus\s+pedis\s+__number__4::vierde teen
+digitus\s+pedis\s+__number__5::vijfde teen
+digitus\s+manus\s+__number__1::duim
+digitus\s+manus\s+__number__2::wijsvinger
+digitus\s+manus\s+__number__3::middelvinger
+digitus\s+manus\s+__number__4::ringvinger
+digitus\s+manus\s+__number__5::pink
+\bvagina(al|le)\b::vagina
+\btrochanter\b::trochanter femoris
+apex\s+nasi::neuspunt
+\bmilia\b:: milium 
+\baml\b:: acute myeloide leukemie 
+\bcml\b:: chronische myeloide leukemie 
+\bcll\b:: chronische lymfatische leukemie 
+hyperplastische\s+poliepen::hyperplastische poliep
+poliepjes?::poliep
+potters::
+\ba\.n\.f\. centromeer\b:: a.n.f. positief 
+\ba\.n\.f\. cytoplasmatisch\b:: a.n.f. positief 
+\ba\.n\.f\. granulair\b:: a.n.f. positief 
+\ba\.n\.f\. homogeen\b:: a.n.f. positief 
+\ba\.n\.f\. membraneus\b:: a.n.f. positief 
+\ba\.n\.f\. negatief\b:: a.n.f. positief 
+\ba\.n\.f\. nucleolair\b:: a.n.f. positief 
+\ba\.n\.f\. ssa\b:: a.n.f. positief 
+\baangeboren aneurysma\b:: aneurysma 
+\baanvraag onleesbaar\b:: onleesbaar 
+\bablatio retinae\b:: netvliesloslating 
+\babnormale afmeting\b:: afmeting abnormaal 
+\babnormale oorsprong arterie\b:: abnormaal ontspringende arterie 
+\babnormale oorsprong vene\b:: vene met abnormale oorsprong 
+\babnormale verkorting\b:: abnormaal verkort 
+\babnormale verlenging\b:: abnormaal lang 
+\babortus artificialis\b:: abortus provocatus 
+\babortusresten\b:: abortus 
+\babscedering\b:: abces 
+\babsces\b:: abces 
+\babscesmembraan\b:: abces 
+\babscesvorming\b:: abces 
+\babsceswand\b:: abces 
+\babt letterer siwe\b:: letterer siwe 
+\bacanthoma fissuratum\b:: brilmontuur acanthoom 
+\baccesoire borstklier\b:: accessoire borstklier 
+\bachterste papillairspier van de kamer\b:: papillairspier hartventrikel 
+\bacidofiel adenoom\b:: eosinofiel adenoom 
+\bacinaircel tumor\b:: acinaircel carcinoom 
+\bacinic cell tumor\b:: acinaircel carcinoom 
+\bacinuscel tumor\b:: acinaircel carcinoom 
+\bactieve erytropoese\b:: hyperplasie erytropoiese 
+\bactinic reticuloid\b:: actinisch reticuloid 
+\bactinische epidermis\b:: actinische keratose 
+\bacute blastenleukemie\b:: acute ongedifferentieerde leukemie 
+\bacute diffuse ontsteking\b:: diffuse acute ontsteking 
+\bacute etterige ontsteking\b:: acute purulente ontsteking 
+\bacute granulocytaire leukemie\b:: acute myeloide leukemie 
+\bacute granulocytic leukemia\b:: acute myeloide leukemie 
+\bacute hyperaemie\b:: acute stuwing 
+\bacute intermittent porphyria\b:: porphyria cutanea tarda 
+\bacute lymfatische leukemie t\-cel type\b:: t-lymfoblastair lymfoom 
+\bacute myeloide leukemie fab m\-0\b:: acute myeloide leukemie 
+\bacute myeloide leukemie fab m\-1\b:: acute myeloide leukemie zonder uitrijping 
+\bacute myeloide leukemie fab m\-2\b:: acute myeloide leukemie met uitrijping 
+\bacute myeloide leukemie fab m\-3\b:: acute promyelocytenleukemie 
+\bacute myeloide leukemie fab m\-4\b:: acute myelomonocytenleukemie 
+\bacute myeloide leukemie fab m\-5b\b:: acute monoblastenleukemie 
+\bacute myeloide leukemie fab m\-6\b:: acute erytroleukemie 
+\bacute myeloide leukemie fab m\-7\b:: acute megakaryoblastenleukemie 
+\bacute myeloiede leukemie\b:: acute myeloide leukemie 
+\bacute suppuratieve ontsteking\b:: acute purulente ontsteking 
+\bacute vasculaire afstoting\b:: acute vasculaire rejectie 
+\bacuut ontstekingsproces\b:: acute ontsteking 
+\bacuut ulcus pepticum\b:: acute ulcererende ontsteking 
+\badamantinoom lange beenderen\b:: adamantinoom van de lange pijpbeenderen 
+\badamantinoom tibia\b:: adamantinoom van de lange pijpbeenderen 
+\bademhalingswegen\b:: luchtwegen 
+\badenoameloblastoom\b:: adenomatoide odontogene tumor 
+\badenocarcinoma mucinosum\b:: mucineus carcinoom 
+\badenocarcinoma papilliferum\b:: papillair adenocarcinoom 
+\badenocarcinoma sebaceum\b:: talgkliercarcinoom 
+\badenocarcinoom in tubulair adenoom\b:: adenocarcinoom in adenomateuze poliep 
+\badenocarcinoom in tubulovilleus adenoom\b:: adenocarcinoom in adenomateuze poliep 
+\badenocarcinoom in villeus adenoom\b:: adenocarcinoom in adenomateuze poliep 
+\badenocarcinoommetastase\b:: metastase adenocarcinoom 
+\badenofibroma phyllodes\b:: benigne phyllodes tumor 
+\badenoid cystic carcinoma\b:: adenoid cysteus carcinoom 
+\badenomateuse poliep\b:: adenomateuze poliep 
+\badenomateuze en fibromyomateuze hyperplasie\b:: adenofibromyomateuze hyperplasie 
+\badenomateuze prostaathyperplasie\b:: benigne prostaathypertrofie 
+\badenomateuze slijmvliespoliep\b:: adenomateuze poliep 
+\badenomatoid tumor\b:: adenomatoide tumor 
+\badenomatoide metaplasie\b:: glandulaire metaplasie 
+\badenomatoiede tumor\b:: adenomatoide tumor 
+\badenomatosis coli\b:: familiaire adenomateuze polyposis 
+\badenopapillomateus carcinoom\b:: papillair adenocarcinoom 
+\badenopapilloom\b:: papillair adenoom 
+\badenose met fibrose\b:: scleroserende adenose 
+\badenosquamous carcinoma\b:: adenosquameus carcinoom 
+\badenovilleuze poliep\b:: adenomateuze poliep 
+\badhesies\b:: adhesie 
+\badiposis dolorosa\b:: lipomatosis dolorosa 
+\badnex adenoom\b:: benigne huidadnex tumor 
+\badnex carcinoom\b:: huidadnexcarcinoom 
+\badnexen\b:: adnex 
+\bafgietsels\b:: afgietsel 
+\bafsluitingsicterus\b:: stuwingsicterus 
+\bafstoting acuut\b:: acute rejectie 
+\bafwijkende basale membraan\b:: basaalmembraanverandering 
+\bagbm glomerulonefritis\b:: anti g.b.m. glomerulonefritis 
+\baggressieve fibromatose\b:: desmoid type fibromatose 
+\bagressief osteoblastoom\b:: osteoblastoom 
+\bagressive fibromatosis\b:: desmoid type fibromatose 
+\bagyrie\b:: lissencefalie 
+\balcohol hyaline\b:: mallory body 
+\balcoholische hepatitis\b:: hepatitis 
+\balcoholisme\b:: alcohol abusus 
+\balfa een antitrypsine\b:: alfa 1 antitrypsine 
+\balfa een antitrypsine deficientie\b:: alfa 1 antitrypsine deficientie 
+\balk positief grootcellg b\-cel lymfoom\b:: alk positief grootcellig b-cel lymfoom 
+\ballergic reaction\b:: allergie 
+\ballergische granulomateuze angiitis\b:: churg strauss 
+\balloplastiek\b:: allotransplantatie 
+\balveolus dentalis\b:: tandzakje 
+\bamandelkern\b:: amygdala 
+\bamaurotische idiotie infantiel familiair\b:: tay sachs 
+\bamelanotische naevus cellularis\b:: amelanotische naevus 
+\bameloblastic fibroma\b:: ameloblastair fibroom 
+\bameloblastoom maligne\b:: maligne ameloblastoom 
+\bamniotic band\b:: amnionstreng 
+\bamoeba dysenterie\b:: amoebiasis 
+\bamoebedysenterie\b:: amoebiasis 
+\bamyloide degeneratie\b:: amyloidose 
+\banaemia\b:: anemie 
+\banaemisch infarct\b:: ischemisch infarct 
+\banafylactische purpura\b:: henoch schonlein 
+\banaplastisch adenocarcinoom\b:: anaplastisch carcinoom 
+\banemia, macrocytic\b:: macrocytaire anemie 
+\baneurysm, arteriovenous\b:: arterioveneus aneurysma 
+\baneurysma ampullare\b:: aneurysma 
+\baneurysma arteriovenosum\b:: arterioveneus aneurysma 
+\baneurysma atherosclerotica\b:: atherosclerotisch aneurysma 
+\baneurysma atheroscleroticum\b:: atherosclerotisch aneurysma 
+\baneurysma fusiforme\b:: fusiform aneurysma 
+\baneurysma sacculare\b:: sacculair aneurysma 
+\bangiitis allergica\b:: leucocytoclastische vasculitis 
+\bangiitis carcinomatosa\b:: bloedvatinvasie 
+\bangiitis granulomatosa allergica\b:: churg strauss 
+\bangioblastisch meningeoom\b:: angiomateus meningeoom 
+\bangiocentrisch ml t\-cel type\b:: extranodaal nk/t-cel lymfoom 
+\bangiofibroom juveniel\b:: juveniel angiofibroom 
+\bangioma racemosum\b:: arterioveneus hemangioom 
+\bangiomatoid maligne fibreus histiocytoom\b:: angiomatoid fibreus histiocytoom 
+\banti g\.b\.m\. antilichaam\b:: anti g.b.m. antilichamen 
+\banti t\.b\.m\. glomerulonefritis\b:: anti t.b.m. nefritis 
+\banticoagulantia\b:: antistollingsmiddelen 
+\banticonceptiva\b:: anticonceptivum 
+\bantifosfolipid trombose syndroom\b:: antifosfolipiden trombofilie 
+\bantifosfolipiden antilichaam syndroom\b:: antifosfolipiden trombofilie 
+\bantrale metaplasie\b:: gastrische metaplasie 
+\bantrum mastoideum\b:: mastoid 
+\bantrum pyloricum\b:: antrum maag 
+\banus en rectum\b:: anorectaal 
+\baorta thoracalis descendens\b:: aorta thoracalis 
+\baortakleppen\b:: aortaklep 
+\baphthen\b:: afte 
+\bapical granuloma\b:: apicaal granuloom 
+\baplastic anemia\b:: aplastische anemie 
+\bapocrien hidradenoom\b:: hidrocystoom 
+\bapocrien hydradenoom\b:: hidrocystoom 
+\bapocrien hydrocystoom\b:: hidrocystoom 
+\bapocrine cyste\b:: hidrocystoom 
+\bapocrine metaplasie\b:: apocriene metaplasie 
+\bappendices epiploicae\b:: appendix epiploica 
+\bappendicitis sanata\b:: appendix met ontstekingsrest 
+\bappendicitisrest\b:: appendix met ontstekingsrest 
+\bappendiculaire lymffollikel\b:: lymfoid weefsel appendix 
+\bappendix met resten oude ontsteking\b:: appendix met ontstekingsrest 
+\bapudoom\b:: neuroendocriene tumor graad 1 
+\baquaductus sylvii\b:: aquaductus 
+\baquaeductus sylvii\b:: aquaductus 
+\barachnoidale ruimte ruggemerg\b:: arachnoidale ruimte ruggenmerg 
+\barachnoidea cranii\b:: arachnoidea 
+\barachnoidea ruggemerg\b:: arachnoidea ruggenmerg 
+\barcus aortae\b:: aortaboog 
+\bargyrie\b:: argyrosis 
+\baries stella\b:: arias stella fenomeen 
+\barrhenoblastoom\b:: gynandroblastoom 
+\barseenpigmentatie\b:: arseenpigment 
+\barteria cerebralis media\b:: arteria cerebri media 
+\barteria coronaria links ramus descendens anterior\b:: arteria coronaria links ramus descendens 
+\barteria coronaria ramus descendens\b:: ramus descendens posterior rechter coronairarterie 
+\barteria coronaria rechts ramus descendens posterior\b:: ramus descendens posterior rechter coronairarterie 
+\barteria coronaria sinistra ramus descendens\b:: arteria coronaria links ramus descendens 
+\barteria fibularis\b:: arteria peronea 
+\barteria pulmonalis atresie\b:: pulmonalis atresie 
+\barteria thoracalis\b:: arteria mammaria interna 
+\barterie met abnormale oorsprong\b:: abnormaal ontspringende arterie 
+\barterie temporalis\b:: arteria temporalis 
+\barterien\b:: arterie 
+\barteriewand\b:: arterie 
+\barteriola\b:: arteriole 
+\barteriosclerose met lumenvernauwing\b:: arteriosclerose met obstructie 
+\barteriosclerosis generalisata\b:: arteriosclerose 
+\barteriosclerosis obliterans\b:: arteriosclerose met obstructie 
+\barteriosclerotisch getromboseerd aneurysma\b:: getromboseerd aneurysma 
+\barteriovenous malformation\b:: arterioveneuze malformatie 
+\barterosclerosis\b:: atherosclerose 
+\barthritis deformans\b:: artrose 
+\barticular disc of temporomandibular joint\b:: gewrichtsschijf kaakgewricht 
+\barticulatio coxae\b:: heupgewricht 
+\barticulatio temporomandibularis\b:: kaakgewricht 
+\bartrodese\b:: synostose 
+\baryepiglottic fold\b:: plica aryepiglottica 
+\bascenderende pyelonefritis\b:: pyelonefritis 
+\baskin tumor\b:: ewing 
+\baspermatisme\b:: aspermie 
+\baspiratie bronchopneumonie\b:: aspiratiepneumonie 
+\basthenia,nos\b:: asthenie 
+\bastrocytoma fibrillare\b:: fibrillair astrocytoom 
+\bastrocytoom anaplastisch type\b:: astrocytoom graad 3 
+\bastrocytoom graad 1\b:: pilocytair astrocytoom 
+\bastrocytoom graad ii\b:: astrocytoom graad 2 
+\bastrocytoom graad iii\b:: astrocytoom graad 3 
+\bastrocytoom graad iv\b:: astrocytoom graad 4 
+\batheromateuze embolie\b:: cholesterolembolus 
+\batheromateuze embolus\b:: cholesterolembolus 
+\batheromateuze massa\b:: atheromateuze plaque 
+\batherosclerosis generalisata\b:: gegeneraliseerde atherosclerose 
+\batresia\b:: atresie 
+\batrium commune\b:: mono-atrium 
+\batrofierende gastritis\b:: atrofische gastritis 
+\batrophia\b:: atrofie 
+\batrophia cystica\b:: cysteuze atrofie 
+\batrophia liposa\b:: lipomateuze atrofie 
+\batrophia neuropathica\b:: neurogene atrofie 
+\batrophia neurotrophica\b:: neurogene atrofie 
+\batrophoderma maculatum\b:: atrophoderma 
+\batrophoderma reticulatum\b:: atrophoderma 
+\batrophoderma vermiculatum\b:: atrophoderma 
+\batypie ernstig\b:: ernstige atypie 
+\batypie licht\b:: geringe atypie 
+\batypie matig\b:: matige atypie 
+\batypisch prolifererende sereuze tumor\b:: sereuze borderline tumor 
+\batypische mycobacterien\b:: atypische mycobacterie 
+\batypische pneumonie\b:: pneumonie 
+\bauricle\b:: uitwendig oor 
+\baurikel hart\b:: hartoor 
+\baustralie antigeen\b:: hepatitis b virus 
+\bautologe infusie\b:: infuus 
+\bautonoom zenuwstelsel\b:: autonome zenuwstelsel 
+\bautotransplantatie\b:: autologe transplantatie 
+\baviaire tuberkelbacil\b:: mycobacterium avium 
+\bbabytijd\b:: zuigeling 
+\bbacterien\b:: bacterie 
+\bbaker's cyst\b:: kniekuilcyste 
+\bbalanitis chronica circumscripta\b:: balanitis plasmocellularis circumscripta 
+\bbalk hersenen\b:: corpus callosum 
+\bband van het kniegewricht\b:: knieband 
+\bbarr lichaampjes van mannelijke sex chromatine\b:: manlijk geslachtschromatinepatroon 
+\bbarr lichaampjes van vrouwelijke sex chromatine\b:: vrouwelijk geslachtschromatinepatroon 
+\bbarrett syndroma\b:: barrett 
+\bbarretts syndroom\b:: barrett 
+\bbartholini cyste\b:: bartholinische cyste 
+\bbartholinise cyste\b:: bartholinische cyste 
+\bbartholin's gland\b:: klier van bartholin 
+\bbartter syndroma\b:: bartter 
+\bbasaalcelcarcinoom fibroepitheliale type\b:: basaalcelcarcinoom fibroepitheliaal type 
+\bbasaalcelcarcinoom sprieterige type\b:: basaalcelcarcinoom infiltrerend type 
+\bbasaalcellenpapilloom\b:: verruca seborrhoica 
+\bbasaalcelpapilloom\b:: verruca seborrhoica 
+\bbasale cel hyperplasie\b:: basaalcel hyperplasie 
+\bbasale cellen carcinoom\b:: basaalcelcarcinoom 
+\bbasale cellen hyperplasie\b:: basaalcel hyperplasie 
+\bbasale cellen papilloom\b:: verruca seborrhoica 
+\bbasale hersenvaten\b:: circulus willisi 
+\bbasale membraan van capillair van glomerulus\b:: basaalmembraan glomerulus 
+\bbasale membraan van glomeruluscapillairen\b:: basaalmembraan glomerulus 
+\bbasalioom adenoid\b:: basalioom adenoide type 
+\bbasalioom hyperkeratotisch\b:: keratotisch basaalcel carcinoom 
+\bbasalioom superficieel\b:: basaalcelcarcinoom superficieel type 
+\bbasedow\b:: thyreotoxicose 
+\bbasocellulair epithelioom\b:: basaalcelcarcinoom 
+\bbasocellulair papilloom\b:: verruca seborrhoica 
+\bbasofiele granulocytose\b:: basofilie 
+\bbasosquameus acanthoom\b:: verruca seborrhoica 
+\bbasosquameuscel acanthoom\b:: verruca seborrhoica 
+\bbasosquameuscel carcinoom\b:: basosquameus carcinoom 
+\bbasosquamous carcinoma\b:: basosquameus carcinoom 
+\bbatten van\b:: spielmeyer vogt 
+\bb\-cell cll small lymphocytic lymphoma\b:: chronische lymfatische leukemie 
+\bbeademingseffecten\b:: status na beademing 
+\bbeenarterie\b:: arteria femoralis 
+\bbeenderen van de hand\b:: hand 
+\bbeenderstelsel\b:: bot 
+\bbeetwond\b:: beet 
+\bbekkenbeenderen\b:: bekken 
+\bbenign prostatic hyperplasia\b:: benigne prostaathypertrofie 
+\bbenigne adenomatoid mesothelioom\b:: adenomatoide tumor 
+\bbenigne cysteus teratoom\b:: benigne teratoom 
+\bbenigne gezwel\b:: benigne tumor 
+\bbenigne hypertensie\b:: hypertensie 
+\bbenigne juveniel melanoom\b:: spitz naevus 
+\bbenigne leydigceltumor\b:: leydigceltumor 
+\bbenigne lymfoom\b:: pseudolymfoom 
+\bbenigne menggezwel\b:: pleiomorf adenoom 
+\bbenigne mesenchymoom\b:: maligne mesenchymoom 
+\bbenigne prostaathyperplasie\b:: benigne prostaathypertrofie 
+\bbenigne reuscel beentumor\b:: reusceltumor bot 
+\bbenigne reuzenlymfoom\b:: castleman 
+\bbenigne squameuse keratose\b:: benigne squameuze keratose 
+\bbenigne stroma tumor\b:: stroma tumor van onzeker maligne potentieel 
+\bbenigne thymoom\b:: thymoom 
+\bbeschadiging door ioniserende straling\b:: bestralingsverandering 
+\bbesnier boeck schaumann\b:: sarcoidose 
+\bbestralingsafwijking\b:: bestralingsverandering 
+\bbestralingseffect\b:: bestralingsverandering 
+\bbiamniale bichoriale placenta\b:: biamniotische bichoriale placenta 
+\bbiceps brachii muscle\b:: musculus biceps brachii 
+\bbifurcatio tracheae\b:: bifurcatie van de trachea 
+\bbijnieren\b:: bijnier 
+\bbijoortjes\b:: bijoor 
+\bbijschildklier hoofdcel\b:: hoofdcel bijschildklier 
+\bbillen\b:: bil 
+\bbilobaire rechter long\b:: tweekwabbige rechter long 
+\bbiopsie open\b:: incisie biopt 
+\bbismuthpigment\b:: bismut 
+\bbizarre leiomyoma\b:: symplastisch leiomyoom 
+\bblaashalsweefsel\b:: blaashals 
+\bblastenleukemie\b:: acute ongedifferentieerde leukemie 
+\bblighted ovum\b:: windei 
+\bbloedcyste\b:: endometriosecyste 
+\bbloeding in lichaamsholte\b:: bloeding 
+\bbloedingsanemie\b:: anemie 
+\bbloedophoping in bestaande ruimte\b:: hematoom 
+\bbloedvormend beenmerg\b:: beenmerg 
+\bblue sclerae and brittle bones\b:: osteogenesis imperfecta 
+\bborstklier bij de man\b:: mamma man 
+\bborstklier man\b:: mamma man 
+\bborstwervel\b:: thoracale wervel 
+\bbotcallus\b:: callus 
+\bbourneville pringle\b:: tubereuze sclerose 
+\bbovenste bijschildklier\b:: bijschildklier boven 
+\bbowen morbus\b:: bowen 
+\bbowen's disease\b:: bowen 
+\bbraaksel uit de maag\b:: braaksel 
+\bbrachiogene cyste\b:: laterale halscyste 
+\bbrenners tumor\b:: brennertumor 
+\bbreuk (geen botbreuk)\b:: hernia 
+\bbricker operatie\b:: bricker blaas 
+\bbrill symmers disease\b:: folliculair lymfoom 
+\bbrodies absces\b:: brodie's abces 
+\bbronchiaal slijmvlies\b:: bronchusslijmvlies 
+\bbronchiectasis\b:: bronchiectasie 
+\bbronchiolair adenocarcinoom\b:: lepidisch adenocarcinoom 
+\bbronchiole\b:: bronchiolus 
+\bbronchiolitis fibrosa obliterans\b:: bronchiolitis obliterans 
+\bbronchopneumonia\b:: bronchopneumonie 
+\bbronchus en long\b:: bronchopulmonaal 
+\bbuerger's disease\b:: thromboangiitis obliterans 
+\bbufthalmus\b:: buphthalmus 
+\bbuikaorta\b:: aorta abdominalis 
+\bbuikingewanden\b:: buikorganen 
+\bbullae\b:: bulla 
+\bbuphthalmos\b:: buphthalmus 
+\bburger\b:: thromboangiitis obliterans 
+\bburkitt tumor\b:: burkitt lymfoom 
+\bburkitt type lymphoma\b:: burkitt lymfoom 
+\bburning sensation\b:: paresthesie 
+\bbursa infrapatellaris profunda\b:: bursa infrapatellaris 
+\bbursa infrapatellaris subcutanea\b:: bursa infrapatellaris 
+\bbursa musculi semimembranosi\b:: bursa musculus semimembranosus 
+\bbursa poplitea\b:: kniekuilcyste 
+\bbursitis poplitealis\b:: kniekuilcyste 
+\bcachexia\b:: cachexie 
+\bcaecum\b:: coecum 
+\bcalcificaties\b:: verkalking 
+\bcalcifying epithelioma\b:: pilomatricoom 
+\bcalcifying epithelioma of malherbe\b:: pilomatricoom 
+\bcampylobacter pylori\b:: helicobacter pylori 
+\bcampylobacter pylorides\b:: helicobacter pylori 
+\bcampylobacter pyloridis\b:: helicobacter pylori 
+\bcampylobacterinfectie\b:: campylobacter 
+\bcancer\b:: maligniteit 
+\bcapillary lymphangioma\b:: capillair lymfangioom 
+\bcaplan syndroom\b:: caplan 
+\bcapsula articularis\b:: gewrichtskapsel 
+\bcarcinoid tumor, malignant\b:: carcinoid 
+\bcarcinoma anaplasticum\b:: anaplastisch carcinoom 
+\bcarcinoma colloides\b:: mucineus carcinoom 
+\bcarcinoma gigantocellulare\b:: reuscelcarcinoom 
+\bcarcinoma lobularis in situ\b:: lobulair carcinoma in situ 
+\bcarcinoma planocellulare\b:: plaveiselcelcarcinoom 
+\bcarcinoma planocellulare cornificans\b:: verhoornend plaveiselcelcarcinoom 
+\bcarcinoma simplex\b:: carcinoom 
+\bcarcinoma solidum\b:: anaplastisch carcinoom 
+\bcarcinoma spinocellulare\b:: plaveiselcelcarcinoom 
+\bcarcinoma, metastatic\b:: metastase carcinoom 
+\bcarcinomatosis\b:: metastase carcinoom 
+\bcarcinoom plaatepitheel\b:: plaveiselcelcarcinoom 
+\bcarcinoommetastasen\b:: metastase carcinoom 
+\bcarcinosis\b:: metastase carcinoom 
+\bcardia ventriculi\b:: cardia maag 
+\bcardiale levercirrose\b:: cardiale cirrose 
+\bcardiale stuwing\b:: decompensatio cordis 
+\bcardiomyopathie circulair\b:: cardiomyopathie 
+\bcaries blijvend gebit\b:: caries 
+\bcarnificerende pneumonie\b:: idiopathische longfibrose 
+\bcarotid body tumor\b:: paraganglioom 
+\bcarpometacarpale gewricht\b:: polsgewricht 
+\bcartilaginaire exostose\b:: osteochondroom 
+\bcartilagineuze exostose\b:: osteochondroom 
+\bcatarrh\b:: sereuze ontsteking 
+\bcauda equina medullae\b:: cauda equina 
+\bcauda pancreatis\b:: pancreasstaart 
+\bcavum pelvicum\b:: bekkenholte 
+\bcavum peritonei\b:: buikholte 
+\bcavum retzii\b:: cavum retropubicum 
+\bcca0\b:: geen goed materiaal 
+\bcca1\b:: geen afwijking 
+\bccc0\b:: geen goed materiaal 
+\bccc1\b:: geen afwijking 
+\bccc2\b:: geen endocervicaal epitheel 
+\bcck1\b:: endocervix 
+\bcck2\b:: squameuze metaplasie 
+\bcck4\b:: ec+sqm 
+\bcck5\b:: ec+endm 
+\bcck7\b:: ec+sqm+endm 
+\bcck8\b:: uitsluitend plaveiselcellen 
+\bcco0\b:: geen goed materiaal 
+\bcco2\b:: trichomonas vaginalis 
+\bcco3\b:: bacterie 
+\bcco4\b:: candida 
+\bcco9\b:: ontsteking 
+\bccp0\b:: geen goed materiaal 
+\bccp1\b:: geen afwijking 
+\bccp2\b:: abnormale plaveiselcellen 
+\bccp3\b:: atypische squameuze metaplasie 
+\bccp4\b:: laaggradige dysplasie 
+\bccp5\b:: matige dysplasie 
+\bccp6\b:: hooggradige dysplasie 
+\bcellige ontsteking\b:: ontsteking 
+\bcellige proliferatie\b:: proliferatie 
+\bcellulaire afwijking\b:: abnormale cellen 
+\bcelpolymorfie\b:: polymorfie 
+\bcentraal kanaal van het ruggemerg\b:: centraal kanaal van het ruggenmerg 
+\bcentrale chromatolyse\b:: axonale verandering 
+\bcentrale chromatolysis\b:: axonale verandering 
+\bcentrale necrose\b:: centrolobulaire necrose 
+\bcentrale witte stof\b:: witte stof hersenen 
+\bcentronucleaire myopathieen\b:: myotubulaire myopathie 
+\bcerebraal aut\. dominante arteriopatie subcorticaal infarct leukoencefalop\b:: cadasil 
+\bcerebrale arterien\b:: arteria cerebri 
+\bcerebrospinaalvocht\b:: liquor 
+\bceroom\b:: seroom 
+\bcervixuitstrijkje\b:: cervixuitstrijk 
+\bcharcot marie tooth\b:: sensorische en motorische neuropathie 
+\bchirurgisch defect\b:: operatiewond 
+\bchlamydia oculogenitalis\b:: chlamydia trachomatis 
+\bchocoladecyste\b:: endometriosecyste 
+\bcholangiole\b:: kleine galweg 
+\bcholangioom\b:: galgangadenoom 
+\bcholecystitis chronica levis\b:: chronische cholecystitis 
+\bcholecyststomie\b:: cholecystojejunostomie 
+\bcholedochal duct\b:: ductus choledochus 
+\bcholesterolhoudende steen\b:: cholesterolsteen 
+\bcholesterolkristallen\b:: cholesterolose 
+\bchondroadenoom\b:: cartilagineus hamartoom 
+\bchondroblastoma benignum\b:: chondroblastoom 
+\bchondrodystrofie\b:: achondroplasie 
+\bchorangiopagus parasiticus\b:: parasitaire tweeling 
+\bchorea van huntington\b:: huntington 
+\bchorioadenoom\b:: invasieve mola 
+\bchoriocarcinoom met teratoom\b:: non-seminoom 
+\bchorioepithelioom\b:: choriocarcinoom 
+\bchorionepithelioom\b:: choriocarcinoom 
+\bchoroidea\b:: chorioidea oog 
+\bchromatolysis\b:: chromatolyse 
+\bchronic myelogenous leukemia\b:: chronische myeloide leukemie 
+\bchronisch absces\b:: chronisch abces 
+\bchronisch aggressieve hepatitis\b:: chronisch actieve hepatitis 
+\bchronisch agressief moderate\b:: actieve chronische ontsteking 
+\bchronisch agressief severe\b:: actieve chronische ontsteking 
+\bchronisch agressieve hepatitis\b:: chronisch actieve hepatitis 
+\bchronisch agressieve matige ontsteking\b:: actieve chronische ontsteking 
+\bchronisch agressieve ontsteking\b:: actieve chronische ontsteking 
+\bchronisch hematoom\b:: georganiseerd hematoom 
+\bchronisch lymfatische leukemie\b:: chronische lymfatische leukemie 
+\bchronisch passieve stuwing\b:: chronische stuwing 
+\bchronisch persisterende ontsteking\b:: chronische persisterende ontsteking 
+\bchronische abscederende ontsteking\b:: chronisch abces 
+\bchronische actieve matige ontsteking\b:: actieve chronische ontsteking 
+\bchronische agressieve hepatitis\b:: chronisch actieve hepatitis 
+\bchronische agressieve matige ontsteking\b:: actieve chronische ontsteking 
+\bchronische agressieve ontsteking\b:: actieve chronische ontsteking 
+\bchronische etterige ontsteking\b:: chronische purulente ontsteking 
+\bchronische granulocytenleukemie\b:: chronische neutrofiele leukemie 
+\bchronische granulomateuse ontsteking\b:: granulomateuze ontsteking 
+\bchronische hypertrofische gastritis\b:: hypertrofische gastropathie 
+\bchronische mastopathie\b:: fibrocysteuze mastopathie 
+\bchronische monocytenleukemie\b:: chronische myelomonocytenleukemie 
+\bchronische myeloiede leukemie\b:: chronische myeloide leukemie 
+\bchronische necrotiserende ontsteking\b:: necrotiserende chronische ontsteking 
+\bchronische niet specifieke ontsteking\b:: chronische ontsteking 
+\bchronische organiserende niet specifieke ontsteking\b:: chronische fibroserende ontsteking 
+\bchronische proliferatieve niet specifieke ontsteking\b:: chronische fibroserende ontsteking 
+\bchronische reumatoide artritis\b:: reumatoide artritis 
+\bchronische ulcera\b:: chronisch ulcus 
+\bchronische ulceratie\b:: chronisch ulcus 
+\bchrysiasis\b:: goudpigment 
+\bchyleus exsudaat\b:: chylus 
+\bcin i\b:: cin-1 
+\bcin ii\b:: cin-2 
+\bcin iii\b:: cin-3 
+\bcirculaire cardiomyopathie\b:: cardiomyopathie 
+\bcirculatiestoornissen\b:: circulatiestoornis 
+\bcirculus willisii\b:: circulus willisi 
+\bcircumscripte ontsteking\b:: focale ontsteking 
+\bcirrhosis hepatis\b:: cirrose 
+\bcirrhosis micronodularis\b:: micronodulaire cirrose 
+\bcirrhosis posthepatitica\b:: cirrose na hepatitis 
+\bcirrhosis, posthepatitic\b:: cirrose na hepatitis 
+\bclostridium welchii\b:: clostridium perfringens 
+\bcoecum mobile\b:: mobiel coecum 
+\bcolliquatienecrose\b:: verwekingsnecrose 
+\bcolloid adenoom\b:: macrofolliculair adenoom 
+\bcolloid in de schildklier\b:: schildkliercolloid 
+\bcolloide schildkliernodus\b:: struma colloides nodosum 
+\bcolloidmilia\b:: colloidmilium 
+\bcolposcopie\b:: kolposcopie 
+\bcomedocarcinoom\b:: salivary duct carcinoom 
+\bcomedocarcinoom infiltrerend\b:: salivary duct carcinoom 
+\bcomedocarcinoom niet infiltrerend\b:: ductaal carcinoma in situ 
+\bcomedocarcinoom niet invasief\b:: ductaal carcinoma in situ 
+\bcomedone\b:: comedo 
+\bcomedonen\b:: comedo 
+\bcompacta\b:: corticaal bot 
+\bcompacta bot\b:: corticaal bot 
+\bcomplementfactor\b:: complement 
+\bcomposite tumor\b:: pleiomorf adenoom 
+\bconcha inferior\b:: concha nasalis inferior 
+\bcondyloma accuminatum\b:: condyloma acuminatum 
+\bcondyloom vlak\b:: vlak condyloom 
+\bconfluerende ontsteking\b:: diffuse ontsteking 
+\bcongenitaal dubbele uitstroomopening rechter ventrikel\b:: dubbele uitstroomopening rechter ventrikel 
+\bcongenitale aplasie\b:: agenesie 
+\bcongenitale caviteit\b:: congenitale sinus 
+\bcongenitale niet sluiting\b:: congenitaal onvolledige sluiting 
+\bcongenitale reuzenaevus\b:: congenitale melanocytaire naevus 
+\bcongenitale reuzennaevus\b:: congenitale melanocytaire naevus 
+\bcongenitale verdubbeling\b:: congenitaal dubbele structuur 
+\bcongenitale verplaatsing\b:: congenitaal verkeerde positie 
+\bconisatiepreparaat\b:: conusexcisie 
+\bconiunctiva\b:: conjunctiva 
+\bcontractuur van dupuytren\b:: palmaire of plantaire fibromatose 
+\bcontusiehaarden\b:: contusie 
+\bconus cervix\b:: cervix 
+\bconus medullae\b:: conus medullaris 
+\bcorium\b:: dermis 
+\bcornea oculi\b:: cornea 
+\bcorpora aliena\b:: corpus alienum 
+\bcorpus alienum reactie\b:: vreemdlichaamgranuloom 
+\bcorpus alienum van minerale aard\b:: corpus alienum 
+\bcorpus alienum zetmeel\b:: corpus alienum 
+\bcorpus atreticum\b:: atretische follikel 
+\bcorpus hemorrhagicum cyst\b:: corpus rubrum cyste 
+\bcorpus librum\b:: corpus liberum 
+\bcorpus luteum cyst\b:: corpus luteum cyste 
+\bcorpus pineale\b:: glandula pinealis 
+\bcorpus van de maag\b:: corpus maag 
+\bcorpus ventriculi\b:: corpus maag 
+\bcorpuspoliep\b:: endometriumpoliep 
+\bcortex cerebelli\b:: schors cerebellum 
+\bcortex of bone\b:: corticaal bot 
+\bcortex ovarii\b:: ovariumschors 
+\bcorticaal been\b:: corticaal bot 
+\bcorticoid\b:: corticosteroid 
+\bcorticosteroiden\b:: corticosteroid 
+\bcraniofaryngeoom\b:: craniofaryngioom 
+\bcraniopharyngeoom\b:: craniofaryngioom 
+\bcraniorachischizis\b:: craniorachischisis 
+\bcrescentvorming\b:: crescentische glomerulonefritis 
+\bcreutzfeld jacob\b:: creutzfeldt jakob 
+\bcreutzfeldt jakob virus\b:: creutzfeldt jakob 
+\bcristaboring\b:: cristabiopt 
+\bcroupeuze pneumonie\b:: lobaire pneumonie 
+\bcryptogene fibroserende alveolitis\b:: idiopathische longfibrose 
+\bcurvatura minor ventriculi\b:: kleine curvatuur maag 
+\bcushing's syndrome\b:: cushing 
+\bcutane cartilagineuze tumor\b:: mixed tumor 
+\bcutaneous ciliated cyst\b:: ciliaire cyste 
+\bcyclosporine effect\b:: cyclosporine 
+\bcylinders\b:: afgietsel 
+\bcystadenocarcinoma mucinosum\b:: mucineus cystadenocarcinoom 
+\bcystadenocarcinoma mucinosum papilliferum\b:: papillair mucineus carcinoom 
+\bcystadenocarcinoma papilliferum mucinosum\b:: papillair mucineus carcinoom 
+\bcystadenocarcinoma papilliferum serosum\b:: sereus cystadenocarcinoom 
+\bcystadenocarcinoma pseudomucinosum papilliferum\b:: papillair mucineus carcinoom 
+\bcystadenocarcinoma serosum\b:: sereus cystadenocarcinoom 
+\bcystadenocarcinoma serosum papilliferum\b:: sereus cystadenocarcinoom 
+\bcystadenoma papilliferum mucinosum\b:: papillair mucineus adenoom 
+\bcystadenoma papilliferum serosum\b:: papillair sereus cystadenoom 
+\bcystadenoma papilliferum serosum borderline maligniteit\b:: sereuze borderline tumor 
+\bcystadenoma serosum\b:: sereus cystadenoom 
+\bcystadenoma serosum papilliferum\b:: papillair sereus cystadenoom 
+\bcyste met hemorragische inhoud\b:: endometriosecyste 
+\bcyste morgagni\b:: hydatide van morgagni 
+\bcyste van bartholini\b:: bartholinische cyste 
+\bcysteuze masthopathie\b:: fibrocysteuze mastopathie 
+\bcystic disease of breast\b:: fibrocysteuze mastopathie 
+\bcystic hygroma\b:: cysteus lymfangioom 
+\bcystis bartholini\b:: bartholinische cyste 
+\bcystis branchialis\b:: laterale halscyste 
+\bcystis dermoidalis\b:: dermoidcyste 
+\bcystis epidermoidalis\b:: epidermale cyste 
+\bcystis follicularis dentis\b:: folliculaire tandcyste 
+\bcystis radicularis\b:: radiculaire cyste 
+\bcystis residualis dentis\b:: odontogene cyste 
+\bcystis simplex\b:: cyste 
+\bcystisch hyperplastisch\b:: cysteuze hyperplasie 
+\bcystische cystitis\b:: cystitis cystica 
+\bcystische glandulaire hyperplasie\b:: cysteuze hyperplasie 
+\bcystische ureteritis\b:: ureteritis cystica 
+\bcystoma mucinosum\b:: mucineus cystadenoom 
+\bcystoma pseudomucinosum\b:: mucineus cystadenoom 
+\bcystoma serosum\b:: sereus cystadenoom 
+\bcystoma simplex\b:: cystadenoom 
+\bcystoom\b:: cystadenoom 
+\bcystosarcoma phyllodes\b:: maligne phyllodes tumor 
+\bcystosarcoma phyllodes benigne\b:: benigne phyllodes tumor 
+\bcystosarcoma phyllodes maligne\b:: maligne phyllodes tumor 
+\bcystosarcoma phylloides\b:: maligne phyllodes tumor 
+\bcystosarcoma phylloides benigne\b:: benigne phyllodes tumor 
+\bcystosarcoma phylloides maligne\b:: maligne phyllodes tumor 
+\bcyt\.\b:: cytologie 
+\bcyt\.cervix\b:: cervix cytologie 
+\bcytologie cervix\b:: cervix cytologie 
+\bcytologie punctie\b:: punctie 
+\bcytomegalic inclusion disease virus\b:: cytomegalie virus 
+\bcytoplasmatische insluitsels\b:: lewy lichaampje 
+\bcytostatica\b:: cytostaticum 
+\bcytotoxische necrose\b:: necrose 
+\bdacronprothese\b:: prothesemateriaal 
+\bdebilitas mentis\b:: zwakzinnig 
+\bdebilitas vitae\b:: seniel 
+\bdecidua compacta\b:: deciduarest 
+\bdecidua resten\b:: deciduarest 
+\bdecidua spongiosa\b:: deciduarest 
+\bdeciduavorming\b:: deciduale verandering 
+\bdecompensatie cordis\b:: decompensatio cordis 
+\bdecubitusulcus\b:: decubitus 
+\bdedifferentiatie\b:: transformatie 
+\bdeficientie anemie ijzergebrek\b:: ijzergebreksanemie 
+\bdeformiteit\b:: deformatie 
+\bdegeneratie fibrinoide\b:: fibrinoide necrose 
+\bdegeneratieve celafwijking\b:: celdegeneratie 
+\bdegeneratieve gewrichtsaandoening\b:: artrose 
+\bdepigmentatie melanogeen\b:: hypopigmentatie 
+\bdeposities\b:: stapeling 
+\bdercum\b:: lipomatosis dolorosa 
+\bdermal nevus\b:: dermale naevus 
+\bdermatitis atopica\b:: atopische dermatitis 
+\bdermatitis atrophicans\b:: atrophoderma 
+\bdermatitis eczematoides\b:: infectieuze eczematoide dermatitis 
+\bdermatitis eczematosa\b:: eczeem 
+\bdermatitis seborrhoicum psoriasiforme\b:: psoriasiforme dermatitis 
+\bdermatitis solaris\b:: zonnebrand 
+\bdermatofibroma protuberans\b:: dermatofibrosarcoma protuberans 
+\bdermatofibromen\b:: fibreus histiocytoom 
+\bdermatofibrosarcoom\b:: dermatofibrosarcoma protuberans 
+\bdermatopathische ontsteking\b:: dermatopathische lymfadenopathie 
+\bdermoid cyst\b:: dermoidcyste 
+\bdermoid cyst with malignant transformation\b:: teratoom met maligne transformatie 
+\bdermoidcyste met maligne verandering\b:: teratoom met maligne transformatie 
+\bdermoiedcyste\b:: dermoidcyste 
+\bdermopathische lymfadenopathie\b:: dermatopathische lymfadenopathie 
+\bdescensus\b:: prolaps 
+\bdesmoplasia\b:: desmoplasie 
+\bdiathermy\b:: diathermie 
+\bdicht vezelrijk bindweefsel\b:: collageen bindweefsel 
+\bdiep bindweefsel\b:: weke delen 
+\bdierenvel naevus\b:: congenitale melanocytaire naevus 
+\bdiffuse bronchiectasieen\b:: bronchiectasie 
+\bdiffuse cardiomyopathie\b:: cardiomyopathie 
+\bdiffuse mastocytose huid\b:: cutane mastocytose 
+\bdiffuse nodulaire intercapillaire glomerulosclerose\b:: diabetische glomerulopathie 
+\bdiffuse sclerose\b:: multipele sclerose 
+\bdiffuse struma\b:: struma 
+\bdiffuus goed gedifferentieerd lymfocytair maligne lymfoom\b:: chronische lymfatische leukemie 
+\bdiffuus ongedifferentieerd burkitt type maligne lymfoom\b:: burkitt lymfoom 
+\bdiffuus struma\b:: struma 
+\bdigitus ii\b:: wijsvinger 
+\bdigitus iii\b:: middelvinger 
+\bdigitus iv\b:: vierde vinger 
+\bdigitus manus i\b:: duim 
+\bdigitus manus ii\b:: wijsvinger 
+\bdigitus manus iii\b:: middelvinger 
+\bdigitus manus iv\b:: vierde vinger 
+\bdigitus manus v\b:: pink 
+\bdigitus pedis i\b:: grote teen 
+\bdigitus pedis ii\b:: tweede teen 
+\bdigitus pedis iii\b:: derde teen 
+\bdigitus pedis iv\b:: vierde teen 
+\bdigitus pedis v\b:: kleine teen 
+\bdigitus v\b:: pink 
+\bdiplococcus pneumoniae\b:: pneumococ 
+\bdiscus articularis kaakgewricht\b:: gewrichtsschijf kaakgewricht 
+\bdiscus interarticularis\b:: meniscus 
+\bdissociatie\b:: autolyse 
+\bdistale kootje wijsvinger\b:: eindfalanx van de wijsvinger 
+\bdiverticulum spurium\b:: pseudodivertikel 
+\bdood door scherp wapen\b:: steekwond 
+\bdood door verstikking\b:: verstikking 
+\bdoorgankelijk foramen ovale\b:: open foramen ovale 
+\bdorsum manus\b:: handrug 
+\bdraadgranulomen\b:: vreemdlichaamgranuloom 
+\bdriehoekje van kiernan\b:: lever portaal 
+\bdrug,nos\b:: geneesmiddel 
+\bdrukgroef\b:: inklemmingsgroeve 
+\bdubbel nierbekken\b:: dubbel pyelum 
+\bdubbelzijdig\b:: beiderzijds 
+\bduchenne progressieve spierdystrofie\b:: duchenne 
+\bduct carcinoma in situ\b:: ductaal carcinoma in situ 
+\bduct papilloma\b:: intraductaal papilloom 
+\bductaal carcinoma in situ met microinvasie\b:: invasief carcinoom nst 
+\bductus adenoom\b:: ductaal adenoom 
+\bductus galactophorus\b:: mamma duct 
+\bductus thyreoglossus rest\b:: ductus thyreoglossus 
+\bductus thyroglossus\b:: ductus thyreoglossus 
+\bductus wirsungianus\b:: ductus pancreaticus 
+\bductus wolffi\b:: gang van wolff 
+\bductuscarcinoom\b:: invasief carcinoom nst 
+\bductuscarcinoom infiltrerend\b:: invasief carcinoom nst 
+\bdura mater cranialis\b:: dura hersenen 
+\bdura van het ruggemerg\b:: dura mater ruggenmerg 
+\bdurante partum\b:: geboorte 
+\bdybeen\b:: bovenbeen 
+\bdyskaryosis\b:: kernafwijking 
+\bdysplastisch naevus syndroom\b:: dysplastische naevus 
+\bdysproteinaemie\b:: light chain disease 
+\bdysraphie\b:: congenitaal onvolledige sluiting 
+\becclampsie\b:: eclampsie 
+\beccrine poroma\b:: poroom 
+\beccrine spiradenoma\b:: spiradenoom 
+\bechinococcus cyste\b:: echinococcencyste 
+\bectasien\b:: ectasie 
+\bectocervix\b:: cervix 
+\bectopia\b:: ectopie 
+\beczema dyshidroticum\b:: dyshidrotisch eczeem 
+\beczema dyshydroticum\b:: dyshidrotisch eczeem 
+\beczema psoriatiforme\b:: psoriasiforme dermatitis 
+\beerste uursbiopsie\b:: eerste uursbiopt 
+\behler danlos\b:: ehlers danlos 
+\beilandceladenoom\b:: neurocrien microadenoom 
+\beilandje van langerhans, alpha cel\b:: eilandjes van langerhans 
+\beilandje van langerhans, beta cel\b:: eilandjes van langerhans 
+\beilandje van langerhans, delta cel\b:: eilandjes van langerhans 
+\beilandjes van de pancreas\b:: eilandjes van langerhans 
+\beilandjes van het pancreas\b:: eilandjes van langerhans 
+\beilandjesadenoom\b:: neurocrien microadenoom 
+\belastisch bindweefsel\b:: elastine 
+\belastosis, senile\b:: actinische beschadiging 
+\belastotische striae\b:: striae 
+\belement\b:: gebitselement 
+\belephantiasis\b:: filariasis 
+\belleboogsgewricht\b:: ellebooggewricht 
+\belleboogsplooi\b:: elleboog 
+\bemaciatie\b:: vermagering 
+\bembolie atheromateus\b:: cholesterolembolus 
+\bembolische haardvormige glomerulonefritis\b:: lis trombose glomerulus 
+\bembryonaal hepatoom\b:: hepatoblastoom 
+\bendocardiosis\b:: marantische endocarditis 
+\bendocarditis marantica\b:: marantische endocarditis 
+\bendocarditis thrombotica\b:: marantische endocarditis 
+\bendocarditis, libman sacks\b:: endocarditis van libman sacks 
+\bendocarditis, nonbacterial thrombotic\b:: marantische endocarditis 
+\bendocarditis, trombotisch niet\-bacterieel\b:: marantische endocarditis 
+\bendocardium\b:: endocard 
+\bendocervicaal weefsel\b:: endocervix 
+\bendocervicitis chronica\b:: chronische endocervicitis 
+\bendocriene neoplasie hyperplasie syndroom\b:: men syndroom 
+\bendocriene stoornis\b:: hormonale stoornis 
+\bendocrine disorder\b:: hormonale stoornis 
+\bendodermal sinus tumor\b:: dooierzak tumor 
+\bendolymfatische stroma myose\b:: hooggradig endometriumstromasarcoom 
+\bendometrioid carcinoma\b:: endometrioid carcinoom 
+\bendometrioid stromasarcoom\b:: hooggradig endometriumstromasarcoom 
+\bendometrioide cyste\b:: endometriosecyste 
+\bendometrioide epitheliale neoplasie\b:: endometrioide intraepitheliale neoplasie 
+\bendometriosis interstitialis\b:: endometriose 
+\bendometriosis, internal\b:: adenomyose 
+\bendometrium begin secretiefase\b:: endometrium in secretiefase 
+\bendometrium in begin proliferatiefase\b:: endometrium in proliferatiefase 
+\bendometrium in premenstruum\b:: endometrium in secretiefase 
+\bendometrium in proliferatiestadium\b:: endometrium in proliferatiefase 
+\bendometrium in regeneratie\b:: regeneratief endometrium 
+\bendometrium menstruale\b:: endometrium in menstruatiefase 
+\bendometrium menstruatie\b:: endometrium in menstruatiefase 
+\bendometrium met beginnende secretie\b:: endometrium in secretiefase 
+\bendometrium met tekenen van insufficientie\b:: inactief endometrium 
+\bendometrium met tekenen van seniele atrofie\b:: endometrium in postmenopauze 
+\bendometrium regeneratiefase\b:: regeneratief endometrium 
+\bendometrium seniel\b:: endometrium in postmenopauze 
+\bendometrium tijdens anovulatoire cyclus\b:: endometrium met tekenen van anovulatoire cyclus 
+\bendometrium tijdens menopauze\b:: endometrium in postmenopauze 
+\bendometrium tijdens menstruatie\b:: endometrium in menstruatiefase 
+\bendometrium tijdens oestrogene fase\b:: endometrium in proliferatiefase 
+\bendometrium tijdens postmenopauze\b:: endometrium in postmenopauze 
+\bendometrium tijdens regeneratie\b:: regeneratief endometrium 
+\bendometrium tijdens secretie\b:: endometrium in secretiefase 
+\bendometrium, menstrual\b:: endometrium in menstruatiefase 
+\bendometriumcellen atypische\b:: atypische endometriumcellen 
+\bendometriumcellen licht atypisch\b:: atypische endometriumcellen 
+\bendometroid adenofibroom\b:: endometrioid adenofibroom 
+\bendometroid carcinoom\b:: endometrioid carcinoom 
+\bendometroide cyste\b:: endometriosecyste 
+\bendosalpingeoom\b:: salpingitis isthmica nodosa 
+\bendosalpingioom\b:: salpingitis isthmica nodosa 
+\bendotheelcellen\b:: endotheelcel 
+\bendotheliale cel\b:: endotheelcel 
+\bendotheliomateus meningeoom\b:: meningotheliaal meningeoom 
+\bendotheliosarcoom\b:: maligne hemangioendothelioom 
+\bendoxan\b:: cyclophosphamide 
+\benteritis regionalis\b:: crohn 
+\benterococcus faecalis\b:: enterococ 
+\benterocystoom\b:: enterokele 
+\bentropion\b:: inversie 
+\benzyme disorder\b:: enzym defect 
+\benzymhistochemisch onderzoek\b:: enzymhistochemie 
+\beosinofiel syndroom\b:: chronische eosinofiele leukemie 
+\beosinofiele granulomateuze poliep\b:: inflammatoire fibroide poliep 
+\bependym van het ruggemerg\b:: ependym van het ruggenmerg 
+\bependymcellen\b:: ependymcel 
+\bependymoma papillare\b:: papillair ependymoom 
+\bependymoom graad 1\b:: atypisch plexus choroideus papilloom 
+\bependymoom graad 3\b:: anaplastisch ependymoom 
+\bependymoom graad ii\b:: ependymoom 
+\bependymoom graad iii\b:: anaplastisch ependymoom 
+\bepicondylus humeri\b:: humerus 
+\bepicondylus van humerus\b:: humerus 
+\bepidermisatie\b:: squameuze metaplasie 
+\bepidermoidcarcinoom\b:: plaveiselcelcarcinoom 
+\bepididymus\b:: epididymis 
+\bepiglottis slijmvlies\b:: slijmvlies epiglottis 
+\bepimembraneuze glomerulopathie\b:: membraneuze glomerulopathie 
+\bepitheelparelvorming\b:: hoornparelvorming 
+\bepithelial inclusion cyst\b:: epitheliale inclusiecyste 
+\bepithelioid cell melanoma\b:: melanoom 
+\bepithelioid en spoelcellig maligne melanoom\b:: melanoom 
+\bepithelioidcel naevus\b:: naevus naevocellularis 
+\bepithelioiedcel naevus\b:: naevus naevocellularis 
+\bepithelioma adenoides cysticum\b:: trichoepithelioom 
+\bepithelioma calcificans malherbe\b:: pilomatricoom 
+\bepithelioma sebaceum\b:: talgklieradenoom 
+\bepithelioma, benign\b:: benigne epithelioom 
+\bepitheliome a cellules independantes\b:: benigne epithelioom 
+\bepitheloid leiomyoblastoom\b:: epithelioid leiomyoom 
+\bepitheloide maligne perifere zenuwschede tumor\b:: epithelioide maligne perifere zenuwschede tumor 
+\berfelijke sensori motorische neuropathie\b:: sensorische en motorische neuropathie 
+\berythema dyschronicum perstans\b:: erythema dyschromicum perstans 
+\berythema exsudativum multiforme dermale vorm\b:: erythema exsudativum multiforme 
+\berythema exsudativum multiforme mengvorm\b:: erythema exsudativum multiforme 
+\berythema exudativum multiforme\b:: erythema exsudativum multiforme 
+\berythema induratum bazin\b:: erythema induratum 
+\berythema induratum van bazin\b:: erythema induratum 
+\berythema multiforme exudativum\b:: erythema exsudativum multiforme 
+\berythema pernio\b:: pernio 
+\berythromelanosis facei et colli\b:: erytromelanose van gezicht en nek 
+\berythropoietic porphyria\b:: erytropoetische porfyrie 
+\berytremie\b:: polycythemia vera 
+\berytremische myelose\b:: acute erytroleukemie 
+\berytroblastenleukemie\b:: acute erytroleukemie 
+\berytroplasie van querat\b:: queyrat 
+\betterig ontstekingsproces\b:: purulente ontsteking 
+\betterige ontsteking\b:: purulente ontsteking 
+\beversie\b:: ectropion 
+\bexaggarated placental site reaction\b:: exaggerated placental site reaction 
+\bexfoliatieve dermatitis\b:: erytrodermie 
+\bexocervix\b:: cervix 
+\bexostosis cartilaginea\b:: osteochondroom 
+\bexsanguinatie\b:: verbloeding 
+\bexterne hemorroiden\b:: hemorroid 
+\bextracapillaire proliferatie\b:: crescentische glomerulonefritis 
+\bextramedullair\b:: epidurale ruimte ruggemerg 
+\bextramedullaire bloedvorming\b:: extramedullaire haematopoiese 
+\bextra\-ovarieel adenocarcinoom\b:: sereus cystadenocarcinoom 
+\bextra\-uterine graviditeit\b:: extra-uteriene graviditeit 
+\bextra\-uterine zwangerschap\b:: extra-uteriene graviditeit 
+\bexudaat\b:: purulente ontsteking 
+\bfaciitis necroticans\b:: necrotiserende fasciitis 
+\bfaecale verkalkende retentie\b:: faecaalstase 
+\bfallopian tube,nos\b:: tuba fallopii 
+\bfallot'se tetralogie\b:: tetralogie van fallot 
+\bfalx cerebelli\b:: tentorium 
+\bfarmers lung\b:: boerenlong 
+\bfascia plantaris pedis\b:: fascia plantaris 
+\bfascie fibromatose\b:: nodulaire fasciitis 
+\bfascie van de arm\b:: fascie arm 
+\bfascie van de onderarm\b:: fascie hand 
+\bfascie van de romp\b:: fascie abdomen 
+\bfascie van het diafragma urogenitale\b:: cavum retropubicum 
+\bfasciitis necrotisans\b:: necrotiserende fasciitis 
+\bfasciitis pseudosarcomatosa\b:: nodulaire fasciitis 
+\bfascitis nodularis\b:: nodulaire fasciitis 
+\bfecale stagnatie\b:: faecaalstase 
+\bfenomeen van arias stella\b:: arias stella fenomeen 
+\bferriprieve anemie\b:: ijzergebreksanemie 
+\bferriprieve toestand\b:: ijzergebrek 
+\bferriprive anemie\b:: ijzergebreksanemie 
+\bfertilisatie in vitro\b:: in vitro fertilisatie 
+\bfibreus mesothelioom\b:: sarcomatoid mesothelioom 
+\bfibreuze adhesies\b:: fibreuze adhesie 
+\bfibreuze nodus met verkalking\b:: verkalkte nodus 
+\bfibreuze reparatie\b:: fibrose 
+\bfibreuze tuberkel\b:: granulomateuze ontsteking zonder necrose 
+\bfibreuze verdikking\b:: zwoerd 
+\bfibrine lichaampje\b:: fibrine thrombus 
+\bfibrineuze verkleving\b:: fibrineuze adhesie 
+\bfibroadenomatosis cystica\b:: fibrocysteuze mastopathie 
+\bfibroadenosis cystica\b:: fibrocysteuze mastopathie 
+\bfibroatheromateuze plaque\b:: atheromateuze plaque 
+\bfibroelastose van het endocard\b:: fibroelastose 
+\bfibroepitheliomateus papilloom\b:: fibroepitheliale poliep 
+\bfibroepitheliomateuze hyperplasie\b:: fibroepitheliale poliep 
+\bfibroleiomyoom\b:: leiomyoom 
+\bfibroma non ossifying\b:: fibreus histiocytoom 
+\bfibromatosis cicatricialis\b:: palmaire of plantaire fibromatose 
+\bfibromatosis, plantar\b:: palmaire of plantaire fibromatose 
+\bfibromyomen\b:: myofibroom 
+\bfibromyoom\b:: leiomyoom 
+\bfibromyxosarcoom\b:: laaggradig fibromyxoid sarcoom 
+\bfibrosarcoma protuberans\b:: dermatofibrosarcoma protuberans 
+\bfibroserende alveolitis, idiopathisch\b:: idiopathische longfibrose 
+\bfibroserende histiocytose\b:: histiocytose 
+\bfibrous papule of the nose\b:: cellulair angiofibroom 
+\bfibroxanthoma gigantocellulare\b:: atypisch fibroxanthoom 
+\bfimbriae tubae uterinae\b:: fimbriae tubae 
+\bfistelend ontstekingsproces\b:: fistel 
+\bfluorescein\b:: fluorescine 
+\bfluothaan\b:: halothane 
+\bfocale epitheliale hyperplasie\b:: focale hyperplasie 
+\bfocale locale glomerulonefritis\b:: locale focale glomerulopathie 
+\bfocale locale glomerulopathie\b:: locale focale glomerulopathie 
+\bfocomelie\b:: aangeboren afwijking van extremiteit 
+\bfoetaal adenoom\b:: microfolliculair adenoom 
+\bfoetomaternale transfusie\b:: foetomaternaal transfusie syndroom 
+\bfokale lokale glomerulitis\b:: locale focale glomerulopathie 
+\bfolic acid deficiency\b:: foliumzuur deficientie 
+\bfolinezuur deficientie\b:: foliumzuur deficientie 
+\bfollicle center lymphoma diffuse small cell\b:: follikelcentrum lymfoom diffuus 
+\bfollicle center lymphoma grade i and ii\b:: folliculair lymfoom graad 1 en 2 
+\bfollicle center lymphoma grade iii\b:: folliculair lymfoom graad 3 
+\bfolliculair poroom\b:: spiradenoom 
+\bfolliculaire reactieve hyperplasie\b:: lymfoide hyperplasie 
+\bfollikelcentrum lymfoom graad 1 en 2\b:: folliculair lymfoom graad 1 en 2 
+\bfollikelcentrum lymfoom graad 3\b:: folliculair lymfoom graad 3 
+\bfollikelcysten\b:: follikelcyste 
+\bfordyce's disease\b:: fordyce 
+\bfreckle\b:: sproet 
+\bfriction blister\b:: frictie blaar 
+\bfrontale lobus cerebri\b:: frontaalkwab 
+\bfundus poliep\b:: endometriumpoliep 
+\bfuniculis spermaticis\b:: funiculus spermaticus 
+\bgal stasis\b:: cholestase 
+\bgalactorrhea\b:: galactorroe 
+\bgalblaas extirpatie\b:: cholecystectomie 
+\bgalcylinder\b:: galthrombus 
+\bgalstenen\b:: cholelithiasis 
+\bgalwegen\b:: extrahepatische galweg 
+\bgang van wharton\b:: ductus submandibularis 
+\bganglion van de truncus sympathicus\b:: sympathisch ganglion 
+\bganglioncellen\b:: ganglioncel 
+\bgangreneus ontstekingsproces\b:: necrotiserende ontsteking 
+\bgartner's duct cyst\b:: gartnerse gang cyste 
+\bgastritis oppervlakkig\b:: superficiele gastritis 
+\bgastritis superficialis\b:: superficiele gastritis 
+\bgedifferentieerd plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\bgeen duidelijke pathologische verandering\b:: geen afwijking 
+\bgeen maligniteit aangetroffen\b:: geen maligniteit 
+\bgeen maligniteit gevonden\b:: geen maligniteit 
+\bgeen metastasen\b:: geen metastase 
+\bgeen metastatisch proces aangetroffen\b:: geen metastase 
+\bgeen tumor aangetroffen\b:: geen maligniteit 
+\bgeen tumor gevonden\b:: geen maligniteit 
+\bgeen tumorrest aangetroffen\b:: geen maligniteit 
+\bgeen voor maligniteit verdachte cellen gevonden\b:: geen maligniteit 
+\bgelatineus adenocarcinoom\b:: mucineus carcinoom 
+\bgelatineus carcinoom\b:: mucineus carcinoom 
+\bgemengd adenocarcinoom en plaveiselcelcarcinoom\b:: adenosquameus carcinoom 
+\bgemengd oligoastrocytoom\b:: oligoastrocytoom 
+\bgemetastaseerd adenocarcinoom\b:: metastase adenocarcinoom 
+\bgemetastaseerd carcinoom\b:: metastase carcinoom 
+\bgemetastaseerd melanoblastoom\b:: metastase melanoom 
+\bgene rearrangement\b:: gen herschikking 
+\bgenezen appendicitis\b:: appendix met ontstekingsrest 
+\bgenezen ontsteking\b:: ontstekingsrest 
+\bgenezende appendicitis\b:: appendix met ontstekingsrest 
+\bgenezende ontsteking\b:: ontstekingsrest 
+\bgenezende ulceratie\b:: ulcusrest 
+\bgeorganiseerd infarct\b:: oud infarct 
+\bgepigmenteerd basaalcelpapilloom\b:: verruca seborrhoica 
+\bgeprikkelde lymfklier\b:: lymfadenitis 
+\bgereepithelialiseerd ulcus\b:: ulcusrest 
+\bgeretineerde placentadelen\b:: placentarest 
+\bgeretineerde vruchtdelen\b:: zwangerschapsrest 
+\bgeretineerde zwangerschapsprodukten\b:: zwangerschapsrest 
+\bgermcel tumor\b:: kiemcel tumor 
+\bgermcell tumor\b:: kiemcel tumor 
+\bgerstmann straussler scheinker syndroom\b:: gerstmann straussler scheinker 
+\bgeruptureerde corpus luteumcyste\b:: corpus luteum cyste 
+\bgeslachtschromatine van barr\b:: vrouwelijk geslachtschromatinepatroon 
+\bgestoord\b:: afwijking 
+\bgestoorde chondrale beenvorming\b:: gestoorde enchondrale beenvorming 
+\bgestoorde hematopoese\b:: dyshematopoese 
+\bgestoorde spermiogenese\b:: spermatogene rijpingsstoornis 
+\bgewelf van de vagina\b:: vaginatop 
+\bgewrichten\b:: gewricht 
+\bgewrichten bovenste extremiteit\b:: gewricht bovenste extremiteit 
+\bgewrichten onderste extremiteit\b:: gewricht onderste extremiteit 
+\bgiant cell and spindle cell carcinoma\b:: reuscelcarcinoom 
+\bgiant cell arteritis\b:: reuscelarteritis 
+\bgiant cell carcinoma\b:: reuscelcarcinoom 
+\bgiant cell tumor of bone, benign\b:: reusceltumor bot 
+\bgiant cell tumor of tendon sheath\b:: reusceltumor peesschede 
+\bgingiva mandibularis\b:: gingiva onderkaak 
+\bgingiva maxillaris\b:: gingiva bovenkaak 
+\bgist\b:: gistinfectie 
+\bgisten\b:: gistinfectie 
+\bglandula cervicalis\b:: cervixklier 
+\bglandula parathyreoidea\b:: bijschildklier 
+\bglandula prostata\b:: prostaat 
+\bglandula salivaria\b:: speekselklier 
+\bglandula salivaria minor\b:: kleine speekselklier 
+\bglandula submaxillaris\b:: glandula submandibularis 
+\bglandulair cystische hyperplasie\b:: cysteuze hyperplasie 
+\bglandulaire celatypie\b:: glandulaire atypie 
+\bglandulaire hyperplasie prostaat\b:: benigne prostaathypertrofie 
+\bglandulaire hypertrofie\b:: glandulaire hyperplasie 
+\bglandulaire prostaathypertrofie\b:: benigne prostaathypertrofie 
+\bglisson's capsule\b:: leverkapsel 
+\bglobale glumerulosclerose\b:: focale glomerulosclerose 
+\bgloboidcel leukodystrofie\b:: krabbe 
+\bglomerulonecrose\b:: crescentische glomerulonefritis 
+\bglomerulonefritis membraneus\b:: membraneuze glomerulopathie 
+\bglomerulonefritis met autoantilichamen goodpasture\b:: anti g.b.m. glomerulonefritis 
+\bglomerulonefritis, snel progressief syndroom\b:: crescentische glomerulonefritis 
+\bglomerulonephritis rapidly progressive\b:: crescentische glomerulonefritis 
+\bglomerulonephritis, necrotizing\b:: crescentische glomerulonefritis 
+\bglomerulonephritis, proliferative\b:: proliferatieve glomerulonefritis 
+\bglomerulopathie bij alport\b:: alport 
+\bglomerulus basaalmembraan\b:: basaalmembraan glomerulus 
+\bglomus caroticum tumor\b:: paraganglioom 
+\bglomus jugulare tumor\b:: paraganglioom 
+\bgluconolactonase disorder\b:: glycosidase stoornis 
+\bglycerin\b:: glycerine 
+\bglycosidase disorder\b:: glycosidase stoornis 
+\bgoed gedifferentieerd adenocarcinoom\b:: adenocarcinoom 
+\bgoed gedifferentieerd overgangsepitheelcarcinoom\b:: urotheelcelcarcinoom graad 1 
+\bgoed gedifferentieerd plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\bgoed gedifferentieerd verhoornend plaveiselcelcarcinoom\b:: verhoornend plaveiselcelcarcinoom 
+\bgoedaardig gezwel\b:: benigne tumor 
+\bgold and gold compound\b:: goud 
+\bgold salt\b:: goud 
+\bgonadal stromal tumor\b:: sexcordstroma tumor 
+\bgonococcen\b:: neisseria gonorrhoeae 
+\bgonococceninfectie\b:: neisseria gonorrhoeae 
+\bgraft,nos\b:: transplantaat 
+\bgram negatieve bacil\b:: gram negatieve bacterie 
+\bgram negatieve bacterien\b:: gram negatieve bacterie 
+\bgram negatieve coc\b:: gram negatieve bacterie 
+\bgram negatieve coccen\b:: gram negatieve bacterie 
+\bgram positieve bacil\b:: gram positieve bacterie 
+\bgram positieve bacillen\b:: gram positieve bacterie 
+\bgram positieve coc\b:: gram positieve bacterie 
+\bgram positieve coccen\b:: gram positieve bacterie 
+\bgranaatscherfwond\b:: penetrerende wond 
+\bgranulaircel myoblastoom\b:: granulaircel tumor 
+\bgranulaircel tumor maligne\b:: maligne granulaircel tumor 
+\bgranular cel myoblastoom\b:: granulaircel tumor 
+\bgranular cell myoblastoma\b:: granulaircel tumor 
+\bgranular cell tumor\b:: granulaircel tumor 
+\bgranulatieweefsel met fibrose\b:: granulatieweefsel 
+\bgranulocytair ontstekingsinfiltraat\b:: acute ontsteking 
+\bgranulocytic sarcoma\b:: myeloid sarcoom 
+\bgranuloma corpus alienum\b:: vreemdlichaamgranuloom 
+\bgranuloma disciforme\b:: granuloma annulare 
+\bgranuloma eosinophilicum\b:: eosinofiel granuloom 
+\bgranuloma gangraenescens\b:: necrotiserende granulomateuze ontsteking 
+\bgranuloma gangrenescens\b:: necrotiserende granulomateuze ontsteking 
+\bgranuloma malignum\b:: klassiek hodgkin lymfoom 
+\bgranuloma pyogenes telangiectaticum\b:: granuloma pyogenicum 
+\bgranuloma pyogenicum intravasculair\b:: intravasculair granuloma pyogenicum 
+\bgranuloma telangiectaticum\b:: granuloma pyogenicum 
+\bgranuloma venereum\b:: granuloma inguinale 
+\bgranuloma, histiocytic\b:: granulomateuze ontsteking 
+\bgranulomateus vreemdlichaamsreactie\b:: vreemdlichaamgranuloom 
+\bgranulomateuse necrotiserende ontsteking\b:: necrotiserende granulomateuze ontsteking 
+\bgranulomateuze ontsteking met verkazing\b:: necrotiserende granulomateuze ontsteking 
+\bgranulomatosis allergica\b:: churg strauss 
+\bgranuloom door hechtmateriaal\b:: vreemdlichaamgranuloom 
+\bgranuloom van wegener\b:: granulomatose met polyangiitis 
+\bgranulosa cell theca cell tumor\b:: juveniele granulosaceltumor 
+\bgranulosacelcarcinoom\b:: adulte granulosaceltumor 
+\bgranulosathecaceltumor\b:: juveniele granulosaceltumor 
+\bgraves's disease\b:: thyreotoxicose 
+\bgrensnaevus\b:: junction nevus 
+\bgroei abnormaal grote afstand\b:: hypertelorisme 
+\bgrofvacuolaire degeneratie\b:: steatose 
+\bgrote circulatie\b:: tractus circulatorius 
+\bgrote granulaire lymfocytenleukemie\b:: large granular lymphocytic leukemia 
+\bgrote hersenhemisfeer\b:: cerebrale hemisfeer 
+\bgrovers disease\b:: transiente acantholytische dermatose 
+\bguillain barre syndrome\b:: guillain barre 
+\bgynaecomastie man\b:: gynaecomastie 
+\bh\.p\.v\. algemeen type\b:: h.p.v. 
+\bh\.p\.v\. hoog risico subtype\b:: h.p.v. hoog risico type 
+\bh\.p\.v\. laag risico subtype\b:: h.p.v. laag risico type 
+\bh\.p\.v\. onbekend subtype\b:: h.p.v. 
+\bhaardvormige ontsteking\b:: focale ontsteking 
+\bhaarzakje\b:: haarfollikel 
+\bhaemangioma racemosum\b:: arterioveneus hemangioom 
+\bhaematuria\b:: hematurie 
+\bhaemophilus vaginalis\b:: gardnerella vaginalis 
+\bhailey hailey disease\b:: hailey hailey 
+\bhairy cell leukemia\b:: hairycel leukemie 
+\bhairy naevus\b:: naevus naevocellularis 
+\bhamman rich\b:: acute interstitiele pneumonie 
+\bhamman rich syndrome\b:: acute interstitiele pneumonie 
+\bhandspier\b:: spier arm 
+\bhandwortelbeenderen\b:: os carpale 
+\bharde verhemelte\b:: harde gehemelte 
+\bhartezakje\b:: pericard 
+\bharthypertrofie\b:: cardiomegalie 
+\bhartmonoventrikel\b:: monoventrikel hart 
+\bhartspierweefsel\b:: myocard 
+\bhartventrikel voorwand\b:: voorwand hartventrikel 
+\bhashimoto's thyroiditis\b:: hashimoto 
+\bheavy and light chain disease\b:: light chain disease 
+\bheberden\b:: osteofyt 
+\bheberden nodus\b:: osteofyt 
+\bhechtingsgranulomen\b:: vreemdlichaamgranuloom 
+\bhemangioendotheliaal sarcoom\b:: maligne hemangioendothelioom 
+\bhemangioendotheliosarcoom spoelcel\b:: spoelcel hemangioendotheliosarcoom 
+\bhemangiolipoom\b:: angiolipoom 
+\bhematopoetisch weefsel\b:: beenmerg 
+\bhematopoiesis, extramedullary\b:: extramedullaire haematopoiese 
+\bhemimelie\b:: aangeboren afwijking van extremiteit 
+\bhemisfeer grote hersenen\b:: cerebrale hemisfeer 
+\bhemofagocytisch syndroom infectie geassocieerd\b:: infectie geassocieerd hemofagocytisch syndroom 
+\bhemorragische cyste\b:: endometriosecyste 
+\bhemorragische infarcering\b:: hemorragisch infarct 
+\bhemorroiden\b:: hemorroid 
+\bhenoch's purpura\b:: henoch schonlein 
+\bhepatitis b carier state\b:: hepatitis b carrier state 
+\bhepatitis infectiosa\b:: hepatitis a 
+\bhepatocyten\b:: hepatocyt 
+\bhepato\-splenisch gamma\-delta lymfoom\b:: hepato-splenisch t-cel lymfoom 
+\bhepato\-splenisch gamma\-delta t\-cel lymfoom\b:: hepato-splenisch t-cel lymfoom 
+\bhereditary spherocytosis\b:: congenitale sferocytose 
+\bherhalen na oestrogeentherapie\b:: herhalen na oestrogene therapie 
+\bhernia door operatiewond\b:: littekenbreuk 
+\bhernia, hiatus\b:: hiatus hernia 
+\bheroin\b:: heroine 
+\bhersenarterie\b:: arteria cerebri 
+\bhersenhemisfeer\b:: cerebrale hemisfeer 
+\bhersenverweking\b:: encefalomalacie 
+\bheterozygoot\b:: tweeeiige tweeling 
+\bhiatus diaphragmaticus\b:: hiatus diaphragmatica 
+\bhiatus hernia oesophagi\b:: hiatus hernia 
+\bhidatide van morgagni\b:: hydatide van morgagni 
+\bhidradenoma nodularis\b:: nodulair hidradenoom 
+\bhirschsprung's disease\b:: hirschsprung 
+\bhistiocytair lymfoom\b:: histiocytair sarcoom 
+\bhistiocytosarcoom\b:: histiocytair sarcoom 
+\bhistiocytose x\b:: langerhanse cel histiocytose 
+\bhistiosarcoom\b:: histiocytair sarcoom 
+\bhodgkin gemengdcellige vorm\b:: hodgkin gemengdcellig 
+\bhodgkin lymfocytair\b:: hodgkin klassiek lymfocytenrijk 
+\bhodgkin lymfocytaire depletie\b:: hodgkin lymfocytenarm 
+\bhodgkin lymfocytendepletie\b:: hodgkin lymfocytenarm 
+\bhodgkin lymfocytenrijke vorm\b:: hodgkin klassiek lymfocytenrijk 
+\bhodgkin nodulair scleroserend lymfocytenrijk\b:: hodgkin nodulair lymfocyten predominant 
+\bhodgkin nodulair scleroserende vorm\b:: hodgkin nodulair scleroserend 
+\bhodgkin's disease\b:: klassiek hodgkin lymfoom 
+\bholoprosencephalon\b:: holoprosencefalie 
+\bhomotransplantatie\b:: allotransplantatie 
+\bhoofdlongslagader\b:: truncus arteriae pulmonalis 
+\bhoog gedifferentieerd adenocarcinoom\b:: adenocarcinoom 
+\bhoog gedifferentieerd plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\bhooggradig neuroendocrien carcinoom\b:: grootcellig neuroendocrien carcinoom 
+\bhormonale therapie\b:: hormoontherapie 
+\bhormoonpreparaat\b:: hormoontherapie 
+\bhumaan t\-cel lymfotropisch virus\b:: h.i.v. 
+\bhuman papilloma virus\b:: h.p.v. 
+\bhumps\b:: dense deposit 
+\bhunner's ulcer\b:: interstitiele cystitis 
+\bhurler syndroom\b:: hurler 
+\bhurthleceladenocarcinoom\b:: oncocytair carcinoom 
+\bhutchinsons melanotic freckle\b:: lentigo maligna 
+\bhyaliene membraanpneumonie\b:: hyaliene membraanziekte 
+\bhyaliene membranenpneumonie\b:: hyaliene membraanziekte 
+\bhyaline kraakbeen\b:: hyaliene kraakbeen 
+\bhyaloom\b:: colloidmilium 
+\bhydatide disease\b:: echinococcose 
+\bhydradenitis\b:: hidradenitis 
+\bhydradenitis suppurativa\b:: hidradenitis suppurativa 
+\bhydradenoma nodularis\b:: nodulair hidradenoom 
+\bhydradenoom\b:: nodulair hidradenoom 
+\bhydroacanthoom\b:: poroom 
+\bhydrocephalus normale druk\b:: normal pressure hydrocephalus 
+\bhydrocephalus, external\b:: hydrocephalus externus 
+\bhydrocystoom\b:: hidrocystoom 
+\bhydroperitoneum\b:: ascites 
+\bhydrops fetalis\b:: hydrops foetalis 
+\bhyperaemia\b:: hyperaemie 
+\bhyperaemisch\b:: hyperaemie 
+\bhypercapnia\b:: hypercapnie 
+\bhyperkeratosis follicularis et parafollicularis\b:: folliculitis perforans 
+\bhyperkeratotic papilloma\b:: squameus papilloom 
+\bhyperkeratotisch basaalcelpapilloom\b:: verruca seborrhoica 
+\bhyperkeratotisch basospinocellulair papilloom\b:: squameus papilloom 
+\bhypernefroom\b:: heldercellig niercelcarcinoom 
+\bhyperostosis frontalis interna\b:: hyperostosis frontalis 
+\bhyperostosis generalisata\b:: hyperostose 
+\bhyperplasie lobulair\b:: atypische lobulaire hyperplasie 
+\bhyperplasie van de leydigse cellen\b:: leydigcelhyperplasie 
+\bhyperplasie vetweefsel\b:: lipomateuze hyperplasie 
+\bhyperplastische erytropoese\b:: hyperplasie erytropoiese 
+\bhyperplastische erytropoiese\b:: hyperplasie erytropoiese 
+\bhyperplastische poiese\b:: hyperplasie erytropoiese 
+\bhypersplenie\b:: hypersplenisme 
+\bhypertensie essentieel maligne\b:: maligne hypertensie 
+\bhyperthyroidism\b:: hyperthyreoidie 
+\bhypertrofe neuropathie\b:: hypertrofische neuropathie 
+\bhypertrophia\b:: hypertrofie 
+\bhypoparathyroidisme\b:: hypoparathyreoidie 
+\bhypospermiogenese\b:: hypospermatogenese 
+\bhypothermia\b:: hypothermie 
+\bhypothyreoidisme\b:: hypothyreoidie 
+\bhypoxemia\b:: hypoxemie 
+\bi\.fl\.\b:: immunofluorescentie 
+\bi\.g\.e\.\b:: ige 
+\bi\.p\. reactie monoclonaal\b:: i.p. monoclonaal 
+\bi\.p\. reactie polyclonaal\b:: i.p. polyclonaal 
+\bichthyosiforme erytrodermie\b:: epidermolytische hyperkeratose 
+\bichthyosis lamellaris\b:: lamellaire ichtyose 
+\bichthyosis linearis circumscripta\b:: lineaire epidermale naevus 
+\bidiopathisch respiratoir distress syndroom neonaat\b:: hyaliene membraanziekte 
+\bidiopathische hemochromatose\b:: hemochromatose 
+\bidiopathische interstitiele longfibrose\b:: idiopathische longfibrose 
+\bidiopathische interstitiele longfibrose syndroom\b:: idiopathische longfibrose 
+\bidiopathische medianecrose\b:: idiopathische cysteuze medianecrose 
+\bidiopathische trombocytemie\b:: essentiele trombocytemie 
+\bikc\b:: panel 
+\bileocoecale\b:: ileocoecaalhoek 
+\bileostomy\b:: ileostomie 
+\bileum en colon\b:: ileocoecaalhoek 
+\bimbecility\b:: imbeciel 
+\bimmotile cilia syndroma\b:: immotiel cilien syndroom 
+\bimmunoblastair ml\b:: diffuus grootcellig b-cel lymfoom 
+\bimmunoblasten sarcoom lu\b:: diffuus grootcellig b-cel lymfoom 
+\bimmunoblastisch lymfoom b lu\b:: diffuus grootcellig b-cel lymfoom 
+\bimmunocytologie\b:: immunocytochemie 
+\bimmunocytoom\b:: lymfoplasmacytair lymfoom 
+\bimmunodepressiva\b:: immuunsuppressivum 
+\bimmunosuppressiva\b:: immuunsuppressivum 
+\bimmuunglobulines\b:: immuunglobuline 
+\bin situ hibridisatie\b:: in situ hybridisatie 
+\binborn error\b:: congenitaal 
+\binduratieve mastopathie\b:: complexe scleroserende laesie 
+\binduratio plastica\b:: peyronie 
+\binduratio plastica penis\b:: peyronie 
+\binfantiel fibreus harmartoom\b:: infantiel fibreus hamartoom 
+\binfarcten\b:: infarct 
+\binfectieuze embolie\b:: septische embolie 
+\binfertility\b:: infertiliteit 
+\binfiltratief plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\binfiltrating lipoma\b:: intramusculair lipoom 
+\binfiltrating lobular carcinoma\b:: infiltrerend lobulair carcinoom 
+\binfiltrerend ductus adenocarcinoom\b:: invasief carcinoom nst 
+\binfiltrerend ductus en lobulair carcinoom\b:: tubulolobulair carcinoom 
+\binfiltrerend ductuscarcinoom\b:: invasief carcinoom nst 
+\binfiltrerend plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\binflammatory carcinoma\b:: inflammatoir carcinoom 
+\binflammatory pseudotumor\b:: inflammatoire pseudotumor 
+\bingegroeide nagel, teen\b:: ingegroeide teennagel 
+\binhalatiepneumonie\b:: aspiratiepneumonie 
+\binjectie\b:: infuus 
+\binleiding partus\b:: partus inleiding 
+\binsectesteek\b:: insectenbeet 
+\binsluitlichaam in de kern\b:: kernvacuole 
+\binsluitsel in het cytoplasma\b:: lewy lichaampje 
+\binsulinoma malignum\b:: insulinoom 
+\bintercapillaire glomerulosclerose\b:: diabetische glomerulopathie 
+\binterepitheliaal carcinoom\b:: plaveiselcelcarcinoma in situ 
+\binterfalangeaal gewricht teen\b:: gewricht teen 
+\binterfase menstruele cyclus\b:: endometrium in proliferatiefase 
+\bintermediair carcinoom\b:: urotheelcelcarcinoom 
+\bintermediaircel carcinoom\b:: urotheelcelcarcinoom 
+\binterstitiele graviditeit\b:: extra-uteriene graviditeit 
+\bintervalfase m\.c\.\b:: endometrium in proliferatiefase 
+\bintestinale villus\b:: darmvlok 
+\bintima arterie\b:: intima 
+\bintima arteriewand\b:: intima 
+\bintima van aorta\b:: intima aortae 
+\bintra epidermale naevus\b:: junction nevus 
+\bintracanaliculair adenofibroom\b:: intracanaliculair fibroadenoom 
+\bintracysteus carcinoom niet infiltrerend\b:: omkapseld papillair carcinoom 
+\bintracystisch carcinoom\b:: omkapseld papillair carcinoom 
+\bintracystisch carcinoom infiltrerend\b:: omkapseld papillair carcinoom 
+\bintracystisch carcinoom niet infiltrerend\b:: omkapseld papillair carcinoom 
+\bintradermal nevus\b:: dermale naevus 
+\bintraduct carcinoma\b:: ductaal carcinoma in situ 
+\bintraduct papilloma\b:: intraductaal papilloom 
+\bintraduct papillomatosis\b:: perifeer papilloom 
+\bintraductaal carcinoma in situ\b:: ductaal carcinoma in situ 
+\bintraductaal carcinoom mamma\b:: ductaal carcinoma in situ 
+\bintraductaal papilloom mamma\b:: intraductaal papilloom 
+\bintraductal carcinoma\b:: ductaal carcinoma in situ 
+\bintraductale epitheliose\b:: ductale hyperplasie 
+\bintra\-epidermaal basocellulair epithelioom (borst jadassohn)\b:: borst jadassohn 
+\bintra\-epidermaal carcinoom\b:: plaveiselcelcarcinoma in situ 
+\bintra\-epidermaal epithelioom van jadassohn\b:: borst jadassohn 
+\bintraepidermal carcinoma\b:: plaveiselcelcarcinoma in situ 
+\bintra\-epidermale naevus\b:: junction nevus 
+\bintramuraal uterus\b:: myometrium 
+\bintratubulair choriocarcinoom\b:: kiemcelneoplasie in situ 
+\bintratubulair non\-seminoom\b:: kiemcelneoplasie in situ 
+\binvasief plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\bionizing radiation\b:: radiotherapie 
+\birritability\b:: irritatie 
+\bischemic heart disease\b:: ischemische hartziekte syndroom 
+\bjeune's thoracaal dystrofie syndroom\b:: jeune 
+\bjonge vruchtzak\b:: vruchtzak 
+\bjunctional nevus\b:: junction nevus 
+\bjuveniel astrocytoom\b:: pilocytair astrocytoom 
+\bjuvenile melanoma\b:: spitz naevus 
+\bjuxta\-articulaire nodulus\b:: reumaknobbel 
+\bkalkconcrementen\b:: verkalking 
+\bkaposi's sarcoma\b:: kaposi sarcoom 
+\bkapsel testis\b:: tunica albuginea 
+\bkapsel van de nier\b:: nierkapsel 
+\bkartagener syndroom\b:: kartagener 
+\bkeelinhoud\b:: keelsecreet 
+\bkeelneusfibroom\b:: juveniel angiofibroom 
+\bkeloied\b:: keloid 
+\bkeratinization, metaplastic\b:: squameuze metaplasie 
+\bkeratocyste tand\b:: odontogene keratocyste 
+\bkeratosis inversa\b:: geinverteerde folliculaire keratose 
+\bkeratosis inversa follicularis\b:: geinverteerde folliculaire keratose 
+\bkeratosis senilis\b:: actinische keratose 
+\bkeratosis, inverted follicular\b:: geinverteerde folliculaire keratose 
+\bkernvacuolen\b:: kernvacuole 
+\bkernvacuolisatie\b:: kernvacuole 
+\bkienbock\b:: lunatomalacie 
+\bkippeborst\b:: kippenborst 
+\bklepprothese\b:: hartklepprothese 
+\bklier van bartholini\b:: klier van bartholin 
+\bklier van naboth\b:: cervixklier 
+\bklippel feil deformity\b:: klippel feil 
+\bknikvorming\b:: steeldraai 
+\bknoop van aschoff tawara\b:: sinusknoop 
+\bkoenen\b:: periunguaal fibroom 
+\bkohler ii\b:: morbus kohler 
+\bkoilocytotic atypia\b:: koilocytose 
+\bkolpitis senilis\b:: seniele kolpitis 
+\bkorsakoffs psychose\b:: wernicke 
+\bkraurose\b:: lichen sclerosus 
+\bkraurosis\b:: lichen sclerosus 
+\bkveim test reaction\b:: kveim test 
+\bkwaadaardige tumor\b:: maligniteit 
+\bkwab van hoffa\b:: corpus adiposum infrapatellare 
+\bkwabje van hoffa\b:: corpus adiposum infrapatellare 
+\bl\.e\. discoides\b:: discoide lupus erythematodes 
+\bl\.e\.d\.\b:: lupus erythematodes disseminatus 
+\blaaggradig neuroendocrien carcinoom\b:: neuroendocriene tumor graad 1 
+\blaat neonatale dood\b:: late neonatale dood 
+\blabium maius\b:: labium majus 
+\blactation disorder\b:: lactatie stoornis 
+\blacteal\b:: lactatie 
+\blacterend mammaweefsel\b:: mamma tijdens lactatie 
+\blafora body\b:: lewy lichaampje 
+\blappig fibroom\b:: irritatiefibroom 
+\blaterale ventrikels\b:: laterale ventrikel 
+\bledderhosen\b:: ledderhose 
+\blegionella pneumoniae\b:: legionella pneumophila 
+\bleigh\b:: subacute necrotiserende encefalomyelopathie 
+\bleiner's disease\b:: leiner 
+\bleiomyofibroom\b:: leiomyoom 
+\bleiomyomata\b:: leiomyoom 
+\blentigo maligne\b:: lentigo maligna 
+\blentigo maligne melanoom\b:: lentigo maligna melanoom 
+\blethal midline granuloma\b:: extranodaal nk/t-cel lymfoom 
+\bleucaemische reactie\b:: leucaemoide reactie 
+\bleukocytair infiltraat\b:: ontsteking 
+\bleukocyten in perifeer bloed\b:: leukocyt 
+\bleukocytopenie\b:: leukopenie 
+\bleukoencephalopathy, progressive multifocal\b:: progressieve multifocale leukoencefalopathie 
+\blever centrolobulair\b:: lever pericentraal 
+\blichaampje van barr\b:: vrouwelijk geslachtschromatinepatroon 
+\blichen atrophicans\b:: lichen sclerosus 
+\blichen sclerosis\b:: lichen sclerosus 
+\blichen sclerosis et atrophicans\b:: lichen sclerosus 
+\blichen sclerosis et atrophicus\b:: lichen sclerosus 
+\blichen sclerosus et atrophicans\b:: lichen sclerosus 
+\blichen simplex circumscriptus\b:: lichen simplex 
+\blichenoid dermatitis\b:: lichenoide dermatitis 
+\blidteken\b:: litteken 
+\bligament van de heup\b:: ligament heupgewricht 
+\bligament van de knie\b:: knieband 
+\bligamentum carpi transversum\b:: ligamentum carpale 
+\bligamentum ovarii proprium\b:: ligamentum ovarii 
+\bligatuur\b:: hechtmateriaal 
+\blineaire focale elastose\b:: striae 
+\blingula villosa\b:: hairy tongue 
+\blipidceltumor\b:: steroidcel tumor 
+\blipidceltumor ovarium\b:: steroidcel tumor 
+\blipofagengranuloom\b:: xanthogranulomateuze ontsteking 
+\blipohyperplasie\b:: lipomateuze hyperplasie 
+\blipoidcel tumor\b:: steroidcel tumor 
+\blipoidnefrose\b:: minimal change glomerulopathie 
+\blipomelanotische reticulose\b:: dermatopathische lymfadenopathie 
+\blipoprotein increase\b:: hyperlipoproteinaemie 
+\bliposarcoom myxoid\b:: myxoid liposarcoom 
+\blobulair adenocarcinoom\b:: infiltrerend lobulair carcinoom 
+\blobulair en ductaal carcinoom\b:: tubulolobulair carcinoom 
+\blobulaire epitheelhyperplasie mamma\b:: atypische lobulaire hyperplasie 
+\blobulaire epitheelproliferatie mamma\b:: atypische lobulaire hyperplasie 
+\blobulaire glomerulonefritis\b:: mesangiocapillaire glomerulonefritis 
+\blobus frontalis\b:: frontaalkwab 
+\blobus occipitalis\b:: occipitaalkwab 
+\blocaal hypertrofisch\b:: hypertrofie 
+\blocale focale glomerulonefritis\b:: locale focale glomerulopathie 
+\blocale glomerulosclerose\b:: focale glomerulosclerose 
+\blocale ontsteking\b:: focale ontsteking 
+\blocale weefselfout\b:: hamartoom 
+\blongalveolus\b:: alveolus long 
+\blongslagader\b:: arteria pulmonalis 
+\blow grade b\-cell lymphoma of malt\b:: extranodaal marginale zone lymfoom 
+\blupus erythematosus disseminatus\b:: lupus erythematodes disseminatus 
+\blupus erythematosus nephritis\b:: lupus nefritis 
+\blupus erythematosus, chronic discoid\b:: discoide lupus erythematodes 
+\bluteal cyst\b:: corpus luteum cyste 
+\bluteinizing hormone disorder\b:: l.h. stoornis 
+\blymfadenosis benigna cutis\b:: pseudolymfoom 
+\blymfangiectasis\b:: lymfangiectasie 
+\blymfangiografie effect\b:: lymfangiografie 
+\blymfatisch systeem\b:: lymfoid weefsel 
+\blymfatisch weefsel in de milt\b:: witte pulpa 
+\blymfklieren\b:: lymfklier 
+\blymfocytair lymfoom\b:: chronische lymfatische leukemie 
+\blymfocytair weefsel\b:: lymfoid weefsel 
+\blymfocytaire interstitiele pneumonie van liebow\b:: lymfocytaire interstitiele pneumonie 
+\blymfocyten in perifeer bloed\b:: lymfocyt 
+\blymfocytoom\b:: pseudolymfoom 
+\blymfoepitheliale cyste\b:: laterale halscyste 
+\blymfografie\b:: lymfangiografie 
+\blymfografie effect\b:: lymfangiografie 
+\blymfogranuloma malignum\b:: klassiek hodgkin lymfoom 
+\blymfogranuloom inguinaal\b:: lymfogranuloma venereum 
+\blymfoid weefsel van de appendix\b:: lymfoid weefsel appendix 
+\blymfoide granulomatose\b:: lymfomatoide granulomatose graad 1 en 2 
+\blymfoplasmacytair ml\b:: lymfoplasmacytair lymfoom 
+\blymfoplasmacytoid lymfoom\b:: lymfoplasmacytair lymfoom 
+\blymfoplasmatisch lymfoom le\b:: lymfoplasmacytair lymfoom 
+\blymfosarcoom\b:: maligne lymfoom 
+\blymphadenopathia dermatopathica\b:: dermatopathische lymfadenopathie 
+\blymphocytic infiltration van jessner\b:: jessner 
+\blymphoepithelioma malignum\b:: lymfoepitheliaal carcinoom 
+\blymphogranuloma malignum\b:: klassiek hodgkin lymfoom 
+\blymphoma malignum\b:: maligne lymfoom 
+\blymphoma, benign\b:: pseudolymfoom 
+\bm\.t\.t\.\b:: choriocarcinoom 
+\bm\.t\.u\.\b:: embryonaal carcinoom 
+\bmaag kleine curvatuur\b:: kleine curvatuur maag 
+\bmaag\-darm\-kanaal\b:: tractus digestivus 
+\bmacrofagen\b:: macrofaag 
+\bmacronodulaire levercirrose\b:: macronodulaire cirrose 
+\bmaffucci syndroom\b:: maffucci 
+\bmalariapigment\b:: pigment 
+\bmalherbe epithelioma\b:: pilomatricoom 
+\bmalignant lymphoma true histiocytic lu\b:: histiocytair sarcoom 
+\bmalignant melanoma\b:: melanoom 
+\bmalignant teratoma undifferentiated\b:: embryonaal carcinoom 
+\bmaligne angioendotheliomatose\b:: intravasculair grootcellig b-cel lymfoom 
+\bmaligne apudoom\b:: neuroendocriene tumor graad 1 
+\bmaligne blue naevus\b:: maligne blauwe naevus 
+\bmaligne carcinoid\b:: carcinoid 
+\bmaligne cylindroom\b:: adenoid cysteus carcinoom 
+\bmaligne cystosarcoma phylloides\b:: maligne phyllodes tumor 
+\bmaligne desmoplastisch melanoom\b:: desmoplastisch melanoom 
+\bmaligne endocriene tumor\b:: carcinoid 
+\bmaligne endometrioid cystadenofibroom\b:: endometrioid adenocarcinofibroom 
+\bmaligne ependymoom\b:: ependymoom 
+\bmaligne fibreus histiocytoom myxoide type\b:: myxofibrosarcoom 
+\bmaligne glucagonoom\b:: glucagonoom 
+\bmaligne granulosaceltumor\b:: granulosaceltumor 
+\bmaligne hepatoom\b:: hepatocellulair carcinoom 
+\bmaligne histiocytoom\b:: ongedifferentieerd pleiomorf sarcoom 
+\bmaligne insulinoom\b:: insulinoom 
+\bmaligne kiemcel tumor\b:: kiemcel tumor 
+\bmaligne leiomyoblastoom\b:: epithelioid leiomyosarcoom 
+\bmaligne lymfocytoom\b:: chronische lymfatische leukemie 
+\bmaligne lymfoepitheliale laesie\b:: extranodaal marginale zone lymfoom 
+\bmaligne lymfoom diffuus\b:: maligne lymfoom 
+\bmaligne mastocytose\b:: mestcelsarcoom 
+\bmaligne melanoblastoom\b:: melanoom 
+\bmaligne melanoom gemengd epithelioid en spoelcellig\b:: melanoom 
+\bmaligne mengtumor speekselkliertype\b:: carcinoom ex pleiomorf adenoom 
+\bmaligne mesodermale mengtumor\b:: carcinosarcoom 
+\bmaligne mesonefroom\b:: mesonefrisch adenocarcinoom 
+\bmaligne mixed mesodermal tumor\b:: carcinosarcoom 
+\bmaligne mixed mullerian tumor homoloog\b:: carcinosarcoom 
+\bmaligne nefrosclerose\b:: focale glomerulosclerose 
+\bmaligne neurilemmoom\b:: maligne perifere zenuwschede tumor 
+\bmaligne neurinoom\b:: maligne perifere zenuwschede tumor 
+\bmaligne neuroendocriene tumor\b:: grootcellig neuroendocrien carcinoom 
+\bmaligne oligodendroglioom\b:: oligodendroglioom graad 2 
+\bmaligne plasmacytoom\b:: plasmacytoom 
+\bmaligne plasmocytoom\b:: plasmacytoom 
+\bmaligne reticulose\b:: maligne lymfoom 
+\bmaligne sexcordstroma tumor\b:: sexcordstroma tumor 
+\bmaligne soft tissue tumor\b:: sarcoom 
+\bmaligne spermatocytoom\b:: spermatocytaire tumor 
+\bmaligne stromaceltumor gastrointestinaal\b:: gastrointestinale stromaceltumor 
+\bmaligne teratoom\b:: immatuur teratoom 
+\bmaligne teratoom gedifferentieerd\b:: immatuur teratoom 
+\bmaligne teratoom ongedifferentieerd\b:: embryonaal carcinoom 
+\bmaligne teratoom trofoblastair type\b:: choriocarcinoom 
+\bmaligne teratoom trofoblastisch type\b:: choriocarcinoom 
+\bmaligne thymoom\b:: thymoom 
+\bmaligniteit b\-cel origine\b:: b-cel lymfoom 
+\bmaligniteit t\-cel origine\b:: t-cel lymfoom 
+\bmalt lymfoom hoge maligniteitsgraad\b:: extranodaal marginale zone lymfoom 
+\bmalt lymfoom low grade\b:: extranodaal marginale zone lymfoom 
+\bmamma amputatiepreparaat\b:: mamma 
+\bmamma virilis\b:: gynaecomastie 
+\bmammavloeistof\b:: tepelvocht 
+\bmanlijk geslachtschromatine\b:: manlijk geslachtschromatinepatroon 
+\bmanlijke borstklier\b:: mamma man 
+\bmannelijk geslachtschromatinepatroon\b:: manlijk geslachtschromatinepatroon 
+\bmantelzone lymfoom\b:: mantelcel lymfoom 
+\bmarasmus\b:: cachexie 
+\bmastitis chronica cystica\b:: fibrocysteuze mastopathie 
+\bmastocytose beenmerg\b:: systemische mastocytose 
+\bmastocytose diffuus huid\b:: cutane mastocytose 
+\bmastoid antrum\b:: mastoid 
+\bmastopathia\b:: fibrocysteuze mastopathie 
+\bmastopathia chronica cystica\b:: fibrocysteuze mastopathie 
+\bmastopathia cystica\b:: fibrocysteuze mastopathie 
+\bmastopathia fibrocystica\b:: fibrocysteuze mastopathie 
+\bmastopathie met fibrose\b:: fibrocysteuze mastopathie 
+\bmatig gedifferentieerd adenocarcinoom\b:: adenocarcinoom 
+\bmatig gedifferentieerd plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\bmature neonatus\b:: neonaat 
+\bmaturity\b:: volwassen 
+\bmeatus acusticus internus\b:: inwendige gehoorgang 
+\bmeatus auditorius externus\b:: uitwendige gehoorgang 
+\bmeatus urinarius\b:: meatus urethrae 
+\bmedia arterie\b:: media 
+\bmedial meniscus of knee joint\b:: mediale meniscus kniegewricht 
+\bmediane alveolaire cyste\b:: nasolabiale cyste 
+\bmediastinum posterius\b:: achterste mediastinum 
+\bmediaverkalking van monckeberg\b:: mediasclerose 
+\bmediterranean type abdominal lymphoma\b:: immunoproliferatieve dunne darmziekte 
+\bmedulla renis\b:: niermerg 
+\bmedullair adenocarcinoom\b:: medullair carcinoom 
+\bmeerlingen\b:: meerling 
+\bmegakaryocytenleukemie\b:: acute megakaryoblastenleukemie 
+\bmegakaryocytische myelosclerose\b:: primaire myelofibrose 
+\bmegakaryocytopoiesis, extramedullary\b:: extramedullaire haematopoiese 
+\bmegaloblasten in het perifere bloed\b:: megaloblastose 
+\bmegalocytaire anemie\b:: megaloblastaire anemie 
+\bmegalosplenie\b:: splenomegalie 
+\bmeibom cyste\b:: chalazion 
+\bmeibomian gland\b:: klier van meibom 
+\bmelanoblastoom\b:: melanoom 
+\bmelanocytoma of the eyeball\b:: melanocytoom 
+\bmelanoderma\b:: chloasma 
+\bmelanoma malignum\b:: melanoom 
+\bmelanoom metastasen\b:: metastase melanoom 
+\bmelanoom spoelcellig type b\b:: ballooncell melanoom 
+\bmelanoommetastase\b:: metastase melanoom 
+\bmelanophoren\b:: melanosis 
+\bmelanosarcoom\b:: melanoom 
+\bmelanosis naeviformis\b:: becker's naevus 
+\bmelanotic freckle hutchinson\b:: lentigo maligna 
+\bmelkersson's syndrome\b:: melkersson rosenthal 
+\bmelkgangcarcinoom\b:: invasief carcinoom nst 
+\bmelkgangpapilloom\b:: intraductaal papilloom 
+\bmelkgebit\b:: melktand 
+\bmelklijst\b:: accessoire tepel 
+\bmembrana synovialis\b:: synoviale membraan 
+\bmembraneus prolifererende glomerulonefritis\b:: mesangiocapillaire glomerulonefritis 
+\bmembraneuze glomerulonefritis type 1\b:: membraneuze glomerulopathie 
+\bmembraneuze glomerulonefritis type 2\b:: membraneuze glomerulopathie 
+\bmembranoproliferatieve glomerulonefritis type 2\b:: dense deposit disease 
+\bmen syndroom i\b:: men syndroom 1 
+\bmen syndroom iia\b:: men syndroom 2a 
+\bmenggezwel\b:: pleiomorf adenoom 
+\bmengglioom graad 3\b:: anaplastisch oligoastrocytoom 
+\bmeninges\b:: meningen 
+\bmeningiaal sarcoom\b:: anaplastisch meningeoom 
+\bmeningiosarcoom\b:: anaplastisch meningeoom 
+\bmeningococcen\b:: meningococ 
+\bmeningococcen infectie\b:: meningococ 
+\bmeniscus medialis\b:: mediale meniscus kniegewricht 
+\bmenometrorrhagia\b:: menometrorragie 
+\bmenopausaal endometrium\b:: endometrium in postmenopauze 
+\bmenopause\b:: menopauze 
+\bmenstrueel uterusslijmvlies\b:: endometrium in menstruatiefase 
+\bmenstruele stoornis\b:: onregelmatige cyclus 
+\bmenstruerend endometrium\b:: endometrium in menstruatiefase 
+\bmerg van de nier\b:: niermerg 
+\bmesangiocapillaire glomerulonefritis type 2\b:: dense deposit disease 
+\bmesangioproliferatieve glomerulonefritis type 1\b:: mesangioproliferatieve glomerulonefritis 
+\bmesangiumverbreding glomerulus\b:: mesangioproliferatieve glomerulonefritis 
+\bmesoblasten nefroom\b:: congenitaal mesoblastisch nefroom 
+\bmesodermale mengtumor\b:: carcinosarcoom 
+\bmesonefroom\b:: mesonefrisch adenocarcinoom 
+\bmesotheellaag van de pleura\b:: mesotheel pleura 
+\bmesotheelsarcoom\b:: sarcomatoid mesothelioom 
+\bmesothelioma biphasic type malignant\b:: bifasisch mesothelioom 
+\bmesothelioma, malignant\b:: mesothelioom 
+\bmesothelioom adenomatoid benigne\b:: adenomatoide tumor 
+\bmestcellen\b:: mestcel 
+\bmestcellenleukemie\b:: mestcelleukemie 
+\bmetacarpale ii\b:: metacarpale 2 
+\bmetacarpale iii\b:: metacarpale 3 
+\bmetacarpale v\b:: metacarpale 5 
+\bmetacarpophalangeale gewricht\b:: metacarpofalangeaal gewricht 
+\bmetafyse bot\b:: metafyse 
+\bmetaphyse bot\b:: metafyse 
+\bmetaplastisch meningeoom\b:: meningeoom 
+\bmetaplastisch verhoornend epitheel\b:: squameuze metaplasie 
+\bmetaplastische keratinisatie\b:: squameuze metaplasie 
+\bmetastase adenocarcinoma colloides\b:: metastase mucineus carcinoom 
+\bmetastase alveolar soft part sarcoom\b:: metastase alveolair soft part sarcoom 
+\bmetastase anaplastisch adenocarcinoom\b:: metastase anaplastisch carcinoom 
+\bmetastase astrocytoom graad 4\b:: metastase glioblastoom 
+\bmetastase basosquameuscel carcinoom\b:: metastase basosquameus carcinoom 
+\bmetastase carcinoma solidum\b:: metastase anaplastisch carcinoom 
+\bmetastase clearcell sarcoma of tendons and aponeuroses\b:: metastase clearcell sarcoom van de weke delen 
+\bmetastase cystadenocarcinoma mucinosum\b:: metastase mucineus cystadenocarcinoom 
+\bmetastase cystadenocarcinoma papilliferum mucinosum\b:: metastase papillair mucineus carcinoom 
+\bmetastase cystadenocarcinoma papilliferum serosum\b:: metastase sereus cystadenocarcinoom 
+\bmetastase cystadenocarcinoma serosum\b:: metastase sereus cystadenocarcinoom 
+\bmetastase cystadenocarcinoma serosum papilliferum\b:: metastase sereus cystadenocarcinoom 
+\bmetastase cystosarcoma phyllodes\b:: metastase maligne phyllodes tumor 
+\bmetastase dermatofibrosarcoom\b:: metastase fibrosarcomateus dermatofibrosarcoma protuberans 
+\bmetastase ductuscarcinoom infiltrerend\b:: metastase invasief carcinoom nst 
+\bmetastase endodermal sinus tumor\b:: metastase dooierzak tumor 
+\bmetastase endometroid carcinoom\b:: metastase endometrioid carcinoom 
+\bmetastase ependymoom graad 3\b:: metastase anaplastische ependymoom 
+\bmetastase epithelioid cell melanoma\b:: metastase melanoom 
+\bmetastase epithelioid en spoelcellig melanoom\b:: metastase melanoom 
+\bmetastase epitheloide maligne perifere zenuwschede tumor\b:: metastase epithelioide maligne perifere zenuwschede tumor 
+\bmetastase ewing's sarcoom\b:: metastase ewing 
+\bmetastase extra\-ovarieel adenocarcinoom\b:: metastase sereus cystadenocarcinoom 
+\bmetastase fibrosarcoma protuberans\b:: metastase fibrosarcomateus dermatofibrosarcoma protuberans 
+\bmetastase granulosacelcarcinoom\b:: metastase granulosaceltumor 
+\bmetastase grootcellig ongedifferentieerd carcinoom\b:: metastase grootcellig carcinoom 
+\bmetastase grootcellig solide carcinoom\b:: metastase anaplastisch carcinoom 
+\bmetastase hemangioendotheliosarcoom\b:: metastase maligne hemangioendothelioom 
+\bmetastase hemangiosarcoom\b:: metastase angiosarcoom 
+\bmetastase hepatoma\b:: metastase hepatocellulair carcinoom 
+\bmetastase hooggradig neuroendocrien carcinoom\b:: metastase grootcellig neuroendocrien carcinoom 
+\bmetastase hypernefroom\b:: metastase heldercellig niercelcarcinoom 
+\bmetastase infiltrerend ductuscarcinoom\b:: metastase invasief carcinoom nst 
+\bmetastase insulinoma malignum\b:: metastase insulinoom 
+\bmetastase kleincellig ongedifferentieerd carcinoom\b:: metastase kleincellig carcinoom 
+\bmetastase laaggradig carcinoom\b:: metastase laaggradig sereus carcinoom 
+\bmetastase laaggradig neuroendocrien carcinoom\b:: metastase neuroendocriene tumor graad 1 
+\bmetastase longblastoom\b:: metastase pulmonaal blastoom 
+\bmetastase lymfoepitheliaal carcinoom van schmincke\b:: metastase lymfoepitheliaal carcinoom 
+\bmetastase m\.t\.t\.\b:: metastase choriocarcinoom 
+\bmetastase m\.t\.u\.\b:: metastase embryonaal carcinoom 
+\bmetastase maligne apudoom\b:: metastase neuroendocriene tumor graad 1 
+\bmetastase maligne carcinoid\b:: metastase carcinoid 
+\bmetastase maligne chemodectoom\b:: metastase paraganglioom 
+\bmetastase maligne cylindroom\b:: metastase adenoid cystisch carcinoom 
+\bmetastase maligne cystadenofibroom\b:: metastase maligne adenofibroom 
+\bmetastase maligne endometrioid cystadenofibroom\b:: metastase endometrioid adenocarcinofibroom 
+\bmetastase maligne epithelioid schwannoom\b:: metastase maligne perifere zenuwschede tumor 
+\bmetastase maligne gastrinoom\b:: metastase gastrinoom 
+\bmetastase maligne glucagonoom\b:: metastase glucagonoom 
+\bmetastase maligne insulinoom\b:: metastase insulinoom 
+\bmetastase maligne kiemcel tumor\b:: metastase kiemcel tumor 
+\bmetastase maligne leiomyoblastoom\b:: metastase epithelioid leiomyosarcoom 
+\bmetastase maligne mengtumor van muller\b:: metastase carcinosarcoom 
+\bmetastase maligne mesoblastisch nefroom\b:: metastase nefroblastoom 
+\bmetastase maligne neuroendocriene tumor\b:: metastase grootcellig neuroendocrien carcinoom 
+\bmetastase maligne schwannoom\b:: metastase maligne perifere zenuwschede tumor 
+\bmetastase maligne teratoom\b:: metastase immatuur teratoom 
+\bmetastase maligne teratoom gedifferentieerd\b:: metastase immatuur teratoom 
+\bmetastase maligne teratoom ongedifferentieerd\b:: metastase embryonaal carcinoom 
+\bmetastase maligne teratoom trofoblastair type\b:: metastase choriocarcinoom 
+\bmetastase maligne teratoom trofoblastische type\b:: metastase choriocarcinoom 
+\bmetastase maligne thymoom\b:: metastase thymoom 
+\bmetastase medullair adenocarcinoom\b:: metastase medullair carcinoom 
+\bmetastase melanoblastoom\b:: metastase melanoom 
+\bmetastase melanoom spoelcellig type b\b:: metastase ballooncell melanoom 
+\bmetastase melkgangcarcinoom\b:: metastase invasief carcinoom nst 
+\bmetastase mesodermale mengtumor\b:: metastase carcinosarcoom 
+\bmetastase mesotheelsarcoom\b:: metastase sarcomatoid mesothelioom 
+\bmetastase mesothelioom bifasisch\b:: metastase bifasisch mesothelioom 
+\bmetastase mesothelioom gemengde type\b:: metastase bifasisch mesothelioom 
+\bmetastase mixed mesodermal tumor\b:: metastase carcinosarcoom 
+\bmetastase myofibroblasten sarcoom\b:: metastase laaggradig myofibroblastair sarcoom 
+\bmetastase neuroectodermale tumor\b:: metastase ewing 
+\bmetastase neuroendocrien carcinoom\b:: metastase grootcellig neuroendocrien carcinoom 
+\bmetastase niet kleincellig longcarcinoom\b:: metastase niet kleincellig carcinoom 
+\bmetastase oatcel carcinoom\b:: metastase kleincellig carcinoom 
+\bmetastase oatcell carcinoom\b:: metastase kleincellig carcinoom 
+\bmetastase ongedifferentieerde maligne tumor\b:: metastase maligne tumor 
+\bmetastase osteogeen sarcoom\b:: metastase osteosarcoom 
+\bmetastase overgangscellencarcinoom\b:: metastase urotheelcelcarcinoom 
+\bmetastase oxyfiel adenocarcinoom\b:: metastase oncocytair carcinoom 
+\bmetastase perifere neuroectodermale tumor\b:: metastase ewing 
+\bmetastase pleiomorf adenocarcinoom\b:: metastase pleiomorf carcinoom 
+\bmetastase polymorfcellig carcinoom\b:: metastase pleiomorf carcinoom 
+\bmetastase polymorfcellig sarcoom\b:: metastase ongedifferentieerd pleiomorf sarcoom 
+\bmetastase pseudosarcomateus carcinoom\b:: metastase spoelcellig carcinoom 
+\bmetastase scleroserend epitheloid fibrosarcoom\b:: metastase scleroserend epithelioid fibrosarcoom 
+\bmetastase slecht gedifferentieerd adenocarcinoom\b:: metastase adenocarcinoom 
+\bmetastase solide carcinoom\b:: metastase anaplastisch carcinoom 
+\bmetastase soliede carcinoom\b:: metastase anaplastisch carcinoom 
+\bmetastase spongioblastoma polare\b:: metastase spongioblastoom 
+\bmetastase squameuscel carcinoom\b:: metastase plaveiselcelcarcinoom 
+\bmetastase synoviaal sarcoom epithelioidcel type\b:: metastase synoviosarcoom epithelioidcel type 
+\bmetastase synoviaal sarcoom monofasisch\b:: metastase synoviosarcoom monofasisch 
+\bmetastase teratocarcinoom\b:: metastase teratoom met maligne transformatie 
+\bmetastasee sarcomatoid mesothelioom\b:: metastase sarcomatoid mesothelioom 
+\bmetatarsale i\b:: metatarsale 1 
+\bmetatarsale ii\b:: metatarsale 2 
+\bmetatarsale v\b:: metatarsale 5 
+\bmetatypical carcinoma\b:: basosquameus carcinoom 
+\bmethotrexate\b:: methotrexaat 
+\bmicroabcedering\b:: microabces 
+\bmicroabscedering\b:: microabces 
+\bmicroabsces\b:: microabces 
+\bmicrocephaal\b:: microcefalie 
+\bmicrocysteus papillair adenoom\b:: microcysteus adenoom 
+\bmicroencefalie\b:: microcefalie 
+\bmicromelia\b:: micromelie 
+\bmicropolypeuze ontsteking\b:: inflammatoire fibroide poliep 
+\bmicroscopisch thymoom\b:: thymoom 
+\bmidline granuloma\b:: extranodaal nk/t-cel lymfoom 
+\bmidzonale necrose\b:: centrolobulaire necrose 
+\bmiescher melkerson rosenthal\b:: melkersson rosenthal 
+\bmilkers nodule\b:: orf 
+\bmineraal corpus alienum\b:: corpus alienum 
+\bminimal lesions\b:: minimal change glomerulopathie 
+\bmitraalkleppen\b:: mitralisklep 
+\bmitralisring\b:: annulus fibrosus mitralis 
+\bmixed glioma\b:: oligoastrocytoom 
+\bmixed mesodermal tumor\b:: carcinosarcoom 
+\bmixed mesodermal tumor, malignant\b:: carcinosarcoom 
+\bmixed mullerian tumor, malignant\b:: carcinosarcoom 
+\bml\b:: maligne lymfoom 
+\bml aild\-like\b:: angioimmunoblastair t-cel lymfoom 
+\bml angiocentrisch t\-cel type\b:: extranodaal nk/t-cel lymfoom 
+\bml angioimmunoblastair t\-cel type\b:: angioimmunoblastair t-cel lymfoom 
+\bml angioimmunoblastaire lymfadenopathie\b:: angioimmunoblastair t-cel lymfoom 
+\bml angioimmunoblastaire lymfadenopathie type\b:: angioimmunoblastair t-cel lymfoom 
+\bml angiotroop b\-cel type\b:: intravasculair grootcellig b-cel lymfoom 
+\bml b c\.l\.l\.\b:: chronische lymfatische leukemie 
+\bml b\-cel\b:: b-cel lymfoom 
+\bml b\-cel type\b:: b-cel lymfoom 
+\bml burkitt type\b:: burkitt lymfoom 
+\bml centroblastair centrocytair\b:: follikelcentrum lymfoom diffuus 
+\bml centroblastair centrocytair diffuus\b:: follikelcentrum lymfoom diffuus 
+\bml centroblastair centrocytair diffuus le\b:: follikelcentrum lymfoom diffuus 
+\bml centroblastair centrocytair folliculair\b:: folliculair lymfoom graad 1 en 2 
+\bml centroblastair centrocytair folliculair le\b:: folliculair lymfoom graad 1 en 2 
+\bml centroblastair folliculair\b:: folliculair lymfoom graad 3 
+\bml centroblastisch centrocytisch\b:: follikelcentrum lymfoom diffuus 
+\bml centroblastisch centrocytisch diffuus\b:: follikelcentrum lymfoom diffuus 
+\bml centroblastisch centrocytisch diffuus le\b:: follikelcentrum lymfoom diffuus 
+\bml centroblastisch centrocytisch folliculair\b:: folliculair lymfoom graad 1 en 2 
+\bml centroblastisch centrocytisch folliculair le\b:: folliculair lymfoom graad 1 en 2 
+\bml centrocytair centroblastair\b:: follikelcentrum lymfoom diffuus 
+\bml clearcell type\b:: follikelcentrum lymfoom diffuus 
+\bml diffuus\b:: maligne lymfoom 
+\bml folliculair\b:: folliculair lymfoom 
+\bml grootcellig anaplastisch t\-cel type\b:: grootcellig anaplastisch t-cel lymfoom 
+\bml immunoblastair\b:: diffuus grootcellig b-cel lymfoom 
+\bml immunoblastair b\b:: diffuus grootcellig b-cel lymfoom 
+\bml immunoblastisch\b:: diffuus grootcellig b-cel lymfoom 
+\bml immunocytoom\b:: lymfoplasmacytair lymfoom 
+\bml immunocytoom lymfoplasmacytair\b:: lymfoplasmacytair lymfoom 
+\bml immunocytoom lymfoplasmacytoid\b:: lymfoplasmacytair lymfoom 
+\bml immunocytoom lymfoplasmocytair\b:: lymfoplasmacytair lymfoom 
+\bml immunocytoom polymorf\b:: lymfoplasmacytair lymfoom 
+\bml ki 1 positief\b:: grootcellig anaplastisch t-cel lymfoom 
+\bml ki een positief grootcellig anaplastisch\b:: grootcellig anaplastisch t-cel lymfoom 
+\bml kleincellig lymfocytair b\-cel c\.l\.l\.\b:: chronische lymfatische leukemie 
+\bml lymfoblastair b\b:: b-lymfoblastair lymfoom 
+\bml lymfoblastair b\-cel type\b:: b-lymfoblastair lymfoom 
+\bml lymfoblastair burkitt le\b:: burkitt lymfoom 
+\bml lymfoblastair burkitt type\b:: burkitt lymfoom 
+\bml lymfoblastair t\b:: t-lymfoblastair lymfoom 
+\bml lymfoblastair t\-cel type\b:: t-lymfoblastair lymfoom 
+\bml lymfoblastair t\-cell type\b:: t-lymfoblastair lymfoom 
+\bml lymfoblastisch t cell type\b:: t-lymfoblastair lymfoom 
+\bml lymfocytair\b:: chronische lymfatische leukemie 
+\bml lymfocytair b\b:: chronische lymfatische leukemie 
+\bml lymfocytair b c\.l\.l\.\b:: chronische lymfatische leukemie 
+\bml lymfocytair b c\.l\.l\.type\b:: chronische lymfatische leukemie 
+\bml lymfocytair b\-cel\b:: chronische lymfatische leukemie 
+\bml lymfocytair c\.l\.l\.\b:: chronische lymfatische leukemie 
+\bml lymfocytair chronische lymfatische leukemie\b:: chronische lymfatische leukemie 
+\bml lymfocytair goed gedifferentieerd\b:: chronische lymfatische leukemie 
+\bml lymfoplasmacytair\b:: lymfoplasmacytair lymfoom 
+\bml lymfoplasmacytoid\b:: lymfoplasmacytair lymfoom 
+\bml lymfoplasmocytair\b:: lymfoplasmacytair lymfoom 
+\bml malt type\b:: extranodaal marginale zone lymfoom 
+\bml marginale zone type\b:: nodaal marginale zone lymfoom 
+\bml monocytoid\b:: marginale zone lymfoom, milt-type 
+\bml monocytoid b\-cel\b:: marginale zone lymfoom, milt-type 
+\bml multilobated b\-cel origine\b:: diffuus grootcellig b-cel lymfoom 
+\bml ongedifferentieerd burkitt ra\b:: burkitt lymfoom 
+\bml plasmocytoide type\b:: lymfoplasmacytair lymfoom 
+\bml pleiomorf t cell\b:: perifeer t-cel lymfoom 
+\bml pleomorf t cel\b:: perifeer t-cel lymfoom 
+\bml t\-cel lymfoom\b:: t-cel lymfoom 
+\bml t\-cel type\b:: t-cel lymfoom 
+\bml true histiocytic\b:: histiocytair sarcoom 
+\bml true histiocytic lu\b:: histiocytair sarcoom 
+\bmoeilijk in te delen afwijkende cytologie\b:: pap 2 
+\bmola destruens\b:: invasieve mola 
+\bmoleculair biologie\b:: moleculaire diagnostiek 
+\bmollusca contagiosa\b:: molluscum contagiosum 
+\bmonckeberg's medial calcification\b:: mediasclerose 
+\bmongolisme\b:: trisomie 21 
+\bmongoloide idiotie\b:: trisomie 21 
+\bmongool\b:: trisomie 21 
+\bmonocytaire cellen\b:: monocyt 
+\bmonocytaire elementen\b:: monocyt 
+\bmonocyten in bloed\b:: monocyt 
+\bmonocyten in het bloed\b:: monocyt 
+\bmononucleosis, infectious\b:: mononucleosis infectiosa 
+\bmorbus albright bot\b:: albright's syndrome 
+\bmorbus alpers\b:: alpers 
+\bmorbus basedow\b:: thyreotoxicose 
+\bmorbus bechterew\b:: bechterew 
+\bmorbus berger\b:: iga nefropathie 
+\bmorbus besnier boeck\b:: sarcoidose 
+\bmorbus besnier boeck schaumann\b:: sarcoidose 
+\bmorbus binswanger\b:: binswanger 
+\bmorbus borst jadassohn\b:: borst jadassohn 
+\bmorbus bourneville pringle\b:: tubereuze sclerose 
+\bmorbus burger\b:: thromboangiitis obliterans 
+\bmorbus creutzfeldt jakob\b:: creutzfeldt jakob 
+\bmorbus dercum\b:: lipomatosis dolorosa 
+\bmorbus erdheim chester\b:: erdheim chester 
+\bmorbus fordyce\b:: fordyce 
+\bmorbus fox fordyce\b:: fox fordyce 
+\bmorbus gardner\b:: gardner 
+\bmorbus gilbert\b:: gilbert 
+\bmorbus haily haily\b:: hailey hailey 
+\bmorbus hallervorden spatz\b:: hallervorden spatz 
+\bmorbus hodgkin gemengdcellig type\b:: hodgkin gemengdcellig 
+\bmorbus hodgkin gemengdcellige vorm\b:: hodgkin gemengdcellig 
+\bmorbus hodgkin lymfocytair\b:: hodgkin klassiek lymfocytenrijk 
+\bmorbus hodgkin lymfocytenarm\b:: hodgkin lymfocytenarm 
+\bmorbus hodgkin lymfocytenarme vorm\b:: hodgkin lymfocytenarm 
+\bmorbus hodgkin lymfocytendepletie\b:: hodgkin lymfocytenarm 
+\bmorbus hodgkin lymfocytenrijke vorm\b:: hodgkin klassiek lymfocytenrijk 
+\bmorbus hodgkin nodulair scleroserende vorm\b:: hodgkin nodulair scleroserend 
+\bmorbus jakob creutzfeldt\b:: creutzfeldt jakob 
+\bmorbus kienbock\b:: lunatomalacie 
+\bmorbus kohler i\b:: aseptische necrose os naviculare 
+\bmorbus kuf\b:: neuronale lipofuscinose 
+\bmorbus leigh\b:: subacute necrotiserende encefalomyelopathie 
+\bmorbus malherbe\b:: pilomatricoom 
+\bmorbus meckel gruber\b:: meckel gruber 
+\bmorbus merzbacher pelizaeus\b:: sudanofiele leukodystrofie 
+\bmorbus miescher melkersson rosenthal\b:: melkersson rosenthal 
+\bmorbus mikulicz\b:: mikulicz 
+\bmorbus morton\b:: metatarsalgie 
+\bmorbus mucha habermann\b:: p.l.e.v.a. 
+\bmorbus ormond\b:: retroperitoneale fibrose 
+\bmorbus osgood schlatter\b:: osteochondrose 
+\bmorbus osler rendu\b:: rendu osler 
+\bmorbus pringle\b:: tubereuze sclerose 
+\bmorbus quervain de\b:: thyreoiditis van quervain 
+\bmorbus raynaud\b:: raynaud 
+\bmorbus recklinghausen von, neurofibromatosis\b:: neurofibromatose 
+\bmorbus riedel\b:: riedel 
+\bmorbus scheuermann\b:: scheuermann 
+\bmorbus schimmelbusch\b:: fibrocysteuze mastopathie 
+\bmorbus sezary\b:: sezary 
+\bmorbus shy\-drager\b:: multisysteem atrofie 
+\bmorbus takayasu\b:: takayasu 
+\bmorbus van batten\b:: spielmeyer vogt 
+\bmorbus vaquez\b:: polycythemia vera 
+\bmorbus weber christian\b:: weber christian 
+\bmorbus werlhof\b:: idiopathische trombocytopenische purpura 
+\bmorbus werllhof\b:: idiopathische trombocytopenische purpura 
+\bmorbus wernicke\b:: wernicke 
+\bmorbus woringer kolopp\b:: mycosis fungoides 
+\bmorphoea\b:: morphea 
+\bmotorische afwijking\b:: motorische stoornis 
+\bmotorische zone\b:: motorische schors 
+\bmucineus carcinoid\b:: gobletcel carcinoom 
+\bmucineus cystoom\b:: mucineus cystadenoom 
+\bmucineus tabulair en spoelcel carcinoom\b:: mucineus tubulair en spoelcel carcinoom 
+\bmucinous carcinoma\b:: mucineus carcinoom 
+\bmucinous cystadenocarcinoma\b:: mucineus cystadenocarcinoom 
+\bmucinous cystadenoma\b:: mucineus cystadenoom 
+\bmucocarcinoid tumor\b:: gobletcel carcinoom 
+\bmucoepidermoid tumor\b:: mucoepidermoid carcinoom 
+\bmucoid epidermoid carcinoom\b:: mucoepidermoid carcinoom 
+\bmucosa appendicis\b:: slijmvlies appendix 
+\bmucosa ilei\b:: slijmvlies ileum 
+\bmucosa labii superioris\b:: slijmvlies bovenlip 
+\bmucosa sinus frontalis\b:: slijmvlies voorhoofdsholte 
+\bmucosa van bronchioli\b:: slijmvlies bronchiolus 
+\bmucosa van de galblaas\b:: slijmvlies galblaas 
+\bmucous cyst\b:: mucineuze cyste 
+\bmucoviscidosis\b:: cystic fibrosis 
+\bmulluscum contagiosum\b:: molluscum contagiosum 
+\bmulticentrisch basalioom\b:: basaalcelcarcinoom superficieel type 
+\bmultipele abscessen\b:: abces 
+\bmultipele bloedingen\b:: bloeding 
+\bmultipele erosie\b:: erosieve ontsteking 
+\bmultipele hereditaire exostosen\b:: multipele osteochondromen 
+\bmultipele myeloom\b:: multipel myeloom 
+\bmultipele polypose\b:: multipele adenomateuze poliepen 
+\bmultiple myeloma\b:: multipel myeloom 
+\bmultiple sclerosis\b:: multipele sclerose 
+\bmuscle of hip and thigh\b:: spier dijbeen 
+\bmuscular disorder\b:: motorische stoornis 
+\bmuscularis dikke darm\b:: muscularis propria colon 
+\bmuscularis propria ureter\b:: spierlaag van de ureter 
+\bmuscularis propria van de urineblaas\b:: muscularis urineblaas 
+\bmuscularis ureter\b:: spierlaag van de ureter 
+\bmusculus arrector pili\b:: haarspier 
+\bmusculus intercostalis\b:: intercostaal spier 
+\bmusculus papillaris posterior ventriculi\b:: papillairspier hartventrikel 
+\bmusculus sphincter ani\b:: anussfincter 
+\bmusculus sphincter ani externus\b:: anussfincter 
+\bmycobacteriele infectie atypisch\b:: atypische mycobacteriele infectie 
+\bmyeloblastic leukemia\b:: acute myeloide leukemie 
+\bmyelodysplasie cmmol\b:: chronische myelomonocytenleukemie 
+\bmyelomatosis\b:: multipel myeloom 
+\bmyelophthisic anemia\b:: myeloftisische anemie 
+\bmyeloproliferatief syndroom\b:: myeloproliferatieve neoplasie 
+\bmyeloproliferatieve aandoening\b:: myeloproliferatieve neoplasie 
+\bmyeloproliferatieve afwijking\b:: myeloproliferatieve neoplasie 
+\bmyeloproliferatieve stoornis\b:: myeloproliferatieve neoplasie 
+\bmyeloproliferatieve ziekte\b:: myeloproliferatieve neoplasie 
+\bmyeloproliferative disorder\b:: myeloproliferatieve neoplasie 
+\bmyelosclerose met myeloide metaplasie\b:: primaire myelofibrose 
+\bmyoblastoma granulare\b:: granulaircel tumor 
+\bmyocardweefsel\b:: myocard 
+\bmyocosis fungoides\b:: mycosis fungoides 
+\bmyogene atrofie\b:: spierdystrofie 
+\bmyolyse\b:: rhabdomyolyse 
+\bmyolysis\b:: rhabdomyolyse 
+\bmyomen\b:: leiomyoom 
+\bmyoom\b:: leiomyoom 
+\bmyopathie met tubular aggregates\b:: myotubulaire myopathie 
+\bmyosarcoom\b:: leiomyosarcoom 
+\bmyxoid fibrosarcoom\b:: myxofibrosarcoom 
+\bmyxoma cordis\b:: myxoom 
+\bmyxoom intramusculair\b:: intramusculair myxoom 
+\bmyxopapillair ependymoom graad 1\b:: myxopapillair ependymoom 
+\bnaevi\b:: naevus naevocellularis 
+\bnaevi pigmentosi\b:: naevus naevocellularis 
+\bnaevi pigmentosi papillomatosi\b:: naevus naevocellularis 
+\bnaevoid basaalcelepithelioom syndroom\b:: basaalcel naevus syndroom 
+\bnaevoxanthoendothelioom\b:: juveniel xanthogranuloom 
+\bnaevus caeruleus\b:: blauwe naevus 
+\bnaevus cellularis\b:: naevus naevocellularis 
+\bnaevus fibromatosis\b:: naevus fibromatosus 
+\bnaevus linearis\b:: lineaire epidermale naevus 
+\bnaevus lipomatosis\b:: naevus lipomatosus 
+\bnaevus met junction activiteit\b:: meltump 
+\bnaevus naevocellulare\b:: naevus naevocellularis 
+\bnaevus naevocellularis dermalis\b:: dermale naevus 
+\bnaevus naevocellularis met junction activiteit\b:: meltump 
+\bnaevus naevocellularis pigmentosis papillomatosis\b:: naevus naevocellularis 
+\bnaevus papillomatosis\b:: naevus naevocellularis 
+\bnaevus pigmentosis\b:: naevus naevocellularis 
+\bnaevus pigmentosus dermalis\b:: dermale naevus 
+\bnaevus sebaceus senilis\b:: naevus sebaceus 
+\bnaevus telangiectaticum\b:: naevus flammeus 
+\bnaevus unilateralis\b:: lineaire epidermale naevus 
+\bnaevus unius lateris\b:: lineaire epidermale naevus 
+\bnaevus verrucosis\b:: naevus verrucosus 
+\bnasolacrimal duct\b:: ductus nasolacrimalis 
+\bnavelgebied\b:: navelstreek 
+\bnavelstreng met echte knoop\b:: navelstreng ware knoop 
+\bnavelstreng om kindsdeel\b:: omstrengeling 
+\bnavelstreng pathologie\b:: navelstrengafwijking 
+\bnavelstrengvat\b:: navelstrengbloedvat 
+\bnavelvaten\b:: navelstrengbloedvat 
+\bnavelvene\b:: vena umbilicalis 
+\bneckdissectie\b:: nekdissectie 
+\bnecrose van tumorweefsel\b:: tumornecrose 
+\bnecrotiserende abscederende ontsteking\b:: necrotiserende ontsteking 
+\bnefritis bij l\.e\.\b:: lupus nefritis 
+\bneonataal stadium\b:: neonataal 
+\bnephrectomy\b:: nefrectomie 
+\bnephrosclerosis arteriosclerotica\b:: nephrosclerosis 
+\bnervus acusticus\b:: brughoek 
+\bnervus digitalis dorsalis voet\b:: nervus digitalis dorsalis pedis 
+\bnesidioblastoom\b:: eilandceltumor 
+\bnesidioom\b:: neurocrien microadenoom 
+\bneuroectodermale tumor perifeer\b:: ewing 
+\bneurogene spieratrofie\b:: neurogene atrofie 
+\bneurolemma\b:: neurilemma 
+\bneurolues\b:: dementia paralytica 
+\bneuroma, traumatic\b:: traumatisch neuroom 
+\bneuroom solitair circumscript van huid\b:: solitair circumscript neuroom 
+\bneuropathie sensorisch motorisch erfelijk\b:: sensorische en motorische neuropathie 
+\bneusbijholten\b:: neusbijholte 
+\bneusglioom\b:: nasale gliale heterotopie 
+\bneusslijm\b:: slijm uit neus 
+\bniercortex\b:: nierschors 
+\bnieren\b:: nier 
+\bnierextirpatie\b:: nefrectomie 
+\bnierkelk\b:: calices 
+\bnierstenen\b:: nefrolithiasis 
+\bniertubuli\b:: niertubulus 
+\bniet functionerend endometrium\b:: inactief endometrium 
+\bniet kleincellig longcarcinoom\b:: niet kleincellig carcinoom 
+\bniet nader in te delen afwijkende cytologie\b:: pap 2 
+\bniet specifiek granulatieweefsel\b:: granulatieweefsel 
+\bnieuwe vorming van beenweefsel\b:: botnieuwvorming 
+\bnodulair lymfoom\b:: folliculair lymfoom 
+\bnodulaire fascitis\b:: nodulaire fasciitis 
+\bnodulaire intercapillaire glomerulosclerose\b:: diabetische glomerulopathie 
+\bnodulaire schildklierdysplasie\b:: nodulair struma 
+\bnodulaire tenosynovitis\b:: reusceltumor peesschede 
+\bnoduli lymphatici aggregati\b:: plaque van peyer 
+\bnodulus lymphaticus\b:: lymfklier 
+\bnodulus van heberden\b:: osteofyt 
+\bnonchromaffien paraganglioom\b:: chemodectoom 
+\bnormale graviditeit\b:: zwangerschap 
+\bnormoblastose\b:: erytroblastose 
+\boatcel carcinoom\b:: kleincellig carcinoom 
+\boatcel tumor\b:: kleincellig carcinoom 
+\boatcell carcinoma\b:: kleincellig carcinoom 
+\bobliteratie door bindweefsel\b:: obliteratie 
+\bobliteratie door fibrose\b:: obliteratie 
+\bobliteratieve ontsteking\b:: oblitererende ontsteking 
+\boblitererende arteriosclerose\b:: arteriosclerose met obstructie 
+\bobstipation\b:: obstipatie 
+\bobstructie ileus\b:: ileus 
+\bobstruerende arteriosclerose\b:: arteriosclerose met obstructie 
+\boccipitaalpool\b:: occipitaalkwab 
+\bocciput\b:: achterhoofd 
+\boccult scleroserend adenocarcinoom\b:: niet-ingekapseld scleroserend carcinoom 
+\boculocraniosomatisch syndroom\b:: oculopharyngeale spierdystrofie 
+\boculocraniosomatische dystrofie\b:: oculopharyngeale spierdystrofie 
+\bodontogenic myxoma\b:: odontogeen myxoom 
+\bodontogenic tumor malignant\b:: maligne odontogene tumor 
+\boesofageale endo\-echografie\b:: endo-echografie 
+\boestrogene receptorbepaling negatief\b:: oestrogeenreceptorbepaling negatief 
+\boestrogene receptorbepaling positief\b:: oestrogeenreceptorbepaling positief 
+\boestron therapie\b:: oestron preparaat 
+\bogen\b:: oog 
+\bokselstreek\b:: oksel 
+\boligodendroglioom graad 4\b:: oligodendroglioom graad 3 
+\boligodendroglioom graad i\b:: oligodendroglioom graad 2 
+\boligodendroglioom graad ii\b:: oligodendroglioom graad 2 
+\boligodendroglioom graad iii\b:: oligodendroglioom graad 3 
+\boligodendroglioom graad iv\b:: oligodendroglioom graad 3 
+\boligomeganefronie\b:: congenitale dysplasie 
+\boliva cerebelli\b:: nucleus dentatus 
+\bolivopontocerebellaire atrofie\b:: olivopontocerebellaire degeneratie 
+\bollier's disease\b:: multipele chondromatose 
+\bomgeving colon\b:: pericolisch weefsel 
+\bomgeving foramen magnum\b:: foramen magnum 
+\bomgeving ovarium\b:: parovarieel weefsel 
+\bonbekende diagnose\b:: geen diagnose 
+\boncocyten adenoom\b:: oncocytoom 
+\boncocytic adenoma\b:: oncocytoom 
+\bonderste bijschildklier\b:: bijschildklier onder 
+\bongedifferentieerd adenocarcinoom\b:: anaplastisch carcinoom 
+\bongedifferentieerd plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\bongedifferentieerde maligne tumor\b:: maligniteit 
+\bongewijzigd na aanvullend bericht\b:: diagnose ongewijzigd 
+\bonrijpe vlokken\b:: onrijpe chorionvlokken 
+\bontsteking met focale ulcusvorming\b:: ulcus 
+\bontsteking met holtevorming\b:: holtevorming 
+\bontsteking met obliteratie\b:: oblitererende ontsteking 
+\bontsteking subacuut\b:: actieve chronische ontsteking 
+\bontstekingsverschijnselen\b:: ontsteking 
+\bontwikkeling stoornis\b:: ontwikkelingsstoornis 
+\boogleden\b:: ooglid 
+\boogonium\b:: primordiale follikel 
+\boorschelp kraakbeen\b:: kraakbeen van de oorschelp 
+\bopen vruchtzak\b:: vruchtzak 
+\bopen vruchtzak zonder navelstreng\b:: vruchtzak 
+\boperatief aangebracht defect\b:: operatiewond 
+\boperatief aangebrachte tube\b:: intubatie 
+\boperatief ingebracht prothesemateriaal\b:: prothesemateriaal 
+\boperatiewond verse\b:: operatiewond 
+\boppervlakkig multicentrisch basocellulair carcinoom\b:: basaalcelcarcinoom superficieel type 
+\boppervlakkige gastritis\b:: superficiele gastritis 
+\borgametrilgebruik\b:: anticonceptivum 
+\borganisatieweefsel\b:: granulatieweefsel 
+\bos calcis\b:: calcaneus 
+\bos coccigis\b:: os coccygis 
+\bos metatarsale primum\b:: metatarsale 1 
+\bos naviculare pedis\b:: os naviculare 
+\bossa metatarsalia\b:: middenvoetsbeen 
+\bosseuze metaplasie\b:: metaplastische botvorming 
+\bosteitis fibrosa cystica generalisata\b:: osteitis fibrosa cystica 
+\bosteoblastoom agressief\b:: osteoblastoom 
+\bosteocartilagineuze exostose\b:: osteochondroom 
+\bosteoclastoom\b:: reusceltumor bot 
+\bosteofibroom\b:: ossificerend fibroom 
+\bosteogeen sarcoom\b:: osteosarcoom 
+\bosteophyte\b:: osteofyt 
+\bostitis fibrosa\b:: fibreuze dysplasie 
+\boud achterwand infarct\b:: achterwand infarct 
+\boude operatiewond\b:: status na operatie 
+\boude thrombus\b:: georganiseerde thrombus 
+\boude trombose\b:: georganiseerde thrombus 
+\bovariele schors\b:: ovariumschors 
+\bovarium stroma tumor\b:: sexcordstroma tumor 
+\bovariumcysten\b:: polycysteus ovarium 
+\bovergang ureterblaas\b:: ureter-blaas overgang 
+\bovergangscellencarcinoom\b:: urotheelcelcarcinoom 
+\bovergangscellencarcinoom graad 1\b:: urotheelcelcarcinoom graad 1 
+\bovergangscellencarcinoom graad 2\b:: urotheelcelcarcinoom graad 2 
+\bovergangscellencarcinoom graad 3\b:: hooggradig urotheelcelcarcinoom 
+\bovergangsepitheelcelcarcinoom graad 4\b:: urotheelcelcarcinoom graad 4 
+\boverload nefropathie\b:: osmotische nefrose 
+\bovertollig orgaan\b:: extra aangelegd orgaan 
+\bovertollige structuur\b:: extra aangelegd orgaan 
+\boverwegen erytropoese\b:: hyperplasie erytropoiese 
+\boverwegen myelopoese\b:: myeloide hyperplasie 
+\bovula nabothii\b:: cyste van naboth 
+\bovulatoire cyclus\b:: ovulatoir 
+\boxalaatzout\b:: oxalaat 
+\boxyfiel adenocarcinoom\b:: oncocytair carcinoom 
+\boxyphil adenoma\b:: oncocytoom 
+\bpachydermia\b:: pachydermie 
+\bpachymeningitis, fibrous hypertrophic\b:: idiopatische hypertrofische pachymeningitis 
+\bpaget disease of the bone\b:: paget bot 
+\bpaget disease of the nipple\b:: paget mamma 
+\bpaget morbus (bot)\b:: paget bot 
+\bpalatine process\b:: ductus nasopalatinus 
+\bpalatumcyste mediaal\b:: mediane palatumcyste 
+\bpalatumslijmvlies\b:: slijmvlies palatum 
+\bpanarteritis\b:: arteriitis 
+\bpanarteritis nodosa\b:: polyarteriitis nodosa 
+\bpancreas eilandjes\b:: eilandjes van langerhans 
+\bpanmyelosis\b:: acute panmyelose met myelofibrose 
+\bpanniculus adiposus\b:: subcutis 
+\bpanoftalmie\b:: panoftalmitis 
+\bpap i\b:: pap 1 
+\bpap ii\b:: pap 2 
+\bpap iii\b:: pap 3 
+\bpap iiia\b:: pap 3a 
+\bpap iiib\b:: pap 3b 
+\bpap iv\b:: pap 4 
+\bpap v\b:: maligniteit 
+\bpapil van de nier\b:: nierpapil 
+\bpapilair sereus adenoom\b:: papillair sereus cystadenoom 
+\bpapilla renalis\b:: nierpapil 
+\bpapillair carcinoom infiltrerend\b:: infiltrerend papillair carcinoom 
+\bpapillair carcinoom overgangsepitheel\b:: papillair urotheelcelcarcinoom 
+\bpapillair carcinoom van overgangsepitheel\b:: papillair urotheelcelcarcinoom 
+\bpapillair cystadenoom borderline type\b:: papillair cystadenoom borderline maligniteit 
+\bpapillair fibroom\b:: fibroom 
+\bpapillair folliculair schildkliercarcinoom\b:: niet-invasieve folliculaire schildklierneoplasie met papillaire kernkenmerken 
+\bpapillair hydradenoom\b:: hidradenoma papilliferum 
+\bpapillair overgangscarcinoom\b:: papillair urotheelcelcarcinoom 
+\bpapillair overgangscelcarcinoma in situ\b:: papillaire urotheelcelneoplasie van laag maligne potentieel 
+\bpapillair overgangscellencarcinoom\b:: papillair urotheelcelcarcinoom 
+\bpapillair overgangscellencarcinoom graad 1\b:: laaggradig papillair urotheelcelcarcinoom 
+\bpapillair overgangscellencarcinoom graad 2\b:: papillair urotheelcelcarcinoom graad 2 
+\bpapillair overgangscellencarcinoom graad 3\b:: hooggradig papillair urotheelcelcarcinoom 
+\bpapillair urotheelcelcarcinoma in situ\b:: papillaire urotheelcelneoplasie van laag maligne potentieel 
+\bpapillary adenocarcinoma\b:: papillair adenocarcinoom 
+\bpapillomata\b:: papilloom 
+\bpapilloom van overgangsepitheel\b:: urotheelcelpapilloom 
+\bparaffin\b:: paraffine coupe 
+\bparaganglion caroticum\b:: glomus caroticum 
+\bparamesangiale depositie\b:: mesangioproliferatieve glomerulonefritis 
+\bparametriaal\b:: parametrium 
+\bparaproteinaemie\b:: monoclonale gammopathie 
+\bparaproteinose\b:: monoclonale gammopathie 
+\bparapsoriasis en plaques\b:: parapsoriasis en plaque 
+\bparapsoriasis lichenoides varioliformis\b:: p.l.e.v.a. 
+\bparapsoriasis variegata\b:: poikiloderma atrophicans vasculare 
+\bparathyroid\b:: bijschildklier 
+\bparatracheaal\b:: mediastinum 
+\bparavaccinia\b:: orf 
+\bparietale blad van het peritoneum\b:: peritoneum parietale 
+\bparkinsonism\b:: parkinsonisme 
+\bparkinson's disease\b:: parkinson 
+\bparostaal osteosarcoom\b:: parosteaal osteosarcoom 
+\bparotitis epidemica\b:: bof 
+\bpars prostatica urethra\b:: urethra prostatica 
+\bpars prostatica urethrae\b:: urethra prostatica 
+\bpartiele obliteratie\b:: partiele afsluiting 
+\bpartiele obstructie\b:: partiele afsluiting 
+\bpartus normaal\b:: geboorte 
+\bpasteurella pseudotuberculosis\b:: yersinia pseudotuberculosis 
+\bpasteurellose\b:: yersinia enterocolica 
+\bpedes\b:: voet 
+\bpeesschede enkel\b:: pees onderbeen 
+\bpeesschede onderbeen\b:: pees onderbeen 
+\bpeesschede voet\b:: pees voet 
+\bpeliosis hepatis\b:: peliosis 
+\bpemphigus erythematodes\b:: pemphigus erythematosus 
+\bpenicillins\b:: penicilline 
+\bperforatie door ontsteking\b:: perforerende ontsteking 
+\bpericanaliculair adenofibroom\b:: pericanaliculair fibroadenoom 
+\bpericarditis adhaesiva\b:: constrictieve pericarditis 
+\bpericentraal leverweefsel\b:: lever pericentraal 
+\bperifere pulmonaalarterien\b:: kleine longarterien 
+\bperifere zenuwen\b:: perifere zenuw 
+\bperihepatische structuur\b:: perihepatisch gebied 
+\bperineum vrouw\b:: perineum 
+\bperiodontaal weefsel\b:: periapicaal weefsel 
+\bperioophoron\b:: epoophoron 
+\bperiorbitale gebied\b:: ooghoek 
+\bperisplenisch gebied\b:: perisplenisch 
+\bperivesicale structuur\b:: perivesicaal weefsel 
+\bpersistent left superior vena cava\b:: persisterende linker vena cava superior 
+\bpersisterende ductus botalli\b:: open ductus arteriosus 
+\bpersisterende thymus\b:: thymus 
+\bpes calcaneovalgus\b:: klompvoet 
+\bpes valgus\b:: klompvoet 
+\bpetechieen\b:: petechien 
+\bpeutz jeghers syndrome\b:: peutz jeghers 
+\bpezen\b:: pees 
+\bphacomatosis\b:: klippel trenaunay 
+\bphalanx distalis digiti secundi\b:: eindfalanx van de wijsvinger 
+\bphalanx distalis pollicis\b:: duimkootje 
+\bphalanx media digiti quinti\b:: middenkootje pink 
+\bphalanx media digiti v\b:: middenkootje pink 
+\bphalanx pollicis\b:: duimkootje 
+\bphalanx proxima digiti iii\b:: digitus manus 3 proximale phalanx 
+\bphallus\b:: penis 
+\bpharyngeal tonsil\b:: adenoid 
+\bphenacetin\b:: fenacetine 
+\bphenacetine\b:: fenacetine 
+\bphleboarteriectasie\b:: flebarteriectasie 
+\bphlebolith\b:: fleboliet 
+\bphocomelie\b:: aangeboren afwijking van extremiteit 
+\bpigmentcirrose ijzer\b:: pigmentcirrose 
+\bpilar sheat acanthoom\b:: haarschede acanthoom 
+\bpilar tumor\b:: pilomatricoom 
+\bpin i\b:: pin-1 
+\bpin ii\b:: pin-2 
+\bpin iii\b:: pin-3 
+\bpinguecula\b:: pingueculum 
+\bpinkus fibroepithelioma premalignum\b:: basaalcelcarcinoom fibroepitheliaal type 
+\bpistoolkogelwond\b:: kogelwond 
+\bpityriasis varioloformis acuta\b:: p.l.e.v.a. 
+\bplaatepitheelcarcinoom\b:: plaveiselcelcarcinoom 
+\bplacenta adhaesiva\b:: placenta accreta 
+\bplacenta diffusa\b:: placenta membranacea 
+\bplacenta discongruentie\b:: placenta niet passend bij termijn 
+\bplacenta incompleta\b:: incomplete placenta 
+\bplacenta maternale zijde\b:: maternale kant van de placenta 
+\bplacenta membranitis\b:: chorioamnionitis 
+\bplacenta pathologie\b:: placenta afwijking 
+\bplacenta poliep\b:: placentarest 
+\bplacenta serotien\b:: serotiene placenta 
+\bplacenta van meerling (meer dan twee)\b:: meerling placenta (meer dan twee) 
+\bplacenta van meerlingen (meer dan twee)\b:: meerling placenta (meer dan twee) 
+\bplacenta velamentosa\b:: insertio velamentosa van navelstreng 
+\bplacentair vlies\b:: vruchtvliezen 
+\bplacentaire poliep\b:: placentarest 
+\bplague\b:: pest 
+\bplanocellulair carcinoom met verhoorning\b:: verhoornend plaveiselcelcarcinoom 
+\bplanocellulaire metaplasie\b:: squameuze metaplasie 
+\bplasma cell tumor malignant\b:: plasmacytoom 
+\bplasmacellen beenmerg\b:: plasmacel 
+\bplasmacellen hyperplasie\b:: plasmacytose 
+\bplasmacelmyeloom\b:: multipel myeloom 
+\bplasmacytosis\b:: plasmacytose 
+\bplasmocyt\b:: plasmacel 
+\bplasmocytair myeloom\b:: multipel myeloom 
+\bplasmocyten\b:: plasmacel 
+\bplaveiselcelcarcinoom niet verhoornend\b:: niet verhoornend plaveiselcelcarcinoom 
+\bplaveiselcelcarcinoom verhoornend\b:: verhoornend plaveiselcelcarcinoom 
+\bpleiomorf adenocarcinoom\b:: pleiomorf carcinoom 
+\bpleomorphic hyalinizing angiectatic tumor\b:: pleomorfe hyaliniserende angiectatische tumor 
+\bpleura parietale\b:: pleura parietalis 
+\bpleuraal mesothelium\b:: mesotheel pleura 
+\bpleuramesotheel\b:: mesotheel pleura 
+\bplexiform neurilemmoom\b:: plexiform schwannoom 
+\bpneumococcen infectie\b:: pneumococ 
+\bpneumococcus\b:: pneumococ 
+\bpneumonectomy\b:: pneumectomie 
+\bpoliep met chronische ontsteking\b:: ontstekingspoliep 
+\bpoliepeus\b:: hyperplastische poliep 
+\bpoliepeus adenoom\b:: adenomateuze poliep 
+\bpoliepje\b:: poliep 
+\bpolio\b:: poliomyelitis 
+\bpoliomyelitis, acute anterior\b:: poliomyelitis 
+\bpolipeuze hyperplasie\b:: hyperplastische poliep 
+\bpolsbeen\b:: os carpale 
+\bpolycyste\b:: multipele cysten 
+\bpolycysteuze ovaria\b:: polycysteus ovarium 
+\bpolycysteuze verandering\b:: multipele cysten 
+\bpolycystisch ovarium\b:: polycysteus ovarium 
+\bpolygyri\b:: microgyrie 
+\bpolygyrie\b:: microgyrie 
+\bpolymenorrhoea\b:: hypermenorroe 
+\bpolymenorroe\b:: hypermenorroe 
+\bpolymerase chain reaction\b:: polymerase kettingreactie 
+\bpolymorfcellig carcinoom\b:: pleiomorf carcinoom 
+\bpolymorfe cellen\b:: polymorfie 
+\bpolymorfe reticulose\b:: extranodaal nk/t-cel lymfoom 
+\bpolymorfic low grade adenocarcinoma of minor salivary gland\b:: polymorf adenocarcinoom 
+\bpolypeus adenocarcinoom\b:: adenocarcinoom in adenomateuze poliep 
+\bpolypeus granuloom\b:: granuloma pyogenicum 
+\bpolypeuze hyperplasie\b:: hyperplastische poliep 
+\bpons cerebelli\b:: pons 
+\bpons varoli\b:: pons 
+\bpopliteaalstreek\b:: knie 
+\bporokeratosis of mibelli\b:: porokeratosis 
+\bporta cavale shunt\b:: portocavale shunt 
+\bporta hepatica\b:: leverhilus 
+\bportio vaginalis uteri\b:: cervix 
+\bportioslijmvlies\b:: portio 
+\bpositieve cytologie\b:: maligniteit 
+\bpostauriculair\b:: retroauriculair 
+\bposthepatitische cirrose\b:: cirrose na hepatitis 
+\bposthepatitische levercirrose\b:: cirrose na hepatitis 
+\bpostmenopausaal endometrium\b:: endometrium in postmenopauze 
+\bpostmenopausal state\b:: postmenopauze 
+\bpostminimi\b:: polydactylie 
+\bpostnecrotische leveratrofie\b:: postnecrotische cirrose 
+\bpostoperatieve status na sectio caesarea\b:: status na sectio caesarea 
+\bpostpartum state\b:: postpartum 
+\bpraecancereuze afwijking\b:: dysplasie 
+\bprecancereuze melanose\b:: lentigo maligna 
+\bprecursor b acute lymfatische leukemie\b:: b-lymfoblastair lymfoom 
+\bpreleukemie\b:: myelodysplastisch syndroom 
+\bpremaligne melanoom\b:: meltump 
+\bpremaligne tumor\b:: borderline tumor 
+\bpremenstrueel slijmvlies\b:: endometrium in secretiefase 
+\bpremenstruele fase\b:: endometrium in secretiefase 
+\bpresellair\b:: sella turcica 
+\bpretracheaal\b:: mediastinum 
+\bprikkelgeleidingssysteem\b:: hartgeleidingssysteem 
+\bprimair amyloid\b:: primaire amyloidose 
+\bprimair levercarcinoom\b:: hepatocellulair carcinoom 
+\bprimair levercelcarcinoom\b:: hepatocellulair carcinoom 
+\bprimair mediastinale b\-cel tumor\b:: primair mediastinaal grootcellig b-cel lymfoom 
+\bprimaire atypische amyloidose\b:: primaire amyloidose 
+\bprimaire hemochromatose\b:: hemochromatose 
+\bprimaire localisatie onbekend\b:: localisatie primaire tumor onbekend 
+\bprimary aquired melanosis\b:: primary acquired melanosis 
+\bprimitieve neuroblastaire cel\b:: primitieve neuroblast 
+\bprimordiaalcyste\b:: odontogene keratocyste 
+\bprimordiale cyste\b:: odontogene keratocyste 
+\bprogestageen stoornis\b:: progesteron stoornis 
+\bprogesteron preparaat\b:: progesteron 
+\bprogesterontherapie\b:: progesteron 
+\bprogestogeenstoornis\b:: progesteron stoornis 
+\bprogestogen\b:: progestageen 
+\bprogressive pseudorheumatoid arthritis of childhood\b:: progressieve pseudoreumatoide artritis kind 
+\bprogressive systemic sclerosis\b:: scleroderma diffusa 
+\bprolactine preparaat\b:: prolactine hormoon 
+\bprolifererend ontstekingsproces\b:: proliferatieve ontsteking 
+\bprolifererende glomerulonefritis\b:: proliferatieve glomerulonefritis 
+\bprolifererende trichilemmale cyste\b:: prolifererende trichilemmale tumor 
+\bprolymfocyten\b:: prolymfocyt 
+\bprostaatectomie\b:: prostatectomie 
+\bprostaatsecreet\b:: prostaatvocht 
+\bprostata\b:: prostaat 
+\bprostatitis acuta\b:: acute prostatitis 
+\bprostatitis chronica\b:: chronische prostatitis 
+\bprotozoen\b:: protozoa 
+\bpseudocartilagineuze ontsteking\b:: zwoerd 
+\bpseudo\-erosie\b:: erosieve ontsteking 
+\bpseudomucineus cystadenocarcinoom\b:: mucineus cystadenocarcinoom 
+\bpseudomucineus cystadenoom\b:: mucineus cystadenoom 
+\bpseudomucineus cystoom\b:: mucineus cystadenoom 
+\bpseudomucineuze degeneratie\b:: myxoide degeneratie 
+\bpseudomyxoom\b:: pseudomyxoma peritonei 
+\bpseudoporencefalie\b:: porencefalie 
+\bpseudosarcomateus carcinoom\b:: spoelcellig carcinoom 
+\bpseudosarcomateuze fasciitis\b:: nodulaire fasciitis 
+\bpseudosarcoom\b:: pseudotumor 
+\bpseudotuberculose\b:: yersinia pseudotuberculosis 
+\bpseudotumor door ontsteking\b:: inflammatoire pseudotumor 
+\bpsoriatiform eczeem\b:: psoriasiforme dermatitis 
+\bpsoriatiforme dermatitis\b:: psoriasiforme dermatitis 
+\bpterigium\b:: pterygium 
+\bptyalism\b:: ptyalismus 
+\bpubic region\b:: schaamstreek 
+\bpuerperium\b:: postpartum 
+\bpulvinar thalami\b:: pulvinar 
+\bpurulente glomerulonefritis\b:: acute exsudatieve glomerulonefritis 
+\bputrefactio\b:: rotting 
+\bpyaemie\b:: pus 
+\bpyelonefritis xanthogranulomatosa\b:: xanthogranulomateuze pyelonefritis 
+\bpyelonephritis acuta\b:: acute pyelonefritis 
+\bpyelum duplex\b:: dubbel pyelum 
+\bpyoderma vegetans\b:: pemphigus vegetans 
+\bpyogeen membraan\b:: membraneuze ontsteking 
+\bpyuria\b:: pyurie 
+\bradicular cyst\b:: radiculaire cyste 
+\bramus circumflexus linker arteria coronaria\b:: ramus circumflexus linker coronairarterie 
+\bramus descendens anterior linker arteria coronaria\b:: arteria coronaria links ramus descendens 
+\bramus descendens arteria coronaria\b:: ramus descendens posterior rechter coronairarterie 
+\bramus descendens linker arteria coronaria\b:: arteria coronaria links ramus descendens 
+\bramus descendens posterior rechter arteria coronaria\b:: ramus descendens posterior rechter coronairarterie 
+\brandsinus placenta\b:: placentarand 
+\braynaud's disease\b:: raynaud 
+\breactie door corpus alienum\b:: vreemdlichaamgranuloom 
+\breactie op corpus alienum\b:: vreemdlichaamgranuloom 
+\breactief proces door corpus alienum\b:: vreemdlichaamgranuloom 
+\breactieve membraanvorming\b:: membraneuze ontsteking 
+\breactieve nieuwvorming\b:: regeneratie 
+\breactieve ontsteking\b:: reactief 
+\breactieve plasmocytose\b:: plasmacytose 
+\brecente trombose\b:: thrombus 
+\brecessus piriformis\b:: sinus piriformis 
+\brechter long met twee kwabben\b:: tweekwabbige rechter long 
+\brecidiverend ontstoken\b:: recidiverende ontsteking 
+\brecidiverende hematurie\b:: thin basement membrane disease 
+\breciduaalcyste\b:: odontogene cyste 
+\brecklinghausen von botziekte\b:: osteitis fibrosa cystica 
+\brecklinghausen von,neurofibromatosis\b:: neurofibromatose 
+\brectosigmoid colon\b:: rectosigmoid 
+\brectuminhoud\b:: faeces 
+\brecurrent ontstekingsproces\b:: recidiverende ontsteking 
+\bregeneratief proces\b:: regeneratie 
+\bregeneratio\b:: regeneratie 
+\bregio coccygea\b:: stuit 
+\bregio cubiti\b:: elleboog 
+\bregio poplitea\b:: knie 
+\bregio subclavicularis\b:: infraclaviculair 
+\bregio supraclavicularis\b:: supraclaviculair 
+\bregio thoracolumbalis\b:: thoracolumbaal 
+\bregionale fibrose\b:: focale fibrose 
+\bregurgitatie\b:: reflux 
+\brejection\b:: rejectie 
+\brenal cell carcinoma\b:: niercelcarcinoom nos 
+\brenale insufficientie\b:: nierinsufficientie 
+\breparatieve ontsteking\b:: ontstekingsrest 
+\breservecelhyperplasie atypisch\b:: atypische reservecelhyperplasie 
+\breservecelhyperplasie licht atypisch\b:: atypische reservecelhyperplasie 
+\breservecelhyperplasie matig atypisch\b:: atypische reservecelhyperplasie 
+\breservecelhyperplasie sterk atypisch\b:: atypische reservecelhyperplasie 
+\breservecellen hyperplasie\b:: basaalcel hyperplasie 
+\bresidu cyste\b:: residuale cyste 
+\brespiratory acidosis\b:: respiratoire acidose 
+\brespiratory syndrome of newborn\b:: hyaliene membraanziekte 
+\brest glomerulonefritis\b:: focale glomerulosclerose 
+\brest van ontstekingsproces\b:: ontstekingsrest 
+\brest van ulcus\b:: ulcusrest 
+\brest van vroeger trauma\b:: oud trauma 
+\brest vroegere ontsteking\b:: ontstekingsrest 
+\bresten gang van wolff\b:: mesonefrosrest 
+\bresttoestand na appendicitis\b:: appendix met ontstekingsrest 
+\bresttoestand na glomerulonefritis\b:: focale glomerulosclerose 
+\breticulair erythemateus mucineus syndroom\b:: reticulaire erythemateuze mucinose 
+\breticulohistiocytair granuloom\b:: reticulohistiocytoom 
+\breticulose lipomelanique\b:: dermatopathische lymfadenopathie 
+\breticulosis\b:: maligne lymfoom 
+\bretinaculum flexorum\b:: ligamentum carpale 
+\bretrofaryngeaal gebied\b:: retrofaryngeaal 
+\bretropatellair weefsel\b:: kniegewricht 
+\bretrotonsillair weefsel\b:: peritonsillair weefsel 
+\breuma acuut\b:: acuut reuma 
+\breumatoid nodule\b:: reumaknobbel 
+\breumatoide arteritis\b:: reumatoide arteriitis 
+\breuscel angiofibroom\b:: solitaire fibreuze tumor 
+\breuscel interstitiele pneumonie\b:: hard metal pneumoconiosis 
+\breuscelarteriitis\b:: reuscelarteritis 
+\breuscellenvorming\b:: reuscel 
+\breuscelreactie type touton\b:: toutonse reuscellen 
+\breuscelreactie van het type touton\b:: toutonse reuscellen 
+\breuscelsarcoom\b:: ongedifferentieerd pleiomorf sarcoom 
+\breusceltumor bot maligne\b:: maligne reusceltumor bot 
+\breuzen blauwe naevus\b:: cellulaire blauwe naevus 
+\breuzencel\b:: reuscel 
+\breuzencellenglioblastoom\b:: reuscelglioblastoom 
+\breuzencelvorming\b:: reuscel 
+\breuzenlymfoom\b:: castleman 
+\breuzennaevus\b:: congenitale melanocytaire naevus 
+\breuzenvorm\b:: macrodactylie 
+\brh\. antagonisme\b:: resus antagonisme 
+\brheumatic heart disease\b:: reumatische hartafwijking 
+\brheumatic nodule\b:: reumaknobbel 
+\bribben\b:: rib 
+\briedel's struma\b:: riedel 
+\brijp teratoom\b:: benigne teratoom 
+\brijpingsremming spermatogenese\b:: hypospermatogenese 
+\brode systeem beenmerg\b:: beenmerg 
+\brontgenbestraling\b:: radiotherapie 
+\brontgencontraststoffen\b:: rontgencontraststof 
+\brontgendiagnostiek\b:: radiodiagnostiek 
+\brontgenstraling\b:: radiografie 
+\brosacea like tuberculid\b:: erythema induratum 
+\brothmund\b:: poikiloderma 
+\brotor syndroom\b:: rotor 
+\brubeola\b:: mazelen 
+\bs\.r\.\b:: reactie op sensibilisatie 
+\bsacculus lacrimalis\b:: traanzak 
+\bsalpingitis nodosa isthmica\b:: salpingitis isthmica nodosa 
+\bsamengedrukte structuur\b:: compressie 
+\bsamengestelde naevi\b:: samengestelde naevus 
+\bsanguinolent exsudaat\b:: hemorragisch vocht 
+\bsanguinolent transudaat\b:: hemorragisch vocht 
+\bsarcoma phyllodes\b:: maligne phyllodes tumor 
+\bsarcoommetastase\b:: metastase sarcoom 
+\bschedelkap\b:: schedeldak 
+\bschilder\b:: adrenoleukodystrofie 
+\bschildklierdysplasie\b:: nodulair struma 
+\bschistozomiasis\b:: schistosomiasis 
+\bschizophrenic psychosis\b:: schizofrenie 
+\bschmincke lymfoepitheliaal carcinoom\b:: lymfoepitheliaal carcinoom 
+\bschors bijnier\b:: bijnierschors 
+\bschors nier\b:: nierschors 
+\bschors ovarium\b:: ovariumschors 
+\bschors van het cerebellum\b:: schors cerebellum 
+\bschuimcellen\b:: schuimcel 
+\bschwannoma, malignant\b:: maligne perifere zenuwschede tumor 
+\bschwann'se schede\b:: neurilemma 
+\bschwarte\b:: zwoerd 
+\bscirreus adenocarcinoom\b:: scleroserend adenocarcinoom 
+\bscirrhous carcinoma\b:: scleroserend adenocarcinoom 
+\bsclereem\b:: sclerema neonatorum 
+\bscleroderma circumscripta\b:: morphea 
+\bscleroserend epitheloid fibrosarcoom\b:: scleroserend epithelioid fibrosarcoom 
+\bscleroserende papillaire epitheelproliferatie mamma\b:: complexe scleroserende laesie 
+\bsclerosing hemangioma\b:: scleroserend pneumocytoom 
+\bsclerosis multiplex\b:: multipele sclerose 
+\bsclerotische vernauwing\b:: arteriosclerose met obstructie 
+\bscreeningsonderzoek\b:: bevolkingsonderzoek 
+\bscrofuloderma\b:: lupus vulgaris 
+\bscrotaal\b:: scrotum 
+\bsebaceous adenoma\b:: talgklieradenoom 
+\bsebaceous carcinoma\b:: talgkliercarcinoom 
+\bsebaceous epithelioma\b:: talgklieradenoom 
+\bsebaceous gland\b:: talgklier 
+\bsebaceus lymfadenoom\b:: lymfadenoom 
+\bsebocystomatosis\b:: steatocystoma multiplex 
+\bsecreet uit de cervix\b:: cervixslijm 
+\bsecundaire amenorrhoea\b:: secundaire amenorroe 
+\bsecundaire hyperplasie\b:: reactieve hyperplasie 
+\bsekwestratie\b:: sequester 
+\bseminoma anaplastic type\b:: anaplastisch seminoom 
+\bseniel endometrium\b:: endometrium in postmenopauze 
+\bseniele keratose\b:: actinische keratose 
+\bseniele talgklierhyperplasie\b:: talgklierhyperplasie 
+\bsenile kolpitis\b:: seniele kolpitis 
+\bseniliteit\b:: seniel 
+\bseptale interstitiele leverfibrose\b:: septale leverfibrose 
+\bsepticemia\b:: sepsis 
+\bseptische emboli\b:: septische embolie 
+\bseptum hart\b:: ventrikelseptum 
+\bseptum ventriculorum\b:: ventrikelseptum 
+\bsequestrerende ontsteking\b:: sequester 
+\bsereus cystoom\b:: sereus cystadenoom 
+\bsereus oppervlakte papillair carcinoom\b:: sereus cystadenocarcinoom 
+\bserosa uteri\b:: perimetrium 
+\bserosanguinolent transudaat\b:: hemorragisch vocht 
+\bserotinitas\b:: serotien 
+\bserous cystadenoma borderline malignancy\b:: sereuze borderline tumor 
+\bserous cystoma\b:: sereus cystadenoom 
+\bsertolicellen\b:: sertolicel 
+\bsesambeenderen voet\b:: sesambeen onderste extremiteit 
+\bsezarys syndrome\b:: sezary 
+\bsialadenitis\b:: sialoadenitis 
+\bsialosis\b:: sialadenose 
+\bsiamese tweelingen\b:: siamese tweeling 
+\bsiderocyt\b:: sideroblasten 
+\bsiderocyten\b:: sideroblasten 
+\bsimple cyst\b:: cyste 
+\bsinus hepaticus\b:: leversinus 
+\bsinus lymfklier\b:: lymfkliersinus 
+\bsinus, inflammatory\b:: fistel 
+\bsinusslijmvlies\b:: slijmvlies neusbijholte 
+\bsjogren's syndrome\b:: sjogren 
+\bsl\.fix\b:: slechte fixatie 
+\bslecht gedifferentieerd adenocarcinoom\b:: adenocarcinoom 
+\bslecht gedifferentieerd carcinoom\b:: ongedifferentieerd carcinoom 
+\bslecht gedifferentieerd plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\bslijm uit bronchien\b:: bronchusslijm 
+\bslijmpoliep\b:: poliep 
+\bslijmvlies cavum tympani\b:: cavum tympani 
+\bslijmvlies cervix\b:: cervixepitheel 
+\bslijmvlies cervix uteri\b:: cervixepitheel 
+\bslijmvlies colon sigmoideum\b:: slijmvlies sigmoid 
+\bslijmvlies epipharynx\b:: slijmvlies oropharynx 
+\bslijmvlies luchtpijp\b:: slijmvlies trachea 
+\bslijmvlies margo alveolaris\b:: slijmvlies gingiva 
+\bslijmvlies strottenhoofd\b:: slijmvlies larynx 
+\bslijmvlies tuba auditiva\b:: slijmvlies buis van eustachius 
+\bslijmvlies tuba eustachii\b:: slijmvlies buis van eustachius 
+\bslijmvlies uitwendige gehoorgang\b:: slijmvlies gehoorgang 
+\bslijmvliespoliep\b:: poliep 
+\bsmall intestinal serosa\b:: serosa dunne darm 
+\bsnel progressieve glomerulonefritis\b:: crescentische glomerulonefritis 
+\bsnel progressieve glomerulonefritis syndroom\b:: crescentische glomerulonefritis 
+\bsoft tissue\b:: weke delen 
+\bsolar degeneration\b:: actinische beschadiging 
+\bsolide carcinoom\b:: anaplastisch carcinoom 
+\bsolied carcinoom\b:: anaplastisch carcinoom 
+\bsolitair circumscript neuroom huid\b:: solitair circumscript neuroom 
+\bsolitary ulcer syndroom\b:: mucosaal prolaps syndroom 
+\bspasticity\b:: spasme 
+\bspatium retropharyngeum\b:: retrofaryngeaal 
+\bspecifieke etiologie agens niet geidentificeerd\b:: idiopathisch 
+\bspermatic vein\b:: vena spermatica 
+\bspermatocytic seminoma\b:: spermatocytaire tumor 
+\bspermatogenese rypingsremming\b:: hypospermatogenese 
+\bspermatozoen\b:: spermatozo 
+\bspermatozoon\b:: spermatozo 
+\bspermavocht\b:: sperma 
+\bspherocytosis congenita\b:: congenitale sferocytose 
+\bsphincter ani externus muscle\b:: anussfincter 
+\bsphincter vesicae\b:: sfincter urineblaas 
+\bspiegler fendt\b:: pseudolymfoom 
+\bspiegler fendt benigne lymfoom van de huid\b:: pseudolymfoom 
+\bspier bovenste extremiteit\b:: spier arm 
+\bspier hand\b:: spier arm 
+\bspier schouder\b:: spier arm 
+\bspieren arm\b:: spier arm 
+\bspieren schoudergordel\b:: spier arm 
+\bspierwand van de dikke darm\b:: muscularis propria colon 
+\bspinale ganglion\b:: ganglion spinale 
+\bspinale spieratrofie congenitaal\b:: hereditaire spinale spieratrofie 
+\bspinale spieratrofie infantiel\b:: werdnig hoffmann 
+\bspinale zenuwen\b:: ruggenmergszenuw 
+\bspinalioom\b:: plaveiselcelcarcinoom 
+\bspinocellulair carcinoom\b:: plaveiselcelcarcinoom 
+\bspinocellulair papilloom\b:: squameus papilloom 
+\bspoelworm\b:: ascaris 
+\bspongioblastoma polare\b:: spongioblastoom 
+\bsproeten\b:: sproet 
+\bsquameuscel carcinoom\b:: plaveiselcelcarcinoom 
+\bsquameuse metaplasie\b:: squameuze metaplasie 
+\bsquameuze keratose benigne\b:: benigne squameuze keratose 
+\bsquamous papilloma\b:: squameus papilloom 
+\bstamganglia\b:: basale ganglia 
+\bstapeling van ganglioside\b:: gangliosidose 
+\bstatus na exconisatie\b:: status na conisatie 
+\bstatus na ligatuur\b:: status na onderbinding 
+\bstatus na operatieve ingreep\b:: status na operatie 
+\bstatus na operatieve sluiting\b:: status na hechting 
+\bstatus na proefexcisie\b:: status na excisie 
+\bstatus na reexcisie\b:: status na excisie 
+\bstatus na reparatie\b:: status na operatief herstel van continuiteit 
+\bstatus post excisionem\b:: status na excisie 
+\bstatus post operationem\b:: status na operatie 
+\bstein leventhal syndroom\b:: polycysteus ovariumsyndroom 
+\bsteinert's disease\b:: myotone dystrofie 
+\bstembandweefsel\b:: stemband 
+\bstenen\b:: steen 
+\bsterility\b:: steriliteit 
+\bsternocleidomastoid muscle\b:: musculus sternocleidomastoideus 
+\bsteroid hormone disorder\b:: steroidhormoon stoornis 
+\bstollingsanomalien\b:: stollingsstoornis 
+\bstomachus\b:: maag 
+\bstoornis rijping bloedvorming\b:: dyshaematopoiese 
+\bstrengvorming\b:: fibreuze adhesie 
+\bstreptococcus, beta hemolytic\b:: beta hemolytische streptococ 
+\bstromal endometriosis\b:: hooggradig endometriumstromasarcoom 
+\bstromatosis\b:: hooggradig endometriumstromasarcoom 
+\bstruma diffusa\b:: struma 
+\bstruma dysplastica\b:: nodulair struma 
+\bstruma lymphomatosa\b:: hashimoto 
+\bstruma nodosa parenchymatosa\b:: nodulair struma 
+\bstruma retrosternaal\b:: retrosternaal struma 
+\bsubacute glomerulonefritis syndroom\b:: acute exsudatieve glomerulonefritis 
+\bsubacute scleroserende leukencephalitis van bogaert\b:: metachromatische leukodystrofie 
+\bsubacuut ontstekingsproces\b:: actieve chronische ontsteking 
+\bsubareolaire ductus papillomatose\b:: tepel adenoom 
+\bsubcutane nodus\b:: reumaknobbel 
+\bsubcutane vetweefsel\b:: subcutis 
+\bsubdurale ruimte van het ruggemerg\b:: subdurale ruimte van het ruggenmerg 
+\bsubendocardiaal\b:: endocard 
+\bsubependymaal glioom\b:: subependymoom 
+\bsubepicardiaal\b:: epicard 
+\bsubfrenisch gebied\b:: regio subphrenica 
+\bsubfrenische ruimte\b:: regio subphrenica 
+\bsubmucosa blaas\b:: lamina propria van de blaas 
+\bsubphrenic fossa\b:: regio subphrenica 
+\bsubsereus myoom\b:: leiomyoom 
+\bsubserosa dikke darm\b:: subserosa colon 
+\bsubtotale amputatie\b:: partiele resectie 
+\bsudden death\b:: plotselinge dood 
+\bsuffusio\b:: verstikking 
+\bsulcus gingivalis\b:: gingiva 
+\bsulfatide lipidose\b:: metachromatische leukodystrofie 
+\bsummer skil syndroom\b:: summerskill syndroom 
+\bsunburn\b:: zonnebrand 
+\bsuperficial multicentric basal cell carcinoma\b:: basaalcelcarcinoom superficieel type 
+\bsuperficieel multicentrisch basalioom\b:: basaalcelcarcinoom superficieel type 
+\bsuspecte cytologie\b:: verdacht maligne 
+\bsympathicusweefsel\b:: nervus sympathicus 
+\bsympathisch zenuwstelsel\b:: nervus sympathicus 
+\bsympathische ganglia\b:: sympathisch ganglion 
+\bsympathische zenuwstelsel\b:: nervus sympathicus 
+\bsympatische ganglia\b:: sympathisch ganglion 
+\bsympatische zenuwstelsel\b:: nervus sympathicus 
+\bsyndese\b:: synostose 
+\bsyndroom van barrett\b:: barrett 
+\bsyndroom van brown sequard\b:: brown sequard 
+\bsyndroom van caroli\b:: caroli 
+\bsyndroom van crouzon\b:: dysostosis craniofacialis 
+\bsyndroom van donahue\b:: syndroom van donohue 
+\bsyndroom van felty\b:: felty 
+\bsyndroom van goldenhar\b:: goldenhar 
+\bsyndroom van klinefelter\b:: klinefelter 
+\bsyndroom van leigh\b:: subacute necrotiserende encefalomyelopathie 
+\bsyndroom van mafucci\b:: maffucci 
+\bsyndroom van mikulicz\b:: mikulicz 
+\bsyndroom van pena shokeir\b:: pena shokeir 
+\bsyndroom van peutz jeghers\b:: peutz jeghers 
+\bsyndroom van reye\b:: reye 
+\bsyndroom van sheehan\b:: sheehan 
+\bsyndroom van smith lemli opitz\b:: smith lemli opitz 
+\bsyndroom van treacher collins\b:: dysostosis osteomandibularis 
+\bsyndroom van wallenberg\b:: wallenberg 
+\bsyndroom van warburg\b:: warburg 
+\bsyndroom van waterhouse friderichsen\b:: waterhouse friderichsen 
+\bsyndroom van werner\b:: progeria volwassenen 
+\bsynechiae anteriores\b:: synechie 
+\bsynechien\b:: synechie 
+\bsynoviaalvlok\b:: synoviavlok 
+\bsynovial sarcoma\b:: synoviosarcoom 
+\bsynovialaag gewrichtskapsel\b:: synoviale membraan 
+\bsynovioma benignum\b:: benigne synovioom 
+\bsynovioma malignum\b:: synoviosarcoom 
+\bsynthetisch transplantaat\b:: prothesemateriaal 
+\bsyntrofoblast\b:: syncytiotrofoblast 
+\bsyringocystadenoom\b:: hidrocystoom 
+\btalgcyste\b:: talgkliercyste 
+\btalkpoeder\b:: talk 
+\btandkas\b:: tandzakje 
+\btandwortelcyste\b:: radiculaire cyste 
+\btandwortelgranuloom\b:: apicaal granuloom 
+\bte weinig materiaal voor een zekere beoordeling\b:: onvoldoende materiaal 
+\bteflon\b:: prothesemateriaal 
+\btelangiectatic osteosarcoma\b:: teleangiectatisch osteosarcoom 
+\bteleangiectasis\b:: teleangiectasie 
+\bteleangiectatisch granuloom\b:: granuloma pyogenicum 
+\btemporaalpool\b:: temporaalkwab 
+\btendosynovitis crepitans\b:: tendosynovitis stenosans 
+\btendosynovitis nodularis\b:: reusceltumor peesschede 
+\btendosynovitis villonodularis pigmentosa\b:: diffuus type reusceltumor peesschede 
+\btenosynovitis nodularis\b:: reusceltumor peesschede 
+\btenosynovitis villonodularis pigmentosa\b:: diffuus type reusceltumor peesschede 
+\bteratocarcinoom\b:: teratoom met maligne transformatie 
+\bteratoide cyste\b:: benigne teratoom 
+\bteratoide laesie\b:: benigne teratoom 
+\bteratoma benignum\b:: benigne teratoom 
+\bteratoma malignum\b:: immatuur teratoom 
+\bteratoma, benign\b:: benigne teratoom 
+\bterminale cardiomyopathie\b:: cardiomyopathie 
+\bterugvloeiing\b:: reflux 
+\btestes\b:: testis 
+\btesticulair feminisatie syndroom\b:: testiculaire feminisatie 
+\btestiskapsel\b:: tunica albuginea 
+\bt\-gamma lymfocytose\b:: large granular lymphocytic leukemia 
+\btheca luteinecyste\b:: geluteiniseerde follikelcyste 
+\bthecaceltumor\b:: thecoom 
+\bthecomatosis\b:: thecose 
+\btherapie met cytostatica\b:: cytostaticum 
+\btherapie prednison\b:: prednison 
+\bthesaurismosis\b:: stapelingsziekte 
+\bthoracale merg\b:: thoracale ruggenmerg 
+\bthrombangitis obliterans\b:: thromboangiitis obliterans 
+\bthrombi\b:: thrombus 
+\bthrombus obstructief\b:: afsluitende trombose 
+\bthymolipoom\b:: thymoom 
+\bthymus carcinoom\b:: metaplastisch thymoom 
+\bthymus persistens\b:: thymus 
+\bthyroglossal duct cyst\b:: mediane halscyste 
+\btierfell naevus\b:: congenitale melanocytaire naevus 
+\btissue repair\b:: reparatie 
+\btoeneming van lymfocyten\b:: lymfocytose 
+\btoeneming van monocyten\b:: monocytose 
+\btongwortel\b:: tongbasis 
+\btonsil en adenoid\b:: ring van waldeyer 
+\btonsilla cerebellaris\b:: cerebellum tonsillen 
+\btonsilla epipharyngea\b:: adenoid 
+\btonsilla pharyngea\b:: adenoid 
+\btonsilla pharyngealis\b:: adenoid 
+\btonsillen en adenoid\b:: ring van waldeyer 
+\btorulosis\b:: cryptococcose 
+\btoxemia of pregnancy\b:: eclampsie 
+\btoxicity\b:: toxische schade 
+\btracheakraakbeen\b:: kraakbeen van de trachea 
+\btractus respiratorius superior\b:: hogere luchtwegen 
+\btranscient acantolytic dermatosis\b:: transiente acantholytische dermatose 
+\btransiente acantholitische dermatose\b:: transiente acantholytische dermatose 
+\btransitional carcinoma\b:: urotheelcelcarcinoom 
+\btransitional cell papilloma\b:: urotheelcelpapilloom 
+\btransmurale cardiomyopathie\b:: cardiomyopathie 
+\btraumatische scheur\b:: ruptuur 
+\btreacher collins\b:: dysostosis osteomandibularis 
+\btrichoblastair fibroom\b:: trichoblastoom 
+\btrichophytosis\b:: dermatofytose 
+\btrigonum blaas\b:: trigonum vesicae 
+\btrigonum retromandibulare\b:: submandibulair 
+\btrilhaarepitheel cyste\b:: ciliaire cyste 
+\btrisomy, twenty first chromosome pair\b:: trisomie 21 
+\btroebele zwelling\b:: resorptie 
+\btrofoblastische pseudotumor\b:: placental site trophoblastic tumor 
+\btubair abortus\b:: tubaire graviditeit 
+\btubairzwangerschap\b:: tubaire graviditeit 
+\btubercelbacil\b:: mycobacterium tuberculosis 
+\btuberculeus litteken\b:: primair complex t.b.c. 
+\btuberculeuze ontsteking\b:: tuberculose 
+\btubo ovariaal\b:: adnex 
+\btubo ovarieel\b:: adnex 
+\btubular adenoma\b:: tubulair adenoom 
+\btubulus seminiferus\b:: tubuli seminiferi 
+\btubuluscelnecrose\b:: acute tubulusnecrose 
+\btularemia\b:: tularaemie 
+\btulbandtumor\b:: cylindroom 
+\btumor mixtus\b:: pleiomorf adenoom 
+\btumorcelembolie\b:: metastase maligne tumor 
+\btumormetastase\b:: metastase maligne tumor 
+\btumormetastasen\b:: metastase maligne tumor 
+\btunica albuginea testis\b:: tunica albuginea 
+\btunica intima\b:: intima 
+\btunica muscularis vesicae urinariae\b:: muscularis urineblaas 
+\bturban tumor\b:: cylindroom 
+\bturks zadel\b:: sella turcica 
+\btussenwervelgewricht\b:: wervelgewricht 
+\btweeeiige tweelingen\b:: tweeeiige tweeling 
+\btylositas articuli\b:: knuckle pad 
+\btympanic cavity\b:: cavum tympani 
+\btyphus abdominalis\b:: tyfus 
+\buitstrijken\b:: uitstrijk 
+\bulceraties\b:: ulcus 
+\bulcus callosum\b:: chronisch ulcus 
+\bulcus simplex\b:: ulcus 
+\bulcus stercorale\b:: chronisch ulcus 
+\bulcuswand\b:: ulcus 
+\bultravioletbeschadiging\b:: lichtbeschadiging 
+\bunna thost\b:: keratosis palmaris et plantaris 
+\burate calculus\b:: uraatstenen 
+\buretermonding\b:: ureter-blaas overgang 
+\buretero ileo cutaneo stomie\b:: bricker blaas 
+\burethra man\b:: urethra 
+\burine retentie\b:: urine 
+\burinebestanddelen\b:: urine 
+\burineflegmone\b:: flegmoneuze ontsteking 
+\burinesediment\b:: urine 
+\burotheelcellen\b:: urotheelcel 
+\burotheelpapilloom\b:: urotheelcelpapilloom 
+\burticaria provocata\b:: urticaria 
+\busuur\b:: drukatrofie 
+\buterus duplex bicornis bicollis\b:: uterus duplex 
+\buterus met subseptum\b:: septum uteri 
+\buterus portio\b:: cervix 
+\buterus septum\b:: septum uteri 
+\buterusslijmvlies atrofie\b:: endometrium in postmenopauze 
+\buterusslijmvlies menstruele fase\b:: endometrium in menstruatiefase 
+\buterusslijmvlies proliferatiefase\b:: endometrium in proliferatiefase 
+\buterusslijmvlies secretiefase\b:: endometrium in secretiefase 
+\bv\.p\.a\.b\.\b:: voornaamste pathologie-bevinding 
+\bvacuolaire nefrotubulopathie\b:: osmotische nefrose 
+\bvain iii\b:: vain-3 
+\bvals divertikel\b:: pseudodivertikel 
+\bvalvula cordis\b:: hartklep 
+\bvalvula semilunaris aortae\b:: aortaklep 
+\bvaquez\b:: polycythemia vera 
+\bvaricellen\b:: waterpokken 
+\bvaricose vein\b:: spatader 
+\bvas deferens beiderzijds\b:: ductus deferens 
+\bvasa deferentia\b:: ductus deferens 
+\bvascular leiomyoma\b:: angioleiomyoom 
+\bvater pacini corpuscle\b:: lichaampje van vater pacini 
+\bvater syndroom\b:: vater associatie 
+\bvegetatief zenuwstelsel\b:: autonome zenuwstelsel 
+\bvena anonyma\b:: vena brachiocephalica 
+\bvena cava caudalis\b:: vena cava inferior 
+\bvena varicosa\b:: spatader 
+\bvenae centrales hepatis\b:: vena centralis hepatis 
+\bvenen\b:: vene 
+\bveneuze plexus prostaticus\b:: plexus prostaticus 
+\bvenula\b:: venule 
+\bverbrandingseffecten\b:: verbranding 
+\bverdachte celafwijking\b:: verdacht maligne 
+\bverdachte cytologische verandering\b:: verdacht maligne 
+\bverdringen erytropoese\b:: hypoplasie van de rode reeks 
+\bverdringen myelopoese\b:: granulocytaire hypoplasie 
+\bvergroeiingen\b:: deformatie 
+\bvergrote kernen\b:: kernvergroting 
+\bverhemelteboog\b:: gehemelteboog 
+\bverhoornend planocellulair carcinoom\b:: verhoornend plaveiselcelcarcinoom 
+\bverkalking van de media\b:: mediaverkalking 
+\bverkalkt epithelioom\b:: pilomatricoom 
+\bverkazende granulomateuze ontsteking\b:: necrotiserende granulomateuze ontsteking 
+\bverlengde merg\b:: medulla oblongata 
+\bverminderde spermiogenese\b:: hypospermatogenese 
+\bverouderingstoornis\b:: verouderingsverschijnsel 
+\bverruca plana juvenilis\b:: verruca plana 
+\bverruca senilis\b:: verruca seborrhoica 
+\bverslag verwijderd\b:: rapport verwijderd 
+\bverslijmend adenocarcinoom\b:: mucineus carcinoom 
+\bverslijmend carcinoom\b:: mucineus carcinoom 
+\bverslijmende degeneratie\b:: myxoide degeneratie 
+\bverslikpneumonie\b:: aspiratiepneumonie 
+\bvertebra cervicalis\b:: cervicale wervel 
+\bvervallend secernerend slijmvlies\b:: endometrium in menstruatiefase 
+\bverwonding\b:: wond 
+\bverworven deformatie\b:: deformatie 
+\bvesica fellea\b:: galblaas 
+\bvesica urinaria\b:: urineblaas 
+\bvesicle\b:: vesicula 
+\bvetinfiltratie\b:: vettige infiltratie 
+\bvettige atrofie\b:: lipomateuze atrofie 
+\bvettige verandering\b:: steatose 
+\bvijfde teen\b:: kleine teen 
+\bvilleus papilloom\b:: villeus adenoom 
+\bvilli amnii\b:: amnion villi 
+\bvilli van het amnion\b:: amnion villi 
+\bvilloadenomateuze poliep\b:: adenomateuze poliep 
+\bvillous adenoma\b:: villeus adenoom 
+\bvillus synovialis\b:: synoviavlok 
+\bvin i\b:: vin-1 
+\bvin ii\b:: vin-2 
+\bvin iii\b:: vin-3 
+\bvirginal state\b:: virgo 
+\bvirusinfecties\b:: virus 
+\bvisceral pleura\b:: pleura visceralis 
+\bvitamin b12 deficiency\b:: vitamine b12 deficientie 
+\bvitium cordis congenitum\b:: congenitale hartafwijking 
+\bvliezig deel van de placenta\b:: vruchtvliezen 
+\bvocht uit het hartezakje\b:: pericardvocht 
+\bvoedselprop\b:: fytobezoar 
+\bvoetwortel\b:: enkel 
+\bvon recklinghausen botziekte\b:: osteitis fibrosa cystica 
+\bvon recklinghausen's disease of bone\b:: osteitis fibrosa cystica 
+\bvoorhoorn van het ruggemerg\b:: voorhoorn van het ruggenmerg 
+\bvreemdlichaamgranulomen\b:: vreemdlichaamgranuloom 
+\bvruchtdelen\b:: zwangerschapsproduct 
+\bvruchtrest\b:: zwangerschapsproduct 
+\bvruchtwater van afwijkende samenstelling\b:: vruchtwater pathologie 
+\bwarthin's tumor\b:: warthin tumor 
+\bweber christian disease\b:: weber christian 
+\bweinig gedifferentieerd adenocarcinoom\b:: adenocarcinoom 
+\bweinig gedifferentieerd carcinoom\b:: ongedifferentieerd carcinoom 
+\bweinig gedifferentieerd plaveiselcelcarcinoom\b:: plaveiselcelcarcinoom 
+\bwerdnig hoffman\b:: werdnig hoffmann 
+\bwerlhof\b:: idiopathische trombocytopenische purpura 
+\bwerlhoff\b:: idiopathische trombocytopenische purpura 
+\bwerner\b:: progeria volwassenen 
+\bwhartonse gelei\b:: gelei van wharton 
+\bwolffse cyste\b:: mesonefrosrest 
+\bwolffse gangrest\b:: mesonefrosrest 
+\bwonddehiscentie\b:: dehiscentie 
+\bworinger kolopp\b:: mycosis fungoides 
+\bxanthelasmata\b:: xanthelasma 
+\bxanthoendothelioom\b:: juveniel xanthogranuloom 
+\bxanthofibroom\b:: fibreus histiocytoom 
+\bxanthogranuloma juveniel\b:: juveniel xanthogranuloom 
+\bxanthogranuloma juvenile\b:: juveniel xanthogranuloom 
+\bxp11 translocatie carcinoom\b:: niercelcarcinoom met translocatie in mit familie 
+\bzaadvormende buisjes\b:: tubuli seminiferi 
+\bzachte hersenvlies\b:: leptomeninx 
+\bzachte hersenvliezen\b:: leptomeninx 
+\bzenckers divertikel\b:: zenkers divertikel 
+\bzonale necrose\b:: centrolobulaire necrose 
+\bzonder pathologische verandering\b:: geen afwijking 
+\bzool\b:: voetzool 
+\bzwangerschapsproducten\b:: zwangerschapsproduct 
+\bzwangerschapsresten\b:: zwangerschapsrest 
+\bzweetkliercyste\b:: hidrocystoom 
+\bzwembroek naevus\b:: congenitale melanocytaire naevus 
+\bzwoerdvorming\b:: zwoerd 

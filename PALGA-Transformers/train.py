@@ -1,10 +1,11 @@
 from finetune_utils import *
 from shared_utils import *
 import argparse
+from TRIE import create_palga_trie
 
 def main(num_train_epochs, max_generate_length, train_batch_size, validation_batch_size, learning_rate,
          max_length_sentence, data_set, local_tokenizer_path, local_model_path, comment, patience, freeze_all_but_x_layers, lr_strategy, optimizer_type
-         , dropout_rate):
+         , dropout_rate, constrained_decoding):
     
     # Generate config and run name
     config, run_name = generate_config_and_run_name(
@@ -39,8 +40,16 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
     # Prepare training objects
     optimizer, accelerator, model, train_dataloader, eval_dataloaders, test_dataloaders, scheduler = prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloaders, test_dataloaders, lr_strategy, num_training_steps, optimizer_type)
 
+    if constrained_decoding:
+        thesaurus_location = "/home/msiepel/snomed_20230426.txt"
+        tokenizer_location = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/T5_small_32128_pretrain_with_codes"
+        data_location = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/pretrain/pretrain_clean_old.tsv"
+        exclusive_terms_file_path = "/home/msiepel/mutually_exclusive_values.txt"
+        Palga_trie = create_palga_trie(thesaurus_location, tokenizer_location, data_location, exclusive_terms_file_path)
+    else:
+        Palga_trie = None
     # Training and evaluation
-    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, test_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler)
+    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, test_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler, constrained_decoding, Palga_trie)
 
 # Entry point of the program
 if __name__ == "__main__":
@@ -62,10 +71,10 @@ if __name__ == "__main__":
     parser.add_argument("--lr_strategy", type=str, default='AdamW', help="AdamW or ST-LR")
     parser.add_argument("--optimizer_type", type=str, default='AdamW', help="Optimizer type")
     parser.add_argument("--dropout_rate", type=float, default=0.1, help="Dropout rate")
-
+    parser.add_argument("--constrained_decoding", action='store_true', help="Enable constrained decoding")
     args = parser.parse_args()
 
     # Call main function with the parsed arguments
     main(args.num_train_epochs, args.max_generate_length, args.train_batch_size, args.validation_batch_size,
          args.learning_rate, args.max_length_sentence, args.data_set, args.local_tokenizer_path, args.local_model_path, 
-         args.comment, args.patience, args.freeze_all_but_x_layers, args.lr_strategy, args.optimizer_type, args.dropout_rate)
+         args.comment, args.patience, args.freeze_all_but_x_layers, args.lr_strategy, args.optimizer_type, args.dropout_rate, args.constrained_decoding)

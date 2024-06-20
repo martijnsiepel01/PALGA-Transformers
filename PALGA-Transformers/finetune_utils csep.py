@@ -8,15 +8,14 @@ import evaluate
 from accelerate import Accelerator
 from datasets import concatenate_datasets
 import random
-import re
 
 from shared_utils import *
 
 experiment_id = str(random.randint(1, 1000000))
 
 def preprocess_function(examples, tokenizer, max_length_sentence):
-    inputs = examples["Conclusie_Conclusie"]
-    targets = examples["Codes"]
+    inputs = [ex.lower() for ex in examples["Conclusie"]]
+    targets = [ex.lower() for ex in examples["Codes"]]
     model_inputs = tokenizer(inputs, text_target=targets, max_length=max_length_sentence, truncation=True)
     # Calculate lengths based on the inputs for histogram-based splitting
     lengths = [len(input.split()) for input in inputs]  # Assuming length is based on word count before tokenization
@@ -24,28 +23,90 @@ def preprocess_function(examples, tokenizer, max_length_sentence):
     return model_inputs
 
 def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
+    # Function to convert all string columns to lowercase
+    def make_lowercase(example):
+        for key, value in example.items():
+            if isinstance(value, str):
+                example[key] = value.lower()
+        return example
+    
     data_files = {
-        "train": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/train.tsv",
-        "test": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/test.tsv",
-        "validation": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/val.tsv"
+        # "train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv",
+        # "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv",
+        # "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"
+        "train": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_train_with_codes_split.tsv",
+        "test": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_test_with_codes_split.tsv",
+        "validation": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_validation_with_codes_split.tsv"
     }
     dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
+    dataset = dataset.map(make_lowercase)
 
-    # Function to get 1% of the dataset
-    def get_percentage(ds):
-        return ds.shuffle(seed=42).select(range(max(1, int(0.03 * len(ds)))))
+
+    # Concatenate additional datasets if 'all' is specified
+    if data_set == "all":
+        # Load and concatenate second dataset
+        data_set = "histo"
+        data_files2 = {
+            "train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv",
+            "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv",
+            "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"
+        }
+        dataset2 = load_dataset("csv", data_files=data_files2, delimiter="\t")
+        dataset2 = dataset2.map(make_lowercase)
+        dataset2 = dataset2.map(lambda example: {'Type': 'T', **example})
+        
+        # Load and concatenate third dataset
+        data_set = "autopsies"
+        data_files3 = {
+            # "train": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_train_with_codes.tsv",
+            # "test": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_test_with_codes.tsv",
+            # "validation": f"PALGA-Transformers/data/{data_set}/{data_set}_norm_validation_with_codes.tsv"
+            "train": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_train_with_codes_split.tsv",
+            "test": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_test_with_codes_split.tsv",
+            "validation": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_validation_with_codes_split.tsv"
+        }
+        dataset3 = load_dataset("csv", data_files=data_files3, delimiter="\t")
+        dataset3 = dataset3.map(make_lowercase)
+        dataset3 = dataset3.map(lambda example: {'Type': 'S', **example})
+
+        # Concatenate the datasets
+        dataset = {
+            "train": concatenate_datasets([dataset["train"], dataset2["train"], dataset3["train"]]),
+            "test": concatenate_datasets([dataset["test"], dataset2["test"], dataset3["test"]]),
+            "validation": concatenate_datasets([dataset["validation"], dataset2["validation"], dataset3["validation"]])
+        }
+
+    #     # # Function to sample n_samples for each type from the dataset
+    #     # def sample_by_type(dataset, n_samples, double_sample = 0):
+    #     #     sampled = []
+    #     #     for type_value in ['C', 'T', 'S']:
+    #     #         if type_value == 'T' and double_sample == 1:
+    #     #             n_samples = n_samples * 2
+    #     #         filtered = dataset.filter(lambda example: example['Type'] == type_value)
+    #     #         sampled.append(filtered.shuffle().select(range(min(n_samples, len(filtered)))))
+    #     #     return concatenate_datasets(sampled)
+
+    #     # # Sampling datasets to contain specified number of rows for each Type
+    #     # dataset["train"] = sample_by_type(dataset["train"], 40000, 1)
+    #     # dataset["test"] = sample_by_type(dataset["test"], 5000)
+    #     # dataset["validation"] = sample_by_type(dataset["validation"], 5000)
+    # from collections import Counter
+    # type_counts = Counter()
 
     # Filter rows where 'Codes' or 'Conclusie' is not null or empty, and preprocess
     for split in dataset.keys():
         dataset[split] = dataset[split].filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
-        dataset[split] = dataset[split].filter(lambda example: example["Conclusie_Conclusie"] is not None and example["Conclusie_Conclusie"] != '')
+        dataset[split] = dataset[split].filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
         dataset[split] = dataset[split].map(
             lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
             batched=True
         )
-
-        dataset[split] = dataset[split].remove_columns(["Conclusie_Conclusie", "Codes", "Type", "Jaar", "Epicrise", "Conclusie_Epicrise", "Conclusie"])
-        # dataset[split] = get_percentage(dataset[split])
+        # type_counts.update(dataset[split]['Type'])
+        # print(type_counts)
+        dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes", "Type"])
+        # dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes"])
+        # dataset[split] = dataset[split].remove_columns(["Conclusie", "Codes_words", "Codes", "terms", "Type"])
+    # print(type_counts)
 
     # Sort the validation dataset by 'length' for histogram-based splitting
     val_dataset = dataset['validation'].sort("length")
@@ -63,7 +124,7 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
     val_datasets = [vd.remove_columns(["length"]) for vd in val_datasets]  # Remove the 'length' column from the validation splits
 
     return train_dataset, val_datasets
-    
+
 def prepare_test_dataset(tokenizer, max_length_sentence):
     test_data_location = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
     dataset = load_dataset("csv", data_files={"test": test_data_location}, delimiter="\t")['test']
@@ -92,20 +153,97 @@ def prepare_test_dataset(tokenizer, max_length_sentence):
 
     return test_datasets
 
+def freeze_layers(model, freeze_all_but_x_layers):
+    # Freeze all the parameters in the model first
+    for param in model.parameters():
+        param.requires_grad = False
+
+    # Unfreeze the last x encoder layers
+    for param in model.encoder.block[-freeze_all_but_x_layers:].parameters():
+        param.requires_grad = True
+
+    # Unfreeze the last x decoder layers
+    for param in model.decoder.block[-freeze_all_but_x_layers:].parameters():
+        param.requires_grad = True
+
+    model.encoder.final_layer_norm.weight.requires_grad = True
+    model.decoder.final_layer_norm.weight.requires_grad = True
+    model.lm_head.weight.requires_grad = True
+
+
+    # Optionally, print out which layers are trainable to verify
+    for name, param in model.named_parameters():
+        print(f"{name} is {'trainable' if param.requires_grad else 'frozen'}")
+
+    return model
+
+# def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path='PALGA-Transformers/models/flan-t5-small', dropout_rate=0.1):
+    # Load the model configuration first
+    # config = AutoConfig.from_pretrained(local_model_path, local_files_only=True)
+    
+    # # If a dropout_rate is specified, update the model configuration's dropout_rate
+    # if dropout_rate is not None:
+    #     config.dropout_rate = dropout_rate
+    
+    # # Now load the model with the updated configuration
+    # model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config, local_files_only=True)
+    # model.resize_token_embeddings(len(tokenizer))
+    
+    # if freeze_all_but_x_layers > 0:
+    #     model = freeze_layers(model, freeze_all_but_x_layers)
+        
+    # return model
+
+
+
 def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path='PALGA-Transformers/models/flan-t5-small', dropout_rate=0.1, rank=16, lora_alpha=32, lora_dropout=0.01):
+    # config = AutoConfig.from_pretrained(local_model_path, local_files_only=True)
     config = AutoConfig.from_pretrained(local_model_path)
 
     if dropout_rate is not None:
         config.dropout_rate = dropout_rate
     
+    # model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config, local_files_only=True, load_in_8bit=True)
     model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config)
-
+    print(f"Model footprint: {model.get_memory_footprint()}")
+    print(torch.cuda.device_count())
     model.resize_token_embeddings(len(tokenizer))
+    
+    # # LoRA Configuration
+    # lora_config = LoraConfig(
+    #     task_type='seq2seq_lm',  # Specify the task type if required; here, 'seq2seq_lm' for sequence-to-sequence language modeling
+    #     r=rank,  # Rank of the update matrices
+    #     lora_alpha=lora_alpha,  # LoRA scaling factor
+    #     lora_dropout=lora_dropout,  # Dropout rate for LoRA layers
+    #     target_modules=["k","q","v","o"],    
+    #     # target_modules=["q", "v"],
+    #     )
+    
+    # # Apply LoRA Configuration to the model
+    # model = get_peft_model(model, lora_config)
+
+    # print(model.print_trainable_parameters())
+    
+    if freeze_all_but_x_layers > 0:
+        # Assuming a utility function `freeze_layers` exists to freeze parameters
+        # This would need to be adapted based on how you want to freeze layers
+        model = freeze_layers(model, freeze_all_but_x_layers)
     
     return model
 
 
+def slanted_triangular_learning_rate(step, total_steps, lr_start, lr_max, cut_frac, ratio):
+    if step < total_steps * cut_frac:
+        p = step / (total_steps * cut_frac)
+    else:
+        p = 1 - (step - total_steps * cut_frac) / (total_steps * (1 - cut_frac))
+    lr = lr_start + (lr_max - lr_start) * p
+    return lr * (1 / (1 + ratio * step))
+
+
 def prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloaders, test_dataloaders, lr_strategy, total_steps, optimizer_type='adamw'):
+    # Select optimizer based on optimizer_type
+    # model = model[0]
     if optimizer_type.lower() == 'adamw':
         # optimizer = AdamW(model.base_model.model.parameters(), lr=learning_rate)
         optimizer = AdamW(model.parameters(), lr=learning_rate)
@@ -137,6 +275,15 @@ def prepare_training_objects(learning_rate, model, train_dataloader, eval_datalo
     test_dataloaders = [accelerator.prepare(test_dl) for test_dl in test_dataloaders]
 
     scheduler = None
+    if lr_strategy == "ST-LR":
+        # Adjusted parameters for ST-LR to keep the learning rate close to 1e-4
+        lr_start = 5e-5  # Start slightly lower than the target learning rate
+        lr_max = 2e-4    # Peak learning rate, slightly above the target
+        cut_frac = 0.1   # Proportion of training steps to increase the learning rate
+        ratio = 32       # Controls the steepness of the learning rate decrease
+
+        lr_lambda = lambda step: slanted_triangular_learning_rate(step, total_steps, lr_start, lr_max, cut_frac, ratio)
+        scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
 
     return optimizer, accelerator, model, train_dataloader, eval_dataloaders, test_dataloaders, scheduler
 
@@ -154,11 +301,12 @@ def get_word_from_code(code):
     
 def custom_decode(tokenizer, token_ids):
     tokens = [tokenizer.decode([tid], skip_special_tokens=True) for tid in token_ids]
-    decoded_string = ' '.join(tokens).replace(' </s>', '').strip()
+    decoded_string = ' '.join(tokens).replace(' </s>', '').replace('  c  s e p ', "[C-SEP]").strip()
     return decoded_string
 
 def train_step(model, dataloader, optimizer, accelerator, scheduler, tokenizer):
     model.train()
+    print(next(model.parameters()).device)
     total_train_loss = 0.0
 
     for batch_idx, batch in enumerate(tqdm(dataloader, desc="Training")):
@@ -173,12 +321,25 @@ def train_step(model, dataloader, optimizer, accelerator, scheduler, tokenizer):
         input_c_sep_counts = count_c_sep(input_tokens, tokenizer)
         output_c_sep_counts = count_c_sep(output_tokens, tokenizer)
 
+        # Print 'c-sep' counts for verification
+        # print(f"Batch {batch_idx}: Input 'c-sep' counts: {input_c_sep_counts}")
+        # print(f"Batch {batch_idx}: Output 'c-sep' counts: {output_c_sep_counts}")
+
         # Calculate reweight factors for each sequence in the batch
         reweight_factors = [calculate_reweight_factor(inp, out) for inp, out in zip(input_c_sep_counts, output_c_sep_counts)]
+        # reweight_factors = [1 for _ in range(len(input_c_sep_counts))]  # Set to 1 for each sequence
+
+
+        # Print reweight factors for verification
+        # print(f"Batch {batch_idx}: Reweight factors: {reweight_factors}")
 
         # Adjust the loss for each sequence and sum them up
         weighted_losses = loss * torch.tensor(reweight_factors).to(loss.device)  # Ensure reweight factors are on the same device as loss
         weighted_loss = weighted_losses.mean()  # Calculate mean to combine individual losses
+        # weighted_loss = loss
+
+        # Print weighted loss for verification
+        # print(f"Batch {batch_idx}: Weighted loss: {weighted_loss.item()}")
 
         optimizer.zero_grad()
         accelerator.backward(weighted_loss)
@@ -209,29 +370,8 @@ def calculate_reweight_factor(input_count, output_count):
         return reweight_factor
     return 1
 
-def create_prefix_allowed_tokens_fn(Palga_trie, tokenizer):
-    def prefix_allowed_tokens_fn(batch_id, sent):
-        sent = sent.tolist()[1:]
-        if len(sent) > 0:
-            try:
-                # Reverse the list and find the index of the item
-                reversed_index = sent[::-1].index(25831)
-                # Adjust the index to get the position in the original list
-                index = len(sent) - 1 - reversed_index
-                # Slice the list to exclude the item and everything before it
-                sent = sent[index + 1:]
-            except ValueError:
-                # If the item is not found, leave the list unchanged
-                sent = sent
 
-        out = list(Palga_trie.get(sent))
-        if len(out) > 0:
-            return out
-        else:
-            return list(tokenizer.encode(tokenizer.eos_token))
-    return prefix_allowed_tokens_fn
-
-def validation_step(model, eval_dataloaders, tokenizer, max_generate_length, constrained_decoding, Palga_trie):
+def validation_step(model, eval_dataloaders, tokenizer, max_generate_length):
     dataloader_names = ["shortest", "short", "average", "long", "longest"]
     all_validation_metrics = {}
     
@@ -256,30 +396,15 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length, con
                 del batch['length']
 
             with torch.no_grad():
-                if constrained_decoding:
-                    print('constrained decoding')
-                    prefix_allowed_tokens_fn = create_prefix_allowed_tokens_fn(Palga_trie, tokenizer)
-                    outputs =  model.generate(
-                        batch["input_ids"],
-                        attention_mask=batch["attention_mask"],
-                        max_length=max_generate_length,
-                        diversity_penalty=0.3,
-                        num_beams=6,
-                        num_beam_groups=2,
-                        no_repeat_ngram_size=3,
-                        prefix_allowed_tokens_fn=prefix_allowed_tokens_fn,
-                    )
-                else:
-                    outputs =  model.generate(
-                        batch["input_ids"],
-                        attention_mask=batch["attention_mask"],
-                        max_length=max_generate_length,
-                        diversity_penalty=0.3,
-                        num_beams=6,
-                        num_beam_groups=2,
-                        no_repeat_ngram_size=3,
-                    )
-                
+                outputs =  model.generate(
+                    batch["input_ids"],
+                    attention_mask=batch["attention_mask"],
+                    max_length=max_generate_length,
+                    diversity_penalty=0.3,
+                    num_beams=6,
+                    num_beam_groups=2,
+                    no_repeat_ngram_size=3,
+                )
                 loss = model(**batch).loss
                 total_loss += loss.item()
 
@@ -450,6 +575,12 @@ def wandb_log_metrics(epoch, avg_train_loss, eval_metrics):
     avg_eval_rouge = (eval_metrics["average_rouge_shortest"] + eval_metrics["average_rouge_short"] + eval_metrics["average_rouge_average"] + eval_metrics["average_rouge_long"] + eval_metrics["average_rouge_longest"]) / 5
     avg_eval_f1_bleu_rouge = (eval_metrics["bleu_rouge_f1_shortest"] + eval_metrics["bleu_rouge_f1_short"] + eval_metrics["bleu_rouge_f1_average"] + eval_metrics["bleu_rouge_f1_long"] + eval_metrics["bleu_rouge_f1_longest"]) / 5
     
+    # Compute average test metrics
+    # avg_test_loss = (test_metrics["loss_shortest"] + test_metrics["loss_short"] + test_metrics["loss_average"] + test_metrics["loss_long"] + test_metrics["loss_longest"]) / 5
+    # avg_test_bleu = (test_metrics["bleu_shortest"] + test_metrics["bleu_short"] + test_metrics["bleu_average"] + test_metrics["bleu_long"] + test_metrics["bleu_longest"]) / 5
+    # avg_test_rouge = (test_metrics["average_rouge_shortest"] + test_metrics["average_rouge_short"] + test_metrics["average_rouge_average"] + test_metrics["average_rouge_long"] + test_metrics["average_rouge_longest"]) / 5
+    # avg_test_f1_bleu_rouge = (test_metrics["bleu_rouge_f1_shortest"] + test_metrics["bleu_rouge_f1_short"] + test_metrics["bleu_rouge_f1_average"] + test_metrics["bleu_rouge_f1_long"] + test_metrics["bleu_rouge_f1_longest"]) / 5
+
     wandb.log({
                 "epoch/epoch": epoch,
                 "training/train_loss": avg_train_loss,
@@ -458,35 +589,59 @@ def wandb_log_metrics(epoch, avg_train_loss, eval_metrics):
                 "average/eval_loss_average": eval_metrics["loss_average"],
                 "long/eval_loss_long": eval_metrics["loss_long"],
                 "longest/eval_loss_longest": eval_metrics["loss_longest"],
+                # "shortest/test_loss_shortest": test_metrics["loss_shortest"],
+                # "short/test_loss_short": test_metrics["loss_short"],
+                # "average/test_loss_average": test_metrics["loss_average"],
+                # "long/test_loss_long": test_metrics["loss_long"],
+                # "longest/test_loss_longest": test_metrics["loss_longest"],
                 "shortest/eval_BLEU_shortest": eval_metrics["bleu_shortest"],
                 "short/eval_BLEU_short": eval_metrics["bleu_short"],
                 "average/eval_BLEU_average": eval_metrics["bleu_average"],
                 "long/eval_BLEU_long": eval_metrics["bleu_long"],
                 "longest/eval_BLEU_longest": eval_metrics["bleu_longest"],
+                # "shortest/test_BLEU_shortest": test_metrics["bleu_shortest"],
+                # "short/test_BLEU_short": test_metrics["bleu_short"],
+                # "average/test_BLEU_average": test_metrics["bleu_average"],
+                # "long/test_BLEU_long": test_metrics["bleu_long"],
+                # "longest/test_BLEU_longest": test_metrics["bleu_longest"],
                 "shortest/eval_average_ROUGE_shortest": eval_metrics["average_rouge_shortest"],
                 "short/eval_average_ROUGE_short": eval_metrics["average_rouge_short"],
                 "average/eval_average_ROUGE_average": eval_metrics["average_rouge_average"],
                 "long/eval_average_ROUGE_long": eval_metrics["average_rouge_long"],
                 "longest/eval_average_ROUGE_longest": eval_metrics["average_rouge_longest"],
+                # "shortest/test_average_ROUGE_shortest": test_metrics["average_rouge_shortest"],
+                # "short/test_average_ROUGE_short": test_metrics["average_rouge_short"],
+                # "average/test_average_ROUGE_average": test_metrics["average_rouge_average"],
+                # "long/test_average_ROUGE_long": test_metrics["average_rouge_long"],
+                # "longest/test_average_ROUGE_longest": test_metrics["average_rouge_longest"],
                 "shortest/eval_F1-Bleu-Rouge_shortest": eval_metrics["bleu_rouge_f1_shortest"],
                 "short/eval_F1-Bleu-Rouge_short": eval_metrics["bleu_rouge_f1_short"],
                 "average/eval_F1-Bleu-Rouge_average": eval_metrics["bleu_rouge_f1_average"],
                 "long/eval_F1-Bleu-Rouge_long": eval_metrics["bleu_rouge_f1_long"],
                 "longest/eval_F1-Bleu-Rouge_longest": eval_metrics["bleu_rouge_f1_longest"],
+                # "shortest/test_F1-Bleu-Rouge_shortest": test_metrics["bleu_rouge_f1_shortest"],
+                # "short/test_F1-Bleu-Rouge_short": test_metrics["bleu_rouge_f1_short"],
+                # "average/test_F1-Bleu-Rouge_average": test_metrics["bleu_rouge_f1_average"],
+                # "long/test_F1-Bleu-Rouge_long": test_metrics["bleu_rouge_f1_long"],
+                # "longest/test_F1-Bleu-Rouge_longest": test_metrics["bleu_rouge_f1_longest"],
                 "evaluation/avg_loss": avg_eval_loss,
                 "evaluation/avg_bleu": avg_eval_bleu,
                 "evaluation/avg_rouge": avg_eval_rouge,
                 "evaluation/avg_f1_bleu_rouge": avg_eval_f1_bleu_rouge,
+                # "test/avg_loss": avg_test_loss,
+                # "test/avg_bleu": avg_test_bleu,
+                # "test/avg_rouge": avg_test_rouge,
+                # "test/avg_f1_bleu_rouge": avg_test_f1_bleu_rouge,
             })
 
-def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, test_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler, constrained_decoding, Palga_trie):
+def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, test_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler):
     lowest_loss = float("inf")
     early_stopping_counter = 0
     best_model_state_dict = None
 
     for epoch in range(num_train_epochs):
         avg_train_loss = train_step(model, train_dataloader, optimizer, accelerator, scheduler, tokenizer)
-        all_eval_metrics, decoded_eval_preds, decoded_eval_labels, decoded_eval_input = validation_step(model, eval_dataloaders, tokenizer, max_generate_length, constrained_decoding, Palga_trie)
+        all_eval_metrics, decoded_eval_preds, decoded_eval_labels, decoded_eval_input = validation_step(model, eval_dataloaders, tokenizer, max_generate_length)
         # all_test_metrics, decoded_test_preds, decoded_test_labels, decoded_test_input = test_step(model, test_dataloaders, tokenizer, max_generate_length)
 
         # Log metrics to WandB
@@ -509,7 +664,7 @@ def train_model(model, optimizer, accelerator, max_generate_length, train_datalo
     model.load_state_dict(best_model_state_dict)
 
     # Run print_test_predictions with the best model
-    eval_metrics, decoded_eval_preds, decoded_eval_labels, decoded_eval_input = validation_step(model, eval_dataloaders, tokenizer, max_generate_length, constrained_decoding, Palga_trie)
+    eval_metrics, decoded_eval_preds, decoded_eval_labels, decoded_eval_input = validation_step(model, eval_dataloaders, tokenizer, max_generate_length)
     print_test_predictions(decoded_eval_preds, decoded_eval_labels, decoded_eval_input)
 
     # Save the best model weights as a W&B artifact

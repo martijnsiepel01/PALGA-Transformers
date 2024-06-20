@@ -6,11 +6,45 @@ sampling_params: {'temperature': 0.7, 'top_k': 20}
 beam_params: {'num_beams': 8, 'no_repeat_ngram_size': 1}
 beam_sampling_params: {'num_beams': 7, 'no_repeat_ngram_size': 1, 'do_sample': True}
 diverse_beam_params: {'diversity_penalty': 0.3, 'num_beams': 6, 'num_beam_groups': 2}
-Evaluation:   0%|          | 0/32 [00:00<?, ?it/s]/gpfs/home3/gburger01/.venv/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:392: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+
+Evaluation:   0%|          | 0/32 [00:00<?, ?it/s]/gpfs/home3/gburger01/.venv/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:392: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
   warnings.warn(
 /gpfs/home3/gburger01/.venv/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:407: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
   warnings.warn(
-Evaluation:   3%|▎         | 1/32 [00:34<18:01, 34.89s/it]Evaluation:   6%|▋         | 2/32 [01:05<16:14, 32.49s/it]Evaluation:   9%|▉         | 3/32 [01:33<14:37, 30.27s/it]Evaluation:  12%|█▎        | 4/32 [02:35<19:56, 42.74s/it]Evaluation:  16%|█▌        | 5/32 [03:03<16:53, 37.54s/it]Evaluation:  19%|█▉        | 6/32 [03:51<17:50, 41.17s/it]Evaluation:  22%|██▏       | 7/32 [04:15<14:49, 35.59s/it]Evaluation:  25%|██▌       | 8/32 [04:40<12:49, 32.05s/it]Evaluation:  28%|██▊       | 9/32 [05:20<13:15, 34.57s/it]Evaluation:  31%|███▏      | 10/32 [05:36<10:36, 28.93s/it]Evaluation:  34%|███▍      | 11/32 [06:12<10:53, 31.12s/it]Evaluation:  38%|███▊      | 12/32 [07:08<12:54, 38.74s/it]Evaluation:  41%|████      | 13/32 [07:36<11:09, 35.25s/it]Evaluation:  44%|████▍     | 14/32 [08:01<09:41, 32.32s/it]Evaluation:  47%|████▋     | 15/32 [08:26<08:30, 30.05s/it]Evaluation:  50%|█████     | 16/32 [09:08<08:58, 33.65s/it]Evaluation:  53%|█████▎    | 17/32 [09:35<07:55, 31.70s/it]Evaluation:  56%|█████▋    | 18/32 [10:13<07:51, 33.67s/it]Evaluation:  59%|█████▉    | 19/32 [11:10<08:48, 40.63s/it]Evaluation:  62%|██████▎   | 20/32 [11:41<07:32, 37.73s/it]Evaluation:  66%|██████▌   | 21/32 [11:57<05:43, 31.19s/it]Evaluation:  69%|██████▉   | 22/32 [12:20<04:45, 28.59s/it]Evaluation:  72%|███████▏  | 23/32 [12:55<04:36, 30.72s/it]Evaluation:  75%|███████▌  | 24/32 [13:19<03:49, 28.68s/it]Evaluation:  78%|███████▊  | 25/32 [14:19<04:26, 38.03s/it]Evaluation:  81%|████████▏ | 26/32 [14:48<03:31, 35.28s/it]Evaluation:  84%|████████▍ | 27/32 [15:11<02:37, 31.56s/it]Evaluation:  88%|████████▊ | 28/32 [15:33<01:54, 28.62s/it]Evaluation:  91%|█████████ | 29/32 [15:48<01:14, 24.76s/it]Evaluation:  94%|█████████▍| 30/32 [16:18<00:52, 26.29s/it]Evaluation:  97%|█████████▋| 31/32 [17:01<00:31, 31.07s/it]Evaluation: 100%|██████████| 32/32 [17:04<00:00, 22.71s/it]Evaluation: 100%|██████████| 32/32 [17:04<00:00, 32.01s/it]
+
+Evaluation:   3%|▎         | 1/32 [00:34<18:01, 34.89s/it]
+Evaluation:   6%|▋         | 2/32 [01:05<16:14, 32.49s/it]
+Evaluation:   9%|▉         | 3/32 [01:33<14:37, 30.27s/it]
+Evaluation:  12%|█▎        | 4/32 [02:35<19:56, 42.74s/it]
+Evaluation:  16%|█▌        | 5/32 [03:03<16:53, 37.54s/it]
+Evaluation:  19%|█▉        | 6/32 [03:51<17:50, 41.17s/it]
+Evaluation:  22%|██▏       | 7/32 [04:15<14:49, 35.59s/it]
+Evaluation:  25%|██▌       | 8/32 [04:40<12:49, 32.05s/it]
+Evaluation:  28%|██▊       | 9/32 [05:20<13:15, 34.57s/it]
+Evaluation:  31%|███▏      | 10/32 [05:36<10:36, 28.93s/it]
+Evaluation:  34%|███▍      | 11/32 [06:12<10:53, 31.12s/it]
+Evaluation:  38%|███▊      | 12/32 [07:08<12:54, 38.74s/it]
+Evaluation:  41%|████      | 13/32 [07:36<11:09, 35.25s/it]
+Evaluation:  44%|████▍     | 14/32 [08:01<09:41, 32.32s/it]
+Evaluation:  47%|████▋     | 15/32 [08:26<08:30, 30.05s/it]
+Evaluation:  50%|█████     | 16/32 [09:08<08:58, 33.65s/it]
+Evaluation:  53%|█████▎    | 17/32 [09:35<07:55, 31.70s/it]
+Evaluation:  56%|█████▋    | 18/32 [10:13<07:51, 33.67s/it]
+Evaluation:  59%|█████▉    | 19/32 [11:10<08:48, 40.63s/it]
+Evaluation:  62%|██████▎   | 20/32 [11:41<07:32, 37.73s/it]
+Evaluation:  66%|██████▌   | 21/32 [11:57<05:43, 31.19s/it]
+Evaluation:  69%|██████▉   | 22/32 [12:20<04:45, 28.59s/it]
+Evaluation:  72%|███████▏  | 23/32 [12:55<04:36, 30.72s/it]
+Evaluation:  75%|███████▌  | 24/32 [13:19<03:49, 28.68s/it]
+Evaluation:  78%|███████▊  | 25/32 [14:19<04:26, 38.03s/it]
+Evaluation:  81%|████████▏ | 26/32 [14:48<03:31, 35.28s/it]
+Evaluation:  84%|████████▍ | 27/32 [15:11<02:37, 31.56s/it]
+Evaluation:  88%|████████▊ | 28/32 [15:33<01:54, 28.62s/it]
+Evaluation:  91%|█████████ | 29/32 [15:48<01:14, 24.76s/it]
+Evaluation:  94%|█████████▍| 30/32 [16:18<00:52, 26.29s/it]
+Evaluation:  97%|█████████▋| 31/32 [17:01<00:31, 31.07s/it]
+Evaluation: 100%|██████████| 32/32 [17:04<00:00, 22.71s/it]
+Evaluation: 100%|██████████| 32/32 [17:04<00:00, 32.01s/it]
 Input Sequence:            I. Huidexcisie (linkerschouder): littekenvorming. Geen rest basaalcelcarcinoom. II. Huidexcisie (nasolabiaal rechts): nodulair basaalcelcarcinoom, radicaal verwijderd.
 Label:                     huid schouder links excisie litteken geen maligniteit
 Prediction (Greedy):       huid resectie basaalcelcarcinoom, BLEU: 0.00, ROUGE: 15.00
@@ -182,7 +216,7 @@ Prediction (Beam):         huid hals links excisie naevus immuunhistochemie [C-i
 Prediction (Beam_sampling):huid hals links excisie immuunhistochemie dubieus [C-irritatiefibroomdermale naevus 2 type. concordantgeen maligniteitimmunohistochemi litteken reactief ontsteking necrose immuunperoxidasereactie afwijkingen echografi, BLEU: 4.02, ROUGE: 19.39
 Prediction (Diverse_beam): huid hals links excisie verruca seborrhoica, BLEU: 53.73, ROUGE: 77.50
 ----------------------------------------------------------------------------------------------------
-Input Sequence:            Huidexcisie rug met een superficieel groeiend basaalcelcarcinoom. nijvlakken vrij.
+Input Sequence:            Huidexcisie rug met een superficieel groeiend basaalcelcarcinoom. Snijvlakken vrij.
 Label:                     huid rug excisie basaalcelcarcinoom snijvlak vrij
 Prediction (Greedy):       huid rug excisie basaalcelcarcinoom snijvlak vrij, BLEU: 100.00, ROUGE: 100.00
 Prediction (Contrastive):  huid rug excisie basaalcelcarcinoom snijvlak vrij [C-E] huid rug excisie basaalcelcarcinoom snijvlak vrij, BLEU: 32.38, ROUGE: 58.89

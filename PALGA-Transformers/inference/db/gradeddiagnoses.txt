@@ -1,0 +1,61 @@
+BaseID|Grade|Term|Code|Preferred|Kind
+1|__grade__2|astrocytoom graad 2|M94023|V|2
+1|__grade__3|astrocytoom graad 3|M94013|V|2
+1|__grade__4|astrocytoom graad 4|M94403|V|2
+2|__grade__2|ependymoom|M93913|V|2
+3|__grade__3|folliculair lymfoom graad 3|M96973M97183|V|2
+4|__grade__1|solitaire fibreuze tumor|M88151|V|2
+4|__grade__2|solitaire fibreuze tumor|M88151|V|2
+4|__grade__3|maligne solitaire fibreuze tumor|M88153|V|2
+5|__grade__3|lymfomatoide granulomatose graad 3|M97663|V|2
+6|__grade__2|metastase astrocytoom graad 2|M94026|V|2
+7|__grade__1|metastase neuroendocriene tumor graad 1|M82426|V|2
+7|__grade__2|metastase neuroendocriene tumor graad 2|M82496|V|2
+7|__grade__3|metastase neuroendocriene tumor graad 3|M82456|V|2
+8|__grade__1|metastase urotheelcelcarcinoom graad 1|M81256|V|2
+8|__grade__2|metastase urotheelcelcarcinoom graad 2|M81266|V|2
+8|__grade__3|metastase urotheelcelcarcinoom graad 3|M81276|V|2
+8|__grade__4|metastase urotheelcelcarcinoom graad 4|M81286|V|2
+9|__grade__1|metastase papillair urotheelcelcarcinoom graad 1|M81316|V|2
+9|__grade__2|metastase papillair urotheelcelcarcinoom graad 2|M81326|V|2
+9|__grade__3|metastase papillair urotheelcelcarcinoom graad 3|M81336|V|2
+10|__grade__1|metastase papillair urotheelcelcarcinoom graad 1|M81316|V|2
+10|__grade__2|metastase papillair urotheelcelcarcinoom graad 2|M81326|V|2
+10|__grade__3|metastase papillair urotheelcelcarcinoom graad 3|M81336|V|2
+11|__grade__1|metastase urotheelcelcarcinoom graad 1|M81256|V|2
+11|__grade__2|metastase urotheelcelcarcinoom graad 2|M81266|V|2
+11|__grade__3|metastase urotheelcelcarcinoom graad 3|M81276|V|2
+11|__grade__4|metastase urotheelcelcarcinoom graad 4|M81286|V|2
+12|__grade__1|neuroendocriene tumor graad 1|M82423|V|2
+12|__grade__2|neuroendocriene tumor graad 2|M82493|V|2
+12|__grade__3|neuroendocriene tumor graad 3|M82453|V|2
+13|__grade__1|oligodendroglioom graad 2|M94503|V|2
+13|__grade__2|oligodendroglioom graad 2|M94503|V|2
+13|__grade__3|oligodendroglioom graad 3|M94513|V|2
+14|__grade__1|urotheelcelcarcinoom graad 1|M81253|V|2
+14|__grade__2|urotheelcelcarcinoom graad 2|M81263|V|2
+14|__grade__3|hooggradig urotheelcelcarcinoom|M81273|V|2
+14|__grade__4|urotheelcelcarcinoom graad 4|M81283|V|2
+15|__grade__1|urotheelcelcarcinoom graad 1|M81253|V|2
+15|__grade__2|urotheelcelcarcinoom graad 2|M81263|V|2
+15|__grade__3|hooggradig urotheelcelcarcinoom|M81273|V|2
+16|__grade__1|urotheelcelcarcinoom graad 1|M81253|V|2
+16|__grade__2|urotheelcelcarcinoom graad 2|M81263|V|2
+16|__grade__3|hooggradig urotheelcelcarcinoom|M81273|V|2
+17|__grade__1|laaggradig papillair urotheelcelcarcinoom|M81313|V|2
+17|__grade__2|papillair urotheelcelcarcinoom graad 2|M81323|V|2
+17|__grade__3|hooggradig papillair urotheelcelcarcinoom|M81333|V|2
+18|__grade__1|laaggradig papillair urotheelcelcarcinoom|M81313|V|2
+18|__grade__2|papillair urotheelcelcarcinoom graad 2|M81323|V|2
+18|__grade__3|hooggradig papillair urotheelcelcarcinoom|M81333|V|2
+19|__grade__1|laaggradig papillair urotheelcelcarcinoom|M81313|V|2
+19|__grade__2|papillair urotheelcelcarcinoom graad 2|M81323|V|2
+19|__grade__3|hooggradig papillair urotheelcelcarcinoom|M81333|V|2
+20|__grade__1|urotheelcelcarcinoom graad 1|M81253|V|2
+20|__grade__2|urotheelcelcarcinoom graad 2|M81263|V|2
+20|__grade__3|hooggradig urotheelcelcarcinoom|M81273|V|2
+20|__grade__4|urotheelcelcarcinoom graad 4|M81283|V|2
+21|__grade__1|urotheelcelcarcinoom graad 1|M81253|V|2
+21|__grade__2|urotheelcelcarcinoom graad 2|M81263|V|2
+21|__grade__3|hooggradig urotheelcelcarcinoom|M81273|V|2
+21|__grade__4|urotheelcelcarcinoom graad 4|M81283|V|2

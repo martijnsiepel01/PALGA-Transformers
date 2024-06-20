@@ -6,7 +6,7 @@ def preprocess_sentence(sentence):
     # Remove dates
     sentence = re.sub(r'\b\d+-\d+-\d+\b', '', sentence)
 
-    # Remove punctuation and special characters
+    # Remove punctuation and special characters excluding [ and ]
     sentence = re.sub(r'[^\w\s\[\]]', '', sentence)
 
     # Convert to lowercase
@@ -18,23 +18,33 @@ def preprocess_sentence(sentence):
     return sentence
 
 # Specify the path to your TSV file
-tsv_file = '/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/combined_gold_standard_with_codes.tsv'
+tsv_files = ['/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_test_with_codes_split_w_CSEP.tsv',
+             '/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_test_with_codes_split.tsv',
+             '/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_test_with_codes.tsv',
+             '/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_train_with_codes_split_w_CSEP.tsv',
+             '/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_train_with_codes_split.tsv',
+             '/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_train_with_codes.tsv',
+             '/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_validation_with_codes_split_w_CSEP.tsv',
+             '/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_validation_with_codes_split.tsv',
+             '/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/autopsies/autopsies_norm_validation_with_codes.tsv']
 
-# Read the TSV file into a DataFrame
-df = pd.read_csv(tsv_file, sep='\t')
 
-df['Conclusie'] = df['Conclusie'].apply(preprocess_sentence)
+for tsv_file in tsv_files:
+    # Read the TSV file into a DataFrame
+    df = pd.read_csv(tsv_file, sep='\t')
 
-# Get the directory and filename of the original TSV file
-directory = os.path.dirname(tsv_file)
-filename = os.path.basename(tsv_file)
+    df['Conclusie'] = df['Conclusie'].apply(preprocess_sentence)
 
-# Create the new file path for the processed TSV file
-processed_tsv_file = os.path.join(directory, f"{filename}")
+    # Get the directory and filename of the original TSV file
+    directory = os.path.dirname(tsv_file)
+    filename = os.path.basename(tsv_file)
 
-# Write the processed DataFrame to the new TSV file
-df.to_csv(tsv_file, sep='\t', index=False)
-print("done")
+    # Create the new file path for the processed TSV file
+    processed_tsv_file = os.path.join(directory, f"{filename}")
+
+    # Write the processed DataFrame to the new TSV file
+    df.to_csv(tsv_file, sep='\t', index=False)
+    print("done")
 
 # def print_non_az_characters(tsv_file):
 #     # Read the TSV file into a DataFrame

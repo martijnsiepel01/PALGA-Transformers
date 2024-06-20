@@ -1,0 +1,596 @@
+
+
+================================================================================
+Definitieve patholoog anatomische diagnosen: 1. Hersenen en ruggenmerg: verder onderzoek volgt. 2. Stuwing van de organen (waarschijnlijk agonaal bepaald): - Longen (links 50 gr., rechts 68 gr.). - Lever (280 gr.) en milt (36 gr.). - Nieren (gewicht samen 36 gr.). 3. Hart (gewicht 42 gr.): geringe concentrische hypertrofie met geringe supravalvulaire aortavernauwing. 4. Tractus digestivus: - Aan oesophagus en maag geen afwijkingen. Pylorus niet stenotisch. - Dunne darm en colon segmentaal verwijd met distale impactie van feces. - Geen aanwijzingen voor aganglionosis. CONCLUSIE S.G. VAN DUINEN, NEUROPATHOLOOG ******* 10-02-12: Hersenen en ruggenmerg waarin geen evidente afwijkingen die de klinische symptonen kunnen verklaren. Gezien de discrepantie met het klinische beeld zal de casus ter consult worden verzonden naar *******, ******* *******. CONCLUSIE 26-06-2012 ******* RADBOUD: het onderzoek van de hersenen toont een veranderde opbouw van de neocortex met afwijkende, soms in de richting van microgyrie gaande gyrering. Afwijkend, verarmd patroon van de oliva inferior. Geen destructieve letsels, geen tekens van stapeling, geen tekens van degeneratie, geen primaire myelinisatiestoornis. Of de beschreven veranderingen het fenotypische beeld kunnen verklaren blijkft onduidelijk. Het betreft een 14 maanden oud geworden jongen, die vanaf de geboorte bekend is met een ernstig doch onverklaard neurologisch beeld gekenmerkt door uitblijven van de ontwikkeling, bewegingsonrust, slechtziendheid tot blindheid, en met voedingsproblemen door continu braken. Met name vanwege de voedingsproblematiek en de verminderde kwaliteit van leven werd uiteindelijk besloten palliatief te behandelen, waarop het jongetje overleed. Bij obductie werd een mannelijke peuter gezien met dysmorfe kenmerken conform de beschrijving in de klinische brieven. Bij lichaamsobductie in principe een normale aanleg van de diverse organen, met een gering vergroot hart (geringe concentrische hypertrofie met supravalvulaire aortavernauwing) en segmenteel verwijde dunne en dikke darmlissen, bij impactie van faeces. Microscopisch onderzoek van de dikke darm toonde geen aganglionose. In de oesophagus en maag geen duidelijke afwijkingen. Derhalve morfologisch geen duidelijk substraat voor de ondervonden voedingsproblemen. De hersenen en het ruggemerg toonden uitwendig geen duidelijke afwijkingen; verder onderzoek door de neuropatholoog volgt.
+================================================================================
+Bij lichaamsobductie in principe een normale aanleg van de diverse organen, met een gering vergroot hart (geringe concentrische hypertrofie met supravalvulaire aortavernauwing) en segmenteel verwijde dunne en dikke darmlissen, bij impactie van faeces.
+lichaam(TYY000) obductie(P30110) normaal(M00100) hart(T32000) hypertrofie(M71000) aorta(T42000) vernauwing(M34100) 'dikke darm'(T67000) faeces(T6Y100)
+********************************************************************************
+In de oesophagus en maag geen duidelijke afwijkingen.
+oesofagus(T62000) maag(T63000) 'geen afwijking'(M00100) 'geen afwijking'(M00100) 'geen afwijking'(M00100)
+********************************************************************************
+De hersenen en het ruggemerg toonden uitwendig geen duidelijke afwijkingen; verder onderzoek door de neuropatholoog volgt.
+hersenen(TX2000) ruggemerg(TX7410) 'geen afwijking'(M00100) 'geen afwijking'(M00100) 'geen afwijking'(M00100)
+********************************************************************************
+
+
+================================================================================
+hersenen met cerebellair hematoom met doorbraak in de 4e vetrikel en subarachnoidaal bloed. Tevens intravasculaire trombi passend bij diffuse intravasale stolling. Geen aanwijzingen voor actieve vasculitis, wel een enkele mononucleaire perivasculaire cuff, in principe aspecifiek, maar mogelijk passend bij een doorgemaakte vasculitis. Uitgebreide hypertensieve vasculopathie, oedeem en anoxemie. De cerebellaire bloeding kan passen bij een stollingsstoornis, maar ook ontstaan zijn als gevolg van hypertensie. De cerebrale pathologie kan het overlijden goed verklaren. 
+================================================================================
+hersenen met cerebellair hematoom met doorbraak in de 4e vetrikel en subarachnoidaal bloed.
+hersenen(TX2000) cerebellair(TX6000) hematoom(M37100) subarachnoidaal(TX1500) bloed(T0X000)
+********************************************************************************
+Tevens intravasculaire trombi passend bij diffuse intravasale stolling.
+bloedvat(T40000) thrombus(M35100)
+********************************************************************************
+
+
+================================================================================
+Lichaams -en schedelobductie werden verricht op een 64 jaar oud geworden man.  In de onderkwab van de rechter long een 3 cm groot adenocarcinoom. Het adenocarcinoom is lymfogeen gemetastaseerd naar 3  mediastinale lymfklieren.  Bilateraal beeld van acute bronchopneumonie. Het myocard toonde overwegend in de linker ventrikelvoorwand tekenen van recente myocardinfarcering van 1 tot 3 dagen oud. Verder met name in de linker ventrikel voorwand tekenen van ischemie van circa 7 tot 10 dagen oud.  Nieren met infarcering. Bij hersenonderzoek tekenen van recente infarcering (hooguit 1-2 dagen oud) in de parietale schors van beide hemisferen en in de occipitale schors rechts deels met het aspect van een waterscheidingsinfarct (op basis van een low flow situatie). Geen aanwijzingen voor (paraneoplastische) veneuze thrombose of voor maligniteit. Het myocardinfarct kan hebben geleid tot een verlaagde cardiac output en een low flow status en aanleiding hebben gegeven tot de gevonden cerebrale ischemie en nierinfarcering. 
+================================================================================
+In de onderkwab van de rechter long een 3 cm groot adenocarcinoom.
+onderkwab(T28400) rechts(TYY980) long(T28000) adenocarcinoom(M81403)
+********************************************************************************
+Het adenocarcinoom is lymfogeen gemetastaseerd naar 3  mediastinale lymfklieren.
+adenocarcinoom(M81403) lymfklier(T08000) mediastinum(TY2300)
+********************************************************************************
+Bilateraal beeld van acute bronchopneumonie.
+beiderzijds(TYY980TYY990) bronchiolopulmonaal(T27900) ontsteking(M40000)
+********************************************************************************
+Het myocard toonde overwegend in de linker ventrikelvoorwand tekenen van recente myocardinfarcering van 1 tot 3 dagen oud.
+myocard(T33010) links(TYY990) 'ventrikel hart'(T32400) myocard(T33010) infarcering(M54700)
+********************************************************************************
+Verder met name in de linker ventrikel voorwand tekenen van ischemie van circa 7 tot 10 dagen oud.
+links(TYY990) 'ventrikel hart'(T32400) ischemie(F72240)
+********************************************************************************
+Nieren met infarcering.
+nier(T71000) infarcering(M54700)
+********************************************************************************
+Bij hersenonderzoek tekenen van recente infarcering (hooguit 1-2 dagen oud) in de parietale schors van beide hemisferen en in de occipitale schors rechts deels met het aspect van een waterscheidingsinfarct (op basis van een low flow situatie).
+hersen(TX2000) infarcering(M54700) rechts(TYY980) infarct(M54700)
+********************************************************************************
+Het myocardinfarct kan hebben geleid tot een verlaagde cardiac output en een low flow status en aanleiding hebben gegeven tot de gevonden cerebrale ischemie en nierinfarcering.
+myocard(T33010) infarct(M54700) ischemie(F72240) nier(T71000) infarcering(M54700)
+********************************************************************************
+
+
+================================================================================
+Obductie van 90 jaar oud geworden vrouw. Recent opname bij thoracale pijnklachten, met bij opname acuta arrest met elektromechanische dissociatie. Vraagstelling bij obductie: aorta dissectie? Bij obductie zien we een geruptureerd aneurysma van de thoracale aorta (diameter 8 cm, ruptuur  5 cm). Dit gaat gepaard met 2,5 l gestold bloed in mediastinum, rechter en linker thorax. Voorts linkerkamerhypertrofie en ernstige atherossclerotische veranderingen in thoracale en abdominale aorta met een linker schrompelnier. Bij microscopisch onderzoek vinden we emfysemateuze afwijkingen in de longen en arteriolosclerose in de nieren. Overige organen tonen bij microscopisch onderzoek geen noemenswaardige afwijkingen. Concluderend is patiente overleden ten gevolge van een hypovolemische shock bij een geruptureerd aneurysma van de thoracale aorta. Geen aorta dissectie. 
+================================================================================
+Bij obductie zien we een geruptureerd aneurysma van de thoracale aorta (diameter 8 cm, ruptuur  5 cm).
+obductie(P30110) 'geruptureerd aneurysma'(M32401) 'thoracale aorta'(T42400) ruptuur(M14430)
+********************************************************************************
+Voorts linkerkamerhypertrofie en ernstige atherossclerotische veranderingen in thoracale en abdominale aorta met een linker schrompelnier.
+kamer(T32400) hypertrofie(M71000) links(TYY990) 'abdominale aorta'(T42500) links(TYY990) schrompelnier(T71000M49210)
+********************************************************************************
+Bij microscopisch onderzoek vinden we emfysemateuze afwijkingen in de longen en arteriolosclerose in de nieren.
+emfyseem(M32800) long(T28000) sclerose(M49020) nier(T71000)
+********************************************************************************
+Concluderend is patiente overleden ten gevolge van een hypovolemische shock bij een geruptureerd aneurysma van de thoracale aorta.
+shock(F70010) 'geruptureerd aneurysma'(M32401) 'thoracale aorta'(T42400)
+********************************************************************************
+
+
+================================================================================
+57 jaar geworden mannelijke patiA«nt, overleden aan gevolgen van acute myocard ischemie op basis van ernstige trivasculaire coronairsclerose. Verder was er sprake van eernstige gegeneraliseerde atherosclerose. Geen aneurysma van de abdominale aorta aangetoond. 
+================================================================================
+57 jaar geworden mannelijke patiA«nt, overleden aan gevolgen van acute myocard ischemie op basis van ernstige trivasculaire coronairsclerose.
+myocard(T33010) ischemie(F72240) coronairarterie(T43000) arteriosclerose(M52000)
+********************************************************************************
+
+
+================================================================================
+n.v.t. Deze 80 jaar oud geworden man was al langere tijd bekend met niet nader geanalyseerde  slikproblemen. Op vakantie in ******* heeft hij zich ernstig verslikt in een stuk brood, is weggeraakt en gereanimeerd. Na de reanimatie bleef patient comateus en is aldaar opgenomen in een ziekenhuis. Na 9 dagen is patient overgeplaatst naar *******. Na 3 dagen is besloten te abstineren vanwege de infauste prognose bij het aanhoudende coma.  Bij obductie bleek in het proximale 1/3 deel van de oesophagus een groot exofytisch groeiend, goed gedifferentieerd plaveiselcelcarcinoom (max diam 6cm), dat de slikklachten en de fatale aspiratie kan verklaren. De tumor infiltreerde oppervlakkig de oesophaguswand, tot net aan maar niet in de musculus propria (pT1 tumor); er waren geen metastasen. Er was een groot hart van 630 gram (normaal gewicht 350-400gram) met compensatoire hypertrofie van de linkerkamer, bij diffuse fibrose  van het myocard als gevolg van chronische ischaemie. Daarnaast was ook longoedeem en -stuwing, te verklaren als het gevolg van de aspiratie, het coma en een reeds suboptimale cardiale conditie. Samenvattend betreft het een 80 jaar oud geworden man, overleden tgv voedselaspiratie bij een groot exofytisch groeiend plaveiselcelcarcinoom van de proximale oesophagus.
+================================================================================
+Bij obductie bleek in het proximale 1/3 deel van de oesophagus een groot exofytisch groeiend, goed gedifferentieerd plaveiselcelcarcinoom (max diam 6cm), dat de slikklachten en de fatale aspiratie kan verklaren.
+obductie(P30110) oesofagus(T62000) plaveiselcelcarcinoom(M80703) aspiratie(F79000)
+********************************************************************************
+De tumor infiltreerde oppervlakkig de oesophaguswand, tot net aan maar niet in de musculus propria (pT1 tumor); er waren geen metastasen.
+oesofagus(T62000) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) 'geen metastase'(M09440) 'geen metastase'(M09440) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) 'metastase maligne tumor'(M80006)
+********************************************************************************
+Er was een groot hart van 630 gram (normaal gewicht 350-400gram) met compensatoire hypertrofie van de linkerkamer, bij diffuse fibrose  van het myocard als gevolg van chronische ischaemie.
+hart(T32000) normaal(M00100) 'compensatoire hypertrofie'(M71020) kamer(T32400) links(TYY990) 'diffuse fibrose'(M49002) myocard(T33010) ischemie(F72240)
+********************************************************************************
+Daarnaast was ook longoedeem en -stuwing, te verklaren als het gevolg van de aspiratie, het coma en een reeds suboptimale cardiale conditie.
+long(T28000) oedeem(M36500) stuwing(M36100) aspiratie(F79000) coma(F85640) hart(T32000)
+********************************************************************************
+Samenvattend betreft het een 80 jaar oud geworden man, overleden tgv voedselaspiratie bij een groot exofytisch groeiend plaveiselcelcarcinoom van de proximale oesophagus.
+aspiratie(F79000) plaveiselcelcarcinoom(M80703) oesofagus(T62000)
+********************************************************************************
+
+
+================================================================================
+- pT4G1N+ Sigmoidcarcinoom, met doorgroei tot de blaas met uitgebreide secundaire abcederende ontsteking in de omgeving. - Ernstige gegeneraliseerde atherosclerose, met stent in de linker arterie iliaca communis.  - Stuwing linker been met open wond t.h.v. de kuit. - Pyelonefritis rechts. Het microscopisch onderzoek bevestigd het tot in de blaas doorgroeiende adenocarcinoom (goed gedifferentieerd). Verder geen nieuwe inzichten. Patient werd kortdurend opgenomen i.v.m. bedreigd linker been, waarvoor spoed OK. Bij obductie werd een stent in de linker arterie iliaca communis teruggevonden. Voorts bleek er een groot sigmoidcarcinoom aanwezig over 8cm, met doorgroei tot in de blaaswand en uitgebreide secundaire abscedering (500 ml pus rond tumor). Dit is waarschijnlijk de oorzaak van de sepsis. Geen metastasen op afstand. Voorts was er sprake van pyelonefritis rechts.  14-12-11 Microscopisch wordt het adenocarcinoom bevestigd. Het is een goed gedifferentieerd adenocarcinoom. De coupe van de blaas toont doorgroei door de wand tot in het lumen van de blaas van dit adenocarcinoom.
+================================================================================
+Bij obductie werd een stent in de linker arterie iliaca communis teruggevonden.
+obductie(P30110) stent(M15881) links(TYY990) arterie(T41000)
+********************************************************************************
+Voorts bleek er een groot sigmoidcarcinoom aanwezig over 8cm, met doorgroei tot in de blaaswand en uitgebreide secundaire abscedering (500 ml pus rond tumor).
+sigmoid(T67700) carcinoom(M80103) 'doorgroei tumor'(M80093) blaaswand(T74000) abces(M41740) pus(M40460)
+********************************************************************************
+De coupe van de blaas toont doorgroei door de wand tot in het lumen van de blaas van dit adenocarcinoom.
+blaas(T74000) 'doorgroei tumor'(M80093) blaas(T74000) adenocarcinoom(M81403)
+********************************************************************************
+
+
+================================================================================
+Obductie bij een 71 jaar geworden man overleden na endocarditis en meningitis. In oktober een mitralisklepvervanging. Bij macroscopisch onderzoek calcificaties in het myocard ter plaatse van de kunstklep met bij microsocpisch onderzoek actieve ontsteking en gram positieve kokken. In het distale colon uitgebreide hemorragische veranderingen en actieve ontsteking. Het infectieze focus is waarschijnlijk het endocard, de ontsteking in het colon lijkt eerder secundair te zijn door ischemie bij het septische beeld. De sepsis kan het overlijden verklaren. Voorts cystenieren, de dominant erfelijke vorm, en simpele cysten in de lever. 
+================================================================================
+Obductie bij een 71 jaar geworden man overleden na endocarditis en meningitis.
+obductie(P30110) endocard(T34000) ontsteking(M40000) meningen(TX1110)
+********************************************************************************
+Bij macroscopisch onderzoek calcificaties in het myocard ter plaatse van de kunstklep met bij microsocpisch onderzoek actieve ontsteking en gram positieve kokken.
+verkalking(M55400) myocard(T33010) kunstklep(T35000E90800) 'actieve ontsteking'(M40070)
+********************************************************************************
+In het distale colon uitgebreide hemorragische veranderingen en actieve ontsteking.
+colon(T67000) 'actieve ontsteking'(M40070)
+********************************************************************************
+Het infectieze focus is waarschijnlijk het endocard, de ontsteking in het colon lijkt eerder secundair te zijn door ischemie bij het septische beeld.
+endocard(T34000) ontsteking(M40000) colon(T67000) ischemie(F72240)
+********************************************************************************
+Voorts cystenieren, de dominant erfelijke vorm, en simpele cysten in de lever.
+cyste(M33400) nier(T71000) cyste(M33400) lever(T56000)
+********************************************************************************
+
+
+================================================================================
+Definitieve PA bevindingen: - status na (hemi)strumectomie. De achtergebleven rechter hemi-schildklier toont uitgebreide nodulaire transformatie, passend bij nodulaire hyperplasie; Het operatie gebied zelf toont geen afwijkingen. Rond de trachea wordt een geringe hoeveelheid gereorganiseerde hematomen gevonden (niet van invloed op overlijden). Slokdarm zonder afwijkingen. Tracheaslijmvlies zonder afwijkingen. - hart (390 gr.): hart gering vergroot maar verder zonder afwijkingen, post mortaal coronairangiogram zonder afwijkingen. LDH enzymkleuring toont tekenen van ischemie in de linker ventrikel onderwand, vermoedelijk agonaal.  - Aorta toont geringe mate van atherosclerose. - longen (links 635 en rechts 935 gr.): longparenchym gestuwd, verder geen afwijkingen met name geen aanwijzingen pneumonie of longembolieen. - geringe renale arteriolosclerose - benigne prostaat hypertrofie - Cerebrum met uitgebreide hypoxisch/ischaemische schade met daarnaast wat lichte degeneratieve afwijkingen waarbij opvalt dat atherosclerose, althans cerebraal, minimaal tot afwezig is. Het betreft een 81 jaar oud geworden man, die ca. 2 weken voor overlijden een hemithyroidectomie in verband met nodulaire hyperplasie onderging. Het postoperatief beloop werdt gecompliceerd door moeilijk objectiveerbare saturatiedalingen en daags voor ontslag reanimatie setting, waarbij patient ernstige postanoxische hersenschade ontwikkelde. Obductie toont status na hemistrumectomie zonder afwijkingen in het operatiegebied. Cardiaal wordt er vlekkige ischemie van de linkerventrikel onderwand en tekenen van rechtsdecompensatie gezien (oa lever- en longstuwing). Het postmortaal coronairangiogram geeft geen aanknopingspunten voor coronair pathologie en de beschreven cardiale ischemie wordt derhalve als agonaal geinterpreteerd. Neuropathologisch onderzoek toont een cerebrum met uitgebreide hypoxisch/ischaemische schade met daarnaast wat lichte degeneratieve afwijkingen waarbij opvalt dat atherosclerose, althans cerebraal, minimaal tot afwezig is. Kort samengevat wordt er geen anatomische oorzaak gevonden die het overlijden kan verklaren. Mogelijk overleed patient ten gevolge van een ritmestoornis in aansluiting op een van de klinisch beschreven saturatiedalingen.  26-09-11/*******/MJA
+================================================================================
+Cardiaal wordt er vlekkige ischemie van de linkerventrikel onderwand en tekenen van rechtsdecompensatie gezien (oa lever- en longstuwing).
+hart(T32000) ischemie(F72240) links(TYY990) rechts(TYY980) lever(T56000) long(T28000) stuwing(M36100)
+********************************************************************************
+Het postmortaal coronairangiogram geeft geen aanknopingspunten voor coronair pathologie en de beschreven cardiale ischemie wordt derhalve als agonaal geinterpreteerd.
+'geen afwijking'(M00100) hart(T32000) ischemie(F72240)
+********************************************************************************
+
+
+================================================================================
+Het betreft een 82 jaar oud geworden vrouw, overleden aan de gevolgen van dunne en dikke darmischemie, dd. o.b.v. een strengileus bij intraabdominale verklevingen bij st. na hemicolectomie rechts i.v.m. adenocarcinoom van het colon, of o.b.v. hypercoagulatieve status bij recent ontdekt primair adenocarcinoom van de RBK met vasoinvasie. Tevens een beperkte subarachnoidale bloeding en een verwijd hersen ventrikelsysteem. Een 82 jaar oud geworden vrouw werd 3 dagen voor overlijden opgenomen i.v.m. een toenemende hydrocephalus. Haar voorgeschiedenis vermeldde DM II met hierbij matige nierfunctie, angina pectoris, hypercholesterolemie, hypertensie, anaemie, atriumfibrilleren, coloncarcinoom waarvoor hemicolectomie rechts 7 jaar voor overlijden, een hydrocephalus bij waarschijnlijk een doorgemaakte subarachnoidale bloeding, waarvoor eenmalige liquordrainage 6 jaar voor overlijden. Sinds enkele weken toenemend loopstoornissen. Tijdens de laatste opname werd 1 dag voor overlijden een liquordrainage verricht d.m.v. een LP. Ook werd op de dag van overlijden op een X-thorax bij toeval een r.i.p. gezien in de rechter long. Ook had patiente op de dag van overlijden melaena en/of vaginaal bloedverlies. Daarbij ontwikkelde zij hevige buikpijn en (oud) bloed braken, waarna zij snel overleed. Bij obductie werd een beeld een status na hemicolectomie rechts (T06-40950) gezien, met vrijwel geheel ischemische dunne darm en rest dikke darm. Doorsneden door mesenteriale vaatjes toonden lumina volledig opgevuld door neutrofielen, zonder aangetoonde tumorcellen. Mogelijk is de darmischemie ontstaan a.g.v. een strengileus bij uitgebreide verklevingen of n.a.v. paraneoplastische hypertrombogene status. In de rechter longtop werd een adenocarcinoom van 4 cm in diameter, met immuunprofiel van primair longcarcinoom. Er was uitgebreide vasoinvasie zichtbaar. Rondom de tumor was er uitgebreide chronisch-actieve bronchopneumonie. In de linker long beeld van recente aspiratie van maaginhoud. Het colon en rectum toonden uitgebreide submucosale vaattekening, waaruit een bloeding zou kunnen zijn opgetreden, welke echter niet werd aangetoond. Er werden geen laesies in de uterus aangetroffen die een vaginale bloeding zouden kunnen verklaren. In de nieren uitgebreide glomerulosclerose, die DM II gerelateerd zou kunnen zijn en een verklaring zou kunnen zijn voor de verminderde nierfunctie. In de hersenen werd subarachnoidaal bloed aangetroffen, m.n. in het basale vlak, in de temporaal kwabben, het cerebellum en mediaan-frontaal. Het ventrikelsysteem was verwijd. De tijd van ontstaan van deze SAB en een eventuele relatie met de hydrocephalus is moeilijk te duiden. Gezien de beperkte hoeveelheid bloed, wordt er een minimale bijdrage hievan aan het overlijden van ingeschat.
+================================================================================
+Bij obductie werd een beeld een status na hemicolectomie rechts (T06-40950) gezien, met vrijwel geheel ischemische dunne darm en rest dikke darm.
+obductie(P30110) ischemie(F72240) 'dunne darm'(T64000) 'dikke darm'(T67000)
+********************************************************************************
+Mogelijk is de darmischemie ontstaan a.g.v.
+darm(T50100) ischemie(F72240)
+********************************************************************************
+In de rechter longtop werd een adenocarcinoom van 4 cm in diameter, met immuunprofiel van primair longcarcinoom.
+rechts(TYY980) longtop(T28110) adenocarcinoom(M81403) long(T28000) carcinoom(M80103)
+********************************************************************************
+Rondom de tumor was er uitgebreide chronisch-actieve bronchopneumonie.
+bronchiolopulmonaal(T27900) ontsteking(M40000)
+********************************************************************************
+In de linker long beeld van recente aspiratie van maaginhoud.
+links(TYY990) long(T28000) 'aspiratie maaginhoud'(F79020) maaginhoud(T6Y030)
+********************************************************************************
+In de nieren uitgebreide glomerulosclerose, die DM II gerelateerd zou kunnen zijn en een verklaring zou kunnen zijn voor de verminderde nierfunctie.
+nier(T71000) glomerulosclerose(D67900) nier(T71000)
+********************************************************************************
+
+
+================================================================================
+Het betreft een 67-jaar oud geworden vrouw met in de voorgeschiedenis een uveae melanoom links en uitgebreide levermetastasen waarvoor behandeling in het kader van de HEPAR studie. Patiente is overleden ten gevolge van een palliatief beleid bij hepatoencephalopathie ten gevolge van uitgebreide tumorlokalisatie in de lever, de beide longen en een peritonitis carcinomatosis. Het betreft een 67 jaar oud geworden vrouw met in de voorgeschiedenis een melanoom van de uveae links. Een jaar voor het overlijden bleken er levermetastasen te zijn. Ze werd hiervoor chirurgisch en met RFA behandeld. Echter, 6 maanden later kreeg zij een recidief levermetastasen. Zijn werd geincludeerd in de HEPAR studie, waar zijn radioembolisatie met 80 Gy Holmium-166 geladen microsferen kreeg in de lever. Hierna ontwikkelde zij progressief leverfalen en uiteindelijk een hepatische encephalopathie. Er werd een palliatief beleid afgesproken, waarna zij overleed op 11-12-2011. De uitwendige schouwing toonde een adipeuze vrouw met icterus en een prothese van het linker oog. De inwendinge schouwing toonde ascites, een peritonitis carcinomatosa en diffuse lever en long metastasen. Tevens uitgebreide necrose van de lever. Er was bijna geen vitaal leverparenchym meer aanwezig. Dit verklaart haar progressief leverfalen met als complicatie een hepatische encephalopathie. De galwegen waren doorgangelijk, echter zij had paraductale lymfekliermetastasen, welke mogelijk hebben geleid tot een beperkte galafvloed, gezien de stopverfkleurige ontlasting en icterus. Er werden de multiple georganiseerde longembolien in de rechter long gevonden, welke verklaart kunnen worden door de uitgebreide tumorlokalisatie in de lever welke resulteerd in stollingstoornissen en het ontstaan van thrombi. Als nevenbevindingen werden er in de nieren 2 angiomyolipomen gevonden. Het pancreas liet tekenen van een doorgemaakte pancreatitis zien. In de oesophagus werd een chronische ontsteking gezien, mogelijk in het kader van een refluxoesophagitis.
+================================================================================
+Het betreft een 67-jaar oud geworden vrouw met in de voorgeschiedenis een uveae melanoom links en uitgebreide levermetastasen waarvoor behandeling in het kader van de HEPAR studie.
+uvea(TXX300) melanoom(M87203) links(TYY990) lever(T56000) 'metastase maligne tumor'(M80006) 'maligne tumor'(M80003) hepar(T56000)
+********************************************************************************
+Patiente is overleden ten gevolge van een palliatief beleid bij hepatoencephalopathie ten gevolge van uitgebreide tumorlokalisatie in de lever, de beide longen en een peritonitis carcinomatosis.
+lever(T56000) long(T28000) peritoneum(TY4400) ontsteking(M40000) 'metastase carcinoom'(M80106)
+********************************************************************************
+Het betreft een 67 jaar oud geworden vrouw met in de voorgeschiedenis een melanoom van de uveae links.
+melanoom(M87203) uvea(TXX300) links(TYY990)
+********************************************************************************
+Een jaar voor het overlijden bleken er levermetastasen te zijn.
+lever(T56000) 'metastase maligne tumor'(M80006) 'maligne tumor'(M80003)
+********************************************************************************
+Echter, 6 maanden later kreeg zij een recidief levermetastasen.
+recidief(F02110) lever(T56000) 'metastase maligne tumor'(M80006) 'maligne tumor'(M80003)
+********************************************************************************
+Zijn werd geincludeerd in de HEPAR studie, waar zijn radioembolisatie met 80 Gy Holmium-166 geladen microsferen kreeg in de lever.
+hepar(T56000) embolie(M35300) lever(T56000)
+********************************************************************************
+De uitwendige schouwing toonde een adipeuze vrouw met icterus en een prothese van het linker oog.
+icterus(M57600) prothese(M15880) links(TYY990) oog(TXX000)
+********************************************************************************
+De inwendinge schouwing toonde ascites, een peritonitis carcinomatosa en diffuse lever en long metastasen.
+ascites(TY4400M36300) peritoneum(TY4400) ontsteking(M40000) lever(T56000) long(T28000) 'metastase maligne tumor'(M80006)
+********************************************************************************
+Tevens uitgebreide necrose van de lever.
+necrose(M54000) lever(T56000)
+********************************************************************************
+De galwegen waren doorgangelijk, echter zij had paraductale lymfekliermetastasen, welke mogelijk hebben geleid tot een beperkte galafvloed, gezien de stopverfkleurige ontlasting en icterus.
+'extrahepatische galweg'(T58000) lymfklier(T08000) 'metastase maligne tumor'(M80006) 'maligne tumor'(M80003) ontlasting(T6Y100) icterus(M57600)
+********************************************************************************
+Er werden de multiple georganiseerde longembolien in de rechter long gevonden, welke verklaart kunnen worden door de uitgebreide tumorlokalisatie in de lever welke resulteerd in stollingstoornissen en het ontstaan van thrombi.
+long(T28000) rechts(TYY980) long(T28000) lever(T56000) thrombus(M35100)
+********************************************************************************
+Als nevenbevindingen werden er in de nieren 2 angiomyolipomen gevonden.
+nier(T71000) angiomyolipoom(M88600)
+********************************************************************************
+Het pancreas liet tekenen van een doorgemaakte pancreatitis zien.
+pancreas(T59000) ontsteking(M40000)
+********************************************************************************
+In de oesophagus werd een chronische ontsteking gezien, mogelijk in het kader van een refluxoesophagitis.
+oesofagus(T62000) 'chronische ontsteking'(M43000) reflux(F61680) ontsteking(M40000)
+********************************************************************************
+
+
+================================================================================
+hersenen met een globaal oedeem en hypoxische ischemische veranderingen passend bij status na reanimatie. Minimaal ontstekingsinfiltraat in de plexus choroideus. 
+================================================================================
+hersenen met een globaal oedeem en hypoxische ischemische veranderingen passend bij status na reanimatie.
+hersenen(TX2000) oedeem(M36500) ischemie(F72240)
+********************************************************************************
+Minimaal ontstekingsinfiltraat in de plexus choroideus.
+ontstekingsinfiltraat(M40000) choroid(TXX310)
+********************************************************************************
+
+
+================================================================================
+VOORLOPIGE: CAUSA MORTIS Een 70-jarige man met status na grote littekenbreuk na cholecystectomie is overleden aan multiorgaanfalen geinitieerd door peritonitis opgetreden na buikwandcorrectie tgv duodenumletsel door fecale impactie. Bij obductie persisterende peritonitis met intraabdominaal abcesvorming en deels ischemie van de dunne darm. DEFINITIEVE: CAUSA MORTIS: Een 70-jarige man met status na grote littekenbreuk na cholecystectomie is overleden aan multiorgaanfalen geinitieerd door peritonitis opgetreden na buikwandcorrectie tgv duodenumletsel door fecale impactie. Bij obductie persisterende peritonitis met intraabdominaal abcesvorming en deels ischemie van de dunne darm en beeld van multiorgaanfalen bij sepsis. EPICRISE: Een 70-jarige man met in voorgeschiedenis LIMA bypass en cholecystectomie (2009) is buikwandcorrectie ondergegaan voor grote littekenbreuk tpv het cholecystectomielitteken. Vanwege fecale impactie is er duodenumletsel opgetreden gevolgd door abdominale sepsis. 2x relaparatomieen. Geen verbetering. Abstinerend beleid. Bij obductie zagen wij peritonitis beeld met focaal abcesvorming in het omentum. Postoperatief beeld met proximaal dunne darm met dichtgeniete uiteinden. In verschillende organen waren er tekenen van circulatiestoornis. In het hart naast de oude infarcten en doorgankelijk LIMA was er uitgebreide subendocardiale ischemie en beginnende infarcering. In de longen was er beginnende diffuus intraalveolaire schade. In de lever was er pericentrale necrose. In de maag hemorrhagische gastritis. De dunne darm toonde deels ischemie. Er was geen necrose van de huid. 
+================================================================================
+Bij obductie zagen wij peritonitis beeld met focaal abcesvorming in het omentum.
+obductie(P30110) peritoneum(TY4400) ontsteking(M40000) abcesvorming(M41740) omentum(TY4750)
+********************************************************************************
+Postoperatief beeld met proximaal dunne darm met dichtgeniete uiteinden.
+postoperatief(F01502) 'dunne darm'(T64000)
+********************************************************************************
+In het hart naast de oude infarcten en doorgankelijk LIMA was er uitgebreide subendocardiale ischemie en beginnende infarcering.
+hart(T32000) 'oud infarct'(M54750) hart(T32000) ischemie(F72240) infarcering(M54700)
+********************************************************************************
+In de lever was er pericentrale necrose.
+lever(T56000) necrose(M54000)
+********************************************************************************
+In de maag hemorrhagische gastritis.
+maag(T63000) ontsteking(M40000)
+********************************************************************************
+De dunne darm toonde deels ischemie.
+'dunne darm'(T64000) ischemie(F72240)
+********************************************************************************
+
+
+================================================================================
+"Definitieve causa mortis: 58 jarige vrouw met in de voorgeschiedenis MDS RAEB-1, waarvoor een allogene stamceltransplantatie. Er zijn in meerdere organen tekenen gevonden van een (doorgemaakte) Mucorinfectie leidend tot belangrijke en uitgebreide orgaanschade en functieverlies met de dood tot gevolg. 58 jarige vrouw met in de voorgeschiedenis MDS RAEB-1, waarvoor een allogene stamceltranplantatie. In de hematopoetische organen (milt, lever) is er sprake van hemosiderose ten gevolge van de transplantatie. Hierdoor zijn leverfunctiestoornissen ontstaan, leidend tot icterus en ascites. Het beenmerg is hypoplastisch en toont een beeld dat past bij een infectie. Geen recidief van MDS herkenbaar.  Geen beeld van ""Graft-versus-host disease"". In de longen zijn er tekenen van oude longinfarcten en een doorgemaakte Mucormycose-infectie, waarbij we nog uitgebreide resten van schimmels  zien. Ook de nieren en de schilldklier zijn aangedaan door deze infectie, waarbij met name in de schildklier uitgebreide schade is ontstaan. Er worden geen schimmels meer gekweekt uit deze materialen."
+================================================================================
+"Definitieve causa mortis: 58 jarige vrouw met in de voorgeschiedenis MDS RAEB-1, waarvoor een allogene stamceltransplantatie.
+beenmerg(T06000) 'myelodysplastisch syndroom'(M99893) transplantatie(P14200)
+********************************************************************************
+58 jarige vrouw met in de voorgeschiedenis MDS RAEB-1, waarvoor een allogene stamceltranplantatie.
+beenmerg(T06000) 'myelodysplastisch syndroom'(M99893)
+********************************************************************************
+In de hematopoetische organen (milt, lever) is er sprake van hemosiderose ten gevolge van de transplantatie.
+milt(T07000) lever(T56000) hemosiderose(M57500) transplantatie(P14200)
+********************************************************************************
+Hierdoor zijn leverfunctiestoornissen ontstaan, leidend tot icterus en ascites.
+lever(T56000) icterus(M57600) ascites(TY4400M36300)
+********************************************************************************
+Het beenmerg is hypoplastisch en toont een beeld dat past bij een infectie.
+beenmerg(T06000) hypoplastisch(M75300) infectie(M40000)
+********************************************************************************
+Geen recidief van MDS herkenbaar.
+'geen maligniteit'(M09450) recidief(F02110) beenmerg(T06000) 'myelodysplastisch syndroom'(M99893)
+********************************************************************************
+In de longen zijn er tekenen van oude longinfarcten en een doorgemaakte Mucormycose-infectie, waarbij we nog uitgebreide resten van schimmels  zien.
+long(T28000) long(T28000) infarct(M54700) mucormycose(D05670) infectie(M40000) mucormycose(D05670) infectie(M40000)
+********************************************************************************
+Ook de nieren en de schilldklier zijn aangedaan door deze infectie, waarbij met name in de schildklier uitgebreide schade is ontstaan.
+nier(T71000) infectie(M40000) schildklier(T96000)
+********************************************************************************
+
+
+================================================================================
+Het betreft een 87 jaar oud geworden vrouw die kort na een secundair  hemorrhagisch infarct in het media stroomgebied rechts is overleden bij ook  slechte pulmonale en cardiale uitgangspositie en sederende medicatie. 
+================================================================================
+Het betreft een 87 jaar oud geworden vrouw die kort na een secundair  hemorrhagisch infarct in het media stroomgebied rechts is overleden bij ook  slechte pulmonale en cardiale uitgangspositie en sederende medicatie.
+infarct(M54700) media(T41020) rechts(TYY980) hart(T32000)
+********************************************************************************
+
+
+================================================================================
+EPICRISE: Vrouw van 64 jaar die een jaar voor overlijden een lobectomie van de rechter bovenkwab wegens carcinoom onderging en bij wie 4 maanden voor overlijden hersenmetastasen werden geconstateerd waarvoor radiotherapie. Bij obductie werd in de linker hemisfeer een metastade gevonden van 2 cm met centraal bloeding en necrose en aan de rand tumorcellen met tekenen van bestralignseffect.  In het restant van de rechter long werden tekenen van acute bronchopneumonie aangetroffen. Geen longembolien gevonden. (*******) 
+================================================================================
+Bij obductie werd in de linker hemisfeer een metastade gevonden van 2 cm met centraal bloeding en necrose en aan de rand tumorcellen met tekenen van bestralignseffect.
+obductie(P30110) links(TYY990) hemisfeer(TX2060) bloeding(M37000) necrose(M54000)
+********************************************************************************
+In het restant van de rechter long werden tekenen van acute bronchopneumonie aangetroffen.
+rechts(TYY980) long(T28000) bronchiolopulmonaal(T27900) ontsteking(M40000)
+********************************************************************************
+
+
+================================================================================
+Zie epicrise. Als bijzonder bevinding werd een oud en gesloten VSD vastgesteld. Zie foto's. Deze 81 jaar oud geworden vrouw kreeg in augustus 2011een  totale knieprothese rechts en werd aanvullend op 6 oktober opgenomen op de orthopedie in verband met een geinfecteerde knieproyhese. Deze werd gespoeld. Daarna ontstonden dyspneuklachten. Patient overleed nog onverwachts ondanks reanimatie bij asystolie en ventrikelfibrilleren. Blijkens obductie is patient overleden ten gevolge van een myocarditis / pericarditis die verantwoordelijk zal zijn geweest voor de fatale ritmestoornissen. In hoeverre er een relatie bestaat tussen het spoelen van de geinfecteerde knieprothese en de pericarditis / myocarditis is speculatief maar het onstaan van de dyspneu na het spoelen is wel suggestief voor een relatie. Er werden bij obductie geen aanwijzingen gevonbden voor een sepsis. Patiente is per acuut overleden ten gevolge van de verminderde pompfunctie van het hart met massale stuwing grote en kleine circulatie.
+================================================================================
+Blijkens obductie is patient overleden ten gevolge van een myocarditis / pericarditis die verantwoordelijk zal zijn geweest voor de fatale ritmestoornissen.
+obductie(P30110) myocard(T33010) ontsteking(M40000) pericard(T31000)
+********************************************************************************
+In hoeverre er een relatie bestaat tussen het spoelen van de geinfecteerde knieprothese en de pericarditis / myocarditis is speculatief maar het onstaan van de dyspneu na het spoelen is wel suggestief voor een relatie.
+knie(TY9200) prothese(M15880) pericard(T31000) myocard(T33010) ontsteking(M40000)
+********************************************************************************
+Patiente is per acuut overleden ten gevolge van de verminderde pompfunctie van het hart met massale stuwing grote en kleine circulatie.
+hart(T32000) stuwing(M36100) 'kleine circulatie'(T44000)
+********************************************************************************
+
+
+================================================================================
+Deze 70 jaar oud geworden vrouw is hoogstwaarschijnlijk overleden aan de gevolgen van een myocard infarct ontstaan ten gevolge van een complicatie bij correctie van een para-oesophageale hernia. PA diagnosen: 1. Status na correctie paraoesophageale hernia 2 dagen voor overlijden. 2. Hart (407 gram) met recent infarct achterwand. 3. Rechter coronair arterie (posterieur interventriculair) met afsluiting door recente trombus op basis van aanwezigheid van een hechtdraad afkomstig van de fundophrenicofixatie aangelegd tijdens de correctie van de para-oesophageale hernia 2 dagen voor overlijden. 4. Ongeveer 75 ml helderrood pericardvocht en aanwezigheid van een 2-tal hechtingen door pericard, waarvan een ook door epicard en coronairarterie (hierboven beschreven). 5. Geringe tot matige atherosclerose van de coronairarterien. 6. Hart met kleine opening foramen ovale. 7. Matige atherosclerose van de aorta en grote systeem arterietakken. 8. Hepatomegalie op basis van stuwing (2071 gram). 9. Bleke nieren beiderzijds (links 207 en rechts 186 g). 10. Galblaas met een 2-tal galstenen, diameters 1,5 cm. 11. Uterus met een 2-tal leiomyomen, diameters 0,3 en 1,0 cm. 12. Status na portioamputatie. 13. Status na mammareductie beiderzijds. Epicrise Deze 70 jaar oud geworden vrouw werd 2 dagen voor overlijden opgenomen in verband met een correctie van een para-oesophageale hernia. Zij is 2 dagen na operatie overleden onder verdenking van een iatrogeen myocard infarct. Bij lichaamsobductie werd ongeveer 75 ml bloederig vocht aangetroffen in het hartzakje en werd een 2-tal hechtingen gezien door het pericard genomen waarvan een zich ook door het epicard bevond. Deze hechtdraden waren afkomstig van de fundophrenicofixatie aangelegd tijdens de correctie van de para-oesophageale hernia. Het betrof een doorlopende hechting (groene draad, dikte: 2/0, vermoedelijk ethibond). De hechtdraad door het epicard was gelegd door de wand van de rechter coronair arterie (posterieur interventriculair) waarbij proximaal van de hechtdraad een recente trombus aanwezig was over lengte van ongeveer 1,5 cm. Het myocard van de achterwand was slap en centraal bleek geel van kleur, passend bij recente infarcering (1 tot 3 drie dagen oud), microscopie en LDH enzymkleuring ontkleuring conform. Tijdens obductie waren collega de Rode, ******* en ******* aanwezig. De bevindingen werden gefotografeerd. De betreffende hechtdraad wordt bewaard. Aan de overige organen geen afwijkingen die bij hebben gedragen aan het overlijden van de patient (zie PA diagnosen). Er werd geen schedelsectie verricht. Aanvulling d.d. 11-06-12: Aanvulling naar aanleiding van gesprek met calamiteiten commissie (******* en *******) d.d. 08-06-12: De hechting door het epicard en de wand van de coronair arterie (zoals ook hierboven beschreven) was niet door het myocard gelegd, maar beperkt tot het epicard (epicard is het viscerale pericard; membraan met variabele hoeveelheid vetweefsel waarin coronair arterien en venen, lymfvaten, zenuwen, fibroblasten en macrofagen gelegen zijn ). Over de totale hoeveelheid weefsel waaromheen de hechtdraad aanwezig was kan ik geen uitspraak doen. De hoeveelheid epicard in de hechtdraad aanwezig wordt geschat op ongeveer 2 tot 3 mm.
+================================================================================
+De hechtdraad door het epicard was gelegd door de wand van de rechter coronair arterie (posterieur interventriculair) waarbij proximaal van de hechtdraad een recente trombus aanwezig was over lengte van ongeveer 1,5 cm.
+hechtdraad(M30500) epicard(T31010) rechts(TYY980) arterie(T41000) hechtdraad(M30500) 'recente thrombus'(M35100)
+********************************************************************************
+Het myocard van de achterwand was slap en centraal bleek geel van kleur, passend bij recente infarcering (1 tot 3 drie dagen oud), microscopie en LDH enzymkleuring ontkleuring conform.
+myocard(T33010) infarcering(M54700)
+********************************************************************************
+De hoeveelheid epicard in de hechtdraad aanwezig wordt geschat op ongeveer 2 tot 3 mm.
+epicard(T31010) hechtdraad(M30500)
+********************************************************************************
+
+
+================================================================================
+Obductie werd verricht op een 64-jarige man met in de voorgeschiedenis hypercholesterolemie, DM2 en claudicatio intermittens. Een week voor overlijden had patient een ongecompliceerde CABG LIMA-LAD ondergaan. Patient was kort voor overlijden in een zeer slechte hemodynamische conditie opgenomen in het ******* vanuit ******* bij aanvankelijke constatering van een pneumonie, verdenking sepsis, intra-abdominale veneuze bloeding en darmischemie. Patient overleed tijdens de spoedlaparotomie. Bij obductie werd in beide onderkwabben van de longen een necrotiserende pneumonie vastgesteld, waarbij het histologisch beeld kan passen bij een virale pneumonie. Tevens aanwezigheid van diffuse alveolaire schade (ARDS) in de overige longkwabben.  Een cholecystitis, darmischemie, HUS of een myocardinfarct werd niet aangetroffen. Zie microscopie voor een uitgebreide bespreking. 
+================================================================================
+Bij obductie werd in beide onderkwabben van de longen een necrotiserende pneumonie vastgesteld, waarbij het histologisch beeld kan passen bij een virale pneumonie.
+obductie(P30110) 'onderkwab long'(T28400) long(T28000) long(T28000) ontsteking(M40000)
+********************************************************************************
+Tevens aanwezigheid van diffuse alveolaire schade (ARDS) in de overige longkwabben.
+'diffuse alveolaire schade'(D77090) longkwab(T28040)
+********************************************************************************
+
+
+================================================================================
+Het betreft 78 jaar oud geworden man opgenomen in verband met hevige pijn klachten de linker arm en buik, overleden onder het beeld van een dying heart. In de buik worden behoudens verklevingen na eerdere operatie geen afwijkingen aangetroffen die de buikpijn kunenn verklaren. Het hart is hypertrofisch met diffuus fibrotische haarden passend bij oude infarcten. Focaal wordt geringe tekeken van recente/acute ischamie gezien ook bij macroscopisch onderzoek tekenen van recente ischemie. 
+================================================================================
+In de buik worden behoudens verklevingen na eerdere operatie geen afwijkingen aangetroffen die de buikpijn kunenn verklaren.
+buik(TY4100) verkleving(M49400) operatie(P10000) 'geen afwijking'(M00100) 'geen afwijking'(M00100) 'geen afwijking'(M00100) buik(TY4100)
+********************************************************************************
+Het hart is hypertrofisch met diffuus fibrotische haarden passend bij oude infarcten.
+hart(T32000) hypertrofisch(M71000) 'oud infarct'(M54750)
+********************************************************************************
+
+
+================================================================================
+Causa mortis: bronchopneumonie beiderzijds bij ernstige levercirrose met uitgebreide ascites en voortschrijdende hypoxische cardiomyopathie. 
+================================================================================
+Causa mortis: bronchopneumonie beiderzijds bij ernstige levercirrose met uitgebreide ascites en voortschrijdende hypoxische cardiomyopathie.
+bronchiolopulmonaal(T27900) ontsteking(M40000) beiderzijds(TYY980TYY990) levercirrose(M49500T56000) ascites(TY4400M36300) cardiomyopathie(T33010D71000)
+********************************************************************************
+
+
+================================================================================
+Definitieve causa mortis: patiente met uitgebreide cardiale voorgeschiedenis en uitgesproken harthypertrofie (759 gr.) met oude cardiale ischemie met name in de linker ventrikel zijwand. Hierbij naar alle waarschijnlijkheid ook recente cardiale ischemie. Voorts in het kader van arteriosclerose stenose van de areteria renalis rechts met atrofie van deze nier. 67 jarige patiente met een uitgebreide cardiale voorgeschiedenis met rechtszijdig hartfalen, meerdere bypass en stents in de coronair arterien. Er is een uitgesproken harthypertrofie, waarbij het hart tekenen van in het verleden doorgemaakte myocardiale ischemie vertoont. Hierdoor is secundarire schade ontstaan in lever, long, nier en milt ten gevolge van stuwing. Recente cardiale ischemie is microscopisch niet aantoonbaar, echter wel mogelijk op basis van de verminderde aankleuring met  LDH. Dit heeft naar alle waarschijnlijkheid geleid tot de dood. Het geheel wordt gecompliceerd door longafwijkingen passend bij COPD en nierafwijkingen passend bij diabetes mellitus. De rechter arteria renalis vertoont een ernstige stenose met atrofie van deze nier.
+================================================================================
+Definitieve causa mortis: patiente met uitgebreide cardiale voorgeschiedenis en uitgesproken harthypertrofie (759 gr.)
+hart(T32000) hypertrofie(M71000)
+********************************************************************************
+met oude cardiale ischemie met name in de linker ventrikel zijwand.
+hart(T32000) ischemie(F72240) links(TYY990) 'ventrikel hart'(T32400)
+********************************************************************************
+Hierbij naar alle waarschijnlijkheid ook recente cardiale ischemie.
+hart(T32000) ischemie(F72240)
+********************************************************************************
+Voorts in het kader van arteriosclerose stenose van de areteria renalis rechts met atrofie van deze nier.
+arteriosclerose(M52000) stenose(M34100) rechts(TYY980) atrofie(M58000) nier(T71000)
+********************************************************************************
+Er is een uitgesproken harthypertrofie, waarbij het hart tekenen van in het verleden doorgemaakte myocardiale ischemie vertoont.
+hart(T32000) hypertrofie(M71000) hart(T32000) hart(T32000) ischemie(F72240)
+********************************************************************************
+Hierdoor is secundarire schade ontstaan in lever, long, nier en milt ten gevolge van stuwing.
+lever(T56000) long(T28000) nier(T71000) milt(T07000) stuwing(M36100)
+********************************************************************************
+Het geheel wordt gecompliceerd door longafwijkingen passend bij COPD en nierafwijkingen passend bij diabetes mellitus.
+long(T28000) 'chronische obstructieve longziekte'(D76510) 'nierafwijking bij diabetes'(D67922)
+********************************************************************************
+De rechter arteria renalis vertoont een ernstige stenose met atrofie van deze nier.
+rechts(TYY980) 'arteria renalis'(T46600) stenose(M34100) atrofie(M58000) nier(T71000)
+********************************************************************************
+
+
+================================================================================
+Patient met recente transmurale myocardiale ischemie van linker ventrikel achterwand, waardoor ventrikelruptuur met harttamponade. Er is ook oude ischemische schade in de linker ventrikelwand. Voorts in het sigmoid een adenocarcinoom met waarschijnlijke uitbreiding richting blaas. 
+================================================================================
+Patient met recente transmurale myocardiale ischemie van linker ventrikel achterwand, waardoor ventrikelruptuur met harttamponade.
+hart(T32000) ischemie(F72240) links(TYY990) 'ventrikel hart'(T32400) ruptuur(M14430) pericardholte(T31100) bloeding(M37000)
+********************************************************************************
+Er is ook oude ischemische schade in de linker ventrikelwand.
+ischemie(F72240) links(TYY990) 'ventrikel hart'(T32400)
+********************************************************************************
+Voorts in het sigmoid een adenocarcinoom met waarschijnlijke uitbreiding richting blaas.
+sigmoid(T67700) adenocarcinoom(M81403) blaas(T74000)
+********************************************************************************
+
+
+================================================================================
+DEFINITIEF: Autolytische foetus van vermoedelijk het mannelijk geslacht, macroscopisch en microscopisch zonder grove afwijkingen. De afmetingen kunnen overeenstemmen met de opgegeven zwangerschapsduur; echter de hand- en voetlengte komen overeen met een zwangerschapsduur van 11-12 weken. De placenta (T11-39233) toonde een beeld van funisitis en kenmerken van IUVD. 
+================================================================================
+DEFINITIEF: Autolytische foetus van vermoedelijk het mannelijk geslacht, macroscopisch en microscopisch zonder grove afwijkingen.
+foetus(T89000) 'geen afwijking'(M00100) 'geen afwijking'(M00100)
+********************************************************************************
+De afmetingen kunnen overeenstemmen met de opgegeven zwangerschapsduur; echter de hand- en voetlengte komen overeen met een zwangerschapsduur van 11-12 weken.
+zwangerschap(F31010) hand(TY8700) voet(TY9700) zwangerschap(F31010)
+********************************************************************************
+De placenta (T11-39233) toonde een beeld van funisitis en kenmerken van IUVD.
+placenta(T88000) navelstreng(T88800) ontsteking(M40000) 'intra-uteriene vruchtdood'(TYY000F35330)
+********************************************************************************
+
+
+================================================================================
+Voorlopige diagnosen: - solide tumor van linkerhoofdbronchus (maximale afmeting 5 cm), vergroeid met peribronchiale lymfkliermetastase en uitbreiding rond arteria pulmonalis tot in parietale pericard. Massale metastasering in lever (honderden tumorhaardjes, 2400 g) als ook solitaire metastase in linkerbijnier (maximale diameter 0,7 cm). - lichte tot matige trivasculaire coronairsclerose. - sterke atherosclerotische veranderingen van grote arterien, met name distale abdominale aorta, met ook subtotale stenosering van vroeger ingebrachte aortabifurcatieprothese. Uitgebreide bronchopneumonie van de linkerlong (poststenotisch, met name onderkwab) en mogelijk ook rechts. Waarschijnlijk lymfangitis carcinomatosa in beide longen. N.B: er werd geen schedelobductie verricht vanwege ontbreken toestemming daarvoor. Bls/cs Aanvulling d.d. 09-01-12: Epicrise: Blijkens het histologisch onderzoek betrof het een kleincellig ongedifferentieerd carcinoom van de linkerlong met in beide longen lymfangitis carcinomatosa, peribronchiale lymfkliermetastase en ook uitgebreide metastasering naar de lever en ook de linker bijnier. Met name in de linkerlong werd tevens nog uitgebreide bronchopneumonie (poststenotisch) gevonden in mindere mate focaal ook rechts. In het hart nog enige interstitiele fibrose, verder geen duidelijke afwijkingen Bls/wow 
+================================================================================
+Voorlopige diagnosen: - solide tumor van linkerhoofdbronchus (maximale afmeting 5 cm), vergroeid met peribronchiale lymfkliermetastase en uitbreiding rond arteria pulmonalis tot in parietale pericard.
+hoofdbronchus(T26100) links(TYY990) lymfklier(T08000) 'metastase maligne tumor'(M80006) 'maligne tumor'(M80003) 'arteria pulmonalis'(T44000) pericard(T31000)
+********************************************************************************
+Massale metastasering in lever (honderden tumorhaardjes, 2400 g) als ook solitaire metastase in linkerbijnier (maximale diameter 0,7 cm).
+lever(T56000) 'metastase maligne tumor'(M80006) bijnier(T93000) links(TYY990)
+********************************************************************************
+- lichte tot matige trivasculaire coronairsclerose.
+coronairarterie(T43000) arteriosclerose(M52000)
+********************************************************************************
+- sterke atherosclerotische veranderingen van grote arterien, met name distale abdominale aorta, met ook subtotale stenosering van vroeger ingebrachte aortabifurcatieprothese.
+atherosclerose(M52110) arterie(T41000) 'abdominale aorta'(T42500) stenosering(M34100) aorta(T42000) prothese(M15880)
+********************************************************************************
+Uitgebreide bronchopneumonie van de linkerlong (poststenotisch, met name onderkwab) en mogelijk ook rechts.
+bronchiolopulmonaal(T27900) ontsteking(M40000) long(T28000) links(TYY990) onderkwab(T28400) rechts(TYY980)
+********************************************************************************
+Waarschijnlijk lymfangitis carcinomatosa in beide longen.
+lymfvat(T09010) 'metastase carcinoom'(M80106) long(T28000)
+********************************************************************************
+09-01-12: Epicrise: Blijkens het histologisch onderzoek betrof het een kleincellig ongedifferentieerd carcinoom van de linkerlong met in beide longen lymfangitis carcinomatosa, peribronchiale lymfkliermetastase en ook uitgebreide metastasering naar de lever en ook de linker bijnier.
+'kleincellig ongedifferentieerd carcinoom'(M80413) long(T28000) links(TYY990) long(T28000) lymfvat(T09010) 'metastase carcinoom'(M80106) lymfklier(T08000) 'metastase maligne tumor'(M80006) 'maligne tumor'(M80003) lever(T56000) links(TYY990) bijnier(T93000)
+********************************************************************************
+Met name in de linkerlong werd tevens nog uitgebreide bronchopneumonie (poststenotisch) gevonden in mindere mate focaal ook rechts.
+long(T28000) links(TYY990) bronchiolopulmonaal(T27900) ontsteking(M40000) rechts(TYY980)
+********************************************************************************
+In het hart nog enige interstitiele fibrose, verder geen duidelijke afwijkingen Bls/wow
+hart(T32000) 'interstitiele fibrose'(M49002) 'geen afwijking'(M00100) 'geen afwijking'(M00100) 'geen afwijking'(M00100)
+********************************************************************************
+
+
+================================================================================
+Voorlopige diagnosen: - solide tumor onderkwab linker long, hoog dorsaal en subpleuraal, maximale diameter 4,5 cm, doorgroeiend tot in de parietale pleura. Tweetal voor metastase verdachte tumorhaarden in de wervellichamen mid-thoracaal. - matig tot sterke trivasculaire coronairsclerose (rest doorgankelijkheid ca. 50%). In voorwand linkerventrikel aanwijzingen voor eerder doorgemaakt infarct (maximale afmeting 3 cm). - status na vroegere implantatie klepprothese (links atrioventriculair). - status na recente OK linker heup in verband met collumfractuur. N.B.: bij uitwendig onderzoek in de hersenen geen evidente carcinoommetastase, aanvullend onderzoek volgt na fixatie. Bls/mvg Aanvulling d.d. 09-01-12: Epicrise: Het histologisch onderzoek toont dat het een adenocarcinoom van de linkerlong betrof met metastasering naar de wervelkolom (2 wervellichamen mid thoracaal). Tevens in de longen nog uitgebreide emfysemateuze veranderingen en bronchopneumonie. Het myocard toonde uitgebreide infarcering in de wand van de linkerventrikel, naar schatting niet meer dan enkele dagen oud, op basis van de sterke trivasculaire coronairsclerose. Betreffende het aanvullende hersenonderzoek ontvangt u separaat bericht. ******* Aanvulling d.d. 21-12-12: Het neuropathologisch onderzoek toont hersenen met een gewicht van 1640 gr met macroscopisch ter plaatse van basale ganglia rechts geringe verweking en hemorrhagische veranderingen. Geen aanwijzingen voor verdachte haardvormige afwijkingen, met name niet ter plaatse van dura, cerebellum of cortex, ook bij herbeoordeling. Bij microscopisch onderzoek veranderingen die kunnen passen bij Alzheimer geassocieerde neurodegeneratieve afwijking.  Onvoldoende aanwijzingen voor (recente) ischaemie. Geen aanwijzingen voor metastasen. flr 
+================================================================================
+Voorlopige diagnosen: - solide tumor onderkwab linker long, hoog dorsaal en subpleuraal, maximale diameter 4,5 cm, doorgroeiend tot in de parietale pleura.
+onderkwab(T28400) links(TYY990) long(T28000) subpleuraal(T29020) 'doorgroei tumor'(M80093) pleura(T29000)
+********************************************************************************
+Tweetal voor metastase verdachte tumorhaarden in de wervellichamen mid-thoracaal.
+'metastase maligne tumor'(M80006) wervel(T10510) thoracaal(TY2100)
+********************************************************************************
+- matig tot sterke trivasculaire coronairsclerose (rest doorgankelijkheid ca.
+coronairarterie(T43000) arteriosclerose(M52000)
+********************************************************************************
+: bij uitwendig onderzoek in de hersenen geen evidente carcinoommetastase, aanvullend onderzoek volgt na fixatie.
+hersenen(TX2000) 'geen metastase'(M09440) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) carcinoom(M80103) 'metastase maligne tumor'(M80006) 'maligne tumor'(M80003)
+********************************************************************************
+09-01-12: Epicrise: Het histologisch onderzoek toont dat het een adenocarcinoom van de linkerlong betrof met metastasering naar de wervelkolom (2 wervellichamen mid thoracaal).
+adenocarcinoom(M81403) long(T28000) links(TYY990) wervelkolom(T10500) wervel(T10510) thoracaal(TY2100)
+********************************************************************************
+Tevens in de longen nog uitgebreide emfysemateuze veranderingen en bronchopneumonie.
+long(T28000) emfyseem(M32800) bronchiolopulmonaal(T27900) ontsteking(M40000)
+********************************************************************************
+21-12-12: Het neuropathologisch onderzoek toont hersenen met een gewicht van 1640 gr met macroscopisch ter plaatse van basale ganglia rechts geringe verweking en hemorrhagische veranderingen.
+hersenen(TX2000) 'basale ganglia'(TX3010) rechts(TYY980) verweking(M54400)
+********************************************************************************
+
+
+================================================================================
+Voorlopig: Hersenen van een 31 jarige vrouw met uitgebreide psychiatrische voorgeschiedenis, zonder opvallende afwijkingen bij macroscopisch onderzoek. Bericht volgt. Definitief:  Microscopisch onderzoek toont verspreid geringe tot matige hypoxische-ischemische schade. Verder geen nieuwe aanknoppingspunten. 
+================================================================================
+Voorlopig: Hersenen van een 31 jarige vrouw met uitgebreide psychiatrische voorgeschiedenis, zonder opvallende afwijkingen bij macroscopisch onderzoek.
+hersenen(TX2000) 'geen afwijking'(M00100) 'geen afwijking'(M00100)
+********************************************************************************
+
+
+================================================================================
+Het onderzoek aan hersenen van deze 87-jarige vrouw tonen geen aanwijzingen voor een bloeding of infarct. Wel wordt leeftijd gerelateerde tau en beta-amyloid pathologie gevonden. De tau pathologie kan qua ernst worden ingedeeld bij een stadium 2 volgens BrainNet *******. Dit bevindt zich onder de klinische horizon. 
+================================================================================
+
+
+================================================================================
+Neuropathologisch onderzoek hersenen (******* nr. 11S160): forse amyloid-angiopathie en 'verouderingsverschijnselen' (tangles, plaques), gezien klinisch gegeven dementie te duiden als dementie van Alzheimer type; grote haard van recente ischemische en fors hemorrhagische necrose rechts hemisferaal; tekenen van sterk verhoogde intracraniele druk (forse verplaatsing van mediaanlijn van links naar rechts; sterke afplatting van cerebrale windingen) en van inklemming op tentorium-nivo (hernieren gyrus parahippocampus links, bloedingen in rostrale deel hersenstam). 
+================================================================================
+Neuropathologisch onderzoek hersenen (******* nr. 11S160): forse amyloid-angiopathie en 'verouderingsverschijnselen' (tangles, plaques), gezien klinisch gegeven dementie te duiden als dementie van Alzheimer type; grote haard van recente ischemische en fors hemorrhagische necrose rechts hemisferaal; tekenen van sterk verhoogde intracraniele druk (forse verplaatsing van mediaanlijn van links naar rechts; sterke afplatting van cerebrale windingen) en van inklemming op tentorium-nivo (hernieren gyrus parahippocampus links, bloedingen in rostrale deel hersenstam).
+hersenen(TX2000) 'amyloid angiopathie'(D89090) dementie(D85400) dementie(D85400) alzheimer(D85430) ischemie(F72240) necrose(M54000) rechts(TYY980) 'verhoogde druk'(F04703) links(TYY990) rechts(TYY980) inklemming(M31605) tentorium(TX1150) tentorium(TX1150) hippocampus(TX2570) links(TYY990) bloeding(M37000) hersenstam(TX2050)
+********************************************************************************
+
+
+================================================================================
+-Oude infarcering LVAW en ventrikel dillatatie, mn. links cq duidend op ischaemie. -Myocard hypertrofie (730 gram, N=350) -LIMA op de distale LAD met pinpoint restlumen (0,5 mm) en een veneuze jump graft vanuit de aorta over de hoge LAD, links om naar een RCA tak. -3 taks coronairsclerose van preexistente vaten.  -1,5 liter pleuravolcht. -Longoedeem. -Geen longembolie.  -Stuwing lever en milt.  -Urocystitis.  -Prostaathypertrofie. -Status na melanoom; geen locale of systeemziekte aantoonbaar. Obductie betrof een 88 jaar oud geworden man met uitgebreide cardiaal voorgeschiedenis. Bij obductie bleek er sprake van status na aanleggen van CABG en LIMA en waren er tekenen van decompensatio cordis met 1,5 liter pleuravocht, oedeem in de longen en stuwing van de lever en milt. Het hart was hypertroof en sterk gedillateerd hart en er was sprake van oude infarcering zowel als tekeken van recente ischaemie (vlekkig en slap myocard). Er was m.n. in de LIMA vrijwel geen restlumen en voorts sterke scleroce van preexistente coronairen. De jump graft was redelijk goed doorgankelijk. In de LAD leek er een thrombus aanwezig, doch dit moet microscopisch nog worden bevestigd.  Longen tonen wat solide beeld doch macroscopisch geen evidente pneumonie.  Geen aanwijzingen voor maligniteit. 15-11-11: Microscopisch onderzoek biedt geen nieuwe inzichten. De LAD werd op serie gesneden, waarbij geen thrombus werd gevonden (postmortaal stolsel). (*******) AANVULLEND BERICHT, 12-01-12: Hersenonderzoek bied geen nieuwe inzichten; geen infarcering, noch ruimte innemende laesies. (lb).
+================================================================================
+Bij obductie bleek er sprake van status na aanleggen van CABG en LIMA en waren er tekenen van decompensatio cordis met 1,5 liter pleuravocht, oedeem in de longen en stuwing van de lever en milt.
+obductie(P30110) pleuravocht(T2Y600) oedeem(M36500) long(T28000) stuwing(M36100) lever(T56000) milt(T07000)
+********************************************************************************
+Het hart was hypertroof en sterk gedillateerd hart en er was sprake van oude infarcering zowel als tekeken van recente ischaemie (vlekkig en slap myocard).
+hart(T32000) hart(T32000) 'oude infarcering'(M54750) ischemie(F72240) myocard(T33010)
+********************************************************************************
+Longen tonen wat solide beeld doch macroscopisch geen evidente pneumonie.
+long(T28000) 'geen ontsteking'(M09380) long(T28000) ontsteking(M40000)
+********************************************************************************
+
+
+================================================================================
+Het betreft een 31 jaar oud geworden vrouw overleden aan gevolgen van decompensatio cordis zonder verklarende oorzaak voor cardiale falen. Orienterend toxicologisch onderzoek toonde geen afwijkingen. Dit sluit een toxicologische oorzaak echter niet met zekerheid uit. 
+================================================================================
+
+
+================================================================================
+Epicrise: voor omstandigheden en bevindingen zie ook gaarne bovenstaande. Met medenemen van de microscopie is hier vastgesteld een hypertrofisch hart met litteken van oud infarct en drietaks coronair lijden zodat bij het ontbreken van andere aangetoonde afwijkingen de einddiagnose hier gesteld wordt op acute hartdood. Conform destijds de indruk in eerste aanleg en zoals destijds getoond en besproken met collega Thio. 
+================================================================================
+Met medenemen van de microscopie is hier vastgesteld een hypertrofisch hart met litteken van oud infarct en drietaks coronair lijden zodat bij het ontbreken van andere aangetoonde afwijkingen de einddiagnose hier gesteld wordt op acute hartdood.
+hypertrofisch(M71000) hart(T32000) litteken(M49060) 'oud infarct'(M54750) hart(T32000) dood(FY1800)
+********************************************************************************
+
+
+================================================================================
+Postmortaal onderzoek bij een 71-jarige man met status na lobectomie bovenkwab rechter long voor grootcellig carcinoom. Er bleek sprake zijn van dubbelzijdige longembolieen, ook in de grotere vaten richting hilus. Deze zullen de reden van het overlijden hebben gevormd. Er was overigens geen ruiterembolus. Er werd metastatisch weinig gedifferentieerd adenocarcinoom aangetroffen in lymfklieren van de truncus coeliacus, in de bijnieren en in de nieren beiderzijds. Schedelobductie werd niet verricht zodat geen uitspraak over eventuele hersenmetastasen kan worden gedaan. 
+================================================================================
+Er bleek sprake zijn van dubbelzijdige longembolieen, ook in de grotere vaten richting hilus.
+long(T28000) embolie(M35300)
+********************************************************************************
+Er werd metastatisch weinig gedifferentieerd adenocarcinoom aangetroffen in lymfklieren van de truncus coeliacus, in de bijnieren en in de nieren beiderzijds.
+'metastase maligne tumor'(M80006) adenocarcinoom(M81403) lymfklier(T08000) 'truncus coeliacus'(T46400) bijnier(T93000) nier(T71000) beiderzijds(TYY980TYY990)
+********************************************************************************
+Schedelobductie werd niet verricht zodat geen uitspraak over eventuele hersenmetastasen kan worden gedaan.
+schedel(T10100) obductie(P30110) 'geen metastase'(M09440) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) 'geen metastase'(M09440) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) 'geen maligniteit'(M09450) hersen(TX2000) 'metastase maligne tumor'(M80006) 'maligne tumor'(M80003)
+********************************************************************************
+
+
+================================================================================
+Definitieve bevindingen: 1. status na appendix resectie en verwijderen Meckels divertikel 3 weken voor overlijden. 2. Uitgebreide enterocolitis, waarschijnlijk niet op basis van Clostridium infectie. 3. Maag ulcus diameter 1 cm, geen perforatie. 4. Mediastinale lymfklier met metastase kleincellig carcinoom, waarschijnliji van de long. Echter geen primaire tumor aangetoond. 5. Hart met status na eerdere stent implantatie, geen cardiale ischaemie. Het betreft een 82 jaar oud geworden vrouw 3 weken na laparotomie voor acute appendicitis met verwijderen van Meckels divertikel, overleden aan de gevolgen van een uitgebreide enterocolitis, gezien negatieve feceskweken en waarschijnlijk niet op basis van Clostridium infectie. Patiente had voorts een niet kleincellig naar de pretracheale lymfklier gemetastaseerde kleincellig carcinoom waarschijnlijk primair uit de long. Deze tumor verklaart niet het overlijden. Aanvulling d.d. 14-03-12: Geen aanwijzingen voor CMV-infectie. Dit sluit een CMV-infectie gezien de beperkte gevoeligheid niet met zekerheid uit. 
+================================================================================
+Mediastinale lymfklier met metastase kleincellig carcinoom, waarschijnliji van de long.
+lymfklier(T08000) mediastinum(TY2300) 'metastase maligne tumor'(M80006) 'kleincellig carcinoom'(M80413) long(T28000)
+********************************************************************************
+Patiente had voorts een niet kleincellig naar de pretracheale lymfklier gemetastaseerde kleincellig carcinoom waarschijnlijk primair uit de long.
+'geen maligniteit'(M09450) 'niet kleincellig carcinoom'(M80473) lymfklier(T08000) 'kleincellig carcinoom'(M80413) long(T28000)
+********************************************************************************
+
+
+================================================================================
+Het betreft 80 jaar oud geworden vrouw, bekend met uitgebreide cardiale voorgeschiedenis. De dag voor overlijden werd zij opgenomen onder verdenking van sepsis met cardiale insufficientie. Patiente overleed onder het beeld. Bij obductie kon de diagnose sepsis niet worden bevestigd. Het hart was sterk hypertroof, met name betreffende de linkerventrikel, totaal gewicht van het hart circa 540 g. In het rechter hart oor werd trombotisch materiaal aangetroffen. Hiermee corresponderend centraal in de arteria pulmonalis trombotisch materiaal; met name in de rechter long zeer uitgebreide emboli met infarcering van de rechter onderkwab. Links macroscopisch geen perifere emboli gevonden.; bij micrscopie bleken ook links perifere emboli aanwezig. Concluderend 80 jaar oud geworden vrouw, overleden aan massale longemboli. 
+================================================================================
+Hiermee corresponderend centraal in de arteria pulmonalis trombotisch materiaal; met name in de rechter long zeer uitgebreide emboli met infarcering van de rechter onderkwab.
+'arteria pulmonalis'(T44000) rechts(TYY980) long(T28000) infarcering(M54700) rechts(TYY980) onderkwab(T28400)
+********************************************************************************
+
+
+================================================================================
+Foetus bij een intra-uteriene vrucht dood van 18 + 6 weken. Er is forse autolyse, geslacht niet geheel duidelijk, waarschijnlijk vrouwelijk. Er zijn geen congenitale afwijkingen, geen ontstekingen, bloedingen of anderszins grove pathologie. Uitslag babygram: Geen afwijkingen. 
+================================================================================
+Foetus bij een intra-uteriene vrucht dood van 18 + 6 weken.
+foetus(T89000) vrucht(T89050) dood(FY1800)
+********************************************************************************
+Uitslag babygram: Geen afwijkingen.
+baby(TYY000F08000) 'geen afwijking'(M00100) 'geen afwijking'(M00100) 'geen afwijking'(M00100)
+********************************************************************************
+
+
+================================================================================
+Voorlopige diagnosen: - status na recente implantatie van heupprothese links met ter plaatse van de huid gedeeltelijke verlittekening en focaal daarin nog een fistelwond. - tekenen van splenitis, passend bij sepsis (240 g). - longen: in trachea en bronchustakken ophoping van dik taai geel slijm en met name in de rechterlong ook mogelijke bronchopneumonie (links 710 g; rechts 1130 g). - hypertrofie van myocard, met name linkerventrikel (540 g) met in de linker ventrikel circulair subendocardiaal tekenen van recente ischemie. - coronairarterien: links in ramus descendens anterior focaal sterke atherosclerose (restdoorgankelijkheid minder dan 50%) en in linker ramus circumflexus en rechter coronairarterie lichte tot matige coronairsclerose. Geen trombo-embolie.  - cholelithiasis (tientallen concrementen, diameter van enkele millimeters tot maximaal 1 cm). - decubituswond rechter hiel. - spitsvoet beiderzijds. Bls/ad Aanvulling d.d. 03-01-12: Epicrise: In het aanvullend histologisch onderzoek toonden de longen tekenen van chronische stuwing met daarnaast ook intra-alveolair oedeem passend bij een meer acute cardiale insufficientie. Er waren geen duidelijke tekenen van actieve bronchopneumonie. De milt liet tekenen van splenitis zien, passend bij de klinisch gebleken sepsis. Als mogelijke bron  was geen ander focus dan de mogelijk geinfecteerde heupprothese aantoonbaar. De recente ischemische veranderingen in het myocard passen bij de sepsis als doodsoorzaak. Bls/ccr 
+================================================================================
+Voorlopige diagnosen: - status na recente implantatie van heupprothese links met ter plaatse van de huid gedeeltelijke verlittekening en focaal daarin nog een fistelwond.
+huid(T01000) fistel(M46310) wond(M14000)
+********************************************************************************
+- longen: in trachea en bronchustakken ophoping van dik taai geel slijm en met name in de rechterlong ook mogelijke bronchopneumonie (links 710 g; rechts 1130 g).
+long(T28000) trachea(T25000) bronchus(T26000) long(T28000) rechts(TYY980) bronchiolopulmonaal(T27900) ontsteking(M40000) links(TYY990) rechts(TYY980)
+********************************************************************************
+- hypertrofie van myocard, met name linkerventrikel (540 g) met in de linker ventrikel circulair subendocardiaal tekenen van recente ischemie.
+hypertrofie(M71000) myocard(T33010) links(TYY990) links(TYY990) hart(T32000) ischemie(F72240)
+********************************************************************************
+- coronairarterien: links in ramus descendens anterior focaal sterke atherosclerose (restdoorgankelijkheid minder dan 50%) en in linker ramus circumflexus en rechter coronairarterie lichte tot matige coronairsclerose.
+links(TYY990) 'colon descendens'(T67600) atherosclerose(M52110) links(TYY990) rechts(TYY980) coronairarterie(T43000) arteriosclerose(M52000)
+********************************************************************************
+- cholelithiasis (tientallen concrementen, diameter van enkele millimeters tot maximaal 1 cm).
+galblaas(T57000) steen(M30000)
+********************************************************************************
+- decubituswond rechter hiel.
+decubitus(M10540) wond(M14000) rechts(TYY980) hiel(TY9600)
+********************************************************************************
+03-01-12: Epicrise: In het aanvullend histologisch onderzoek toonden de longen tekenen van chronische stuwing met daarnaast ook intra-alveolair oedeem passend bij een meer acute cardiale insufficientie.
+long(T28000) 'chronische stuwing'(M36112) oedeem(M36500) hart(T32000) insufficientie(F04410)
+********************************************************************************
+Er waren geen duidelijke tekenen van actieve bronchopneumonie.
+'geen ontsteking'(M09380) bronchiolopulmonaal(T27900) ontsteking(M40000)
+********************************************************************************
+De milt liet tekenen van splenitis zien, passend bij de klinisch gebleken sepsis.
+milt(T07000) sepsis(D00800)
+********************************************************************************
+De recente ischemische veranderingen in het myocard passen bij de sepsis als doodsoorzaak.
+ischemie(F72240) myocard(T33010) sepsis(D00800)
+********************************************************************************

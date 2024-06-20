@@ -1,0 +1,22 @@
+ID|Term|Code
+1|astrocytoom|M94003
+2|ependymoom|M93913
+3|folliculair lymfoom|M96903
+4|hemangiopericytoom|M88151
+5|lymfomatoide granulomatose|M97661
+6|metastase astrocytoom|M94006
+7|metastase neuroendocriene tumor|M82446
+8|metastase overgangscelcarcinoom|M81206
+9|metastase papillair overgangscelcarcinoom|M81306
+10|metastase papillair urotheelcelcarcinoom|M81306
+11|metastase urotheelcelcarcinoom|M81206
+12|neuroendocriene tumor|M82443
+13|oligodendroglioom|M94503
+14|overgangscelcarcinoom|M81203
+15|overgangsepitheelcarcinoom|M81203
+16|overgangsepitheelcelcarcinoom|M81203
+17|papillair overgangscelcarcinoom|M81303
+18|papillair urotheelcarcinoom|M81303
+19|papillair urotheelcelcarcinoom|M81303
+20|urotheelcarcinoom|M81203
+21|urotheelcelcarcinoom|M81203

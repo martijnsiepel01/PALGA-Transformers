@@ -6,9 +6,10 @@
 #SBATCH --gres=gpu:1
 #SBATCH --job-name=train
 #SBATCH --cpus-per-task=18
-#SBATCH --time=48:00:00
+#SBATCH --time=1:00:00
 #SBATCH --mem=40000M
 
 source ../.venv/bin/activate
 
-python PALGA-Transformers/train.py "$@"
+
+python PALGA-Transformers/inference/calculate_test_scores_single.py
