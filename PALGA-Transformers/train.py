@@ -18,38 +18,38 @@ def main(num_train_epochs, max_generate_length, train_batch_size, validation_bat
     # Print run name
     print(f"Run name: {run_name}")
 
-    # Initialize WandB for logging
-    wandb.init(project="Transformers-PALGA", entity="srp-palga", config=config)
+    # # Initialize WandB for logging
+    # wandb.init(project="Transformers-PALGA", entity="srp-palga", config=config)
 
     # Load tokenizer
     tokenizer = load_tokenizer(local_tokenizer_path)
 
     # Load datasets
     train_dataset, val_datasets = prepare_datasets_tsv(data_set, tokenizer, max_length_sentence)
-    test_datasets = prepare_test_dataset(tokenizer, max_length_sentence)
+    # test_datasets = prepare_test_dataset(tokenizer, max_length_sentence)
     
     # Setup model and tokenizer
     model = setup_model(tokenizer, freeze_all_but_x_layers, local_model_path, dropout_rate)
     
     # Prepare datacollator and dataloaders
     data_collator = prepare_datacollator(tokenizer, model)
-    train_dataloader, eval_dataloaders, test_dataloaders = prepare_dataloaders(train_dataset, val_datasets, test_datasets, data_collator, train_batch_size, validation_batch_size)
+    train_dataloader, eval_dataloaders = prepare_dataloaders(train_dataset, val_datasets, data_collator, train_batch_size, validation_batch_size)
 
     num_training_steps = num_train_epochs * len(train_dataloader)
-
+ 
     # Prepare training objects
-    optimizer, accelerator, model, train_dataloader, eval_dataloaders, test_dataloaders, scheduler = prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloaders, test_dataloaders, lr_strategy, num_training_steps, optimizer_type)
+    optimizer, accelerator, model, train_dataloader, eval_dataloaders, scheduler = prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloaders, lr_strategy, num_training_steps, optimizer_type)
 
     if constrained_decoding:
-        thesaurus_location = "/home/msiepel/snomed_20230426.txt"
-        tokenizer_location = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/T5_small_32128_pretrain_with_codes"
-        data_location = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/pretrain/pretrain_clean_old.tsv"
-        exclusive_terms_file_path = "/home/msiepel/mutually_exclusive_values.txt"
+        thesaurus_location = "/home/gburger01/snomed_20230426.txt"
+        tokenizer_location = local_tokenizer_path
+        data_location = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/pretrain.tsv"
+        exclusive_terms_file_path = "/home/gburger01/mutually_exclusive_values.txt"
         Palga_trie = create_palga_trie(thesaurus_location, tokenizer_location, data_location, exclusive_terms_file_path)
     else:
         Palga_trie = None
     # Training and evaluation
-    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, test_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler, constrained_decoding, Palga_trie)
+    train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler, Palga_trie, config, constrained_decoding)
 
 # Entry point of the program
 if __name__ == "__main__":

@@ -3,7 +3,7 @@ from tqdm import tqdm
 from datasets import load_dataset
 import wandb
 import pandas as pd
-from transformers import AutoModelForSeq2SeqLM, AdamW, Adafactor, AutoConfig
+from transformers import AutoModelForSeq2SeqLM, AdamW, Adafactor, AutoConfig, T5ForConditionalGeneration
 import evaluate
 from accelerate import Accelerator
 from datasets import concatenate_datasets
@@ -25,15 +25,15 @@ def preprocess_function(examples, tokenizer, max_length_sentence):
 
 def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
     data_files = {
-        "train": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/train.tsv",
-        "test": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/test.tsv",
-        "validation": f"/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/val.tsv"
+        "train": f"/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/train.tsv",
+        "test": f"/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/test.tsv",
+        "validation": f"/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/val.tsv"
     }
     dataset = load_dataset("csv", data_files=data_files, delimiter="\t")
 
     # Function to get 1% of the dataset
     def get_percentage(ds):
-        return ds.shuffle(seed=42).select(range(max(1, int(0.03 * len(ds)))))
+        return ds.shuffle(seed=42).select(range(max(1, int(0.05 * len(ds)))))
 
     # Filter rows where 'Codes' or 'Conclusie' is not null or empty, and preprocess
     for split in dataset.keys():
@@ -64,33 +64,33 @@ def prepare_datasets_tsv(data_set, tokenizer, max_length_sentence):
 
     return train_dataset, val_datasets
     
-def prepare_test_dataset(tokenizer, max_length_sentence):
-    test_data_location = "/home/msiepel/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
-    dataset = load_dataset("csv", data_files={"test": test_data_location}, delimiter="\t")['test']
+# def prepare_test_dataset(tokenizer, max_length_sentence):
+#     test_data_location = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/data/gold_resolved_with_codes.tsv"
+#     dataset = load_dataset("csv", data_files={"test": test_data_location}, delimiter="\t")['test']
     
-    dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
-    dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
-    tokenized_datasets = dataset.map(
-        lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
-        batched=True
-    )
-    tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
+#     dataset = dataset.filter(lambda example: example["Codes"] is not None and example["Codes"] != '')
+#     dataset = dataset.filter(lambda example: example["Conclusie"] is not None and example["Conclusie"] != '')
+#     tokenized_datasets = dataset.map(
+#         lambda examples: preprocess_function(examples, tokenizer, max_length_sentence),
+#         batched=True
+#     )
+#     tokenized_datasets = tokenized_datasets.remove_columns(["Conclusie", "Codes"])
 
-    # Sort the test dataset by 'length' for histogram-based splitting
-    test_dataset_sorted = tokenized_datasets.sort("length")
+#     # Sort the test dataset by 'length' for histogram-based splitting
+#     test_dataset_sorted = tokenized_datasets.sort("length")
 
-    # Split the test dataset into 5 parts
-    total_length = len(test_dataset_sorted)
-    split_sizes = [total_length // 5] * 4 + [total_length - (total_length // 5 * 4)]  # Handle remainder in the last split
-    test_datasets = []
-    for i in range(5):
-        start_index = sum(split_sizes[:i])  # Calculate the starting index for each split
-        end_index = start_index + split_sizes[i]
-        split_dataset = test_dataset_sorted.select(range(start_index, end_index))
-        split_dataset.set_format("torch")  # Set format to torch if necessary for each split
-        test_datasets.append(split_dataset)
+#     # Split the test dataset into 5 parts
+#     total_length = len(test_dataset_sorted)
+#     split_sizes = [total_length // 5] * 4 + [total_length - (total_length // 5 * 4)]  # Handle remainder in the last split
+#     test_datasets = []
+#     for i in range(5):
+#         start_index = sum(split_sizes[:i])  # Calculate the starting index for each split
+#         end_index = start_index + split_sizes[i]
+#         split_dataset = test_dataset_sorted.select(range(start_index, end_index))
+#         split_dataset.set_format("torch")  # Set format to torch if necessary for each split
+#         test_datasets.append(split_dataset)
 
-    return test_datasets
+#     return test_datasets
 
 def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path='PALGA-Transformers/models/flan-t5-small', dropout_rate=0.1, rank=16, lora_alpha=32, lora_dropout=0.01):
     config = AutoConfig.from_pretrained(local_model_path)
@@ -101,11 +101,17 @@ def setup_model(tokenizer, freeze_all_but_x_layers, local_model_path='PALGA-Tran
     model = AutoModelForSeq2SeqLM.from_pretrained(local_model_path, config=config)
 
     model.resize_token_embeddings(len(tokenizer))
-    
+    # checkpoint = "/home/gburger01/PALGA-Transformers/PALGA-Transformers/models/trained_models/num_train_epochs20_data_setcombined_commentmt5_final.pth"
+
+    # config = AutoConfig.from_pretrained(local_model_path)
+    # model = T5ForConditionalGeneration(config)
+    # model.resize_token_embeddings(len(tokenizer))
+    # model.load_state_dict(torch.load(checkpoint))
     return model
 
 
-def prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloaders, test_dataloaders, lr_strategy, total_steps, optimizer_type='adamw'):
+
+def prepare_training_objects(learning_rate, model, train_dataloader, eval_dataloaders, lr_strategy, total_steps, optimizer_type='adamw'):
     if optimizer_type.lower() == 'adamw':
         # optimizer = AdamW(model.base_model.model.parameters(), lr=learning_rate)
         optimizer = AdamW(model.parameters(), lr=learning_rate)
@@ -133,15 +139,12 @@ def prepare_training_objects(learning_rate, model, train_dataloader, eval_datalo
     # Prepare each eval_dataloader separately
     eval_dataloaders = [accelerator.prepare(eval_dl) for eval_dl in eval_dataloaders]
 
-    # Prepare each test_dataloader separately
-    test_dataloaders = [accelerator.prepare(test_dl) for test_dl in test_dataloaders]
-
     scheduler = None
 
-    return optimizer, accelerator, model, train_dataloader, eval_dataloaders, test_dataloaders, scheduler
+    return optimizer, accelerator, model, train_dataloader, eval_dataloaders, scheduler
 
 
-thesaurus_location = '/home/msiepel/snomed_20230426.txt'
+thesaurus_location = '/home/gburger01/snomed_20230426.txt'
 thesaurus = pd.read_csv(thesaurus_location, sep='|', encoding='latin-1')
 
 # Function to get word from code
@@ -197,12 +200,15 @@ def count_c_sep(tokens, tokenizer):
     # Adjust to handle a batch of sequences and return a list of counts
     counts = []
     for sequence in tokens:
-        token_list = custom_decode(tokenizer, sequence).split()
-        counts.append(sum(1 for token in token_list if 'c-sep' in token))
+        # token_list = custom_decode(tokenizer, sequence).split()
+        token_list = tokenizer.decode(sequence, skip_special_tokens=True).split()
+        counts.append(sum(1 for token in token_list if 'c-sep' in token.lower()))
+        # counts.append(sum(1 for token in token_list if 'c-sep' in token))
     return counts
 
 def calculate_reweight_factor(input_count, output_count):
     # No change needed, works on individual counts
+    return 1
     diff = abs(input_count - output_count)
     if diff > 0:
         reweight_factor = (1 + diff)  # Adjust formula as needed
@@ -210,21 +216,38 @@ def calculate_reweight_factor(input_count, output_count):
     return 1
 
 def create_prefix_allowed_tokens_fn(Palga_trie, tokenizer):
-    def prefix_allowed_tokens_fn(batch_id, sent):
-        sent = sent.tolist()[1:]
-        if len(sent) > 0:
-            try:
-                # Reverse the list and find the index of the item
-                reversed_index = sent[::-1].index(25831)
-                # Adjust the index to get the position in the original list
-                index = len(sent) - 1 - reversed_index
-                # Slice the list to exclude the item and everything before it
-                sent = sent[index + 1:]
-            except ValueError:
-                # If the item is not found, leave the list unchanged
-                sent = sent
+    # c_sep_token_id = tokenizer.encode('[C-SEP]', add_special_tokens=False)  # Get the token ID for '[C-SEP]'
+    c_sep_token_id = [491, 424, 264, 155719, 439]
+    # print(f"CSEP: {c_sep_token_id}")
 
+    def prefix_allowed_tokens_fn(batch_id, sent):
+        # Convert the sentence to a list excluding the first element (usually the BOS token)
+        sent = sent.tolist()[1:]
+        
+        # Initialize the last_split_index to -1 (no split found initially)
+        last_split_index = -1
+        
+        # Check if c_sep_token_id is a list (multiple token IDs) or a single token ID
+        if isinstance(c_sep_token_id, list):
+            # Iterate through the sentence to find the last occurrence of the c_sep_token_id sequence
+            for i in range(len(sent) - len(c_sep_token_id) + 1):
+                if sent[i:i+len(c_sep_token_id)] == c_sep_token_id:
+                    last_split_index = i + len(c_sep_token_id) - 1
+        else:
+            # If c_sep_token_id is a single ID, find its last occurrence
+            try:
+                reversed_index = sent[::-1].index(c_sep_token_id)
+                last_split_index = len(sent) - 1 - reversed_index
+            except ValueError:
+                print("No occurrence of single ID found")
+
+        # If a split was found, update the sentence to only include tokens after the last split
+        if last_split_index != -1:
+            sent = sent[last_split_index + 1:]
+
+        # Get allowed tokens using Palga_trie
         out = list(Palga_trie.get(sent))
+        # If no allowed tokens found, return the EOS token
         if len(out) > 0:
             return out
         else:
@@ -287,9 +310,11 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length, con
             filtered_preds = [[token_id for token_id in token if token_id != tokenizer.pad_token_id] for token in outputs]
             filtered_labels = [[token_id for token_id in token if token_id != -100] for token in batch["labels"]]
             
-            # Decoding filtered predictions and labels
-            decoded_preds = [custom_decode(tokenizer, pred) for pred in filtered_preds]
-            decoded_labels = [custom_decode(tokenizer, label) for label in filtered_labels]
+            # Decoding filtered predictions and labels # .replace('[C-SEP]', ' [C-SEP] ')
+            # decoded_preds = [custom_decode(tokenizer, pred) for pred in filtered_preds]
+            decoded_preds = [tokenizer.decode(pred, skip_special_tokens=True) for pred in filtered_preds]
+            # decoded_labels = [custom_decode(tokenizer, label) for label in filtered_labels]
+            decoded_labels = [tokenizer.decode(label, skip_special_tokens=True) for label in filtered_labels]
 
             all_preds.extend(decoded_preds)
             all_labels.extend(decoded_labels)
@@ -306,9 +331,11 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length, con
                 pred_words = [get_word_from_code(code) for code in decoded_preds[i].split()]
                 label_words = [get_word_from_code(code) for code in decoded_labels[i].split()]
 
-                print(f"Input: {decoded_inputs[i]}")
-                print(f"Prediction: {pred_words}")
-                print(f"Label: {label_words}")
+                print(f"Input:            {decoded_inputs[i]}")
+                print(f"Prediction:       {pred_words}")
+                print(f"Prediction codes: {decoded_preds[i]}")
+                print(f"Label:            {label_words}")
+                print(f"Label codes:      {decoded_labels[i]}")
                 print("----------")
 
         # Compute metrics for each dataloader
@@ -338,85 +365,6 @@ def validation_step(model, eval_dataloaders, tokenizer, max_generate_length, con
 
     return all_validation_metrics, decoded_validation_preds, decoded_validation_labels, decoded_validation_inputs
 
-def test_step(model, test_dataloaders, tokenizer, max_generate_length):
-    dataloader_names = ["shortest", "short", "average", "long", "longest"]
-    all_test_metrics = {}
-    
-    decoded_test_inputs = []
-    decoded_test_preds = []
-    decoded_test_labels = []
-
-    if len(test_dataloaders) != 5:
-        raise ValueError("There must be exactly 5 test dataloaders.")
-
-    for dataloader, name in zip(test_dataloaders, dataloader_names):
-        metric = evaluate.load("sacrebleu", experiment_id=experiment_id)
-        rouge = evaluate.load('rouge', experiment_id=experiment_id)
-
-        model.eval()
-        total_loss = 0
-        all_preds = []
-        all_labels = []
-
-        for batch in tqdm(dataloader, desc=f"Testing {name}"):
-            if 'length' in batch:
-                del batch['length']
-
-            with torch.no_grad():
-                outputs =  model.generate(
-                    batch["input_ids"],
-                    attention_mask=batch["attention_mask"],
-                    max_length=max_generate_length,
-                    diversity_penalty=0.3,
-                    num_beams=6,
-                    num_beam_groups=2,
-                )
-                loss = model(**batch).loss
-                total_loss += loss.item()
-
-            # Filtering predictions and labels before decoding
-            filtered_preds = [[token_id for token_id in token if token_id != tokenizer.pad_token_id] for token in outputs]
-            filtered_labels = [[token_id for token_id in token if token_id != -100] for token in batch["labels"]]
-            
-            # Decoding filtered predictions and labels
-            decoded_preds = [tokenizer.decode(pred, skip_special_tokens=True) for pred in filtered_preds]
-            decoded_labels = [tokenizer.decode(label, skip_special_tokens=True) for label in filtered_labels]
-
-            all_preds.extend(decoded_preds)
-            all_labels.extend(decoded_labels)
-
-            # Decoding input sequences for detailed analysis or printing later
-            decoded_inputs = tokenizer.batch_decode(batch["input_ids"], skip_special_tokens=True)
-            decoded_test_inputs.extend(decoded_inputs)
-
-        # Compute metrics for each dataloader
-        bleu = metric.compute(predictions=all_preds, references=[[label] for label in all_labels])
-        rouge_scores = rouge.compute(predictions=all_preds, references=all_labels)
-
-        ROUGE_1 = rouge_scores['rouge1'] 
-        ROUGE_2 = rouge_scores['rouge2'] 
-        ROUGE_L = rouge_scores['rougeL'] 
-        ROUGE_Lsum = rouge_scores['rougeLsum'] 
-        bleu_score = bleu["score"] / 100
-
-        epsilon = 1e-7
-        average_rouge_test = (ROUGE_1 + ROUGE_2 + ROUGE_L + ROUGE_Lsum)/4
-
-        bleu_rouge_f1 = (2 * bleu_score * average_rouge_test) / (bleu_score + average_rouge_test + epsilon)
-
-        # Storing metrics for each test dataloader
-        all_test_metrics[f"loss_{name}"] = total_loss / len(dataloader)
-        all_test_metrics[f"bleu_{name}"] = bleu_score
-        all_test_metrics[f"average_rouge_{name}"] = average_rouge_test
-        all_test_metrics[f"bleu_rouge_f1_{name}"] = bleu_rouge_f1
-
-
-        decoded_test_preds.extend(all_preds)
-        decoded_test_labels.extend(all_labels)
-
-    return all_test_metrics, decoded_test_preds, decoded_test_labels, decoded_test_inputs
-
-
 def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test_input):
     print("Predictions on Validation Data in the Last Epoch:")
     # Load the thesaurus
@@ -443,58 +391,71 @@ def print_test_predictions(decoded_test_preds, decoded_test_labels, decoded_test
         print('-'*100)
 
 # def wandb_log_metrics(epoch, avg_train_loss, eval_metrics, test_metrics):
-def wandb_log_metrics(epoch, avg_train_loss, eval_metrics):
+def wandb_log_metrics(epoch, avg_train_loss, eval_metrics, suffix="", run=None):
     # Compute average evaluation metrics
     avg_eval_loss = (eval_metrics["loss_shortest"] + eval_metrics["loss_short"] + eval_metrics["loss_average"] + eval_metrics["loss_long"] + eval_metrics["loss_longest"]) / 5
     avg_eval_bleu = (eval_metrics["bleu_shortest"] + eval_metrics["bleu_short"] + eval_metrics["bleu_average"] + eval_metrics["bleu_long"] + eval_metrics["bleu_longest"]) / 5
     avg_eval_rouge = (eval_metrics["average_rouge_shortest"] + eval_metrics["average_rouge_short"] + eval_metrics["average_rouge_average"] + eval_metrics["average_rouge_long"] + eval_metrics["average_rouge_longest"]) / 5
     avg_eval_f1_bleu_rouge = (eval_metrics["bleu_rouge_f1_shortest"] + eval_metrics["bleu_rouge_f1_short"] + eval_metrics["bleu_rouge_f1_average"] + eval_metrics["bleu_rouge_f1_long"] + eval_metrics["bleu_rouge_f1_longest"]) / 5
     
-    wandb.log({
-                "epoch/epoch": epoch,
-                "training/train_loss": avg_train_loss,
-                "shortest/eval_loss_shortest": eval_metrics["loss_shortest"],
-                "short/eval_loss_short": eval_metrics["loss_short"],
-                "average/eval_loss_average": eval_metrics["loss_average"],
-                "long/eval_loss_long": eval_metrics["loss_long"],
-                "longest/eval_loss_longest": eval_metrics["loss_longest"],
-                "shortest/eval_BLEU_shortest": eval_metrics["bleu_shortest"],
-                "short/eval_BLEU_short": eval_metrics["bleu_short"],
-                "average/eval_BLEU_average": eval_metrics["bleu_average"],
-                "long/eval_BLEU_long": eval_metrics["bleu_long"],
-                "longest/eval_BLEU_longest": eval_metrics["bleu_longest"],
-                "shortest/eval_average_ROUGE_shortest": eval_metrics["average_rouge_shortest"],
-                "short/eval_average_ROUGE_short": eval_metrics["average_rouge_short"],
-                "average/eval_average_ROUGE_average": eval_metrics["average_rouge_average"],
-                "long/eval_average_ROUGE_long": eval_metrics["average_rouge_long"],
-                "longest/eval_average_ROUGE_longest": eval_metrics["average_rouge_longest"],
-                "shortest/eval_F1-Bleu-Rouge_shortest": eval_metrics["bleu_rouge_f1_shortest"],
-                "short/eval_F1-Bleu-Rouge_short": eval_metrics["bleu_rouge_f1_short"],
-                "average/eval_F1-Bleu-Rouge_average": eval_metrics["bleu_rouge_f1_average"],
-                "long/eval_F1-Bleu-Rouge_long": eval_metrics["bleu_rouge_f1_long"],
-                "longest/eval_F1-Bleu-Rouge_longest": eval_metrics["bleu_rouge_f1_longest"],
-                "evaluation/avg_loss": avg_eval_loss,
-                "evaluation/avg_bleu": avg_eval_bleu,
-                "evaluation/avg_rouge": avg_eval_rouge,
-                "evaluation/avg_f1_bleu_rouge": avg_eval_f1_bleu_rouge,
-            })
+    # Prepare metrics with suffix
+    metrics = {
+        f"epoch/epoch{suffix}": epoch,
+        f"training/train_loss{suffix}": avg_train_loss,
+        f"shortest/eval_loss_shortest{suffix}": eval_metrics["loss_shortest"],
+        f"short/eval_loss_short{suffix}": eval_metrics["loss_short"],
+        f"average/eval_loss_average{suffix}": eval_metrics["loss_average"],
+        f"long/eval_loss_long{suffix}": eval_metrics["loss_long"],
+        f"longest/eval_loss_longest{suffix}": eval_metrics["loss_longest"],
+        f"shortest/eval_BLEU_shortest{suffix}": eval_metrics["bleu_shortest"],
+        f"short/eval_BLEU_short{suffix}": eval_metrics["bleu_short"],
+        f"average/eval_BLEU_average{suffix}": eval_metrics["bleu_average"],
+        f"long/eval_BLEU_long{suffix}": eval_metrics["bleu_long"],
+        f"longest/eval_BLEU_longest{suffix}": eval_metrics["bleu_longest"],
+        f"shortest/eval_average_ROUGE_shortest{suffix}": eval_metrics["average_rouge_shortest"],
+        f"short/eval_average_ROUGE_short{suffix}": eval_metrics["average_rouge_short"],
+        f"average/eval_average_ROUGE_average{suffix}": eval_metrics["average_rouge_average"],
+        f"long/eval_average_ROUGE_long{suffix}": eval_metrics["average_rouge_long"],
+        f"longest/eval_average_ROUGE_longest{suffix}": eval_metrics["average_rouge_longest"],
+        f"shortest/eval_F1-Bleu-Rouge_shortest{suffix}": eval_metrics["bleu_rouge_f1_shortest"],
+        f"short/eval_F1-Bleu-Rouge_short{suffix}": eval_metrics["bleu_rouge_f1_short"],
+        f"average/eval_F1-Bleu-Rouge_average{suffix}": eval_metrics["bleu_rouge_f1_average"],
+        f"long/eval_F1-Bleu-Rouge_long{suffix}": eval_metrics["bleu_rouge_f1_long"],
+        f"longest/eval_F1-Bleu-Rouge_longest{suffix}": eval_metrics["bleu_rouge_f1_longest"],
+        f"evaluation/avg_loss{suffix}": avg_eval_loss,
+        f"evaluation/avg_bleu{suffix}": avg_eval_bleu,
+        f"evaluation/avg_rouge{suffix}": avg_eval_rouge,
+        f"evaluation/avg_f1_bleu_rouge{suffix}": avg_eval_f1_bleu_rouge,
+    }
+    
+    # Log metrics to the specified run
+    if run:
+        run.log(metrics)
+    else:
+        wandb.log(metrics)
 
-def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, test_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler, constrained_decoding, Palga_trie):
+def train_model(model, optimizer, accelerator, max_generate_length, train_dataloader, eval_dataloaders, num_train_epochs, tokenizer, run_name, patience, scheduler, Palga_trie, config, constrained_decoding):
+    # Initialize WandB run for logging
+    run = wandb.init(project="Transformers-PALGA", entity="srp-palga", config=config, name=run_name, reinit=True)
+
     lowest_loss = float("inf")
     early_stopping_counter = 0
     best_model_state_dict = None
 
     for epoch in range(num_train_epochs):
         avg_train_loss = train_step(model, train_dataloader, optimizer, accelerator, scheduler, tokenizer)
+        
         all_eval_metrics, decoded_eval_preds, decoded_eval_labels, decoded_eval_input = validation_step(model, eval_dataloaders, tokenizer, max_generate_length, constrained_decoding, Palga_trie)
-        # all_test_metrics, decoded_test_preds, decoded_test_labels, decoded_test_input = test_step(model, test_dataloaders, tokenizer, max_generate_length)
+        
+        # Log metrics to WandB run
+        wandb_log_metrics(epoch, avg_train_loss, all_eval_metrics, run=run)
 
-        # Log metrics to WandB
-        # wandb_log_metrics(epoch, avg_train_loss, all_eval_metrics, all_test_metrics)
-        wandb_log_metrics(epoch, avg_train_loss, all_eval_metrics)
-        total_eval_loss = all_eval_metrics["loss_shortest"] + all_eval_metrics["loss_short"] + all_eval_metrics["loss_average"] + all_eval_metrics["loss_long"] + all_eval_metrics["loss_longest"]
+        # Calculate average loss for constrained decoding
+        total_eval_loss = sum(all_eval_metrics[f"loss_{name}"] for name in ["shortest", "short", "average", "long", "longest"])
         average_eval_loss = total_eval_loss / 5
-        if average_eval_loss < lowest_loss:  # Update loss accordingly
+
+        # Update model for constrained decoding
+        if average_eval_loss < lowest_loss:
             lowest_loss = average_eval_loss
             best_model_state_dict = model.state_dict()  # Save the state dict of the best model
             torch.save(model.state_dict(), f'PALGA-Transformers/models/trained_models/{run_name}.pth')  # Save the model weights
@@ -505,14 +466,17 @@ def train_model(model, optimizer, accelerator, max_generate_length, train_datalo
                 print(f"Early stopping triggered. No improvement in {patience} epochs.") 
                 break
 
-    # Load the best model state dict
+
+    # Load the best model state dicts and log final metrics
     model.load_state_dict(best_model_state_dict)
-
-    # Run print_test_predictions with the best model
-    eval_metrics, decoded_eval_preds, decoded_eval_labels, decoded_eval_input = validation_step(model, eval_dataloaders, tokenizer, max_generate_length, constrained_decoding, Palga_trie)
+    print("Running final validation")
+    eval_metrics, decoded_eval_preds, decoded_eval_labels, decoded_eval_input = validation_step(
+        model, eval_dataloaders, tokenizer, max_generate_length, constrained_decoding, Palga_trie)
     print_test_predictions(decoded_eval_preds, decoded_eval_labels, decoded_eval_input)
-
-    # Save the best model weights as a W&B artifact
     artifact = wandb.Artifact("best_model", type="model")
     artifact.add_file(f'PALGA-Transformers/models/trained_models/{run_name}.pth')
-    wandb.log_artifact(artifact)
+    run.log_artifact(artifact)
+
+    # Finish the W&B run
+    run.finish()
+

@@ -1,13 +1,10 @@
 from transformers import AutoTokenizer
 
 
-tokenizer = AutoTokenizer.from_pretrained('/home/msiepel/PALGA-Transformers/PALGA-Transformers/T5_small_32128_pretrain_with_codes')
+# tokenizer = AutoTokenizer.from_pretrained('/home/gburger01/PALGA-Transformers/PALGA-Transformers/T5_small_32128_pretrain_with_codes')
 
-# T	2022	i dunnedarmbiopten zonder afwijkingen ii maagantrum en corpusbiopten met een aspecifiek chronisch en gering actief ontstekingsinfiltraat helicobacter onderzoek is negatief er is enige atrofie		t64000 p11400 m00100 [C-SEP] t63000 p11400 m40000	i dunnedarmbiopten zonder afwijkingen ii maagantrum en corpusbiopten met een aspecifiek chronisch en gering actief ontstekingsinfiltraat helicobacter onderzoek is negatief er is enige atrofie	i dunnedarmbiopten zonder afwijkingen ii maagantrum en corpusbiopten met een aspecifiek chronisch en gering actief ontstekingsinfiltraat helicobacter onderzoek is negatief er is enige atrofie
-
-sent = "i dunnedarmbiopten zonder afwijkingen ii maagantrum en corpusbiopten met een aspecifiek chronisch en gering actief ontstekingsinfiltraat helicobacter onderzoek is negatief er is enige atrofie"
-codes = "t64000 p11400 m00100 [C-SEP] t63000 p11400 m40000"
+tokenizer = AutoTokenizer.from_pretrained('google/mT5-small')
 
 
-print(tokenizer.tokenize(sent))
-print(tokenizer.tokenize(codes))
+print(tokenizer.encode('[C-SEP]', add_special_tokens=False))
+print(tokenizer.decode([259, 270, 451, 37210, 421, 1003, 5954, 326, 449, 178928, 331, 1, 0, 0]))

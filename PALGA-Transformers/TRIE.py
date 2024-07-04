@@ -39,10 +39,21 @@ def create_tokenized_sets(tokenizer, topography, procedure, morphology):
 
 
 def load_data(data_location):
+    # data = pd.read_csv(data_location, sep="\t", usecols=["Codes"], nrows=100000)
     data = pd.read_csv(data_location, sep="\t", usecols=["Codes"])
+    # Convert to lower case and split
     data['Codes'] = data['Codes'].str.lower().str.split()
+    # Replace '[c-sep]' with '[C-SEP]'
+    data['Codes'] = data['Codes'].apply(lambda codes: [code.replace('[c-sep]', '[C-SEP]') for code in codes])
     data.dropna(inplace=True)
+    
+    # Find rows containing '[C-SEP]'
+    contains_c_sep = data[data['Codes'].apply(lambda codes: '[C-SEP]' in codes)]
+    
     print(data.head())
+    print("First 5 rows containing '[C-SEP]':")
+    print(contains_c_sep.head(5))
+    
     return data
 
 
@@ -107,7 +118,7 @@ class Trie:
         self.morphology_tokens = morphology_tokens
 
     def tokenize_c_sep(self):
-        return self.tokenizer.encode("[C-SEP]") if self.tokenizer else []
+        return self.tokenizer.encode("[C-SEP]", add_special_tokens=False) if self.tokenizer else []
 
     def add(self, sequence):
         current_dict = self.trie_dict
